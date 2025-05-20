@@ -1,0 +1,133 @@
+
+\usepackage{array}
+\newcommand{\ccr}[1]{\makecell{{\color{#1}\rule{1cm}{1cm}}}}
+\usepackage{algorithm,algorithmic}
+\usepackage{tasks}
+\settasks{label = \Alph*.
+	%   label-offset={0.4em},
+	%     label-align=left,
+	%     column-sep={2pt},
+	%     item-indent={1pt},before-skip={-0.7em},after-skip={-0.7em}
+}
+
+\usetikzlibrary{shapes.geometric, arrows.meta, positioning, calc, angles, quotes, intersections}
+
+% Colour Palette ——————————————————————————————————————
+\definecolor{merah}{HTML}{F4564E}
+\definecolor{merahtua}{HTML}{89313E}
+\definecolor{biru}{HTML}{60BBE5}
+\definecolor{birutua}{HTML}{412F66}
+\definecolor{hijau}{HTML}{59CC78}
+\definecolor{hijautua}{HTML}{366D5B}
+\definecolor{kuning}{HTML}{FFD56B}
+\definecolor{jingga}{HTML}{FBA15F}
+\definecolor{ungu}{HTML}{8C5FBF}
+\definecolor{lavender}{HTML}{CBA5E8}
+\definecolor{merjamb}{HTML}{FFB6E0}
+\definecolor{mygray}{HTML}{E6E6E6}
+\definecolor{mygreen}{rgb}{0,0.6,0}
+\definecolor{mymauve}{rgb}{0.58,0,0.82}
+
+% Theorems ————————————————————————————————————————————
+\usepackage{tcolorbox}
+\usepackage{changepage}
+\tcbuselibrary{skins,breakable,theorems}
+
+\newcounter{hitung}
+
+\makeatletter
+% Proof 证明如下
+\def\tcb@theo@widetitle#1#2#3{\hbox to \textwidth{\textsc{\large#1}\normalsize\space#3\hfil(#2)}}
+\tcbset{
+	theorem style/theorem wide name and number/.code={ \let\tcb@theo@title=\tcb@theo@widetitle},
+	proofbox/.style={skin=enhancedmiddle,breakable,parbox=false,boxrule=0mm,
+			check odd page, toggle left and right, colframe=black!20!white!92!hijau,
+			leftrule=8pt, rightrule=0mm, boxsep=0mm,arc=0mm, outer arc=0mm,
+			left=3mm,right=3mm,top=0mm,bottom=0mm, toptitle=0mm,
+			bottomtitle=0mm,colback=gray!3!white!98!biru, before skip=8pt, after skip=8pt,
+			before={\par\vskip-2pt},after={\par\smallbreak},
+		},
+}
+\newtcolorbox{ProofBox}{proofbox}
+\makeatother
+
+\let\realproof\proof
+\let\realendproof\endproof
+\renewenvironment{proof}[1][Prove:]{\ProofBox\strut\textsc{#1}\space}{\endProofBox}
+\AtEndEnvironment{proof}{\null\hfill$\blacksquare$}
+% Definition 定义环境
+\newtcbtheorem[use counter=hitung, number within=section]{dfn}{定义}
+{theorem style=theorem wide name and number,breakable,enhanced,arc=3.5mm,outer arc=3.5mm,
+	boxrule=0pt,toprule=1pt,leftrule=0pt,bottomrule=1pt, rightrule=0pt,left=0.2cm,right=0.2cm,
+	titlerule=0.5em,toptitle=0.1cm,bottomtitle=-0.1cm,top=0.2cm,
+	colframe=white!10!biru,
+	colback=white!90!biru,
+	coltitle=white,
+	shadow={1.3mm}{-1.3mm}{0mm}{gray!50!white}, % 添加阴影
+	coltext=birutua!60!gray, title style={white!10!biru}, before skip=8pt, after skip=8pt,
+	fonttitle=\bfseries,fontupper=\normalsize}{dfn}
+
+% 答题卡
+\newtcbtheorem[use counter=hitung, number within=section]{ans}{解答}
+{theorem style=theorem wide name and number,breakable,enhanced,arc=3.5mm,outer arc=3.5mm,
+	boxrule=0pt,toprule=1pt,leftrule=0pt,bottomrule=1pt, rightrule=0pt,left=0.2cm,right=0.2cm,
+	titlerule=0.5em,toptitle=0.1cm,bottomtitle=-0.1cm,top=0.2cm,
+	colframe=white!10!biru,
+	colback=white!90!biru,
+	coltitle=white,
+	shadow={1.3mm}{-1.3mm}{0mm}{gray!50!white}, % 添加阴影
+	coltext=birutua!60!gray, title style={white!10!biru}, before skip=8pt, after skip=8pt,
+	fonttitle=\bfseries,fontupper=\normalsize}{ans}
+
+% Axiom
+\newtcbtheorem[use counter=hitung, number within=section]{axm}{公理}
+{theorem style=theorem wide name and number,breakable,enhanced,arc=3.5mm,outer arc=3.5mm,
+	boxrule=0pt,toprule=1pt,leftrule=0pt,bottomrule=1pt, rightrule=0pt,left=0.2cm,right=0.2cm,
+	titlerule=0.5em,toptitle=0.1cm,bottomtitle=-0.1cm,top=0.2cm,
+	colframe=white!10!biru,colback=white!90!biru,coltitle=white,
+	shadow={1.3mm}{-1.3mm}{0mm}{gray!50!white!90}, % 添加阴影
+	coltext=birutua!60!gray,title style={white!10!biru},before skip=8pt, after skip=8pt,
+	fonttitle=\bfseries,fontupper=\normalsize}{axm}
+
+% Theorem
+\newtcbtheorem[use counter=hitung, number within=section]{thm}{定理}
+{theorem style=theorem wide name and number,breakable,enhanced,arc=3.5mm,outer arc=3.5mm,
+	boxrule=0pt,toprule=1pt,leftrule=0pt,bottomrule=1pt, rightrule=0pt,left=0.2cm,right=0.2cm,
+	titlerule=0.5em,toptitle=0.1cm,bottomtitle=-0.1cm,top=0.2cm,
+	colframe=white!10!merah,colback=white!75!pink,coltitle=white, coltext=merahtua!80!merah,
+	shadow={1.3mm}{-1.3mm}{0mm}{gray!50!white!90}, % 添加阴影
+	title style={white!10!merah}, before skip=8pt, after skip=8pt,
+	fonttitle=\bfseries,fontupper=\normalsize}{thm}
+
+% Proposition
+\newtcbtheorem[use counter=hitung, number within=section]{prp}{命题}
+{theorem style=theorem wide name and number,breakable,enhanced,arc=3.5mm,outer arc=3.5mm,
+	boxrule=0pt,toprule=1pt,leftrule=0pt,bottomrule=1pt, rightrule=0pt,left=0.2cm,right=0.2cm,
+	titlerule=0.5em,toptitle=0.1cm,bottomtitle=-0.1cm,top=0.2cm,
+	colframe=white!10!hijau,colback=white!90!hijau,coltitle=white, coltext=hijautua!80!brown,
+	shadow={1.3mm}{-1.3mm}{0mm}{gray!50!white}, % 添加阴影
+	title style={white!10!hijau}, before skip=8pt, after skip=8pt,
+	fonttitle=\bfseries,fontupper=\normalsize}{prp}
+
+
+% Example
+\newtcolorbox[use counter=hitung, number within=section]{cth}[1][]{breakable,
+	colframe=white!10!jingga, coltitle=white!90!jingga, colback=white!85!jingga, coltext=black!10!brown!50!jingga, colbacktitle=white!10!jingga, enhanced, fonttitle=\bfseries,fontupper=\normalsize, attach boxed title to top left={yshift=-2mm}, before skip=8pt, after skip=8pt,
+	title=Contoh~\thetcbcounter \ \ #1}
+
+% Catatan/Note
+\newtcolorbox{ctt}[1][]{enhanced,
+	left=4.1mm, borderline west={8pt}{0pt}{white!10!kuning},
+	before skip=6pt, after skip=6pt,
+	colback=white!85!kuning, colframe= white!85!kuning, coltitle=orange!60!kuning!25!brown, coltext=orange!60!kuning!25!brown,
+	fonttitle=\bfseries,fontupper=\normalsize, before skip=8pt, after skip=8pt,
+	title=\underline{Annotation}  #1}
+
+% Komentar/Remark
+\newtcolorbox{rmr}[1][]{
+	,arc=0mm,outer arc=0mm,
+	boxrule=0pt,toprule=1pt,leftrule=0pt,bottomrule=5pt, rightrule=0pt,left=0.2cm,right=0.2cm,
+	titlerule=0.5em,toptitle=0.1cm,bottomtitle=-0.1cm,top=0.2cm,
+	colframe=white!10!kuning,colback=white!85!kuning,coltitle=white, coltext=orange!60!kuning,
+	fonttitle=\bfseries,fontupper=\normalsize, before skip=8pt, after skip=8pt,
+	title=Remark  #1}

@@ -1,0 +1,33 @@
+\section{椭圆}
+
+\subsection{椭圆中的最值问题}
+
+\subsection{求椭圆的离心率}
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|c|c|}
+        \hline
+        公式1                                                                                                                              & 公式2                                                                                                   \\
+        \hline
+        $e = \frac{c}{a}$                                                                                                                & $e = \sqrt{1 - \frac{b^2}{a^2}}$                                                                      \\
+        \hline
+        \multicolumn{2}{|c|}{公式3}                                                                                                                                                                                                                \\
+        \hline
+        $e = \sqrt{\frac{c^2}{a^2} - \frac{b^2}{a^2}} = \sqrt{1 - \frac{b^2}{a^2}}$                                                      & 证明：$e = \sqrt{1 - \frac{b^2}{a^2}}$                                                                   \\
+        \hline
+        \multicolumn{2}{|c|}{已知椭圆方程为 $ \frac{x^2}{a^2} + \frac{y^2}{b^2} = 1$ (a > b > 0)}                                                                                                                                                       \\
+        \hline
+        \multicolumn{2}{|c|}{两焦点分别为 $ F_1, F_2$, 设置焦点三角形}                                                                                                                                                                                        \\
+        \hline
+        $PF_1F_2, \angle PF_1F_2 = \alpha, \angle PF_2F_1 = \beta,$ 则椭圆的离心率为                                                             & $e = \frac{\sin(\alpha + \beta)}{\sin \alpha + \sin \beta}$                                           \\
+        \hline
+        \multicolumn{2}{|c|}{证明：$\angle PF_1F_2 = \alpha, \angle PF_2F_1 = \beta,$}                                                                                                                                                              \\
+        \hline
+        $\left| PF_1F_2 \right| = \frac{\left| PF_2 \right|}{\sin(180^\circ - \alpha - \beta)} = \frac{\left| PF_1 \right|}{\sin \beta}$ & $\left| PF_1F_2 \right| = \frac{\left| PF_1 \right| + \left| PF_2 \right|}{\sin \alpha + \sin \beta}$ \\
+        \hline
+        由正弦定理得:                                                                                                                          & $e = \frac{c}{a} = \frac{\sin(\alpha + \beta)}{\sin \alpha + \sin \beta}$                             \\
+        \hline
+    \end{tabular}
+    \caption{求离心率常用公式}
+\end{table}

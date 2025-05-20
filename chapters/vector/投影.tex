@@ -1,0 +1,130 @@
+\section{投影}
+
+投影，和投影向量是不一样的。投影指的是投影下来的向量的长度（\textbf{模长}）。而投影向量是指投影下来的\textbf{向量}。
+
+\begin{definition}
+    设$a, b$是两个非零向量，它们的夹角是$\theta$，$e$是与$b$方向相同的单位向量。
+
+    $\vec{AB}=\textbf{a}, \vec{CD} = \textbf{b}$。从起点$A$和终点$B$，分别作所在直线的垂线，垂足分别为$A1$，$B1$，得到，我们称上述变换为向量$a$向向量$b$投影，叫做向量$a$在向量$b$上的投影向量．记为：
+    \begin{align}
+        \varphi(\vec{a}) = |\vec{a}| \cos \theta \, \vec{e} = \frac{\vec{a} \cdot \vec{b}}{|\vec{b}|^2} \vec{b}
+    \end{align}
+
+    \noindent
+    \begin{minipage}[c]{0.3\textwidth}
+        \begin{tikzpicture}[scale=0.7]
+
+            % 定义坐标
+            \coordinate (A) at (0, 0);
+            \coordinate (B) at (2, 1.5);
+            \coordinate (C) at (-0.7, -1.5);
+            \coordinate (D) at (3, -1.5);
+            \coordinate (A1) at (0, -1.5);
+            \coordinate (B1) at (2, -1.5);
+
+            % 绘制点
+            \fill (A) circle (1.5pt) node[anchor=east] {A};
+            \fill (B) circle (1.5pt) node[anchor=south] {B};
+            \fill (C) circle (1.5pt) node[anchor=east] {C};
+            \fill (D) circle (1.5pt) node[anchor=west] {D};
+            \fill (A1) circle (1.5pt) node[anchor=north] {A1};
+            \fill (B1) circle (1.5pt) node[anchor=north] {B1};
+
+            % 绘制向量
+            \draw[->, thick, -{Stealth[length=3mm, width=1.5mm]}] (A) -- (B) node[midway, above] {a};
+            \draw[->, thick, -{Stealth[length=3mm, width=1.5mm]}] (A1) -- (B1) node[midway, above] {b};
+
+            % 绘制虚线
+            \draw[dotted] (B) -- (B1);
+            \draw[dotted] (A) -- (A1);
+
+            % 绘制水平线
+            \draw[->, thick, -{Stealth[length=3mm, width=1.5mm]}] (C) -- (D);
+
+        \end{tikzpicture}
+    \end{minipage}
+    \hfill % minipage 环境中，段落不可以分开，否则会被 LateX 视为两个自然段而被分开
+    \begin{minipage}[c]{0.68\textwidth}
+        单独考察投影向量的题目很简单，但有一部分题会将向量的投影结合到数量积中考察，这种考题在初学时出现的比较多。
+
+        下面，我们会循序渐进地介绍投影向量的性质和应用。
+    \end{minipage}
+\end{definition}
+
+\begin{example}
+    如图，已知 \( O \) 的半径为 \( 2 \)，该点的长度为 \( b \)，则 \( AD - AB = \) \underline{\hspace{2cm}}。
+\end{example}
+
+\begin{example}
+    如图，在矩形 \( ABCD \) 中，\( AB = 3 \), \( AD = 2 \)，\( \Delta BCE \), \( \Delta ADF \) 均为边长的等边三角形，\( P \) 为六边形 \( ABCDF \) 边上的顶点（含端点），则 \( AB - AB \) 的取值范围为（ ）
+    \begin{tasks}(4)
+        \task \([-6, 15]\)
+        \task \([-5\sqrt{5}, 9 + 5\sqrt{5}]\)
+        \task \([-6, 9 + 5\sqrt{5}]\)
+        \task \([-5\sqrt{5}, 15]\)
+    \end{tasks}
+\end{example}
+
+\begin{example}
+    （最终）是顺差天池中间关于万象变化的古老经典。如图所示的是《易经》中记载的几何图形——八卦图图中正八边形代表八卦，中间的圆代表阴阳太极图。其余八卦图形相等的图形代表八卦图，已知正八边形 \( ABCDEFGH \) 的边长为 \( 4 \)，点 \( D \) 是正八边形 \( ABCDEFGH \) 的两面（包含边界）任一点，则 \( DF - EF \) 的取值范围是（ ）
+    \begin{tasks}(4)
+        \task \([-8\sqrt{2}, 16 + 8\sqrt{2}]\)
+        \task \([-16 - 8\sqrt{2}, 8\sqrt{2}]\)
+        \task \([-16 - 8\sqrt{2}, 16 + 8\sqrt{2}]\)
+        \task \([-8\sqrt{2}, 8\sqrt{2}]\)
+    \end{tasks}
+\end{example}
+
+\begin{example}
+    在 \(\triangle ABC\) 中，\( AD \) 为中线，\( AD = 4 \), \( BC = 6 \)，作 \( AH \perp AC \)，则 \( AH - AC \) 等于（ ）
+    \begin{tasks}(4)
+        \tesk 7
+        \tesk \(6\sqrt{2}\)
+        \tesk \(4\sqrt{5}\)
+        \tesk 9
+    \end{tasks}
+\end{example}
+
+\begin{example}
+    设四边形长为 \( 2 \)，\( APP \) 及其内部的点构成的集合，点 \( P \) 是 \( APP \) 的中心，集合 \( S = \{ P \mid PE D, | PFB |, | PFI |, i = 1, 2, 3 \} \)，则 \( PFB - PFI \) 的取值范围为（ ）
+    \begin{tasks}(4)
+        \task \([3, 15]\)
+        \task \([\frac{3}{2}, -\frac{15}{2}]\)
+        \task \([2, 12]\)
+        \task \([1, 6]\)
+    \end{tasks}
+\end{example}
+
+\begin{example}
+    八卦是中国文化的基本哲学概念。如图1是八卦模型图，其平面图形应为图中由正八边形 \( ABCDEFGH \)，其中 \( OA = 2 \)，则下列结论中正确的是（ ）
+    \begin{tasks}(4)
+        \task \( OB - OB = -\sqrt{2} \)
+        \task \( OA + OC = -\sqrt{2} OP \)
+        \task \( OA + OC = -\sqrt{2} OP \)
+        \task \( OA + OC = -\sqrt{2} OP \)
+    \end{tasks}
+\end{example}
+
+\begin{example}
+    若点 \( P \) 为正八边形边上的一个顶点，则 \( DF - AF \) 的取值范围为（ ）
+    \begin{tasks}(4)
+        \task \( RO = 2\pi R \)
+        \task \( RO = 2\pi R \)
+        \task \( RO = 2\pi R \)
+        \task \( RO = 2\pi R \)
+    \end{tasks}
+\end{example}
+
+\begin{example}
+    若点 \( P \) 为正八边形边上的一个顶点，则 \( DF - AF \) 的取值范围为（ ）
+    \begin{tasks}(4)
+        \task \( RO = 2\pi R \)
+        \task \( RO = 2\pi R \)
+        \task \( RO = 2\pi R \)
+        \task \( RO = 2\pi R \)
+    \end{tasks}
+\end{example}
+
+\begin{example}
+    若点 \( P \) 为正八边形边上的一个顶点，则 \( DF - AF \) 的取值范围为（ ）
+\end{example}
