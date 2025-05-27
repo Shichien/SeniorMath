@@ -188,6 +188,15 @@
           \end{tasks}
 
     \item 从 5 名同学中选择 4 人参加三天志愿服务活动，有一天安排两人，另两天各安排一人，共有 \underline{\hspace{2cm}}种安排方法（用数字作答）
+
+    \item 总院计划安排小吴、小张等 8 名护士到 $A, B, C, D$ 四所医院实习，每两名护士到一所医院，考虑到个人意愿问题，小吴不安排 A 医院，小张不安排 $B$ 医院，则安排方法共有
+          \begin{tasks}(4)
+              \task $1200$ 种
+              \task $1440$ 种
+              \task $1600$ 种
+              \task $1800$ 种
+          \end{tasks}
+
 \end{enumerate}
 
 \begin{example}
@@ -225,7 +234,7 @@
     所以总数为：$\mathrm{C}_{3}^{1} \times \mathrm{C}_{4}^{1} \times \mathrm{A}_{4}^{3} = 3 \times 4 \times (4 \times 3 \times 2) = 3 \times 4 \times 24 = 12 \times 24 = 288$ 个。
 \end{solution}
 
-\subsubsection{6、定序问题\*也称受限区域排列}
+\subsubsection{定序问题\*也称受限区域排列}
 所谓定序问题是指几个元素顺序固定的排列问题，解法是先将这几个元素与其它元素一同进行全排列，然后除以定序元素的全排列数。或者，先为定序元素选定位置，其余元素进行全排列。
 
 \begin{example}
@@ -282,8 +291,8 @@
     故选B。
 \end{solution}
 
-\subsubsection{9、元素相同问题/隔板法\*}
-将n个相同元素分成m份（m,n为正整数，每份至少一个元素），可以利用m-1块隔板，插入n个元素所形成的n-1个空隙（不含两端）中的任意m-1个空位，共有 $\mathrm{C}_{n-1}^{m-1}$ 种分法。
+\subsubsection{元素相同问题（隔板法）}
+将 $n$ 个相同元素分成 $m$ 份（$m$,$n$ 为正整数，每份至少一个元素），可以利用 $m-1$ 块隔板，插入 $n$ 个元素所形成的 $n-1$ 个空隙（不含两端）中的任意 $m-1$ 个空位，共有 $\mathrm{C}_{n-1}^{m-1}$ 种分法。
 
 \begin{example}
     有10个运动员名额，要分给7个班，每班至少一个，有多少种分配方案？
@@ -298,9 +307,18 @@
     $\mathrm{C}_{9}^{6} = \mathrm{C}_{9}^{9-6} = \mathrm{C}_{9}^{3} = \frac{9 \times 8 \times 7}{3 \times 2 \times 1} = 3 \times 4 \times 7 = 84$ 种。
 \end{solution}
 
-\subsubsection{10、交叉问题/容斥原理}
-某些排列组合问题，在计算时会出现重复计数的情况，直接计算比较困难，这时可以利用容斥原理来解决。两个集合的容斥原理 $card(A \cup B) = card(A) + card(B) - card(A \cap B)$。
-对于三个集合: $card(A \cup B \cup C) = card(A) + card(B) + card(C) - card(A \cap B) - card(A \cap C) - card(B \cap C) + card(A \cap B \cap C)$。
+\subsubsection{交叉问题（容斥原理）}
+某些排列组合问题，在计算时会出现重复计数的情况，直接计算比较困难，这时可以利用容斥原理来解决。两个集合的容斥原理：
+
+$$card(A \cup B) = card(A) + card(B) - card(A \cap B)$$
+
+对于三个集合:
+
+\begin{eqnarray*}
+    card(A \cup B \cup C) &=& card(A) + card(B) + card(C) \\
+    &&- card(A \cap B) - card(A \cap C) - card(B \cap C) \\
+    &&+ card(A \cap B \cap C)
+\end{eqnarray*}
 
 \begin{example}
     从6名运动员中选出4人参加 $4 \times 100$米接力赛，如果甲不跑第一棒，乙不跑最后一棒，共有多少种不同的参赛方法？
@@ -323,12 +341,14 @@
     所以，符合条件的排法数 $= |U| - |A \cup B| = 360 - 108 = 252$ 种。
 \end{solution}
 
-\subsubsection{11、正难则反思想/间接法求解某些排列组合问题，从总体中排除不符合条件的情况}
+\subsubsection{正难则反思想}
+
 \begin{example}
     有五名学生站成一排，从中任选三人，要求这三人中任何两人都不相邻有多少种选法？
 \end{example}
+
 \begin{solution}
-    解：设5名学生的位置为 1, 2, 3, 4, 5。要选出3个位置，使得这3个位置不相邻。
+    设 $5$ 名学生的位置为 1, 2, 3, 4, 5。要选出3个位置，使得这3个位置不相邻。
     符合条件的选择只有一种：选位置 1, 3, 5。
     所以有 $\mathrm{C}_{1}^{1} = 1$ 种选法。(如果学生是无差别的，只考虑位置选法)
     如果学生是不同的，那么选出这三名学生后，他们站在1,3,5号位。
@@ -336,12 +356,11 @@
     使用公式法：从n个元素中选k个不相邻的元素，有 $\mathrm{C}_{n-k+1}^{k}$ 种选法。
     这里 $n=5$ (五个位置)，$k=3$ (选三个人/位置)。
     种数 $= \mathrm{C}_{5-3+1}^{3} = \mathrm{C}_{3}^{3} = 1$ 种。
-    (The image solution "解：3名同学全不相邻，则把这3人插入到剩余2人形成的3个空中，有 $C_3^3=1$ 种。" is very brief and refers to an insertion idea, which is equivalent here).
 \end{solution}
 
-\subsubsection{12、选排问题\*先取后排或捆绑法}
+\subsubsection{选排问题}
 \begin{example}
-    9名乒乓球运动员中，其中男运动员5名，女运动员4名，现要进行混合双打比赛（即每队由一名男运动员和一名女运动员组成，共组成两队进行比赛），有多少种不同的配对方法？ (Assuming "混合双打比赛" means forming two pairs for one match)
+    9名乒乓球运动员中，其中男运动员5名，女运动员4名，现要进行混合双打比赛（即每队由一名男运动员和一名女运动员组成，共组成两队进行比赛），有多少种不同的配对方法？
 \end{example}
 \begin{solution}
     解：要组成两对混合双打队伍。
@@ -357,8 +376,15 @@
 
 \subsubsection{有序排列问题}
 
-
-\subsection{有序排列问题}
+\begin{example}
+    某学校举行校园歌手大赛活动邀请了 6 位专家评委，在活动结束时邀请这 6 位专家站成一排合影留念，则下列说法正确的是
+    \begin{tasks}(1) % Options are long, better as single column or (2)
+        \task 若将专家甲、乙、丙三人从左到右按照身高递增的顺序排列，则共有 120 种排法
+        \task 若专家甲、乙两人不相邻，则共有 480 种排法
+        \task 若专家甲、乙、丙三人相邻，且甲在中间，则共有 72 种排法
+        \task 若专家丙不在排头，丁不在排尾，则共有 480 种排法
+    \end{tasks}
+\end{example}
 
 \begin{enumerate}
     \item 某班一天上午有 4 节课，下午有 2 节课，现要安排该班一天中语文、数学、政治、英语、体育、心理 6 堂课的课程表，要求数学课排在上午，体育课排在下午，不同排法总数是
