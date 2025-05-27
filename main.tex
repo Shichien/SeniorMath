@@ -1,6 +1,8 @@
 \documentclass[lang=cn,12pt,device=pad,color=cyan,titlestyle=hang]{elegantbook}
 \input{additional.tex}
 
+\usetikzlibrary{calc, angles, quotes}
+
 \setcounter{tocdepth}{3}
 \title{高中数学总复习讲义}
 \author{Shichien}
@@ -16,15 +18,45 @@
 \tableofcontents
 \mainmatter
 
-% \chapter{向量}
-% \input{chapters/vector/极化恒等式.tex}
-% \input{chapters/vector/投影.tex}
+\chapter{函数}
+\input{chapters/function/基本函数图像.tex}
 
-% \chapter{立体几何}
-% \input{chapters/solid-geometry/外接球.tex}
+\chapter{向量}
+\input{chapters/vector/极化恒等式.tex}
+\input{chapters/vector/投影.tex}
+
+\chapter{立体几何}
+\input{chapters/solid-geometry/外接球.tex}
 
 \chapter{解析几何}
 \input{chapters/analytic-geometry/椭圆.tex}
 
+\chapter{导数}
+\input{chapters/differential-coefficient/借助导数研究函数单调性.tex}
+
+\chapter{概率}
+\input{chapters/probability/概率模型.tex}
+\input{chapters/probability/概率计算.tex}
+
+\chapter{排列组合}
+\input{chapters/arrangement-combination/排列组合基本思想.tex}
+\input{chapters/arrangement-combination/排列组合经典方法.tex}
+\input{chapters/arrangement-combination/二项式定理.tex}
 
 \end{document}
+
+% 请整理这份代码，并返回一个代码块给我，让我能直接复制。具有以下要求：
+% （1）选项使用 tasks 宏包生成，如：
+%     \begin{tasks}(4)
+%         \task $3\sqrt{5}$
+%         \task $5\sqrt{5}$
+%         \task $\sqrt{7}$
+%         \task $1$
+%     \end{tasks}
+% （2）每一道题，请都使用 \begin{example} 环境来包裹；
+% （3）对于选择题，题目末尾不需要括号；对于填空题，要注意横线要让 LateX 能够直接编译。
+% （4）请不要写划分章节（不能使用 \section 等命令，不需要分类单选题、填空题等）
+
+% 请读取这张图片，并按示例返回给我一份 LateX 代码：
+
+% 
