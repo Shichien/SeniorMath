@@ -27,6 +27,12 @@ jobs:
         uses: xu-cheng/latex-action@v3
         with:
           root_file: main.tex
+          args: >-
+            -pdf
+            -xelatex
+            -interaction=nonstopmode
+            -file-line-error
+            -halt-on-error
 
       - name: Commit and push PDF
         uses: stefanzweifel/git-auto-commit-action@v5
