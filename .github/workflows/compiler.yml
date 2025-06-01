@@ -1,0 +1,42 @@
+name: Compile LaTeX Document
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - '**.tex'
+      - '**.bib'
+      - 'images/**'
+      - '**.cls'
+      - '**.sty'
+      # Avoid Commit PDF causes infinity loop
+
+jobs:
+  compile_and_commit_latex:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+
+    steps:
+      # 第一步：检出你的仓库代码
+      - name: Check out Git repository
+        uses: actions/checkout@v4
+
+      - name: Compile LaTeX document
+        uses: xu-cheng/latex-action@v3
+        with:
+          root_file: main.tex
+          compiler: xelatex
+          # working_directory: src/
+
+      - name: Commit and push PDF
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "ci(build): add new pdf version"
+
+          file_pattern: main.pdf
+
+          # 可选：添加标签到提交 (例如，如果你想根据标签做其他操作)
+          # tag_name: pdf-v1.0.${{ github.run_number }}
