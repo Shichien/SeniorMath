@@ -1,0 +1,33 @@
+
+\section{不等式证明}
+\begin{theorem}[均值不等式]
+    $$H_n\leq G_n\leq A_n\leq Q_n\quad \forall n \in \mathbb{N}^+$$
+    其中
+    \begin{align*}
+        H_n & = \frac{n}{\frac{1}{x_1}+\frac{1}{x_2}+\cdots+\frac{1}{x_n}} \\
+        G_n & = \sqrt[n]{x_1x_2\cdots x_n}                                 \\
+        A_n & =  \frac{x_1+x_2+\cdots+x_n}{n}                              \\
+        Q_n & =  \sqrt{\frac{x_1^2+x_2^2+\cdots+x_n^2}{n}}
+    \end{align*}
+    分别是正数$x_1,x_2,\cdots,x_n$的调和平均值，几何平均值，算数平均值和平方平均值，当且仅当$x_1=x_2=\cdots=x_n$的时候，所有的不等式都取等号。
+\end{theorem}
+
+\begin{theorem}[排序不等式]
+    对于两组实数$x_1\leq x_2 \leq \cdots \leq x_n$和$y_1\leq y_2 \leq \cdots \leq y_n$，有如下不等式成立:\\
+    （正序和$\geq$乱序和$\geq$逆序和）
+    \begin{align*}
+             & x_1y_1+x_2y_2+\cdots+x_ny_n                               \\
+        \geq & x_{\sigma(1)}y_1+x_{\sigma(2)}y_2+\cdots+x_{\sigma(n)}y_n \\
+        \geq & x_1y_n+x_2y_{n-1}+\cdots+x_ny_1
+    \end{align*}
+    其中$\sigma(1),\sigma(2),\cdots,\sigma(n)$是$\{1,2,\cdots,n\}$按照某一顺序的排列。
+\end{theorem}
+\begin{theorem}[Jensen不等式]
+    如果$f$是凸函数，那么$\forall a \in (0,1)$
+    $$
+        f(ax+(1-a)y) \le af(x)+(1-a)f(y)
+    $$
+\end{theorem}
+\begin{problemset}
+    \item 尝试用排序不等式证明：算术均值$\geq$几何均值。
+\end{problemset}

@@ -1,0 +1,44 @@
+\section{有理不等式}
+\subsection{有理函数}
+类比有理数的定义
+\begin{definition}[有理函数]
+    形如：
+    $$
+        f(x) = \frac{p(x)}{q(x)}
+    $$
+    其中$p(x),q(x)$都是多项式。
+\end{definition}
+例如：
+$$
+    f(x) = \frac{2x}{1-x^2}
+$$
+\subsection{有理不等式的解法}
+首先我们很容易知道：
+$$
+    \frac{p(x)}{q(x)} > 0 \iff p(x)q(x)>0, \quad q(x)\ne 0
+$$
+所以我们只需要解一个多项式不等式即可：
+$$
+    a_0 + a_1x+\cdots+a_nx^n > 0
+$$
+解决这样的不等式需要代数基本定理：
+\begin{theorem}[代数基本定理]
+    任何一个首一n阶多项式都可以分解成若干个一次（实系数）多项式和二次（实系数）多项式的乘积。也就是：
+    $$
+        x^n + a_1x^{n-1}+\cdots+a_{n-1}x+a_n = \prod_{i=1}^{n-2d} (x-r_i) \prod_{j=1}^d(x^2+u_jx+v_j)
+    $$
+    其中$u_j,v_j$满足
+    $$
+        u_j^2-4v_j\le 0
+    $$
+    所以原多项式的（实数）零点只有$r_1,r_2\cdots r_{n-2d}$
+\end{theorem}
+求出这些实数根后，我们只要使用\textbf{穿根法}即可求解多项式不等式了。
+\begin{exercise}
+    验证下列因式分解：
+    \begin{enumerate}
+        \item $x^3+1 = (x+1)(x^2-x+1)$
+        \item $x^4+1 = (x^2+\sqrt{2}x+1)(x^2-\sqrt{2}x+1)$
+        \item $x^5+1 = (x+1)((1-x)(1+x^2)+x^4)$
+    \end{enumerate}
+\end{exercise}

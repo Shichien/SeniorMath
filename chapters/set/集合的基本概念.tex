@@ -1,0 +1,132 @@
+\section{集合}
+
+\subsection{集合的定义}
+
+\begin{definition}[集合]
+    集合是就是若干个\textbf{互不相同}的元素的\textbf{无序}组合。
+\end{definition}
+
+集合的关键性质在于其\textbf{元素}具有：
+
+\begin{itemize}
+    \item 互异性
+    \item 无序性
+    \item 确定性
+\end{itemize}
+
+\subsection{集合表示法}
+
+\begin{definition}[列举法]
+    对于有限的集合，我们总可以把所有的元素列举出来，从而表示这个集合。例如$\{1,2,3\}$。
+\end{definition}
+
+\begin{definition}[描述法]
+    对于无限的集合，我们可以通过描述他的性质来表示这个集合。例如偶数集合：$\{x|x=2n,n\in\mathbb{Z}\}$。
+\end{definition}
+
+\begin{exercise}[罗素悖论：描述法带来的问题]
+
+    理发师Tony放出豪言：他只为，而且一定要为，城里所有不为自己理发的人理发。
+
+    那么：Tony该为自己理发吗？如果他为自己理发，那么按照他的豪言“只为城里所有不为自己理发的人理发”他不应该为自己理发；但如果他不为自己理发，同样按照他的豪言“一定要为城里所有不为自己理发的人理发”他又应该为自己理发。悖论就此产生。
+
+    用更加数学的语言来描述这个悖论就是：我们构造一个特殊的\textbf{集合的}集合：
+    $$
+        S = \{s|s \notin s\}
+    $$
+    也就是说，$S$是那些不属于自身的集合的集合。那么悖论在于，对于一个特定的集合$A$，它属于$S$吗？
+\end{exercise}
+
+值得一提的是，在公理化集合论中我们通过引入内涵公理来解决这样的悖论。
+
+\subsection{集合间的关系}
+
+\begin{definition}[包含（子集）]
+    $$\forall x \in A ,\quad x \in B \iff A\subset B$$
+\end{definition}
+
+\begin{definition}[真包含（真子集）]
+    $$A\subset B, B \not\subset A \iff A \subsetneqq B$$
+\end{definition}
+
+\begin{definition}[相等]
+    $$A\subset B, B\subset A \iff A=B$$
+\end{definition}
+
+\begin{exercise}[子集个数]
+    有$n$个元素的集合，恰有$2^n$个子集。
+\end{exercise}
+
+\begin{solution}
+    不妨考虑集合$A=\{1,2,3,\cdots,n\}$，设其的子集个数为$f(n)$。
+
+    那么$A$的所有子集中不含有元素$n$的子集刚好就是$\{1,2,3,\cdots,n-1\}$的所有子集；
+    并且$A$的所有子集中含有元素$n$的子集刚好对应$\{1,2,3,\cdots,n-1\}$的所有子集添加一个额外元素$n$。
+
+    所以有递推关系：$$f(n)=f(n-1)+f(n-1) $$
+
+    考虑$n=0$的情况，也即是$A=\emptyset$。显然它的子集只有空集一个，也即是$f(0)=1$。根据上述递推关系可知$f(1)=2$，$f(2)=4$。依此类推即可得到$f(n)=2^n$。
+\end{solution}
+
+\subsection{集合的运算}
+
+\begin{definition}[交]
+    $$A\cap B = \{x|x \in A, x \in B\}$$
+\end{definition}
+
+\begin{definition}[并]
+    $$A\cup B = \{x|x \in A \quad or \quad x \in B\}$$
+\end{definition}
+
+\begin{definition}[补]
+    $$\complement_B A=\{x|x\in B, x\notin A\}$$
+\end{definition}
+
+\begin{definition}[差]
+    $$A-B = \{x|x\in A, x\notin B\}$$
+\end{definition}
+
+\begin{theorem}[De Morgan定理]
+    集合版：
+    $$
+        (A\cap B)^C = A^C\cup B^C
+    $$
+    命题版：
+    $$
+        \neg (p \land q) \iff \neg p \lor \neg q
+    $$
+\end{theorem}
+
+\begin{exercise}[容斥原理]
+    用记号：$\mathrm{card}(A)$来表示$A$中的元素个数，那么有：
+    $$\mathrm{card}(A\cup B) = \mathrm{card}(A)+\mathrm{card}(B)-\mathrm{card}(A\cap B)$$
+\end{exercise}
+
+\begin{proof}
+    要证明上式，首先要说明：
+    $$A\cap B=\emptyset \implies \mathrm{card}(A\cup B) = \mathrm{card}(A)+\mathrm{card}(B)$$
+    和
+    $$B\subset A \implies \mathrm{card}(A-B) = \mathrm{card}(A)-\mathrm{card}(B)$$
+
+    对于有限集合，这两个式子是显然成立的，无限集合我们不做考虑。
+
+    其次，要理解：
+    $$A\cup B = (A-A\cap B) + (B-A\cap B) + A\cap B$$
+    并且上式出现的三个集合$A-A\cap B$，$B-A\cap B$，$A\cap B$是互不相交的。
+
+    最后就可以得到：
+    \begin{align*}
+          & \mathrm{card}(A\cup B)                                                                                     \\
+        = & \mathrm{card}((A-A\cap B) + (B-A\cap B) + A\cap B)                                                         \\
+        = & \mathrm{card}(A-A\cap B) + \mathrm{card}(B-A\cap B) + \mathrm{card}(A\cap B)                               \\
+        = & \mathrm{card}(A)-\mathrm{card}(A\cap B) + \mathrm{card}(B)-\mathrm{card}(A\cap B) + \mathrm{card}(A\cap B) \\
+        = & \mathrm{card}(A)+\mathrm{card}(B)-\mathrm{card}(A\cap B)
+    \end{align*}
+\end{proof}
+
+\begin{problemset}
+    \item 考虑以下集合的表示方法：
+    自然数集$\mathbb{N}$，整数集$\mathbb{Z}$，有理数集$\mathbb{Q}$，实数集$\mathbb{R}$，复数集$\mathbb{C}$
+    \item 证明：集合的交并补运算只需要两个就可以表示出第三者。
+    \item 请问$\{1,2,\cdots,n\}$有多少个子集？
+\end{problemset}

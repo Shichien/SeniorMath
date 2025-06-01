@@ -1,0 +1,56 @@
+\subsection{命题的逆和否}
+
+\begin{definition}[否命题]
+    命题$p$的否为$\neg p$；命题$p\implies q$的否为$\neg p \implies \neg q$。
+\end{definition}
+
+\begin{definition}[逆命题]
+    命题$p\implies q$的逆为$q \implies p$。
+\end{definition}
+
+同时进行逆和否的操作得到的即为\textbf{逆否命题}。
+
+\begin{definition}[逆否命题]
+    命题$p\implies q$的逆否为$\neg q \implies \neg p$。-
+\end{definition}
+
+\begin{exercise}[逆否命题的真假]
+    逆否命题和原命题为等价命题，也即他们同时为真或者同时为假。
+\end{exercise}
+
+\begin{solution}
+    命题$p\implies q$和$\neg q \implies \neg p$互为逆否命题。
+
+    假设$p\implies q$为真，如果$q$是假命题，那么$p$一定也是假命题，否则通过$p \implies q$可以推出$q$是真命题从而矛盾。所以$\neg q \implies \neg p$。
+\end{solution}
+
+\subsection{充分条件和必要条件}
+充分条件和必要条件是逻辑蕴涵关系中对命题的叫法。
+
+\begin{definition}[充分条件和必要条件]
+    在逻辑蕴含关系$p\implies q$中，$p$是$q$的充分条件，$q$是$p$的必要条件。
+\end{definition}
+
+\begin{definition}[充要条件]
+    如果$p$既是$q$的充分条件，又是必要条件，那么称为充分必要条件，记作
+    $$
+        p\iff q
+    $$
+    也称这两个命题等价。
+\end{definition}
+
+\subsection{逻辑量词}
+
+\begin{definition}[存在和任意]
+    存在量词“存在”的意思是有一个满足条件即可，符号为$\exists$，全称量词“任意”的意思是对于所有考虑的对象都满足条件，符号为$\forall$。他们都是对命题的修饰，是逻辑量词的一种。
+\end{definition}
+
+\begin{exercise}[逻辑量词的否定]
+    $$\forall x \in \mathbb{R}, \exists y \in \mathbb{R} \quad x+y=0$$写出这一命题的否定形式。
+\end{exercise}
+
+\begin{solution}
+    $$\exists x \in \mathbb{R}, \forall y \in \mathbb{R} \quad x+y=0$$
+
+    做否命题的时候，存在量词要改为全称量词，全称量词要改为存在量词。
+\end{solution}

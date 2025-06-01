@@ -1,0 +1,19 @@
+\section{柯西不等式}
+
+\begin{theorem}[Cauchy不等式]\label{cauchy_ieq}
+    $$
+        (a_1b_1+a_2b_2+\cdots+a_nb_n)^2\leq (a_1^2+a_2^2+\cdots+a_n^2)(b_1^2+b_2^2+\cdots+b_n^2)
+    $$
+    当且仅当$a_i$全为0或$b_i=ka_i, \quad i=1,2,\cdots,n$时取等号。
+\end{theorem}
+\begin{proof}
+    考虑二次函数
+    $$
+        f(x) = (a_1x+b_1)^2+(a_2x+b_2)^2+\cdots+(a_nx+b_n)^2 \ge 0 \quad \forall x
+    $$
+    展开得到：
+    $$
+        f(x) = (a_1^2+a_2^2+\cdots+a_n^2)x^2 + 2(a_1b_1+a_2b_2+\cdots+a_nb_n)x + (b_1^2+b_2^2+\cdots+b_n^2)
+    $$
+    使用二次函数恒大于0的充分必要条件（判别式$\Delta \le 0$）即可得到Cauchy不等式。
+\end{proof}

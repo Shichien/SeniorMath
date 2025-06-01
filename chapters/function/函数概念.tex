@@ -1,0 +1,190 @@
+\chapter{函数基础}
+\begin{introduction}
+    \item 映射
+    \item 函数
+    \item 函数图像
+    \item 函数的性质
+    \item 反函数
+    \item 一元二次函数
+\end{introduction}
+\section{映射和函数}
+\subsection{映射}
+\begin{definition}[映射]
+    两个非空集合$X,Y$之间的元素存在对应，并且对于$X$中的每个元素$a$，$Y$中都有唯一的元素$b$与之对应。那么这种对应关系称为映射，记作$f:X\to Y$。其中$f$称为对应关系，$b$称为像，$a$称为原像，$X$称为定义域（或称为原像集），$Y$称为陪域，所有像的集合称为值域。
+\end{definition}
+\begin{exercise}
+    如图所示为一个映射，写出定义域、陪域、值域。
+    \begin{figure}[H]
+        \centering
+        \begin{tikzpicture}[ele/.style={fill=black,circle,minimum width=.8pt,inner sep=1pt},every fit/.style={ellipse,draw,inner sep=-2pt}]
+            \node[ele,label=left:$a$] (a1) at (0,4) {};
+            \node[ele,label=left:$b$] (a2) at (0,3) {};
+            \node[ele,label=left:$c$] (a3) at (0,2) {};
+            \node[ele,label=left:$d$] (a4) at (0,1) {};
+            \node[ele,,label=right:$1$] (b1) at (4,4) {};
+            \node[ele,,label=right:$2$] (b2) at (4,3) {};
+            \node[ele,,label=right:$3$] (b3) at (4,2) {};
+            \node[ele,,label=right:$4$] (b4) at (4,1) {};
+            \node[draw,fit= (a1) (a2) (a3) (a4),minimum width=2cm] {$X$} ;
+            \node[draw,fit= (b1) (b2) (b3) (b4),minimum width=2cm] {$Y$} ;
+            \draw[->,thick,shorten <=2pt,shorten >=2pt] (a1) -- (b4);
+            \draw[->,thick,shorten <=2pt,shorten >=2] (a2) -- (b2);
+            \draw[->,thick,shorten <=2pt,shorten >=2] (a3) -- (b1);
+            \draw[->,thick,shorten <=2pt,shorten >=2] (a4) -- (b2);
+        \end{tikzpicture}
+        \caption{从$X$到$Y$的一个映射}
+    \end{figure}
+\end{exercise}
+\begin{solution}
+    定义域为：$\{a,b,c,d\}$，陪域为：$\{1,2,3,4\}$，值域为：$\{1,2,4\}$。
+\end{solution}
+\subsection{函数}
+\begin{definition}[函数]
+    函数是定义域和陪域都为数集的映射，例如：$f:\mathbb{R}\to \mathbb{R}$。由于都是数值，习惯把像称为因变量$y$，把原像称为自变量$x$，记作：$y=f(x)$。
+\end{definition}
+\subsection{函数的图像}
+函数的图像可以帮助我们更好的理解函数，但也不要完全信任图像，因为你的眼睛会骗人。
+\begin{definition}[函数图像]
+    对于定义域为$D$函数$y=f(x)$，点集：$$\{(x,y)|y=f(x),x\in D\}$$在平面直角坐标系中的图像即为函数的图像。
+\end{definition}
+\begin{exercise}[反比例函数的图像]
+    画出$y=\frac{1}{x} \quad D = \{x|x\ne 0\}$图像。
+\end{exercise}
+\begin{solution}
+    \begin{figure}[H]
+        \centering
+        \begin{tikzpicture}
+            \draw[<->](2,0)--(0,0)--(0,2);
+            \draw(0,-2)--(0,0)--(-2,0);
+            \draw[black,domain=-1.8:-0.5] plot(\x,1/\x);
+            \draw[black,domain=0.5:1.8] plot(\x,1/\x);
+        \end{tikzpicture}
+        \caption{$y=\frac{1}{x}$的图像}
+    \end{figure}
+\end{solution}
+\subsection{函数图像的变换}\label{transform}
+\begin{enumerate}
+    \item 平移
+          \begin{itemize}
+              \item 水平平移：$y = f(x)$ 到 $y = f(x+a)$
+              \item 水平平移：$y = f(x)$ 到 $y = f(x) + a$
+          \end{itemize}
+    \item 对称
+          \begin{itemize}
+              \item 关于y轴对称：$y = f(x)$ 到 $y = f(-x)$
+              \item 关于x轴对称：$y = f(x)$ 到 $y = -f(x)$
+              \item 关于原点对称：$y = f(x)$ 到 $y = -f(-x)$
+              \item 关于$x=m$对称：$y = f(x)$ 到 $y = f(2m-x)$
+              \item 关于$y=n$对称：$y = f(x)$ 到 $y = 2n-f(x)$
+              \item 关于点$(m,n)$对称：$y = f(x)$ 到 $y = 2n-f(2m-x)$
+          \end{itemize}
+    \item 翻折
+          \begin{itemize}
+              \item 把x轴下侧的翻折上去：$y = f(x)$ 到 $y = |f(x)|$
+              \item 把y轴右侧的翻折到左侧：$y = f(x)$ 到 $y = f(|x|)$
+          \end{itemize}
+    \item 伸缩
+          \begin{itemize}
+              \item 横坐标伸缩：$y = f(x)$ 到 $y = f(kx)$
+              \item 纵坐标伸缩：$y = f(x)$ 到 $y = kf(x)$
+          \end{itemize}
+    \item 旋转*
+
+          使用矩阵的知识。$(x,y)$绕着原点逆时针旋转$\theta$角度变为：
+          $$
+              (\cos\theta x- \sin\theta y, \sin\theta x+ \cos\theta y)
+          $$
+          那么函数图像就是每个点都旋转：
+          $$
+              (\cos\theta x- \sin\theta f(x), \sin\theta x+ \cos\theta f(x))
+          $$
+\end{enumerate}
+\subsection{函数的性质}
+\begin{definition}[单调性]
+    如果$\forall x,y \in I$当$x>y$的时候，都有$f(x)>f(y)$，那么我们称$f$在$I$上严格单调增。
+
+    如果$\forall x,y \in I$当$x>y$的时候，都有$f(x)\geq f(y)$，那么我们称$f$在$I$上单调增。
+
+    如果$\forall x,y \in I$当$x>y$的时候，都有$f(x)<f(y)$，那么我们称$f$在$I$上严格单调减。
+
+    如果$\forall x,y \in I$当$x>y$的时候，都有$f(x)\leq f(y)$，那么我们称$f$在$I$上单调减。
+\end{definition}
+
+\begin{definition}[奇偶性]
+    如果$f(x)=f(-x)\quad \forall x\in D$，其中$D$是$f$的定义域，那么我们称$f$是偶函数。
+
+    如果$f(x)=-f(-x)\quad \forall x\in D$，其中$D$是$f$的定义域，那么我们称$f$是奇函数。
+
+    偶函数的图像关于$x$轴轴对称。奇函数的图像关于原点中心对称。
+\end{definition}
+\begin{exercise}
+    证明$f(x)=x$是在其定义域上严格单调增的奇函数，$g(x)=x^2$是偶函数。
+\end{exercise}
+\begin{solution}
+    $f(-x)=-x=-f(x)$，所以$f(x)$是奇函数。
+
+    $\forall x,y\in \mathbb{R}$，如果$x<y$那么$f(x)<f(y)$，所以$f(x)$在$\mathbb{R}$上是严格单调增的。
+
+    $g(-x)=x^2=g(x)$，所以$g(x)$是偶函数。
+\end{solution}
+\begin{definition}[周期性]
+    如果$f(x)=f(x+T)\quad \forall x\in D$，其中$D$是$f$的定义域，那么我们称$f$是周期为$T$的周期函数。
+\end{definition}
+\begin{definition}[最小正周期]
+    显然，如果$T$是$f$的周期，那么$\pm2T,\pm3T,\cdots,\pm nT$都是$f$的周期。我们称所有为正数的周期中最小那一为最小正周期。
+\end{definition}
+\section{反函数}
+\begin{definition}[反函数]
+    如果函数$y=f(x)$在区间$I$上自变量和因变量是一一对应的，那么该函数存在由关系式：$x=f(y)$确定的反函数：$f^{-1}$。
+
+    例如$y=f(x)=x^2$在$(0,\infty)$上满足一一对应，存在由$x=f(y)=y^2$确定的反函数$y=\sqrt{x}$。
+\end{definition}
+从函数图像上来看，反函数的图像和原函数的图像恰是关于$y=x$这条直线对称的。
+\section{一元二次函数}
+\subsection{一元二次方程}
+\begin{definition}[一元二次方程]
+    形如$ax^2+bx+c=0$（$a\ne 0$）的，关于$x$的方程称为一元二次方程。
+\end{definition}
+\begin{theorem}[一元二次方程的解]
+    $ax^2+bx+c=0$（$a\ne 0$）的解为
+    $$
+        x = \frac{-b\pm \sqrt{b^2-4ac}}{2a}
+    $$
+\end{theorem}
+\begin{proof}
+    $ax^2+bx+c=0$（$a\ne 0$）
+    变形为：
+    $$a(x^2+\frac{b}{a}x+\frac{b^2}{4a^2}+\frac{c}{a}-\frac{b^2}{4a^2})=0$$
+    也即
+    $$a(x+\frac{b}{2a})^2=\frac{b^2}{4a}-c$$
+    也即是
+    $$(x+\frac{b}{2a})^2=\frac{b^2-4ac}{4a^2}$$
+    如果$\Delta =b^2-4ac \geq 0$，此时方程有实数解：
+    $$x = \frac{-b\pm \sqrt{b^2-4ac}}{2a}$$
+    否则无实数解。
+\end{proof}
+\subsection{一元二次函数的定义}
+\begin{definition}[一元二次函数]
+    形如$y=ax^2+bx+c=0$（$a\ne 0$）的函数称为一元二次函数。
+\end{definition}
+\subsection{一元二次函数的图像}
+\begin{figure}[H]
+    \centering
+    \begin{tikzpicture}
+        %画x和y轴坐标
+        \draw[<->](3,0)--(0,0)--(0,3);
+        \draw(0,-2)--(0,0)--(-3,0);
+        \draw[black,domain=-1.8:1.8] plot(\x,\x*\x-1) node at (0.9,2.2){$y=x^2-1$};
+    \end{tikzpicture}
+    \caption{$y=x^2-1$的图像}
+\end{figure}
+
+\subsection{一元二次不等式}
+\begin{definition}[一元二次不等式]
+    形如$ax^2+bx+c>0$（$a\ne 0$）的不等式称为一元二次不等式。
+\end{definition}
+根据一元二次函数的图像我们可以轻松求得一元二次不等式的解集。
+
+\begin{problemset}
+    \item TBD
+\end{problemset}
