@@ -1,4 +1,4 @@
-\documentclass[lang=cn,12pt,device=pad,color=cyan,titlestyle=hang]{elegantbook}
+\documentclass[lang=cn,10pt,color=cyan,titlestyle=hang]{elegantbook}
 \input{additional.tex}
 
 \usetikzlibrary{calc, angles, quotes}
@@ -12,85 +12,96 @@
 \extrainfo{Mathematics emphasizes rigor. - 数学讲究严谨.}
 \cover{acloudyskye.jpg}
 
+\newcommand{\h}{\hspace}
+\renewcommand{\v}{\vspace}
+
 \begin{document}
-\maketitle
-\frontmatter
-\tableofcontents
-\mainmatter
+% \maketitle
+% \frontmatter
+% \tableofcontents
+% \mainmatter
 
-\chapter{集合}
-\input{chapters/set/集合的基本概念.tex}
-\input{chapters/set/韦恩图.tex}
+% \chapter{集合}
+% \input{chapters/set/集合的基本概念.tex}
+% \input{chapters/set/韦恩图.tex}
 
-\chapter{命题逻辑}
-\input{chapters/logic/命题逻辑.tex}
-\input{chapters/logic/命题的逆否.tex}
-\input{chapters/logic/充分必要条件.tex}
-\input{chapters/logic/逻辑量词.tex}
+% \chapter{命题逻辑}
+% \input{chapters/logic/命题逻辑.tex}
+% \input{chapters/logic/命题的逆否.tex}
+% \input{chapters/logic/充分必要条件.tex}
+% \input{chapters/logic/逻辑量词.tex}
 
-\chapter{不等式}
-\input{chapters/inequality/不等式的定义.tex}
-\input{chapters/inequality/基本不等式.tex}
-\input{chapters/inequality/柯西不等式.tex}
-\input{chapters/inequality/绝对值不等式.tex}
-\input{chapters/inequality/不等式证明.tex}
-\input{chapters/inequality/有理不等式.tex}
-\input{chapters/inequality/无理不等式.tex}
+% \chapter{不等式}
+% \input{chapters/inequality/不等式的定义.tex}
+% \input{chapters/inequality/基本不等式.tex}
+% \input{chapters/inequality/柯西不等式.tex}
+% \input{chapters/inequality/绝对值不等式.tex}
+% \input{chapters/inequality/不等式证明.tex}
+% \input{chapters/inequality/有理不等式.tex}
+% \input{chapters/inequality/无理不等式.tex}
 
-\chapter{函数}
-\input{chapters/function/函数概念.tex}
-\input{chapters/function/基本函数图像.tex}
-\input{chapters/function/幂指对函数.tex}
-\input{chapters/function/值域.tex}
+% \chapter{函数}
+% \input{chapters/function/函数概念.tex}
+% \input{chapters/function/基本函数图像.tex}
+% \input{chapters/function/幂指对函数.tex}
+% \input{chapters/function/值域.tex}
 
-\chapter{三角函数}
-\input{chapters/trifun/三角函数线.tex}
-\input{chapters/trifun/正弦函数.tex}
-\input{chapters/trifun/余弦函数.tex}
-\input{chapters/trifun/正切函数.tex}
-\input{chapters/trifun/Asin(wx+p)+B.tex}
+% \chapter{三角函数}
+% \input{chapters/trifun/三角函数线.tex}
+% \input{chapters/trifun/正弦函数.tex}
+% \input{chapters/trifun/余弦函数.tex}
+% \input{chapters/trifun/正切函数.tex}
+% \input{chapters/trifun/Asin(wx+p)+B.tex}
 
-\chapter{解三角形}
-\input{chapters/triangle/正弦定理.tex}
-\input{chapters/triangle/余弦定理.tex}
-\input{chapters/triangle/边角互化.tex}
-\input{chapters/triangle/对边对角模型.tex}
+% \chapter{解三角形}
+% \input{chapters/triangle/正弦定理.tex}
+% \input{chapters/triangle/余弦定理.tex}
+% \input{chapters/triangle/边角互化.tex}
+% \input{chapters/triangle/对边对角模型.tex}
 
-\chapter{向量}
-\input{chapters/vector/平面向量的定义.tex}
-\input{chapters/vector/极化恒等式.tex}
-\input{chapters/vector/投影.tex}
+% \chapter{向量}
+% \input{chapters/vector/平面向量的定义.tex}
+% \input{chapters/vector/极化恒等式.tex}
+% \input{chapters/vector/投影.tex}
 
-\chapter{立体几何}
-\input{chapters/solid-geometry/外接球.tex}
+% \chapter{立体几何}
+% \input{chapters/solid-geometry/外接球.tex}
 
-\chapter{解析几何}
-\input{chapters/analytic-geometry/椭圆.tex}
+\chapter{椭圆}
+% \input{chapters/analytic-geometry/椭圆.tex}
+\input{chapters/analytic-geometry/椭圆中常见的二级结论.tex}
+\input{chapters/analytic-geometry/证明题.tex}
+\input{chapters/analytic-geometry/三角换元在椭圆中的应用.tex}
+
+% \chapter{双曲线}
+% \input{chapters/analytic-geometry/双曲线.tex}
+
+% \chapter{抛物线}
+% \input{chapters/analytic-geometry/抛物线.tex}
 
 % \chapter{导数}
 % \input{chapters/differential-coefficient/借助导数研究函数单调性.tex}
 
-\chapter{概率}
-\input{chapters/probability/概率模型.tex}
-\input{chapters/probability/概率计算.tex}
+% \chapter{概率}
+% \input{chapters/probability/概率模型.tex}
+% \input{chapters/probability/概率计算.tex}
 
-\chapter{排列组合}
-\input{chapters/arrangement-combination/排列组合基本思想.tex}
-\input{chapters/arrangement-combination/排列组合经典方法.tex}
-\input{chapters/arrangement-combination/二项式定理.tex}
+% \chapter{排列组合}
+% \input{chapters/arrangement-combination/排列组合基本思想.tex}
+% \input{chapters/arrangement-combination/排列组合经典方法.tex}
+% \input{chapters/arrangement-combination/二项式定理.tex}
 
 \end{document}
 
-% 请整理这份代码，并返回一个代码块给我，让我能直接复制。具有以下要求：
-% （1）选项使用 tasks 宏包生成，如：
-%     \begin{tasks}(4)
-%         \task $3\sqrt{5}$
-%         \task $5\sqrt{5}$
-%         \task $\sqrt{7}$
-%         \task $1$
-%     \end{tasks}
-% （2）每一道题，请都使用 \begin{example} 环境来包裹；
-% （3）对于选择题，题目末尾不需要括号；对于填空题，要注意横线要让 LateX 能够直接编译。
-% （4）请不要写划分章节（不能使用 \section 等命令，不需要分类单选题、填空题等）
+% 若输出数学相关内容，请返回 LateX 代码块。
+% （1）选项使用 tasks 宏包生成。
+% （2）每一道题，请都使用 \begin{example} 环境来包裹；题目主体不需要有编号，若有解答部分，请使用 \begin{solution} 环境来包裹。推荐结束 example 环境后再使用 solution 环境，且不要嵌套。
+% （3）选择题题干末尾不需要括号，填空题题干末尾不需要横线。
+% （4）请不要划分章节。
+% （5）题干中使用行内公式，即单美元符号。若公式需要分行书写，请不要使用 \\ 命令，请使用行间公式，即双美元符号，并且返回给我代码时将该行间公式和前后的代码隔开一行；
+% （6）若需要顺序列表编号，请使用 \begin{enumerate} 环境，而不要手动编号；
+% （7）若需要多行公式同时书写，请使用 \begin{align*} 环境。
+% （8）使用 \overrightarrow{} 来表示向量，不要使用 \vec；
+% （9）在每一道题结束后，使用 \vspace{2em} 添加空行。
 
 % 请读取这张图片，并按示例返回给我一份 LateX 代码：

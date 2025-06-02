@@ -1,0 +1,187 @@
+\section{椭圆中常见的二级结论}
+
+\subsection{焦点三角形面积公式}
+
+\begin{theorem}
+    焦点三角形面积公式：如图，设 $P$ 是椭圆 $\frac{x^2}{a^2}+\frac{y^2}{b^2}=1(a>b>0)$ 上一点，$F_1(-c, 0), F_2(c, 0)$分别是椭圆的左、右焦点，$\angle F_1 P F_2=\theta$ ，则 $S_{\triangle P F_1 F_2}=c\left|y_P\right|=b^2 \tan \frac{\theta}{2}$.
+
+    \begin{figure} [H]
+        \centering
+        \includegraphics[width=0.2\textwidth]{chapters/analytic-geometry/images/椭圆中常见的二级结论/img-20250602102914.png}
+    \end{figure}
+
+\end{theorem}
+
+证明过程用到了余弦定理和三角函数的半角公式。
+
+\vspace{0.7cm}
+
+\begin{proof}
+
+    第一个焦点三角形面积公式与顶点的纵坐标关系比较大。
+
+    $\triangle P F_1 F_2$ 的边 $F_1 F_2$ 上的高 $h=\left|y_P\right|$ ，所以
+    \begin{equation*}
+        S_{\triangle P F_1 F_2}=\frac{1}{2}\left|F_1 F_2\right| \cdot h=c\left|y_P\right|
+    \end{equation*}
+
+    \vspace{0.3cm}
+
+    第二部分，记 $\left|P F_1\right|=m,\left|P F_2\right|=n$ ，则由椭圆定义，$m+n=2 a$（1）
+
+    \begin{gather*}
+        \left|F_1 F_2\right|^2=\left|P F_1\right|^2+\left|P F_2\right|^2-2\left|P F_1\right| \cdot\left|P F_2\right| \cdot \cos \angle F_1 P F_2 \\
+        4 c^2=m^2+n^2-2 m n \cos \theta=(m+n)^2-2 m n-2 m n \cos \theta
+    \end{gather*}
+
+    将式（1）代入可得
+
+    \begin{equation*}
+        4 c^2=4 a^2-2 m n(1+\cos \theta)
+    \end{equation*}
+
+    \begin{equation*}
+        m n=\frac{4 a^2-4 c^2}{2(1+\cos \theta)}=\frac{2 b^2}{1+\cos \theta}
+    \end{equation*}
+
+    \begin{equation*}
+        S_{\triangle P F_1 F_2}=\frac{1}{2} m n \sin \theta=\frac{1}{2} \cdot \frac{2 b^2}{1+\cos \theta} \cdot \sin \theta=b^2 \cdot \frac{\sin \theta}{1+\cos \theta}=b^2 \cdot \frac{2 \sin \frac{\theta}{2} \cos \frac{\theta}{2}}{2 \cos ^2 \frac{\theta}{2}}=b^2 \tan \frac{\theta}{2}
+    \end{equation*}
+\end{proof}
+
+\begin{problem}
+设椭圆 $\frac{x^2}{5}+y^2=1$ 的左、右焦点分别为 $F_1, F_2$ ，点 $M$ 在椭圆 $C$ 上，且 $\angle F_1 M F_2=120^{\circ}$，则 $|O M|=$
+\end{problem}
+
+\begin{remark}
+    这里 $O$ 为原点。焦点三角形两个面积公式同时考察的题，是 2023 年全国甲卷压轴选择的原型。
+\end{remark}
+
+\vspace{2em}
+
+\begin{problem}
+（2023年全国甲卷）
+椭圆 $\frac{x^2}{9}+\frac{y^2}{6}=1$ 的两焦点为 $F_1, F_2, O$ 为原点，$P$ 为椭圆上一点， $\cos \angle F_1 P F_2=\frac{3}{5}$ ，则 $|O P|=(\hspace{2em})$
+\begin{tasks}(4)
+    \task $\frac{2}{5}$
+    \task $\frac{\sqrt{30}}{2}$
+    \task $\frac{3}{5}$
+    \task $\frac{\sqrt{35}}{2}$
+\end{tasks}
+\end{problem}
+
+\subsection{第三定义}
+
+\begin{definition}
+    平面内的动点到两定点 $A_1\left(a_1, 0\right) 、 A_2\left(a_2, 0\right)$（或 $A_1\left(0, a_1\right) A_2\left(0, a_2\right)$ ）的斜率乘积等于常数 $e^2-1$ 的点的轨迹叫做椭圆或双曲线，其中两定点分别为椭圆或双曲线的顶点；
+\end{definition}
+
+\begin{theorem}
+    当常数大于 -1 小于 0 时为椭圆，当常数大于 0 时为双曲线。
+
+    由第三定义知：$A 、 B$ 为椭圆或双曲线的顶点，$P$ 是椭圆上异于 $A 、 B$ 的一点，若 $k_{P A}$、$k_{P B}$ 存在，
+
+    则有：$k_{P A} \cdot k_{P B}=e^2-1$ ．
+\end{theorem}
+
+\begin{example}
+    $P$ 是双曲线 ：$\frac{x^2}{a^2}-\frac{y^2}{b^2}=1$，$(a>0, b>0)$ 上一点，$M, ~ N$ 分别是双曲线的左右顶点，直线 $P M, ~ P N$ 的斜率之积为 $\frac{1}{5}$ ，则双曲线离心率为（\hspace{2em}）。
+\end{example}
+
+\begin{example}
+    已知 $A$、$B$ 是椭圆 $\frac{x^2}{a^2}+\frac{y^2}{b^2}=1(a>b>0)$ 长轴的两个端点，$M$、$N$ 是椭圆上关于 $x$ 轴对称的两点，直线 $A M$、$B N$ 的斜率分别为 $k_1$、$k_2$ ，且 $k_1 k_2 \neq 0$ 若 $\left|k_1\right|+\left|k_2\right|$ 的最小值为 1 ，则椭圆的离心率为（\hspace{2em}）
+
+    \begin{figure} [H]
+        \centering
+        \includegraphics[width=0.3\textwidth]{chapters/analytic-geometry/images/椭圆中常见的二级结论/img-20250602104154.png}
+    \end{figure}
+
+\end{example}
+
+
+\begin{solution}
+    连接 $M B$ ，由椭圆的第三定义可知：$k_{A M} \cdot k_{B M}=e^2-1=-\frac{b^2}{a^2}$ ，而 $k_{B M}=-k_{B N}$ ，所以 $k_1 k_2=\frac{b^2}{a^2}$ ，
+
+    $$
+        \left|k_1\right|+\left|k_2\right| \geq 2 \sqrt{\left|k_1\right| \cdot\left|k_2\right|}=\frac{2 b}{a}=1
+    $$
+
+    因此 $e=\frac{\sqrt{3}}{2}$.
+
+    \begin{note}
+        在椭圆中，$ e^2-1 = - \frac{b^2}{a^2}$，双曲线中是$ e^2-1 = + \frac{b^2}{a^2}$，代进去就知道了。
+    \end{note}
+\end{solution}
+
+\vspace{2em}
+
+\begin{problem}
+已知点 $A(-5,0), B(5,0)$ ，动点 $P(m, n)$ 满足直线 $P A, P B$ 的斜率之积为 $-\frac{16}{25}$ ，则 $4 m^2+n^2$ 的取值范围是
+\begin{tasks}(4)
+    \task $[16,100]$
+    \task $[25,100]$
+    \task $[16,100)$
+    \task $(25,100)$
+\end{tasks}
+\end{problem}
+
+\subsection{中点弦}
+
+\begin{definition}
+    弦取了一个中点，也会满足斜率之积为 $e^2-1$。下图展现了所有可能出现的情况：
+
+    \begin{figure} [H]
+        \centering
+        \includegraphics[width=0.7\textwidth]{chapters/analytic-geometry/images/椭圆中常见的二级结论/img-20250602105059.png}
+    \end{figure}
+\end{definition}
+
+\begin{definition}
+    在双曲线里也会有的：
+
+    \begin{figure} [H]
+        \centering
+        \includegraphics[width=0.65\textwidth]{chapters/analytic-geometry/images/椭圆中常见的二级结论/img-20250602105130.png}
+    \end{figure}
+
+\end{definition}
+
+\begin{example}
+    过点 $M(2,1)$ 作斜率为 -1 的直线与椭圆 $C: \frac{x^2}{a^2}+\frac{y^2}{b^2}=1$ 相交于 $A, B$ 两点，若 $M$ 为线段 $A B$ 的中点，则 $C$ 的离心率为
+    \begin{tasks}(4)
+        \task $\frac{1}{3}$
+        \task $\frac{\sqrt{2}}{3}$
+        \task $\frac{1}{2}$
+        \task $\frac{\sqrt{2}}{2}$
+    \end{tasks}
+\end{example}
+
+\begin{example}
+    已知直线 $l: 3 x+4 y-11=0$ 与椭圆 $C: \frac{x^2}{4}+\frac{y^2}{m^2}=1$ 交于 $A, B$ 两点，若点 $P(1,2)$ 恰为弦 $A B$ 的中点，则椭圆 $C$ 的离心率是
+    \begin{tasks}(4)
+        \task $\frac{\sqrt{3}}{3}$
+        \task $\frac{\sqrt{2}}{2}$
+        \task $\frac{\sqrt{3}}{2}$
+        \task $\frac{\sqrt{6}}{3}$
+    \end{tasks}
+\end{example}
+
+\begin{example}
+    已知直线 $x+y-1=0$ 与椭圆 $C: b^2 x^2+a^2 y^2=a^2 b^2(a>b>0)$ 相交于 $A, B$ 两点，且线段 $A B$ 的中点 $M$ 在直线 $l: x-2 y=0$ 上，则椭圆 $C$ 的离心率为
+    \begin{tasks}(4)
+        \task $\frac{\sqrt{2}}{2}$
+        \task $\frac{\sqrt{3}}{2}$
+        \task $\sqrt{2}$
+        \task $\frac{1}{2}$
+    \end{tasks}
+\end{example}
+
+\begin{example}
+    已知椭圆，点 $F$ 为左焦点，点 $P$ 为下顶点，平行于 $F P$ 的直线 $l$ 交椭圆于 $A, B$ 两点，且 $A B$ 的中点为 $M\left(1, \frac{1}{2}\right)$ ，则椭圆的离心率为
+    \begin{tasks}(4)
+        \task $\frac{\sqrt{2}}{2}$
+        \task $\frac{1}{2}$
+        \task $\frac{1}{4}$
+        \task $\frac{\sqrt{3}}{2}$
+    \end{tasks}
+\end{example}
