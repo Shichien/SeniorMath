@@ -2,141 +2,15 @@
 
 \subsection{求椭圆的离心率}
 
-% \begin{figure}[H]
-%     \centering
-%     \begin{tikzpicture}
-%         % ---------------------------------------------------------------------
-%         % 绘制坐标系
-%         % ---------------------------------------------------------------------
-%         \begin{axis}[
-%                 axis lines=middle, % 坐标轴在中间交叉
-%                 xlabel={$x$},      % x轴标签
-%                 ylabel={$y$},      % y轴标签
-%                 xmin=-5, xmax=5,   % x轴范围
-%                 ymin=-4, ymax=4,   % y轴范围
-%                 grid=major,        % 显示主网格线
-%                 axis equal,        % 保证x和y轴单位长度相同，椭圆看起来不会变形
-%                 legend pos=outer north east, % 图例位置
-%                 title={椭圆示例},  % 图表标题
-%             ]
-
-%             % ---------------------------------------------------------------------
-%             % 绘制椭圆
-%             % 参数：(中心点x坐标, 中心点y坐标) ellipse (x轴半长 a, y轴半长 b)
-%             % ---------------------------------------------------------------------
-%             \draw[blue, thick, fill=blue!10] (0,0) ellipse (3cm and 2cm); % 绘制一个中心在(0,0)，a=3cm, b=2cm的椭圆，蓝色边框，淡蓝色填充
-
-%             % ---------------------------------------------------------------------
-%             % 如何增加新的点
-%             % 使用 \node 命令可以创建点，并可以给点命名方便后续引用
-%             % 格式： \node[样式] (点的名称) at (坐标x, 坐标y) {点的标签};
-%             % 或者使用 \coordinate (点的名称) at (坐标x, 坐标y); 创建一个没有视觉表现的点
-%             % ---------------------------------------------------------------------
-%             \node[circle, fill=red, inner sep=2pt] (P1) at (1,1) {}; % 在(1,1)处创建一个红色实心小圆点，命名为P1
-%             \node[above right] at (P1) {$P_1(1,1)$}; % 在P1点的右上方标注其名称和坐标
-
-%             \coordinate (P2) at (-2, 1.5); % 创建一个名为P2的坐标点，位置在(-2, 1.5)
-%             \node[circle, draw=green, fill=green!30, inner sep=2pt] (P2_visual) at (P2) {}; % 在P2坐标处画一个绿色带边框的点
-%             \node[below left] at (P2_visual) {$P_2(-2,1.5)$}; % 标注P2
-
-%             % ---------------------------------------------------------------------
-%             % 如何增加点和点之间的连线
-%             % 使用 \draw 命令连接两个已定义的点
-%             % 格式： \draw[样式] (点A) -- (点B); % 直线
-%             %        \draw[样式] (点A) .. controls (控制点1) and (控制点2) .. (点B); % 曲线
-%             % ---------------------------------------------------------------------
-%             \draw[dashed, orange, thick] (P1) -- (P2_visual); % 用橙色粗虚线连接P1和P2
-
-%             % ---------------------------------------------------------------------
-%             % 如何标注长度
-%             % 通常可以使用 \draw 命令配合 node 来实现
-%             % 例如，标注椭圆的长半轴长度
-%             % ---------------------------------------------------------------------
-%             \draw[<->, thick, red] (-3,0) -- (3,0) node[midway, below, red] {$2a = 6$}; % 标注长轴长度
-%             % 标注椭圆的短半轴长度
-%             \draw[<->, thick, red] (0,-2) -- (0,2) node[midway, right, red] {$2b = 4$}; % 标注短轴长度
-
-%             % 标注点P1到原点的距离 (示例)
-%             \coordinate (O) at (0,0); % 定义原点
-%             \draw[<->, thin, purple] (O) -- (P1) node[midway, above, sloped, purple] {长度示例};
-
-%             % ---------------------------------------------------------------------
-%             % 如何标注角度
-%             % 需要用到 tikzlibrary angles 和 quotes
-%             % \usetikzlibrary{angles, quotes} % 需要在 \begin{tikzpicture} 之前或文档导言区声明
-%             % 格式： \pic [draw, "角度标签", angle eccentricity=因子, angle radius=半径] {angle = 点B--点A--点C}; % 标注角BAC
-%             % 注意：为了使用角度标注功能，需要在文档的导言区（\documentclass之后，\begin{document}之前）
-%             % 或者在 \begin{tikzpicture} 之前，添加 \usetikzlibrary{angles, quotes}
-%             % 下面的示例假设你已经在导言区添加了该库
-%             % ---------------------------------------------------------------------
-%             % 创建三个点来定义一个角度
-%             \coordinate (A) at (0,0);      % 顶点A (原点)
-%             \coordinate (B) at (3,0);      % 点B (椭圆长轴正半轴端点)
-%             \coordinate (C) at (1,2);      % 点C (自定义点)
-%             % \node at (C) [above right] {$C(1,2)$}; % 可选：标注点C
-
-%             % 绘制辅助线形成角度 (可选)
-%             \draw[gray, thin] (B) -- (A) -- (C);
-
-%             % 标注角度 BAC
-%             % \pic [draw=orange, fill=orange!20, "$\alpha$", angle eccentricity=1.3, angle radius=0.8cm] {angle = B--A--C};
-%             % 注意：由于pgfplots的坐标转换，直接在axis环境中使用\pic{angle}可能会有对齐问题或需要额外调整。
-%             % 一个更可靠的方法是在axis环境外部进行角度标注，或者使用\draw arc。
-
-%             % 使用 \draw arc 标注角度的替代方法 (在axis环境中更稳定)
-%             % 首先定义角度的起始和终止向量
-%             \coordinate (vecAB) at ($(B)-(A)$); % 从A到B的向量
-%             \coordinate (vecAC) at ($(C)-(A)$); % 从A到C的向量
-%             % 计算角度 (需要calc库: \usetikzlibrary{calc})
-%             % \path (A) -- (B) coordinate[pos=1] (pB);
-%             % \path (A) -- (C) coordinate[pos=1] (pC);
-%             % \pgfmathanglebetweenpoints{\pgfpointanchor{A}{center}}{\pgfpointanchor{pB}{center}}
-%             % \let\angleAB\pgfmathresult
-%             % \pgfmathanglebetweenpoints{\pgfpointanchor{A}{center}}{\pgfpointanchor{pC}{center}}
-%             % \let\angleAC\pgfmathresult
-%             % \draw[draw=orange, fill=orange!20] (A) -- ++(\angleAB:0.8cm) arc(\angleAB:\angleAC:0.8cm) -- cycle;
-%             % \node[orange] at ($(A)+({(\angleAB+\angleAC)/2}:1cm)$) {$\alpha$};
-%             % 上述自动计算角度的方法在axis环境中也可能复杂。
-%             % 对于简单情况，可以直接指定角度值，或者手动调整弧线。
-
-%             % 更简单地在axis环境中画弧线来示意角度：
-%             % (需要手动确定起始和结束角度，或者根据点的位置估算)
-%             % 假设我们想标注 x 轴正向与 AC 之间的角度
-%             % 首先，我们知道 B 点在 x 轴正向，所以 A 到 B 的方向是 0 度 (相对于点 A)
-%             % 我们需要 C 点相对于 A 点的角度。C(1,2) A(0,0)。atan2(2,1) 大约是 63.4 度
-%             \draw[->, draw=teal, very thick] (A) -- ++(0:0.8cm) arc (0:63.4:0.8cm); % 从x轴正向开始，画一个0.8cm半径的弧到AC方向
-%             \node[teal] at ($(A)+(30:1cm)$) {$\theta$}; % 在大约中间位置标注角度
-
-%             % 示例：标注椭圆焦点 (如果需要)
-%             % a=3, b=2, c = sqrt(a^2 - b^2) = sqrt(9-4) = sqrt(5) approx 2.236
-%             \pgfmathsetmacro{\c}{sqrt(3^2-2^2)} % 计算焦距c
-%             \node[circle, fill=black, inner sep=1.5pt, label=below:$F_1(-\sqrt{5},0)$] (F1) at (-\c,0) {};
-%             \node[circle, fill=black, inner sep=1.5pt, label=below:$F_2(\sqrt{5},0)$] (F2) at (\c,0) {};
-
-%         \end{axis}
-
-%         % 如果需要在 tikzpicture 层面（而不是 axis 内部）进行更复杂的角度标注，
-%         % 可以像这样（需要 \usetikzlibrary{angles, quotes}）：
-%         % \coordinate (X) at (5,0); % 示例点
-%         % \coordinate (Y) at (6,0); % 示例点
-%         % \coordinate (Z) at (5.5,1); % 示例点
-%         % \draw (X) -- (Y) -- (Z);
-%         % \pic [draw=green, "$\beta$", angle eccentricity=1.2, angle radius=0.5cm] {angle = X--Y--Z};
-
-%     \end{tikzpicture}
-% \end{figure}
-
-除了最基础的定义，还要知道以下形式：
-
-$$ e = \sqrt{\frac{c^2}{a^2}} = \sqrt{1 - \frac{b^2}{a^2}} $$
-
-这个式子在警示我们，一旦知道椭圆中 $a$、$b$、$c$ 其中两个满足的等式关系，就能求出离心率，换言之，只要化简出：
-
-$$
-    x_1a^{n_1} + x_2b^{n_2} + x_3b^{n_3} = 0
-$$
-
-其中，$x_1$、$x_2$、$x_3$ 这些都是常数，是可以取 $0$ 的。这个式子不需要记，只是向你展现这三个变量可以写成一个等式，那么就能求离心率。建立起了 $a$、$b$、$c$ 之间的关系，就能求出离心率的值。特别地，在等式关系里，我们可以根据定义 $e = \frac{c}{a}$，直接令 $a=1$，解出 $c$ 的值，就刚好是离心率。
+\begin{theorem}
+    除了最基础的定义，还要知道以下形式：
+    $$ e = \sqrt{\frac{c^2}{a^2}} = \sqrt{1 - \frac{b^2}{a^2}} $$
+    这个式子在警示我们，一旦知道椭圆中 $a$、$b$、$c$ 其中两个满足的等式关系，就能求出离心率，换言之，只要化简出：
+    $$
+        x_1a^{n_1} + x_2b^{n_2} + x_3b^{n_3} = 0
+    $$
+    其中，$x_1$、$x_2$、$x_3$ 这些都是常数，是可以取 $0$ 的。这个式子不需要记，只是向你展现这三个变量可以写成一个等式，那么就能求离心率。建立起了 $a$、$b$、$c$ 之间的关系，就能求出离心率的值。特别地，在等式关系里，我们可以根据定义 $e = \frac{c}{a}$，直接令 $a=1$，解出 $c$ 的值，就刚好是离心率。
+\end{theorem}
 
 \vspace{1em}
 
@@ -144,17 +18,27 @@ $$
     从椭圆 \(\frac{x^2}{a^2} + \frac{y^2}{b^2} = 1\)（\(a > b > 0\)），上一点 $P$ 向 $x$ 轴作垂线，垂足恰为左焦点\(F_1\)，\(A\)是椭圆与$x$轴正半轴的交点，\(B\)是椭圆与$y$轴正半轴的交点，且 \(AB\) // \(OP\) （$O$ 是坐标原点），则椭圆的离心率为 \underline{\hspace{1.5cm}}.
 \end{example}
 
-\vspace{0.5em}
+\begin{tips}
+    这一道题如果把通径背下来，找到 $P$ 点的坐标的时间就能大大减少。
+\end{tips}
 
-这一道题如果把通径背下来，找到 $P$ 点的坐标的时间就能大大减少。
+\vspace{3em}
+
+\begin{example}
+    设椭圆 $\frac{x^2}{a^2}+\frac{y^2}{b^2}=1(a>b>0)$ 的焦距为 $2 c$ ，且 $2 b^2=3 a c$ ，则该椭圆的离心率 $e=$ $\qquad$ ．
+\end{example}
+
+\v{3em}
 
 \subsubsection{已知角度求离心率}
 
-注意到离心率中 $e = \frac{c}{a}$，我们变换成 $e = \frac{2c}{2a}$，这就能把式子成和定义相关的形式：$e = \frac{\text{|PF1|} + \text{|PF2|}}{\text{|F1F2|}}$，根据下图中的椭圆，我们可以使用正弦定理进行转换：
+\begin{theorem}
+    注意到离心率中 $e = \frac{c}{a}$，我们变换成 $e = \frac{2c}{2a}$，这就能把式子成和定义相关的形式：$e = \frac{\text{|PF1|} + \text{|PF2|}}{\text{|F1F2|}}$，使用正弦定理转换：
 
-在三角形中，$\angle PF_1F_2 = \alpha, \angle PF_2F_1 = \beta$，则椭圆的离心率为：
+    在三角形中，$\angle PF_1F_2 = \alpha, \angle PF_2F_1 = \beta$，则椭圆的离心率为：
+    $$e = \frac{\sin(\alpha + \beta)}{\sin \alpha + \sin \beta}$$
+\end{theorem}
 
-$$e = \frac{\sin(\alpha + \beta)}{\sin \alpha + \sin \beta}$$
 
 \begin{example}
     已知$F_1$、$F_2$是椭圆C的两个焦点，$P$是C上的一点，若$P F_1 \perp P F_2$，且$\angle P F_2 F_1 = 60^\circ$，则$C$的离心率为
@@ -167,6 +51,12 @@ $$e = \frac{\sin(\alpha + \beta)}{\sin \alpha + \sin \beta}$$
 \end{example}
 
 \subsubsection{找几何关系求离心率}
+
+\begin{tips}
+    本质是找到 $a$、$b$、$c$ 的关系。
+
+    一般采用余弦定理、勾股定理、相似三角形等几何关系构建等式。
+\end{tips}
 
 \begin{example}
     已知椭圆 $C: \frac{x^{2}}{a^{2}}+\frac{y^{2}}{b^{2}}=1\;(a>b>0)$ 的上顶点为 $A$ ，左、右焦点分别为 $F_{1}, F_{2}$ ，连接 $A F_{2}$并延长交椭圆 $C$ 于另一点 $B$ ，若 $|F_{1} B|:|A B|=4:5$ ，则椭圆 $C$ 的离心率为
@@ -182,29 +72,35 @@ $$e = \frac{\sin(\alpha + \beta)}{\sin \alpha + \sin \beta}$$
     已知 $F$ 为椭圆 $C: \frac{x^{2}}{a^{2}}+\frac{y^{2}}{b^{2}}=1\;(a>b>0)$ 的右焦点，$O$ 为原点， $A$ 为 $C$ 上一点， $|OA|=|OF|$ ，若 $|AF|=\frac{2a}{3}$ ，则 $C$ 的离心率为 \underline{\hspace{3cm}}.
 \end{example}
 
+\v{6em}
+
+\subsection{通过代入点获得 $a,b,c$ 关系}
+
+\begin{theorem}
+    知道一点的坐标，可以代入椭圆方程中，可以获得一个关系。如下题，请尝试代入点 $M$ 的坐标，得到一个关于 $a$、$b$、$c$ 的关系式。
+\end{theorem}
+
+\begin{problem}
+已知 $O$ 为坐标原点，椭圆 $C: \frac{x^2}{a^2}+\frac{y^2}{b^2}=1(a>b>0)$ 的右顶点为 $A$ ，以 $O A$ 为直径的圆与椭圆 $C$ 的三个公共点分别为 $A, ~ M, ~ N$ ，若以 $O$ ，$M$ ，$A$，$N$ 为顶点的四边形是正方形，则椭圆 $C$ 的离心率为（\hspace{2em}）
+\begin{tasks}(4)
+    \task $\frac{2}{3}$
+    \task $\frac{\sqrt{6}}{3}$
+    \task $\frac{\sqrt{3}}{3}$
+    \task $\frac{-1+\sqrt{5}}{2}$
+\end{tasks}
+\end{problem}
+
+\v{4em}
+
 \subsection{椭圆中的最值问题}
 
 圆锥曲线的本质是二元函数，出题人很喜欢和函数最值结合起来考察。
 
-\vspace{1em}
-
-\begin{example}
-    在平面直角坐标系中，$A(0,3), B(0,-1)$ ，点 $P$ 满足 $|PA|=2|PB|$ ，则 $\triangle PAB$ 面积的最大值是
-    \begin{tasks}(4)
-        \task $2$
-        \task $\frac{8}{3}$
-        \task $\frac{16}{3}$
-        \task $\frac{32}{3}$
-    \end{tasks}
-\end{example}
-
 \vspace{2em}
 
-若问椭圆上的点到某个定点（一般是在坐标轴上，否则不好做）的距离，可以将椭圆上的这个点设为 $(x_0,y_0)$ 直接用两点间的距离公式。但代入后，会出现两个变量，此时最好的方案是利用点在椭圆上，即满足：$\frac{x_0^{2}}{a^2}+\frac{y_0^{2}}{b^2}=1$，联立两个式子消元，转化为函数最值问题。
-
-\begin{cth}
-    此时构造出的函数多为二次函数，注意函数由两个部分组成：解析式和定义域，缺一不可。
-\end{cth}
+\begin{tips}
+    若问椭圆上的点到某个定点（一般是在坐标轴上，否则不好做）的距离，可以将椭圆上的这个点设为 $(x_0,y_0)$ 直接用两点间的距离公式。但代入后，会出现两个变量，此时最好的方案是利用点在椭圆上，即满足：$\frac{x_0^{2}}{a^2}+\frac{y_0^{2}}{b^2}=1$，联立两个式子消元，转化为函数最值问题。
+\end{tips}
 
 \begin{example}
     已知椭圆 $C: \frac{x^{2}}{4}+y^{2}=1$ ，则椭圆 $C$ 上的点到点 $B(0,1)$ 的距离的最大值是
@@ -216,7 +112,19 @@ $$e = \frac{\sin(\alpha + \beta)}{\sin \alpha + \sin \beta}$$
     \end{tasks}
 \end{example}
 
-有一个特殊情况，和圆结合起来考。这类问题常被描述为具有两个动点，求最值时，可以考虑将其中一个点定下来。求最小值，就是点到圆心的距离减去半径（$PO-r$），最大值则为（$PO+r$）。
+\begin{tips}
+    此时构造出的函数多为二次函数，注意函数由两个部分组成：解析式和定义域，缺一不可。
+\end{tips}
+
+\begin{solution}
+
+\end{solution}
+
+\v{4em}
+
+\begin{theorem}[定一动一]
+    有一个特殊情况，和圆结合起来考。这类问题常被描述为具有两个动点，求最值时，可以考虑将其中一个点定下来。求最小值，就是点到圆心的距离减去半径（$PO-r$），最大值则为（$PO+r$）。
+\end{theorem}
 
 \begin{example}
     设 $P, Q$ 分别为圆 $x^{2}+(y-6)^{2}=2$ 和椭圆 $\frac{x^{2}}{10}+y^{2}=1$ 上的点，则 $P, Q$ 两点间的最大距离是
@@ -228,9 +136,13 @@ $$e = \frac{\sin(\alpha + \beta)}{\sin \alpha + \sin \beta}$$
     \end{tasks}
 \end{example}
 
+\v{4em}
+
 \subsubsection{与直线距离相关的最值}
 
-实际上，绘制一个椭圆，再随意绘制一条不和椭圆相交的直线，大致摆弄一下，就能看出当某个点的切线和外面这条直线平行时，距离是最小的。那距离最大也比较容易考虑了。
+\begin{tips}
+    实际上，绘制一个椭圆，再随意绘制一条不和椭圆相交的直线，大致摆弄一下，就能看出当某个点的切线和外面这条直线平行时，距离是最小的。那距离最大也比较容易考虑了。
+\end{tips}
 
 \begin{example}
     已知椭圆 $C: \frac{x^{2}}{9}+\frac{y^{2}}{4}=1$ ，则椭圆 $C$ 上的点到直线 $l: x+2 y-25=0$ 的距离的最大值为
@@ -242,49 +154,57 @@ $$e = \frac{\sin(\alpha + \beta)}{\sin \alpha + \sin \beta}$$
     \end{tasks}
 \end{example}
 
-\begin{example}
-    已知直线 $4x+3y-12=0$ 与 $x$ 轴、 $y$ 轴交于 $A, B$ 两点，点 $P$ 为圆 $C:(x-3)^{2}+(y-4)^{2}=4$ 上的动点，则
-    \begin{itemize}
-        \item 直线 $AB$ 与圆 $C$ 相离
-        \item $\triangle ABC$ 的面积为 $12$
-        \item 当 $\angle PBA$ 最小时，$|PB|=\sqrt{5}$
-        \item 点 $P$ 到直线 $AB$ 距离的最大值为 $\frac{32}{5}$
-    \end{itemize}
-\end{example}
+\v{6em}
+
+\begin{problem}
+已知直线 $4x+3y-12=0$ 与 $x$ 轴、 $y$ 轴交于 $A, B$ 两点，点 $P$ 为圆 $C:(x-3)^{2}+(y-4)^{2}=4$ 上的动点，则
+\begin{itemize}
+    \item 直线 $AB$ 与圆 $C$ 相离
+    \item $\triangle ABC$ 的面积为 $12$
+    \item 当 $\angle PBA$ 最小时，$|PB|=\sqrt{5}$
+    \item 点 $P$ 到直线 $AB$ 距离的最大值为 $\frac{32}{5}$
+\end{itemize}
+\end{problem}
 
 \subsubsection{综合练习}
 
-\begin{example}
-    已知椭圆 $M: \frac{x^{2}}{a^{2}}+y^{2}=1\;(a>1)$ 的离心率为 $\frac{\sqrt{42}}{7}, F_{1}, F_{2}$ 是 $M$ 的焦点，$P$ 是 $M$ 上一动点， $Q$ 是圆 $N: x^{2}+(y-3)^{2}=1$ 上一动点，则
-    \begin{itemize}
-        \item $|PF_{1}|+|PF_{2}|=2 \sqrt{7}$
-        \item $M$ 的焦距为 $\sqrt{6}$
-        \item $|PQ|$ 的最小值为 $1$
-        \item $|PQ|$ 的最大值为 $5$
-    \end{itemize}
-\end{example}
+\begin{problem}
+已知椭圆 $M: \frac{x^{2}}{a^{2}}+y^{2}=1\;(a>1)$ 的离心率为 $\frac{\sqrt{42}}{7}, F_{1}, F_{2}$ 是 $M$ 的焦点，$P$ 是 $M$ 上一动点， $Q$ 是圆 $N: x^{2}+(y-3)^{2}=1$ 上一动点，则
+\begin{itemize}
+    \item $|PF_{1}|+|PF_{2}|=2 \sqrt{7}$
+    \item $M$ 的焦距为 $\sqrt{6}$
+    \item $|PQ|$ 的最小值为 $1$
+    \item $|PQ|$ 的最大值为 $5$
+\end{itemize}
+\end{problem}
 
 \vspace{1em}
 
-\begin{example}
-    已知抛物线 $C: y^{2}=4x$ 的焦点为 $F, O$ 为坐标原点，其准线与 $x$ 轴交于点 $M$ ，经过点 $M$ 的直线 $l$ 与抛物线交于不同两点 $A(x_{1}, y_{1}), B(x_{2}, y_{2})$ ，则下列说法正确的是
-    \begin{itemize}
-        \item $\overrightarrow{OA} \cdot \overrightarrow{OB}=5$
-        \item 存在 $\angle AMF=50^{\circ}$
-        \item 不存在以 $AB$ 为直径且经过焦点 $F$ 的圆
-        \item 当 $\triangle ABF$ 的面积为 $4 \sqrt{2}$ 时，直线 $l$ 的倾斜角为 $\frac{\pi}{6}$ 或 $\frac{5 \pi}{6}$
-    \end{itemize}
-\end{example}
+\begin{problem}
+已知抛物线 $C: y^{2}=4x$ 的焦点为 $F, O$ 为坐标原点，其准线与 $x$ 轴交于点 $M$ ，经过点 $M$ 的直线 $l$ 与抛物线交于不同两点 $A(x_{1}, y_{1}), B(x_{2}, y_{2})$ ，则下列说法正确的是
+\begin{itemize}
+    \item $\overrightarrow{OA} \cdot \overrightarrow{OB}=5$
+    \item 存在 $\angle AMF=50^{\circ}$
+    \item 不存在以 $AB$ 为直径且经过焦点 $F$ 的圆
+    \item 当 $\triangle ABF$ 的面积为 $4 \sqrt{2}$ 时，直线 $l$ 的倾斜角为 $\frac{\pi}{6}$ 或 $\frac{5 \pi}{6}$
+\end{itemize}
+\end{problem}
 
-\subsection{圆锥曲线大题}
+\section{圆锥曲线大题}
 
-\subsubsection{与向量相关}
+\subsection{与向量相关}
 
-最常考的是 $\overrightarrow{OA} \cdot \overrightarrow{OB}$ 的形式，设出两点坐标，可得 $x_1x_2 + y_1y_2$，再通过点 $(x_1, y_1), (x_2, y_2)$ 满足在直线上，通常可以将 $y_1$ 与 $y_2$ 转写为和 $x_1, x_2$ 有关的形式，接着再使用联立解出韦达定理即可。
+\begin{tips}
+    最常考的是 $\overrightarrow{OA} \cdot \overrightarrow{OB}$ 的形式，设出两点坐标，可得 $x_1x_2 + y_1y_2$，再通过点 $(x_1, y_1), (x_2, y_2)$ 满足在直线上，通常可以将 $y_1$ 与 $y_2$ 转写为和 $x_1, x_2$ 有关的形式，接着再使用联立解出韦达定理即可。
+\end{tips}
 
 \vspace{1em}
 
-下面介绍一个常见的向量构造：以 XX 为直径的圆。如果这个点在以 XX 为直径的圆上，那么根据圆周角为直角，可以得到两个向量点乘为零。通过简单的画图分析，显然能够清晰：当该点在以 XX 为直径的圆之外时，向量点乘 $> 0 (cos(\theta) > 0)$，在之内时，张角为钝角，那么 $cos(\theta) < 0 $。
+\begin{theorem}
+    下面介绍一个常见的向量构造：以 MN 为直径的圆。如果这个点在以 MN 为直径的圆上，那么根据圆周角为直角，可以得到两个向量点乘为零。通过简单的画图分析，显然能够清晰：
+
+    当该点在以 MN 为直径的圆之外时，向量点乘 $> 0 (cos\theta > 0)$，在之内时，张角为钝角，那么 $cos\theta < 0 $。
+\end{theorem}
 
 \vspace{1em}
 
@@ -296,6 +216,18 @@ $$e = \frac{\sin(\alpha + \beta)}{\sin \alpha + \sin \beta}$$
         \item 设过 $C$ 右焦点 $F$ 的直线 $l$ 与 $C$ 交于 $A, B$ 两点，以 $AB$ 为直径圆恰好过原点，求直线 $l$ 的方程．
     \end{itemize}
 \end{example}
+
+\vspace{6em}
+
+\begin{example}
+    已知椭圆 $C: \frac{x^2}{a^2}+\frac{y^2}{b^2}=1(a>b>0)$ 的长轴长是短轴长的 2 倍，焦距是 $2 \sqrt{3}$ ．
+    \begin{itemize}
+        \item （1）求椭圆 $C$ 的方程；
+        \item （2）若直线 $l: x-m y-4=0$ 与椭圆 $C$ 交于两个不同点 $D$、$E$ ，以线段 $D E$ 为直径的圆经过原点，求实数 $m$ 的值；
+    \end{itemize}
+\end{example}
+
+\vspace{6em}
 
 % % \section*{模块三 椭圆与方程} % Top-level section, not directly converted to subsubsection based on example start.
 

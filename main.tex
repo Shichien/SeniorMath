@@ -1,8 +1,10 @@
-\documentclass[lang=cn,10pt,color=cyan,titlestyle=hang]{elegantbook}
+\special{dvipdfmx:config z 3}
+\documentclass[lang=cn,10pt,color=cyan,titlestyle=hang,device=normal]{elegantbook}
+\usepackage[svgnames]{xcolor}
+\usepackage{pgfplots}
+\usepackage{booktabs} % 用于绘制更美观的表格线
+
 \input{additional.tex}
-
-\usetikzlibrary{calc, angles, quotes}
-
 \setcounter{tocdepth}{3}
 \title{高中数学总复习讲义}
 \author{Shichien}
@@ -14,6 +16,69 @@
 
 \newcommand{\h}{\hspace}
 \renewcommand{\v}{\vspace}
+
+\usepackage{tcolorbox}
+\usepackage{fontspec}
+\usepackage{fontawesome5}
+
+\definecolor{warningRed}{RGB}{217, 83, 79}
+\definecolor{warningRedBack}{RGB}{242, 222, 222}
+
+\newtcolorbox{warning}{
+    enhanced,
+    shadow={0.8mm}{-0.8mm}{0mm}{black!20!white},
+    breakable, % 允许内容跨页
+    colback=warningRedBack, % 背景颜色
+    colframe=warningRed,    % 边框颜色
+    boxrule=0.5pt,          % 边框线宽
+    leftrule=2pt,           % 左侧竖线的宽度 (比边框粗，更明显)
+    top=2pt,
+    bottom=1.8pt,
+    right=5em,
+    fontupper=\fontsize{9.5pt}{13pt}\selectfont\kaishu,
+    fonttitle=\small\bfseries,
+    title={
+        \faExclamationTriangle[regular]
+        \hspace{1.5pt}
+        \textbf{Warning}
+    },
+    coltitle=white,
+    attach boxed title to top right={xshift=0pt, yshift=-18.3pt},
+    boxed title style={
+        colback=warningRed,
+        boxrule=0.3pt,
+    }
+}
+
+\definecolor{tipBlue}{RGB}{91, 192, 222}
+\definecolor{tipBlueBack}{RGB}{217, 237, 247}
+
+\newtcolorbox{tips}{
+    enhanced,
+    shadow={0.8mm}{-0.8mm}{0mm}{black!20!white},
+    breakable,
+    colback=tipBlueBack,    % 背景颜色
+    colframe=tipBlue,       % 边框颜色
+    boxrule=0.5pt,          % 边框线宽
+    leftrule=2pt,           % 左侧竖线的宽度
+    top=2pt,
+    bottom=1.8pt,
+    right=5em,
+    fontupper=\fontsize{9.5pt}{13pt}\selectfont\kaishu, % 内容字体: {大小}{衬线}
+    fonttitle=\small\bfseries,
+    title={
+        \faLightbulb[regular]
+        \hspace{1.5pt}
+        \textbf{Tips}
+    },
+    coltitle=white,
+    attach boxed title to top right={xshift=0pt, yshift=-18.3pt},
+    % attach boxed title to top left={xshift=10pt, yshift=-10pt},
+    boxed title style={
+        colback=tipBlue,
+        boxrule=0.3pt,
+    }
+}
 
 \begin{document}
 % \maketitle
@@ -41,6 +106,7 @@
 % \input{chapters/inequality/无理不等式.tex}
 
 % \chapter{函数}
+% \input{chapters/function/抽象函数.tex}
 % \input{chapters/function/函数概念.tex}
 % \input{chapters/function/基本函数图像.tex}
 % \input{chapters/function/幂指对函数.tex}
@@ -66,12 +132,32 @@
 
 % \chapter{立体几何}
 % \input{chapters/solid-geometry/外接球.tex}
+% \input{chapters/solid-geometry/立体几何的几何法证明.tex}
+% \input{chapters/solid-geometry/建系法求角.tex}
+% \input{chapters/solid-geometry/建系法求空间距离.tex}
+% \input{chapters/solid-geometry/建系法探究空间关系.tex}
 
-\chapter{椭圆}
+\chapter{直线与圆}
+\input{chapters/linear-circle/直线与圆的基本概念.tex}
+\input{chapters/linear-circle/直线相关的题型.tex}
+\input{chapters/linear-circle/圆的基本概念.tex}
+\input{chapters/linear-circle/圆的相关题型.tex}
+\input{chapters/linear-circle/直线与圆的位置关系.tex}
+\input{chapters/linear-circle/直线与圆的交点.tex}
+\input{chapters/linear-circle/直线与圆的切线.tex}
+
+% \chapter{数列}
+% \input{chapters/sequence/数列基本定义.tex}
+% \input{chapters/sequence/数列的通项公式.tex}
+% \input{chapters/sequence/数列的单调性与有界性.tex}
+% \input{chapters/sequence/数列的求和.tex}
+% \input{chapters/sequence/数列的递推关系.tex}
+
+% \chapter{椭圆}
 % \input{chapters/analytic-geometry/椭圆.tex}
-\input{chapters/analytic-geometry/椭圆中常见的二级结论.tex}
-\input{chapters/analytic-geometry/证明题.tex}
-\input{chapters/analytic-geometry/三角换元在椭圆中的应用.tex}
+% \input{chapters/analytic-geometry/椭圆中常见的二级结论.tex}
+% \input{chapters/analytic-geometry/证明题.tex}
+% \input{chapters/analytic-geometry/三角换元在椭圆中的应用.tex}
 
 % \chapter{双曲线}
 % \input{chapters/analytic-geometry/双曲线.tex}
@@ -80,7 +166,15 @@
 % \input{chapters/analytic-geometry/抛物线.tex}
 
 % \chapter{导数}
-% \input{chapters/differential-coefficient/借助导数研究函数单调性.tex}
+% \input{chapters/differential-coefficient/导数的基础定义.tex}
+% \input{}
+% \input{chapters/differential-coefficient/导数的几何意义.tex}
+% \input{chapters/differential-coefficient/导数的计算.tex}
+% \input{chapters/differential-coefficient/利用导数的几何意义求解问题.tex}
+% \input{chapters/differential-coefficient/导数的应用.tex}
+% \input{chapters/differential-coefficient/借助导数研究函数单调性与极值.tex}
+% \input{chapters/differential-coefficient/特殊的几种函数.tex}
+% \input{chapters/differential-coefficient/冲击高分的利器.tex}
 
 % \chapter{概率}
 % \input{chapters/probability/概率模型.tex}
@@ -90,6 +184,9 @@
 % \input{chapters/arrangement-combination/排列组合基本思想.tex}
 % \input{chapters/arrangement-combination/排列组合经典方法.tex}
 % \input{chapters/arrangement-combination/二项式定理.tex}
+
+% \chapter{统计}
+% \input{chapters/statistics/方差.tex}
 
 \end{document}
 

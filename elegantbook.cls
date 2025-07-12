@@ -121,8 +121,8 @@
 \ifdefstring{\ELEGANT@device}{normal}{
     \geometry{
         a4paper,
-        top=25.4mm, bottom=25.4mm,
-        left=20mm, right=20mm,
+        top=10mm, bottom=10mm,
+        left=10mm, right=10mm,
         headheight=2.17cm,
         headsep=4mm,
         footskip=12mm
@@ -151,7 +151,7 @@
 }{\relax}
 
 \setcounter{tocdepth}{1}
-\renewcommand{\baselinestretch}{1.2}
+\renewcommand{\baselinestretch}{0.5}
 
 \PassOptionsToPackage{no-math}{fontspec}
 \PassOptionsToPackage{quiet}{fontspec}
@@ -349,13 +349,13 @@
 \captionsetup[figure]{skip=3pt}
 
 \AtBeginDocument{
-    \setlength{\abovedisplayskip}{3pt}
-    \setlength{\belowdisplayskip}{3pt}
+    \setlength{\abovedisplayskip}{2.5pt}
+    \setlength{\belowdisplayskip}{2.5pt}
+    % \setlength{\abovedisplayshortskip}{1pt}
+    % \setlength{\belowdisplayshortskip}{1pt}
     \RequirePackage[flushmargin,stable]{footmisc}
     \setlength{\footnotesep}{12pt}
 }
-
-
 
 \RequirePackage{graphicx}
 %\RequirePackage{enumerate}
@@ -409,7 +409,7 @@
     \newcommand{\lemmaname}{引理}
     \newcommand{\propositionname}{命题}
     \newcommand{\corollaryname}{推论}
-    \newcommand{\examplename}{例题} %
+    \newcommand{\examplename}{题} %
     \newcommand{\instancename}{示例} %
     \newcommand{\problemname}{提问} % 问题
     \newcommand{\exercisename}{练习} % 练习=习题
@@ -506,8 +506,9 @@
     \large\bfseries\color{structurecolor}\thesubsubsection\enspace}{1pt}{%
     \color{structurecolor}\large\bfseries\filright}
 
-\titlespacing{\chapter}{0pt}{-20pt}{1.3\baselineskip}
-%\titlespacing{\subsection}{0pt}{0.5\baselineskip}{-\baselineskip}
+\titlespacing{\chapter}{0pt}{-30pt}{0.2\baselineskip}
+\titlespacing{\section}{0pt}{0.2\baselineskip}{0.2\baselineskip}
+\titlespacing{\subsection}{0pt}{0.2\baselineskip}{0.2\baselineskip}
 
 
 
@@ -527,6 +528,9 @@
                 boxrule=0.5pt,
                 fonttitle=\bfseries,
                 enhanced,
+                skin first=enhanced,
+                skin middle=enhanced,
+                skin last=enhanced,
                 breakable,
                 top=8pt,
                 before skip=8pt,
@@ -718,11 +722,6 @@
     \par}
 
 \newenvironment{solution}{\par\noindent\textbf{\color{main}\solutionname} \citshape \ \ }{\par}
-\newenvironment{remark}{\noindent\textbf{\color{second}\remarkname \ \ }}{\par}
-\newenvironment{assumption}{\par\noindent\textbf{\color{third}\assumptionname} \citshape \ \ }{\par}
-\newenvironment{conclusion}{\par\noindent\textbf{\color{third}\conclusionname} \citshape \ \ }{\par}
-\newenvironment{property}{\par\noindent\textbf{\color{third}\propertyname} \citshape \ \ }{\par}
-\newenvironment{custom}[1]{\par\noindent\textbf{\color{third} #1} \citshape \ \ }{\par}
 
 \RequirePackage{multicol}
 \tcbset{

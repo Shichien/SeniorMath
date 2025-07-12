@@ -1,0 +1,203 @@
+\section{函数的周期性}
+
+\begin{theorem}[周期函数定义]
+    对于函数 $y=f(x)$，如果存在一个非零常数 $T$，使得对于定义域内的任意一个 $x$ 值，都有 $f(x+T) = f(x)$ 恒成立，那么函数 $y=f(x)$ 就称为周期函数，$T$ 称为这个函数的一个周期。
+\end{theorem}
+
+\begin{theorem}[周期性基本结论]
+    \begin{enumerate}
+        \item 若 $f(x+a) = f(x+b)$，则 $y=f(x)$ 的一个周期为 $T = |b-a|$。
+        \item 若 $f(x+a) + f(x) = K$，其中 $K$ 为任意常数。则 $y=f(x)$ 的一个周期为 $T = 2a$。
+        \item 若 $f(x+a)f(x) = K$,或写为 $f(x+a) = \dfrac{K}{f(x)}$，则 $y=f(x)$ 的一个周期为 $T = 2a$。
+    \end{enumerate}
+\end{theorem}
+
+\begin{example}
+    已知定义在 $\mathbb{R}$ 上的 $f(x)$ 满足 $f(x+3) = -f(x)$。若 $f(x)$ 在区间 $[-2, 2]$ 上的表达式为 $f(x) = x^2+1$，求 $f(2025)$。
+\end{example}
+
+\begin{theorem}[不太常用的结论]
+    \begin{enumerate}
+        \item 若 $f(x+a) = \dfrac{1-f(x)}{1+f(x)}$，则 $y=f(x)$ 的一个周期为 $T=3a$。
+        \item 若 $f(x+a) = \dfrac{1+f(x)}{1-f(x)}$，则 $y=f(x)$ 的一个周期为 $T=4a$。
+        \item 若 $f(x+a) = -\dfrac{1}{f(x)+1}$，则 $y=f(x)$ 的一个周期为 $T=2a$。
+        \item 若 $f(x+2a) = f(x+a) - f(x)$，则 $y=f(x)$ 的一个周期为 $T=6a$。
+        \item 若 $p>0$, $f(px)=f(px-\frac{p}{2})$, 则 $T=\frac{p}{2}$。
+    \end{enumerate}
+\end{theorem}
+
+\section{函数的对称性}
+
+\begin{theorem}[轴对称的等价形式]
+    函数 $y=f(x)$ 的图像关于直线 $x=a$ 对称，等价于以下任意一个式子成立：
+    \begin{enumerate}
+        \item $f(a+x) = f(a-x)$
+        \item $f(2a-x) = f(x)$
+        \item $f(2a+x) = f(-x)$
+    \end{enumerate}
+    特别地，当 $a=0$ 时，$f(x)=f(-x)$，函数为偶函数，图像关于 $y$ 轴对称。
+\end{theorem}
+
+\begin{theorem}[中心对称的等价形式]
+    函数 $y=f(x)$ 的图像关于点 $(a, c)$ 对称，等价于 $f(a+x) + f(a-x) = 2c$。
+    当 $c=0$ 时，即关于点 $(a,0)$ 中心对称，等价于以下任意一个式子成立：
+    \begin{enumerate}
+        \item $f(a+x) = -f(a-x)$
+        \item $f(2a-x) = -f(x)$
+        \item $f(2a+x) = -f(-x)$
+    \end{enumerate}
+    特别地，当 $a=0, c=0$ 时，$f(x)+f(-x)=0$，即 $f(-x)=-f(x)$，函数为奇函数，图像关于原点 $(0,0)$ 对称。
+\end{theorem}
+
+\begin{example}
+    已知函数 $f(x)$ 的图像关于直线 $x=2$ 对称，且满足 $f(x) = \log_2(x-1)$ for $x > 2$。求当 $x<2$ 时 $f(x)$ 的解析式。
+\end{example}
+
+\begin{solution}
+    因为函数 $y=f(x)$ 的图像关于直线 $x=2$ 对称，所以 $f(2+t) = f(2-t)$ 对任意 $t \in \mathbb{R}$ 成立。
+
+    另一种等价的表达是 $f(x) = f(4-x)$。
+
+    设 $x < 2$，则 $4-x > 2$。（这一步的目的是把原本不在定义域内的 $x$ 经过变换，放到可以代入解析式的定义域中）
+
+    因此，当 $x<2$ 时，$f(4-x) = \log_2(3-x) = f(x)$。
+\end{solution}
+
+\section{对称性与周期性的关系}
+
+\begin{theorem}[两条对称轴]
+    若函数 $y=f(x)$ 有两条对称轴 $x=a$ 和 $x=b$ ($a \neq b$)，则 $y=f(x)$ 是周期函数，且一个周期为 $T=2|b-a|$。
+\end{theorem}
+
+\begin{theorem}[两个对称中心]
+    若函数 $y=f(x)$ 有两个对称中心 $(a,0)$ 和 $(b,0)$ ($a \neq b$)，则 $y=f(x)$ 是周期函数，且一个周期为 $T=2|b-a|$。
+\end{theorem}
+
+\begin{theorem}[一个对称轴与一个对称中心]
+    若函数 $y=f(x)$ 有一条对称轴 $x=a$ 和一个对称中心 $(b,0)$ ($a \neq b$)，则 $y=f(x)$ 是周期函数，且一个周期为 $T=4|b-a|$。
+\end{theorem}
+
+\begin{theorem}[偶函数的对称性推论]
+    若偶函数 $y=f(x)$ 的图像关于直线 $x=a$ 对称，则 $y=f(x)$ 是周期函数，周期 $T=2a$。\\
+    (因为偶函数本身关于 $y$ 轴即 $x=0$ 对称，相当于有两条对称轴 $x=0$ 和 $x=a$)
+\end{theorem}
+
+\begin{theorem}[奇函数的对称性推论]
+    若奇函数 $y=f(x)$ 的图像关于直线 $x=a$ 对称，则 $y=f(x)$ 是周期函数，周期 $T=4a$。\\
+    (因为奇函数本身关于原点 $(0,0)$ 对称，相当于有一个对称中心 $(0,0)$ 和一条对称轴 $x=a$)
+\end{theorem}
+
+\begin{problem}
+已知定义在 $\mathbb{R}$ 上的奇函数 $f(x)$ 满足 $f(x+4)=f(x)$，且在 $(0,2)$ 上单调递减。比较 $f(\log_3 5)$, $f(6.5)$, $f(-7)$ 的大小。
+\end{problem}
+
+\section{复合函数与图像变换}
+
+\begin{theorem}[复合函数的奇偶性]
+    \begin{enumerate}
+        \item 若 $f(x)$ 为偶函数, $g(x)$ 为偶函数, 则 $f[g(x)]$ 为偶函数。
+        \item 若 $f(x)$ 为偶函数, $g(x)$ 为奇函数, 则 $f[g(x)]$ 为偶函数。
+        \item 若 $f(x)$ 为奇函数, $g(x)$ 为奇函数, 则 $f[g(x)]$ 为奇函数。
+        \item 若 $f(x)$ 为奇函数, $g(x)$ 为偶函数, 则 $f[g(x)]$ 为偶函数。
+    \end{enumerate}
+    (简记为：内偶则偶，内奇看外)
+\end{theorem}
+
+\begin{theorem}[函数图像变换与对称性]
+    \begin{enumerate}
+        \item 函数 $y=f(a+x)$ 与 $y=f(b-x)$ 的图像关于直线 $x = \dfrac{b-a}{2}$ 对称。
+        \item 函数 $y=f(x)$ 与 $y=f(2a-x)$ 的图像关于直线 $x=a$ 对称。
+        \item 函数 $y=f(a+x)$ 与 $y=-f(b-x)$ 的图像关于点 $(\dfrac{b-a}{2}, 0)$ 中心对称。
+    \end{enumerate}
+\end{theorem}
+
+\section{抽象函数模型与特值法}
+
+\begin{theorem}[常见抽象函数模型]
+    当题目中未直接给出函数的解析式，只给出函数满足的某些性质时，可以尝试使用一个满足条件的、具体的初等函数（特例）来代替抽象函数，从而简化问题。这称为特值法或特殊函数法。
+    \begin{center}
+        \begin{tabular}{|l|l|}
+            \hline
+            \textbf{抽象函数模型}                                           & \textbf{适用的初等函数}                             \\
+            \hline
+            $f(x+y) = f(x) + f(y)$                                    & 正比例函数 $f(x) = kx \quad (k \neq 0)$           \\
+            \hline
+            $f(xy) = f(x)f(y)$ 或 $f(\frac{x}{y}) = \frac{f(x)}{f(y)}$ & 幂函数 $f(x) = x^n$                             \\
+            \hline
+            $f(x+y) = f(x)f(y)$ 或 $f(x-y) = \frac{f(x)}{f(y)}$        & 指数函数 $f(x) = a^x \quad (a>0, a \neq 1)$      \\
+            \hline
+            $f(xy) = f(x) + f(y)$ 或 $f(\frac{x}{y}) = f(x) - f(y)$    & 对数函数 $f(x) = \log_a x \quad (a>0, a \neq 1)$ \\
+            \hline
+            $f(x+T) = f(x)$                                           & 正、余弦函数 $f(x) = \sin x, f(x) = \cos x$        \\
+            \hline
+            $f(x+y) = \dfrac{f(x)+f(y)}{1-f(x)f(y)}$                  & 正切函数 $f(x) = \tan(kx)$                       \\
+            \hline
+        \end{tabular}
+    \end{center}
+\end{theorem}
+
+\begin{example}[\ \ 2016 全国II卷]
+    已知函数 $f(x) (x \in \mathbb{R})$ 满足 $f(-x) = 2 - f(x)$，若函数 $y = \dfrac{x+1}{x}$ 与 $y=f(x)$ 图像的交点为 $(x_1, y_1), (x_2, y_2), \dots, (x_m, y_m)$，则 $\sum_{i=1}^{m} (x_i + y_i) = (\quad)$
+    \begin{enumerate}
+        \item[A.] 0
+        \item[B.] m
+        \item[C.] 2m
+        \item[D.] 4m
+    \end{enumerate}
+\end{example}
+
+\begin{solution}
+    \textbf{方法一：通性分析法} \\
+    由条件 $f(-x) = 2 - f(x)$，可得 $f(x)+f(-x)=2$。
+    这表明函数 $y=f(x)$ 的图像关于点 $(0, 1)$ 中心对称。
+
+    令 $g(x) = \dfrac{x+1}{x} = 1 + \dfrac{1}{x}$。
+    我们来检验 $g(x)$ 的对称性：
+    $g(-x) = 1 + \dfrac{1}{-x} = 1 - \dfrac{1}{x}$。
+    $g(x) + g(-x) = (1 + \dfrac{1}{x}) + (1 - \dfrac{1}{x}) = 2$。
+    所以函数 $y=g(x)$ 的图像也关于点 $(0, 1)$ 中心对称。
+
+    两个关于同一点 $(0,1)$ 对称的函数的交点也成对出现（关于点 $(0,1)$ 对称）。
+    假设 $(x_i, y_i)$ 是一个交点，则 $y_i = f(x_i)$ 且 $y_i = g(x_i)$。
+    根据对称性，点 $(-x_i, 2-y_i)$ 必定也在 $y=f(x)$ 的图像上，也必定在 $y=g(x)$ 的图像上。因此 $(-x_i, 2-y_i)$ 也是一个交点。
+    注意到 $g(x)$ 在 $x=0$ 处无定义，所以交点的横坐标 $x_i \neq 0$。
+    因此，所有的交点两两配对，形如 $(x_i, y_i)$ 和 $(-x_i, 2-y_i)$。
+    设 $m$ 是交点的总个数，则 $m$ 一定是偶数。
+    我们将这些成对的交点之和相加：
+    $(x_i + y_i) + (-x_i + (2-y_i)) = 2$。
+    总共有 $\dfrac{m}{2}$ 对这样的交点。
+    所以 $\sum_{i=1}^{m} (x_i + y_i) = \dfrac{m}{2} \times 2 = m$。
+\end{solution}
+
+\begin{example}[\ \ 2020 高三模拟]
+    已知定义在 $(0, +\infty)$ 上的函数 $f(x)$ 单调递增，满足 $f(xy)=f(x)+f(y)$，且 $f(3)=1$，则 $f(x)+f(x-8) \le 2$ 的取值范围是 $(\quad)$
+    \begin{enumerate}
+        \item[A.] $(8, +\infty)$
+        \item[B.] $(8, 9]$
+        \item[C.] $[8, 9]$
+        \item[D.] $(0, 8)$
+    \end{enumerate}
+\end{example}
+
+\begin{solution}
+    \textbf{方法二：特值函数法} \\
+    根据抽象函数模型 $f(xy)=f(x)+f(y)$，可知其原型为对数函数 $f(x) = \log_a x$。
+    由条件 $f(3)=1$，可得 $\log_a 3 = 1$，解得 $a=3$。
+    所以我们可以取 $f(x) = \log_3 x$ 作为满足条件的函数。
+    该函数在 $(0, +\infty)$ 上确实是单调递增的，符合所有题设。
+    现在求解不等式 $f(x)+f(x-8) \le 2$。
+    代入特例函数：$\log_3 x + \log_3 (x-8) \le 2$。
+    首先，根据对数函数的定义域，必须满足：
+    $\begin{cases} x > 0 \\ x-8 > 0 \end{cases} \implies x > 8$。
+    然后，利用对数运算法则合并原不等式：
+    $\log_3 [x(x-8)] \le 2$
+    根据对数函数的单调性（底数 $3>1$），可得：
+    $x(x-8) \le 3^2$
+    $x^2 - 8x \le 9$
+    $x^2 - 8x - 9 \le 0$
+    因式分解得：
+    $(x-9)(x+1) \le 0$
+    解得 $-1 \le x \le 9$。
+    最后，将此解集与定义域约束 $x>8$ 取交集，得到最终的取值范围是 $8 < x \le 9$。
+    故选 B。
+\end{solution}

@@ -1,0 +1,141 @@
+\section{方差}
+
+\subsection{分层抽样（分组）的方差}
+
+先看一个示例，多组数据混入求方差：
+
+\begin{example}
+    在对树人中学高、年级学生身高的调查中，采用样本量比例分配的分层随机抽样，如果不知道样本数据，只知道抽取了男生 23 人，其平均数和方差分别为 170.6 和 12.59 ，抽取了女生 27 人，其平均数和方差分别为 160.6 和 38.62. 你能由这些数据计算出总样本的方差，并对高一年级全体学生的身高方差作出估计吗？
+\end{example}
+
+\begin{solution}
+    把男生样本记为 $x_1, x_2, \cdots, x_{23}$ ，其平均数记为 $\bar{x}$ ，方差记为 $s_x^2$ ；把女生样本记为 $y_1, y_2, \cdots, y_{27}$ ，其平均数记为 $\bar{y}$ ，方差记为 $s_y^2$ ；把总样本数据的平均数记为 $\bar{z}$ ，方差记为 $s^2$ ．
+
+    根据方差的定义，总样本方差为：
+    $$
+        \begin{aligned}
+            s^2 & =\frac{1}{50}\left[\textcolor{red}{\sum_{i=1}^{23}\left(x_i-\bar{z}\right)^2}+\textcolor{ForestGreen}{\sum_{j=1}^{27}\left(y_j-\bar{z}\right)^2}\right]                                   \\
+                & =\frac{1}{50}\left[\textcolor{red}{\sum_{i=1}^{23}\left(x_i-\bar{x}+\bar{x}-\bar{z}\right)^2}+\textcolor{ForestGreen}{\sum_{j=1}^{27}\left(y_j-\bar{y}+\bar{y}-\bar{z}\right)^2}\right] .
+        \end{aligned}
+    $$
+
+    我们用完全平方公式展开 $\textcolor{red}{
+            \sum_{i=1}^{23}\left(x_i-\bar{x}+\bar{x}-\bar{z}\right)^2
+        }$：
+    $$
+        \textcolor{red}{
+            = \sum_{i=1}^{23} (x_i - \bar{x})^2 + \sum_{i=1}^{23} (\bar{x} - \bar{z})^2} + \textcolor{Indigo}{\sum_{i=1}^{23} 2(x_i - \bar{x})(\bar{x} - \bar{z})
+        }
+    $$
+
+    在最后这一项，因为是对 $i$ 的求和，所以可以提取变成：
+    $$ \textcolor{Indigo}{\sum_{i=1}^{23} 2(x_i - \bar{x})(\bar{x} - \bar{z}) = 2(\bar{x} - \bar{z}) \sum_{i=1}^{23}(x_i - \bar{x})}$$
+
+    而 $\sum_{i=1}^{23}(x_i - \bar{x})$ 是等于 0 的，因为 $\sum_{i=1}^{23} x_i = 23 \times \bar{x}$. 那么同理可得：
+    \begin{align} \label{eq:variance-example}
+        s^2= & \frac{1}{50}\left[\textcolor{red}{\sum_{i=1}^{23}\left(x_i-\bar{x}\right)^2+\sum_{i=1}^{23}(\bar{x}-\bar{z})^2}+\textcolor{ForestGreen}{\sum_{j=1}^{27}\left(y_j-\bar{y}\right)^2+\sum_{j=1}^{27}(\bar{y}-\bar{z})^2}\right] \notag \\
+        =    & \frac{1}{50}\left\{\textcolor{red}{23\left[s_x^2+(\bar{x}-\bar{z})^2\right]}+\textcolor{ForestGreen}{27\left[s_y^2+(\bar{y}-\bar{z})^2\right]}\right\}.
+    \end{align}
+
+    由 $\bar{x}=170.6, \bar{y}=160.6$ ，根据按比例分配分层随机抽样总样本平均数与各层样本平均数的关系，\\ 可得总样本平均数为：
+    $$
+        \begin{aligned}
+            \bar{z} & =\frac{23}{50} \bar{x}+\frac{27}{50} \bar{y} = 165.2
+        \end{aligned}
+    $$
+
+    把已知的男生、女生样本平均数和方差的取值代入式（\ref{eq:variance-example}），可得：
+    $$
+        \begin{aligned}
+            s^2=\frac{1}{50}\left\{23 \times\left[12.59+(170.6-165.2)^2\right]+27 \times\left[38.62+(160.6-165.2)^2\right]\right\}
+        \end{aligned}
+    $$
+\end{solution}
+
+\begin{theorem}
+    从上面的这个例子中，我们可以总结一个小规律：
+
+    甲组数据 $\mathbf{m}$ 个，平均数为 $\bar{x}$ ，方差为 $S_{\text{甲}}^2$ ；乙组数据 $\mathbf{n}$ 个，平均数为 $\bar{y}$ ，方差为 $S_{\text{乙}}^2$.
+
+    甲乙两组数据混合，共 $\mathbf{m}+\mathbf{n}$ 个，设混合后平均数为 $\bar{Z}$ ，方差为 $S^2$，则：
+    $$ S^2=\frac{m}{m+n}\left[S_{\text{甲}}^2+(\bar{x}-\bar{Z})^2\right]+\frac{n}{m+n}\left[S_{\text{乙}}^2+(\bar{y}-\bar{Z})^2\right] $$
+
+    或者我们可以简约地写成（如果你看得懂），这里的 $w_i$ 是不同组数据的占比权重：
+    $$ S^2 = \sum_{i=1}^n w_i\left[s_i^2+(\bar{X}-\bar{Z})\right] $$
+\end{theorem}
+
+\begin{example}
+    (2024 济南二模) 现有 $A,B$ 两组数据，其中 $A$ 组有 $4$ 个数据，平均数为 $2$，方差为 $6$，$B$ 组有 $6$ 个数据，平均数为 $7$，方差为 $1$，若将这两组数据混合成一组，则新的一组数据的方差为：
+\end{example}
+
+\begin{solution}
+    首先，计算新一组数据的平均数 $\bar{x}_{\text{new}}$：
+    $\bar{x}_{\text{new}} = \frac{4 \times 2 + 6 \times 7}{10} = 5.$
+
+    根据总体方差的计算公式，新一组数据的方差 $s_{\text{new}}^2$ 等于组内方差的加权平均与组间方差之和。\\
+    代入数据可得：
+    $$
+        S^2 = \frac{4}{10}\left[6 + (2 - 5)^2\right] + \frac{6}{10}\left[1 + (7 - 5)^2\right]
+    $$
+\end{solution}
+
+\v{2em}
+
+\begin{minipage}{0.7\textwidth}
+    \begin{problem}
+    某在厂的三个车间生产同一种产品，三个车间的产量分布如图所示，现在用分层随机抽样方法从三个车间生产的该产品中抽取部分产品．若 $A, B, C$ 三个车间产品的平均寿命分别为 $200,220,210$ 小时，方差分别为 $30,20,40$ ，则总样本的方差为 （$\qquad$）．
+    \end{problem}
+\end{minipage} %
+\begin{minipage}{0.2\textwidth}
+    \resizebox{0.8\textwidth}{!}{
+        \begin{tikzpicture}
+            \def\radius{2cm} % 定义饼图的半径
+
+            \definecolor{Acolor}{RGB}{255,165,0} % 橙色
+            \definecolor{Bcolor}{RGB}{106,90,205} % 紫色
+            \definecolor{Ccolor}{RGB}{34,139,34} % 森林绿
+
+            \pgfmathsetmacro{\Apercentage}{20}
+            \pgfmathsetmacro{\Bpercentage}{50}
+            \pgfmathsetmacro{\Cpercentage}{30}
+
+            \pgfmathsetmacro{\Aangle}{\Apercentage/100*360}
+            \pgfmathsetmacro{\Bangle}{\Bpercentage/100*360}
+            \pgfmathsetmacro{\Cangle}{\Cpercentage/100*360}
+
+            \draw (0,0) -- (0:\radius) arc (0:\Aangle:\radius) -- cycle;
+            \filldraw (0,0) -- (0:\radius) arc (0:\Aangle:\radius) -- cycle [fill=Acolor];
+            \node at (\Aangle/2:\radius*0.7) {A：\Apercentage\%};
+
+            \pgfmathsetmacro{\startAngleB}{\Aangle}
+            \pgfmathsetmacro{\endAngleB}{\startAngleB + \Bangle}
+            \draw (0,0) -- (\startAngleB:\radius) arc (\startAngleB:\endAngleB:\radius) -- cycle;
+            \filldraw (0,0) -- (\startAngleB:\radius) arc (\startAngleB:\endAngleB:\radius) -- cycle [fill=Bcolor];
+            \node at (\startAngleB + \Bangle/2:\radius*0.7) {\ \ B： \Bpercentage\%};
+
+            \pgfmathsetmacro{\startAngleC}{\endAngleB}
+            \pgfmathsetmacro{\endAngleC}{\startAngleC + \Cangle}
+            \draw (0,0) -- (\startAngleC:\radius) arc (\startAngleC:\endAngleC:\radius) -- cycle;
+            \filldraw (0,0) -- (\startAngleC:\radius) arc (\startAngleC:\endAngleC:\radius) -- cycle [fill=Ccolor];
+            \node at (\startAngleC + \Cangle/2:\radius*0.7) {C： \Cpercentage\%};
+        \end{tikzpicture}
+    }
+\end{minipage}
+
+\begin{solution}
+    首先，计算总样本的平均寿命 $\bar{x}_{\text{total}}$：
+    $$
+        \bar{x}_{\text{total}} = w_A\bar{x}_A + w_B\bar{x}_B + w_C\bar{x}_C = 0.2 \times 200 + 0.5 \times 220 + 0.3 \times 210 = 40 + 110 + 63 = 213.
+    $$
+
+    根据总体方差的计算公式，总样本的方差 $s_{\text{total}}^2$ 为各部分方差与均值方差之和的加权平均。
+    $$
+        s_{\text{total}}^2 = w_A\left[s_A^2 + (\bar{x}_A - \bar{x}_{\text{total}})^2\right] + w_B\left[s_B^2 + (\bar{x}_B - \bar{x}_{\text{total}})^2\right] + w_C\left[s_C^2 + (\bar{x}_C - \bar{x}_{\text{total}})^2\right]
+    $$
+
+    代入数据可得：
+    \begin{align*}
+        s_{\text{total}}^2 & = 0.2 \times \left[30 + (200 - 213)^2\right] + 0.5 \times \left[20 + (220 - 213)^2\right] + 0.3 \times \left[40 + (210 - 213)^2\right] \\
+                           & = 0.2 \times 199 + 0.5 \times 69 + 0.3 \times 49 = 89.
+    \end{align*}
+\end{solution}

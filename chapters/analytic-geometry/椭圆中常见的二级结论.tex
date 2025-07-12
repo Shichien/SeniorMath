@@ -14,50 +14,41 @@
 
 证明过程用到了余弦定理和三角函数的半角公式。
 
-\vspace{0.7cm}
-
 \begin{proof}
-
     第一个焦点三角形面积公式与顶点的纵坐标关系比较大。
 
     $\triangle P F_1 F_2$ 的边 $F_1 F_2$ 上的高 $h=\left|y_P\right|$ ，所以
-    \begin{equation*}
+    $$
         S_{\triangle P F_1 F_2}=\frac{1}{2}\left|F_1 F_2\right| \cdot h=c\left|y_P\right|
-    \end{equation*}
-
-    \vspace{0.3cm}
-
+    $$
     第二部分，记 $\left|P F_1\right|=m,\left|P F_2\right|=n$ ，则由椭圆定义，$m+n=2 a$（1）
-
-    \begin{gather*}
-        \left|F_1 F_2\right|^2=\left|P F_1\right|^2+\left|P F_2\right|^2-2\left|P F_1\right| \cdot\left|P F_2\right| \cdot \cos \angle F_1 P F_2 \\
+    $$
+        \left|F_1 F_2\right|^2=\left|P F_1\right|^2+\left|P F_2\right|^2-2\left|P F_1\right| \cdot\left|P F_2\right| \cdot \cos \angle F_1 P F_2
+    $$
+    $$
         4 c^2=m^2+n^2-2 m n \cos \theta=(m+n)^2-2 m n-2 m n \cos \theta
-    \end{gather*}
-
-    将式（1）代入可得
-
-    \begin{equation*}
+    $$
+    将式（1）代入可得：
+    $$
         4 c^2=4 a^2-2 m n(1+\cos \theta)
-    \end{equation*}
-
-    \begin{equation*}
+    $$
+    $$
         m n=\frac{4 a^2-4 c^2}{2(1+\cos \theta)}=\frac{2 b^2}{1+\cos \theta}
-    \end{equation*}
-
-    \begin{equation*}
+    $$
+    $$
         S_{\triangle P F_1 F_2}=\frac{1}{2} m n \sin \theta=\frac{1}{2} \cdot \frac{2 b^2}{1+\cos \theta} \cdot \sin \theta=b^2 \cdot \frac{\sin \theta}{1+\cos \theta}=b^2 \cdot \frac{2 \sin \frac{\theta}{2} \cos \frac{\theta}{2}}{2 \cos ^2 \frac{\theta}{2}}=b^2 \tan \frac{\theta}{2}
-    \end{equation*}
+    $$
 \end{proof}
 
 \begin{problem}
 设椭圆 $\frac{x^2}{5}+y^2=1$ 的左、右焦点分别为 $F_1, F_2$ ，点 $M$ 在椭圆 $C$ 上，且 $\angle F_1 M F_2=120^{\circ}$，则 $|O M|=$
 \end{problem}
 
-\begin{remark}
+\begin{tips}
     这里 $O$ 为原点。焦点三角形两个面积公式同时考察的题，是 2023 年全国甲卷压轴选择的原型。
-\end{remark}
+\end{tips}
 
-\vspace{2em}
+\vspace{4em}
 
 \begin{problem}
 （2023年全国甲卷）
@@ -69,6 +60,42 @@
     \task $\frac{\sqrt{35}}{2}$
 \end{tasks}
 \end{problem}
+
+\v{6em}
+
+\begin{example}
+    （2003 北京卷 15 题）如图，$\mathrm{F}_1, \mathrm{~F}_2$ 分别为椭圆 $\frac{x^2}{a^2}+\frac{y^2}{b^2}=1$ 的左、右焦点，点 P 在椭圆上，$\triangle \mathrm{POF}_2$ 是面积为 $\sqrt{3}$的正三角形，则 $\mathrm{b}^2$ 的值是 \underline{$\qquad$} ．
+\end{example}
+
+\begin{tikzpicture}[
+        scale=0.6,
+        point/.style={circle, fill=black, inner sep=1.2pt}
+    ]
+
+    \def\a{3}
+    \def\b{2}
+    \pgfmathsetmacro{\c}{sqrt(\a*\a - \b*\b)}
+
+    \draw[->, thick] (-4,0) -- (4,0) node[below left] {$x$};
+    \draw[->, thick] (0,-2.5) -- (0,2.5) node[below left] {$y$};
+
+    \draw[blue, thick] (0,0) ellipse (\a cm and \b cm);
+
+    \coordinate (O) at (0,0);
+    \coordinate (F1) at (-\c,0);
+    \coordinate (F2) at (\c,0);
+    \coordinate (P) at (68:\a cm and \b cm);
+
+    \node[point, label=below left:{$O$}] at (O) {};
+    \node[point, label=below:{$F$}] at (F1) {};
+    \node[point, label=below right:{$F_2$}] at (F2) {};
+    \node[point, label=above right:{$P$}] at (P) {};
+
+    \draw (P) -- (O);
+    \draw (P) -- (F2);
+\end{tikzpicture}
+
+\v{4em}
 
 \subsection{第三定义}
 
