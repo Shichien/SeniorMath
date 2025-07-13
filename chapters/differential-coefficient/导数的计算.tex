@@ -1,5 +1,29 @@
 \section{导数的计算}
 
+\subsection{导数的示例推导}
+
+\begin{theorem}[二项式定理展开]
+    对于任意正整数 $n$，二项式定理表示为：
+    $$(a+b)^n = C_n^0 a^n + C_n^1 a^{n-1}b + C_n^2 a^{n-2}b^2 + \dots + C_n^k a^{n-k}b^k + \dots + C_n^n b^n$$
+    同理，我们将 $a=x$, $b=h$ 代入二项式定理，得到 $(x+h)^n$ 的展开式：
+    $$(x+h)^n = x^n + C_n^1 x^{n-1}h + C_n^2 x^{n-2}h^2 + \dots + C_n^n h^n$$
+    $$(x+h)^n = x^n + nx^{n-1}h + \frac{n(n-1)}{2}x^{n-2}h^2 + \dots + h^n$$
+\end{theorem}
+
+\begin{solution}
+    根据导数的定义 $f'(x) = \lim_{h \to 0} \frac{f(x + h) - f(x)}{h}$：
+    \begin{align*}
+        f'(x) & = \lim_{h \to 0} \frac{(x + h)^n - x^n}{h}                                                       \\
+              & = \lim_{h \to 0} \frac{\left( x^n + nx^{n-1}h + C_n^2 x^{n-2}h^2 + \dots + h^n \right) - x^n}{h} \\
+              & = \lim_{h \to 0} \frac{nx^{n-1}h + C_n^2 x^{n-2}h^2 + \dots + h^n}{h}
+    \end{align*}
+    因为 $h \to 0$ 但 $h \ne 0$，我们可以将分子中的 $h$ 因子提出来，并与分母的 $h$ 消去：
+    \begin{align*}
+         & = \lim_{h \to 0} \left( nx^{n-1} + C_n^2 x^{n-2}h + \dots + h^{n-1} \right)
+    \end{align*}
+    因此，当 $h \to 0$ 时，我们得到：$f'(x) = nx^{n-1}$
+\end{solution}
+
 \subsection{求导法则}
 
 \begin{center}

@@ -1,0 +1,30 @@
+\section{双曲线中常见的二级结论}
+
+\subsection{两渐近线的距离之积}
+
+\begin{theorem}
+    双曲线 $E$ 上一点到两渐近线的距离之积为定值。
+
+    \begin{proof}
+        设双曲线标准方程为 $\frac{x^2}{a^2} - \frac{y^2}{b^2} = 1$，其渐近线方程为 $y = \pm \frac{b}{a}x$。
+
+        取双曲线上任意一点 $P(x_0, y_0)$，则 $\frac{x_0^2}{a^2} - \frac{y_0^2}{b^2} = 1$。
+
+        点 $P$ 到渐近线 $y = \frac{b}{a}x$ 的距离和到 $y = -\frac{b}{a}x$ 的距离分别为：
+        \begin{align}
+            d_1 & = \frac{|ax_0 - by_0|}{\sqrt{a^2 + b^2}}, \quad \quad d_2 = \frac{|ax_0 + by_0|}{\sqrt{a^2 + b^2}}
+        \end{align}
+
+        两距离之积为：
+        \begin{align}
+            d_1 \cdot d_2 = \frac{|ax_0 - by_0| \cdot |ax_0 + by_0|}{a^2 + b^2} = \frac{|a^2x_0^2 - b^2y_0^2|}{a^2 + b^2}
+        \end{align}
+
+        由于点 $P$ 在双曲线上，满足 $\frac{x_0^2}{a^2} - \frac{y_0^2}{b^2} = 1$，即 $a^2x_0^2 - b^2y_0^2 = a^2b^2$，所以
+        \begin{align}
+            d_1 \cdot d_2 & = \frac{a^2b^2}{a^2 + b^2}
+        \end{align}
+
+        这是一个与点 $P$ 位置无关的常数，因此双曲线上任意一点到两渐近线的距离之积为定值 $\frac{a^2b^2}{a^2 + b^2}$。
+    \end{proof}
+\end{theorem}

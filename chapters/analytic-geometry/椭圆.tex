@@ -1,5 +1,59 @@
 \section{椭圆}
 
+\subsection{椭圆 CheetSheet}
+
+\begin{theorem}
+    \begin{tabular}{| p{2cm} | >{\centering\arraybackslash}p{8cm} | >{\centering\arraybackslash}p{6cm} |}
+        \hline
+        \textbf{名称}         & \textbf{焦点在 $x$ 轴上}                                                                                                       & \textbf{焦点在 $y$ 轴上}                             \\
+        \hline
+        第一定义                & \multicolumn{2}{c|}{平面内一动点 $P$ 与两定点 $F_1, F_2$ 距离之和为常数 (大于 $|F_1F_2|$) 的轨迹}                                                                                                 \\
+        \hline
+        第二定义                & \multicolumn{2}{c|}{平面内一动点到定点与到准线的距离比是常数的点的轨迹 $e = \frac{MF}{d_1}$}                                                                                                         \\
+        \hline
+        焦点                  & \multicolumn{2}{c|}{焦点在 $x$ 轴上}                                                                                                                                             \\
+        \hline
+        \multirow{2}{*}{图形} & \multicolumn{2}{c|}{\underline{\quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad}}                                                              \\ % Underline for x-axis ellipse graph
+                            & \multicolumn{2}{c|}{\underline{\quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad}}                                                              \\ % Underline for y-axis ellipse graph
+        \hline
+        标准方程                & $\frac{x^2}{a^2} + \frac{y^2}{b^2} = 1 (a>b>0)$                                                                           & $\frac{y^2}{a^2} + \frac{x^2}{b^2} = 1 (a>b>0)$ \\
+        \hline
+        范围                  & $-a \le x \le a, -b \le y \le b$                                                                                          & $-b \le x \le b, -a \le y \le a$                \\
+        \hline
+        顶点                  & $A_1(-a,0), A_2(a,0), B_1(0,-b), B_2(0,b)$                                                                                & $A_1(0,-a), A_2(0,a), B_1(-b,0), B_2(b,0)$      \\
+        \hline
+        轴长                  & \multicolumn{2}{c|}{长轴长 $=2a$, 短轴长 $=2b$, 焦距 $=|F_1F_2|=2c$, $c^2=a^2-b^2$}                                                                                                 \\
+        \hline
+        焦点                  & $F_1(-c,0), F_2(c,0)$                                                                                                     & $F_1(0,-c), F_2(0,c)$                           \\
+        \hline
+        焦半径                 & $|PF_1| = a+ex_0, |PF_2| = a-ex_0$                                                                                        & $|PF_1| = a-ey_0, |PF_2| = a+ey_0$              \\
+        \hline
+        焦点弦                 & \multicolumn{2}{c|}{左焦点弦 $|AB| = 2a + e(x_1+x_2)$, 右焦点弦 $|AB| = 2a - e(x_1+x_2)$}                                                                                           \\
+        \hline
+        离心率                 & \multicolumn{2}{c|}{$e = \frac{c}{a} = \sqrt{1 - \frac{b^2}{a^2}} (0<e<1)$}                                                                                                 \\
+        \hline
+        准线方程                & $x = \pm \frac{a^2}{c}$                                                                                                   & $y = \pm \frac{a^2}{c}$                         \\
+        \hline
+        切线方程                & $\frac{x_0x}{a^2} + \frac{y_0y}{b^2} = 1$                                                                                 & $\frac{y_0y}{a^2} + \frac{x_0x}{b^2} = 1$       \\
+        \hline
+        通径                  & \multicolumn{2}{c|}{过椭圆焦点且垂直于对称轴的弦长 $|AB| = \frac{2b^2}{a}$ (最短焦弦)}                                                                                                         \\
+        \hline
+        \multirow{5}{*}{焦点三角形}
+                            & \multicolumn{2}{c|}{(1) 由定义可知: $|PF_1| + |PF_2| = 2a$, 周长为: $2a + 2c$}                                                                                                      \\
+        \cline{2-3}
+                            & \multicolumn{2}{c|}{(2) 焦点三角形面积: $S_{\triangle PF_1F_2} = b^2 \tan \frac{\theta}{2}$}                                                                                       \\
+        \cline{2-3}
+                            & \multicolumn{2}{c|}{(3) 当 $P$ 在椭圆短轴上时, 夹角 $\theta$ 最大, $\cos \theta = 1-2e^2$}                                                                                              \\
+        \cline{2-3}
+                            & \multicolumn{2}{c|}{(4) 焦长公式: $|PF_1| = \frac{b^2}{a-c \cos \alpha}, |MF_1| = \frac{b^2}{a+c \cos \alpha}$}                                                                 \\
+        \cline{2-3}
+                            & \multicolumn{2}{c|}{$|MP|^2 = \frac{2ab^2}{a^2-c^2 \cos^2 \alpha} + \frac{b^2 c^2 \sin^2 \alpha}{a^2-c^2 \cos^2 \alpha}$}                                                   \\
+        \cline{2-3}
+                            & \multicolumn{2}{c|}{(5) 离心率: $e = \frac{\sin (\alpha+\beta)}{\sin \alpha + \sin \beta}$}                                                                                    \\
+        \hline
+    \end{tabular}
+
+\end{theorem}
 \subsection{求椭圆的离心率}
 
 \begin{theorem}

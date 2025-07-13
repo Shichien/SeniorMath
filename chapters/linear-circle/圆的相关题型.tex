@@ -1,3 +1,67 @@
+\section{圆的相关题型}
+
+\subsection{圆和斜率构造}
+
+\begin{example}
+    已知实数 $x, y$ 满足 $x^2+y^2-4 x-2 y-4=0$ ，则 $\frac{y-1}{x+3}$ 的最大值是 （\qquad）
+    \begin{tasks}(4)
+        \task $\frac{1}{2}$
+        \task $\frac{\sqrt{2}}{2}$
+        \task $\frac{3}{4}$
+        \task 1
+    \end{tasks}
+\end{example}
+
+\v{6em}
+
+\subsection{点和圆的位置关系}
+
+\begin{theorem}[点和圆的位置关系]
+    点 $P(x_0, y_0)$ 在圆 $C:(x-a)^2+(y-b)^2=r^2$ 内部、外部或圆上的条件分别为：
+    \begin{itemize}
+        \item 点在圆内部：$(x_0-a)^2+(y_0-b)^2 < r^2$
+        \item 点在圆外部：$(x_0-a)^2+(y_0-b)^2 > r^2$
+        \item 点在圆上：$(x_0-a)^2+(y_0-b)^2 = r^2$
+    \end{itemize}
+    通过比较点到圆心的距离与半径的大小关系，可以判断点与圆的位置关系。
+\end{theorem}
+
+\begin{example}
+    已知圆 $C$ 方程为 $x^2+y^2+2 x-4 y+\lambda=0$ ，则下列结论正确的是 （\qquad）
+    \begin{tasks}(4)
+        \task $\lambda$ 的取值范围为 $(-\infty, 5]$
+        \task 若已知 $P(1,0)$ 在圆内，则 $\lambda<-3$
+        \task 若 $\lambda=3$ ，则直线 $x+y+1=0$ 与圆 $C$ 相离
+        \task 若 $\lambda=1$ ，圆 $C$ 关于直线 $x+y+1=0$ 对称的圆 $D$ 方程为 $x^2+y^2+6 x+5=0$
+    \end{tasks}
+\end{example}
+
+\v{6em}
+
+\begin{example}
+    已知圆 $C: x^2+y^2-4x+6y+4=0$ 与直线 $l: 3x-4y+m=0$ 相切，求参数 $m$ 的值。
+\end{example}
+
+\v{6em}
+
+\subsection{两点间的距离构造}
+
+\begin{theorem}
+    两点间的距离为 $d=\sqrt{(x_2-x_1)^2+(y_2-y_1)^2}$。
+
+    类似 $(x-1)^2+y^2$ 的式子都可以构造为两点间的距离。
+\end{theorem}
+
+\subsection{轴对称与将军饮马}
+
+\begin{example}
+    已知实数 $x, y$ 满足方程 $x=\sqrt{1-y^2}$ ，则（ \qquad）
+    \begin{itemize}
+        \item $(x-2)^2+y^2$ 的取值范围是 $[1, \sqrt{5}]$
+        \item $\frac{y+2}{x+1}$ 的取值范围是 $\left[\frac{3}{4}, 3\right]$
+    \end{itemize}
+\end{example}
+
 \begin{theorem}[轴对称与点到圆的距离]
     此为“将军饮马”问题的变体。将起点关于“河岸”直线作对称点，最短路径问题转化为对称点与“军营”圆心连线的距离，再减去圆的半径。
 \end{theorem}
@@ -11,19 +75,14 @@
     \end{tasks}
 \end{example}
 
+\v{6em}
 
-\begin{theorem}[轴对称与点到圆的最短距离]
-    此问题是“将军饮马”模型与点到圆上动点距离模型的综合应用。将定点 $M$ 关于 $x$ 轴作对称点 $M'$，则 $|PM|+|PQ|$ 的最小值为点 $M'$ 到圆 $C$ 上动点 $Q$ 的最短距离，即 $M'$ 与圆心 $C$ 的距离减去半径。
-\end{theorem}
 \begin{example}
-    已知 $Q$ 为圆 $C:(x-2)^2+(y-1)^2=1$ 上一动点，$M(7,4)$ ，点 $P$ 为 $x$ 轴上一动点，则 $|P M|+|P Q|$ 的最小值为 $\qquad$ ．
+    已知 $Q$ 为圆 $C:(x-2)^2+(y-1)^2=1$ 上一动点，$M(7,4)$ ，点 $P$ 为 $x$ 轴上一动点，则 $|P M|+|P Q|$ 的最小值为 $\qquad$
 \end{example}
 
-\vspace{4em}
+\vspace{6em}
 
-\begin{theorem}[轴对称求最短路径]
-    求动点到两定点距离之和的最小值问题（将军饮马模型），可将其中一个定点关于动点所在的直线作对称，则最小值等于另一个定点与该对称点之间的距离。
-\end{theorem}
 \begin{example}
     已知圆 $M_1:(x-2)^2+(y-1)^2=2$ ，圆 $M_2: x^2+y^2-2 x+2 y+1=0$ ，点 $P$ 为 $y$ 轴上的动点，则 $|P M_1|+|P M_2|$ 的最小值为（ \hspace{2em} ）
     \begin{tasks}(4)
@@ -34,10 +93,30 @@
     \end{tasks}
 \end{example}
 
+\subsection{圆和圆的位置关系}
 
 \begin{theorem}[圆与圆的位置关系]
     通过比较两圆的圆心距 $d$ 与两圆半径之和 $R+r$、半径之差 $|R-r|$ 的大小，可以判断两圆的位置关系（相离、外切、相交、内切、内含）。
+
+    \begin{center}
+        \begin{tabular}{|c|c|c|}
+            \hline
+            位置关系 & 圆心距 $d$ 与半径关系         & 图示特征              \\
+            \hline
+            外离   & $d > R + r$           & 两圆完全分离            \\
+            \hline
+            外切   & $d = R + r$           & 两圆只有一个公共点         \\
+            \hline
+            相交   & $|R - r| < d < R + r$ & 两圆有两个交点           \\
+            \hline
+            内切   & $d = |R - r|$         & 两圆只有一个公共点，一圆在另一圆内 \\
+            \hline
+            内含   & $d < |R - r|$         & 一个圆完全包含在另一个圆内     \\
+            \hline
+        \end{tabular}
+    \end{center}
 \end{theorem}
+
 \begin{example}
     设圆 $C_1: x^2+y^2=4$ ，圆 $C_2: x^2+y^2-6 x+8=0$ ，则圆 $C_1, ~ C_2$ 的位置关系是（ \hspace{2em} ）
     \begin{tasks}(4)
@@ -49,6 +128,8 @@
 \end{example}
 
 \vspace{4em}
+
+\subsection{两圆公共弦问题}
 
 \begin{theorem}[两圆公共弦问题]
     两圆方程作差即可得到它们的公共弦所在直线的方程。然后利用圆心到公共弦的距离、半径和半弦长构成的直角三角形，通过勾股定理求出弦长。
@@ -77,16 +158,26 @@
 
 \vspace{4em}
 
+\subsection{圆的切线方程}
+
 \begin{theorem}[圆的切线方程]
     若已知点 $P(x_0, y_0)$ 在圆 $(x-a)^2+(y-b)^2=r^2$ 上，则过该点的切线方程为 $(x_0-a)(x-a)+(y_0-b)(y-b)=r^2$。
 \end{theorem}
+
 \begin{example}
-    已知圆 $C:(x-4)^2+(y+5)^2=2$ ，则圆 $C$ 在点 $P(3,-4)$ 处的切线方程为 $\qquad$ ．
+    已知圆 $C:(x-4)^2+(y+5)^2=2$ ，则圆 $C$ 在点 $P(3,-4)$ 处的切线方程为 \underline{\qquad}
 \end{example}
 
 \vspace{4em}
 
-\subsection{填空题}
+\begin{example}
+    已知圆 $C: x^2+y^2-4x+6y+4=0$ 与直线 $l: 3x-4y+m=0$ 相切，求参数 $m$ 的值。
+\end{example}
+
+\v{4em}
+
+\subsection{两圆公切线条数}
+
 \begin{theorem}[两圆公切线条数]
     两圆有且仅有三条公切线是两圆外切的充要条件。因此，两圆的圆心距等于两圆半径之和。
 \end{theorem}
@@ -95,3 +186,374 @@
 \end{example}
 
 \vspace{4em}
+
+\subsection{圆的参数方程及其应用}
+
+\begin{theorem}[圆的参数方程]
+    圆 $C: (x-a)^2+(y-b)^2=r^2$ 的参数方程可表示为：
+    \begin{align*}
+        x & = a + r\cos\theta \\
+        y & = b + r\sin\theta
+    \end{align*}
+    其中 $\theta \in [0, 2\pi)$ 是参数。通过这种表示，圆上任意一点的坐标都可以用参数 $\theta$ 表示，便于求解圆上点满足特定条件的问题。
+\end{theorem}
+
+\begin{example}
+    已知圆 $C: x^2+y^2=4$ 上的点 $P(x,y)$ 满足 $\overrightarrow{OP} \cdot \overrightarrow{OA} = 2\sqrt{2}$，其中 $O$ 是坐标原点，$A(2,0)$。
+    \begin{itemize}
+        \item[(1)] 求点 $P$ 的坐标；
+        \item[(2)] 设 $Q$ 是圆 $C$ 上的另一点，若 $\overrightarrow{PQ} \perp \overrightarrow{OA}$，求线段 $PQ$ 的长度。
+    \end{itemize}
+\end{example}
+
+\vspace{4em}
+
+\subsection{圆的弦长公式}
+\begin{theorem}[弦长公式的应用]
+    \begin{minipage}{0.45\textwidth}
+        弦长公式是计算圆内任意弦长的重要工具：
+        \begin{align*}
+            L & = 2\sqrt{r^2-d^2}
+        \end{align*}
+        其中：
+        \begin{itemize}
+            \item $L$ 表示弦长
+            \item $r$ 是圆的半径
+            \item $d$ 是圆心到弦的距离
+        \end{itemize}
+
+        由此可知：
+        \begin{itemize}
+            \item 当 $d=0$ 时，弦长取最大值 $2r$（直径）
+            \item 当 $d$ 增大时，弦长减小
+            \item 当 $d=r$ 时，弦长为 $0$（圆上一点）
+        \end{itemize}
+    \end{minipage}
+    \begin{minipage}{0.5\textwidth}
+        \begin{tikzpicture}[scale=1.5]
+            % Draw circle
+            \draw (0,0) circle (1.5);
+
+            % Draw chord
+            \draw[thick, blue] (-1.3,-0.7) -- (1.3,-0.7);
+
+            % Draw radius and d line
+            \draw[thick, red] (0,0) -- (0,-0.7);
+
+            % Draw r line
+            \draw[dashed] (0,0) -- (1.3,-0.7);
+
+            % Labels
+            \node at (-0.2,-0.3) {$d$};
+            \node at (0,0.2) {$O$};
+            \node at (0.8,-0.3) {$r$};
+            \node at (0,-0.9) {$H$};
+            \node at (-1.5,-0.7) {$A$};
+            \node at (1.5,-0.7) {$B$};
+            \node at (0,-1.8) {$L = |AB| = 2\sqrt{r^2-d^2}$};
+        \end{tikzpicture}
+    \end{minipage}
+\end{theorem}
+\begin{example}
+    直线 $y=k x+3$ 被圆 $(x-2)^2+(y-3)^2=4$ 截得的弦长为 $2 \sqrt{3}$ ，则直线的倾斜角可能为（ \hspace{2em} ）
+    \begin{tasks}(4)
+        \task $\frac{5 \pi}{6}$
+        \task $\frac{\pi}{3}$
+        \task $\frac{2 \pi}{3}$
+        \task $\frac{\pi}{6}$
+    \end{tasks}
+\end{example}
+
+\vspace{4em}
+
+\begin{theorem}[弦长的取值范围]
+    要分情况讨论：
+    \begin{itemize}
+        \item 若过一个在圆内的点：$[2\sqrt{R^2-d^2}, 2R]$，此时与圆心的连线垂直。
+        \item 若过一个在圆上的点：$[0, 2r]$，直径时是最长的。
+    \end{itemize}
+\end{theorem}
+
+\begin{example}
+    直线 $m x-y+1-m=0$ 与圆 $x^2+y^2=4$ 相交，则弦长可能为（ \hspace{2em} ）
+    \begin{tasks}(4)
+        \task $2$
+        \task $3$
+        \task $\sqrt{10}$
+        \task $5$
+    \end{tasks}
+\end{example}
+
+\vspace{4em}
+
+\begin{theorem}[圆的切线长度]
+    设点 $P$ 到圆心 $O$ 的距离为 $d$，圆的半径为 $r$，则过点 $P$ 的切线长度为 $L = \sqrt{d^2 - r^2}$（当 $d > r$ 时）。
+\end{theorem}
+
+\begin{example}
+    已知动点 $M, N$ 分别在圆 $C_1:(x-1)^2+(y-2)^2=1$ 和 $C_2:(x-3)^2+(y-4)^2=3$ 上，动点 $P$ 在 $x$ 轴上，则（ \hspace{2em} ）
+    \begin{itemize}
+        \item  圆 $C_2$ 的半径为 3
+        \item  圆 $C_1$ 和圆 $C_2$ 相离
+        \item  $|P M|+|P N|$ 的最小值为 $2 \sqrt{10}$
+        \item  过点 $P$ 做圆 $C_1$ 的切线，则切线长最短为 $\sqrt{3}$
+    \end{itemize}
+\end{example}
+
+\vspace{4em}
+
+\subsection*{练习题}
+
+\begin{example}
+    已知 $C: x^2+y^2-6 x=0$ ，则下述正确的是（ \hspace{2em} ）
+    \begin{itemize}
+        \item 圆 $C$ 的半径 $r=3$
+        \item 点 $(1,2 \sqrt{2})$ 在圆 $C$ 的内部
+        \item 圆 $C$ 与圆 $x^2+y^2+2 x+4 y-6=0$ 的公共弦所在直线方程为 $4 x+2 y-3=0$
+        \item 圆 $C':(x+1)^2+y^2=4$ 与圆 $C$ 相交
+    \end{itemize}
+\end{example}
+
+\vspace{4em}
+
+\subsection{弦长公式与韦达定理}
+\begin{theorem}[弦长公式与韦达定理]
+    联立直线与圆的方程，消元后得到一元二次方程。
+    \begin{itemize}
+        \item 利用弦长公式 $|MN| = \sqrt{1+k^2}|x_M-x_N|$ 以及韦达定理计算 $|MN|$。
+        \item 利用韦达定理和向量点积坐标公式 $\overrightarrow{OM} \cdot \overrightarrow{ON} = x_M x_N + y_M y_N$ 计算点积。
+    \end{itemize}
+\end{theorem}
+\begin{example}
+    $y=x+4$ 与 $C:(x-1)^2+(y-3)^2=8$ 交于 $M, ~ N$，$O$ 为原点，则 $|M N|=$ \underline{\qquad} , $\overrightarrow{O M} \cdot \overrightarrow{O N}=$ \underline{\qquad}
+\end{example}
+
+\vspace{4em}
+
+\begin{example}
+    圆 $C$ 过 $(0,3) 、(4,5)$ 两点，且圆心 $C$ 在直线 $x-y+8=0$ 上．
+    \begin{itemize}
+        \item[（1）] 求圆 $C$ 的方程；
+        \item[（2）] 若直线 $l$ 在 $x$ 轴上的截距是 $y$ 轴上的截距的 2 倍，且被圆 $C$ 截得的弦长为 6 ，求直线 $l$ 的方程。
+    \end{itemize}
+\end{example}
+
+\vspace{4em}
+
+\begin{example}
+    已知圆 $C$ 经过 $P(4,-2), Q(-1,3)$ 两点，且圆心 $C$ 在直线 $x+y-1=0$ 上．
+    \begin{itemize}
+        \item[（1）] 求圆 $C$ 的方程；
+        \item[（2）] 若直线 $l: y=-x+m$ 与圆 $C$ 交于点 $A, B$ ，且以线段 $A B$ 为直径的圆经过坐标原点，求直线 $l$ 的方程．
+    \end{itemize}
+\end{example}
+
+\vspace{4em}
+
+\subsection{解答题}
+\begin{theorem}[垂径定理与韦达定理]
+    \begin{itemize}
+        \item[(1)] 弦的中点 $M$、圆心 $C$、原点 $O$ 构成的直线 $CM$ 与弦 $PQ$ 垂直。利用两直线垂直斜率之积为 $-1$ 的关系，可以求出中点 $M$ 的坐标。
+        \item[(2)] 条件 $OP \perp OQ$ 意味着 $\overrightarrow{OP} \cdot \overrightarrow{OQ} = 0$。设 $P(x_1, y_1), Q(x_2, y_2)$，则 $x_1x_2 + y_1y_2 = 0$。联立直线与圆的方程，利用韦达定理建立关于参数 $m$ 的方程求解。
+    \end{itemize}
+\end{theorem}
+\begin{example}
+    设 $O$ 是坐标原点，直线 $x+2 y-3=0$ 与圆 $C: x^2+y^2+x-6 y+m=0$ 交于 $P, Q$ 两点．
+    \begin{itemize}
+        \item[（1）] 求线段 $P Q$ 中点 $M$ 的坐标；
+        \item[（2）] 若 $O P \perp O Q$ ，求该圆的面积．
+    \end{itemize}
+\end{example}
+
+\vspace{4em}
+
+\begin{example}
+    已知斜率为 $k\left(k \neq-\frac{1}{2}\right)$ 的直线 $l$ 过点 $B(-2,0)$ ，圆 $A:(x+1)^2+(y-2)^2=20$ 与 $l$ 交于 $M, N$ 两点，线段 $M N$ 中点是 $Q$
+    \begin{itemize}
+        \item[（1）] 若 $k=1$ ，求 $Q$ 坐标
+        \item[（2）] 若直线 $l_1: x+2 y+7=0$ 与直线 $l$ 交点是 $P$ ，那么 $\overrightarrow{B P} \cdot \overrightarrow{B Q}$ 是否为定值？如果是，求出定值；如果不是，说明理由．
+    \end{itemize}
+\end{example}
+
+\vspace{4em}
+
+
+
+\begin{theorem}[斜率与半角公式]
+    设已知直线的倾斜角为 $\alpha$，斜率为 $k_1$，则 $k_1=\tan\alpha$。所求直线的倾斜角为 $\beta = \alpha/2$，斜率为 $k_2 = \tan\beta$。利用正切的半角公式 $\tan\alpha = \frac{2\tan(\alpha/2)}{1-\tan^2(\alpha/2)}$ 建立关于 $k_2$ 的方程并求解，然后写出直线方程。
+\end{theorem}
+\begin{example}
+    若直线过点 $(-2,3)$ ，且倾斜角是直线 $3 x+4 y-5=0$ 的倾斜角的一半，则直线 l 的方程为 $\qquad$
+\end{example}
+
+\vspace{4em}
+
+\subsection{填空题}
+\begin{theorem}[斜率的几何意义]
+    直线 $l$ 过定点 $P$ 并与线段 $AB$ 相交，则直线 $l$ 的斜率范围由 $k_{PA}$ 和 $k_{PB}$ 决定。倾斜角的范围需要根据斜率的正负和单调性进行讨论，注意倾斜角的取值范围是 $[0, \pi)$。
+\end{theorem}
+\begin{example}
+    已知点 $A(-1,3), B(3,2)$ ，过点 $P\left(\frac{3}{2}, \frac{1}{2}\right)$ 的直线 $l$ 与线段 $A B$ 相交，则直线 $l$ 的倾斜角的取值范围为 $\qquad$ ，直线 $l$ 的斜率的取值范围为 $\qquad$ ．
+\end{example}
+
+\vspace{4em}
+
+% \subsection{解答题}
+% \begin{theorem}[直线系与参数范围]
+%     \begin{itemize}
+%         \item[（1）] 将直线方程整理为关于参数 $a$ 的形式 $a(2x-y) + (-3x+y+1) = 0$，令系数同时为零，解方程组即可求得定点坐标。
+%         \item[（2）] 直线不经过第二象限，意味着其斜率 $k \ge 0$ 且其 $y$ 轴截距 $b \le 0$（或斜率不存在时，$x$ 截距大于等于0）。通过分析斜率和截距与 $a$ 的关系来求解 $a$ 的范围。
+%         \item[（3）] 写出两截距关于参数 $a$ 的表达式，进而写出面积的表达式，利用基本不等式求其最小值。
+%     \end{itemize}
+% \end{theorem}
+% \begin{example}
+%     已知直线 $l:(a-1) y=(2 a-3) x+1$ ．
+%     \begin{itemize}
+%         \item[（1）] 求证：直线 $l$ 过定点；
+%         \item[（2）] 若直线 $l$ 不经过第二象限，求实数 $a$ 的取值范围；
+%         \item[（3）] 若直线 $l$ 与两坐标轴的正半轴围成的三角形面积最小，求 $l$ 的方程．
+%     \end{itemize}
+% \end{example}
+
+% \vspace{4em}
+
+% \subsection{解答题}
+% \begin{theorem}[直线系与最值问题]
+%     \begin{itemize}
+%         \item[（1）] 将方程整理为 $a(x-2) + (x+y-5)=0$ 的形式，解方程组 $\begin{cases} x-2=0 \\ x+y-5=0 \end{cases}$ 即可找到定点。
+%         \item[（2）] 用参数 $a$ 表示出两截距，进而表示出三角形面积 $S$。利用换元法和基本不等式求 $S$ 的最小值。
+%         \item[（3）] 将两截距的表达式设为正整数，通过分析表达式的结构和 $a$ 为正整数的条件，求解不定方程。
+%     \end{itemize}
+% \end{theorem}
+% \begin{example}
+%     设直线 $l$ 的方程为 $(a+1) x+y-5-2 a=0(a \in \mathrm{R})$ ．
+%     \begin{itemize}
+%         \item[（1）] 求证：不论 $a$ 为何值，直线必过一定点 $P$ ；
+%         \item[（2）] 若直线 $l$ 分别与 $x$ 轴正半轴，$y$ 轴正半轴交于点 $A\left(x_A, 0\right), B\left(0, y_B\right)$ ，当 $\Delta A O B$ 面积最小时，求此时的直线方程；
+%         \item[（3）] 当直线 $l$ 在两坐标轴上的截距均为正整数且 $a$ 也为正整数时，求直线 $l$ 的方程．
+%     \end{itemize}
+% \end{example}
+
+% \vspace{4em}
+
+% % =============================================
+% % 第三批题目 (来自图片)
+% % =============================================
+
+% \subsection{解答题}
+% \begin{theorem}[线段垂直平分线与点到直线距离]
+%     \begin{itemize}
+%         \item[(1)] 线段的垂直平分线满足两个条件：过线段中点，且与线段所在直线垂直。
+%         \item[(2)] 一条直线与两相异定点 $A, B$ 的距离相等，意味着该直线或者平行于直线 $AB$，或者经过线段 $AB$ 的中点。
+%     \end{itemize}
+% \end{theorem}
+% \begin{example}
+%     已知点 $A(1,3), B(5,7)$．
+%     \begin{itemize}
+%         \item[(1)] 求线段 $AB$ 垂直平分线所在直线的方程；
+%         \item[(2)] 若直线 $l$ 过 $(-1,0)$，且点 $A、B$ 到直线 $l$ 的距离相等，求直线 $l$ 的方程．
+%     \end{itemize}
+% \end{example}
+
+% \vspace{4em}
+
+% \subsection{解答题}
+% \begin{theorem}[直线系与圆的综合应用]
+%     \begin{itemize}
+%         \item[(1)] 首先将含参的直线方程整理为 $m(x+2y-5) + (-x+3) = 0$ 的形式，求出其恒过的定点。然后判断该定点与圆的位置关系，若定点在圆内，则直线与圆恒相交。
+%         \item[(2)] 过圆内一定点的所有弦中，最短的弦是与过该定点的直径垂直的弦。此时，圆心到弦的距离最大，等于圆心与该定点之间的距离。利用弦长公式 $L=2\sqrt{r^2-d^2}$ 即可求出最短弦长。
+%     \end{itemize}
+% \end{theorem}
+% \begin{example}
+%     已知直线 $l: (m-1)x + 2my - 5m + 3 = 0, m \in \mathrm{R}$ 和圆 $C: (x-2)^2 + (y-1)^2 = 4$．
+%     \begin{itemize}
+%         \item[(1)] 证明：圆 $C$ 与直线 $l$ 恒相交；
+%         \item[(2)] 求直线 $l$ 被圆 $C$ 截得的弦长的最小值．
+%     \end{itemize}
+% \end{example}
+
+% \v{4em}
+
+% \subsection{选择题}
+% \begin{theorem}[抛物线定义与圆的切线长]
+%     利用圆的切线长公式 $l^2 = |PC|^2 - r^2$ 建立方程，其中 $P$ 为切点，$C$ 为圆心。将点 $P$ 的坐标代入，并结合点 $P$ 在抛物线上满足的方程 $y^2=2px$，解出点 $P$ 的横坐标。最后根据抛物线的定义，点 $P$ 到准线的距离等于 $x_P + p/2$。
+% \end{theorem}
+
+% \begin{example}
+%     已知点 $P$ 在抛物线 $M: y^2=8 x$ 上，过点 $P$ 作圆 $C:(x-4)^2+y^2=1$ 的切线，若切线长为 $2 \sqrt{6}$ ，则点 $P$ 到 $M$ 的准线的距离为（\quad）
+%     \begin{tasks}(4)
+%         \task $5$
+%         \task $6$
+%         \task $7$
+%         \task $4 \sqrt{2}$
+%     \end{tasks}
+% \end{example}
+
+% \vspace{4em}
+
+% \subsection{选择题}
+% \begin{theorem}[圆的切线性质与向量点积]
+%     由圆的切线性质可知，$PM \perp MC$，其中 $C$ 为圆心，$M$ 为切点。因此 $\triangle PMC$ 是直角三角形。利用向量点积的几何意义，$\overrightarrow{PM} \cdot \overrightarrow{PC} = |\overrightarrow{PM}||\overrightarrow{PC}|\cos\angle MPC = |\overrightarrow{PM}|^2$。问题转化为求 $|PM|^2$ 的最小值。根据切线长公式 $|PM|^2=|PC|^2-r^2$，求 $|PM|$ 的最小值等价于求动点 $P$ 到圆心 $C$ 的距离 $|PC|$ 的最小值。
+% \end{theorem}
+
+% \begin{example}
+%     在平面直角坐标系 $x O y$ 中，已知圆 $C:(x-1)^2+y^2=4, ~ P$ 为直线 $l: x+y+3=0$ 上的一个动点，过点 $P$ 作圆 $C$ 的切线 $P M$ ，切点为点 $M$ ，当 $|P M|$ 最小时，则 $\overrightarrow{P M} \cdot \overrightarrow{P C}$ 的值为（\quad）
+%     \begin{tasks}(4)
+%         \task $4$
+%         \task $\sqrt{2}$
+%         \task $2$
+%         \task $3$
+%     \end{tasks}
+% \end{example}
+
+% \vspace{4em}
+
+% \subsection{多选题}
+% \begin{theorem}[圆与圆的位置关系及最值问题]
+%     A. 由圆的标准方程 $(x-a)^2+(y-b)^2=r^2$ 直接读出半径。B. 比较圆心距与两半径之和、差判断位置关系。C. $|PM|+|PN|$ 的最小值模型，通常利用轴对称转化为两定点间距离问题，再减去相应半径。D. 过点 $P$ 的切线长公式为 $l^2 = |PC|^2 - r^2$，其最小值取决于 $|PC|$ 的最小值。
+% \end{theorem}
+% \begin{example}
+%     已知动点 $M, N$ 分别在圆 $C_1:(x-1)^2+(y-2)^2=1$ 和 $C_2:(x-3)^2+(y-4)^2=3$ 上，动点 $P$ 在 $x$ 轴上，则（\quad）
+%     \begin{itemize}
+%         \item 圆 $C_2$ 的半径为 3
+%         \item 圆 $C_1$ 和圆 $C_2$ 相离
+%         \item $|P M|+|P N|$ 的最小值为 $2 \sqrt{10}$
+%         \item 过点 $P$ 做圆 $C_1$ 的切线，则切线长最短为 $\sqrt{3}$
+%     \end{itemize}
+% \end{example}
+
+% \vspace{4em}
+
+% \subsection{多选题}
+% \begin{theorem}[直线系与圆的综合应用]
+%     A. 将直线方程整理为关于参数 $m$ 的形式，解出与 $m$ 无关的定点坐标。B. 令 $x=0$ 求圆与 $y$ 轴的交点，计算弦长。C. 判断定点与圆的位置关系，若定点在圆内，则直线与圆恒相交。D. 过圆内定点的最短弦为与定点和圆心连线垂直的弦。
+% \end{theorem}
+% \begin{example}
+%     已知圆 $C:(x-1)^2+(y-2)^2=25$ ，直线 $l:(2 m+1) x+(m+1) y-7 m-4=0$ ．则下列命题正确的有（\quad）
+%     \begin{itemize}
+%         \item 直线 $l$ 恒过定点 $(3,1)$
+%         \item 圆 $C$ 被 $y$ 轴截得的弦长为 $2 \sqrt{6}$
+%         \item 直线 $l$ 与圆 $C$ 恒相交
+%         \item 直线 $l$ 被圆 $C$ 截得弦长最短时，直线 $l$ 的方程为 $2 x-y-5=0$
+%     \end{itemize}
+% \end{example}
+
+% \vspace{4em}
+
+% \subsection{填空题}
+% \begin{theorem}[点到圆的距离与几何意义]
+%     表达式 $x^2+y^2$ 的几何意义是圆上点 $P(x,y)$ 到坐标原点 $O(0,0)$ 距离的平方。其最大（小）值等于（圆心到原点的距离与半径的和（差））的平方。
+% \end{theorem}
+% \begin{example}
+%     若点 $P(x, y)$ 是圆 $x^2+y^2-2 x+4 y+1=0$ 上任意一点，则 $x^2+y^2$ 的最大值是 $\qquad$ ．
+% \end{example}
+
+% \vspace{4em}
+
+% \subsection{解答题}
+% \begin{theorem}[点到圆的距离最值]
+%     求解表达式 $(x-a)^2+(y-b)^2$ 的最值，可以将其看作圆上动点 $P(x,y)$ 到定点 $A(a,b)$ 距离的平方。其最大值为 $(|AC|+r)^2$，最小值为 $(|AC|-r)^2$，其中 $C$ 是圆心，$r$ 是半径。
+% \end{theorem}
+% \begin{example}
+%     已知点 $P(x, y)$ 在圆 $C_1: x^2+(y-1)^2=1$ 上运动．求 $(x-2)^2+y^2$ 的最大值与最小值．
+% \end{example}
