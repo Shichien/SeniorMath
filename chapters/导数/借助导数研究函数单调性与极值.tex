@@ -1,0 +1,44 @@
+\section{借助导数研究函数单调性与极值}
+
+\subsection{利用导数证明不等式}
+
+\begin{theorem}[利用导数证明不等式]
+    构造新函数，利用单调性和最值来证明不等式恒成立。
+\end{theorem}
+\begin{example}
+    已知函数 $f(x) = \mathrm{e}^{x - 1} - 2x - 1$，其导函数为 $f'(x)$.
+    \begin{enumerate}
+        \item[(1)] 求 $f(x)$ 的单调区间；
+        \item[(2)] 证明：$xf'(x) + x - \ln x \geq 0$.
+    \end{enumerate}
+\end{example}
+
+\v{8em}
+
+\subsection{含参讨论单调性}
+
+\begin{theorem}[含参讨论单调性]
+    \begin{itemize}
+        \item 如果有 $lnx$, 一般将求导结果通分后只考虑分子的讨论（很可能是一个二次函数）
+        \item 如果含有 $e^x$，很可能需要配凑因式分解再讨论。
+    \end{itemize}
+\end{theorem}
+
+\v{8em}
+
+\subsection{含参恒成立问题}
+
+\begin{theorem}[含参恒成立问题]
+    \begin{itemize}
+        \item \textbf{带着参数求最值}: 通常转化为求函数的最值问题。求出 $f(x)$ 的最小值，使其大于等于0，从而解出参数 $a$ 的范围。
+        \item \textbf{参变分离求值域}: 通过固定参数 $a$，研究 $f(x)$ 的值域，进而确定 $a$ 的取值范围。
+    \end{itemize}
+\end{theorem}
+\begin{example}
+    已知函数 $f(x) = ax\ln x - 2x + a, a \in \mathbb{R}$.
+    \begin{enumerate}
+        \item[(1)] 若 $a = 1$，求曲线 $y = f(x)$ 在点 $(1, -1)$ 处的切线方程；
+        \item[(2)] 若 $a > 0$，$f(x) \geq 0$ 恒成立，求 $a$ 的取值范围.
+    \end{enumerate}
+\end{example}
+

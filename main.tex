@@ -1,10 +1,7 @@
 \special{dvipdfmx:config z 3}
 \documentclass[lang=cn,10pt,color=cyan,titlestyle=hang,device=normal]{elegantbook}
-\usepackage[svgnames]{xcolor}
-\usepackage{pgfplots}
-\usepackage{booktabs} % 用于绘制更美观的表格线
-
 \input{additional.tex}
+
 \setcounter{tocdepth}{3}
 \title{高中数学总复习讲义}
 \author{Shichien}
@@ -14,183 +11,130 @@
 \extrainfo{Mathematics emphasizes rigor. - 数学讲究严谨.}
 \cover{acloudyskye.jpg}
 
-\newcommand{\h}{\hspace}
-\renewcommand{\v}{\vspace}
-
-\usepackage{tcolorbox}
-\usepackage{fontspec}
-\usepackage{fontawesome5}
-
-\definecolor{warningRed}{RGB}{217, 83, 79}
-\definecolor{warningRedBack}{RGB}{242, 222, 222}
-
-\newtcolorbox{warning}{
-    enhanced,
-    shadow={0.8mm}{-0.8mm}{0mm}{black!20!white},
-    breakable, % 允许内容跨页
-    colback=warningRedBack, % 背景颜色
-    colframe=warningRed,    % 边框颜色
-    boxrule=0.5pt,          % 边框线宽
-    leftrule=2pt,           % 左侧竖线的宽度 (比边框粗，更明显)
-    top=2pt,
-    bottom=1.8pt,
-    right=5em,
-    fontupper=\fontsize{9.5pt}{13pt}\selectfont\kaishu,
-    fonttitle=\small\bfseries,
-    title={
-        \faExclamationTriangle[regular]
-        \hspace{1.5pt}
-        \textbf{Warning}
-    },
-    coltitle=white,
-    attach boxed title to top right={xshift=0pt, yshift=-18.3pt},
-    boxed title style={
-        colback=warningRed,
-        boxrule=0.3pt,
-    }
-}
-
-\definecolor{tipBlue}{RGB}{91, 192, 222}
-\definecolor{tipBlueBack}{RGB}{217, 237, 247}
-
-\newtcolorbox{tips}{
-    enhanced,
-    shadow={0.8mm}{-0.8mm}{0mm}{black!20!white},
-    breakable,
-    colback=tipBlueBack,    % 背景颜色
-    colframe=tipBlue,       % 边框颜色
-    boxrule=0.5pt,          % 边框线宽
-    leftrule=2pt,           % 左侧竖线的宽度
-    top=2pt,
-    bottom=1.8pt,
-    right=5em,
-    fontupper=\fontsize{9.5pt}{13pt}\selectfont\kaishu, % 内容字体: {大小}{衬线}
-    fonttitle=\small\bfseries,
-    title={
-        \faLightbulb[regular]
-        \hspace{1.5pt}
-        \textbf{Tips}
-    },
-    coltitle=white,
-    attach boxed title to top right={xshift=0pt, yshift=-18.3pt},
-    % attach boxed title to top left={xshift=10pt, yshift=-10pt},
-    boxed title style={
-        colback=tipBlue,
-        boxrule=0.3pt,
-    }
-}
-
 \begin{document}
 % \maketitle
 % \frontmatter
 % \tableofcontents
 % \mainmatter
 
+% \chapter{初高衔接}
+% \input{chapters/初高衔接/一次函数与二次函数.tex}
+% \input{chapters/初高衔接/一元二次不等式.tex}
+% \input{chapters/初高衔接/数轴穿根法.tex}
+
 % \chapter{集合}
-% \input{chapters/set/集合的基本概念.tex}
-% \input{chapters/set/韦恩图.tex}
+% \input{chapters/集合/集合的基本概念.tex}
+% \input{chapters/集合/韦恩图.tex}
 
 % \chapter{命题逻辑}
-% \input{chapters/logic/命题逻辑.tex}
-% \input{chapters/logic/命题的逆否.tex}
-% \input{chapters/logic/充分必要条件.tex}
-% \input{chapters/logic/逻辑量词.tex}
+% \input{chapters/逻辑/命题逻辑.tex}
+% \input{chapters/逻辑/命题的逆否.tex}
+% \input{chapters/逻辑/充分必要条件.tex}
+% \input{chapters/逻辑/逻辑量词.tex}
 
 % \chapter{不等式}
-% \input{chapters/inequality/不等式的定义.tex}
-% \input{chapters/inequality/基本不等式.tex}
-% \input{chapters/inequality/柯西不等式.tex}
-% \input{chapters/inequality/绝对值不等式.tex}
-% \input{chapters/inequality/不等式证明.tex}
-% \input{chapters/inequality/有理不等式.tex}
-% \input{chapters/inequality/无理不等式.tex}
+% \input{chapters/不等式/不等式的定义.tex}
+% \input{chapters/不等式/基本不等式.tex}
+% \input{chapters/不等式/柯西不等式.tex}
+% \input{chapters/不等式/绝对值不等式.tex}
+% \input{chapters/不等式/不等式证明.tex}
+% \input{chapters/不等式/有理不等式.tex}
+% \input{chapters/不等式/无理不等式.tex}
 
 % \chapter{函数}
-% \input{chapters/function/抽象函数.tex}
-% \input{chapters/function/函数概念.tex}
-% \input{chapters/function/基本函数图像.tex}
-% \input{chapters/function/幂指对函数.tex}
-% \input{chapters/function/值域.tex}
+% \input{chapters/函数/抽象函数.tex}
+% \input{chapters/函数/函数概念.tex}
+% \input{chapters/函数/基本函数图像.tex}
+% \input{chapters/函数/幂指对函数.tex}
+% \input{chapters/函数/值域.tex}
 
 % \chapter{三角函数}
-% \input{chapters/trifun/三角函数线.tex}
-% \input{chapters/trifun/正弦函数.tex}
-% \input{chapters/trifun/余弦函数.tex}
-% \input{chapters/trifun/正切函数.tex}
-% \input{chapters/trifun/Asin(wx+p)+B.tex}
+% \input{chapters/三角函数/三角函数线.tex}
+% \input{chapters/三角函数/正弦函数.tex}
+% \input{chapters/三角函数/余弦函数.tex}
+% \input{chapters/三角函数/正切函数.tex}
+% \input{chapters/三角函数/Asin(wx+p)+B.tex}
 
 % \chapter{解三角形}
-% \input{chapters/triangle/正弦定理.tex}
-% \input{chapters/triangle/余弦定理.tex}
-% \input{chapters/triangle/边角互化.tex}
-% \input{chapters/triangle/对边对角模型.tex}
+% \input{chapters/解三角形/正弦定理.tex}
+% \input{chapters/解三角形/余弦定理.tex}
+% \input{chapters/解三角形/边角互化.tex}
+% \input{chapters/解三角形/对边对角模型.tex}
 
 % \chapter{向量}
-% \input{chapters/vector/平面向量的定义.tex}
-% \input{chapters/vector/极化恒等式.tex}
-% \input{chapters/vector/投影.tex}
+% \input{chapters/向量/平面向量的定义.tex}
+% \input{chapters/向量/极化恒等式.tex}
+% \input{chapters/向量/投影.tex}
 
 % \chapter{立体几何}
-% \input{chapters/solid-geometry/外接球.tex}
-% \input{chapters/solid-geometry/立体几何的几何法证明.tex}
-% \input{chapters/solid-geometry/建系法求角.tex}
-% \input{chapters/solid-geometry/建系法求空间距离.tex}
-% \input{chapters/solid-geometry/建系法探究空间关系.tex}
+% \input{chapters/立体几何/外接球.tex}
+% \input{chapters/立体几何/立体几何的几何法证明.tex}
+% \input{chapters/立体几何/建系法求角.tex}
+% \input{chapters/立体几何/建系法求空间距离.tex}
+% \input{chapters/立体几何/建系法探究空间关系.tex}
 
-\chapter{直线与圆}
-\input{chapters/linear-circle/直线与圆的基本概念.tex}
-\input{chapters/linear-circle/直线相关的题型.tex}
-\input{chapters/linear-circle/圆的基本概念.tex}
-\input{chapters/linear-circle/圆的相关题型.tex}
-\input{chapters/linear-circle/直线与圆的位置关系.tex}
-\input{chapters/linear-circle/直线与圆的交点.tex}
-\input{chapters/linear-circle/直线与圆的切线.tex}
+% \chapter{直线与圆}
+% \input{chapters/直线与圆/直线与圆的基本概念.tex}
+% \input{chapters/直线与圆/直线相关的题型.tex}
+% \input{chapters/直线与圆/直线题库.tex}
+% \input{chapters/直线与圆/圆的基本概念.tex}
+% \input{chapters/直线与圆/圆的相关题型.tex}
+% \input{chapters/直线与圆/圆的题库.tex}
+% \input{chapters/直线与圆/直线与圆的位置关系.tex}
+% \input{chapters/直线与圆/直线与圆的交点.tex}
+% \input{chapters/直线与圆/直线与圆的切线.tex}
+% \input{chapters/直线与圆/直线与圆题库.tex}
+% \input{chapters/直线与圆/充分必要条件和直线与圆结合.tex}
 
-% \chapter{数列}
-% \input{chapters/sequence/数列基本定义.tex}
-% \input{chapters/sequence/数列的通项公式.tex}
-% \input{chapters/sequence/数列的单调性与有界性.tex}
-% \input{chapters/sequence/数列的求和.tex}
-% \input{chapters/sequence/数列的递推关系.tex}
+\chapter{数列}
+\input{chapters/数列/数列基本定义.tex}
+\input{chapters/数列/数列的通项公式.tex}
+\input{chapters/数列/数列的求和.tex}
+\input{chapters/数列/数列的递推关系.tex}
 
 % \chapter{椭圆}
-% \input{chapters/analytic-geometry/椭圆.tex}
-% \input{chapters/analytic-geometry/椭圆中常见的二级结论.tex}
-% \input{chapters/analytic-geometry/证明题.tex}
-% \input{chapters/analytic-geometry/三角换元在椭圆中的应用.tex}
-% \input{chapters/analytic-geometry/圆锥曲线中的大题解法.tex}
+% \input{chapters/圆锥曲线/椭圆.tex}
+% \input{chapters/圆锥曲线/椭圆中常见的二级结论.tex}
+% \input{chapters/圆锥曲线/证明题.tex}
+% \input{chapters/圆锥曲线/三角换元在椭圆中的应用.tex}
+% \input{chapters/圆锥曲线/圆锥曲线中的大题解法.tex}
 
 % \chapter{双曲线}
-% \input{chapters/analytic-geometry/双曲线.tex}
-% \input{chapters/analytic-geometry/双曲线中常见的二级结论.tex}
+% \input{chapters/圆锥曲线/双曲线.tex}
+% \input{chapters/圆锥曲线/双曲线中常见的二级结论.tex}
 
 % \chapter{抛物线}
-% \input{chapters/analytic-geometry/抛物线.tex}
+% \input{chapters/圆锥曲线/抛物线.tex}
 
 % \chapter{极点极线}
-% \input{chapters/analytic-geometry/极点极线.tex}
+% \input{chapters/圆锥曲线/极点极线.tex}
 
-\chapter{导数}
-\input{chapters/differential-coefficient/导数的基础定义.tex}
-\input{chapters/differential-coefficient/导数的几何意义.tex}
-\input{chapters/differential-coefficient/导数的计算.tex}
-\input{chapters/differential-coefficient/利用导数的几何意义求解问题.tex}
-\input{chapters/differential-coefficient/导数的应用.tex}
-\input{chapters/differential-coefficient/借助导数研究函数单调性与极值.tex}
-\input{chapters/differential-coefficient/特殊的几种函数.tex}
-\input{chapters/differential-coefficient/冲击高分的利器.tex}
+% \chapter{导数}
+% \input{chapters/导数/导数的基础定义.tex}
+% \input{chapters/导数/导数的几何意义.tex}
+% \input{chapters/导数/导数的计算.tex}
+% \input{chapters/导数/利用导数的几何意义求解问题.tex}
+% \input{chapters/导数/导数的应用.tex}
+% \input{chapters/导数/借助导数研究函数单调性与极值.tex}
+% \input{chapters/导数/特殊的几种函数.tex}
+% \input{chapters/导数/切线放缩.tex}
+% \input{chapters/导数/飘带不等式.tex}
+% \input{chapters/导数/同构函数.tex}
+% \input{chapters/导数/极值点偏移.tex}
+% \input{chapters/导数/必要性探路.tex}
+% \input{chapters/导数/双切线放缩.tex}
 
 % \chapter{概率}
-% \input{chapters/probability/概率模型.tex}
-% \input{chapters/probability/概率计算.tex}
+% \input{chapters/概率/概率模型.tex}
+% \input{chapters/概率/概率计算.tex}
 
 % \chapter{排列组合}
-% \input{chapters/arrangement-combination/排列组合基本思想.tex}
-% \input{chapters/arrangement-combination/排列组合经典方法.tex}
-% \input{chapters/arrangement-combination/二项式定理.tex}
+% \input{chapters/排列组合/排列组合基本思想.tex}
+% \input{chapters/排列组合/排列组合经典方法.tex}
+% \input{chapters/排列组合/二项式定理.tex}
 
 % \chapter{统计}
-% \input{chapters/statistics/方差.tex}
+% \input{chapters/统计/方差.tex}
 
 % \chapter{补考复习}
 % \input{chapters/补考复习/补考复习.tex}

@@ -12,6 +12,9 @@
 *.cb2
 .*.lb
 
+## Ignore idea
+.idea/
+
 ## Intermediate documents:
 *.dvi
 *.xdv

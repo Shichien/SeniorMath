@@ -1,8 +1,32 @@
 \usepackage{array}
-\usepackage{pgfplots}
-\usepackage{tikz-3dplot}
+
+% Table:
+\usepackage{booktabs} % 用于绘制更美观的表格线
+
+% Math:
 \usepackage{sansmath}
-\usetikzlibrary{shapes.geometric, arrows.meta, positioning, calc, angles, quotes, intersections}
+
+% 水印:
+% \usepackage{eso-pic}
+% \AddToShipoutPictureBG{ % 这会将内容添加到页面的背景
+%     \put(0,0){ % put 命令用于放置内容，(0,0) 是左下角
+%         \parbox{\paperwidth}{\centering % parbox 设置一个与页面同宽的盒子，并居中对齐
+%             \color[rgb]{0.9,0.9,0.9} % 设置文本颜色为浅灰色
+%             \fontsize{5cm}{5cm}\selectfont % 设置字体大小
+%             By Shichien % 这是水印文本
+%             % \rotatebox{45}{\textsf{\textbf{By Shichien}}} % 如果需要旋转水印，可以使用这个
+%         }
+%     }
+% }
+
+% Drawing
+\usepackage{pgfplots}
+\usepackage{tikz-cd}
+\usepackage{tikz-qtree}
+\usepackage{circuitikz}
+\usepackage{tikz-3dplot}
+\usepackage[svgnames]{xcolor}
+\usetikzlibrary{shapes.geometric, arrows.meta, positioning, calc, angles, quotes, intersections, tikzmark}
 
 \pgfplotsset{compat=1.18}
 \newcommand{\ccr}[1]{\makecell{{\color{#1}\rule{1cm}{1cm}}}}
@@ -17,221 +41,327 @@
     %     item-indent={1pt},before-skip={-0.7em},after-skip={-0.7em}
 }
 
-
-% Colour Palette ——————————————————————————————————————
-\definecolor{merah}{HTML}{F4564E}
-\definecolor{merahtua}{HTML}{89313E}
-\definecolor{biru}{HTML}{60BBE5}
-\definecolor{birutua}{HTML}{412F66}
-\definecolor{hijau}{HTML}{59CC78}
-\definecolor{hijautua}{HTML}{366D5B}
-\definecolor{kuning}{HTML}{FFD56B}
-\definecolor{jingga}{HTML}{FBA15F}
-\definecolor{ungu}{HTML}{8C5FBF}
-\definecolor{lavender}{HTML}{CBA5E8}
-\definecolor{merjamb}{HTML}{FFB6E0}
-\definecolor{mygray}{HTML}{E6E6E6}
-\definecolor{mygreen}{rgb}{0,0.6,0}
-\definecolor{mymauve}{rgb}{0.58,0,0.82}
-
-% Theorems ————————————————————————————————————————————
+% TColorbox 
 \usepackage{tcolorbox}
-\usepackage{changepage}
-\tcbuselibrary{skins,breakable,theorems}
+\usepackage{fontspec}
+\usepackage{fontawesome5}
 
-\makeatletter
-% 定义一个标题样式，格式为： "环境名 环境编号 (可选标题)"
-% #1=环境名, #2=可选标题, #3=编号
-\def\tcb@theo@widetitle#1#2#3{%
-    \hbox to \textwidth{\bfseries\large#1\ \normalsize#3\if\relax\detokenize{#2}\relax\else\space(#2)\fi\hfil}%
-}
-\tcbset{
-    theorem style/mywide/.style={
-            let\tcb@theo@title=\tcb@theo@widetitle
+\definecolor{warningRed}{RGB}{217, 83, 79}
+\definecolor{warningRedBack}{RGB}{242, 222, 222}
+
+\newtcolorbox{warning}{
+    enhanced,
+    shadow={0.8mm}{-0.8mm}{0mm}{black!20!white},
+    breakable, % 允许内容跨页
+    colback=warningRedBack, % 背景颜色
+    colframe=warningRed,    % 边框颜色
+    boxrule=0.5pt,          % 边框线宽
+    leftrule=2pt,           % 左侧竖线的宽度 (比边框粗，更明显)
+    top=2pt,
+    bottom=1.8pt,
+    right=5em,
+    fontupper=\fontsize{9.5pt}{13pt}\selectfont\kaishu,
+    fonttitle=\small\bfseries,
+    title={
+            \faExclamationTriangle[regular]
+            \hspace{1.5pt}
+            \textbf{Warning}
+        },
+    coltitle=white,
+    attach boxed title to top right={xshift=0pt, yshift=-18.3pt},
+    boxed title style={
+            colback=warningRed,
+            boxrule=0.3pt,
         }
 }
-\makeatother
+
+\definecolor{tipBlue}{RGB}{91, 192, 222}
+\definecolor{tipBlueBack}{RGB}{217, 237, 247}
+
+\newtcolorbox{tips}{
+    enhanced,
+    shadow={0.8mm}{-0.8mm}{0mm}{black!20!white},
+    breakable,
+    colback=tipBlueBack,    % 背景颜色
+    colframe=tipBlue,       % 边框颜色
+    boxrule=0.5pt,          % 边框线宽
+    leftrule=2pt,           % 左侧竖线的宽度
+    top=2pt,
+    bottom=1.8pt,
+    right=5em,
+    fontupper=\fontsize{9.5pt}{13pt}\selectfont\kaishu, % 内容字体: {大小}{衬线}
+    fonttitle=\small\bfseries,
+    title={
+            \faLightbulb[regular]
+            \hspace{1.5pt}
+            \textbf{Tips}
+        },
+    coltitle=white,
+    attach boxed title to top right={xshift=0pt, yshift=-18.3pt},
+    % attach boxed title to top left={xshift=10pt, yshift=-10pt},
+    boxed title style={
+            colback=tipBlue,
+            boxrule=0.3pt,
+        }
+}
+
+\newcommand{\h}{\hspace}
+\renewcommand{\v}{\vspace}
+
+% 页脚修改，加入 Shichien 的 Github 图标和链接
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyfoot[L]{%
+    \href{https://github.com/Shichien}{\faGithub\ \textit{Shichien}}
+}
+\fancyfoot[C]{\thepage} % 页脚中间（C）显示页码
+\renewcommand{\headrulewidth}{1pt} % 保留页眉分割线
+\renewcommand{\footrulewidth}{0.4pt} % 添加页脚分割线（可选）
+
+% 代码块设置
+\definecolor{lstcolorComment}{rgb}{0,0.6,0}
+\definecolor{lstcolorNumber}{HTML}{E6E6E6}
+\definecolor{lstcolorString}{rgb}{1,0.5,0}
+
+\usepackage{listings}
+\lstset{
+    backgroundcolor=\color{white},           % 背景色
+    basicstyle=\footnotesize\ttfamily,       % 代码字体和大小 (增加 ttfamily 保证等宽)
+    breakatwhitespace=false,                 % 是否只在空白处断行
+    breaklines=true,                         % 自动断行
+    keepspaces=true,                         % 保留代码中的空格，对齐代码
+    tabsize=2,                               % Tab 长度为 2 个空格
+    frame=single,                            % 单线边框
+    rulecolor=\color{black},                 % 边框颜色
+    captionpos=bl,                           % 标题位置 (bottom-left)
+    numbers=left,                            % 行号在左侧
+    numbersep=5pt,                           % 行号与代码的距离
+    numberstyle=\tiny\color{lstcolorNumber}, % 行号样式
+    stepnumber=1,                            % 行号步长
+    commentstyle=\color{lstcolorComment},    % 注释样式
+    keywordstyle=\color{blue},               % 关键字样式
+    stringstyle=\color{lstcolorString},      % 字符串样式
+    showspaces=false,                        % 不显示空格
+    showstringspaces=false,                  % 不显示字符串中的空格
+    showtabs=false,                          % 不显示 Tab
+    escapeinside={\%*}{*},                     % 允许在代码中插入 LaTeX 命令
+    extendedchars=true                       % 支持非 ASCII 字符 (对旧编码有效)
+}
+
+% % Colour Palette ——————————————————————————————————————
+% \definecolor{merah}{HTML}{F4564E}
+% \definecolor{merahtua}{HTML}{89313E}
+% \definecolor{biru}{HTML}{60BBE5}
+% \definecolor{birutua}{HTML}{412F66}
+% \definecolor{hijau}{HTML}{59CC78}
+% \definecolor{hijautua}{HTML}{366D5B}
+% \definecolor{kuning}{HTML}{FFD56B}
+% \definecolor{jingga}{HTML}{FBA15F}
+% \definecolor{ungu}{HTML}{8C5FBF}
+% \definecolor{lavender}{HTML}{CBA5E8}
+% \definecolor{merjamb}{HTML}{FFB6E0}
+% \definecolor{mygray}{HTML}{E6E6E6}
+% \definecolor{mygreen}{rgb}{0,0.6,0}
+% \definecolor{mymauve}{rgb}{0.58,0,0.82}
+
+% % Theorems ————————————————————————————————————————————
+% \usepackage{tcolorbox}
+% \usepackage{changepage}
+% \tcbuselibrary{skins,breakable,theorems}
+
+% \makeatletter
+% % 定义一个标题样式，格式为： "环境名 环境编号 (可选标题)"
+% % #1=环境名, #2=可选标题, #3=编号
+% \def\tcb@theo@widetitle#1#2#3{%
+%     \hbox to \textwidth{\bfseries\large#1\ \normalsize#3\if\relax\detokenize{#2}\relax\else\space(#2)\fi\hfil}%
+% }
+% \tcbset{
+%     theorem style/mywide/.style={
+%             let\tcb@theo@title=\tcb@theo@widetitle
+%         }
+% }
+% \makeatother
 
 
-% ===================================================================
-% 2. 环境定义
-% ===================================================================
+% % ===================================================================
+% % 2. 环境定义
+% % ===================================================================
 
-% -- 创建一个共享的计数器 --
-\newcounter{hitung}
+% % -- 创建一个共享的计数器 --
+% \newcounter{hitung}
 
-% % -- 证明 (Proof) --
-% \newtcolorbox{proof}[1][证明]{
-%     enhanced, breakable, skin=enhancedmiddle,
-%     parbox=false, boxrule=0mm,
-%     % 样式
-%     colframe=black!25,
-%     colback=black!5,
-%     leftrule=3pt,
-%     % 间距
-%     boxsep=0mm, left=3mm, right=3mm, top=2mm, bottom=2mm,
+% % % -- 证明 (Proof) --
+% % \newtcolorbox{proof}[1][证明]{
+% %     enhanced, breakable, skin=enhancedmiddle,
+% %     parbox=false, boxrule=0mm,
+% %     % 样式
+% %     colframe=black!25,
+% %     colback=black!5,
+% %     leftrule=3pt,
+% %     % 间距
+% %     boxsep=0mm, left=3mm, right=3mm, top=2mm, bottom=2mm,
+% %     before skip=8pt, after skip=8pt,
+% %     % 标题
+% %     fonttitle=\bfseries, coltitle=black,
+% %     title=#1,
+% %     % 结束时自动添加证毕符号
+% %     finish={\null\hfill$\blacksquare$},
+% % }
+
+% % -- 定义 (Definition) & 解答 (Answer) --
+% \newtcbtheorem[use counter=hitung, number within=section]{dfn}{定义}{
+%     theorem style=mywide, breakable, enhanced,
+%     arc=3.5mm, outer arc=3.5mm,
+%     boxrule=0pt, toprule=1pt, bottomrule=1pt,
+%     left=2mm, right=2mm, top=2mm, bottom=2mm,
+%     toptitle=1mm, bottomtitle=1mm,
 %     before skip=8pt, after skip=8pt,
-%     % 标题
-%     fonttitle=\bfseries, coltitle=black,
-%     title=#1,
-%     % 结束时自动添加证毕符号
-%     finish={\null\hfill$\blacksquare$},
+%     % 颜色与字体 (蓝色系)
+%     colframe=blue!75!black,
+%     colback=blue!10,
+%     coltitle=white,
+%     title style={colback=blue!75!black},
+%     fonttitle=\bfseries,
+%     coltext=blue!50!black,
+%     % 阴影
+%     shadow={1mm}{-1mm}{0mm}{gray!50},
+% }{dfn}
+
+% \newtcbtheorem[use counter=hitung, number within=section]{ans}{解答}{
+%     % 样式与“定义”环境完全相同
+%     theorem style=mywide, breakable, enhanced,
+%     arc=3.5mm, outer arc=3.5mm,
+%     boxrule=0pt, toprule=1pt, bottomrule=1pt,
+%     left=2mm, right=2mm, top=2mm, bottom=2mm,
+%     toptitle=1mm, bottomtitle=1mm,
+%     before skip=8pt, after skip=8pt,
+%     colframe=blue!75!black, colback=blue!10, coltitle=white,
+%     title style={colback=blue!75!black}, fonttitle=\bfseries,
+%     coltext=blue!50!black, shadow={1mm}{-1mm}{0mm}{gray!50},
+% }{ans}
+
+% % -- 公理 (Axiom) & 命题 (Proposition) --
+% \newtcbtheorem[use counter=hitung, number within=section]{axm}{公理}{
+%     theorem style=mywide, breakable, enhanced,
+%     arc=3.5mm, outer arc=3.5mm,
+%     boxrule=0pt, toprule=1pt, bottomrule=1pt,
+%     left=2mm, right=2mm, top=2mm, bottom=2mm,
+%     toptitle=1mm, bottomtitle=1mm,
+%     before skip=8pt, after skip=8pt,
+%     % 颜色与字体 (绿色系)
+%     colframe=green!60!black,
+%     colback=green!10,
+%     coltitle=white,
+%     title style={colback=green!60!black},
+%     fonttitle=\bfseries,
+%     coltext=green!40!black,
+%     shadow={1mm}{-1mm}{0mm}{gray!50},
+% }{axm}
+
+% \newtcbtheorem[use counter=hitung, number within=section]{prp}{命题}{
+%     % 样式与“公理”环境完全相同
+%     theorem style=mywide,
+%     breakable,
+%     enhanced,
+%     arc=3.5mm,
+%     outer arc=3.5mm,
+%     boxrule=0pt,
+%     toprule=1pt,
+%     bottomrule=1pt,
+%     left=2mm,
+%     right=2mm,
+%     top=2mm,
+%     bottom=2mm,
+%     toptitle=1mm,
+%     bottomtitle=1mm,
+%     before skip=8pt,
+%     after skip=8pt,
+%     colframe=green!60!black,
+%     colback=green!10,
+%     coltitle=white,
+%     title style={colback=green!60!black},
+%     fonttitle=\bfseries,
+%     coltext=green!40!black,
+%     shadow={1mm}{-1mm}{0mm}{gray!50},
+% }{prp}
+
+% % -- 定理 (Theorem) --
+% \newtcbtheorem[use counter=hitung, number within=section]{thm}{定理}{
+%     theorem style=mywide,
+%     breakable,
+%     enhanced,
+%     arc=3.5mm,
+%     outer arc=3.5mm,
+%     boxrule=0pt,
+%     toprule=1pt,
+%     bottomrule=1pt,
+%     left=2mm,
+%     right=2mm,
+%     top=2mm,
+%     bottom=2mm,
+%     toptitle=1mm,
+%     bottomtitle=1mm,
+%     before skip=8pt,
+%     after skip=8pt,
+%     % 颜色与字体 (红色系)
+%     colframe=red!75!black,
+%     colback=red!10,
+%     coltitle=white,
+%     title style={colback=red!75!black},
+%     fonttitle=\bfseries,
+%     coltext=red!60!black,
+%     shadow={1mm}{-1mm}{0mm}{gray!50},
+% }{thm}
+
+% % -- 示例 (Example) --
+% \newtcolorbox[use counter=hitung, number within=section]{cth}[1][]{
+%     breakable,
+%     enhanced,
+%     % 颜色 (橙色系)
+%     colback=orange!15,
+%     colframe=orange!80!black,
+%     coltitle=white,
+%     colbacktitle=orange!80!black,
+%     coltext=black!75,
+%     fonttitle=\bfseries,
+%     before skip=8pt,
+%     after skip=8pt,
+%     attach boxed title to top left={yshift=-2mm},
+%     title={示例 \thetcbcounter\ifdefempty{#1}{}{ (#1)}},
 % }
 
-% -- 定义 (Definition) & 解答 (Answer) --
-\newtcbtheorem[use counter=hitung, number within=section]{dfn}{定义}{
-    theorem style=mywide, breakable, enhanced,
-    arc=3.5mm, outer arc=3.5mm,
-    boxrule=0pt, toprule=1pt, bottomrule=1pt,
-    left=2mm, right=2mm, top=2mm, bottom=2mm,
-    toptitle=1mm, bottomtitle=1mm,
-    before skip=8pt, after skip=8pt,
-    % 颜色与字体 (蓝色系)
-    colframe=blue!75!black,
-    colback=blue!10,
-    coltitle=white,
-    title style={colback=blue!75!black},
-    fonttitle=\bfseries,
-    coltext=blue!50!black,
-    % 阴影
-    shadow={1mm}{-1mm}{0mm}{gray!50},
-}{dfn}
+% % -- 注释 (Note) --
+% \newtcolorbox{ctt}[1][]{
+%     enhanced,
+%     breakable,
+%     % 关键样式：左侧竖线 (黄色系)
+%     borderline west={3pt}{0pt}{yellow!80!black},
+%     left=5mm,
+%     colback=yellow!20,
+%     colframe=yellow!20,
+%     coltext=yellow!70!black,
+%     coltitle=yellow!60!black,
+%     fonttitle=\bfseries\scshape,
+%     before skip=8pt,
+%     after skip=8pt,
+%     title=注释\ifdefempty{#1}{}{ (#1)},
+% }
 
-\newtcbtheorem[use counter=hitung, number within=section]{ans}{解答}{
-    % 样式与“定义”环境完全相同
-    theorem style=mywide, breakable, enhanced,
-    arc=3.5mm, outer arc=3.5mm,
-    boxrule=0pt, toprule=1pt, bottomrule=1pt,
-    left=2mm, right=2mm, top=2mm, bottom=2mm,
-    toptitle=1mm, bottomtitle=1mm,
-    before skip=8pt, after skip=8pt,
-    colframe=blue!75!black, colback=blue!10, coltitle=white,
-    title style={colback=blue!75!black}, fonttitle=\bfseries,
-    coltext=blue!50!black, shadow={1mm}{-1mm}{0mm}{gray!50},
-}{ans}
-
-% -- 公理 (Axiom) & 命题 (Proposition) --
-\newtcbtheorem[use counter=hitung, number within=section]{axm}{公理}{
-    theorem style=mywide, breakable, enhanced,
-    arc=3.5mm, outer arc=3.5mm,
-    boxrule=0pt, toprule=1pt, bottomrule=1pt,
-    left=2mm, right=2mm, top=2mm, bottom=2mm,
-    toptitle=1mm, bottomtitle=1mm,
-    before skip=8pt, after skip=8pt,
-    % 颜色与字体 (绿色系)
-    colframe=green!60!black,
-    colback=green!10,
-    coltitle=white,
-    title style={colback=green!60!black},
-    fonttitle=\bfseries,
-    coltext=green!40!black,
-    shadow={1mm}{-1mm}{0mm}{gray!50},
-}{axm}
-
-\newtcbtheorem[use counter=hitung, number within=section]{prp}{命题}{
-    % 样式与“公理”环境完全相同
-    theorem style=mywide,
-    breakable,
-    enhanced,
-    arc=3.5mm,
-    outer arc=3.5mm,
-    boxrule=0pt,
-    toprule=1pt,
-    bottomrule=1pt,
-    left=2mm,
-    right=2mm,
-    top=2mm,
-    bottom=2mm,
-    toptitle=1mm,
-    bottomtitle=1mm,
-    before skip=8pt,
-    after skip=8pt,
-    colframe=green!60!black,
-    colback=green!10,
-    coltitle=white,
-    title style={colback=green!60!black},
-    fonttitle=\bfseries,
-    coltext=green!40!black,
-    shadow={1mm}{-1mm}{0mm}{gray!50},
-}{prp}
-
-% -- 定理 (Theorem) --
-\newtcbtheorem[use counter=hitung, number within=section]{thm}{定理}{
-    theorem style=mywide,
-    breakable,
-    enhanced,
-    arc=3.5mm,
-    outer arc=3.5mm,
-    boxrule=0pt,
-    toprule=1pt,
-    bottomrule=1pt,
-    left=2mm,
-    right=2mm,
-    top=2mm,
-    bottom=2mm,
-    toptitle=1mm,
-    bottomtitle=1mm,
-    before skip=8pt,
-    after skip=8pt,
-    % 颜色与字体 (红色系)
-    colframe=red!75!black,
-    colback=red!10,
-    coltitle=white,
-    title style={colback=red!75!black},
-    fonttitle=\bfseries,
-    coltext=red!60!black,
-    shadow={1mm}{-1mm}{0mm}{gray!50},
-}{thm}
-
-% -- 示例 (Example) --
-\newtcolorbox[use counter=hitung, number within=section]{cth}[1][]{
-    breakable,
-    enhanced,
-    % 颜色 (橙色系)
-    colback=orange!15,
-    colframe=orange!80!black,
-    coltitle=white,
-    colbacktitle=orange!80!black,
-    coltext=black!75,
-    fonttitle=\bfseries,
-    before skip=8pt,
-    after skip=8pt,
-    attach boxed title to top left={yshift=-2mm},
-    title={示例 \thetcbcounter\ifdefempty{#1}{}{ (#1)}},
-}
-
-% -- 注释 (Note) --
-\newtcolorbox{ctt}[1][]{
-    enhanced,
-    breakable,
-    % 关键样式：左侧竖线 (黄色系)
-    borderline west={3pt}{0pt}{yellow!80!black},
-    left=5mm,
-    colback=yellow!20,
-    colframe=yellow!20,
-    coltext=yellow!70!black,
-    coltitle=yellow!60!black,
-    fonttitle=\bfseries\scshape,
-    before skip=8pt,
-    after skip=8pt,
-    title=注释\ifdefempty{#1}{}{ (#1)},
-}
-
-% -- 备注 (Remark) --
-\newtcolorbox{rmr}[1][]{
-    breakable,
-    enhanced,
-    % 关键样式：底部横线 (灰色系)
-    arc=0mm,
-    boxrule=0pt,
-    bottomrule=2pt,
-    colback=black!8,
-    colframe=black!60,
-    coltext=black!80,
-    fonttitle=\bfseries,
-    top=3mm,
-    bottom=3mm,
-    before skip=8pt,
-    after skip=8pt,
-    title=备注\ifdefempty{#1}{}{ (#1)},
-}
+% % -- 备注 (Remark) --
+% \newtcolorbox{rmr}[1][]{
+%     breakable,
+%     enhanced,
+%     % 关键样式：底部横线 (灰色系)
+%     arc=0mm,
+%     boxrule=0pt,
+%     bottomrule=2pt,
+%     colback=black!8,
+%     colframe=black!60,
+%     coltext=black!80,
+%     fonttitle=\bfseries,
+%     top=3mm,
+%     bottom=3mm,
+%     before skip=8pt,
+%     after skip=8pt,
+%     title=备注\ifdefempty{#1}{}{ (#1)},
+% }

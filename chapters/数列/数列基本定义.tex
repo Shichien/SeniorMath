@@ -1,0 +1,1170 @@
+\section{数列}
+
+\subsection{数列的基本概念}
+
+\begin{theorem}
+    按照一定次序排列的一列数称为数列 (Sequence).
+
+    数列中的每一个数都叫做这个数列的项 (Term)．记作 $\{a_n\}$，其中 $a_n$ 称为数列的通项。
+\end{theorem}
+
+\subsection{数列的通项公式}
+
+\begin{definition}
+    数列 $\{a_n\}$ 的通项公式是一个函数 $f(n)$，使得对于每个正整数 $n$，都有 $a_n = f(n)$。
+
+    数列实际上就是一个函数中，只取了正整数的部分，这些离散的点组合起来，称为数列。
+
+    \begin{center}
+        \begin{tikzpicture}[scale=0.9]
+            % 函数和数列的表示
+            \draw[->] (-0.5,0) -- (7,0) node[right] {$x$};
+            \draw[->] (0,-0.5) -- (0,5) node[above] {$y$};
+
+            % 连续函数曲线
+            \draw[blue, thick, domain=0.2:3, smooth] plot (\x, {0.5*\x*\x})
+            node[right] {$f(x) = \frac{x^2}{2}$};
+
+            % 数列点
+            \foreach \x in {1,2,3} {
+                    \fill[red] (\x, {0.5*\x*\x}) circle (3pt);
+                    \draw[dashed] (\x, 0) -- (\x, {0.5*\x*\x});
+                    \draw[dashed] (0, {0.5*\x*\x}) -- (\x, {0.5*\x*\x});
+                }
+
+            % 注释
+            \node[red] at (4, 3) {数列 $\{a_n\}$ 是函数在正整数上的取值};
+
+            % 标记示例点
+            \node[below] at (3, 0) {$n=3$};
+            \node[left] at (0, {0.5*3*3}) {$a_3=4.5$};
+        \end{tikzpicture}
+    \end{center}
+\end{definition}
+
+\begin{example}
+    数列 $1, \frac{1}{2}, \frac{1}{3}, \frac{1}{4}, \dots$ 的通项公式可以表示为 $a_n = \frac{1}{n}$。
+\end{example}
+
+\v{2em}
+
+\begin{problem}
+数列 $1,4,9,16,25,...$ 的通项公式如何表示？
+\end{problem}
+
+\v{2em}
+
+\subsection{数列的前 $n$ 项和}
+
+\begin{definition}
+    数列 $\{a_n\}$ 的前 $n$ 项和记作 $S_n = a_1 + a_2 + \cdots + a_n$，其中 $n$ 是正整数。
+\end{definition}
+
+\begin{theorem}
+    数列 $\{a_n\}$ 的前 $n$ 项和 $S_n$ 的通项公式可以使用 Sum 符号表示。为：$S_n = \sum_{k=1}^{n} a_k$。
+\end{theorem}
+
+\begin{problem}
+数列 $1,4,9,16,25,...$ 的前 $n$ 项和是多少？
+\end{problem}
+
+\begin{theorem}[平方和公式和立方和公式]
+    $$ 1^2 + 2^2 + 3^2 + \dots + n^2 $$
+    其求和公式为：
+    $$ \sum_{i=1}^{n} i^2 = \frac{n(n+1)(2n+1)}{6} $$
+
+    $$ 1^3 + 2^3 + 3^3 + \dots + n^3 $$
+    其求和公式为：
+    $$ \sum_{i=1}^{n} i^3 = \left[ \frac{n(n+1)}{2} \right]^2 $$
+\end{theorem}
+
+\subsection{$S_n$ 与 $a_n$ 的关系}
+
+\begin{theorem}
+    对于任意数列 $\{a_n\}$，其前 $n$ 项和为 $S_n = a_1 + a_2 + \dots + a_n$。
+    其通项 $a_n$ 与前 $n$ 项和 $S_n$ 存在如下关系：
+    $$
+        a_n =
+        \begin{cases}
+            S_1           & n=1      \\
+            S_n - S_{n-1} & n \geq 2
+        \end{cases}
+    $$
+    此关系对任意数列都成立，是求通项公式的重要方法。使用后务必检验 $n=1$ 是否符合 $n \geq 2$ 的表达式。
+\end{theorem}
+
+\begin{example}
+    已知数列 $\{a_n\}$ 的前 $n$ 项和 $S_n = 2n^2 - n$，则其通项公式 $a_n$ 为 \underline{\qquad}
+\end{example}
+
+\v{8em}
+
+\begin{example}
+    设数列 $\{a_n\}$ 的前 $n$ 项和为 $S_n = n^2 + 3n + 1$。求数列的通项公式 $a_n$。
+\end{example}
+
+\v{8em}
+
+\begin{warning}
+    数列中一旦一个式子里同时出现了 $a_n$ 和 $S_n$，都是要把 $S_n$ 消掉的！这样才能完整地得到 $a_n$ 的关系！
+
+    方法是令 $n$ = $n-1$
+\end{warning}
+
+\begin{example}
+    （2023·甲卷·理 17）设 $S_n$ 为数列 $\left\{a_n\right\}$ 的前 $n$ 项和，已知 $a_2=1,2 S_n=n a_n$ ．
+    \begin{enumerate}
+        \item 求 $\left\{a_n\right\}$ 的通项公式；
+    \end{enumerate}
+\end{example}
+
+\begin{example}
+    （2021·浙江·20）已知数列 $\left\{a_n\right\}$ 的前 $n$ 项和为 $S_n, a_1=-\frac{9}{4}$ ，且 $4 S_{n+1}=3 S_n-91$ ．
+    \begin{enumerate}
+        \item （1）求数列 $\left\{a_n\right\}$ 的通项；
+    \end{enumerate}
+\end{example}
+
+\subsection{数列的单调性}
+
+\begin{theorem}
+    严格增数列和严格减数列应该分别满足：
+
+    \begin{itemize}
+        \item 严格增数列：对于任意的正整数 $n$，都有 $a_n < a_{n+1}$。
+        \item 严格减数列：对于任意的正整数 $n$，都有 $a_n > a_{n+1}$。
+    \end{itemize}
+\end{theorem}
+
+\begin{example}
+    已知数列 $\left\{a_n\right\}$ 的通项公式为 $a_n=\frac{k-n}{3^n}$ ，若 $\left\{a_n\right\}$ 是递增数列，则 $k$ 的取值范围为 （\qquad）
+    \begin{tasks}(4)
+        \task $(-\infty, 1)$
+        \task $(1,+\infty)$
+        \task $\left(-\infty, \frac{1}{2}\right)$
+        \task $\left(\frac{1}{2},+\infty\right)$
+    \end{tasks}
+\end{example}
+
+\v{8em}
+
+\begin{example}
+    已知数列 $\left\{a_n\right\}$ 是严格增数列且 $a_n=n^2+k n+2$（ $n$ 为正整数），则实数 $k$ 的取值范围为 \underline{\qquad}.
+\end{example}
+
+\begin{solution}
+    因为数列 $\left\{a_n\right\}$ 是严格增数列，则对任意的 $n \in \mathbf{N}^*, a_{n+1}>a_n$
+
+    即 $(n+1)^2+k(n+1)+2>n^2+k n+2$ ，可得 $k>-2 n-1$
+
+    显然数列 $\{-2 n-1\}$ 为递减数列，故 $k>(-2 n-1)_{\max }=-3$
+
+    因此，实数 $k$ 的取值范围是 $(-3,+\infty)$.
+\end{solution}
+
+\v{8em}
+
+\begin{example}
+    已知数列 $\left\{a_n\right\}$ 的通项公式为 $a_n=\frac{3^n-1}{3^n}$ ，前 $n$ 项和为 $S_n$ ，则下列结论正确的是 （\qquad）（\textcolor{red}{D 留到之后做}）
+    \begin{tasks}(4)
+        \task $a_1=\frac{2}{3}$
+        \task $\left\{a_n\right\}$ 是递减数列
+        \task $a_n \geq \frac{2}{3}$
+        \task $S_n>n-\frac{1}{2}$
+    \end{tasks}
+\end{example}
+
+\v{8em}
+
+\begin{example}
+    已知数列 $\left\{a_n\right\}$ 的前 $n$ 项和 $S_n=9 n-n^2$ ，则下列说法正确的是 （\qquad）
+    \begin{tasks}(4)
+        \task $S_n$ 的最大值为 20
+        \task $a_1, a_7, a_4$ 成等比数列
+        \task 数列 $\left\{\frac{S_n}{n}\right\}$ 是递减数列
+        \task 数列 $\left\{\frac{a_n}{n}\right\}$ 是递增数列
+    \end{tasks}
+\end{example}
+
+\v{8em}
+
+\begin{example}
+    已知数列 $\left\{a_n\right\}$ 不是递增数列，且 $a_n=\left\{\begin{array}{l}3, n=1 \\ 2 k n-k+1, n \geq 2\end{array}\right.$ ，则 $k$ 的取值范围为  \underline{\qquad}.
+\end{example}
+
+\begin{tips}
+    请分为 $k > 0$ 和 $k < 0$ 两种情况来做。
+\end{tips}
+
+\v{10em}
+
+\begin{example}
+    已知数列 $\left\{a_n\right\}$ 满足 $a_n=\left\{\begin{array}{l}(1-3 a) n+15 a, n \leq 4 \\ 4 a^{n-3}+4, n \geq 5\end{array}\right.$ ，若 $\forall n \in \mathbf{N}^*, a_{n+1}<a_n$ 恒成立，则实数 $a$ 的取值范围是 （\qquad）
+    \begin{tasks}(4)
+        \task $\left(0, \frac{3}{4}\right)$
+        \task $\left(\frac{1}{3},+\infty\right)$
+        \task $\left(\frac{1}{3}, \frac{3}{4}\right)$
+        \task $\left(\frac{1}{3}, \frac{3}{4}\right]$
+    \end{tasks}
+\end{example}
+
+\begin{tips}
+    回顾必修一单调性的知识即可。
+\end{tips}
+
+\v{10em}
+
+\begin{example}
+    已知函数 $f(x)=\left\{\begin{array}{c}x^2+a x+5, x \leq 1 \\ -\frac{a}{x}, x>1\end{array}\right.$ 是 $\mathbf{R}$ 上的减函数，则实数 $a$ 的取值范围是 （\qquad）
+    \begin{tasks}(4)
+        \task $-3 \leq a \leq-2$
+        \task $-3 \leq a \leq 0$
+        \task $a \leq-2$
+        \task $a<0$
+    \end{tasks}
+\end{example}
+
+\v{10em}
+
+\begin{example}
+    已知函数 $f(x)=\left\{\begin{array}{l}-x^2-a x-5, x \leq 1 \\ \frac{a}{x}, x>1\end{array}\right.$ 是 R 上的增函数，则 $a$ 的取值范围是 （\qquad）
+    \begin{tasks}(4)
+        \task $-3 \leq a \leq-2$
+        \task $a \leq-2$
+        \task $-3 \leq a \leq 0$
+        \task $a \leq 0$
+    \end{tasks}
+\end{example}
+
+\v{10em}
+
+\subsection{周期数列}
+
+\begin{theorem}
+    如果数列 $\{a_n\}$ 存在正整数 $p$ 使得对于任意的正整数 $n$，都有 $a_{n+p} = a_n$，则称 $\{a_n\}$ 为周期数列，$p$ 称为周期。
+\end{theorem}
+
+\begin{tips}
+    并不是所有的数列都能简单地看出周期是多少。
+
+    在处理周期数列时，可以通过观察数列的前几项来猜测周期。
+\end{tips}
+
+\begin{example}
+    数列 $\left\{a_n\right\}$ 满足 $a_{n+1}=\left\{\begin{array}{l}2 a_n, 0 \leq a_n \leq 1 \\ a_n-1,\left(a_n>1\right)\end{array}\right.$ ，且 $a_1=\frac{6}{7}$ ，则 $a_{2017}=$ \underline{\qquad}.
+\end{example}
+
+\v{8em}
+
+\begin{example}
+    在数列 $\left\{a_n\right\}$ 中，已知 $a_1=6, ~ a_2=3, ~ a_{n+1}=a_{n+2}+a_n$ ，则 $a_{2025}$= （\qquad）
+    \begin{tasks}(4)
+        \task 3
+        \task -3
+        \task 6
+        \task -6
+    \end{tasks}
+\end{example}
+
+\begin{solution}
+    数列 $\left\{a_n\right\}$ 中，由 $a_{n+1}=a_{n+2}+a_n$ ，得
+
+    $~ a_{n+2}=a_{n+3}+a_{n+1}$ ，所以 $a_{n+3}=-a_n$ ，所以 $a_{n+6}=-a_{n+3}=a_n$
+
+    因此数列 $\left\{a_n\right\}$ 是周期数列，周期为 6 ，所以 $a_{2025}=a_{337 \times 6+3}=a_3=-3$
+\end{solution}
+
+\v{8em}
+
+\begin{example}
+    已知数列 $\left\{a_n\right\}$ 满足 $a_1=1, a_{n+1}=2-\frac{4}{a_n}$ ，则 $\left\{a_n\right\}$ 的前 2025 项和为 （\qquad）
+    \begin{tasks}(4)
+        \task 2024
+        \task 2025
+        \task 2026
+        \task 2027
+    \end{tasks}
+\end{example}
+
+\v{8em}
+
+\subsection{数列求和}
+
+\begin{example}
+    （2020·浙江·11）已知数列 $\left\{a_n\right\}$ 满足 $a_n=\frac{n(n+1)}{2}$ ，则 $S_3=$ \underline{$\quad$} ．
+\end{example}
+
+\vspace{4em}
+
+\begin{example}
+    （2020·海南·15）将数列 $\{2 n-1\}$ 与 $\{3 n-2\}$ 的公共项从小到大排列得到数列 $\left\{a_n\right\}$ ，则 $\left\{a_n\right\}$ 的前 $n$ 项和为 \underline{$\quad$} ．
+\end{example}
+
+\vspace{4em}
+
+\begin{example}
+    （2019·上海·8）已知数列 $\left\{a_n\right\}$ 前 $n$ 项和为 $S_n$ ，且满足 $S_n+a_n=2$ ，则 $S_5=$ \underline{$\quad$} ．
+\end{example}
+
+\vspace{4em}
+
+\subsection{等差数列}
+
+\begin{definition}
+    如果一个数列从第二项起，每一项与它的前一项的差等于同一个常数，这个数列就叫做等差数列，这个常数叫做等差数列的公差，通常用字母 $d$ 表示。
+
+    \begin{tips}
+        设等差数列 $\{a_n\}$ 的首项为 $a_1$，公差为 $d$。
+
+        根据等差数列的定义，对于任何 $n \geq 2$，都有 $a_n - a_{n-1} = d$。
+        由此，我们可以写下一系列等式：
+
+        $$
+            \begin{cases}
+                a_n - a_{n-1} = d     \\
+                a_{n-1} - a_{n-2} = d \\
+                \qquad \vdots         \\
+                a_3 - a_2 = d         \\
+                a_2 - a_1 = d
+            \end{cases}
+        $$
+
+        所有式子相加可得：
+        $$ (a_n - a_{n-1}) + (a_{n-1} - a_{n-2}) + \dots + (a_3 - a_2) + (a_2 - a_1) =  \underbrace{d + d + \dots + d + d}_{n-1 \text{ 个}} $$
+        $$ a_n - a_1 = (n-1)d $$
+
+        将 $-a_1$ 移项至等式右边，即可得到最终的等差数列通项公式：
+        $$ a_n = a_1 + (n-1)d $$
+    \end{tips}
+
+\end{definition}
+
+\begin{theorem}
+    等差数列的通项公式为 $a_n = a_1 + (n-1)d$。
+
+    等差数列的前 $n$ 项和公式为 $S_n = \frac{n(a_1+a_n)}{2} = na_1 + \frac{n(n-1)}{2}d$。
+\end{theorem}
+
+\begin{proof}
+    \textbf{采用倒序相加法证明：} 设等差数列 $\{a_n\}$ 的前 $n$ 项和为 $S_n$。
+    \begin{align}
+        S_n & = a_1 + a_2 + a_3 + \cdots + a_{n-1} + a_n                                \\
+            & = a_1 + [a_1 + d] + [a_1 + 2d] + \cdots + [a_1 + (n-2)d] + [a_1 + (n-1)d]
+    \end{align}
+
+    将次序颠倒，得：
+    \begin{align}
+        S_n & = a_n + a_{n-1} + a_{n-2} + \cdots + a_2 + a_1               \\
+            & = [a_1 + (n-1)d] + [a_1 + (n-2)d] + \cdots + [a_1 + d] + a_1
+    \end{align}
+
+    两式相加：
+    \begin{align}
+        2S_n & = [2a_1 + (n-1)d] + [2a_1 + (n-1)d] + \cdots + [2a_1 + (n-1)d] \\
+             & = n[2a_1 + (n-1)] = n(a_1 + a_n)
+    \end{align}
+
+    因此：
+    $$S_n = \frac{n(a_1+a_n)}{2} = na_1 + \frac{n(n-1)}{2}d$$
+\end{proof}
+
+\subsection{将 $a_{?}$ 和 $S_{?}$ 化为 $a_1$ 和 $d$}
+
+\begin{tips}
+    求出数列通项，这个数列的"解析式"就出来了。所以只要求出 $a_1$ 和 $d$，就能得到 $S_n$ 和 $a_n$，能够研究数列（函数）的解析式，这是非常好的！
+\end{tips}
+
+\begin{example}
+    在等差数列 $\{a_n\}$ 中，已知 $a_3 = 7$，$a_8 = 22$。则该数列的第10项 $a_{10}$ 为 \underline{\qquad}
+\end{example}
+
+\v{8em}
+
+\begin{example}
+    已知等差数列 $\{a_n\}$ 的前 $n$ 项和为 $S_n$，若 $a_1+a_9 = 10$，则 $S_9$ 的值为（\qquad）
+    \begin{tasks}(4)
+        \task 40
+        \task 45
+        \task 50
+        \task 90
+    \end{tasks}
+\end{example}
+
+\v{8em}
+
+\begin{example}
+    在等差数列 $\{a_n\}$ 中，已知 $a_5 = 10$ 且前 7 项和 $S_7 = 49$。求该数列的公差 $d$ 和首项 $a_1$。
+\end{example}
+
+\v{8em}
+
+\subsection{等差数列的下标和性质}
+\begin{theorem}[下标和性质]
+    若 $m+n=p+q$，则 $a_m + a_n = a_p + a_q$。
+
+    \textbf{证明：}
+    根据等差数列通项公式：
+    \begin{align}
+        a_m + a_n & = [a_1 + (m-1)d] + [a_1 + (n-1)d] \\
+                  & = 2a_1 + (m+n-2)d
+    \end{align}
+
+    同理：
+    \begin{align}
+        a_p + a_q & = [a_1 + (p-1)d] + [a_1 + (q-1)d] \\
+                  & = 2a_1 + (p+q-2)d
+    \end{align}
+
+    由于 $m+n=p+q$，所以 $a_m + a_n = a_p + a_q$。
+\end{theorem}
+
+\begin{example}
+    已知 $S_n$ 是等差数列 $\left\{a_n\right\}$ 的前 $n$ 项和，且 $a_7>0, ~ a_6+a_9<0$ ，则 （\qquad）
+    \begin{tasks}(4)
+        \task 数列 $\left\{a_n\right\}$ 为递减数列
+        \task $a_8>0$
+        \task $S_n$ 的最大值为 $S_7$
+        \task $S_{14}>0$
+    \end{tasks}
+\end{example}
+
+\v{8em}
+
+\subsection{等差中项}
+
+\begin{definition}
+    在三个数 $a$, $b$, $c$ 之间，如果 $b = \frac{a+c}{2}$，则称 $b$ 是 $a$ 和 $c$ 的等差中项。
+\end{definition}
+
+\begin{theorem}
+    若 $a$, $b$, $c$ 成等差数列，则 $b = \frac{a+c}{2}$。
+
+    若 $a$, $b_1$, $b_2$, $\ldots$, $b_n$, $c$ 成等差数列，则有：
+    \begin{align}
+        b_1 + b_2 + \ldots + b_n = \frac{n(a+c)}{2}
+    \end{align}
+\end{theorem}
+
+\begin{example}
+    求数列 $\{a_n\}$ 的前 $n$ 项和 $S_n$，其中 $a_n = 2n - 1$。
+\end{example}
+
+\v{8em}
+
+\begin{example}
+    已知等差数列 $\{a_n\}$ 中，$a_1 + a_{100} = 202$，求 $S_{100}$。
+\end{example}
+
+\v{8em}
+
+\begin{example}
+    等差数列 $\left\{a_n\right\}$ 的前 $n$ 项和记为 $S_n$ ，已知 $S_3=-15$ ，且 $a_1, a_3,-a_4$ 成等差数列．
+    \begin{enumerate}
+        \item 求数列 $\left\{a_n\right\}$ 的通项公式；
+        \item 求数列 $\left\{a_n\right\}$ 的前 $n$ 项和 $S_n$
+    \end{enumerate}
+\end{example}
+
+\v{8em}
+
+\subsection{等差数列 $S_n$ 的特点}
+
+\begin{theorem}
+    Todo
+\end{theorem}
+
+\begin{example}
+    已知等差数列 $\left\{a_n\right\}$ ，前 $n$ 项和 $S_n=n^2-4 n$ ，则 （\qquad）
+    \begin{tasks}(4)
+        \task $a_1=-3$
+        \task $d=-2$
+        \task $a_{10}=15$
+        \task $\left\{\frac{S_n}{n}\right\}$ 为公差为 -2 的等差数列
+    \end{tasks}
+\end{example}
+
+\v{8em}
+
+\subsection{证明一个数列是等差数列}
+
+\begin{theorem}
+    \begin{itemize}
+        \item 需要严格证明后一项和前一项的差为定值，这才是等差数列的基础概念。
+        \item 或者证明等差中项的式子 $2 a_{n+1} = a_{n} + a_{n+2}$
+    \end{itemize}
+\end{theorem}
+
+\begin{example}
+    设 $S_n$ 为数列 $\left\{a_n\right\}$ 的前 $n$ 项和，$S_n=2 n^2-30 n$ ．
+    \begin{enumerate}
+        \item 求 $a_n$ ；
+
+        \item 证明 $\left\{a_n\right\}$ 是等差数列．
+    \end{enumerate}
+\end{example}
+
+\v{8em}
+
+\begin{example}
+    （2022－甲卷（文））记 $S_n$ 为数列 $\left\{a_n\right\}$ 的前 $n$ 项和．已知 $\frac{2 S_n}{n}+n=2 a_n+1$ ．
+    \begin{enumerate}
+        \item 证明：$\left\{a_n\right\}$ 是等差数列；
+    \end{enumerate}
+\end{example}
+
+\v{10em}
+
+\subsection{等比数列}
+
+\subsubsection{等比数列的通项公式 $a_n$}
+
+\begin{definition}
+    如果一个数列从第二项起，每一项与它的前一项的比等于同一个非零常数，这个数列就叫做等比数列，这个常数叫做等比数列的公比，通常用字母 $q$ 表示。
+\end{definition}
+
+\begin{theorem}
+    等比数列的通项公式为 $a_n = a_1 q^{n-1}$。
+
+    推导过程使用累乘法：
+    $$
+        \begin{cases}
+            a_n     & = a_{n-1} q \\
+            a_{n-1} & = a_{n-2} q \\
+            \vdots                \\
+            a_3     & = a_2 q     \\
+            a_2     & = a_1 q     \\
+            a_1     & = a_1
+        \end{cases}
+    $$
+
+    左边全部乘起来=右边全部乘起来，约掉多余的项可得：
+    $$a_n=a_1 q^{n-1}$$
+\end{theorem}
+
+\begin{problem}
+首项是 $7$，公比是 $\frac{\sqrt{2}}{3}$ 的等比数列的通项公式如何表达？
+\end{problem}
+
+\begin{example}
+    在等比数列 $\{a_n\}$ 中，已知 $a_2 = 10$，$a_5 = 80$。求其前6项和 $S_6$ 的值。
+\end{example}
+
+\v{8em}
+
+\begin{example}
+    在各项均为正数的等比数列 $\{a_n\}$ 中，若 $a_3 a_7 = 16$，则 $a_5$ 的值为（\qquad）
+    \begin{tasks}(4)
+        \task 2
+        \task 4
+        \task 8
+        \task 16
+    \end{tasks}
+\end{example}
+
+\v{8em}
+
+\begin{example}
+    已知一个等比数列的前3项之和为7，前6项之和为63。求该数列的公比 $q$。
+\end{example}
+
+\v{8em}
+
+\begin{example}
+    在等比数列 $\{a_n\}$ 中，已知 $a_2 \cdot a_6 = 48$ 且 $a_4 \cdot a_{10} = 192$。求该数列的公比 $q$。
+\end{example}
+
+\begin{solution}
+    设等比数列的首项为 $a_1$，公比为 $q$，则：
+    \begin{align}
+        a_2 \cdot a_6    & = a_1q^1 \cdot a_1q^5 = a_1^2q^6 = 48     \\
+        a_4 \cdot a_{10} & = a_1q^3 \cdot a_1q^9 = a_1^2q^{12} = 192
+    \end{align}
+
+    由上述两式相除：
+    \begin{align}
+        \frac{a_1^2q^{12}}{a_1^2q^6} = \frac{192}{48} \quad \Rightarrow \quad q^6 = 4
+    \end{align}
+\end{solution}
+
+\v{2em}
+
+\subsubsection{等比数列的前 $n$ 项和 $S_n$}
+
+\begin{definition}
+    等比数列的前 $n$ 项和
+    $$
+        S_n =
+        \begin{cases}
+            na_1,                   & \text{当 } q=1 \text{ 时}      \\
+            \\
+            \frac{a_1(1-q^n)}{1-q}, & \text{当 } q \neq 1 \text{ 时}
+        \end{cases}
+    $$
+\end{definition}
+
+\begin{theorem}
+    其前 $n$ 项和 $S_n$ 为：
+    \begin{equation}
+        S_n = a_1 + a_1q + a_1q^2 + \dots + a_1q^{n-1} \label{eq:1}
+    \end{equation}
+
+    使用“错位相减法”来推导其求和公式。
+
+    将等式 \eqref{eq:1} 的两边同时乘以公比 $q$，得到一个新的等式：
+    \begin{equation}
+        qS_n = a_1q + a_1q^2 + a_1q^3 + \dots + a_1q^n \label{eq:2}
+    \end{equation}
+
+    现在，我们将等式 \eqref{eq:1} 与等式 \eqref{eq:2} 相减，即执行操作 $(1) - (2)$，可得：
+    $$ (1-q)S_n = a_1 - a_1q^n \quad \Rightarrow \quad S_n = \frac{a_1(1-q^n)}{1-q} , \quad \text{此时假设了} q \neq 1$$
+
+    当公比 $q=1$ 时，数列的每一项都等于首项 $a_1$。此时，前 $n$ 项和为 $n$ 个 $a_1$ 相加：
+    $$ S_n = \underbrace{a_1 + a_1 + \dots + a_1}_{n \text{ 个}} = na_1 $$
+\end{theorem}
+
+\subsection{等比数列的下标和性质}
+
+\begin{theorem}[等比数列下标和]
+    若 $m+n=p+q$，则 $a_m \cdot a_n = a_p \cdot a_q$。
+
+    \textbf{证明：}
+    根据等比数列通项公式：
+    \begin{align}
+        a_m \cdot a_n & = [a_1 q^{m-1}] \cdot [a_1 q^{n-1}] \\
+                      & = a_1^2 \cdot q^{m+n-2}
+    \end{align}
+
+    同理：
+    \begin{align}
+        a_p \cdot a_q & = [a_1 q^{p-1}] \cdot [a_1 q^{q-1}] \\
+                      & = a_1^2 \cdot q^{p+q-2}
+    \end{align}
+
+    由于 $m+n=p+q$，所以 $a_m \cdot a_n = a_p \cdot a_q$。
+
+\end{theorem}
+
+
+\subsection{等比中项}
+
+\begin{definition}
+    在三个正数 $a$, $b$, $c$ 之间，如果 $b^2 = ac$，则称 $b$ 是 $a$ 和 $c$ 的等比中项。
+\end{definition}
+
+\begin{theorem}
+    若 $a$, $b$, $c$ 成等比数列，则 $b^2 = ac$。
+
+    若 $a$, $b_1$, $b_2$, $\ldots$, $b_n$, $c$ 成等比数列，则有：
+    \begin{align}
+        b_1 \cdot b_2 \cdot \ldots \cdot b_n = (ac)^{\frac{n}{2}}
+    \end{align}
+\end{theorem}
+
+\begin{example}
+    在等比数列 $\{a_n\}$ 中，$a_3 = 4$，$a_7 = 64$。求 $a_5$ 的值。
+\end{example}
+
+\v{8em}
+
+\begin{example}
+    已知正数 $x$, $y$, $z$ 成等比数列，且 $x + z = 5$, $y = 2$。求 $x$ 和 $z$ 的值。
+\end{example}
+
+\v{8em}
+
+\begin{example}
+    在各项均为正数的等比数列 $\{a_n\}$ 中，若 $a_3 a_7 = 16$，则 $a_5$ 的值为（\qquad）
+    \begin{tasks}(4)
+        \task 2
+        \task 4
+        \task 8
+        \task 16
+    \end{tasks}
+\end{example}
+
+\v{8em}
+
+\subsection{证明一个数列是等比数列}
+
+\begin{theorem}
+    \begin{itemize}
+        \item 需要严格证明后一项和前一项的比为定值，这才是等比数列的基础概念。
+        \item 或者证明等比中项的式子 $a_{n+1}^2 = a_n a_{n+2}$
+    \end{itemize}
+\end{theorem}
+
+\begin{example}
+    （2016•新课标III，理 17）已知数列 $\left\{a_n\right\}$ 的前 $n$ 项和 $S_n=1+\lambda a_n$ ，其中 $\lambda \neq 0$ ．
+
+    证明 $\left\{a_n\right\}$ 是等比数列，并求其通项公式；
+\end{example}
+
+\vspace{10em}
+
+\subsection{回顾：等差与等比的异同}
+
+\begin{tabular}{|l|l|l|}
+    \hline     & 等 差 数 列                                                             & 等 比 数 列                                          \\
+    \hline 定 义 & 从第二项起，每一项与它的前一项的差等于常数                                               & 从第二项起，每一项与它的前一项的比等于常数                            \\
+    \hline 通项  & $a_n=\underline{\qquad \qquad}=a_m+(n-m) d$                         & $a_n=\underline{\qquad \qquad}=a_m q^{n-m}$      \\
+    \hline 中项  & 如果 $a, b, c$ 成等差数列，则 \underline{$\qquad \qquad$}                    & 如果 $a, b, c$ 成等比数列，则 \underline{$\qquad \qquad$} \\
+    \hline 和   & \begin{tabular}{l}
+                     $S_n=$
+                     $na_1 + \frac{n(n-1)d}{2}$ \\
+                     $=\frac{d}{2} n^2+\left(a_1-\frac{d}{2}\right) n$
+                 \end{tabular}              & \begin{tabular}{l}
+                                                  $S_n
+                                                      = \begin{cases}
+                  na_1,                 & q=1      \\
+                  a_1\frac{1-q^n}{1-q}, & q \neq 1
+              \end{cases}$
+                                              \end{tabular}                                                              \\
+    \hline 性质  & \begin{tabular}{l}
+                     若 $m+n=p+q$ 则 \underline{$\qquad \qquad$} \\
+                 \end{tabular}                        & \begin{tabular}{l}
+                                                            若 $m+n=p+q$ 则 \underline{$\qquad \qquad$} \\
+                                                        \end{tabular}                                       \\
+    \hline 常数列 & \multicolumn{2}{|l|}{当 $d=0, q=1$ 时，$a_n$ 为常数列。即：常数列即是等差数列，也是等比数列。}                                                    \\
+    \hline
+\end{tabular}
+
+\v{2em}
+
+\begin{example}
+    （2020·浙江·20）
+    $$
+        a_1=b_1=c_1=1, c_n=a_{n+1}-a_n, c_{n+1}=\frac{b_n}{b_{n+2}} \cdot c_n\left(n \in \mathbf{N}^*\right)
+    $$
+
+    若数列 $\left\{b_n\right\}$ 为等比数列，且公比 $q>0$ ，且 $b_1+b_2=6 b_3$ ，求 $q$ 与 $a_n$ 的通项公式；
+\end{example}
+
+\vspace{10em}
+
+\begin{example}
+    （2020·天津•19）已知 $\left\{a_n\right\}$ 为等差数列，$\left\{b_n\right\}$ 为等比数列，$a_1=b_1=1, a_5=5\left(a_4-a_3\right), b_5=4\left(b_4-b_3\right)$ ．
+    \begin{enumerate}
+        \item 求 $\left\{a_n\right\}$ 和 $\left\{b_n\right\}$ 的通项公式；
+        \item 记 $\left\{a_n\right\}$ 的前 $n$ 项和为 $S_n$ ，求证：$S_n S_{n+2}<S_{n+1}^2\left(n \in \mathbf{N}^*\right)$
+    \end{enumerate}
+\end{example}
+
+\vspace{10em}
+
+\subsection{裂项相消}
+
+\begin{theorem}[裂项相消法]
+    若数列 $\{a_n\}$ 中的每一项可以表示为 $a_n = b_{n+1} - b_n$ 的形式（其中 $\{b_n\}$ 为某数列），则数列 $\{a_n\}$ 的前 $n$ 项和可以通过以下公式求得：
+    $$S_n = \sum_{i=1}^{n} a_i = \sum_{i=1}^{n} (b_{i+1} - b_i) = b_{n+1} - b_1$$
+
+    这种方法称为裂项相消法。裂项相消的核心思想是将求和式中的各项写成相邻两项的差，从而使中间项相互抵消，最终结果只剩下首尾两项。
+\end{theorem}
+
+\begin{example}
+    求数列 $\{a_n\}$ 的前 $n$ 项和 $S_n$，其中 $a_n = \frac{1}{n(n+1)}$。
+\end{example}
+
+\begin{solution}
+    观察到 $\frac{1}{n(n+1)} = \frac{1}{n} - \frac{1}{n+1}$，即 $a_n = b_n - b_{n+1}$，其中 $b_n = \frac{1}{n}$。
+
+    因此，根据裂项相消法：
+    \begin{align}
+        S_n & = \sum_{i=1}^{n} a_i = \sum_{i=1}^{n} \left(\frac{1}{i} - \frac{1}{i+1}\right)                                                        \\
+            & = \left(\frac{1}{1} - \frac{1}{2}\right) + \left(\frac{1}{2} - \frac{1}{3}\right) + \cdots + \left(\frac{1}{n} - \frac{1}{n+1}\right) \\
+            & = \frac{1}{1} - \frac{1}{n+1} = 1 - \frac{1}{n+1} = \frac{n}{n+1}
+    \end{align}
+\end{solution}
+
+\v{2em}
+
+\begin{example}
+    已知数列 $\left\{a_n\right\}$ 的前 $n$ 项和 $S_n=n^2$ ，其中 $n \in \mathbf{N}^*$ ．
+    \begin{enumerate}
+        \item 求数列 $\left\{a_n\right\}$ 的通项公式；
+
+        \item 若 $b_n=\frac{1}{a_n a_{n+1}}$ ，求数列 $\left\{b_n\right\}$ 的前 $n$ 项和 $T_n$ ．
+    \end{enumerate}
+\end{example}
+
+\v{10em}
+
+\begin{example}
+    已知公差不为 0 的等差数列 $\left\{a_n\right\}$ 的首项 $a_1=2$ ，且 $a_1+1, a_2+1, a_4+1$ 成等比数列．
+    \begin{enumerate}
+        \item 求数列 $\left\{a_n\right\}$ 的通项公式；
+        \item 设 $b_n=\frac{1}{a_n a_{n+1}}, n \in \mathbf{N}^*, S_n$ 是数列 $\left\{b_n\right\}$ 的前 $n$ 项和，求使 $S_n<\frac{3}{19}$ 成立的最大的正整数 $n$ ．
+    \end{enumerate}
+\end{example}
+
+\v{10em}
+
+\begin{theorem}[常用的裂项方法]
+    \begin{enumerate}
+        \item $\frac{1}{n(n+1)}=\frac{1}{n}-\frac{1}{n+1}, \quad \quad \frac{1}{n(n+k)}=\frac{1}{k}\left(\frac{1}{n}-\frac{1}{n+k}\right), \quad \quad \frac{1}{(2n-1)(2n+1)}=\frac{1}{2}\left(\frac{1}{2n-1}-\frac{1}{2n+1}\right)$
+
+        \item 三个相乘的裂项：$\frac{1}{n(n+1)(n+2)}=\frac{1}{2}\left[\frac{1}{n(n+1)}-\frac{1}{(n+1)(n+2)}\right]$
+
+        \item 带有平方的裂项：$\frac{2n+1}{n^2(n+1)^2}=\frac{1}{n^2}-\frac{1}{(n+1)^2}$
+
+        \item 带根号的裂项：$\frac{1}{\sqrt{n}+\sqrt{n+1}}=\sqrt{n+1}-\sqrt{n}$，$\frac{1}{\sqrt{n}+\sqrt{n+k}}=\frac{1}{k}(\sqrt{n+k}-\sqrt{n})$
+
+        \item 带对数的裂项：$\log_a\left(1+\frac{1}{n}\right)=\log_a(n+1)-\log_a n$
+
+        \item 带幂次方的裂项：
+              $$\frac{2^n}{\left(2^n+1\right)\left(2^{n+1}+1\right)}=\frac{1}{2^n+1}-\frac{1}{2^{n+1}+1}, \quad \quad \frac{2^{n-k}}{\left(2^n+1\right)\left(2^{n+1}+1\right)}=\frac{1}{2^k}\left(\frac{1}{2^n+1}-\frac{1}{2^{n+1}+1}\right)$$
+    \end{enumerate}
+\end{theorem}
+
+\begin{example}
+    已知数列 $\left\{a_n\right\}$ 为等比数列，数列 $\left\{b_n\right\}$ 为等差数列，且 $b_1=a_1=1, b_2=a_1+a_2, a_3=2 b_3-6$ ．
+    \begin{enumerate}
+        \item 求数列 $\left\{a_n\right\},\left\{b_n\right\}$ 的通项公式；
+
+        \item 设 $c_n=\frac{1}{b_n b_{n+2}}$ ，数列 $\left\{c_n\right\}$ 的前 $n$ 项和为 $T_n$ ，证明：$\frac{1}{5} \leq T_n<\frac{1}{3}$ ．
+    \end{enumerate}
+\end{example}
+
+\v{10em}
+
+\begin{example}
+    已知等比数列 $\left\{a_n\right\}$ 的前 $n$ 项和为 $S_n\left(n \in \mathbf{N}^*\right)$ ，满足 $S_4=2 a_4-1, S_3=2 a_3-1$ ．
+    \begin{enumerate}
+        \item 求 $\left\{a_n\right\}$ 的通项公式；
+
+        \item 记 $b_n=\log _2\left(a_n \cdot a_{n+1}\right)\left(n \in \mathbf{N}^*\right)$ ，数列 $\left\{b_n\right\}$ 的前 $n$ 项和为 $T_n$ ，求证：$\frac{1}{T_1}+\frac{1}{T_2}+\cdots+\frac{1}{T_n}<2$ ．
+    \end{enumerate}
+\end{example}
+
+\v{10em}
+
+\begin{example}
+    已知数列 $\left\{a_n\right\}$ 的前 $n$ 项和为 $S_n, a_1=\frac{3}{2}, 2 S_n=(n+1) a_n+1(n \geqslant 2)$ ．
+    \begin{enumerate}
+        \item 求 $\left\{a_n\right\}$ 的通项公式；
+
+        \item 设 $b_n=\frac{1}{\left(a_n+1\right)^2}\left(n \in \mathbf{N}^*\right)$ ，数列 $\left\{b_n\right\}$ 的前 $n$ 项和为 $T_n$ ，证明：$T_n<\frac{7}{10}\left(n \in \mathbf{N}^*\right)$ ．
+    \end{enumerate}
+\end{example}
+
+\v{10em}
+
+\subsection{错位相减法}
+
+\begin{definition}[错位相减法]
+    错位相减法是用以求等差数列和等比数列相乘的前 $n$ 项和的一种方法。
+\end{definition}
+
+\begin{theorem}
+    如果出现了类似 $b_n = (114n-514)666^n$ 类似的数列求和，一定是用错位相减。
+    \begin{itemize}
+        \item 把前 $n$ 项和先表达出来，作为（1）式
+        \item 乘以公比 $q$，作为（2）式
+        \item 两式相减，第一个式子的第一项不会动，第二个式子的最后一项不会动（\textcolor{red}{注意看下面例题中的红色部分}）
+        \item 整理式子即可
+    \end{itemize}
+\end{theorem}
+
+\begin{example}
+    （2012 · 浙江文科高考） 已知 $C_n=(4 n-1) \cdot 2^{n-1}$ ，求 $\left\{C_n\right\}$ 的前 n 项和 $S_n$ ．
+\end{example}
+
+\begin{solution}
+    $\mathrm{S}_{\mathrm{n}}=\mathrm{C}_1+\mathrm{C}_2+\mathrm{C}_3+\mathrm{C}_4+\ldots \ldots+\mathrm{C}_{\mathrm{n}}$
+
+    相减：
+
+    $$\left\{\begin{array}{ll}
+            S_n   & = \textcolor{red}{3 \cdot 2^0}+7 \cdot 2^1+11 \cdot 2^2+\ldots + (4 n-1) \cdot 2^{n-1}                                                             \\
+            2 S_n & = \textcolor{white}{0 \cdot 2^0} + \textcolor{purple}{3 \cdot 2^1+7 \cdot 2^2+\ldots + (4 n-5) \cdot 2^{n-1}} + \textcolor{red}{(4 n-1) \cdot 2^n} \\
+        \end{array}
+        \right.$$
+
+    两式相减可得：
+    $$-S_n = \textcolor{red}{3 \cdot 2^0} + \textcolor{purple}{4} \underbrace{\textcolor{purple}{\left(2^1+2^2+2^3 \ldots \ldots+2^{n-1}\right)}}_{\text{等比数列前 $n-1$ 项和}} - \textcolor{red}{(4n-1) \cdot 2^n}$$
+
+    化简这个结果：
+    $$-S_n=\textcolor{red}{3}+4 \cdot \frac{2 \cdot\left(1-2^{n-1}\right)}{1-2}-\textcolor{red}{(4 n-1) \cdot 2^n}$$
+    $$S_n=(4 n-5) \cdot 2^n+5$$
+\end{solution}
+
+\begin{example}
+    已知数列 $\left\{a_n\right\}$ 的前 $n$ 项和为 $S_n$ ，且满足 $a_1=1,3 a_n=2 S_n+1$ ．
+    \begin{enumerate}
+        \item 证明数列 $\left\{a_n\right\}$ 为等比数列，并求它的通项公式；
+        \item 设 $b_n=n \cdot a_n$ ，求数列 $\left\{b_n\right\}$ 的前 $n$ 项和 $T_n$ ．
+    \end{enumerate}
+\end{example}
+
+\v{10em}
+
+\begin{example}
+    已知数列 $\left\{a_n\right\}$ 的前 $n$ 项和 $S_n=\frac{n^2+2 n}{2}$ ，数列 $\left\{b_n\right\}$ 的前 $n$ 项和 $T_n=2^n-1$ ．
+    \begin{enumerate}
+        \item 求 $\left\{a_n\right\}, ~\left\{b_n\right\}$ 的通项公式；
+        \item 若 $c_n=a_n b_n$ ，求 $\left\{c_n\right\}$ 的前 $n$ 项和 $P_n$ ．
+    \end{enumerate}
+\end{example}
+
+\v{8em}
+
+\begin{example}
+    （2021·浙江·20）已知数列 $\left\{a_n\right\}$ 的前 $n$ 项和为 $S_n, a_1=-\frac{9}{4}$ ，且 $4 S_{n+1}=3 S_n-91$ ．
+    \begin{enumerate}
+        \item 求数列 $\left\{a_n\right\}$ 的通项；
+        \item 数列 $\left\{b_n\right\}$ 满足 $3 b_n+(n-4) a_n=0$ ，记 $\left\{b_n\right\}$ 的前 $n$ 项和为 $T_n$ ，若 $T_n \leq \lambda b_n$ 对任意 $n \in \mathrm{~N}^*$ 恒成立，求 $\lambda$ 的范围。
+    \end{enumerate}
+\end{example}
+
+\begin{tips}
+    如果后面的不等式不会解也没事，先把 $T_n$ 求出来，这就是错位相减而已。
+\end{tips}
+
+\v{10em}
+
+\begin{example}
+    （2024·全国）已知等比数列 $\left\{a_n\right\}$ 的前 $n$ 项和为 $S_n$ ，且 $2 S_n=3 a_{n+1}-3$ ．
+    \begin{enumerate}
+        \item 求 $\left\{a_n\right\}$ 的通项公式；
+
+        \item 求数列 $\left\{S_n\right\}$ 的通项公式．
+    \end{enumerate}
+\end{example}
+
+\vspace{10em}
+
+\begin{example}
+    （2024·全国）记 $S_n$ 为数列 $\left\{a_n\right\}$ 的前 $n$ 项和，且 $4 S_n=3 a_n+4$ ．
+    \begin{enumerate}
+        \item 求 $\left\{a_n\right\}$ 的通项公式；
+
+        \item 设 $b_n=(-1)^{n-1} n a_n$ ，求数列 $\left\{b_n\right\}$ 的前 $n$ 项和为 $T_n$ ．
+    \end{enumerate}
+\end{example}
+
+\vspace{10em}
+
+\begin{example}
+    已知数列 $\left\{a_n\right\}$ 是首项为 $a_1=\frac{1}{4}$ ，公比 $q=\frac{1}{4}$ 的等比数列，设 $b_n+2=3 \log _{\frac{1}{4}} a_n\left(n \in \mathbf{N}^*\right)$ ，数列 $\left\{c_n\right\}$ 满足 $c_n=a_n \cdot b_n$.
+    \begin{enumerate}
+        \item 求数列 $\left\{b_n\right\}$ 的通项公式；
+        \item 设 $S_n$ 为数列 $\left\{c_n\right\}$ 的前 $n$ 项和，求 $S_n$ 的通项公式；
+        \item 若 $c_n \leq \frac{1}{4} m^2+m-1$ 对一切正整数 $n$ 恒成立，求实数 $m$ 的取值范围．
+    \end{enumerate}
+\end{example}
+
+\vspace{10em}
+
+\subsection{分组求和法}
+
+\begin{definition}[分组求和法]
+    该方法的核心思想是将复杂的求和问题转化为几个简单求和的组合。
+\end{definition}
+
+\begin{theorem}[分组求和法]
+    \begin{enumerate}
+        \item 将数列分解为更简单的数列之和：$a_n = b_n + c_n$
+        \item 分别计算各部分的和：$S_1 = \sum_{i=1}^n b_i$，$S_2 = \sum_{i=1}^n c_i$
+        \item 合并结果：$S = S_1 + S_2$
+    \end{enumerate}
+\end{theorem}
+
+\begin{example}
+    若 $a_n = 2n + 3^n$，求 $S_n$.
+\end{example}
+
+\begin{solution}
+    $S_n = \sum_{i=1}^n (2i + 3^i) = \sum_{i=1}^n 2i + \sum_{i=1}^n 3^i = n(n+1) + \frac{3(3^n-1)}{2}$
+\end{solution}
+
+\v{8em}
+
+\begin{example}
+    已知数列 $\left\{a_n\right\}$ 的通项公式为 $a_n=\frac{3^n-1}{3^n}$ ，前 $n$ 项和为 $S_n$ ，则下列结论正确的是 （\qquad）
+    \begin{tasks}(1)
+        \task $S_n>n-\frac{1}{2}$
+    \end{tasks}
+\end{example}
+
+\v{8em}
+
+\subsection{含绝对值的前 $n$ 项和}
+
+\begin{example}
+    已知数列 $\left\{a_n\right\}$ 的前 $n$ 项和 $S_n=2 a_n-2$ ．
+    \begin{enumerate}
+        \item 求数列 $\left\{a_n\right\}$ 的通项公式；
+
+        \item 记 $b_n=\frac{1}{\log _2 a_n \cdot \log _2 a_{n+1}}$ ．
+              \begin{enumerate}
+                  \item （i）求数列 $\left\{b_n\right\}$ 的前 $n$ 项和 $T_n$ ；
+                  \item （ii）若对任意的 $n \in \mathrm{~N}^*, ~ T_n+\frac{1}{k a_n}<1$ ，求 $k$ 的取值范围．
+              \end{enumerate}
+    \end{enumerate}
+\end{example}
+
+\v{8em}
+
+\subsection{使用累加法求数列通项公式}
+
+\begin{theorem}[$a_{n} - a_{n-1} = f(n)$ 形式]
+    若数列 $\{a_n\}$ 满足 $a_{n} - a_{n-1} = f(n)$ 的形式，则可以通过累加法求和得到通项公式。
+\end{theorem}
+
+\begin{example}
+    已知数列 $\left\{a_n\right\}$ 满足 $a_1=1, a_{n+1}=a_n+3 n$ ，则 $a_4=$ \underline{$\qquad$} ，数列的通项公式 $a_n=$ \underline{$\qquad$} ．
+\end{example}
+
+\v{8em}
+
+\begin{example}
+    已知数列 $\left\{a_n\right\}$ 满足 $a_1=1, a_{n+1}=a_n+2 n-1$ ，设 $b_n=\frac{2 a_n+4 n-4}{n}$ ，则数列 $\left\{b_n\right\}$ 的前 $n$ 项和为 （\qquad）
+    \begin{tasks}(4)
+        \task $n^2-\frac{n}{2}$
+        \task $n^2+\frac{n}{2}$
+        \task $n^2+n$
+        \task $n^2-n$
+    \end{tasks}
+\end{example}
+
+\v{10em}
+
+\begin{example}
+    已知数列 $\left\{a_n\right\}$ 满足：$a_1=1, a_2=2, S_{n+1}+S_{n-1}=2 S_n+\log _2\left(1+\frac{1}{n}\right)\left(n \geq 2, n \in \mathbf{N}^*\right)$ ，则 $a_8$= （\qquad）
+    \begin{tasks}(4)
+        \task $2 \sqrt{2}$
+        \task 3
+        \task 4
+        \task $4 \sqrt{2}$
+    \end{tasks}
+\end{example}
+
+\begin{tips}
+    这题需要先使用 $S_n$ 和 $a_n$ 的关系作一下转化。
+\end{tips}
+
+\v{10em}
+
+\subsection{使用累乘法求数列通项}
+
+\begin{example}
+    在数列 $\left\{a_n\right\}$ 中，首项 $a_1=1, ~ n>1$ 时，$(n-1) a_n=(n+1) a_{n-1}$ ，则数列 $\left\{\frac{1}{a_n}\right\}$ 的前 100 项和为 \underline{$\quad$}．
+\end{example}
+
+\v{10em}
+
+
+\begin{example}
+    已知数列 $\left\{a_n\right\}$ 的前 $n$ 项和为 $S_n, ~ 2 S_n=(n+1) a_n$ ，且 $a_1=1$ ．
+    \begin{enumerate}
+        \item 求数列 $\left\{a_n\right\}$ 的通项公式；
+
+        \item 若数列 $b_n=\frac{S_{2 n}}{2 n}$ ，
+              \begin{enumerate}
+                  \item （i）求数列 $\left\{\frac{1}{b_n b_{n+1}}\right\}$ 的前 $n$ 项和 $T_n$ ；
+                  \item （ii）若 $b_1, b_{3 n+1}, b_{c_n}$ 成等比数列，求数列 $\left\{\frac{n}{c_n+119}\right\}$ 中的最大项及此时 $n$ 的值．
+              \end{enumerate}
+    \end{enumerate}
+\end{example}
+
+\v{10em}
+
+\begin{example}
+    （2022·全国 I 卷·17）记 $S_n$ 为数列 $\left\{a_n\right\}$ 的前 $n$ 项和，已知 $a_1=1,\left\{\frac{S_n}{a_n}\right\}$ 是公差为 $\frac{1}{3}$ 的等差数列．
+    \begin{enumerate}
+        \item 求 $\left\{a_n\right\}$ 的通项公式；
+        \item 证明：$\frac{1}{a_1}+\frac{1}{a_2}+\cdots+\frac{1}{a_n}<2$ ．
+    \end{enumerate}
+\end{example}
+
+\vspace{10em}
+
+\subsection{待定系数法构造求数列通项}
+
+\begin{theorem}[待定系数构造等比数列]
+    一般是 $a_n = Xa_{n-1} + Y$ 的形式，例如 $a_n = 3 a_{n-1} + 4$.
+
+    使用 $a_n - p = 3(a_{n-1} - p)$ 即可构造出一个等比数列 $\{{a_n} - p\}$.
+\end{theorem}
+
+\begin{example}
+    已知数列 $\left\{a_n\right\}$ 满足 $a_1=1, a_n=3 a_{n-1}+4(n \geq 2)$ ．
+    \begin{enumerate}
+        \item 证明：数列 $\left\{a_n+2\right\}$ 是等比数列；
+        \item 求数列 $\left\{a_n\right\}$ 的前 $n$ 项和 $S_n$ ．
+    \end{enumerate}
+\end{example}
+
+\v{8em}
+
+\begin{example}
+    记数列 $\left\{a_n\right\}$ 的前 $n$ 项和为 $S_n$ ，已知 $S_n=2 a_n-n, ~ b_n=a_n+1$ ．
+    \begin{enumerate}
+        \item 证明：数列 $\left\{b_n\right\}$ 为等比数列，并求数列 $\left\{a_n\right\}$ 的通项公式；
+        \item 设 $c_n=b_n \cdot \log _2 b_{2 n+1}$ ，求数列 $\left\{c_n\right\}$ 的前 $n$ 项和 $T_n$ ．
+    \end{enumerate}
+\end{example}
+
+\v{8em}
+
+\begin{example}
+    （2014 新课标 II，理 17）已知数列 $\left\{a_n\right\}$ 满足 $a_1=1, a_{n+1}=3 a_n+1$ ．
+
+    （I）证明 $\left\{a_n+\frac{1}{2}\right\}$ 是等比数列，并求 $\left\{a_n\right\}$ 的通项公式；
+\end{example}
+
+\vspace{10em}
+
+\subsection{整体法构造求数列通项}
+
+\begin{example}
+    已知 $\left\{a_n\right\}$ 满足 $a_1=1$ ，且 $n a_{n+1}-(n+1) a_n=3 n^2+3 n$ ．
+    \begin{enumerate}
+        \item 求 $a_2, a_3$ ；
+        \item 证明：数列 $\left\{\frac{a_n}{n}\right\}$ 是等差数列，并求 $\left\{a_n\right\}$ 的通项公式．
+    \end{enumerate}
+\end{example}
+
+\v{8em}
+
+\begin{example}
+    已知数列 $\left\{a_n\right\}$ 满足 $a_1=1, a_n-a_{n+1}=a_n a_{n+1}\left(n \in \mathbf{N}^*\right)$ 则 $a_{2024}=$（\quad）
+    \begin{tasks}(4)
+        \task  2024
+        \task  2025
+        \task $\frac{1}{2024}$
+        \task $\frac{1}{2025}$
+    \end{tasks}
+\end{example}
+
+\vspace{10em}
+
+\subsection{数列分奇偶项}
+
+\begin{example}
+    （2023·II 卷·18）已知 $\left\{a_n\right\}$ 为等差数列，$b_n=\left\{\begin{array}{l}a_n-6, n \text { 为奇数 } \\ 2 a_n, n \text { 为偶数 }\end{array}\right.$ ，记 $S_n, T_n$ 分别为数列 $\left\{a_n\right\}, ~\left\{b_n\right\}$ 的前 $n$ 项和，$S_4=32, T_3=16$ ．
+    \begin{enumerate}
+        \item 求 $\left\{a_n\right\}$ 的通项公式；
+        \item 证明：当 $n>5$ 时，$T_n>S_n$ ．
+    \end{enumerate}
+\end{example}
+
+\vspace{10em}
+
+\begin{example}
+    （2021·I卷·17）已知数列 $\left\{a_n\right\}$ 满足 $a_1=1, a_{n+1}=\left\{\begin{array}{l}a_n+1, n \text { 为奇数，} \\ a_n+2, n \text { 为偶数．}\end{array}\right.$
+    \begin{enumerate}
+        \item 记 $b_n=a_{2 n}$ ，写出 $b_1, b_2$ ，并求数列 $\left\{b_n\right\}$ 的通项公式；
+        \item 求 $\left\{a_n\right\}$ 的前 20 项和．
+    \end{enumerate}
+\end{example}
+
+\vspace{10em}
+
+\subsection{数列带绝对值}
+
+\subsection{数列放缩}
+
+\begin{definition}
+    Todo
+\end{definition}
+

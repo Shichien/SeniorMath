@@ -8,43 +8,63 @@ def process_tex_file(filepath):
     with open(filepath, 'r', encoding='utf-8') as f:
         content = f.read()
 
+    # --- 1. 定义多子问题大题的正则表达式和替换函数 (已修改) ---
+    # 旧的正则表达式过于复杂，对每个子问题的结尾都进行判断，容易因格式不规范而出错。
+    # 新的正则表达式采用更稳健的策略：
+    # 1. 匹配主问题行。
+    # 2. 匹配一个必须以子问题“（数字）”开头的文本块。
+    # 3. 使用前瞻（lookahead）来确定这个文本块的结束位置，即下一个主问题或文件末尾。
+    # 这样大大简化了模式，并能更好地处理包含2个、3个或更多子问题的各种情况。
     multi_part_pattern = re.compile(
+        # Group 1: 大题题号, Group 2: 大题题干
         r'^\s*(\d+)[．.]\s*(.*?)\s*\n' +
-        # 匹配行首题号、题干直到第一个换行符 (Group 1: 题号, Group 2: 题干)
-        # Group 3: 匹配从第一个子问题开始的整个子问题块，直到下一个主问题或文件结束
-        r'(\s*（\d+）[\s\S]*?(?=\n\s*\d+[．.]|\Z))'
-        , re.DOTALL | re.MULTILINE
-        # DOTALL 让 . 匹配换行符，MULTILINE 让 ^ 和 $ 匹配行首行尾
+
+        # Group 3: 捕获整个子问题块。
+        r'(' +
+            # 子问题1 (必须存在，单行)
+            r'^\s*(?:（1）|1\.)[^\n]*\n' +
+            # 子问题2 (必须存在，单行)
+            # 使用 `[^\n\r]*` 来匹配到行尾，兼容不同系统的换行符
+            r'^\s*(?:（2）|2\.)[^\n\r]*' +
+            # 匹配所有后续的、连续的、格式正确的单行子问题
+            r'(?:' +
+                r'\n^\s*(?:（\d+）|\d+\.)[^\n\r]*' +
+            r')*' +
+        r')',
+        re.MULTILINE
     )
 
     def replacement_func_multi_part(match):
-        main_stem = match.group(2).strip() # 主题干
-        sub_questions_block = match.group(3) # 所有子问题组成的块
+        main_stem = match.group(2).strip() # 大题题干
+        sub_questions_block = match.group(3).strip() # 整个子问题块
 
-        # 用于解析子问题块内部的每个子问题
-        # Group 1: 子问题序号 (e.g., '1', '2')
-        # Group 2: 子问题内容
+        # 子问题解析器：现在可以同时处理“（1）”和“1.”两种格式
+        # 这个解析器无需修改，因为它能很好地处理传入的、边界正确的文本块。
         sub_q_parser_pattern = re.compile(
-            r'\s*（(\d+)）\s*([\s\S]*?)(?=\n\s*（\d+）|\Z)', # 匹配（数字）开头，直到下一个（数字）或块结束
-            re.DOTALL
+            # 使用 ^ 和 MULTILINE 来匹配块中每一行的开头
+            r'^\s*(?:（(\d+)）|(\d+)\.)\s*([\s\S]*?)(?=\n\s*(?:（\d+）|\d+\.)|\Z)',
+            re.MULTILINE
         )
 
-        # 查找所有子问题
         sub_q_matches = sub_q_parser_pattern.finditer(sub_questions_block)
         
-        # 构建 enumerate 环境内容
         enumerate_content = []
         for sub_match in sub_q_matches:
-            # sub_q_num = sub_match.group(1) # 子问题序号，enumerate 会自动编号
-            sub_q_content = sub_match.group(2).strip() # 子问题内容
-            enumerate_content.append(f'    \\item {sub_q_content}')
+            # 子问题内容总是最后一个捕获组 (Group 3)
+            sub_q_content = sub_match.group(3).strip()
+            if sub_q_content: # 确保内容不为空
+                enumerate_content.append(f'    \\item {sub_q_content}')
 
-        # 组合成新的格式
+        if not enumerate_content:
+            return match.group(0)
+
         new_format = (
-            f'\n{main_stem}\n' # 只保留主题干，去除主问题号
+            f'\n\\begin{{example}}\n'
+            f'{main_stem}\n'
             '\\begin{enumerate}\n'
-            f'{os.linesep.join(enumerate_content)}\n' # 使用系统默认的换行符连接各项
-            '\\end{enumerate}'
+            f'{os.linesep.join(enumerate_content)}\n'
+            '\\end{enumerate}\n'
+            '\\end{example}'
         )
         return new_format
 
@@ -69,13 +89,15 @@ def process_tex_file(filepath):
 
         # 构建新的格式
         new_format = (
-            f'\n{stem} （\\qquad）\n'
+            f'\n\\begin{{example}}\n'
+            f'{stem} （\\qquad）\n'
             '\\begin{tasks}(4)\n'
-            f'    \\task {option_a}\n'  # 选项内容通常放在数学模式中
+            f'    \\task {option_a}\n'
             f'    \\task {option_b}\n'
             f'    \\task {option_c}\n'
             f'    \\task {option_d}\n'
             '\\end{tasks}\n'
+            '\\end{example}'
         )
         return new_format
 

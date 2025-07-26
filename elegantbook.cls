@@ -121,7 +121,7 @@
 \ifdefstring{\ELEGANT@device}{normal}{
     \geometry{
         a4paper,
-        top=10mm, bottom=10mm,
+        top=10mm, bottom=20mm,
         left=10mm, right=10mm,
         headheight=2.17cm,
         headsep=4mm,
