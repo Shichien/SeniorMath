@@ -1,0 +1,418 @@
+\section{数列的求和}
+
+\subsection{裂项相消}
+
+\begin{definition}[裂项]
+    裂项其实就是通分的逆运算.
+\end{definition}
+
+\begin{theorem}[裂项相消法]
+    若数列 $\{a_n\}$ 中的每一项可以表示为 $a_n = b_{n+1} - b_n$ 的形式（其中 $\{b_n\}$ 为某数列），则数列 $\{a_n\}$ 的前 $n$ 项和可以通过以下公式求得：
+    $$S_n = \sum_{i=1}^{n} a_i = \sum_{i=1}^{n} (b_{i+1} - b_i) = b_{n+1} - b_1$$
+
+    这种方法称为裂项相消法。裂项相消的核心思想是将求和式中的各项写成相邻两项的差，从而使中间项相互抵消，最终结果只剩下首尾两项。
+\end{theorem}
+
+\begin{example}
+    请对下面的式子进行裂项：
+    $$
+        \begin{aligned}
+             & a_n=\frac{1}{n(n+1)}         \\
+             & a_n=\frac{1}{n(n+2)}         \\
+             & a_n=\frac{1}{(2 n-1)(2 n+1)}
+        \end{aligned}
+    $$
+\end{example}
+
+\begin{theorem}[常用的裂项公式]
+    \begin{enumerate}
+        \item $\frac{1}{n(n+1)}=\frac{1}{n}-\frac{1}{n+1}, \quad \quad \frac{1}{n(n+k)}=\frac{1}{k}\left(\frac{1}{n}-\frac{1}{n+k}\right), \quad \quad \frac{1}{(2n-1)(2n+1)}=\frac{1}{2}\left(\frac{1}{2n-1}-\frac{1}{2n+1}\right)$
+
+        \item 带有平方的裂项：$\frac{2n+1}{n^2(n+1)^2}=\frac{1}{n^2}-\frac{1}{(n+1)^2}$
+
+        \item 带根号的裂项：$\frac{1}{\sqrt{n}+\sqrt{n+1}}=\sqrt{n+1}-\sqrt{n}$，$\frac{1}{\sqrt{n}+\sqrt{n+k}}=\frac{1}{k}(\sqrt{n+k}-\sqrt{n})$
+
+        \item 带对数的裂项：$\log_a\left(1+\frac{1}{n}\right)=\log_a(n+1)-\log_a n$
+    \end{enumerate}
+\end{theorem}
+
+\begin{example}
+    求数列 $\{a_n\}$ 的前 $n$ 项和 $S_n$，其中 $a_n = \frac{1}{n(n+1)}$。
+\end{example}
+
+\begin{solution}
+    观察到 $\frac{1}{n(n+1)} = \frac{1}{n} - \frac{1}{n+1}$，即 $a_n = b_n - b_{n+1}$，其中 $b_n = \frac{1}{n}$。
+
+    因此，根据裂项相消法：
+    \begin{align}
+        S_n & = \sum_{i=1}^{n} a_i = \sum_{i=1}^{n} \left(\frac{1}{i} - \frac{1}{i+1}\right)                                                        \\
+            & = \left(\frac{1}{1} - \frac{1}{2}\right) + \left(\frac{1}{2} - \frac{1}{3}\right) + \cdots + \left(\frac{1}{n} - \frac{1}{n+1}\right) \\
+            & = \frac{1}{1} - \frac{1}{n+1} = 1 - \frac{1}{n+1} = \frac{n}{n+1}
+    \end{align}
+\end{solution}
+
+\v{2em}
+
+\begin{example}
+    已知数列 $\left\{a_n\right\}$ 的前 $n$ 项和 $S_n=n^2$ ，其中 $n \in \mathbf{N}^*$ ．
+    \begin{enumerate}
+        \item 求数列 $\left\{a_n\right\}$ 的通项公式；
+
+        \item 若 $b_n=\frac{1}{a_n a_{n+1}}$ ，求数列 $\left\{b_n\right\}$ 的前 $n$ 项和 $T_n$ ．
+    \end{enumerate}
+\end{example}
+
+\v{10em}
+
+\begin{example}
+    已知公差不为 0 的等差数列 $\left\{a_n\right\}$ 的首项 $a_1=2$ ，且 $a_1+1, a_2+1, a_4+1$ 成等比数列．
+    \begin{enumerate}
+        \item 求数列 $\left\{a_n\right\}$ 的通项公式；
+        \item 设 $b_n=\frac{1}{a_n a_{n+1}}, n \in \mathbf{N}^*, S_n$ 是数列 $\left\{b_n\right\}$ 的前 $n$ 项和，求使 $S_n<\frac{3}{19}$ 成立的最大的正整数 $n$ ．
+    \end{enumerate}
+\end{example}
+
+\v{10em}
+
+\begin{example}
+    记数列 $\left\{a_n\right\}$ 的前 $n$ 项和为 $S_n$ ，已知 $S_n=n a_n-\frac{n(n-1)}{2}$ ．
+    \begin{enumerate}
+        \item 证明：$\left\{a_n\right\}$ 是等差数列；
+        \item 若 $a_1=2$ ，证明：$\frac{1}{S_1}+\frac{1}{S_2}+\cdots+\frac{1}{S_n}<\frac{11}{9}$ ．
+    \end{enumerate}
+\end{example}
+
+\v{12em}
+
+\begin{example}
+    设等差数列 $\left\{a_n\right\}$ 的前 $n$ 项和为 $S_n$ ，若 $S_8=64, ~ S_{16}=256$ ．
+    \begin{enumerate}
+        \item 求 $S_{24}$ ；
+        \item 设 $T_n=\frac{1}{a_1 a_2}+\frac{1}{a_2 a_3}+\cdots+\frac{1}{a_n a_{n+1}}$ ，比较 $T_n$ 与 $\log _2 \sqrt{3}$ 的大小．
+    \end{enumerate}
+\end{example}
+
+\v{12em}
+
+
+\begin{example}
+    已知数列 $\left\{a_n\right\}$ 的前 $n$ 项和 $S_n=2 a_n-2$ ．
+    \begin{enumerate}
+        \item 求数列 $\left\{a_n\right\}$ 的通项公式；
+
+        \item 记 $b_n=\frac{1}{\log _2 a_n \cdot \log _2 a_{n+1}}$ ．
+              \begin{enumerate}
+                  \item （i）求数列 $\left\{b_n\right\}$ 的前 $n$ 项和 $T_n$ ；
+                  \item （ii）若对任意的 $n \in \mathrm{~N}^*, ~ T_n+\frac{1}{k a_n}<1$ ，求 $k$ 的取值范围．
+              \end{enumerate}
+    \end{enumerate}
+\end{example}
+
+\v{12em}
+
+\begin{example}
+    求证：$\frac{1}{2^2-1}+\frac{1}{3^2-1}+\cdots+\frac{1}{n^2-1}<\frac{3}{4}$ ．
+\end{example}
+
+\begin{tips}
+    使用平方差公式进行裂项.
+\end{tips}
+
+\v{10em}
+
+\begin{example}
+    已知等比数列 $\left\{a_n\right\}$ 的前 $n$ 项和为 $S_n\left(n \in \mathbf{N}^*\right)$ ，满足 $S_4=2 a_4-1, S_3=2 a_3-1$ ．
+    \begin{enumerate}
+        \item 求 $\left\{a_n\right\}$ 的通项公式；
+
+        \item 记 $b_n=\log _2\left(a_n \cdot a_{n+1}\right)\left(n \in \mathbf{N}^*\right)$ ，数列 $\left\{b_n\right\}$ 的前 $n$ 项和为 $T_n$ ，求证：$\frac{1}{T_1}+\frac{1}{T_2}+\cdots+\frac{1}{T_n}<2$ ．
+    \end{enumerate}
+\end{example}
+
+\v{10em}
+
+\begin{theorem}[隔项相消的裂项]
+    裂项时，可能无法连着消，有可能会导致隔几项才能消掉的。
+    \begin{tips}
+        此时前面无法消的项和后面无法消的项位置是一致的。（正着数和倒着数）
+    \end{tips}
+\end{theorem}
+
+\begin{example}
+    已知数列 $\left\{a_n\right\}$ 为等比数列，数列 $\left\{b_n\right\}$ 为等差数列，且 $b_1=a_1=1, b_2=a_1+a_2, a_3=2 b_3-6$ ．
+    \begin{enumerate}
+        \item 求数列 $\left\{a_n\right\},\left\{b_n\right\}$ 的通项公式；
+
+        \item 设 $c_n=\frac{1}{b_n b_{n+2}}$ ，数列 $\left\{c_n\right\}$ 的前 $n$ 项和为 $T_n$ ，证明：$\frac{1}{5} \leq T_n<\frac{1}{3}$ ．
+    \end{enumerate}
+\end{example}
+
+\v{10em}
+
+
+
+\subsubsection{非常规的裂项方法}
+
+\begin{theorem}[非常规的裂项方法]
+    \begin{enumerate}
+        \item 三个相乘的裂项：$$\frac{1}{n(n+1)(n+2)}=\frac{1}{2}\left[\frac{1}{n(n+1)}-\frac{1}{(n+1)(n+2)}\right]$$
+        \item 带幂次方的裂项：$$\frac{2^n}{\left(2^n+1\right)\left(2^{n+1}+1\right)}=\frac{1}{2^n+1}-\frac{1}{2^{n+1}+1}, \quad \quad \frac{2^{n-k}}{\left(2^n+1\right)\left(2^{n+1}+1\right)}=\frac{1}{2^k}\left(\frac{1}{2^n+1}-\frac{1}{2^{n+1}+1}\right)$$
+    \end{enumerate}
+\end{theorem}
+
+\begin{example}
+    请为下面的这几个式子裂项：
+    $$
+        \begin{aligned}
+             & a_n=\frac{2^n}{\left(2^n-1\right)\left(2^{n+1}-1\right)} \\
+             & a_n=\frac{n+2}{n(n+1) \cdot 2^{n+1}}                     \\
+             & a_n=\frac{1}{\sqrt{n+k}+\sqrt{n}}
+        \end{aligned}
+    $$
+\end{example}
+
+\begin{example}
+    已知数列 $\left\{a_n\right\}$ 的前 $n$ 项和为 $S_n, a_1=\frac{3}{2}, 2 S_n=(n+1) a_n+1(n \geqslant 2)$ ．
+    \begin{enumerate}
+        \item 求 $\left\{a_n\right\}$ 的通项公式；
+
+        \item 设 $b_n=\frac{1}{\left(a_n+1\right)^2}\left(n \in \mathbf{N}^*\right)$ ，数列 $\left\{b_n\right\}$ 的前 $n$ 项和为 $T_n$ ，证明：$T_n<\frac{7}{10}\left(n \in \mathbf{N}^*\right)$ ．
+    \end{enumerate}
+\end{example}
+
+\v{10em}
+
+\begin{example}
+    已知等比数列 $\left\{a_n\right\}$ 的各项均为正数， $2 a_5, a_4, 4 a_6$ 成等差数列，且满足 $a_4=4 a_3^2$ ，等差数列 $\left\{b_n\right\}$ 的前 $n$ 项和 $S_n, b_2+b_4=6, S_4=10$．
+    \begin{enumerate}
+        \item 求数列 $\left\{a_n\right\}$ 和 $\left\{b_n\right\}$ 的通项公式；
+        \item 设 $d_n=\frac{b_{2 n+5}}{b_{2 n+1} b_{2 n+3}} a_n, n \in \mathrm{~N}^*,\left\{d_n\right\}$ 的前 $n$ 项和 $T_n$ ，求证：$T_n<\frac{1}{3}$ ；
+    \end{enumerate}
+\end{example}
+
+\v{12em}
+
+\subsection{错位相减法}
+
+\begin{definition}[错位相减法]
+    错位相减法是用以求等差数列和等比数列相乘的前 $n$ 项和的一种方法。
+\end{definition}
+
+\begin{theorem}
+    如果出现了类似 $b_n = (114n-514)666^n$ 类似的数列求和，一定是用错位相减。
+    \begin{itemize}
+        \item 把前 $n$ 项和先表达出来，作为（1）式
+        \item 乘以公比 $q$，作为（2）式
+        \item 两式相减，第一个式子的第一项不会动，第二个式子的最后一项不会动（\textcolor{red}{注意看下面例题中的红色部分}）
+        \item 整理式子即可
+    \end{itemize}
+\end{theorem}
+
+\begin{example}
+    （2012 · 浙江文科高考） 已知 $C_n=(4 n-1) \cdot 2^{n-1}$ ，求 $\left\{C_n\right\}$ 的前 n 项和 $S_n$ ．
+\end{example}
+
+\begin{solution}
+    $\mathrm{S}_{\mathrm{n}}=\mathrm{C}_1+\mathrm{C}_2+\mathrm{C}_3+\mathrm{C}_4+\ldots \ldots+\mathrm{C}_{\mathrm{n}}$
+
+    相减：
+
+    $$\left\{\begin{array}{ll}
+            S_n   & = \textcolor{red}{3 \cdot 2^0}+7 \cdot 2^1+11 \cdot 2^2+\ldots + (4 n-1) \cdot 2^{n-1}                                                             \\
+            2 S_n & = \textcolor{white}{0 \cdot 2^0} + \textcolor{purple}{3 \cdot 2^1+7 \cdot 2^2+\ldots + (4 n-5) \cdot 2^{n-1}} + \textcolor{red}{(4 n-1) \cdot 2^n} \\
+        \end{array}
+        \right.$$
+
+    两式相减可得：
+    $$-S_n = \textcolor{red}{3 \cdot 2^0} + \textcolor{purple}{4} \underbrace{\textcolor{purple}{\left(2^1+2^2+2^3 \ldots \ldots+2^{n-1}\right)}}_{\text{等比数列前 $n-1$ 项和}} - \textcolor{red}{(4n-1) \cdot 2^n}$$
+
+    化简这个结果：
+    $$-S_n=\textcolor{red}{3}+4 \cdot \frac{2 \cdot\left(1-2^{n-1}\right)}{1-2}-\textcolor{red}{(4 n-1) \cdot 2^n}$$
+    $$S_n=(4 n-5) \cdot 2^n+5$$
+\end{solution}
+
+\begin{example}
+    已知数列 $\left\{a_n\right\}$ 的前 $n$ 项和为 $S_n$ ，且满足 $a_1=1,3 a_n=2 S_n+1$ ．
+    \begin{enumerate}
+        \item 证明数列 $\left\{a_n\right\}$ 为等比数列，并求它的通项公式；
+        \item 设 $b_n=n \cdot a_n$ ，求数列 $\left\{b_n\right\}$ 的前 $n$ 项和 $T_n$ ．
+    \end{enumerate}
+\end{example}
+
+\v{10em}
+
+\begin{example}
+    已知数列 $\left\{a_n\right\}$ 的前 $n$ 项和 $S_n=\frac{n^2+2 n}{2}$ ，数列 $\left\{b_n\right\}$ 的前 $n$ 项和 $T_n=2^n-1$ ．
+    \begin{enumerate}
+        \item 求 $\left\{a_n\right\}, ~\left\{b_n\right\}$ 的通项公式；
+        \item 若 $c_n=a_n b_n$ ，求 $\left\{c_n\right\}$ 的前 $n$ 项和 $P_n$ ．
+    \end{enumerate}
+\end{example}
+
+\v{12em}
+
+\subsection{苹果公式}
+
+苹果公式是解决错位相减的一种快速方法。
+
+\begin{theorem}[苹果公式]
+    若 $a_n=(a n+b) \cdot q^{n-1}$ ，则 $a_n$ 的前 $n$ 项和 $S_n=(A n+B) \cdot q^n-B$，其中：
+
+    $$A=\frac{a}{q-1}, B=\frac{b-A}{q-1}$$
+\end{theorem}
+
+\begin{example}
+    设 $\left\{a_n\right\}$ 是首项为 1 的等比数列，数列 $\left\{b_n\right\}$ 满足 $b_n=\frac{n a_n}{3}$ ，已知 $a_1, 3 a_2, 9 a_3$ 成等差数列．
+    \begin{enumerate}
+        \item （I）求 $\left\{a_n\right\}$ 和 $\left\{b_n\right\}$ 的通项公式；
+        \item （II）记 $S_n$ 和 $T_n$ 分别为 $\left\{a_n\right\}$ 和 $\left\{b_n\right\}$ 的前 $n$ 项和．证明：$T_n<\frac{S_n}{2}$ ．
+    \end{enumerate}
+\end{example}
+
+\v{10em}
+
+\begin{example}
+    （2021·浙江·20）已知数列 $\left\{a_n\right\}$ 的前 $n$ 项和为 $S_n, a_1=-\frac{9}{4}$ ，且 $4 S_{n+1}=3 S_n-91$ ．
+    \begin{enumerate}
+        \item 求数列 $\left\{a_n\right\}$ 的通项；
+        \item 数列 $\left\{b_n\right\}$ 满足 $3 b_n+(n-4) a_n=0$ ，记 $\left\{b_n\right\}$ 的前 $n$ 项和为 $T_n$ ，若 $T_n \leq \lambda b_n$ 对任意 $n \in \mathrm{~N}^*$ 恒成立，求 $\lambda$ 的范围。
+    \end{enumerate}
+\end{example}
+
+\begin{tips}
+    如果后面的不等式不会解也没事，先把 $T_n$ 求出来，这就是错位相减而已。
+\end{tips}
+
+\v{10em}
+
+\begin{example}
+    （2024·全国）已知等比数列 $\left\{a_n\right\}$ 的前 $n$ 项和为 $S_n$ ，且 $2 S_n=3 a_{n+1}-3$ ．
+    \begin{enumerate}
+        \item 求 $\left\{a_n\right\}$ 的通项公式；
+
+        \item 求数列 $\left\{S_n\right\}$ 的通项公式．
+    \end{enumerate}
+\end{example}
+
+\vspace{10em}
+
+\begin{example}
+    （2024·全国）记 $S_n$ 为数列 $\left\{a_n\right\}$ 的前 $n$ 项和，且 $4 S_n=3 a_n+4$ ．
+    \begin{enumerate}
+        \item 求 $\left\{a_n\right\}$ 的通项公式；
+
+        \item 设 $b_n=(-1)^{n-1} n a_n$ ，求数列 $\left\{b_n\right\}$ 的前 $n$ 项和为 $T_n$ ．
+    \end{enumerate}
+\end{example}
+
+\vspace{10em}
+
+\begin{example}
+    已知数列 $\left\{a_n\right\}$ 是首项为 $a_1=\frac{1}{4}$ ，公比 $q=\frac{1}{4}$ 的等比数列，设 $b_n+2=3 \log _{\frac{1}{4}} a_n\left(n \in \mathbf{N}^*\right)$ ，数列 $\left\{c_n\right\}$ 满足 $c_n=a_n \cdot b_n$.
+    \begin{enumerate}
+        \item 求数列 $\left\{b_n\right\}$ 的通项公式；
+        \item 设 $S_n$ 为数列 $\left\{c_n\right\}$ 的前 $n$ 项和，求 $S_n$ 的通项公式；
+        \item 若 $c_n \leq \frac{1}{4} m^2+m-1$ 对一切正整数 $n$ 恒成立，求实数 $m$ 的取值范围．
+    \end{enumerate}
+\end{example}
+
+\vspace{10em}
+
+\subsection{分组求和法}
+
+\begin{definition}[分组求和法]
+    该方法的核心思想是将复杂的求和问题转化为几个简单求和的组合。
+\end{definition}
+
+\begin{theorem}[分组求和法]
+    \begin{enumerate}
+        \item 将数列分解为更简单的数列之和：$a_n = b_n + c_n$
+        \item 分别计算各部分的和：$S_1 = \sum_{i=1}^n b_i$，$S_2 = \sum_{i=1}^n c_i$
+        \item 合并结果：$S = S_1 + S_2$
+    \end{enumerate}
+\end{theorem}
+
+\begin{example}
+    若 $a_n = 2n + 3^n$，求 $S_n$.
+\end{example}
+
+\begin{solution}
+    $S_n = \sum_{i=1}^n (2i + 3^i) = \sum_{i=1}^n 2i + \sum_{i=1}^n 3^i = n(n+1) + \frac{3(3^n-1)}{2}$
+\end{solution}
+
+\v{12em}
+
+\begin{example}
+    已知数列 $\left\{a_n\right\}$ 的通项公式为 $a_n=\frac{3^n-1}{3^n}$ ，前 $n$ 项和为 $S_n$ ，则下列结论正确的是 （\qquad）
+    \begin{tasks}(1)
+        \task $S_n>n-\frac{1}{2}$
+    \end{tasks}
+\end{example}
+
+\v{12em}
+
+\subsection{数列分奇偶项}
+
+\subsubsection{跳跃等差数列}
+
+
+
+\begin{example}
+    （2023·II 卷·18）已知 $\left\{a_n\right\}$ 为等差数列，$b_n=\left\{\begin{array}{l}a_n-6, n \text { 为奇数 } \\ 2 a_n, n \text { 为偶数 }\end{array}\right.$ ，记 $S_n, T_n$ 分别为数列 $\left\{a_n\right\}, ~\left\{b_n\right\}$ 的前 $n$ 项和，$S_4=32, T_3=16$ ．
+    \begin{enumerate}
+        \item 求 $\left\{a_n\right\}$ 的通项公式；
+        \item 证明：当 $n>5$ 时，$T_n>S_n$ ．
+    \end{enumerate}
+\end{example}
+
+\vspace{10em}
+
+\begin{example}
+    （2021·I卷·17）已知数列 $\left\{a_n\right\}$ 满足 $a_1=1, a_{n+1}=\left\{\begin{array}{l}a_n+1, n \text { 为奇数，} \\ a_n+2, n \text { 为偶数．}\end{array}\right.$
+    \begin{enumerate}
+        \item 记 $b_n=a_{2 n}$ ，写出 $b_1, b_2$ ，并求数列 $\left\{b_n\right\}$ 的通项公式；
+        \item 求 $\left\{a_n\right\}$ 的前 20 项和．
+    \end{enumerate}
+\end{example}
+
+\vspace{10em}
+
+\subsection{含绝对值的前 $n$ 项和}
+
+\begin{theorem}[等差数列中含绝对值的前 $n$ 项和]
+    数列 $\left\{a_n\right\}$ 为等差，前 $n$ 项和 ${ }^{+}$为 $S_n$ ，数列 $\left\{\left|a_n\right|\right\}$ 的前 $n$ 项和为 $T_n$ ：
+    \begin{itemize}
+        \item （1）找出 $a_n>0$ 和 $a_n<0$ 分界点 $n \leq k$ 和 $n \geq k+1$
+        \item （2）若公差 $\mathrm{d}<0, \quad T_n=\left\{\begin{array}{l}S_n ;(n \leq k) \\ 2 S_k-S_n ;(n \geq k+1)\end{array}\right.$若公差 $\mathrm{d}>0, \quad T_n=\left\{\begin{array}{l}-S_n ;(n \leq k) \\ S_n-2 S_k ;(n \geq k+1)\end{array}\right.$
+    \end{itemize}
+\end{theorem}
+
+\begin{example}
+    已知数列 $\left\{a_n\right\}$ 中，$a_1=-\frac{1}{5}, a_{n+1}=\frac{a_n}{2 a_n+1}$ ，记 $b_n=\frac{1}{a_n}$ ．
+    \begin{enumerate}
+        \item 求证：数列 $\left\{b_n\right\}$ 是等差数列，并求出 $b_n$ ；
+        \item 设 $T_n=\left|b_1\right|+\left|b_2\right|+\cdots+\left|b_n\right|$ ，求 $T_n$ ．
+    \end{enumerate}
+\end{example}
+
+\v{12em}
+
+\begin{example}
+    已知正项数列 $\left\{a_n\right\}$ 的前 $n$ 项和为 $S_n$ ，且 $a_n$ 和 $S_n$ 满足： $4 S_n=\left(a_n+1\right)^2(n=1,2,3 \cdots)$ ，
+    \begin{enumerate}
+        \item 求证：数列 $\left\{a_n\right\}$ 是等差数列；
+        \item 设 $b_n=12-a_n$ ，记 $T_n=\left|b_1\right|+\left|b_2\right|+\left|b_3\right|+\ldots+\left|b_n\right|$ ，求 $T_3$ 和 $T_{30}$ 的值．
+    \end{enumerate}
+\end{example}
+
+\v{12em}
+
+\begin{example}
+    已知数列 $\left\{a_n\right\}$ 的前 $n$ 项和 $S_n=n^2-7 n-8$ ．
+    \begin{enumerate}
+        \item 求 $\left\{a_n\right\}$ 的通项公式；
+        \item 求 $\left\{\left|a_n\right|\right\}$ 的前 $n$ 项和 $T_n$ ．
+    \end{enumerate}
+\end{example}
+
+\v{12em}

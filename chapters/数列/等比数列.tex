@@ -1,0 +1,327 @@
+\section{等比数列}
+
+\subsection{等比数列的通项公式 $a_n$}
+
+\begin{definition}
+    如果一个数列从第二项起，每一项与它的前一项的比等于同一个非零常数，这个数列就叫做等比数列，这个常数叫做等比数列的公比，通常用字母 $q$ 表示。
+\end{definition}
+
+\begin{theorem}
+    等比数列的通项公式为 $a_n = a_1 q^{n-1}$。
+
+    推导过程使用累乘法：
+    $$
+        \begin{cases}
+            a_n     & = a_{n-1} q \\
+            a_{n-1} & = a_{n-2} q \\
+            \vdots                \\
+            a_3     & = a_2 q     \\
+            a_2     & = a_1 q     \\
+            a_1     & = a_1
+        \end{cases}
+    $$
+
+    左边全部乘起来=右边全部乘起来，约掉多余的项可得：
+    $$a_n=a_1 q^{n-1}$$
+\end{theorem}
+
+\begin{problem}
+首项是 $7$，公比是 $\frac{\sqrt{2}}{3}$ 的等比数列的通项公式如何表达？
+\end{problem}
+
+\v{4em}
+
+\begin{example}
+    在等比数列 $\{a_n\}$ 中，已知 $a_2 = 10$，$a_5 = 80$。求其前6项和 $S_6$ 的值。
+\end{example}
+
+\v{6em}
+
+\begin{example}
+    在各项均为正数的等比数列 $\{a_n\}$ 中，若 $a_3 a_7 = 16$，则 $a_5$ 的值为（\qquad）
+    \begin{tasks}(4)
+        \task 2
+        \task 4
+        \task 8
+        \task 16
+    \end{tasks}
+\end{example}
+
+\v{6em}
+
+\begin{example}
+    已知一个等比数列的前3项之和为7，前6项之和为63。求该数列的公比 $q$。
+\end{example}
+
+\v{6em}
+
+\begin{example}
+    在等比数列 $\{a_n\}$ 中，已知 $a_2 \cdot a_6 = 48$ 且 $a_4 \cdot a_{10} = 192$。求该数列的公比 $q$。
+\end{example}
+
+\begin{solution}
+    设等比数列的首项为 $a_1$，公比为 $q$，则：
+    \begin{align}
+        a_2 \cdot a_6    & = a_1q^1 \cdot a_1q^5 = a_1^2q^6 = 48     \\
+        a_4 \cdot a_{10} & = a_1q^3 \cdot a_1q^9 = a_1^2q^{12} = 192
+    \end{align}
+
+    由上述两式相除：
+    \begin{align}
+        \frac{a_1^2q^{12}}{a_1^2q^6} = \frac{192}{48} \quad \Rightarrow \quad q^6 = 4
+    \end{align}
+\end{solution}
+
+\v{2em}
+
+\begin{example}
+    解决：
+    \begin{enumerate}
+        \item 已知在等比数列 $\left\{a_n\right\}$ 中，$a_3 a_{11}=4 a_7$ ，数列 $\left\{b_n\right\}$ 是等差数列，且 $b_7=a_7$ ，求 $b_5+b_9$ 的值；
+
+        \item 已知在等比数列 $\left\{a_n\right\}$ 中，$a_1 a_2 a_3 a_4=1, ~ a_{13} a_{14} a_{15} a_{16}=8$ ，求 $a_{41} a_{42} a_{43} a_{44}$ 的值；
+    \end{enumerate}
+\end{example}
+
+\v{8em}
+
+\subsection{等比数列的前 $n$ 项和 $S_n$}
+
+\begin{definition}
+    等比数列的前 $n$ 项和
+    $$
+        S_n =
+        \begin{cases}
+            na_1,                   & \text{当 } q=1 \text{ 时}      \\
+            \\
+            \frac{a_1(1-q^n)}{1-q}, & \text{当 } q \neq 1 \text{ 时}
+        \end{cases}
+    $$
+\end{definition}
+
+\begin{theorem}
+    其前 $n$ 项和 $S_n$ 为：
+    \begin{equation}
+        S_n = a_1 + a_1q + a_1q^2 + \dots + a_1q^{n-1} \label{eq:1}
+    \end{equation}
+
+    使用“错位相减法”来推导其求和公式。
+
+    将等式 \eqref{eq:1} 的两边同时乘以公比 $q$，得到一个新的等式：
+    \begin{equation}
+        qS_n = a_1q + a_1q^2 + a_1q^3 + \dots + a_1q^n \label{eq:2}
+    \end{equation}
+
+    现在，我们将等式 \eqref{eq:1} 与等式 \eqref{eq:2} 相减，即执行操作 $(1) - (2)$，可得：
+    $$ (1-q)S_n = a_1 - a_1q^n \quad \Rightarrow \quad S_n = \frac{a_1(1-q^n)}{1-q} , \quad \text{此时假设了} q \neq 1$$
+
+    当公比 $q=1$ 时，数列的每一项都等于首项 $a_1$。此时，前 $n$ 项和为 $n$ 个 $a_1$ 相加：
+    $$ S_n = \underbrace{a_1 + a_1 + \dots + a_1}_{n \text{ 个}} = na_1 $$
+\end{theorem}
+
+\begin{example}
+    已知数列 $\left\{a_n\right\}$ 的首项为 1 ，前 $n$ 项和为 $S_n$ ，且 $a_{n+1}=2 S_n$ ，则 （\qquad）
+    \begin{tasks}(2)
+        \task 数列 $\left\{a_n\right\}$ 是等比数列
+        \task $\left\{S_n\right\}$ 是等比数列
+        \task $a_5=54$
+        \task 数列 $\left\{\log _3 S_n\right\}$ 的前 $n$ 项和为 $\frac{n(n-1)}{2}$
+    \end{tasks}
+\end{example}
+
+\begin{tips}
+    这题求出的数列有坑，注意要检验 $n = 1$ 是否满足？
+\end{tips}
+
+\v{10em}
+
+\subsection{无穷等比数列各项的和}
+
+\begin{theorem}[无穷等比数列各项的和]
+    如果一个等比数列的公比 $q$ 满足 $|q| < 1$，则该数列的各项和为：
+    $$ S = \frac{a_1}{1-q} $$
+
+    其中，$a_1$ 是该等比数列的首项。
+\end{theorem}
+
+\begin{example}
+    在各项均为正数的等比数列 $\left\{a_n\right\}$ 中，前 $n$ 项和为 $S_n$ ，满足 $\lim _{n \rightarrow+\infty} S_n=\frac{2}{a_1}$ ，那么 $a_1$ 的取值范围是 \underline{\qquad}.
+\end{example}
+
+\v{6em}
+
+\begin{example}
+    已知无穷数列 $\left\{a_n\right\}$ 满足 $a_{n+1}=\frac{1}{2} a_n$（ $n$ 为正整数），且 $a_1=2$ ，则 $\sum_{i=1}^{+\infty} a_i=$ \underline{\qquad}
+\end{example}
+
+\v{6em}
+
+\begin{example}
+    无穷等比数列 $\left\{a_n\right\}$ 满足：$a_1+a_2=1, ~ a_3+a_4=\frac{1}{4}$ ，则 $\left\{a_n\right\}$ 的各项和为 \underline{\qquad}
+\end{example}
+
+\v{6em}
+
+\subsection{等比数列的下标和性质}
+
+\begin{theorem}[等比数列下标和]
+    若 $m+n=p+q$，则 $a_m \cdot a_n = a_p \cdot a_q$。
+
+    \textbf{证明：}
+    根据等比数列通项公式：
+    \begin{align}
+        a_m \cdot a_n & = [a_1 q^{m-1}] \cdot [a_1 q^{n-1}] \\
+                      & = a_1^2 \cdot q^{m+n-2}
+    \end{align}
+
+    同理：
+    \begin{align}
+        a_p \cdot a_q & = [a_1 q^{p-1}] \cdot [a_1 q^{q-1}] \\
+                      & = a_1^2 \cdot q^{p+q-2}
+    \end{align}
+
+    由于 $m+n=p+q$，所以 $a_m \cdot a_n = a_p \cdot a_q$。
+
+\end{theorem}
+
+\begin{example}
+    在等比数列 $\left\{a_n\right\}$ 中，$a_3, a_{15}$ 是方程 $2 x^2+11 x+8=0$ 的两根，则 $\frac{a_2 a_{16}}{a_9}$ 的值为 （\qquad）
+    \begin{tasks}(4)
+        \task -4
+        \task -2 或 2
+        \task -2
+        \task 2
+    \end{tasks}
+\end{example}
+
+\v{8em}
+
+\begin{example}
+    在各项均为正数的等比数列 $\left\{a_n\right\}$ 中，若 $a_5 a_6=9$ ，求 $\log _3 a_1+\log _3 a_2+\cdots+\log _3 a_{10}$ 的值.
+\end{example}
+
+\v{8em}
+
+\begin{example}
+    在正项等比数列 $\left\{a_n\right\}$ 中，$a_5^2+2 a_2 a_{12}+a_9^2=100$ ，则 $a_5+a_9=$ \underline{\qquad}．
+\end{example}
+
+\v{6em}
+
+\subsection{等比中项}
+
+\begin{definition}
+    在三个正数 $a$, $b$, $c$ 之间，如果 $b^2 = ac$，则称 $b$ 是 $a$ 和 $c$ 的等比中项。
+\end{definition}
+
+\begin{theorem}
+    若 $a$, $b$, $c$ 成等比数列，则 $b^2 = ac$。
+
+    若 $a$, $b_1$, $b_2$, $\ldots$, $b_n$, $c$ 成等比数列，则有：
+    \begin{align}
+        b_1 \cdot b_2 \cdot \ldots \cdot b_n = (ac)^{\frac{n}{2}}
+    \end{align}
+\end{theorem}
+
+\begin{example}
+    在等比数列 $\{a_n\}$ 中，$a_3 = 4$，$a_7 = 64$。求 $a_5$ 的值。
+\end{example}
+
+\v{6em}
+
+\begin{example}
+    已知正数 $x$, $y$, $z$ 成等比数列，且 $x + z = 5$, $y = 2$。求 $x$ 和 $z$ 的值。
+\end{example}
+
+\v{6em}
+
+\begin{example}
+    在各项均为正数的等比数列 $\{a_n\}$ 中，若 $a_3 a_7 = 16$，则 $a_5$ 的值为（\qquad）
+    \begin{tasks}(4)
+        \task 2
+        \task 4
+        \task 8
+        \task 16
+    \end{tasks}
+\end{example}
+
+\v{6em}
+
+\begin{example}
+    已知正项等差数列 $\left\{a_n\right\}$ 满足 $3 a_n=a_{3 n}$ ，且 $a_4$ 是 $a_3-3$ 与 $a_8$ 的等比中项，则 $a_3=$ （\qquad）
+    \begin{tasks}(4)
+        \task 3
+        \task 6
+        \task 9
+        \task 12
+    \end{tasks}
+\end{example}
+
+\v{6em}
+
+\subsection{证明一个数列是等比数列}
+
+\begin{theorem}
+    \begin{itemize}
+        \item 需要严格证明后一项和前一项的比为定值，这才是等比数列的基础概念。
+        \item 或者证明等比中项的式子 $a_{n+1}^2 = a_n a_{n+2}$
+    \end{itemize}
+\end{theorem}
+
+\begin{example}
+    （2016•新课标III，理 17）已知数列 $\left\{a_n\right\}$ 的前 $n$ 项和 $S_n=1+\lambda a_n$ ，其中 $\lambda \neq 0$ ．
+
+    证明 $\left\{a_n\right\}$ 是等比数列，并求其通项公式；
+\end{example}
+
+\vspace{10em}
+
+\subsection{回顾：等差与等比的异同}
+
+\begin{tabular}{|l|l|l|}
+    \hline     & 等 差 数 列                                                             & 等 比 数 列                                          \\
+    \hline 定 义 & 从第二项起，每一项与它的前一项的差等于常数                                               & 从第二项起，每一项与它的前一项的比等于常数                            \\
+    \hline 通项  & $a_n=\underline{\qquad \qquad}=a_m+(n-m) d$                         & $a_n=\underline{\qquad \qquad}=a_m q^{n-m}$      \\
+    \hline 中项  & 如果 $a, b, c$ 成等差数列，则 \underline{$\qquad \qquad$}                    & 如果 $a, b, c$ 成等比数列，则 \underline{$\qquad \qquad$} \\
+    \hline 和   & \begin{tabular}{l}
+                     $S_n=$
+                     $na_1 + \frac{n(n-1)d}{2}$ \\
+                     $=\frac{d}{2} n^2+\left(a_1-\frac{d}{2}\right) n$
+                 \end{tabular}              & \begin{tabular}{l}
+                                                  $S_n
+                                                      = \begin{cases}
+                  na_1,                 & q=1      \\
+                  a_1\frac{1-q^n}{1-q}, & q \neq 1
+              \end{cases}$
+                                              \end{tabular}                                                              \\
+    \hline 性质  & \begin{tabular}{l}
+                     若 $m+n=p+q$ 则 \underline{$\qquad \qquad$} \\
+                 \end{tabular}                        & \begin{tabular}{l}
+                                                            若 $m+n=p+q$ 则 \underline{$\qquad \qquad$} \\
+                                                        \end{tabular}                                       \\
+    \hline 常数列 & \multicolumn{2}{|l|}{当 $d=0, q=1$ 时，$a_n$ 为常数列。即：常数列即是等差数列，也是等比数列。}                                                    \\
+    \hline
+\end{tabular}
+
+\v{2em}
+
+\begin{example}
+    （2020·浙江·20）
+    $$
+        a_1=b_1=c_1=1, c_n=a_{n+1}-a_n, c_{n+1}=\frac{b_n}{b_{n+2}} \cdot c_n\left(n \in \mathbf{N}^*\right)
+    $$
+
+    若数列 $\left\{b_n\right\}$ 为等比数列，且公比 $q>0$ ，且 $b_1+b_2=6 b_3$ ，求 $q$ 与 $a_n$ 的通项公式；
+\end{example}
+
+\vspace{10em}
+
+\begin{example}
+    （2020·天津•19）已知 $\left\{a_n\right\}$ 为等差数列，$\left\{b_n\right\}$ 为等比数列，$a_1=b_1=1, a_5=5\left(a_4-a_3\right), b_5=4\left(b_4-b_3\right)$ ．
+    \begin{enumerate}
+        \item 求 $\left\{a_n\right\}$ 和 $\left\{b_n\right\}$ 的通项公式；
+        \item 记 $\left\{a_n\right\}$ 的前 $n$ 项和为 $S_n$ ，求证：$S_n S_{n+2}<S_{n+1}^2\left(n \in \mathbf{N}^*\right)$
+    \end{enumerate}
+\end{example}
+
+\vspace{10em}

@@ -8,15 +8,7 @@ def process_tex_file(filepath):
     with open(filepath, 'r', encoding='utf-8') as f:
         content = f.read()
 
-    # --- 1. 定义多子问题大题的正则表达式和替换函数 (已修改) ---
-    # 旧的正则表达式过于复杂，对每个子问题的结尾都进行判断，容易因格式不规范而出错。
-    # 新的正则表达式采用更稳健的策略：
-    # 1. 匹配主问题行。
-    # 2. 匹配一个必须以子问题“（数字）”开头的文本块。
-    # 3. 使用前瞻（lookahead）来确定这个文本块的结束位置，即下一个主问题或文件末尾。
-    # 这样大大简化了模式，并能更好地处理包含2个、3个或更多子问题的各种情况。
     multi_part_pattern = re.compile(
-        # Group 1: 大题题号, Group 2: 大题题干
         r'^\s*(\d+)[．.]\s*(.*?)\s*\n' +
 
         # Group 3: 捕获整个子问题块。
@@ -38,10 +30,7 @@ def process_tex_file(filepath):
         main_stem = match.group(2).strip() # 大题题干
         sub_questions_block = match.group(3).strip() # 整个子问题块
 
-        # 子问题解析器：现在可以同时处理“（1）”和“1.”两种格式
-        # 这个解析器无需修改，因为它能很好地处理传入的、边界正确的文本块。
         sub_q_parser_pattern = re.compile(
-            # 使用 ^ 和 MULTILINE 来匹配块中每一行的开头
             r'^\s*(?:（(\d+)）|(\d+)\.)\s*([\s\S]*?)(?=\n\s*(?:（\d+）|\d+\.)|\Z)',
             re.MULTILINE
         )
@@ -68,10 +57,8 @@ def process_tex_file(filepath):
         )
         return new_format
 
-    # --- 2. 定义单选题的正则表达式和替换函数 (已还原为用户提供的版本) ---
     single_choice_pattern = re.compile(
         r'^\s*(\d+)[．.]\s*(.*?)\s*（\s*\）\s*\n+'  # 行首可选空白，题号（捕获组1），中英文句号，可选空白，
-                                                 # 题干（捕获组2），可选空白，匹配原题中的（ ）及其内部空白，至少一个换行符
         r'(?:\s*A[．.]\s*([\s\S]*?)\n)'           # 选项 A (捕获组3)，匹配内容直到换行符
         r'(?:\s*B[．.]\s*([\s\S]*?)\n)'           # 选项 B (捕获组4)
         r'(?:\s*C[．.]\s*([\s\S]*?)\n)'           # 选项 C (捕获组5)
@@ -101,13 +88,9 @@ def process_tex_file(filepath):
         )
         return new_format
 
-    # --- 3. 应用替换规则 ---
-    # 优先处理多子问题大题，因为其模式更具体
     processed_content = multi_part_pattern.sub(replacement_func_multi_part, content)
-    # 然后处理单选题
     processed_content = single_choice_pattern.sub(replacement_func_single_choice, processed_content)
 
-    # 如果内容有变化，则写入文件
     if processed_content != content:
         print(f"检测到并修改文件: {filepath}")
         with open(filepath, 'w', encoding='utf-8') as f:

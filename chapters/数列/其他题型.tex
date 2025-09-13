@@ -1,0 +1,126 @@
+\section{其他题型}
+
+\subsection{超纲的裂项相消}
+
+\subsection{数列放缩}
+
+\begin{definition}[数列放缩]
+    把每一项放缩成可以裂项的形式，就能把大部分东西减掉。
+\end{definition}
+
+\begin{example}
+    求证：$\frac{1}{1^2}+\frac{1}{2^2}+\cdots+\frac{1}{n^2}<2$．
+\end{example}
+
+\begin{proof}
+    这里只要放缩 $n^2 > n(n-1)$ 即可。
+\end{proof}
+
+\v{8em}
+
+\begin{example}
+    求证：$\frac{1}{1^2}+\frac{1}{2^2}+\cdots+\frac{1}{n^2}<\frac{5}{3}$ ．
+\end{example}
+
+\begin{proof}
+    这里精度更高了，需要放缩成 $n^2 > n(n-\frac{1}{4})$.
+\end{proof}
+
+\v{8em}
+
+\subsubsection{通过调整起始项放缩}
+
+调整放缩的起始位置，可以让放缩的精度变高。
+
+\begin{example}
+    求证：$\frac{1}{1^2}+\frac{1}{2^2}+\cdots+\frac{1}{n^2}<\frac{33}{20}$ ．
+\end{example}
+
+\begin{proof}
+    这道题在刚刚的基础保留前两项即可.
+\end{proof}
+
+\v{8em}
+
+\begin{example}
+    \begin{itemize}
+        \item （1）求证：$\frac{1}{5^2}+\frac{1}{7^2}+\cdots+\frac{1}{(2 n+3)^2}<\frac{1}{7}$ ；
+        \item （2）求证：$\frac{1}{5^2}+\frac{1}{7^2}+\cdots+\frac{1}{(2 n+3)^2}<\frac{1}{8}$ ；
+        \item （3）求证：$\frac{1}{5^2}+\frac{1}{7^2}+\cdots+\frac{1}{(2 n+3)^2}<\frac{37}{300}$ ．
+    \end{itemize}
+\end{example}
+
+\begin{proof}
+    （1）因为 $(2 n+3)^2>(2 n+1)(2 n+3)$ ，则 $\frac{1}{(2 n+3)^2}<\frac{1}{2}\left(\frac{1}{2 n+1}-\frac{1}{2 n+3}\right)$，所以：
+
+    $$\frac{1}{5^2}+\frac{1}{7^2}+\cdots+\frac{1}{(2 n+3)^2}<\frac{1}{5^2}+\frac{1}{2}\left(\frac{1}{5}-\frac{1}{7}+\frac{1}{7}-\frac{1}{9}+\cdots+\frac{1}{2 n-1}-\frac{1}{2 n+1}+\frac{1}{2 n+1}-\frac{1}{2 n+3}\right) =\frac{1}{25}+\frac{1}{2}\left(\frac{1}{5}-\frac{1}{2 n+3}\right)<\frac{1}{7}.$$
+
+    （2）因为 $(2 n+3)^2>(2 n+2)(2 n+4)=4(n+1)(n+2)$ ，
+    则 $\frac{1}{(2 n+3)^2}<\frac{1}{4}\left(\frac{1}{n+1}-\frac{1}{n+2}\right)$
+
+    $$\therefore \frac{1}{5^2}+\frac{1}{7^2}+\cdots+\frac{1}{(2 n+3)^2}<\frac{1}{4}\left(\frac{1}{2}-\frac{1}{3}+\frac{1}{3}-\frac{1}{5}+\cdots+\frac{1}{n+1}-\frac{1}{n+2}\right) =\frac{1}{4}\left(\frac{1}{2}-\frac{1}{n+2}\right)=\frac{1}{8}-\frac{1}{4(n+2)}<\frac{1}{8}.$$
+
+    （3）因为
+    $(2 n+3)^2>(2 n+2)(2 n+4)=4(n+1)(n+2)$ ，则 $\frac{1}{(2 n+3)^2}<\frac{1}{4}\left(\frac{1}{n+1}-\frac{1}{n+2}\right)$ ，
+
+    $$
+        \begin{aligned}
+             & \therefore \frac{1}{5^2}+\frac{1}{7^2}+\cdots+\frac{1}{(2 n+3)^2}<\frac{1}{5^2}+\frac{1}{4}\left(\frac{1}{3}-\frac{1}{5}+\frac{1}{5}-\frac{1}{7}+\cdots+\frac{1}{n+1}-\frac{1}{n+2}\right) \\
+             & =\frac{1}{5^2}+\frac{1}{4}\left(\frac{1}{3}-\frac{1}{n+2}\right)=\frac{1}{25}+\frac{1}{12}-\frac{1}{4(n+2)}=\frac{37}{300}-\frac{1}{4(n+2)}<\frac{37}{300}
+        \end{aligned}
+    $$
+\end{proof}
+
+\subsection{特殊的数列问题}
+
+\begin{example}
+    记 $S_n$ 为数列 $\left\{a_n\right\}$ 的前 $n$ 项和，已知 $S_n=\frac{a_n}{2}+n^2+1, n \in \mathbf{N}^*$ ．
+    \begin{enumerate}
+        \item 求 $a_1+a_2$ ，并证明 $\left\{a_n+a_{n+1}\right\}$ 是等差数列；
+        \item 求 $S_{20}$ ．
+    \end{enumerate}
+\end{example}
+
+\v{10em}
+
+\begin{example}
+    已知数列 $\left\{a_n\right\}$ 的前 $n$ 项和为 $S_n$ ，若 $a_1=19, a_2=17, S_{n+1}+S_{n-1}=2\left(S_n-1\right)(n \geq 2)$ ，则下列说法正确的是 （\qquad）
+    \begin{tasks}(2)
+        \task $\left\{a_n\right\}$ 是递减数列
+        \task 数列 $\left\{S_n\right\}$ 中的最小项为 $S_{10}$
+        \task 数列 $\left\{\frac{S_n}{n}\right\}$ 是等差数列
+        \task! 设 $b_n=a_n a_{n+1} a_{n+2}$ ，则当 $n=8$ 或 $n=10$ 时数列 $\left\{b_n\right\}$ 的前 $n$ 项和取最大值
+    \end{tasks}
+\end{example}
+
+\v{12em}
+
+\subsection{数列的新定义问题}
+
+\begin{example}
+    若存在常数 $t$ ，使得数列 $\left\{a_n\right\}$ 满足
+    $a_{n+1}-a_1 a_2 a_3 \ldots a_n=t(n \geqslant 1, n \in N)$ ，则称数列 $\left\{a_n\right\}$ 为＂$H(t)$ 数列＂．
+    \begin{enumerate}
+        \item 判断数列： $1,2,3,8,49$ 是否为＂$H$（1）数列＂，并说明理由；
+        \item 若数列 $\left\{a_n\right\}$ 是首项为 2 的＂$H(t)$ 数列＂，数列 $\left\{b_n\right\}$ 是等比数列，且 $\left\{a_n\right\}$ 与 $\left\{b_n\right\}$ 满足 $\sum_{i=1}^n a_i^2=a_1 a_2 a_3 \cdots a_n+\log _2 b_n$ ，求 $t$ 的值和数列 $\left\{b_n\right\}$的通项公式；
+    \end{enumerate}
+\end{example}
+
+\v{10em}
+
+\subsection{数列大题倒写}
+
+\begin{example}
+    $a_1=1, a_2=2, a_{n+2}=\frac{a_{n+1}+a_n}{2}, n \in N^{+}$，设 $b_n=a_{n+1} - a_n$，其中 $\left\{b_n\right\}$ 是等比数列.
+\end{example}
+
+\begin{solution}
+    根据等比数列，可以设 $\frac{b_n}{b_n-1}=q$，求得：$b_2=-\frac{1}{2}, b_1=1, q=-\frac{1}{2}$．
+    $$
+        \begin{aligned}
+             & \therefore a_{n+1}-a_n=-\frac{1}{2}\left(a_n-a_{n-1}\right) \\
+             & \therefore 2 a_{n+1}=a_n+a_{n-1}
+        \end{aligned}
+    $$
+    整理过程一目了然.
+\end{solution}

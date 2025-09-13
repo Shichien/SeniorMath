@@ -1,26 +1,54 @@
-\subsection{万能公式}
-\begin{theorem}
-    $$\sin x = \frac{2t}{1+t^2},\ \ \cos x = \frac{1-t^2}{1+t^2},\ \ \tan x = \frac{2t}{1-t^2}$$
-    所有的三角函数都可以表示为$\tan(x/2)$的有理函数，大大简化了问题。
-\end{theorem}
+\section{三角函数线}
 
-\subsection{积化和差}
-\begin{theorem}[积化和差公式]
-    $$\sin a\sin b = -\frac{1}{2}\left[\cos(a+b)-\cos(a-b)\right], \quad
-        \cos a\cos b = \frac{1}{2}\left[\cos(a+b)+\cos(a-b)\right]$$
-    $$\sin a\cos b = \frac{1}{2}\left[\sin(a+b)+\sin(a-b)\right]$$
-\end{theorem}
+\begin{definition}[任意角的三角函数定义]
+    设角 $\alpha$ 的顶点为坐标原点，始边为 $x$ 轴的非负半轴，终边上任意一点 $P$ 的坐标为 $(x, y)$，它与原点的距离为 $r = \sqrt{x^2+y^2}$ ($r>0$)，则：
+    $$\sin\alpha = \frac{y}{r}, \quad \cos\alpha = \frac{x}{r}, \quad \tan\alpha = \frac{y}{x}$$
+    \textbf{全是天才：一句话记忆象限}
+\end{definition}
 
-\subsection{和差化积}
-\begin{theorem}[和差化积公式]
-    $$\sin a+\sin b = 2\sin \frac{a+b}{2}\cos \frac{a-b}{2}, \quad
-        \sin a-\sin b = 2\cos \frac{a+b}{2}\sin \frac{a-b}{2}$$
-    $$\cos a+ \cos b = 2\cos \frac{a+b}{2}\cos \frac{a-b}{2}, \quad
-        \cos a- \cos b = -2\sin \frac{a+b}{2}\sin \frac{a-b}{2}$$
-\end{theorem}
+\begin{figure}[H]
+    \centering
+    \begin{tikzpicture}[scale=1]
+        \draw (0,0) circle (2);
+        \coordinate (origo) at (0,0);
+        \coordinate[label = above left:$P$] (P) at (1,{sqrt(3)});
+        \draw[thick,->] (origo) -- ++(3,0) node[black,right] (xaxis){$x$};
+        \draw[thick,gray,->] (origo) -- ++(0,3) node (mary) [black,above] {$y$};
+        \draw[thick] (origo) -- ++(60:2) coordinate (bob);
+        \pic [draw, ->, red, angle eccentricity=2] {angle = xaxis--origo--bob} node[left, color=red] {$\theta$};
+        \draw[blue, ->] (1,{sqrt(3)}) -- (1,0);
+        \draw[cyan, ->] (1,{sqrt(3)}) -- (0,{sqrt(3)});
+        \node[color=cyan] at (-0.5,{sqrt(3)}) {$\cos \theta$};
+        \node[color=blue] at (1,-0.3) {$\sin \theta$};
+        \draw[black,dotted] (-2,2)--(3,2);
+        \draw[black,dotted] ({2*sqrt(3)/3},2)--(1,{sqrt(3)});
+        \draw[brown,->] ({2*sqrt(3)/3},2)--({2*sqrt(3)/3},0);
+        \node[color=brown] at (1.6,1) {$\tan \theta$};
+        \node at (P)[circle,fill,inner sep=2pt]{};
+    \end{tikzpicture}
+    \caption{三角函数线}
+\end{figure}
 
 \subsection{反三角函数}
 
 \begin{definition}[反三角表示法]
     指的是当某个角的特殊值不能被直接算出来时，使用 $arc$ 来表示角。
 \end{definition}
+
+\begin{problem}
+\begin{itemize}
+    \item 请问 $arccos\frac{1}{2}$ 表示的角是什么？
+    \item 请问 $arctanln2$ 表示什么？
+\end{itemize}
+\end{problem}
+
+\begin{example}
+    已知角 $\alpha$ 的终边经过点 $P(-3, 4)$，求 $\sin\alpha$, $\cos\alpha$, $\tan\alpha$ 的值。
+\end{example}
+
+\begin{solution}
+    点 $P(-3, 4)$ 中，$x=-3, y=4$，所以 $r = \sqrt{(-3)^2 + 4^2} = \sqrt{9+16} = \sqrt{25} = 5$。
+    $$\sin\alpha = \frac{y}{r} = \frac{4}{5}, \quad \cos\alpha = \frac{x}{r} = -\frac{3}{5}, \quad \tan\alpha = \frac{y}{x} = -\frac{4}{3}$$
+\end{solution}
+
+\vspace{2em}

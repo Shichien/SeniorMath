@@ -1,0 +1,113 @@
+\section{特殊公式}
+
+\subsection{万能公式}
+
+\begin{theorem}[万能公式]
+    $$\sin x = \frac{2t}{1+t^2},\ \ \cos x = \frac{1-t^2}{1+t^2},\ \ \tan x = \frac{2t}{1-t^2}$$
+    所有的三角函数都可以表示为$\tan(x/2)$的有理函数，大大简化了问题。
+\end{theorem}
+
+\def\scala{2.5}
+\tikzstyle{background rectangle}=
+[thick,draw=black, fill=white, rounded corners]
+
+\begin{center}
+    \begin{tikzpicture}[show background rectangle, >=latex, font=\footnotesize, scale=\scala]
+
+
+        %Koordinaten
+        \coordinate (O) at (0,0);
+        \coordinate (L) at ($({cos(50)},{0})$);
+        \coordinate (P) at ($({cos(50)},{sin(50)})$);
+        \coordinate (Q) at (-1,0);
+        \coordinate (U) at ($({0},{tan(50/2)})$);
+        \coordinate (U1) at (-0.5,0.5);
+        \coordinate (U2) at ($({0},{tan(50/2)/2})$);
+        \coordinate (T) at ($({1},{tan(50)})$);
+        \coordinate (F) at (1,0);
+
+        \draw[very thin] ([shift=(-55:1)]O) arc (-55:225:1); %Bogen mit Zentrum (0,0)
+
+        \draw[thin, ->] (-1.25,0) -- (1.25,0) node[]{$$};
+        \draw[thin, ->] (0,-1.0) -- (0,1.25) node[]{$$};
+        \draw[] (1,2pt/\scala) -- (1,-2pt/\scala) node[right=5pt, below]{$1$};
+        \draw[] (-1,2pt/\scala) -- (-1,-2pt/\scala) node[left=7.5pt, below]{$-1$};
+        \draw[] (2pt/\scala,1) -- (-2pt/\scala,1) node[left=5pt, above]{$1$};
+
+        \draw[] (O) -- (P) node[midway, below, sloped]{$$};
+
+        \draw[] (Q) -- (P) node[]{$$};
+
+        \draw[very thick] (O) -- (U) node[midway, right, yshift=7.5pt, xshift=-2.5pt]{$\mathbf{u}$};
+
+        \draw[very thin, shorten >=2.0pt, shorten <=4.5pt] (U1)--([yshift=2.5pt]U2) node[above=-6pt, pos=0, xshift=2.5pt]{$u = \tan\left(\frac{x}{2}\right)$};
+
+        \draw[very thick] (O) -- (L) node[midway, below, xshift=7.5pt]{$\cos(x)=\frac{1-u^2}{1+u^2}$};
+
+        \draw[very thick] (P) -- (L) node[fill=white!99!black, align=left, midway, right=-3pt, yshift=4.5pt]{$\sin(x)$ \\ \tiny$=\!\frac{2u}{1+u^2}$};
+        \draw[very thick] (P) -- (L);
+
+        \draw[very thick] (T) -- (F) node[midway, right]{$\tan(x) = \frac{2u}{1-u^2}$};
+
+        \draw[densely dashed,shorten >= -10pt] (P) -- (T) node[]{$$};
+
+        \draw[very thin] ([shift=(0:0.25)]O) arc (0:50:0.25) node[left=-2pt, below=2pt]{$x$};
+
+        \draw[very thin] ([shift=(0:0.5)]Q) arc (0:25:0.5) node[xshift=-0.4cm, yshift=-0.35cm]{$x/2$};
+
+        %Hilfswinkel
+        %\draw[very thin] ([shift=(205:0.4)]P) arc (205:230:0.4) node[xshift=0.15cm, yshift=0.4cm]{$\varrho$};
+        %\draw[<->, very thin] ([shift=(50:0.25)]O) arc (50:180:0.25) node[xshift=0.0cm, yshift=0.5cm]{$\chi$};
+
+        \draw[very thin] ([shift=(90:0.15)]L) arc (90:180:0.15) node[xshift=0.25cm, yshift=0.15cm]{\Large$\cdot$};
+
+        %Punkte
+        \draw[] plot[mark=*, mark size=1.5pt/\scala, mark options={fill=white}] coordinates{(O)} node[left=5pt, below]{$$};
+        \draw[] plot[mark=*, mark size=1.5pt/\scala, mark options={fill=white}] coordinates{(L)} node[left]{$$};
+        \draw[] plot[mark=*, mark size=1.5pt/\scala, mark options={fill=white}] coordinates{(P)} node[above]{$$};
+        \draw[] plot[mark=*, mark size=1.5pt/\scala, mark options={fill=white}] coordinates{(Q)} node[above=5pt, left]{$$};
+        \draw[] plot[mark=*, mark size=1.5pt/\scala, mark options={fill=white}] coordinates{(U)} node[below=5pt, right]{$$};
+        \draw[] plot[mark=*, mark size=1.5pt/\scala, mark options={fill=white}] coordinates{(T)} node[below=5pt, right]{$$};
+        \draw[] plot[mark=*, mark size=1.5pt/\scala, mark options={fill=white}] coordinates{(F)} node[below=5pt, right]{$$};
+
+        %Infobox
+        \node[draw] at (3.5,0) {$%
+                \begin{array}{lll}
+                    u = \tan\left(\dfrac{x}{2}\right), & x = 2 \cdot \arctan(u)          & \\ \\
+                    \sin(x) = \dfrac{2u}{1+u^2},
+                                                       & \cos(x) = \dfrac{1-u^2}{1+u^2},
+                                                       & \tan(x) = \dfrac{2u}{1-u^2}       \\ \\
+                    dx = \dfrac{2}{1+u^2} ~ du
+                \end{array}
+            $};
+    \end{tikzpicture}
+\end{center}
+
+\begin{example}
+    高中数学中＂万能公式＂因其用半角的正切表示正弦、余弦、正切，而被我们称之为＂万能＂，例如：
+    $$\sin \alpha=\frac{\sin \alpha}{1}=\frac{2 \sin \frac{\alpha}{2} \cos \frac{\alpha}{2}}{\sin ^2 \frac{\alpha}{2}+\cos ^2 \frac{\alpha}{2}}=\frac{2 \tan \frac{\alpha}{2}}{1+\tan ^2 \frac{\alpha}{2}}(\alpha \neq \pi+2 k \pi(k \neq 0))$$
+    根据以上数学变形转换方法，运用类比的方法解答下题．
+    \begin{enumerate}
+        \item 试推导 $\cos \alpha=\frac{1-\tan ^2 \frac{\alpha}{2}}{1+\tan ^2 \frac{\alpha}{2}}, ~ \tan \alpha=\frac{2 \tan \frac{\alpha}{2}}{1-\tan ^2 \frac{\alpha}{2}}(\alpha \neq \pi+2 k \pi(k \neq 0))$ ；
+        \item 试求函数 $f(x)=\frac{2 x}{1+x^2}$ 的取值范围；
+        \item 试求函数 $g(x)=\frac{6 \cos x+\sin x-5}{2 \cos x-3 \sin x-5}$ 的取值范围．
+    \end{enumerate}
+\end{example}
+
+\subsection{积化和差}
+
+\begin{theorem}[积化和差公式]
+    $$\sin a\sin b = -\frac{1}{2}\left[\cos(a+b)-\cos(a-b)\right], \quad
+        \cos a\cos b = \frac{1}{2}\left[\cos(a+b)+\cos(a-b)\right]$$
+    $$\sin a\cos b = \frac{1}{2}\left[\sin(a+b)+\sin(a-b)\right]$$
+\end{theorem}
+
+\subsection{和差化积}
+
+\begin{theorem}[和差化积公式]
+    $$\sin a+\sin b = 2\sin \frac{a+b}{2}\cos \frac{a-b}{2}, \quad
+        \sin a-\sin b = 2\cos \frac{a+b}{2}\sin \frac{a-b}{2}$$
+    $$\cos a+ \cos b = 2\cos \frac{a+b}{2}\cos \frac{a-b}{2}, \quad
+        \cos a- \cos b = -2\sin \frac{a+b}{2}\sin \frac{a-b}{2}$$
+\end{theorem}
+

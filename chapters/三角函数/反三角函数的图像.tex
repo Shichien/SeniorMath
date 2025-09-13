@@ -1,0 +1,36 @@
+\section{反三角函数的图像}
+
+\begin{tikzpicture}
+    \begin{axis}[
+            title={反三角函数图像}, % 添加一个标题
+            enlargelimits=false,
+            axis lines=middle,
+            xlabel={$x$},
+            ylabel={$y$},
+            xtick={-2,-1,0,1,2},
+            ytick={-1.570796, 1.570796, 3.141592},
+            yticklabels={$-\frac{\pi}{2}$, $\frac{\pi}{2}$, $\pi$},
+            grid=major,
+            samples=101, % 使用奇数个点可以更好地覆盖端点
+            legend pos=outer north east, % 将图例放在外部
+            legend cell align={left}
+        ]
+
+        % arcsin
+        \addplot[domain=-1:1, no marks, blue, thick] {rad(asin(x))};
+        \addlegendentry{$\arcsin(x)$}
+
+        % arccos
+        \addplot[domain=-1:1, no marks, red, thick] {rad(acos(x))};
+        \addlegendentry{$\arccos(x)$}
+
+        % arctan
+        \addplot[domain=-3:3, no marks, orange, thick] {rad(atan(x))};
+        \addlegendentry{$\arctan(x)$}
+
+        % arctan 的渐近线
+        \draw[orange, dashed] (axis cs:-3, {pi/2}) -- (axis cs:3, {pi/2});
+        \draw[orange, dashed] (axis cs:-3, {-pi/2}) -- (axis cs:3, {-pi/2});
+
+    \end{axis}
+\end{tikzpicture}

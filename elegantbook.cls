@@ -559,6 +559,14 @@
                 overlay unbroken and last={
                         \node[anchor=south east, outer sep=0pt] at (\linewidth-width,0) {
                             \textcolor{second}{$\heartsuit$}};}},
+        corstyle/.style={
+                common,
+                colframe=third,
+                colback=third!5,
+                colbacktitle=third,
+                overlay unbroken and last={
+                        \node[anchor=south east, outer sep=0pt] at (\linewidth-width,0) {
+                            \textcolor{third}{$\spadesuit$}};}},
         propstyle/.style={
                 common,
                 colframe=third,
@@ -613,7 +621,7 @@
         IfBooleanTF={#3}{label=#4}{label={axi:#4}}}
     % \newtcbtheorem[auto counter,number within=chapter]{corollary}{\corollaryname}{thmstyle}{cor}
     \DeclareTColorBox[auto counter,number within=\ELEGANT@thmcnt]{corollary}{ g o t\label g }{
-        common,thmstyle,
+        common,corstyle,
         IfValueTF={#1}
             {title={\corollaryname~\thetcbcounter\ (#1)}}
             {

@@ -1,9 +1,86 @@
 \section{圆锥曲线中的大题解法}
 
+\subsection{椭圆硬解定理}
+
+\begin{theorem}[硬解定理]
+    直线 $y=k x+m$ 与椭圆 $\frac{x^2}{a^2}+\frac{y^2}{b^2}=1(a>b>0)$ 交于 $A\left(x_1, y_1\right), B\left(x_2, y_2\right)$ 两点，那么：
+    从几何角度看，直线和椭圆相交，可以通过联立方程求解：
+    $$
+        \begin{cases}
+            \frac{x^2}{a^2}+\frac{y^2}{b^2}=1 \\
+            y=kx+m
+        \end{cases}
+    $$
+    将第二个方程代入第一个方程，得到关于 $x$ 的一元二次方程：
+    $\frac{x^2}{a^2}+\frac{(kx+m)^2}{b^2}=1$
+    整理可得：
+    $$\left(\textcolor{red}{a^2 k^2+b^2}\right) x^2+2 k m \cdot a^2 x+a^2 m^2-a^2 b^2=0$$
+    从中可以推出一些结论性的内容：
+    \begin{multicols}{2}
+        \begin{itemize}
+            \item 判别式：
+                  $$\Delta=4 a^2 b^2\left(\textcolor{red}{a^2 k^2+b^2}-m^2\right)$$
+
+            \item $x$坐标关系：
+                  $$x_1+x_2=-\frac{2 a^2 k m}{\textcolor{red}{a^2 k^2+b^2}}$$
+                  $$x_1 x_2=\frac{a^2\left(m^2-b^2\right)}{\textcolor{red}{a^2 k^2+b^2}}$$
+
+            \item $x$坐标距离：
+                  $$\left|x_1-x_2\right|=\frac{2 a b \sqrt{\textcolor{red}{a^2 k^2+b^2}-m^2}}{{\textcolor{red}{a^2 k^2+b^2}}}$$
+
+            \item 混合关系：
+                  $$x_1 y_2+x_2 y_1=-\frac{2 a^2 k b^2}{\textcolor{red}{a^2 k^2+b^2}}$$
+            \item $y$坐标关系：
+                  $$y_1+y_2=\frac{2 m b^2}{\textcolor{red}{a^2 k^2+b^2}}$$
+                  $$y_1 y_2=\frac{b^2 m^2-a^2 b^2 k^2}{\textcolor{red}{a^2 k^2+b^2}}$$
+            \item 弦长公式：
+                  $$|AB|=\sqrt{1+k^2}\frac{\sqrt{\Delta}}{\textcolor{red}{a^2 k^2+b^2}}=\frac{2ab\sqrt{\textcolor{red}{a^2 k^2+b^2}-m^2}}{\textcolor{red}{a^2 k^2+b^2}}$$
+        \end{itemize}
+    \end{multicols}
+\end{theorem}
+
+\begin{example}
+    斜率为 $1$ 的直线 $l$ 与椭圆 $\frac{x^2}{4}+y^2=1$ 相交于 $A, B$ 两点，则 $|A B|$ 的最大值为 （\qquad）
+    \begin{tasks}(4)
+        \task 2
+        \task $\frac{4 \sqrt{5}}{5}$
+        \task $\frac{4 \sqrt{10}}{5}$
+        \task $\frac{8 \sqrt{10}}{5}$
+    \end{tasks}
+\end{example}
+
+\v{8em}
+
+\begin{example}
+    直线 $y=2 x-1$ 与椭圆 $\frac{x^2}{9}+\frac{y^2}{4}=1$ 的位置关系是 （\qquad）
+    \begin{tasks}(4)
+        \task 相交
+        \task 相切
+        \task 相离
+        \task 不确定
+    \end{tasks}
+\end{example}
+
+\v{8em}
+
+\begin{example}
+    已知椭圆 $C: \frac{x^2}{a^2}+\frac{y^2}{b^2}=1(a>b>0)$ 的一个顶点为 $A(2,0)$ ，离心率为 $\frac{\sqrt{2}}{2}$ ，直线 $y=k(x-1)$ 与椭圆 $C$ 交于不同的两点 $M, N$ ．
+    \begin{enumerate}
+        \item 求椭圆 $C$ 的方程；$\frac{x^2}{4}+\frac{y^2}{2}=1$ ．
+        \item 当 $\triangle A M N$ 的面积为 $\frac{\sqrt{10}}{3}$ 时，求 $k$ 的值．
+    \end{enumerate}
+\end{example}
+
+\v{12em}
+
 \subsection{两条直线的斜率互为相反数}
 
 \begin{theorem}
     此时 $k_1 + k_2 = 0$，使用这个构造韦达定理。
+
+    \begin{warning}
+        还有一种说法：X 轴是两条直线 $l_1$ 和 $l_2$ 的角平分线，也满足这个式子。
+    \end{warning}
 \end{theorem}
 
 \begin{example}

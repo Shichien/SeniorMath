@@ -1,0 +1,404 @@
+\newpage
+
+\section{等差数列}
+
+\begin{definition}
+    如果一个数列从第二项起，每一项与它的前一项的差等于同一个常数，这个数列就叫做等差数列，这个常数叫做等差数列的公差，通常用字母 $d$ 表示。
+
+    \begin{tips}
+        设等差数列 $\{a_n\}$ 的首项为 $a_1$，公差为 $d$。
+
+        根据等差数列的定义，对于任何 $n \geq 2$，都有 $a_n - a_{n-1} = d$。
+        由此，我们可以写下一系列等式：
+
+        $$
+            \begin{cases}
+                a_n - a_{n-1} = d     \\
+                a_{n-1} - a_{n-2} = d \\
+                \qquad \vdots         \\
+                a_3 - a_2 = d         \\
+                a_2 - a_1 = d
+            \end{cases}
+        $$
+
+        所有式子相加可得：
+        $$ (a_n - a_{n-1}) + (a_{n-1} - a_{n-2}) + \dots + (a_3 - a_2) + (a_2 - a_1) =  \underbrace{d + d + \dots + d + d}_{n-1 \text{ 个}} $$
+        $$ a_n - a_1 = (n-1)d $$
+
+        将 $-a_1$ 移项至等式右边，即可得到最终的等差数列通项公式：
+        $$ a_n = a_1 + (n-1)d $$
+    \end{tips}
+
+\end{definition}
+
+\begin{theorem}
+    等差数列的通项公式为 $a_n = a_1 + (n-1)d$。
+
+    等差数列的前 $n$ 项和公式为 $S_n = \frac{n(a_1+a_n)}{2} = na_1 + \frac{n(n-1)}{2}d$。
+\end{theorem}
+
+\begin{proof}
+    \textbf{采用倒序相加法证明：} 设等差数列 $\{a_n\}$ 的前 $n$ 项和为 $S_n$。
+    \begin{align}
+        S_n & = a_1 + a_2 + a_3 + \cdots + a_{n-1} + a_n                                \\
+            & = a_1 + [a_1 + d] + [a_1 + 2d] + \cdots + [a_1 + (n-2)d] + [a_1 + (n-1)d]
+    \end{align}
+
+    将次序颠倒，得：
+    \begin{align}
+        S_n & = a_n + a_{n-1} + a_{n-2} + \cdots + a_2 + a_1               \\
+            & = [a_1 + (n-1)d] + [a_1 + (n-2)d] + \cdots + [a_1 + d] + a_1
+    \end{align}
+
+    两式相加：
+    \begin{align}
+        2S_n & = [2a_1 + (n-1)d] + [2a_1 + (n-1)d] + \cdots + [2a_1 + (n-1)d] \\
+             & = n[2a_1 + (n-1)d] = n(a_1 + a_n)
+    \end{align}
+
+    因此：
+    $$S_n = \frac{n(a_1+a_n)}{2} = na_1 + \frac{n(n-1)}{2}d$$
+\end{proof}
+
+\subsection{将 $a_{?}$ 和 $S_{?}$ 化为 $a_1$ 和 $d$}
+
+\begin{tips}
+    求出数列通项，这个数列的"解析式"就出来了。所以只要求出 $a_1$ 和 $d$，就能得到 $S_n$ 和 $a_n$，能够研究数列（函数）的解析式，这是非常好的！
+\end{tips}
+
+\begin{example}
+    在等差数列 $\{a_n\}$ 中，已知 $a_3 = 7$，$a_8 = 22$。则该数列的第10项 $a_{10}$ 为 \underline{\qquad}
+\end{example}
+
+\v{6em}
+
+\begin{example}
+    已知等差数列 $\{a_n\}$ 的前 $n$ 项和为 $S_n$，若 $a_1+a_9 = 10$，则 $S_9$ 的值为（\qquad）
+    \begin{tasks}(4)
+        \task 40
+        \task 45
+        \task 50
+        \task 90
+    \end{tasks}
+\end{example}
+
+\v{6em}
+
+\begin{example}
+    在等差数列 $\{a_n\}$ 中，已知 $a_5 = 10$ 且前 7 项和 $S_7 = 49$。求该数列的公差 $d$ 和首项 $a_1$。
+\end{example}
+
+\v{10em}
+
+\begin{example}
+    求数列 $\{a_n\}$ 的前 $n$ 项和 $S_n$，其中 $a_n = 2n - 1$。
+\end{example}
+
+\v{10em}
+
+\subsection{$S_n$ 公式的简单运用}
+
+\begin{example}
+    已知等差数列 $\{a_n\}$ 中，$a_1 + a_{100} = 202$，求 $S_{100}$。
+\end{example}
+
+\v{8em}
+
+\subsection{等差数列的下标和性质}
+
+\begin{theorem}[下标和性质]
+    若 $m+n=p+q$，则 $a_m + a_n = a_p + a_q$。
+
+    \textbf{证明：}
+    根据等差数列通项公式：
+    \begin{align}
+        a_m + a_n & = [a_1 + (m-1)d] + [a_1 + (n-1)d] \\
+                  & = 2a_1 + (m+n-2)d
+    \end{align}
+
+    同理：
+    \begin{align}
+        a_p + a_q & = [a_1 + (p-1)d] + [a_1 + (q-1)d] \\
+                  & = 2a_1 + (p+q-2)d
+    \end{align}
+
+    由于 $m+n=p+q$，所以 $a_m + a_n = a_p + a_q$。
+\end{theorem}
+
+\begin{example}
+    已知 $S_n$ 是等差数列 $\left\{a_n\right\}$ 的前 $n$ 项和，且 $a_7>0, ~ a_6+a_9<0$ ，则 （\qquad）
+    \begin{tasks}(4)
+        \task 数列 $\left\{a_n\right\}$ 为递减数列
+        \task $a_8>0$
+        \task $S_n$ 的最大值为 $S_7$
+        \task $S_{14}>0$
+    \end{tasks}
+\end{example}
+
+\begin{tips}
+    C 选项在学习下一个知识点后再做。
+\end{tips}
+
+\v{12em}
+
+\subsection{等差数列的第三求和公式}
+
+\begin{corollary}[等差数列的第三求和公式]
+    根据 $S_n=\frac{(a_1+a_n)}{2}n$，可得：
+
+    $$S_{2n-1}=(2n-1)a_n$$
+    或者记为：
+    $$S_n = na_{\text{中}}$$
+\end{corollary}
+
+\begin{example}[使 $a_n$ 和 $S_n$ 之间相互转化]
+    已知 $S_{13}=13$，求 $a_7 = $ \underline{\qquad}.
+\end{example}
+
+\v{4em}
+
+\begin{example}
+    若两个等差数列 $\left\{a_n\right\}$ 和 $\left\{b_n\right\}$ 的前 $n$ 项和分别是 $S_n$、$T_n$ ，已知 $\frac{S_n}{T_n}=\frac{3 n}{n+2}$ ，则 $\frac{a_7}{b_7}=$ \underline{\qquad}.
+\end{example}
+
+\v{6em}
+
+\subsection{等差数列 $S_n$ 和 $a_n$ 的图像关系}
+
+\begin{theorem}[$S_n$ 和 $a_n$ 的图像关系]
+    当 $a_n$ 中的 $d<0$ 时，由于 $a_n$ 可以看成一个一次函数，故在 $a_n > 0$ 成立的 $n$ 取最大值时，$S_n$ 取到最大值：
+    \begin{center}
+        \begin{tikzpicture}[scale=0.6]
+            % Axes
+            \draw[->] (0,0) -- (8,0) node[right] {$n$};
+            \draw[->] (0,-1) -- (0,5) node[above] {$y$};
+
+            % a_n graph (straight line)
+            \draw[thick, blue] (0,3) -- (8,-1);
+
+            % Add vertical dashed line at n_0
+            \draw[dashed] (5,0) -- (5,0.5);
+            \node[below] at (5,0) {$n_0$};
+
+            % When a_n > 0 and a_{n+1} < 0
+            \filldraw[blue] (5,0.5) circle (2pt) node[above right] {$a_{n_0} > 0$};
+            \filldraw[blue] (7,-0.5) circle (2pt) node[right] {$a_{n_{0+1}} < 0$};
+        \end{tikzpicture}
+    \end{center}
+\end{theorem}
+
+\begin{example}
+    （ 2022 春•上饶月考）设等差数列 $\left\{a_n\right\}$ 的前 $n$ 项和为 $S_n$ ，且 $S_{4045}>0, S_{4044}<0$ ，则当 $n=$ \underline{\qquad} 时，$S_n$ 最小.
+\end{example}
+
+\v{8em}
+
+\begin{example}
+    若数列 $\left\{a_n\right\}$ 为等差数列，$S_n$ 为数列 $\left\{a_n\right\}$ 的前 $n$ 项和，$a_4+a_9>0, ~ S_{11}<0$ ，则 $S_n$ 的最小值为 （\qquad）
+    \begin{tasks}(4)
+        \task $S_5$
+        \task $S_6$
+        \task $S_7$
+        \task $S_8$
+    \end{tasks}
+\end{example}
+
+\v{8em}
+
+\begin{example}
+    已知 $S_n$ 是等差数列 $\left\{a_n\right\}$ 的前 $n$ 项和，且 $S_6>S_7>S_5$ ，有下列四个命题，其中正确的是 （\qquad）
+    \begin{tasks}(2)
+        \task $d>0$
+        \task $S_{11}>0$
+        \task $S_{12}<0$
+        \task 数列 $\left\{S_n\right\}$ 中的最大项为 $S_{11}$
+    \end{tasks}
+\end{example}
+
+\v{8em}
+
+\subsection{等差数列 $S_n$ 的特点}
+
+\begin{theorem}
+    $S_n$ 实际上是一个二次函数：$S_n=An^2+Bn+C$，其中，$A=\frac{d}{2}$，$B=a_1-\frac{d}{2}$。
+
+    所以 $S_n = k$ 这样的方程，可能会有两个解。
+
+    \begin{warning}
+        $S_n$ 中因为 $n$ 是正整数，所以不一定 $S_n$ 的最大值就在对称轴的位置取。
+    \end{warning}
+
+    \begin{center}
+        \begin{tikzpicture}[scale=0.8]
+            % Axes
+            \draw[->] (0,0) -- (6,0) node[right] {$n$};
+            \draw[->] (0,-2) -- (0,5) node[above] {$y$};
+
+            % Quadratic function with vertex at (2.5, 4)
+            \draw[thick, blue, domain=0:5, smooth, variable=\x]
+            plot (\x, {-(\x-2.5)^2 + 4}) node[right] {$S_n = -n^2 + 5n - 2.25$};
+
+            % Mark the vertex
+            \filldraw[blue] (2.5,4) circle (2pt) node[above right] {$(2.5, 4)$};
+
+            % Draw dashed lines to show vertex
+            \draw[dashed] (2.5,0) -- (2.5,4);
+            \draw[dashed] (0,4) -- (2.5,4);
+
+            % Add a horizontal dashed line at y = 2
+            \draw[dashed] (0,2) -- (5,2) node[right] {$y = 2$};
+
+            % Label the axes
+            \foreach \x in {1,2,3,4,5}
+            \draw (\x,0.1) -- (\x,-0.1) node[below] {$\x$};
+            \foreach \y in {1,2,3,4}
+            \draw (0.1,\y) -- (-0.1,\y) node[left] {$\y$};
+        \end{tikzpicture}
+    \end{center}
+\end{theorem}
+
+\begin{example}
+    已知等差数列 $\left\{a_n\right\}$ ，前 $n$ 项和 $S_n=n^2-4 n$ ，则 （\qquad）
+    \begin{tasks}(2)
+        \task $a_1=-3$
+        \task $d=-2$
+        \task $a_{10}=15$
+        \task $\left\{\frac{S_n}{n}\right\}$ 为公差为 -2 的等差数列
+    \end{tasks}
+\end{example}
+
+\v{12em}
+
+\begin{example}
+    设等差数列 $\left\{a_n\right\}$ 的前 $n$ 项和为 $S_n$ ，公差为 $d, ~ a_1>0, ~ a_6+a_7>0, ~ a_6 \cdot a_7<0$ ，下列结论正确的是 （\qquad）
+    \begin{tasks}(4)
+        \task $a_6<0, a_7>0$
+        \task $d<0$
+        \task $S_{13}<0$
+        \task 当 $n=7$ 时，$S_n$ 最大
+    \end{tasks}
+\end{example}
+
+\v{8em}
+
+\begin{example}
+    设等差数列 $\left\{a_n\right\}$ 的前 $n$ 项和为 $S_n$ ，公差为 $d$ ，若 $a_1=30, S_{12}=S_{19}$ ，则 （\qquad）
+    \begin{tasks}(4)
+        \task $d=-2$
+        \task $S_n \leq S_{15}$
+        \task $a_{15}=2$
+        \task $S_{30}=0$
+    \end{tasks}
+\end{example}
+
+\v{10em}
+
+\begin{example}
+    已知数列 $\left\{a_n\right\}$ 的前 $n$ 项和为 $S_n=\frac{1}{2} n^2-\frac{13}{2} n+6$ ，则下列说法正确的是 （\qquad）
+    \begin{tasks}(2)
+        \task $a_n=n-7$
+        \task $\frac{1}{a_2 a_3}+\frac{1}{a_3 a_4}+\frac{1}{a_4 a_5}+\frac{1}{a_5 a_6}=\frac{4}{5}$
+        \task 使 $S_n>0$ 的最小正整数 $n$ 为 13
+        \task $\frac{S_n}{n}$ 的最小值为 -3
+    \end{tasks}
+\end{example}
+
+\v{10em}
+
+\subsection{等差中项}
+
+\begin{definition}
+    在三个数 $a$, $b$, $c$ 之间，如果 $b = \frac{a+c}{2}$，则称 $b$ 是 $a$ 和 $c$ 的等差中项。
+\end{definition}
+
+\begin{theorem}
+    若 $a$, $b$, $c$ 成等差数列，则 $b = \frac{a+c}{2}$。
+
+    若 $a$, $b_1$, $b_2$, $\ldots$, $b_n$, $c$ 成等差数列，则有：
+    \begin{align}
+        b_1 + b_2 + \ldots + b_n = \frac{n(a+c)}{2}
+    \end{align}
+\end{theorem}
+
+\begin{example}
+    \begin{enumerate}
+        \item 已知数列 $\left\{a_n\right\}$ 的前 $n$ 项和为 $S_n=n^2+n-1,\left(n \in \mathbf{N}^*\right)$ ，求该数列的通项公式 $a_n$ ．
+        \item 已知数列 $\left\{a_n\right\}$ 满足 $2 a_{n+1}=a_n+a_{n+2},\left(n \in \mathbf{N}^*\right)$ ，且 $a_1+a_3+a_5=96, a_2+a_4+a_6=90$ ，求 $a_{20}$ ．
+    \end{enumerate}
+\end{example}
+
+\v{10em}
+
+\begin{example}
+    等差数列 $\left\{a_n\right\}$ 的前 $n$ 项和记为 $S_n$ ，已知 $S_3=-15$ ，且 $a_1, a_3,-a_4$ 成等差数列．
+    \begin{enumerate}
+        \item 求数列 $\left\{a_n\right\}$ 的通项公式；
+        \item 求数列 $\left\{a_n\right\}$ 的前 $n$ 项和 $S_n$
+    \end{enumerate}
+\end{example}
+
+\v{12em}
+
+\subsection{等差数列的公共项}
+
+\begin{theorem}[等差数列的公共项]
+    设数列 $a_n=an+b$ 和 $b_n=cn+d$ 分别为等差数列，它们的公共项组成一个新的数列。
+    \begin{enumerate}
+        \item 公共项数列存在当且仅当 $a, c$ 的最大公因数（记为 $(a, c)$ ）整除 $d-b$ ，更简洁一点就是 $(a, c) \mid d-b$ 。这个可以通过 $a x+b=c y+d$ 有正整数解，然后由 Bezout 定理相关结论得到。
+        \item 如果存在，公共项数列 $\left\{C_n\right\}$ 的通项是
+    \end{enumerate}
+    $$
+        C_n=\frac{a c}{(a, c)} n+C_1-\frac{a c}{(a, c)}
+    $$
+\end{theorem}
+
+\begin{tips}
+    当然了，最简单的应该还是直接列举出来找规律。
+\end{tips}
+
+\begin{example}
+    （2020·海南·15）将数列 $\{2 n-1\}$ 与 $\{3 n-2\}$ 的公共项从小到大排列得到数列 $\left\{a_n\right\}$ ，则 $\left\{a_n\right\}$ 的前 $n$ 项和为 \underline{$\quad$} ．
+\end{example}
+
+\vspace{6em}
+
+\subsection{证明一个数列是等差数列}
+
+\begin{theorem}
+    \begin{itemize}
+        \item 需要严格证明后一项和前一项的差为定值，这才是等差数列的基础概念。
+        \item 或者证明等差中项的式子 $2 a_{n+1} = a_{n} + a_{n+2}$
+    \end{itemize}
+\end{theorem}
+
+\begin{example}
+    设 $S_n$ 为数列 $\left\{a_n\right\}$ 的前 $n$ 项和，$S_n=2 n^2-30 n$ ．
+    \begin{enumerate}
+        \item 求 $a_n$ ；
+
+        \item 证明 $\left\{a_n\right\}$ 是等差数列．
+    \end{enumerate}
+\end{example}
+
+\v{12em}
+
+\begin{example}
+    （2022－甲卷（文））记 $S_n$ 为数列 $\left\{a_n\right\}$ 的前 $n$ 项和．已知 $\frac{2 S_n}{n}+n=2 a_n+1$ ．
+    \begin{enumerate}
+        \item 证明：$\left\{a_n\right\}$ 是等差数列；
+    \end{enumerate}
+\end{example}
+
+\v{10em}
+
+\begin{example}（2016·天津·理 18 题）
+    已知 $\left\{a_n\right\}$ 是各项均为正数的等差数列，公差为 $d$ ．对任意的 $n \in \mathbf{N}^*, b_n$ 是 $a_n$ 和 $a_{n+1}$ 的等比中项．
+    \begin{enumerate}
+        \item （I）设 $c_n=b_{n+1}^2-b_n^2, n \in \mathbf{N}^*$ ，求证：数列 $\left\{c_n\right\}$ 是等差数列；
+    \end{enumerate}
+\end{example}
+
+\v{10em}
+
+
+

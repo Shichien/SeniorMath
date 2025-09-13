@@ -1,0 +1,237 @@
+\section{正弦定理与余弦定理}
+
+\begin{theorem}[正弦定理]
+    在一个三角形中，各边和它所对角的正弦值的比值相等，且等于其外接圆的直径。
+    $$
+        \frac{a}{\sin A} = \frac{b}{\sin B} = \frac{c}{\sin C} = 2R
+    $$
+    其中 $R$ 是 $\triangle ABC$ 外接圆的半径。
+    \begin{itemize}
+        \item \textbf{应用场景：} 已知两角和任意一边（AAS, ASA）；已知两边和其中一边的对角（SSA）。
+        \item \textbf{变形：} $a = 2R \sin A$, $b = 2R \sin B$, $c = 2R \sin C$。边长比等于正弦比：$a:b:c = \sin A : \sin B : \sin C$。
+    \end{itemize}
+\end{theorem}
+
+\begin{example}
+    在 $\triangle ABC$ 中，已知 $A=45^\circ$, $B=60^\circ$, $a=6$，求边 $b$ 的长度。
+\end{example}
+\begin{solution}
+    根据正弦定理 $\frac{a}{\sin A} = \frac{b}{\sin B}$，我们有：
+    $$
+        \frac{6}{\sin 45^\circ} = \frac{b}{\sin 60^\circ}
+    $$
+\end{solution}
+
+\vspace{2em}
+\begin{theorem}[大边对大角]
+    \begin{multicols}{3}
+        \begin{center}
+            当$\angle A$和$\angle B$都是锐角
+        \end{center}
+
+        \begin{center}
+            \begin{tikzpicture}[scale=0.35]
+                \coordinate (A) at (0,0);
+                \coordinate (B) at (5,0);
+                \coordinate (C) at (2.5,2.5);
+
+                \fill[blue!20] (A) -- (B) -- (C) -- cycle;
+                \draw[blue] (A) -- (B) -- (C) -- cycle;
+
+                \fill[blue] (A) circle (2pt) node[below left] {A};
+                \fill[blue] (B) circle (2pt) node[below right] {B};
+                \fill[blue] (C) circle (2pt) node[above] {C};
+
+                \node[above left] at ($(A)!.5!(C)$) {$b$};
+                \node[above right] at ($(B)!.5!(C)$) {$a$};
+                \node[below] at ($(A)!.5!(B)$) {$c$};
+            \end{tikzpicture}
+        \end{center}
+        \[
+            \frac{a}{\sin A} = \frac{b}{\sin B}
+        \]
+
+        在 $[0, \frac{\pi}{2}]$ 上 $\sin x$ 单增，$\therefore a < b$
+
+        \columnbreak
+
+        \begin{center}
+            当$\angle A$是锐角，$\angle B$是直角
+        \end{center}
+
+        \begin{center}
+            \begin{tikzpicture}[scale=0.35]
+                \coordinate (A) at (-2,0);
+                \coordinate (B) at (3,0);
+                \coordinate (C) at (3,3);
+
+                \fill[blue!20] (A) -- (B) -- (C) -- cycle;
+                \draw[blue] (A) -- (B) -- (C) -- cycle;
+
+                \draw[blue] (B) ++(-0.3,0) -- ++(0,0.3) -- ++(0.3,0);
+
+                \fill[blue] (A) circle (2pt) node[below left] {A};
+                \fill[blue] (B) circle (2pt) node[below right] {B};
+                \fill[blue] (C) circle (2pt) node[above right] {C};
+
+                \node[above left] at ($(A)!.5!(C)$) {$b$};
+                \node[right] at ($(B)!0.5!(C)$) {$a$};
+            \end{tikzpicture}
+        \end{center}
+
+        \begin{center}
+            直角边小于斜边，所以$a < b$
+        \end{center}
+
+        \columnbreak
+
+        \begin{center}
+            当$\angle A$是锐角，$\angle B$是钝角
+        \end{center}
+
+        \begin{center}
+            \begin{tikzpicture}[scale=0.35]
+                \coordinate (A) at (0,0);
+                \coordinate (B) at (5,0);
+                \coordinate (C) at (5.5,3);
+                \coordinate (D) at ($(A)!0.6!(C)$);
+
+                \fill[blue!20] (A) -- (B) -- (C) -- cycle;
+                \draw[blue] (A) -- (B) -- (C) -- cycle;
+                \draw[blue, dashed] (B) -- (D);
+
+                \fill[blue] (A) circle (2pt) node[below left] {A};
+                \fill[blue] (B) circle (2pt) node[below right] {B};
+                \fill[blue] (C) circle (2pt) node[above right] {C};
+                \fill[blue] (D) circle (2pt) node[above left] {D};
+
+                \node[above left] at ($(A)!0.5!(C)$) {$b$};
+                \node[above right] at ($(B)!0.5!(C)$) {$a$};
+            \end{tikzpicture}
+        \end{center}
+
+        过B点作BC的垂线BD，则：
+
+        $|BC| < |DC| < |AC|$，即得 $a < b$
+    \end{multicols}
+\end{theorem}
+
+\begin{example}
+    在 $\triangle ABC$ 中，若 $a=2\sqrt{3}$, $b=2\sqrt{2}$, $B=45^\circ$，求角 $A$ 的大小。
+\end{example}
+\begin{solution}
+    根据正弦定理 $\frac{a}{\sin A} = \frac{b}{\sin B}$，我们有：
+    $$
+        \frac{2\sqrt{3}}{\sin A} = \frac{2\sqrt{2}}{\sin 45^\circ}
+    $$
+
+    所以 $\sin A = \frac{\sqrt{3}}{2}$。
+    因为 $a=2\sqrt{3} \approx 3.46$ 且 $b=2\sqrt{2} \approx 2.82$，所以 $a > b$。
+
+    根据大边对大角的原则，应有 $A > B$。
+    所以 $A$ 可能为 $60^\circ$ 或 $120^\circ$。两种情况都满足 $A > 45^\circ$。
+\end{solution}
+\vspace{2em}
+
+\begin{example}
+    在 $\triangle ABC$ 中，已知 $B=30^\circ$，$b=\sqrt{2}$，$c=2$，解这个三角形的三边和三角.
+\end{example}
+
+\v{4em}
+
+\begin{theorem}[余弦定理]
+    三角形任何一边的平方，等于其他两边平方的和减去这两边与它们夹角的余弦的积的两倍。
+    $$
+        \begin{cases}
+            a^2 = b^2 + c^2 - 2bc \cos A \\
+            b^2 = a^2 + c^2 - 2ac \cos B \\
+            c^2 = a^2 + b^2 - 2ab \cos C
+        \end{cases}
+    $$
+    \begin{itemize}
+        \item \textbf{应用场景：} 已知三边（SSS）；已知两边及其夹角（SAS）。
+        \item \textbf{推论（用于求角）：}
+    \end{itemize}
+    $$
+        \cos A = \frac{b^2 + c^2 - a^2}{2bc}, \quad 2bc \cos A = b^2 + c^2 - a^2
+    $$
+\end{theorem}
+
+\begin{example}
+    在 $\triangle ABC$ 中，$a=7, b=5, C=60^\circ$，求边 $c$ 的长度和 $\triangle ABC$ 的面积 $S$。
+\end{example}
+\begin{solution}
+    根据余弦定理：
+    $$
+        c^2 = 7^2 + 5^2 - 2 \times 7 \times 5 \times \cos 60^\circ = 39
+    $$
+    所以 $c = \sqrt{39}$。
+    三角形面积公式 $S = \frac{1}{2}ab \sin C$：
+    $$
+        S = \frac{1}{2} \times 7 \times 5 \times \sin 60^\circ = \frac{1}{2} \times 35 \times \frac{\sqrt{3}}{2} = \frac{35\sqrt{3}}{4}
+    $$
+\end{solution}
+
+\begin{theorem}[三角形面积公式]
+    三角形的面积 $S$ 中，$a, b$ 是两边，$C$ 是它们夹角。
+    $$
+        S = \frac{1}{2}ab \sin C, \quad S = \frac{1}{2}bc \sin A, \quad S = \frac{1}{2}ac \sin B.
+    $$
+
+\end{theorem}
+
+\subsection{余弦定理判断三角形的形状}
+
+\subsubsection{利用最大角判断三角形形状}
+
+\begin{example}
+    在 $\triangle ABC$ 中，$a=5, b=7, c=8$，判断 $\triangle ABC$ 的形状。
+\end{example}
+\begin{solution}
+    由于 $c$ 是最长边，我们计算最大角 $C$ 的余弦值来判断三角形的形状。
+    根据余弦定理的推论：
+    $$
+        \cos C = \frac{a^2 + b^2 - c^2}{2ab} = \frac{5^2 + 7^2 - 8^2}{2 \times 5 \times 7} = \frac{25 + 49 - 64}{70} = \frac{10}{70} = \frac{1}{7}
+    $$
+    因为 $\cos C > 0$，所以角 $C$ 是一个锐角。
+    由于最大角 $C$ 是锐角，所以 $\triangle ABC$ 是一个锐角三角形。
+\end{solution}
+
+\vspace{2em}
+
+\subsubsection{三角形边长关系与形状判定}
+
+\begin{theorem}[三角形边长关系]
+    在 $\triangle ABC$ 中，三边长 $a, b, c$ 满足以下关系：
+    \begin{itemize}
+        \item 若 $a^2+b^2>c^2$，则 $\triangle ABC$ 为锐角三角形
+        \item 若 $a^2+b^2=c^2$，则 $\triangle ABC$ 为直角三角形
+        \item 若 $a^2+b^2<c^2$，则 $\triangle ABC$ 为钝角三角形
+    \end{itemize}
+    上述关系适用于任意一组对应的边和角，即若 $c$ 为最长边（对应角 $C$），则该关系可用于判断角 $C$ 的类型。
+
+    本质是利用了余弦定理来判断三角形的形状。
+\end{theorem}
+
+\begin{proof}
+    根据余弦定理：$c^2 = a^2 + b^2 - 2ab\cos C$。整理可得：
+    $a^2 + b^2 - c^2 = 2ab\cos C$
+
+    由于 $a, b$ 为正值（三角形边长），因此：
+    \begin{itemize}
+        \item 当 $a^2+b^2>c^2$ 时，$\cos C > 0$，所以 $C < 90^\circ$，为锐角三角形
+        \item 当 $a^2+b^2=c^2$ 时，$\cos C = 0$，所以 $C = 90^\circ$，为直角三角形
+        \item 当 $a^2+b^2<c^2$ 时，$\cos C < 0$，所以 $C > 90^\circ$，为钝角三角形
+    \end{itemize}
+\end{proof}
+
+\begin{example}
+    在 $\triangle ABC$ 中，若 $a=3, b=4, c=6$，则：
+    $a^2+b^2 = 3^2+4^2 = 9+16 = 25, \quad c^2 = 6^2 = 36$
+
+    由于 $a^2+b^2 < c^2$，所以 $\triangle ABC$ 是钝角三角形。
+\end{example}
+
+\begin{tips}
+    请使用最长边来判断。
+\end{tips}

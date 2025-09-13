@@ -1,0 +1,239 @@
+\section{数列的递推关系}
+
+\subsection{使用累加法求数列通项公式}
+
+\begin{theorem}[$a_{n} - a_{n-1} = f(n)$ 形式]
+    若数列 $\{a_n\}$ 满足 $a_{n} - a_{n-1} = f(n)$ 的形式，则可以通过累加法求和得到通项公式。
+\end{theorem}
+
+\begin{example}
+    已知数列 $\left\{a_n\right\}$ 满足 $a_1=1, a_{n+1}=a_n+3 n$ ，则 $a_4=$ \underline{$\qquad$} ，数列的通项公式 $a_n=$ \underline{$\qquad$} ．
+\end{example}
+
+\v{12em}
+
+\begin{example}
+    已知数列 $\left\{a_n\right\}$ 满足 $a_1=1, a_{n+1}=a_n+2 n-1$ ，设 $b_n=\frac{2 a_n+4 n-4}{n}$ ，则数列 $\left\{b_n\right\}$ 的前 $n$ 项和为 （\qquad）
+    \begin{tasks}(4)
+        \task $n^2-\frac{n}{2}$
+        \task $n^2+\frac{n}{2}$
+        \task $n^2+n$
+        \task $n^2-n$
+    \end{tasks}
+\end{example}
+
+\v{10em}
+
+\begin{example}
+    已知数列 $\left\{a_n\right\}$ 满足：$a_1=1, a_2=2, S_{n+1}+S_{n-1}=2 S_n+\log _2\left(1+\frac{1}{n}\right)\left(n \geq 2, n \in \mathbf{N}^*\right)$ ，则 $a_8$= （\qquad）
+    \begin{tasks}(4)
+        \task $2 \sqrt{2}$
+        \task 3
+        \task 4
+        \task $4 \sqrt{2}$
+    \end{tasks}
+\end{example}
+
+\begin{tips}
+    这题需要先使用 $S_n$ 和 $a_n$ 的关系作一下转化。
+\end{tips}
+
+\v{10em}
+
+\subsection{使用累乘法求数列通项}
+
+\begin{example}
+    在数列 $\left\{a_n\right\}$ 中，首项 $a_1=1, ~ n>1$ 时，$(n-1) a_n=(n+1) a_{n-1}$ ，则数列 $\left\{\frac{1}{a_n}\right\}$ 的前 100 项和为 \underline{$\quad$}．
+\end{example}
+
+\v{10em}
+
+
+\begin{example}
+    已知数列 $\left\{a_n\right\}$ 的前 $n$ 项和为 $S_n, ~ 2 S_n=(n+1) a_n$ ，且 $a_1=1$ ．
+    \begin{enumerate}
+        \item 求数列 $\left\{a_n\right\}$ 的通项公式；
+
+        \item 若数列 $b_n=\frac{S_{2 n}}{2 n}$ ，
+              \begin{enumerate}
+                  \item （i）求数列 $\left\{\frac{1}{b_n b_{n+1}}\right\}$ 的前 $n$ 项和 $T_n$ ；
+                  \item （ii）若 $b_1, b_{3 n+1}, b_{c_n}$ 成等比数列，求数列 $\left\{\frac{n}{c_n+119}\right\}$ 中的最大项及此时 $n$ 的值．
+              \end{enumerate}
+    \end{enumerate}
+\end{example}
+
+\v{10em}
+
+\begin{example}
+    （2022·全国 I 卷·17）记 $S_n$ 为数列 $\left\{a_n\right\}$ 的前 $n$ 项和，已知 $a_1=1,\left\{\frac{S_n}{a_n}\right\}$ 是公差为 $\frac{1}{3}$ 的等差数列．
+    \begin{enumerate}
+        \item 求 $\left\{a_n\right\}$ 的通项公式；
+        \item 证明：$\frac{1}{a_1}+\frac{1}{a_2}+\cdots+\frac{1}{a_n}<2$ ．
+    \end{enumerate}
+\end{example}
+
+\vspace{10em}
+
+\subsection{待定系数法构造求数列通项}
+
+\begin{theorem}[待定系数构造等比数列]
+    一般是 $a_n = Xa_{n-1} + Y$ 的形式，例如 $a_n = 3 a_{n-1} + 4$.
+
+    使用 $a_n - p = 3(a_{n-1} - p)$ 即可构造出一个等比数列 $\{{a_n} - p\}$.
+\end{theorem}
+
+\begin{example}
+    已知数列 $\left\{a_n\right\}$ 满足 $a_1=1, a_n=3 a_{n-1}+4(n \geq 2)$ ．
+    \begin{enumerate}
+        \item 证明：数列 $\left\{a_n+2\right\}$ 是等比数列；
+        \item 求数列 $\left\{a_n\right\}$ 的前 $n$ 项和 $S_n$ ．
+    \end{enumerate}
+\end{example}
+
+\v{12em}
+
+\begin{example}
+    记数列 $\left\{a_n\right\}$ 的前 $n$ 项和为 $S_n$ ，已知 $S_n=2 a_n-n, ~ b_n=a_n+1$ ．
+    \begin{enumerate}
+        \item 证明：数列 $\left\{b_n\right\}$ 为等比数列，并求数列 $\left\{a_n\right\}$ 的通项公式；
+        \item 设 $c_n=b_n \cdot \log _2 b_{2 n+1}$ ，求数列 $\left\{c_n\right\}$ 的前 $n$ 项和 $T_n$ ．
+    \end{enumerate}
+\end{example}
+
+\v{12em}
+
+\begin{example}
+    （2014 新课标 II，理 17）已知数列 $\left\{a_n\right\}$ 满足 $a_1=1, a_{n+1}=3 a_n+1$ ．
+
+    （I）证明 $\left\{a_n+\frac{1}{2}\right\}$ 是等比数列，并求 $\left\{a_n\right\}$ 的通项公式；
+\end{example}
+
+\vspace{10em}
+
+\subsection{整体法构造求数列通项}
+
+\begin{example}
+    已知 $\left\{a_n\right\}$ 满足 $a_1=1$ ，且 $n a_{n+1}-(n+1) a_n=3 n^2+3 n$ ．
+    \begin{enumerate}
+        \item 求 $a_2, a_3$ ；
+        \item 证明：数列 $\left\{\frac{a_n}{n}\right\}$ 是等差数列，并求 $\left\{a_n\right\}$ 的通项公式．
+    \end{enumerate}
+\end{example}
+
+\v{12em}
+
+\begin{example}
+    已知数列 $\left\{a_n\right\}$ 满足 $a_1=1, a_n-a_{n+1}=a_n a_{n+1}\left(n \in \mathbf{N}^*\right)$ 则 $a_{2024}=$（\quad）
+    \begin{tasks}(4)
+        \task  2024
+        \task  2025
+        \task $\frac{1}{2024}$
+        \task $\frac{1}{2025}$
+    \end{tasks}
+\end{example}
+
+\vspace{12em}
+
+\begin{example}
+    已知数列 $\left\{a_n\right\}$ 满足 $a_1=1, a_n-a_{n+1}=2 a_n a_{n+1}$ ，则数列 $\left\{a_n a_{n+1}\right\}$ 的前 8 项和为 （\qquad）
+    \begin{tasks}(4)
+        \task $\frac{8}{17}$
+        \task $\frac{12}{25}$
+        \task $\frac{7}{8}$
+        \task $\frac{8}{9}$
+    \end{tasks}
+\end{example}
+
+\v{12em}
+
+\begin{example}
+    已知数列 $\left\{a_n\right\}$ 满足 $a_1=\frac{3}{5},\left(4 a_n+1\right) a_{n+1}=3 a_n, S_n$ 为数列 $\left\{\frac{1}{a_n}\right\}$ 的前 $n$ 项和．
+    \begin{enumerate}
+        \item 求证：数列 $\left\{\frac{1}{a_n}-2\right\}$ 是等比数列；
+        \item 求数列 $\left\{a_n\right\}$ 的通项公式；
+        \item 求数列 $\left\{\frac{1}{a_n}\right\}$ 的前 $n$ 项和 $S_n$ ．
+    \end{enumerate}
+\end{example}
+
+\v{12em}
+
+\begin{example}
+    已知数列 $\left\{a_n\right\}$ 的前 $n$ 项和为 $S_n, S_{n+1} S_n+a_{n+1}=0, a_1=1$ ，则 $a_{10}=$ \underline{\qquad}.
+\end{example}
+
+\v{10em}
+
+\subsection{特征方程法求通项公式}
+
+\begin{example}
+    已知数列 $\left\{a_n\right\}$ 满足 $a_{n+1}=5 a_n-4 a_{n-1}(n \geq 2), ~ a_1=1, ~ a_2=13$ ，则 （\qquad）
+    \begin{itemize}
+        \item $a_{16}$ 的个位数为 3
+        \item $a_{25}$ 的个位数为 1
+        \item 对任意实数 $\lambda$ ，数列 $\left\{a_n+\lambda\right\}$ 都不是等比数列
+        \item $\left\{a_n\right\}$ 的前 100 项和大于数列 $\left\{2^n\right\}$ 的前 200 项
+    \end{itemize}
+\end{example}
+
+\v{12em}
+
+\subsection{相似相减法求通项公式}
+
+\begin{example}
+    设数列 $\left\{a_n\right\}$ 满足 $\frac{1}{2} a_1+\frac{1}{2^2} a_2+\frac{1}{2^3} a_3+\cdots+\frac{1}{2^n} a_n=n^2+3 n\left(n \in \mathbf{N}^*\right)$ ．
+    \begin{enumerate}
+        \item 求数列 $\left\{a_n\right\}$ 的通项公式；
+
+        \item 求数列 $\left\{a_n\right\}$ 的前 $n$ 项和 $S_n$ ．
+    \end{enumerate}
+\end{example}
+
+\v{12em}
+
+\begin{example}
+    数列 $\left\{a_n\right\}$ 中，已知对任意自然数 $n, ~ a_1+a_2+a_3+\ldots+a_n=2^n-1$ ，则 $a_1^2+a_2^2+a_3^2+\cdots+a_n^2$ 等于 （\qquad）
+    \begin{tasks}(4)
+        \task $2^n-1$
+        \task $\left(2^n-1\right)^2$
+        \task $\frac{4^n-1}{3}$
+        \task $\frac{4^{n-1}+2}{3}$
+    \end{tasks}
+\end{example}
+
+\v{12em}
+
+\begin{example}
+    已知数列 $\left\{a_n\right\}$ 的前 $n$ 项和为 $S_n$ ，且 $\left\{a_n\right\},\left\{b_n\right\}$ 分别满足：$a_1+2 a_2+3 a_3+\cdots \cdots+n a_n=(n-1)\left(S_n+1\right)+1$ \\ $b_n=2 \log _2 a_n+1$ ．
+    \begin{enumerate}
+        \item 求通项公式 $a_n, b_n$ ；
+
+        \item 求数列 $\left\{a_n b_n\right\}$ 的前 $n$ 项和．
+    \end{enumerate}
+\end{example}
+
+\v{12em}
+
+\subsection{取倒数法求通项公式}
+
+\begin{example}
+    已知数列 $\left\{a_n\right\}$ 中，$a_1=3, a_{n+1}=\frac{3 a_n}{a_n+2}$
+    \begin{enumerate}
+        \item 证明：数列 $\left\{1-\frac{1}{a_n}\right\}$ 为等比数列；
+        \item 求 $\left\{a_n\right\}$ 的通项公式；
+        \item 令 $b_n=\frac{a_{n+1}}{a_n}$ ，证明：$b_n<b_{n+1}<1$ ．
+    \end{enumerate}
+\end{example}
+
+\v{12em}
+
+\subsection{不动点法求通项公式}
+
+\begin{example}
+    已知数列 $\left\{a_n\right\}$ 满足 $a_1=\frac{1}{2}, a_{n+1} a_n=2 a_{n+1}-1$ ，令 $b_n=a_n-1$ ．
+    \begin{enumerate}
+        \item 求证：数列 $\left\{\frac{1}{b_n}\right\}$ 为等差数列；
+
+        \item 设 $c_n=\frac{a_{n+1}}{a_n}$ ，求证：数列 $\left\{c_n\right\}$ 的前 $n$ 项和 $T_n<n+\frac{3}{4}$ ．
+    \end{enumerate}
+\end{example}
+

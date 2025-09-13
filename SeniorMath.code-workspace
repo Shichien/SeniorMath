@@ -1,0 +1,10 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"pasteImage.insertPattern": "\\begin{figure} [H]\n    \\centering\n    \\includegraphics[width=0.8\\textwidth]{chapters/${imageSyntaxPrefix}${imageFilePath}${imageSyntaxSuffix}}\n    \\caption{}\n    \\label{fig:}\n\\end{figure}\n"
+	}
+}

@@ -1,0 +1,273 @@
+
+\section{复数的四则运算}
+
+\begin{theorem}[复数的四则运算]
+    设复数 $z_{1}=a+bi$, $z_{2}=c+di$, 其中 $a,b,c,d\in \mathbb{R}$, 则
+    \begin{itemize}
+        \item[①] $z_{1}+z_{2}=a+bi+c+di=(a+c)+(b+d)i$;
+        \item[②] $z_{1}-z_{2}=a+bi-c-di=(a-c)+(b-d)i$;
+        \item[③] $z_{1}z_{2}=(a+bi)(c+di)=ac+adi+bci+bdi^{2}=(ac-bd)+(ad+bc)i$;
+        \item[④] $\frac{z_{1}}{z_{2}}=\frac{a+bi}{c+di}=\frac{(a+bi)(c-di)}{(c+di)(c-di)}=\frac{ac-adi+bci-bdi^{2}}{c^{2}-d^{2}i^{2}}=\frac{(ac+bd)+(bc-ad)i}{c^{2}+d^{2}}.$
+    \end{itemize}
+\end{theorem}
+
+\begin{example}(2022 天津卷)
+    已知 $i$ 是虚数单位, 化简 $\frac{11-3i}{1+2i}$.
+    \begin{solution}
+        计算复数的除法, 可分子分母同乘以分母的共轭复数, 将分母实数化。
+        \[
+            \frac{11-3i}{1+2i}=\frac{(11-3i)(1-2i)}{(1+2i)(1-2i)}=\frac{11-22i-3i+6i^{2}}{1-4i^{2}}=\frac{5-25i}{5}=1-5i.
+        \]
+    \end{solution}
+\end{example}
+
+\v{4em}
+
+\begin{example}
+    （ 25 全国一）$(1+5 \mathrm{i}) \mathrm{i}$ 的虚部为 （\qquad）
+    \begin{tasks}(4)
+        \task -1
+        \task 0
+        \task 1
+        \task 6
+    \end{tasks}
+\end{example}
+
+\v{4em}
+
+\begin{example}(2023·辽宁模拟)
+    若复数 $z=\frac{1+i}{1-i}+2i$ (i为虚数单位), 则z的虚部为( \quad )
+    \begin{tasks}(4)
+        \task 3
+        \task 3i
+        \task -3
+        \task -3i
+    \end{tasks}
+\end{example}
+
+\v{4em}
+
+\begin{example}
+    已知复数z满足$z-i\in R$, 且 $\frac{2-z}{z}$ 是纯虚数, 则 $z=($ \quad $)$
+    \begin{tasks}(4)
+        \task $-1-i$
+        \task $-1+i$
+        \task $1-i$
+        \task $1+i$
+    \end{tasks}
+\end{example}
+
+\v{4em}
+
+\begin{example}(2021 全国甲卷)
+    已知 $(1-i)^{2}z=3+2i$, 则 $z=($ \quad $)$
+    \begin{tasks}(4)
+        \task $-1-\frac{3}{2}i$
+        \task $-1+\frac{3}{2}i$
+        \task $-\frac{3}{2}+i$
+        \task $-\frac{3}{2}-i$
+    \end{tasks}
+\end{example}
+
+\v{4em}
+
+\section{复数相等}
+
+\begin{definition}[复数相等]
+    设 $z_{1}=a+bi$, $z_{2}=c+di$, 则 $z_{1}=z_{2}\Leftrightarrow a=c$ 且 $b=d$.
+\end{definition}
+
+\begin{theorem}[分离法求 $z$]
+    将单独的复数直接设为 $z = a + bi$，分别求出 $a$ 和 $b$ 是最简单的做法。
+\end{theorem}
+
+\begin{example}
+    已知 i 是虚数单位，若复数 z 满足 $z \mathrm{i}=1+\mathrm{i}$ ，则 $z^2=$ （\qquad）
+    \begin{tasks}(4)
+        \task -2 i
+        \task 2 i
+        \task -2
+        \task 2
+    \end{tasks}
+\end{example}
+
+\v{4em}
+
+\begin{example}
+    已知复数 $z$ 满足 $\mathrm{iz}+\mathrm{i}=2-\mathrm{i}$ ，则 $z=$ \underline{\qquad}.
+\end{example}
+
+\v{4em}
+
+\begin{example}(2024·新课标I卷)
+    若 $\frac{z}{z-1}=1+i$, 则 $z=($ \quad $)$
+    \begin{tasks}(4)
+        \task $-1-i$
+        \task $-1+i$
+        \task $1-i$
+        \task $1+i$
+    \end{tasks}
+\end{example}
+
+\v{4em}
+
+\begin{example}(2023 湖北武汉二调)
+    若虚数$z$使得 $z+\frac{1}{z}$ 是实数, 则$z$满足( \quad )
+    \begin{tasks}(4)
+        \task 实部是 $-\frac{1}{2}$
+        \task 实部是 $\frac{1}{2}$
+        \task 虚部是 $-\frac{1}{2}$
+        \task 虚部是 $\frac{1}{2}$
+    \end{tasks}
+\end{example}
+
+\v{4em}
+
+\section{共轭复数}
+
+\begin{definition}[共轭复数]
+    复数 $z=a+bi(a,b\in \mathbb{R})$ 的共轭复数为 $a-bi$, 记作 $\overline{z}=a-bi$。它具有性质: $z\cdot\overline{z}=|z|^{2}$。
+\end{definition}
+
+\begin{example}
+    （24 全国甲理）设 $z=5+\mathrm{i}$ ，则 $i(\bar{z}+z)=$ \underline{\qquad}.
+\end{example}
+
+\v{4em}
+
+\begin{example}(2023·新课标I卷)
+    已知 $z=\frac{1-i}{2+2i}$, 则 $z-\overline{z}=($ \quad $)$
+    \begin{tasks}(4)
+        \task $-i$
+        \task $i$
+        \task $0$
+        \task $1$
+    \end{tasks}
+\end{example}
+
+\v{4em}
+
+\begin{example}
+    已知复数 $z_1=2+3 \mathrm{i}, ~ z_2=3-2 \mathrm{i}$ ．
+    \begin{enumerate}
+        \item 求 $\frac{z_2}{z_1}$ ；
+        \item 若 $z=a+4 \mathrm{i}(a \in \mathrm{R})$ 满足 $z+z_2$ 为纯虚数， $\bar{z}$ 是 $z$ 的共轭复数，求 $\left|\frac{z_1-1}{\bar{z}+1}\right|$ ．
+    \end{enumerate}
+\end{example}
+
+\v{8em}
+
+\subsection{$z_1 + z_2$ 与 $z_1 - z_2$ 的特殊性}
+
+\begin{example}
+    已知复数 $z_1=3-m \mathrm{i}, ~ z_2=1+2 \mathrm{i}, ~ m \in R$ ．
+    \begin{enumerate}
+        \item 若 $\frac{z_1}{z_2+\mathrm{i}}$ 是纯虚数，求实数 $m$ 的值；
+        \item 若 $\left|z_1+z_2\right|=\left|z_1-z_2\right|$ ，求 $z_1-z_2$ ．
+    \end{enumerate}
+\end{example}
+
+\v{10em}
+
+\begin{example}
+    已知复数 $z=a+b \mathrm{i}$ ，其中 $a, b$ 为实数且 $a \neq 0$ ．
+    \begin{enumerate}
+        \item 若 $z(z+\bar{z})=2+4 \mathrm{i}$ ，求 $z$ ；
+
+        \item 若 $\omega=z-\frac{2}{z}$ 为纯虚数，且 $1 \leq|\omega| \leq 2$ ，求 $|b|$ 的取值范围．
+    \end{enumerate}
+\end{example}
+
+\v{10em}
+
+\newpage
+
+\section{复数比大小}
+
+\begin{tips}
+    复数是不能比较的大小的，所以当看见 $z < 2$ 这种式子，便能断定虚部为 $0$，因为只有实数才能比较大小，若 $z = a + bi$，则 $a < 2, b = 0$.
+
+    \begin{warning}
+        但是复数的模长可以比较大小，这是一个标量！
+    \end{warning}
+\end{tips}
+
+\begin{example}
+    设 $z_1$ 是虚数，$z_2=z_1+\frac{1}{z_1}$ 是实数且 $-\frac{1}{2} \leq z_2 \leq \frac{1}{2}$ ．
+    \begin{enumerate}
+        \item 求 $\left|z_1\right|$ 的值以及 $z_1$ 实部的取值范围；
+        \item 若 $\omega=\frac{1-\overline{z_1}}{1+\overline{z_1}}$ ，求证：$\omega$ 为纯虚数．
+    \end{enumerate}
+\end{example}
+
+\v{10em}
+
+\begin{example}
+    \begin{enumerate}
+        \item 对于复数 $z_1, z_2$ ，若 $\left(z_1-i\right) \cdot z_2=1$ ，则称 $z_1$ 是 $z_2$ 的＂错位共轭＂复数，求复数 $\frac{\sqrt{3}}{2}-\frac{1}{2} i$ 的＂错位共轭＂复数；
+        \item 设复数 $z=\cos \theta+i \sin \theta(\theta \in[0,2 \pi])$ ，其中 $i$ 为虚数单位，若 $z^2<\frac{1}{2}$ ，求 $\theta$ ．
+    \end{enumerate}
+\end{example}
+
+\v{10em}
+
+\section{复数解的共轭性}
+
+\begin{theorem}[两根的共轭性]
+    当 $\Delta < 0$ 时，方程的两根互为共轭复数。
+\end{theorem}
+
+\begin{example}
+    在复数范围内，方程 $x^2-5 x+6=0$ 的解的个数为 （\qquad）
+    \begin{tasks}(4)
+        \task 2
+        \task 4
+        \task 6
+        \task 8
+    \end{tasks}
+\end{example}
+\begin{example}
+    已知关于 $x$ 的实系数方程 $x^2-2 x+k=0$ 的一个虚根为 $1-\mathrm{i}$ ，则另外一个根的虚部为 （\qquad）
+    \begin{tasks}(4)
+        \task 1
+        \task -1
+        \task i
+        \task -i
+    \end{tasks}
+\end{example}
+
+\v{8em}
+
+\begin{example}
+    已知复数 $z_1=\frac{1}{a+2}+\left(a^2-1\right) \mathrm{i}, z_2=2+2(a+1) \mathrm{i}(a \in \mathrm{R}$ ，$i$ 是虚数单位（\quad）
+    \begin{enumerate}
+        \item 若复数 $z_1-z_2$ 在复平面上对应点落在第一象限，求实数 $a$ 的取值范围；
+        \item 若虚数 $z_1$ 是实系数一元二次方程 $4 x^2-4 x+m=0$ 的根，求实数 $m$ 值．
+    \end{enumerate}
+
+    \begin{tips}
+        学完后面的知识点后回来做第一问.
+    \end{tips}
+\end{example}
+
+\v{8em}
+
+\begin{example}
+    设复数 $z_1=a+\mathrm{i}, z_2=2-b \mathrm{i}$（其中 $a, b \in \mathbf{R}$ ）．
+    \begin{enumerate}
+        \item 若 $z_1=\overline{z_2}$ ，求 $a+b$ 的值；
+        \item 若 $z_1$ 是关于 $x$ 的方程 $x^2-m x+2=0$ 的一个根，求 $m$ 的值．
+    \end{enumerate}
+\end{example}
+
+\v{8em}
+
+\begin{example}
+    已知方程 $3 x^2-2 p x+q=0(p, q \in R)$ 的两个根分别为 $\alpha, \beta$ ．
+    \begin{enumerate}
+        \item 若 $\alpha=2-i$ ，求 $p, q$ 的值；
+        \item 若 $p=3$ ，且 $|\alpha-\beta|=1$ ，求 $q$ 的值．
+    \end{enumerate}
+\end{example}
+
+\v{8em}

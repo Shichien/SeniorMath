@@ -19,11 +19,11 @@
             \draw[draw=black, fill=red, very thick, solid] (0.50,0.00) circle (0.1);
             \draw[draw=green, very thick, solid] (0.50,-0.01) -- (3.35,1.29);
             \draw[draw=black, fill=red, very thick, solid] (2.25,0.78) circle (0.1);
-            \node[black, anchor=south west] at (3.19,1.19) {$d_{max} = d ++ r$};
+            \node[black, anchor=south west] at (3.19,1.19) {$d_{max}=d+r$};
             \draw[draw=black, very thick, solid] (0.30,0.31) -- (0.46,0.01);
             \draw[draw=black, very thick, solid] (2.11,1.06) -- (2.25,0.80);
             \draw[draw=black, stealth-stealth, very thick, solid] (0.48,0.22) -- (2.08,0.96);
-            \node[black, anchor=south west] at (-0.10,-0.90) {$d_{min} = d - r$};
+            \node[black, anchor=south west] at (-0.10,-0.90) {$d_{min}=d-r$};
             \node[black, anchor=south west] at (2.58,0.58) {$r$};
             \node[black, anchor=south west] at (1.39,0.12) {$r$};
             \node[black, anchor=south west] at (0.93,0.56) {$d$};
@@ -35,7 +35,54 @@
     已知 $Q$ 为圆 $C:(x-2)^2+(y-1)^2=1$ 上一动点，$M(7,4)$ ，点 $P$ 为 $x$ 轴上一动点，则 $|P M|+|P Q|$ 的最小值为 $\qquad$
 \end{example}
 
-\vspace{6em}
+\v{12em}
+
+\subsection{垂径定理}
+
+\begin{theorem}[垂径定理]
+    垂直于弦的直径平分这条弦，并且平分弦所对的两条弧。
+
+    \begin{minipage}[c]{0.55\textwidth}
+        用几何语言描述为：
+        在圆 $O$ 中，若直径 $CD$ 垂直于弦 $AB$ (非直径) 于点 $M$，则：
+        \begin{itemize}
+            \item 弦被平分：$AM = MB$
+            \item 劣弧被平分：$\overset{\frown}{AD} = \overset{\frown}{BD}$
+            \item 优弧被平分：$\overset{\frown}{AC} = \overset{\frown}{BC}$
+        \end{itemize}
+
+        此定理也说明，直径 $CD$ 是弦 $AB$ 的垂直平分线，具有垂直平分线的性质。
+    \end{minipage}
+    \begin{minipage}[c]{0.44\textwidth}
+        \begin{tikzpicture}[scale=0.7]
+            \def\radius{3}
+            \coordinate (O) at (0,0);
+
+            \draw (O) circle (\radius);
+
+            \coordinate (A) at (-2.5, -1.65);
+            \coordinate (B) at (2.5, -1.65);
+            \coordinate (C) at (0, \radius);
+            \coordinate (D) at (0, -\radius);
+            \coordinate (M) at (0, -1.65);
+
+            \draw (C) -- (D);
+            \draw (A) -- (B);
+            \draw[dashed] (O) -- (A);
+            \draw[dashed] (O) -- (B);
+
+            \fill (O) circle (2pt) node[above right] {$O$};
+            \fill (A) circle (2pt) node[below left] {$A$};
+            \fill (B) circle (2pt) node[below right] {$B$};
+            \fill (C) circle (2pt) node[above] {$C$};
+            \fill (D) circle (2pt) node[below] {$D$};
+            \fill (M) circle (2pt) node[right=2pt] {$M$};
+
+            \draw ($(M)+(0.2,0)$) -- ($(M)+(0.2,0.2)$) -- ($(M)+(0,0.2)$);
+        \end{tikzpicture}
+    \end{minipage}
+
+\end{theorem}
 
 
 \subsection{圆的弦长公式}
@@ -94,7 +141,17 @@
     \end{tasks}
 \end{example}
 
-\v{8em}
+\v{12em}
+
+\begin{example}
+    圆 $C$ 过 $(0,3)$、$(4,5)$ 两点，且圆心 $C$ 在直线 $x-y+8=0$ 上．
+    \begin{itemize}
+        \item[（1）] 求圆 $C$ 的方程；
+        \item[（2）] 若直线 $l$ 在 $x$ 轴上的截距是 $y$ 轴上的截距的 2 倍，且被圆 $C$ 截得的弦长为 6 ，求直线 $l$ 的方程。
+    \end{itemize}
+\end{example}
+
+\v{12em}
 
 \begin{theorem}[弦长的取值范围]
     要分情况讨论：
@@ -105,29 +162,22 @@
 
     \begin{minipage}{0.5\textwidth}
         \begin{center}
-            \begin{tikzpicture}[scale=1.2]
-                % Draw circle
+            \begin{tikzpicture}[scale=0.8]
                 \draw (0,0) circle (1.5);
                 \draw[fill=black] (0,0) circle (1pt) node[below right] {$O$};
-
-                % Point inside circle
-                \draw[fill=red] (-0.5,0) circle (1.5pt) node[below] {$P$};
-
-                % Max chord case - through P perpendicular to OP
-                \draw[thick, blue] (-0.5,1.4) -- (-0.5,-1.4);
-                \node at (-2,0) {$L_{max}$};
-
-                % Min chord case - through P and center
-                \draw[thick, red] (-1.5,0) -- (1.5,0);
-                \node at (0,0.5) {$L_{min}$};
-
+                \draw[fill=red] (-0.7,0.5) circle (1.5pt) node[left] {$P$};
+                \draw[dashed] (0,0) -- (-0.7,0.5);
+                \draw[thick, blue] (-1.54,-0.59) -- (0.14,1.59);
+                \node at (-1.4,-0.8) {$L_{min}$};
+                \draw[thick, red] (-1.5,1.07) -- (1.5,-1.07);
+                \node at (0.7,-1.0) {$L_{max}$};
                 \node at (0,-2) {过圆内点的弦长范围};
             \end{tikzpicture}
         \end{center}
-    \end{minipage}
+    \end{minipage} %
     \begin{minipage}{0.5\textwidth}
         \begin{center}
-            \begin{tikzpicture}[scale=1.2]
+            \begin{tikzpicture}[scale=0.8]
                 % Draw circle
                 \draw (0,0) circle (1.5);
                 \draw[fill=black] (0,0) circle (1pt) node[below right] {$O$};
@@ -159,9 +209,27 @@
     \end{tasks}
 \end{example}
 
-\v{8em}
+\v{10em}
 
 \subsection{圆和斜率构造}
+
+\begin{theorem}[求直线与圆相切]
+    当直线与圆相切时，圆心到直线的距离等于圆的半径。这是判断直线与圆相切的充要条件。
+    \begin{center}
+        \begin{tikzpicture}[scale=0.7]
+            % Draw circle
+            \draw[draw=blue, thick, solid] (0.50,0.50) ellipse (1.50 and 1.50);
+            % Draw tangent line
+            \draw[draw=red, thick, solid] (-3.03,-0.99) -- (0.33,2.49);
+            % Draw radius to point of tangency
+            \draw[draw=green, thick, dotted] (-0.54,1.58) -- (0.50,0.50);
+            % Add circle center
+            \filldraw[black] (0.50,0.50) circle (2pt) node[below right] {$O$};
+            % Add point of tangency
+            \filldraw[orange] (-0.54,1.58) circle (2pt) node[above left] {$P$};
+        \end{tikzpicture}
+    \end{center}
+\end{theorem}
 
 \begin{example}
     已知实数 $x, y$ 满足 $x^2+y^2-4 x-2 y-4=0$ ，则 $\frac{y-1}{x+3}$ 的最大值是 （\qquad）
@@ -173,13 +241,13 @@
     \end{tasks}
 \end{example}
 
-\v{8em}
+\v{12em}
 
 \begin{example}
     已知圆 $C: x^2+y^2-4x+6y+4=0$ 与直线 $l: 3x-4y+m=0$ 相切，求参数 $m$ 的值。
 \end{example}
 
-\v{8em}
+\v{12em}
 
 \subsection{两点间的距离构造}
 
@@ -193,13 +261,13 @@
     已知圆 $x^2+(y-2)^2=4$ 上一点 $P(m, n)$ ，则 $\sqrt{m^2+n^2}$ 的最大值为 \underline{\qquad}
 \end{example}
 
-\v{8em}
+\v{12em}
 
 \begin{example}
     实数 $x$、$y$ 满足 $x^2+y^2=4$ ，则 $(x-4)^2+(y+3)^2$ 的最大值是 \underline{\qquad}
 \end{example}
 
-\v{8em}
+\v{12em}
 
 \begin{example}
     已知实数 $x, y$ 满足方程 $x=\sqrt{1-y^2}$ ，则（ \qquad）
@@ -209,7 +277,7 @@
     \end{itemize}
 \end{example}
 
-\v{8em}
+\v{12em}
 
 
 \subsection{轴对称与将军饮马}
@@ -218,25 +286,28 @@
     将军饮马需要让其中一个点作对称点。
 
     \begin{center}
-        \begin{tikzpicture}
-            \node[black, anchor=south west] at (2.81,-1.38) {$x$};
-            \node[black, anchor=south west] at (-0.51,1.72) {$y$};
-            \draw[draw=black, -stealth, thick, solid] (-1.00,-1.00) -- (3.00,-1.00);
-            \draw[draw=black, -stealth, thick, solid] (0.00,-2.00) -- (0.00,2.00);
-            \draw[draw=black, fill=teal, very thick, solid] (0.35,-0.57) circle (1pt);
-            \draw[draw=black, fill=teal, very thick, solid] (2.69,0.57) circle (1pt);
-            \draw[draw=black, fill=teal, very thick, solid] (1.56,-1.01) circle (1pt);
-            \node[black, anchor=south west] at (1.42,-1.58) {P};
-            \node[black, anchor=south west] at (-0.01,-0.56) {A};
-            \node[black, anchor=south west] at (2.58,0.28) {B};
-            \draw[draw=black, fill=teal, very thick, solid] (0.34,-1.40) circle (1pt);
-            \node[black, anchor=south west] at (-0.02,-1.99) {A'};
-            \draw[draw=black, very thick, solid] (0.35,-1.41) -- (2.68,0.56);
-            \draw[draw=black, very thick, dotted] (0.36,-0.56) -- (0.35,-1.38);
-            \draw[draw=black, very thick, solid] (0.36,-0.91) -- (0.43,-0.91);
-            \draw[draw=black, very thick, solid] (0.43,-0.91) -- (0.43,-0.99);
-            \draw[draw=black, very thick, solid] (0.36,-0.57) -- (0.82,-1.01);
-            \node[black, anchor=south west] at (0.66,-1.58) {P};
+        \begin{tikzpicture}[scale=0.6]
+            % Coordinate axes
+            \draw[->] (-1.5,-1.5) -- (3.5,-1.5) node[right] {$x$};
+            \draw[->] (0,-2.5) -- (0,1) node[above] {$y$};
+
+            % Points
+            \node[circle, fill=blue, inner sep=1.5pt, label={[label distance=0.1cm]below right:$P$}] (P) at (1.1,-1.5) {};
+            \node[circle, fill=red, inner sep=1.5pt, label={[label distance=0.1cm]left:$A$}] (A) at (0.4,-0.6) {};
+            \node[circle, fill=red, inner sep=1.5pt, label={[label distance=0.1cm]right:$B$}] (B) at (2.7,0.6) {};
+
+            % Reflection point A'
+            \node[circle, fill=red, inner sep=1.5pt, label={[label distance=0.1cm]below left:$A'$}] (Aprime) at (0.4,-2.4) {};
+
+            % Lines
+            \draw[thick] (Aprime) -- (B);
+            \draw[thick, dashed] (A) -- (Aprime);
+
+            % Right angle symbol
+            \draw (0.4,-0.9) -- (0.5,-0.9) -- (0.5,-1.0);
+
+            % Additional line (optional)
+            \draw[thick] (A) -- (P);
         \end{tikzpicture}
     \end{center}
 \end{theorem}
@@ -251,7 +322,16 @@
     \end{tasks}
 \end{example}
 
-\v{8em}
+\v{12em}
+
+\begin{theorem}[圆距离的转换]
+    先使用点到圆的距离的不等式进行第一步转换，再进行将军饮马：
+
+    假设 K 是定点，N 是圆上的一个动点，有：
+    $$
+        |KN| \geq |KO| - r, \quad |KN| \leq |KO| + r
+    $$
+\end{theorem}
 
 \begin{example}
     在平面直角坐标系中，军营所在区域的边界为 $x^2+y^2=1$ ，河岸所在直线方程为 $x+y=3$ ，将军从点 $A(0,2)$ 处出发，先到河边饮马，然后再返回军营，如果将军只要到达军营所在区域即回到军营，则这个将军所经过的最短路程为（ \hspace{2em} ）
@@ -263,8 +343,51 @@
     \end{tasks}
 \end{example}
 
-\v{8em}
+\v{12em}
 
+\begin{example}
+    已知圆 $C:(x+2)^2+(y-1)^2=8$ ，直线 $l: 4 x-y-8=0, ~ M$ 为直线 $l$ 上一动点，$N$ 为圆 $C$ 上一动点，定点 $P(2,3)$ ，则 $|M N|+|M P|$ 的最小值为 （\qquad）
+
+    \begin{center}
+        \begin{tikzpicture}[scale = 1.3]
+            \draw[draw=black, -latex, thin, solid] (-2.00,0.00) -- (1.00,0.00);
+            \draw[draw=black, -latex, thin, solid] (-1.50,-0.50) -- (-1.50,2.00);
+            \draw[draw=black, thin, solid] (-1.68,1.00) ellipse (0.73 and 0.69);
+            \draw[draw=black, fill=red, thin, solid] (-1.66,0.99) circle (0.05);
+            \draw[draw=black, thin, solid] (-0.22,2.34) -- (-1.20,-0.80);
+            \draw[draw=black, very thick, dotted] (-1.65,0.99) -- (0.20,0.46);
+            \draw[draw=black, fill=red, very thick, solid] (0.21,0.45) circle (0.05);
+            \draw[draw=black, fill=red, very thick, solid] (-0.37,1.83) circle (0.05);
+            \draw[draw=black, fill=red, very thick, solid] (-1.06,1.33) circle (0.05);
+            \node[black, anchor=south west] at (-1.28,1.30) {$N$};
+            \node[black, anchor=south west] at (-0.42,1.58) {$M$};
+            \node[black, anchor=south west] at (-2.20,0.85) {$C$};
+            \node[black, anchor=south west] at (0.15,0.21) {$C_0$};
+            \draw[draw=black, very thick, solid] (-0.37,1.81) -- (-1.06,1.32);
+            \draw[draw=black, fill=red, very thick, solid] (-0.77,2.37) circle (0.05);
+            \node[black, anchor=south west] at (-1.14,2.33) {$P$};
+            \draw[draw=black, very thick, solid] (-0.34,1.81) -- (-0.78,2.38);
+            \draw[draw=black, very thick, dotted] (-0.79,2.34) -- (0.18,0.45);
+        \end{tikzpicture}
+    \end{center}
+
+    \begin{tasks}(4)
+        \task $\sqrt{2}$
+        \task $\sqrt{3}$
+        \task $2 \sqrt{2}$
+        \task $2 \sqrt{3}$
+    \end{tasks}
+\end{example}
+
+\v{2em}
+
+\begin{example}
+    已知圆 $C:(x-1)^2+(y-2)^2=1$ ，点 $A(7,6), ~ B$ 为圆 $C$ 上的动点，$Q$ 为 $x$ 轴上的动点，则 $\{|Q A|+|Q B|\}_{min}$ = \underline{\qquad}
+\end{example}
+
+\vspace{10em}
+
+\pagebreak
 
 \subsection{圆和圆的位置关系}
 
@@ -355,6 +478,32 @@
     \end{tasks}
 \end{example}
 
+\v{6em}
+
+\begin{example}
+    圆 $C_1:(\mathrm{x}+1)^2+(\mathrm{y}-3)^2=36$ 与圆 $C_2:(x-2)^2+(y+1)^2=1$的位置关系是 （\qquad）
+    \begin{tasks}(4)
+        \task 相交
+        \task 内切
+        \task 外切
+        \task 外离
+    \end{tasks}
+\end{example}
+
+\v{6em}
+
+\begin{example}
+    ＂$a^2+b^2<R^2$＂是＂圆 $(x-a)^2+(y-b)^2=R^2$ 与坐标轴有四个交点＂的 （\qquad）条件
+\end{example}
+
+\v{8em}
+
+\begin{example}
+    已知圆 $C_1:(x-2 m)^2+(y-2 m)^2=9(m-2)$ 与圆 $C_2: x^2+y^2-8 x-8 y+34-m=0$
+
+    则＂$m=4$＂是＂圆 $C_1$ 与圆 $C_2$ 外切＂的 （\qquad）条件
+\end{example}
+
 \v{8em}
 
 \subsection{两圆公共弦问题}
@@ -363,7 +512,7 @@
     两圆方程作差即可得到它们的公共弦所在直线的方程。然后利用圆心到公共弦的距离、半径和半弦长构成的直角三角形，通过勾股定理求出弦长。
 \end{theorem}
 \begin{example}
-    若圆 $x^2+y^2+2 x-4 y-5=0$ 与 $x^2+y^2+2 x-1=0$ 相交于 $A 、 B$ 两点，则公共弦 $A B$ 的长是（ \hspace{2em} ）。
+    若圆 $x^2+y^2+2 x-4 y-5=0$ 与 $x^2+y^2+2 x-1=0$ 相交于 $A$、$B$ 两点，则公共弦 $A B$ 的长是（ \hspace{2em} ）。
     \begin{tasks}(4)
         \task $1$
         \task $2$
@@ -372,7 +521,7 @@
     \end{tasks}
 \end{example}
 
-\v{8em}
+\v{10em}
 
 \begin{example}
     圆 $C_1: x^2+y^2+2 x-8 y-8=0$ 与圆 $C_2: x^2+y^2+4 x-4 y-4=0$ 的公共弦长为（ \hspace{2em} ）
@@ -384,11 +533,60 @@
     \end{tasks}
 \end{example}
 
-\v{8em}
+\v{10em}
 
 \subsection{圆的切线方程}
 
-\begin{theorem}[圆的切线方程]
+\begin{theorem}[过圆外一点的切线方程]
+    圆心到动直线的距离等于半径。
+
+    \begin{center}
+        \begin{tikzpicture}
+            \draw[draw=black, -latex, thin, solid] (-2.00,0.00) -- (1.00,0.00);
+            \draw[draw=black, -latex, thin, solid] (-1.50,-0.50) -- (-1.50,2.00);
+            \draw[draw=black, thin, solid] (-0.25,1.25) ellipse (0.75 and 0.75);
+            \draw[draw=black, fill=black, thin, solid] (-1.27,0.49) circle (0.05);
+            \draw[draw=black, thin, solid] (-1.27,0.47) -- (-0.70,2.44);
+            \draw[draw=black, thin, solid] (-1.26,0.49) -- (0.96,0.53);
+            \draw[draw=black, fill=black, thin, solid] (-0.25,1.28) circle (0.05);
+            \draw[draw=black, thin, dotted] (-0.25,1.26) -- (-0.97,1.48);
+            \draw[draw=black, thin, dotted] (-0.25,1.27) -- (-0.22,0.52);
+            \node[black, anchor=south west] at (-0.86,1.27) {$r$};
+            \node[black, anchor=south west] at (-0.36,0.67) {$r$};
+        \end{tikzpicture}
+    \end{center}
+\end{theorem}
+
+\begin{example}
+    已知圆 $C: x^2+y^2-4x+6y+4=0$ 与直线 $l: 3x-4y+m=0$ 相切，求参数 $m$ 的值。
+\end{example}
+
+\v{10em}
+
+\begin{example}
+    过点 $(-1,0)$ 作直线 $l$ 与圆 $(x-2)^2+(y-1)^2=1$ 相切，斜率的最大值为 $M$ ，若 $a+b=M, ~ a>0, ~ b>0$ ，则 $\frac{1}{a}+\frac{4}{b}$ 的最小值是 （\qquad）
+    \begin{tasks}(4)
+        \task 12
+        \task 9
+        \task $\frac{27}{4}$
+        \task $\frac{28}{3}$
+    \end{tasks}
+\end{example}
+
+\vspace{10em}
+
+\begin{example}
+    已知圆 $C: x^2+y^2-6 x-8 y+21=0$ ，直线 $l$ 过点 $A(1,0)$ ．
+    \begin{enumerate}
+        \item 若直线 $l$ 与圆 $C$ 相切，求直线 $l$ 的方程；
+
+        \item 当直线 $l$ 的斜率存在且与圆 $C$ 相切于点 $B$ 时，求 $|A B|$ ．
+    \end{enumerate}
+\end{example}
+
+\v{10em}
+
+\begin{theorem}[过圆上一点的切线方程]
     若已知点 $P(x_0, y_0)$ 在圆 $(x-a)^2+(y-b)^2=r^2$ 上，则过该点的切线方程为 $(x_0-a)(x-a)+(y_0-b)(y-b)=r^2$。
 \end{theorem}
 
@@ -396,21 +594,62 @@
     已知圆 $C:(x-4)^2+(y+5)^2=2$ ，则圆 $C$ 在点 $P(3,-4)$ 处的切线方程为 \underline{\qquad}
 \end{example}
 
-\v{8em}
+\begin{tips}
+    当然，可以直接使用切线的垂直性质，求出斜率。
+\end{tips}
 
-\begin{example}
-    已知圆 $C: x^2+y^2-4x+6y+4=0$ 与直线 $l: 3x-4y+m=0$ 相切，求参数 $m$ 的值。
-\end{example}
-
-\v{8em}
+\v{10em}
 
 \subsection{两圆公切线条数}
 
 \begin{theorem}[两圆公切线条数]
     两圆有且仅有三条公切线是两圆外切的充要条件。因此，两圆的圆心距等于两圆半径之和。
+    \begin{enumerate}
+        \item 四条公切线：相离
+        \item 三条公切线：外切
+        \item 两条公切线：相交
+        \item 一条公切线：内切
+    \end{enumerate}
 \end{theorem}
+
 \begin{example}
-    若圆 $C_1: x^2+y^2-2 a y=0(a>0)$ 与圆 $C_2: x^2+y^2-4 x+3=0$ 有且仅有三条公切线，则 $a$ 的值为 $\qquad$ ．
+    已知两圆 $C_1: x^2+y^2=1, C_2:(x-1)^2+(y-1)^2=r^2(r>1)$ ，若两圆有且仅有两条公切线，则 $r$ 的取值范围为
+\end{example}
+
+\begin{solution}
+    相交：
+    $$
+        \begin{aligned}
+            \quad & R_1-R_2<C_1 C_2<R_1+R_2              \\
+                  & r-1<\sqrt{1^2+1^2}<r+1               \\
+                  & \therefore \left\{\begin{array}{l}
+                                          r-1<\sqrt{2} \\
+                                          \sqrt{2}<r+1
+                                      \end{array}\right.
+        \end{aligned}
+    $$
+\end{solution}
+
+\begin{example}
+    若圆 $C_1: x^2+y^2-2 a y=0(a>0)$ 与圆 $C_2: x^2+y^2-4 x+3=0$ 有且仅有三条公切线，则 $a$ 的值为 \underline{\qquad}.
+\end{example}
+
+\v{8em}
+
+\begin{example}
+    已知圆 $C_1:(x-2)^2+(y+4)^2=16$ ，圆 $C_2: x^2+y^2+2 x-3=0$ ，则两圆的公切线的条数为 （\qquad）
+    \begin{tasks}(4)
+        \task 1
+        \task 2
+        \task 3
+        \task 4
+    \end{tasks}
+\end{example}
+
+\v{8em}
+
+\begin{example}
+    已知两圆 $x^2+y^2=1, (x-1)^2+(y-1)^2=r^2(r>1)$ ，若两圆有且仅有两条公切线，则 $r$ 的取值范围为 \underline{\qquad}.
 \end{example}
 
 \v{8em}
@@ -419,10 +658,12 @@
 
 \begin{theorem}[圆的参数方程]
     圆 $C: (x-a)^2+(y-b)^2=r^2$ 的参数方程可表示为：
-    \begin{align*}
-        x & = a + r\cos\theta \\
-        y & = b + r\sin\theta
-    \end{align*}
+    $$
+        \begin{cases}
+            x = a + r\cos\theta \\
+            y = b + r\sin\theta
+        \end{cases}
+    $$
     其中 $\theta \in [0, 2\pi)$ 是参数。通过这种表示，圆上任意一点的坐标都可以用参数 $\theta$ 表示，便于求解圆上点满足特定条件的问题。
 \end{theorem}
 
@@ -434,7 +675,17 @@
     \end{itemize}
 \end{example}
 
-\v{8em}
+\v{12em}
+
+\begin{example}
+    若点 $P(x, y)$ 在圆 $(x-3)^2+(y-\sqrt{3})^2=6$ 上运动，求：
+    \begin{enumerate}
+        \item $\frac{y}{x}$ 的最大值；
+        \item $x+y$ 的最值．
+    \end{enumerate}
+\end{example}
+
+\v{12em}
 
 \begin{theorem}[圆的切线长度]
     设点 $P$ 到圆心 $O$ 的距离为 $d$，圆的半径为 $r$，则过点 $P$ 的切线长度为 $L = \sqrt{d^2 - r^2}$（当 $d > r$ 时）。
@@ -442,99 +693,29 @@
 
 \begin{example}
     已知动点 $M, N$ 分别在圆 $C_1:(x-1)^2+(y-2)^2=1$ 和 $C_2:(x-3)^2+(y-4)^2=3$ 上，动点 $P$ 在 $x$ 轴上，则（ \hspace{2em} ）
-    \begin{itemize}
-        \item  圆 $C_2$ 的半径为 3
-        \item  圆 $C_1$ 和圆 $C_2$ 相离
-        \item  $|P M|+|P N|$ 的最小值为 $2 \sqrt{10}$
-        \item  过点 $P$ 做圆 $C_1$ 的切线，则切线长最短为 $\sqrt{3}$
-    \end{itemize}
+    \begin{tasks}(2)
+        \task  圆 $C_2$ 的半径为 3
+        \task  圆 $C_1$ 和圆 $C_2$ 相离
+        \task  $|P M|+|P N|$ 的最小值为 $2 \sqrt{10}$
+        \task  过点 $P$ 做圆 $C_1$ 的切线，则切线长最短为 $\sqrt{3}$
+    \end{tasks}
 \end{example}
 
-\v{8em}
+\v{12em}
 
 \subsection*{练习题}
 
 \begin{example}
     已知 $C: x^2+y^2-6 x=0$ ，则下述正确的是（ \hspace{2em} ）
-    \begin{itemize}
-        \item 圆 $C$ 的半径 $r=3$
-        \item 点 $(1,2 \sqrt{2})$ 在圆 $C$ 的内部
-        \item 圆 $C$ 与圆 $x^2+y^2+2 x+4 y-6=0$ 的公共弦所在直线方程为 $4 x+2 y-3=0$
-        \item 圆 $C':(x+1)^2+y^2=4$ 与圆 $C$ 相交
-    \end{itemize}
+    \begin{tasks}(2)
+        \task 圆 $C$ 的半径 $r=3$
+        \task 点 $(1,2 \sqrt{2})$ 在圆 $C$ 的内部
+        \task* 圆 $C$ 与圆 $x^2+y^2+2 x+4 y-6=0$ 的公共弦所在直线方程为 $4 x+2 y-3=0$
+        \task 圆 $C':(x+1)^2+y^2=4$ 与圆 $C$ 相交
+    \end{tasks}
 \end{example}
 
-\v{8em}
-
-\subsection{弦长公式与韦达定理}
-\begin{theorem}[弦长公式与韦达定理]
-    联立直线与圆的方程，消元后得到一元二次方程。
-    \begin{itemize}
-        \item 利用弦长公式 $|MN| = \sqrt{1+k^2}|x_M-x_N|$ 以及韦达定理计算 $|MN|$。
-        \item 利用韦达定理和向量点积坐标公式 $\overrightarrow{OM} \cdot \overrightarrow{ON} = x_M x_N + y_M y_N$ 计算点积。
-    \end{itemize}
-\end{theorem}
-\begin{example}
-    $y=x+4$ 与 $C:(x-1)^2+(y-3)^2=8$ 交于 $M, ~ N$，$O$ 为原点，则 $|M N|=$ \underline{\qquad} , $\overrightarrow{O M} \cdot \overrightarrow{O N}=$ \underline{\qquad}
-\end{example}
-
-\v{8em}
-
-\begin{example}
-    圆 $C$ 过 $(0,3)$、$(4,5)$ 两点，且圆心 $C$ 在直线 $x-y+8=0$ 上．
-    \begin{itemize}
-        \item[（1）] 求圆 $C$ 的方程；
-        \item[（2）] 若直线 $l$ 在 $x$ 轴上的截距是 $y$ 轴上的截距的 2 倍，且被圆 $C$ 截得的弦长为 6 ，求直线 $l$ 的方程。
-    \end{itemize}
-\end{example}
-
-\v{8em}
-
-\begin{example}
-    已知圆 $C$ 经过 $P(4,-2), Q(-1,3)$ 两点，且圆心 $C$ 在直线 $x+y-1=0$ 上．
-    \begin{itemize}
-        \item[（1）] 求圆 $C$ 的方程；
-        \item[（2）] 若直线 $l: y=-x+m$ 与圆 $C$ 交于点 $A, B$ ，且以线段 $A B$ 为直径的圆经过坐标原点，求直线 $l$ 的方程．
-    \end{itemize}
-\end{example}
-
-\v{8em}
-
-\subsection{解答题}
-\begin{theorem}[垂径定理与韦达定理]
-    \begin{itemize}
-        \item[(1)] 弦的中点 $M$、圆心 $C$、原点 $O$ 构成的直线 $CM$ 与弦 $PQ$ 垂直。利用两直线垂直斜率之积为 $-1$ 的关系，可以求出中点 $M$ 的坐标。
-        \item[(2)] 条件 $OP \perp OQ$ 意味着 $\overrightarrow{OP} \cdot \overrightarrow{OQ} = 0$。设 $P(x_1, y_1), Q(x_2, y_2)$，则 $x_1x_2 + y_1y_2 = 0$。联立直线与圆的方程，利用韦达定理建立关于参数 $m$ 的方程求解。
-    \end{itemize}
-\end{theorem}
-\begin{example}
-    设 $O$ 是坐标原点，直线 $x+2 y-3=0$ 与圆 $C: x^2+y^2+x-6 y+m=0$ 交于 $P, Q$ 两点．
-    \begin{itemize}
-        \item[（1）] 求线段 $P Q$ 中点 $M$ 的坐标；
-        \item[（2）] 若 $O P \perp O Q$ ，求该圆的面积．
-    \end{itemize}
-\end{example}
-
-\v{8em}
-
-\begin{example}
-    已知斜率为 $k\left(k \neq-\frac{1}{2}\right)$ 的直线 $l$ 过点 $B(-2,0)$ ，圆 $A:(x+1)^2+(y-2)^2=20$ 与 $l$ 交于 $M, N$ 两点，线段 $M N$ 中点是 $Q$
-    \begin{itemize}
-        \item[（1）] 若 $k=1$ ，求 $Q$ 坐标
-        \item[（2）] 若直线 $l_1: x+2 y+7=0$ 与直线 $l$ 交点是 $P$ ，那么 $\overrightarrow{B P} \cdot \overrightarrow{B Q}$ 是否为定值？如果是，求出定值；如果不是，说明理由．
-    \end{itemize}
-\end{example}
-
-\v{8em}
-
-\begin{theorem}[斜率与半角公式]
-    设已知直线的倾斜角为 $\alpha$，斜率为 $k_1$，则 $k_1=\tan\alpha$。所求直线的倾斜角为 $\beta = \alpha/2$，斜率为 $k_2 = \tan\beta$。利用正切的半角公式 $\tan\alpha = \frac{2\tan(\alpha/2)}{1-\tan^2(\alpha/2)}$ 建立关于 $k_2$ 的方程并求解，然后写出直线方程。
-\end{theorem}
-\begin{example}
-    若直线过点 $(-2,3)$ ，且倾斜角是直线 $3 x+4 y-5=0$ 的倾斜角的一半，则直线 l 的方程为 $\qquad$
-\end{example}
-
-\v{8em}
+\v{12em}
 
 % \subsection{解答题}
 % \begin{theorem}[直线系与参数范围]
@@ -553,7 +734,7 @@
 %     \end{itemize}
 % \end{example}
 
-% \v{8em}
+% \v{12em}
 
 % \subsection{解答题}
 % \begin{theorem}[直线系与最值问题]
@@ -572,7 +753,7 @@
 %     \end{itemize}
 % \end{example}
 
-% \v{8em}
+% \v{12em}
 
 % % =============================================
 % % 第三批题目 (来自图片)
@@ -589,11 +770,11 @@
 %     已知点 $A(1,3), B(5,7)$．
 %     \begin{itemize}
 %         \item[(1)] 求线段 $AB$ 垂直平分线所在直线的方程；
-%         \item[(2)] 若直线 $l$ 过 $(-1,0)$，且点 $A、B$ 到直线 $l$ 的距离相等，求直线 $l$ 的方程．
+%         \item[(2)] 若直线 $l$ 过 $(-1,0)$，且点 $A$、$B$ 到直线 $l$ 的距离相等，求直线 $l$ 的方程．
 %     \end{itemize}
 % \end{example}
 
-% \v{8em}
+% \v{12em}
 
 % \subsection{解答题}
 % \begin{theorem}[直线系与圆的综合应用]
@@ -610,7 +791,7 @@
 %     \end{itemize}
 % \end{example}
 
-% \v{8em}
+% \v{12em}
 
 % \subsection{选择题}
 % \begin{theorem}[抛物线定义与圆的切线长]
@@ -627,7 +808,7 @@
 %     \end{tasks}
 % \end{example}
 
-% \v{8em}
+% \v{12em}
 
 % \subsection{选择题}
 % \begin{theorem}[圆的切线性质与向量点积]
@@ -644,7 +825,7 @@
 %     \end{tasks}
 % \end{example}
 
-% \v{8em}
+% \v{12em}
 
 % \subsection{多选题}
 % \begin{theorem}[圆与圆的位置关系及最值问题]
@@ -660,7 +841,7 @@
 %     \end{itemize}
 % \end{example}
 
-% \v{8em}
+% \v{12em}
 
 % \subsection{多选题}
 % \begin{theorem}[直线系与圆的综合应用]
@@ -676,7 +857,7 @@
 %     \end{itemize}
 % \end{example}
 
-% \v{8em}
+% \v{12em}
 
 % \subsection{填空题}
 % \begin{theorem}[点到圆的距离与几何意义]
@@ -686,7 +867,7 @@
 %     若点 $P(x, y)$ 是圆 $x^2+y^2-2 x+4 y+1=0$ 上任意一点，则 $x^2+y^2$ 的最大值是 $\qquad$ ．
 % \end{example}
 
-% \v{8em}
+% \v{12em}
 
 % \subsection{解答题}
 % \begin{theorem}[点到圆的距离最值]

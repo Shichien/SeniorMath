@@ -1,0 +1,3 @@
+{
+    "pasteImage.insertPattern": "\\begin{figure} [H]\n    \\centering\n    \\includegraphics[width=0.8\\textwidth]{chapters/${imageSyntaxPrefix}${imageFilePath}${imageSyntaxSuffix}}\n\\end{figure}\n"
+}

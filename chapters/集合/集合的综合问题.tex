@@ -1,0 +1,144 @@
+\section{集合中的定义域问题}
+
+\begin{tips}
+    在集合中，有时可能碰到 $ y=\sqrt{1-x^2}$ 的式子，但是这里不问 $y$ 的取值范围，而是问 $x$ 的取值范围。
+\end{tips}
+
+\begin{example}
+    已知集合 $A=\{-3,-2,-1,0,1,2,3\}, B=\left\{x \mid y=\sqrt{x^2-x-6}\right\}$ 则 $A \cap B$ 的子集个数为 （\qquad）
+    \begin{tasks}(4)
+        \task 3
+        \task 4
+        \task 8
+        \task 9
+    \end{tasks}
+\end{example}
+
+\v{4em}
+
+\begin{example}
+    已知集合 $A=\left\{x \mid y=\sqrt{10-x^2}\right\}$ ，则集合 $A \cap \mathrm{~N}$ 的子集个数为 （\qquad）
+    \begin{tasks}(4)
+        \task 4
+        \task 8
+        \task 16
+        \task 32
+    \end{tasks}
+\end{example}
+
+\v{4em}
+
+\section{集合中的动态区间问题}
+
+\begin{theorem}
+    含参数的区间或集合，称为动区间，我们可以采用画数轴的方式求解。
+\end{theorem}
+
+\begin{example}
+    已知集合 $A=\left\{x \mid y=\sqrt{-x^2+3 x+10}, x \in \mathbf{R}\right\}$ ，集合 $B=\{x \mid m+1 \leq x \leq 2 m-1\}$ ，\\ 集合 $C=\{x \mid 3 \leq x<10, x \in \mathbf{Z}\}$ ．
+    \begin{enumerate}
+        \item 求 $\left(\mathrm{C}_{\mathrm{R}} A\right) \cap C$ 的子集的个数；
+        \item 若命题＂$\forall x \in A \cup B$ ，都有 $x \in A$＂是真命题，求实数 $m$ 的取值范围．
+    \end{enumerate}
+\end{example}
+
+\begin{warning}
+    注意考虑空集是否需要考虑，因为这里应该得到的是： $B \subseteq A$ ．用韦恩图画就知道了。
+\end{warning}
+
+\v{8em}
+
+\begin{example}
+    设集合 $M=\{x \mid a<x<3+a\}, ~ N=\{x \mid x<2$ 或 $x>4\}$ ，则下列结论中正确的是 （\qquad）
+    \begin{tasks}(2)
+        \task 若 $a<-1$ ，则 $M \subseteq N$
+        \task 若 $1 \in M$ ，则 $-2<a<1$
+        \task 若 $M \cup N=\mathbf{R}$ ，则 $1<a<2$
+        \task 若 $M \cap N \neq \varnothing$ ，则 $1<a<2$
+    \end{tasks}
+\end{example}
+
+\v{6em}
+
+\begin{example}
+    已知集合 $A=\left\{x \mid x^2+a x-a-1<0, a \in \mathrm{R}\right\}, ~ B=\{x \mid 2<x<3\}$ ．
+    \begin{enumerate}
+        \item 若 $0 \in A$ 且 $2 \notin A$ ，求实数 $a$ 的取值范围；
+        \item 设 $p: x \in A, ~ q: x \in B$ ，若 $p$ 是 $q$ 的必要不充分条件，求实数 $a$ 的取值范围．
+    \end{enumerate}
+\end{example}
+
+\begin{tips}
+    因为 $p$ 是 $q$ 的必要不充分条件，故 $B$ 为 $A$ 的真子集。
+\end{tips}
+
+\v{8em}
+
+\begin{example}
+    设区间 $A=[2 a+1,3 a-5), B=(-\infty, 16)$ ，则使 $A \subseteq(A \cap B)$ 成立的 $a$ 的取值范围为 \underline{\qquad}.
+\end{example}
+
+\v{8em}
+
+\section{集合中的取整数问题}
+
+\begin{example}
+    集合 $M=\left\{x \left\lvert\, x=\frac{k}{2}-\frac{1}{3}\right., k \in Z\right\}, P=\left\{y \left\lvert\, y=\frac{n}{2}+\frac{1}{6}\right., n \in Z\right\}, S=\left\{z \left\lvert\, z=m+\frac{1}{6}\right., m \in Z\right\}$ 间的关系是 （\qquad）
+    \begin{tasks}(4)
+        \task $S \cap M=P$
+        \task $S \cup P=M$
+        \task $P \cap S=P$
+        \task $P \cup M=S$
+    \end{tasks}
+\end{example}
+
+\v{6em}
+
+\begin{example}
+    （2023·全国甲卷·1）设集合 $A=\{x \mid x=3 k+1, k \in Z\}, B=\{x \mid x=3 k+2, k \in Z\}, U$ 为整数集，则 \\
+    $C_U(A \cap B)=$ （\qquad）
+    \begin{tasks}(4)
+        \task $\{x \mid x=3 k, k \in Z\}$
+        \task $\{x \mid x=3 k-1, k \in Z\}$
+        \task $\{x \mid x=3 k-1, k \in Z\}$
+        \task $\varnothing$
+    \end{tasks}
+\end{example}
+
+\v{6em}
+
+\begin{example}
+    集合 $M=\left\{X \left\lvert\, X=\frac{k \pi}{2}+\frac{\pi}{4}\right., k \in Z\right\}, ~ N=\left\{X \left\lvert\, X=\frac{k \pi}{4}+\frac{\pi}{4}\right., k \in Z\right\}$ ，则 （\qquad）
+    \begin{tasks}(4)
+        \task $M=N$
+        \task $M \subseteq N$
+        \task $N \subseteq M$
+        \task $M \cap N=\varnothing$
+    \end{tasks}
+\end{example}
+
+\v{6em}
+
+\begin{example}
+    已知集合 $P=\left\{x \left\lvert\, x=\frac{k}{2}+\frac{1}{4}\right., k \in Z\right\}, ~ Q=\left\{x \left\lvert\, x=\frac{k}{4}+\frac{1}{2}\right., k \in Z\right\}$ ，则 （\qquad）
+    \begin{tasks}(4)
+        \task $P=Q$
+        \task $P \varsubsetneqq Q$
+        \task $P \supsetneq Q$
+        \task $P \cap Q=\varnothing$
+    \end{tasks}
+\end{example}
+
+\v{6em}
+
+\begin{example}
+    集合 $M=\{x \mid x=3 k-2, k \in Z\}, ~ P=\{y \mid y=3 n+1, n \in Z\}, ~ S=\{z \mid z=6 m+1, m \in Z\}$ 之间的关系是 （\qquad）
+    \begin{tasks}(4)
+        \task $M \subseteq S=P$
+        \task $S=P \subseteq M$
+        \task $P=M \subseteq S$
+        \task $S \subseteq P=M$
+    \end{tasks}
+\end{example}
+
+\v{6em}

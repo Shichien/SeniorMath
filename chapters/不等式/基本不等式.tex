@@ -1,4 +1,5 @@
 \section{基本不等式}
+
 \begin{theorem}[基本不等式]
     $a>0,b>0$那么有：
     $$
@@ -6,15 +7,18 @@
     $$
     当且仅当$a=b$时不等式取等号。
 \end{theorem}
-\begin{proof}法一
+
+\begin{proof}
+    方法一：
     \begin{align*}
-             & (\sqrt{a}-\sqrt{b})^2\geq0 \\
-        \iff & a+b-2\sqrt{ab}\geq0        \\
-        \iff & \frac{a+b}{2}\geq\sqrt{ab}
+        (\sqrt{a}-\sqrt{b})^2\geq0         \iff a+b-2\sqrt{ab}\geq0
+        \iff \frac{a+b}{2}\geq\sqrt{ab}
     \end{align*}
     当且仅当$\sqrt{a}=\sqrt{b}$也即$a=b$时取等号。
 \end{proof}
-\begin{proof}法二
+
+\begin{proof}
+    方法二：
     \begin{figure}[H]
         \centering
         \begin{tikzpicture}[scale=1.2]
@@ -35,7 +39,6 @@
             \fill (1,{sqrt(3)}) circle (2pt) node[above] {$C$};
             \fill (1,0) circle (2pt) node[below] {$H$};
         \end{tikzpicture}
-        \caption{基本不等式图解}
     \end{figure}
     如图所示，在$\triangle ABC$的外接圆$\odot O$中，作$CH\perp AB$。如果设$BH=b,AH=a$，那么显然有外接圆半径
     $$OC=\frac{a+b}{2}$$
@@ -49,3 +52,34 @@
     $$
     当且仅当$H$和$O$重合的时候$a=b$，有$$\frac{a+b}{2}=\sqrt{ab}$$
 \end{proof}
+
+\subsection{对勾函数}
+
+这里我们特别介绍一个函数：
+$$
+    y=x+\frac{1}{x}
+$$
+它的图像为：
+\begin{figure}[H]
+    \centering
+    \begin{tikzpicture}
+        \draw[<->](4,0)--(0,0)--(0,4);
+        \draw(0,-4)--(0,0)--(-3,0);
+        \draw[blue,domain=0.3:3] plot(\x,{\x+1/\x});
+        \draw[blue,domain=-3:-0.3] plot(\x,{\x+1/\x});
+        \draw[dotted] (-3,-3)--(3,3);
+    \end{tikzpicture}
+    \caption{$y=x+1/x$}
+\end{figure}
+
+酷似两个对勾，因此俗称双钩函数。
+
+根据基本不等式，在第一象限
+$$
+    y=x+\frac{1}{x}\geq 2
+$$
+当且仅当$x=1$的时候取等号。
+
+\begin{definition}[渐近线]
+    并且$y=x+\frac{1}{x}$中，$1/x$随着$x$的增大快速减小，最终由$x$主导整个函数的取值，所以不难想象该函数图像会越来越向$y=x$靠近，这种行为我们称为渐进，$y=x$称为$y=x+\frac{1}{x}$的\textbf{渐近线}。
+\end{definition}

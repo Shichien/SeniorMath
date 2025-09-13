@@ -1,0 +1,62 @@
+\section{对数糖水不等式}
+
+\begin{theorem}[糖水不等式]
+    若 $a>b>0, m>0$ ，则一定有 $\frac{b+m}{a+m}>\frac{b}{a}$.
+
+    通俗的理解就是 $a$ 克的不饱和糖水里含有 $b$ 克糖，往糖水里面加入 $m$ 克糖，则糖水更甜；
+
+    \begin{proof}
+        $$\frac{b+m}{a+m}-\frac{b}{a}=\frac{a b+a m-a b-b m}{a^2+a m}=\frac{(a-b) m}{a^2+a m}>0$$
+    \end{proof}
+    \begin{warning}
+        特例：$\frac{1}{2}<\frac{2}{3}<\frac{3}{4}<\frac{4}{5}<\cdots \cdots$
+    \end{warning}
+\end{theorem}
+
+\begin{theorem}[倒数形式的糖水不等式]
+    设 $a>b>0, m>0$ ，则有：$\frac{a}{b}>\frac{a+m}{b+m}$
+
+    \begin{warning}
+        特例：$\frac{2}{1}>\frac{3}{2}>\frac{4}{3}>\frac{5}{4}>\ldots \ldots$ ．
+    \end{warning}
+\end{theorem}
+
+\begin{theorem}[对数糖水不等式]
+    （1）$n \in N_{+}$且 $n>1$ ，则有 $\log _{n+1} n<\log _{n+2}(n+1)$：
+    \begin{proof}
+        $$
+            \begin{aligned}
+                 & \log _{n+1} n=\frac{\lg n}{\lg (n+1)}<\frac{\lg n+\lg \frac{n+2}{n+1}}{\lg (n+1)+\lg \frac{n+2}{n+1}}=\frac{\lg \frac{n^2+2 n}{n+1}}{\lg (n+2)} \\
+                 & <\frac{\lg \frac{(n+1)^2}{n+1}}{\lg (n+2)}=\frac{\lg (n+1)}{\lg (n+2)}=\log _{n+2}(n+1)
+            \end{aligned}
+        $$
+    \end{proof}
+
+    （2）设 $a>b>1, m>0$ ，则有 $\log _a b<\log _{a+m}(b+m)$ 。
+
+    \begin{proof}
+
+        $$
+            \begin{gathered}
+                \log _a b=\frac{\lg b}{\lg a}<\frac{\lg b+\lg \frac{a+m}{a}}{\lg a+\lg \frac{a+m}{a}}=\frac{\lg \frac{a b+b m}{a}}{\lg (a+m)} \\
+                <\frac{\lg \frac{a b+a m}{a}}{\lg (a+m)}=\frac{\lg (b+m)}{\lg (a+m)}=\log _{a+m}(b+m)
+            \end{gathered}
+        $$
+    \end{proof}
+\end{theorem}
+
+\begin{example}
+    若 $a=\log _3 2, b=\log _4 3, c=e^{-0.2}$ ，则 $a, b, c$ 的大小关系为（ \quad）
+    \begin{tasks}(4)
+        \task $a<b<c$
+        \task $a<c<b$
+        \task $c<b<a$
+        \task $b<a<c$
+    \end{tasks}
+\end{example}
+
+\begin{tips}
+    之后需要比较 $\log _4 3$ 和 $0.8$ 的大小关系。
+\end{tips}
+
+\v{10em}

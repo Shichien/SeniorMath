@@ -1,0 +1,38 @@
+\section{子集和真子集}
+
+\begin{definition}[子集和真子集]
+    给定集合 $A$ 和 $B$，如果 $A$ 的每个元素都是 $B$ 的元素，则称 $A$ 是 $B$ 的\textbf{子集}，记作 $A \subseteq B$。
+
+    如果 $A \subseteq B$ 且 $A \neq B$，则称 $A$ 是 $B$ 的\textbf{真子集}，记作 $A \subset B$。
+
+    等价地说，$A$ 是 $B$ 的真子集，意味着 $A \subseteq B$ 且存在元素 $x \in B$ 使得 $x \notin A$。
+\end{definition}
+
+\begin{theorem}[子集和真子集的个数]
+    设集合 $S$ 有 $n$ 个元素，则：
+    \begin{enumerate}
+        \item $S$ 的子集个数为 $2^n$。
+        \item $S$ 的真子集个数为 $2^n - 1$（这个 $-1$ 实际上就是减去相同的那个集合 $S$）。
+    \end{enumerate}
+
+    \begin{proof}
+        对于集合 $S$ 中的每个元素，我们都有两种选择：将其包含在子集中或不包含在子集中。
+        由于 $S$ 有 $n$ 个元素，且每个元素的选择相互独立，根据乘法原理，共有 $2^n$ 种不同的选择方式，
+        因此 $S$ 的子集个数为 $2^n$。
+
+        在这 $2^n$ 个子集中，只有一个子集等于 $S$ 本身（即包含 $S$ 中所有元素的子集）。
+        因此，$S$ 的真子集个数为 $2^n - 1$。
+    \end{proof}
+\end{theorem}
+
+\begin{example}
+    已知集合 $M=\{x \in \mathbf{N} \mid 3<x<a\}$ ，若集合 $M$ 有 15 个真子集，则实数 $a$ 的取值范围为 \underline{\qquad}
+\end{example}
+
+\v{6em}
+
+\begin{example}
+    若集合 $X=\{0,1\}$ ，则集合 $Y=\{(a, b) \mid a \in X, a-b \in X\}$ 的真子集的个数为 \underline{\qquad}.
+\end{example}
+
+\v{4em}

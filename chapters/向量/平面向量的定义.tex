@@ -1,4 +1,3 @@
-\chapter{平面向量}
 \begin{introduction}
     \item 向量
     \item 向量的运算
@@ -18,68 +17,248 @@
     \item 平行或者说是共线：方向相等或者相反
 \end{enumerate}
 
-特别地我们定义零向量：$\Vec{0}$是大小为0，方向任意的向量。此外我们定义大小为1的向量都是单位向量。
+\begin{definition}[零向量与单位向量]
+    特别地我们定义零向量：$\Vec{0}$是大小为$0$，方向任意的向量。此外我们定义长度为 $1$ 的向量为单位向量。
+\end{definition}
 
 \section{向量的运算}
-\subsection{加减法和数乘}
-向量之间的运算也和一般的量截然不同：
-\begin{enumerate}
-    \item 加法：平行四边形定则
-          \begin{figure}[H]
-              \centering
-              \begin{tikzpicture}[scale=1.5]
-                  \draw[line width=1pt,blue,-stealth](0,0)--(1,3) node[left]{$\boldsymbol{\Vec{a}}$};
-                  \draw[line width=1pt,blue,-stealth](0,0)--(1,-1) node[right]{$\boldsymbol{\Vec{b}}$};
-                  \draw[line width=1pt,red,-stealth](0,0)--(2,2) node[left]{$\boldsymbol{\Vec{a}+\Vec{b}}$};
-                  \draw[black,dotted](1,3)--(2,2);
-                  \draw[black,dotted](1,-1)--(2,2);
-              \end{tikzpicture}
-              \caption{平行四边形定则}
-          \end{figure}
 
-    \item 减法：三角形定则
-          \begin{figure}[H]
-              \centering
-              \begin{tikzpicture}[scale=1.5]
-                  \draw[line width=1pt,blue,-stealth](0,0)--(1,3) node[left]{$\boldsymbol{\Vec{a}}$};
-                  \draw[line width=1pt,blue,-stealth](2,2)--(1,3) node[right]{$\boldsymbol{\Vec{b}}$};
-                  \draw[line width=1pt,red,-stealth](0,0)--(2,2) node[right]{$\boldsymbol{\Vec{a}-\Vec{b}}$};
-              \end{tikzpicture}
-              \caption{三角形定则}
-          \end{figure}
-    \item 数乘
-          \begin{figure}[H]
-              \centering
-              \begin{tikzpicture}[scale=1.5]
-                  \draw[line width=1pt,blue,-stealth](0,0)--(1,1) node[left]{$\boldsymbol{\Vec{a}}$};
-                  \draw[line width=1pt,red,dotted](0,0)--(2,2) node[right]{$\boldsymbol{\Vec{2a}}$};
-              \end{tikzpicture}
-              \caption{数乘}
-          \end{figure}
-\end{enumerate}
-不难验证，这样定义的向量运算满足：
-\begin{enumerate}
-    \item 加法交换律：$\Vec{a}+\Vec{b} = \Vec{b}+\Vec{a}$
-    \item 加法结合律：$\Vec{a}+(\Vec{b}+\Vec{c}) = (\Vec{a}+\Vec{b})+\Vec{c}$
-    \item 加法有零元：$\Vec{a}+\Vec{0} = \Vec{a}$
-    \item 数乘向量分配律：$\lambda(\Vec{a}+\Vec{b}) = \lambda\Vec{a}+\lambda\Vec{b}$
-    \item 数乘标量分配律：$(\lambda_1+\lambda_2)\Vec{a} = \lambda_1\Vec{a}+\lambda_2\Vec{a}$
-    \item 数乘结合律：$\lambda_1 (\lambda_2\Vec{a}) = (\lambda_1\lambda_2)\Vec{a}$
-    \item 数乘有单位元：$1 \Vec{a} = \Vec{a}$
-\end{enumerate}
-实际上，这些性质就是向量空间（线性空间）的要求。
+\subsection{加减法和数乘}
+
+\begin{multicols}{3}
+    \begin{center}
+        \begin{figure} [H]
+            \centering
+            \caption*{\textbf{加法：平行四边形定则}}
+            \begin{tikzpicture}[scale=0.5]
+                \draw[line width=1pt,blue,-stealth](0,0)--(1,3) node[left]{$\boldsymbol{\Vec{a}}$};
+                \draw[line width=1pt,blue,-stealth](0,0)--(1,-1) node[right]{$\boldsymbol{\Vec{b}}$};
+                \draw[line width=1pt,red,-stealth](0,0)--(2,2) node[right]{$\boldsymbol{\Vec{a}+\Vec{b}}$};
+                \draw[black,dotted](1,3)--(2,2);
+                \draw[black,dotted](1,-1)--(2,2);
+            \end{tikzpicture}
+        \end{figure}
+    \end{center}
+
+    \columnbreak
+
+    \begin{center}
+        \begin{figure} [H]
+            \centering
+            \caption*{\textbf{减法：三角形定则}}
+            \begin{tikzpicture}[scale=0.5]
+                \draw[line width=1pt,blue,-stealth](0,0)--(1,3) node[left]{$\boldsymbol{\Vec{a}}$};
+                \draw[line width=1pt,blue,-stealth](2,2)--(1,3) node[right]{$\boldsymbol{\Vec{b}}$};
+                \draw[line width=1pt,red,-stealth](0,0)--(2,2) node[right]{$\boldsymbol{\Vec{a}-\Vec{b}}$};
+            \end{tikzpicture}
+        \end{figure}
+    \end{center}
+
+    \columnbreak
+
+    \begin{center}
+        \begin{figure} [H]
+            \centering
+            \caption*{\textbf{数乘}}
+            \begin{tikzpicture}[scale=0.5]
+                \draw[line width=1pt,blue,-stealth](0,0)--(1,1) node[left]{$\boldsymbol{\Vec{a}}$};
+                \draw[line width=1pt,red,dotted](0,0)--(2,2) node[right]{$\boldsymbol{\Vec{2a}}$};
+            \end{tikzpicture}
+        \end{figure}
+    \end{center}
+\end{multicols}
+
+\subsubsection{向量的加法}
+
+\begin{theorem}[向量加法]
+    首尾相连，连连看！$\overrightarrow{AB} + \overrightarrow{BC} = \overrightarrow{AC}$
+\end{theorem}
+
+\begin{example}
+    点 $O$ 是平行四边形 $A B C D$ 的两条对角线的交点，则 $\overrightarrow{A O}+\overrightarrow{O C}+\overrightarrow{C B}$ 等于 （\qquad）
+    \begin{tasks}(4)
+        \task $\overrightarrow{A B}$
+        \task $\overrightarrow{B C}$
+        \task $\overrightarrow{C D}$
+        \task 0
+    \end{tasks}
+\end{example}
+
+\v{6em}
+
+\begin{example}
+    如图，在正六边形 $A B C D E F$ 中， $\overrightarrow{B A}+\overrightarrow{C D}+\overrightarrow{F B}$ 等于 （\qquad）
+    \begin{tasks}(4)
+        \task $\overrightarrow{0}$
+        \task $\overrightarrow{B E}$
+        \task $\overrightarrow{A D}$
+        \task $\overrightarrow{C F}$
+    \end{tasks}
+\end{example}
+\begin{center}
+    \begin{tikzpicture}[scale=0.8]
+        % Define coordinates for the regular hexagon
+        \foreach \i in {1,...,6} {
+                \coordinate (v\i) at ({cos(60*\i)}, {sin(60*\i)});
+            }
+
+        % Draw the hexagon
+        \draw[thick] (v1) -- (v2) -- (v3) -- (v4) -- (v5) -- (v6) -- cycle;
+
+        % Add labels
+        \node[above right] at (v1) {$A$};
+        \node[above] at (v2) {$B$};
+        \node[above left] at (v3) {$C$};
+        \node[below left] at (v4) {$D$};
+        \node[below] at (v5) {$E$};
+        \node[below right] at (v6) {$F$};
+    \end{tikzpicture}
+\end{center}
+
+\v{6em}
+
+\begin{example}
+    化简下列各式：
+    \begin{enumerate}
+        \item $\overrightarrow{A B}+\overrightarrow{B C}+\overrightarrow{C A}$ ；
+
+        \item $\overrightarrow{A B} + \overrightarrow{M B} + \overrightarrow{B O} + \overrightarrow{O M}$ ；
+
+        \item $\overrightarrow{O A}+\overrightarrow{O C}+\overrightarrow{B O}+\overrightarrow{C O}$ ；
+
+        \item $\overrightarrow{A B}+\overrightarrow{C A}+\overrightarrow{B D}+\overrightarrow{D C}$.
+    \end{enumerate}
+    其中结果为 $\overrightarrow{0}$ 的个数是（\quad）
+    \begin{tasks}(4)
+        \task 1
+        \task 2
+        \task 3
+        \task 4
+    \end{tasks}
+\end{example}
+
+\v{2em}
+
+\begin{example}
+    化简下列各式：
+    \begin{itemize}
+        \item $\overrightarrow{A B}+\overrightarrow{B C}+\overrightarrow{C D}+\overrightarrow{D A}$ ；
+        \item $\overrightarrow{A B}+\overrightarrow{D F}+\overrightarrow{C D}+\overrightarrow{B C}+\overrightarrow{F A}$ ；
+        \item $(\overrightarrow{A B}+\overrightarrow{M B})+(\overrightarrow{B O}+\overrightarrow{B C})+\overrightarrow{O M}$.
+    \end{itemize}
+\end{example}
+
+\begin{example}
+    如图，已知点 $D$、$E$、$F$ 分别是 $\triangle A B C$ 三边 $A B
+    $、$B C$、$C A$ 的中点，求证： $\overrightarrow{E A}+\overrightarrow{F B}+\overrightarrow{D C}=\overrightarrow{0}$.
+\end{example}
+
+\begin{tikzpicture}[scale=0.7]
+    \coordinate (A) at (0,3);
+    \coordinate (B) at (-2.5,0);
+    \coordinate (C) at (2.5,0);
+
+    \filldraw[black] (A) circle (1.5pt) node[above] {$A$};
+    \filldraw[black] (B) circle (1.5pt) node[below] {$B$};
+    \filldraw[black] (C) circle (1.5pt) node[below] {$C$};
+
+    \draw (A) -- (B) -- (C) -- cycle;
+
+    \coordinate (D) at ($(A)!0.5!(B)$);
+    \coordinate (E) at ($(B)!0.5!(C)$);
+    \coordinate (F) at ($(A)!0.5!(C)$);
+
+    \filldraw[black] (D) circle (1.5pt) node[left] {$D$};
+    \filldraw[black] (E) circle (1.5pt) node[below] {$E$};
+    \filldraw[black] (F) circle (1.5pt) node[right] {$F$};
+
+    \draw (D) -- (E) -- (F) -- cycle;
+\end{tikzpicture}
+
+\begin{theorem}[运算律]
+    不难验证，这样定义的向量运算满足：
+    \begin{multicols}{2}
+        \begin{enumerate}
+            \item 加法交换律：$\Vec{a}+\Vec{b} = \Vec{b}+\Vec{a}$
+            \item 加法结合律：$\Vec{a}+(\Vec{b}+\Vec{c}) = (\Vec{a}+\Vec{b})+\Vec{c}$
+            \item 加法有零元：$\Vec{a}+\Vec{0} = \Vec{a}$
+                  \columnbreak
+            \item 数乘向量分配律：$\lambda(\Vec{a}+\Vec{b}) = \lambda\Vec{a}+\lambda\Vec{b}$
+            \item 数乘标量分配律：$(\lambda_1+\lambda_2)\Vec{a} = \lambda_1\Vec{a}+\lambda_2\Vec{a}$
+            \item 数乘结合律：$\lambda_1 (\lambda_2\Vec{a}) = (\lambda_1\lambda_2)\Vec{a}$
+            \item 数乘有单位元：$1 \Vec{a} = \Vec{a}$
+        \end{enumerate}
+    \end{multicols}
+\end{theorem}
+
+\begin{example}
+    已知 $\vec{a}$、$\vec{b}$ 是不平行的向量，若 $\overrightarrow{A B}=\vec{a}+2 \vec{b}, \overrightarrow{B C}=-4 \vec{a}-\vec{b}, \overrightarrow{C D}=-5 \vec{a}-3 \vec{b}$ ，则下列关系中正确的是 （\qquad）
+    \begin{tasks}(4)
+        \task $\overrightarrow{A D}=\overrightarrow{C B}$
+        \task $\overrightarrow{A D}=\overrightarrow{B C}$
+        \task $\overrightarrow{A D}=2 \overrightarrow{B C}$
+        \task $\overrightarrow{A D}=-2 \overrightarrow{B C}$
+    \end{tasks}
+\end{example}
+
+\v{6em}
+
 \subsection{内积}
 内积也叫数量积。
 \begin{definition}[内积]
     $$
-        a\cdot b = |a||b|\cos \langle a,b \rangle
+        \overrightarrow{a}\cdot \overrightarrow{b} = |\overrightarrow{a}||\overrightarrow{b}|\cos \langle \overrightarrow{a},\overrightarrow{b} \rangle
     $$
-    其中$\langle a,b \rangle \in [0,\pi]$是两向量的夹角，$|a|$是向量的模长。此外，规定任何向量和零向量的内积都是0。
+    其中$\langle \overrightarrow{a},\overrightarrow{b} \rangle \in [0,\pi]$是两向量的夹角，$|\overrightarrow{a}|$是向量的模长。此外，规定任何向量和零向量的内积都是0。
 \end{definition}
 
-这个定义有很强的物理背景，最简单的一个理解是求\textbf{不共线的力在给定位移下的做功大小}。不严谨地说，物理上的做法是先求力在位移方向上的分量，然后同方向的矢量就可以做乘法了。
+\begin{theorem}[内积的运算律]
+    不难验证内积满足下列运算律：
+    \begin{enumerate}
+        \item 交换律：$\overrightarrow{a}\cdot \overrightarrow{b} = \overrightarrow{b} \cdot \overrightarrow{a}$
+        \item 分配律：$\overrightarrow{a}\cdot (\overrightarrow{b}+\overrightarrow{c}) = \overrightarrow{a} \cdot \overrightarrow{b} + \overrightarrow{a} \cdot \overrightarrow{c}$
+        \item 数乘结合律：$(\lambda \overrightarrow{a})\cdot \overrightarrow{b} = \lambda (\overrightarrow{a} \cdot \overrightarrow{b})$
+    \end{enumerate}
+\end{theorem}
 
-求分量这个过程数学上也常用：
+\begin{example}
+    已知 $|\vec{a}|=|\vec{b}|=1$ ，且 $\vec{a}$ 与 $\vec{b}$ 的夹角为 $\frac{\pi}{3}$ ，则 $\vec{b}$ 与 $\vec{a}+\vec{b}$ 的夹角为 （\qquad）
+    \begin{tasks}(4)
+        \task $\frac{\pi}{12}$
+        \task $\frac{\pi}{6}$
+        \task $\frac{7 \pi}{12}$
+        \task $\frac{5 \pi}{6}$
+    \end{tasks}
+\end{example}
+
+\v{6em}
+
+\begin{example}
+    已知两个单位向量 $\vec{a}, \vec{b}$ 满足 $|\vec{a}+3 \vec{b}|=3$ ，则 $\vec{a}, \vec{b}$ 夹角的余弦值为 （\qquad）
+    \begin{tasks}(4)
+        \task $-\frac{1}{6}$
+        \task $-\frac{1}{3}$
+        \task $\frac{1}{6}$
+        \task $\frac{1}{3}$
+    \end{tasks}
+\end{example}
+
+\v{6em}
+
+\begin{example}
+    已知向量 $\vec{a}$ ，$\vec{b}$ 满足 $|\vec{a}+\vec{b}|=2|\vec{a}-\vec{b}|$ ，则 $\sin \langle\vec{a}, \vec{b}\rangle$ 的最大值为 （\qquad）
+    \begin{tasks}(4)
+        \task $\frac{\sqrt{3}}{3}$
+        \task $\frac{3}{5}$
+        \task $\frac{\sqrt{2}}{2}$
+        \task $\frac{4}{5}$
+    \end{tasks}
+\end{example}
+
+\v{6em}
+
+\subsection{投影}
+
 \begin{definition}[投影]
     定义$\Vec{a}$在$\Vec{b}$上的投影为：
     $$
@@ -87,12 +266,6 @@
     $$
 \end{definition}
 
-最后，不难验证内积满足下列运算律：
-\begin{enumerate}
-    \item 交换律：$a\cdot b = b \cdot a$
-    \item 分配律：$a\cdot (b+c) = a \cdot b + a \cdot c$
-    \item 数乘结合律：$(\lambda a)\cdot b = \lambda (a \cdot b)$
-\end{enumerate}
 \section{向量的坐标表示}
 直观地说，我们可以把向量放在平面直角坐标系坐标系中，在有大小方向的量和二元坐标之间建立一一对应的关系。
 
@@ -107,16 +280,18 @@
     特别地，如果它们的都是单位向量，并且夹角是$\pi / 2$，称为单位正交基。
 \end{theorem}
 
-\begin{definition}[平面直角坐标]
-    给定一组标准正交基$\Vec{i},\Vec{j}$，那么前面定理中的$(x,y)$的计算就变得容易：
-    $$
-        x = \Vec{a} \cdot \Vec{i}, \quad y = \Vec{a} \cdot \Vec{j}
-    $$
-    向量在这组正交基下的坐标就称为向量的坐标表示。
-\end{definition}
-有了这个定义，我们此前定义的所有运算（加减法、数乘、内积、投影）都可以在坐标的视角下进行。这里不再赘述。
+\begin{example}
+    已知向量 $\vec{a}, \vec{b}$ 满足 $|\vec{a}|=1, \vec{b}=(-1, \sqrt{2})$ ，且 $\vec{a}, \vec{b}$ 的夹角为 $\frac{\pi}{6}$ ，则 $|2 \vec{a}-\vec{b}|=$ （\qquad）
+    \begin{tasks}(4)
+        \task $\sqrt{2}$
+        \task 1
+        \task 2
+        \task 4
+    \end{tasks}
+\end{example}
 
-特别的，我们有一个定理，注意这个定理在前面的不等式章节\ref{cauchy_ieq}出现过：
+\v{6em}
+
 \begin{theorem}[Cauchy不等式]
     $$
         -|\Vec{a}||\Vec{b}| \le \Vec{a} \cdot \Vec{b} \le |\Vec{a}||\Vec{b}|
@@ -127,7 +302,9 @@
     $$
     更一般的，实际上这个结论对$n$维向量都成立，这也就是我们之前证明的Cauchy不等式。
 \end{theorem}
+
 \subsection{定比分点}
+
 \begin{theorem}[定比分点]
     设A、B不重合，C是直线AB上动点，并且
     $$

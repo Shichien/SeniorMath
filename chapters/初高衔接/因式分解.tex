@@ -1,0 +1,65 @@
+\section{因式分解}
+
+\subsection{十字相乘法}
+
+\begin{definition}[十字相乘法]
+    十字相乘法是因式分解的一种常用方法，适用于二次三项式的分解。其基本思路是将二次三项式表示为两个一次多项式的乘积。
+\end{definition}
+
+\begin{theorem}[十字相乘法]
+    \begin{tikzpicture}[line width = .5pt]
+        \newlength{\lengthA}
+        \settowidth{\lengthA}{$acx^2+adxy+bcxy+bdy^2$}
+        \node[right]  at (0,3) {$acx^2+adxy+bcxy+bdy^2$};
+        \node[right] (A) at (0,2) {$ax$};
+        \node[right] (B) at (0,1) {$cx$};
+        \node[left]  (C) at (\lengthA+0.6666em, 2) {$by$};
+        \node[left]  (D) at (\lengthA+0.6666em, 1) {$dy$};
+        \draw[blue] (A) -- (D);
+        \draw[blue] (B) -- (C);
+    \end{tikzpicture}
+\end{theorem}
+
+\begin{example}
+    分解因式：$x^2+5x+6$。
+\end{example}
+
+\begin{solution}
+    我们需要找到两个数 $p$ 和 $q$，使得 $p+q=5$ 且 $p \cdot q=6$。
+
+    \begin{tikzpicture}[line width = .5pt]
+        \newlength{\lengthB}
+        \settowidth{\lengthB}{$x^2+5x+6=(x+2)(x+3)$}
+        \node[right]  at (0,3) {$x^2+5x+6=(x+2)(x+3)$};
+        \node[right] (A) at (0,2) {$x$};
+        \node[right] (B) at (0,1) {$x$};
+        \node[left]  (C) at (\lengthB-2em, 2) {$3$};
+        \node[left]  (D) at (\lengthB-2em, 1) {$2$};
+        \draw[blue] (A) -- (D);
+        \draw[blue] (B) -- (C);
+        \node[right, text width=8cm] at (\lengthB, 2) {通过十字相乘法，我们找到两个数 $p=2$ 和 $q=3$，使得 $p+q=5$ 且 $p \cdot q=6$。};
+    \end{tikzpicture}
+
+    因此：
+    \begin{align*}
+        x^2+5x+6 & = x^2+(2+3)x+2 \cdot 3 \\
+                 & = x^2+2x+3x+6          \\
+                 & = x(x+2)+3(x+2)        \\
+                 & = (x+2)(x+3)
+    \end{align*}
+\end{solution}
+
+\subsubsection{长式子相乘法}
+
+\begin{example}
+    分解因式：$x^2+2 x y-3 y^2+3 x+y+2$ ．
+\end{example}
+
+\v{5em}
+
+\begin{example}
+    分解因式： $3 x^2+4 x y-4 y^2+8 x-8 y-3$ ．
+\end{example}
+
+\v{5em}
+

@@ -1,0 +1,294 @@
+
+\section{复杂式子的化简}
+
+\subsection{$\sin A = \sin(B+C)$}
+
+\begin{theorem}
+    在 $\triangle ABC$ 中，由于 $A+B+C=\pi$，有：
+    $$\sin A = \sin(B+C), \quad \sin B = \sin(C+A), \quad \sin C = \sin(A+B)$$
+
+    \begin{warning}
+        这是在解三角形中最重要的小结论之一！
+    \end{warning}
+\end{theorem}
+
+\subsection{边角互化}
+
+\begin{example}
+    在 $\triangle ABC$ 中，角 $A,B,C$ 的对边分别为 $a,b,c$。已知 $b\cos C + c\cos B = 2b$。若 $a=2$，则 $b$ 的值为
+    \begin{tasks}(2)
+        \task 1
+        \task 2
+        \task $\sqrt{2}$
+        \task $\sqrt{3}$
+    \end{tasks}
+\end{example}
+
+\begin{solution}
+    由正弦定理，可将边化为角的关系：
+    设 $\frac{a}{\sin A} = \frac{b}{\sin B} = \frac{c}{\sin C} = k$。
+    则 $b=k\sin B, c=k\sin C$。代入已知等式：
+    $k\sin B \cos C + k\sin C \cos B = 2k\sin B$。
+    $\sin B \cos C + \cos B \sin C = 2\sin B$。
+    $$
+        \sin(B+C) = 2\sin B
+    $$
+    在 $\triangle ABC$ 中，$B+C = \pi - A$，所以 $\sin(B+C) = \sin(\pi - A) = \sin A$。
+    因此，$\sin A = 2\sin B$。
+    再由正弦定理的边角关系转化，$a = 2b$。
+    已知 $a=2$，所以 $b=1$。
+    故选 (A)。
+\end{solution}
+
+\begin{tips}
+    这题其实还揭示了另外一个定理。
+\end{tips}
+
+\subsection{射影定理}
+\begin{theorem}[射影定理]
+    在 $\triangle ABC$ 中，有 $a cosB + b cosA = c$。
+
+    简单记为：鹬蚌相争，渔翁得利。
+\end{theorem}
+
+\v{12em}
+
+\begin{problem}
+已知 $\triangle A B C$ 中，角 $A, B, C$ 所对的边分别为 $a, b, c, ~ \triangle A B C$ 的面积记为 $S$ ，若 $a=2, ~(2 b-c) \cos A=a \cos C$，则
+\begin{tasks}(4)
+    \task $A=\frac{\pi}{3}$
+    \task $\triangle A B C$ 的外接圆周长为 $\frac{8 \sqrt{3}}{3} \pi$
+    \task! $S$ 的最大值为 $\sqrt{3}$ （\textcolor{red}{后两个选项可以先看后面的内容再回来做}）
+    \task! 若 $M$ 为线段 $A B$ 的中点，且 $C M=\frac{\sqrt{3}}{2}$ ，则 $S=\sqrt{3}$
+\end{tasks}
+\end{problem}
+
+\v{12em}
+
+\begin{example}
+    已知 $\triangle A B C$ 中，角 $A, B, C$ 所对的边分别为 $a, b, c$ ，已知 $a-c \cos 2 B=c+2 b \cos C \cos B$ ．
+    \begin{enumerate}
+        \item 求 $B$ 的大小；
+
+        \item 若 $a+c=6, ~ b=\sqrt{3} a$ ，求 $\triangle A B C$ 外接圆的半径；
+    \end{enumerate}
+\end{example}
+
+\begin{tips}
+    二倍角公式与射影定理的运用
+\end{tips}
+
+\v{12em}
+
+\subsection{余弦定理的替换}
+
+\begin{theorem}
+    常见形式：
+    $$\begin{cases}
+            a^2 + b^2 - c^2 = 2ab \cos C \\
+            b^2 + c^2 - a^2 = 2bc \cos A \\
+            c^2 + a^2 - b^2 = 2ac \cos B
+        \end{cases}$$
+\end{theorem}
+
+\begin{example}
+    在 $\triangle A B C$ 中，角 $A, B, C$ 的对边分别是 $a, ~ b, ~ c$ ，且 $\sin ^2 A+\sin ^2 B+\sin A \sin B=\sin ^2 C$ ．
+    \begin{enumerate}
+        \item 求角 $C$ 的大小；
+        \item 若 $\triangle A B C$ 的面积为 $2 \sqrt{3}, ~ c=2 \sqrt{7}$ ，求 $a$、$b$ 的值．
+    \end{enumerate}
+\end{example}
+\v{12em}
+
+\begin{example}
+    在 $\triangle A B C$ 中，角 $A, B, C$ 的对边分别为 $a, ~ b, ~ c$ ，则下列说法正确的是 （\qquad）
+    \begin{tasks}(2)
+        \task 若 $a=2 \sqrt{3}, ~ A=\frac{\pi}{3}$ ，则 $\triangle A B C$ 的外接圆的面积为 $16 \pi$
+        \task 已知 $(a+b+c)(a+b-c)=(2+\sqrt{3}) a b$ ，则 $C=\frac{\pi}{3}$
+        \task 若 $\sin ^2 A>\sin ^2 B+\sin ^2 C$ ，则 $\triangle A B C$ 为钝角三角形
+        \task 若 $\triangle A B C$ 为锐角三角形，则 $\sin A>\cos B$
+    \end{tasks}
+\end{example}
+
+\v{4em}
+
+\subsection{锐角三角形常用性质}
+
+\begin{theorem}
+    在锐角三角形中，有 $\sin A > \cos B, \quad \sin A > \cos C$ 恒成立。
+\end{theorem}
+
+\begin{proof}
+    因为 $A + B = \pi - C > \frac{\pi}{2}$，则 $A > \frac{\pi}{2} - B$。
+
+    则 $\sin A > \sin (\frac{\pi}{2} - B)$ 使用诱导公式，即显然成立。
+\end{proof}
+
+\v{2em}
+
+\begin{corollary}
+    在锐角三角形中 $\sin A+\sin B+\sin C>\cos A+\cos B+\cos C$.
+\end{corollary}
+
+\subsection{基于 $\tan$ 的角求解法}
+
+\begin{example}
+    设 $\triangle A B C$ 的内角 $A, B, C$ 所对的边分别为 $a, b, c$ ，已知
+    $$
+        2 \cos (\pi+A)+\sin \left(\frac{\pi}{2}+2 A\right)+\frac{3}{2}=0
+    $$
+    \begin{enumerate}
+        \item 求角 $A$ 的大小；
+        \item 若 $c-b=\frac{\sqrt{3}}{3} a$ ，求证：$\triangle A B C$ 是直角三角形（提示：可以先根据式子猜测哪个角是直角）．
+    \end{enumerate}
+\end{example}
+
+\begin{tips}
+    第二问若代入余弦定理，得 $b^2 + c^2 = \frac{5a^2}{3}$，但题目是 $RT \triangle$，说明此时的直角不是 $A$.
+
+    考虑正弦定理边角互化：$sinC-sinB=\frac{\sqrt{3}}{3}sinA$。之后有 $sin(\frac{2\pi}{3}-B) - sinB = \frac{\sqrt{3}}{3} \times \frac{\sqrt{3}}{2}$，解这个方程即可。
+\end{tips}
+
+\v{12em}
+
+\subsection{解三角形的性质辨析与解的个数讨论}
+
+\begin{theorem}[SSA 条件下三角形解的个数]
+    \begin{minipage}[c]{0.6\textwidth}
+        已知两边和其中一个边的对角（SSA），即已知 $a, b, A$，则：
+        \begin{itemize}
+            \item 若 $a < b \sin A$，则无解
+            \item 若 $a = b \sin A$，则有唯一解，且 $B = 90°$
+            \item 若 $b \sin A < a < b$，则有两个解
+            \item 若 $a \geq b$，则有唯一解
+        \end{itemize}
+    \end{minipage}
+    \begin{minipage}[c]{0.4\textwidth}
+        \begin{tikzpicture}[scale=0.8]
+            \coordinate (A) at (0,0);
+            \coordinate (D) at (3,0); % 高的垂足
+            \coordinate (C) at (3,3); % 顶点
+            \draw (A) -- (7,0);
+            \draw (A) -- (C) node[midway, sloped, above] {$b$};
+            \draw[dashed] (C) -- (D);
+            \draw[dashed] (C) -- (2,0);
+            \draw[dashed] (C) -- (4,0);
+            \draw[dashed] (C) -- (6,0);
+            \draw (D)++(-0.25,0) -- ++(0,0.25) -- ++(0.25,0);
+            \draw (0.6,0) arc(0:45:0.6);
+            \node[left=3pt] at (3.5, 1.2) {$a$};
+            \node[below left] at (A) {$A$};
+            \node[above=2pt] at (C) {$C$};
+            \filldraw (C) circle (1.2pt);
+        \end{tikzpicture}
+    \end{minipage}
+
+    \begin{center}
+        \begin{tikzpicture}
+            \draw[->, thick] (0,0) -- (8,0) node[right] {$a$};
+
+            % Points with arrows pointing down
+            \draw (2,0) circle (2pt) node[below] {$b\sin A$};
+            \draw[->] (2,0.5) -- (2,0.1);
+
+            \draw (5,0) circle (2pt) node[below] {$b$};
+            \draw[->] (5,0.5) -- (5,0.1);
+
+            % Braces and annotations
+            \draw [decorate, decoration={brace, amplitude=5pt, mirror}] (0,0) -- (2,0) node [midway, below=10pt] {(无)};
+            \draw [decorate, decoration={brace, amplitude=5pt, mirror}] (2,0) -- (5,0) node [midway, below=10pt] {(二)};
+            \draw [decorate, decoration={brace, amplitude=5pt, mirror}] (5,0) -- (8,0) node [midway, below=10pt] {(一)};
+
+            % Add label for points
+            \node at (1.5,0.5) {(一)};
+            \node at (4.5,0.5) {(一)};
+        \end{tikzpicture}
+    \end{center}
+\end{theorem}
+
+\begin{example}
+    在 $\triangle A B C$ 中，内角 $A, B, C$ 所对的边分别为 $a, b, c$ ．下列各组条件中使得 $\triangle A B C$ 恰有一个解的是
+    \begin{tasks}(4)
+        \task $a=12, b=24, A=\frac{\pi}{6}$
+        \task $a=18, b=20, A=\frac{\pi}{3}$
+        \task $a=4, b=2, A=\frac{\pi}{2}$
+        \task $a=30, b=25, A=\frac{5 \pi}{6}$
+    \end{tasks}
+\end{example}
+
+\v{10em}
+
+
+\begin{example}
+    已知 $\triangle A B C$ 的内角 $A, B, C$ 的对边分别为 $a, b, c, A=\frac{\pi}{4}, b=4$ ，若 $\triangle A B C$ 有两解，则 $a$ 的取值范围是 （\qquad）
+    \begin{tasks}(4)
+        \task $(2,2 \sqrt{2})$
+        \task $(2 \sqrt{2}, 4)$
+        \task $(2 \sqrt{2}, 2 \sqrt{3})$
+        \task $(2 \sqrt{3}, 4)$
+    \end{tasks}
+\end{example}
+
+\v{10em}
+
+\begin{example}
+    在 $\triangle A B C$ 中，$b=2 \sqrt{2}, a = 2$，该三角形有解，求 $A$ 的取值范围 \underline{\qquad}.
+\end{example}
+
+\v{8em}
+
+\subsection{正余弦定理与三角恒等变换的综合}
+
+\begin{example}
+    已知 $\triangle A B C$ 的内角 $A, B, C$ 所对的边分别是 $a, b, c$ ，若 $c=2 b \cos A, a \sin A-b \sin B=c(\sin C-\sin B)$ ，则角 $B$ 为
+\end{example}
+\v{12em}
+
+\begin{example}
+    记 $\triangle A B C$ 的内角 $A, B, C$ 所对的边分别为 $a, b, c$ ，已知 $\frac{a}{\sin A+\cos A}=\frac{b}{2 \sin B}, \sqrt{2} \sin C=\cos A$ ．
+    \begin{enumerate}
+        \item 求 $C$ ；
+        \item 若 $b^2+c^2-a^2=2(\sqrt{3}+1)$ ，求 $a, b, c$ 的值．
+    \end{enumerate}
+\end{example}
+
+\v{12em}
+
+\begin{example}
+    记 $\triangle A B C$ 的内角 $A, B, C$ 所对的边分别为 $a, b, c$ ，且 $\frac{b \cos C-2 a \cos A}{\cos B}=-c$ ．
+    \begin{enumerate}
+        \item 求 $A$ ；
+        \item 若 $b c=2$ ，求 $\triangle A B C$ 外接圆面积的最小值．
+    \end{enumerate}
+\end{example}
+\v{12em}
+
+\begin{example}
+    在 $\triangle A B C$ 中，内角 $A, B, C$ 的对边分别为 $a, ~ b, ~ c, ~ c=2 b, ~ \sqrt{2} \sin A=3 \sin B$ ．
+    \begin{enumerate}
+        \item 求 $\sin C$ 的值；
+        \item 求 $\cos \left(2 C+\frac{\pi}{6}\right)$ 的值；
+        \item 若 $\triangle A B C$ 的面积为 $\frac{3 \sqrt{7}}{2}$ ，求 $c$ 的值．
+    \end{enumerate}
+\end{example}
+\v{12em}
+
+\subsection{三角正切恒等式}
+\begin{theorem}[正切相加恒等式]
+    在锐角三角形 $\triangle ABC$ 中，内角 $A, B, C$ 的对边分别为 $a, b, c$ ，且满足
+    $$
+        \tan A + \tan B = \frac{sinC}{cosAcosB}
+    $$
+\end{theorem}
+
+\begin{example}
+    在锐角 $\triangle A B C$ 中，内角 $A, B, C$ 的对边分别为 $a, b, c$ ，且
+    $$
+        \tan A+\tan B=\frac{2 \sqrt{3} c^2}{a^2+c^2-b^2}
+    $$
+    \begin{enumerate}
+        \item 求角 $A$ 的大小；
+        \item 若 $B C=\sqrt{3}$ ，点 $D$ 是线段 $B C$ 的中点，求线段 $A D$ 长的取值范围．
+    \end{enumerate}
+\end{example}
+\v{12em}

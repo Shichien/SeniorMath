@@ -1,0 +1,200 @@
+\section{函数的性质}
+
+\subsection{单调性}
+
+\begin{definition}[单调性]
+    如果$\forall x,y \in I$当$x>y$的时候，都有$f(x)>f(y)$，那么我们称$f$在$I$上严格单调增。
+
+    如果$\forall x,y \in I$当$x>y$的时候，都有$f(x)\geq f(y)$，那么我们称$f$在$I$上单调增。
+
+    如果$\forall x,y \in I$当$x>y$的时候，都有$f(x)<f(y)$，那么我们称$f$在$I$上严格单调减。
+
+    如果$\forall x,y \in I$当$x>y$的时候，都有$f(x)\leq f(y)$，那么我们称$f$在$I$上单调减。
+\end{definition}
+
+\begin{example}
+    已知函数 $f(x)=\left\{\begin{array}{l}x^2-x-2, x \leq-1 \\ -2 x-2, x>-1\end{array}\right.$ ，若 $f\left(2 t^2-1\right)>f(t+2)$ ，则实数 $t$ 的取值范围为 \underline{\qquad}.
+\end{example}
+
+\v{8em}
+
+\begin{example}
+    设函数 $f(x)=(x-1)|x-1|$ ，若 $f\left(2-a^2\right)>f(a)$ ，则实数 $a$ 的取值范围是 \underline{\qquad}.
+\end{example}
+
+\v{8em}
+
+\subsubsection{复合函数的单调性}
+
+\begin{theorem}[复合函数的单调性]
+    若 $f(x)$ 和 $g(x)$ 均为区间 $I$ 上的增（减）函数，则 $f(x)+g(x)$ 为 $I$ 上的增（噼瀧若函数 $y=f(u)$ 与 $u=g(x)$ 在区间 $I$ 上具有相同的增减性，则 $y=f(g(x))$ 在区间 $I$上为增函数，若函数 $y=f(u)$ 与 $u=g(x)$ 在区间 $I$ 上具有相反的增减性，则 $y=f(g(x))$ 在区间 $I$ 上为减函数。
+    \begin{tips}
+        我们用同增异减来记忆这个定理。
+    \end{tips}
+\end{theorem}
+\subsection{奇偶性}
+
+\begin{definition}[奇偶性]
+    如果$f(x)=f(-x)\quad \forall x\in D$，其中$D$是$f$的定义域，那么我们称$f$是偶函数。
+
+    如果$f(x)=-f(-x)\quad \forall x\in D$，其中$D$是$f$的定义域，那么我们称$f$是奇函数。
+
+    偶函数的图像关于$x$轴轴对称。奇函数的图像关于原点中心对称。
+\end{definition}
+
+\begin{exercise}
+    证明$f(x)=x$是在其定义域上严格单调增的奇函数，$g(x)=x^2$是偶函数。
+\end{exercise}
+
+\begin{solution}
+    $f(-x)=-x=-f(x)$，所以$f(x)$是奇函数。
+
+    $\forall x,y\in \mathbb{R}$，如果$x<y$那么$f(x)<f(y)$，所以$f(x)$在$\mathbb{R}$上是严格单调增的。
+
+    $g(-x)=x^2=g(x)$，所以$g(x)$是偶函数。
+\end{solution}
+
+\v{2em}
+
+\begin{example}
+    已知定义在 $\mathbf{R}$ 上的奇函数满足 $f(x)=x^2+2 x(x \geq 0)$ ，若 $f\left(3-a^2\right)+f(-2 a)>0$ ，则实数 $a$ 的取值范围是 \underline{\qquad}.
+\end{example}
+
+\v{8em}
+
+\subsubsection{根据奇偶性求参数}
+
+\begin{theorem}
+    \begin{itemize}
+        \item 若是偶函数，可以代入特殊值，如 $f(2) = f(-2)$
+        \item 若是奇函数，可以代入特殊值，如 $f(2) = -f(-2)$
+        \item 若是奇函数，还有一条路可走，即 $f(0) = 0$
+    \end{itemize}
+\end{theorem}
+
+\begin{example}
+    若函数 $f(x)=\frac{k-2^x}{1+k \cdot 2^x}$（ $k$ 为常数）在定义域上为奇函数，则 $k=$ \underline{\qquad}.
+\end{example}
+
+\v{6em}
+
+\begin{example}
+    已知函数 $f(x)=\frac{|x-2|-a}{\sqrt{1-x^2}}$ 是奇函数，则实数 $a=$ \underline{\qquad}.
+\end{example}
+
+\v{6em}
+
+\subsubsection{根据奇偶性求函数解析式}
+
+\begin{theorem}[根据奇偶性求函数解析式]
+    一般题目会给出只有一段区间，例如 $[-2,0]$ 时，$f(x) = x^2$，然后说 $f(x)$ 在 $[-2,2]$ 上是奇函数或者偶函数，我们需要把完整的定义域的解析式求出来。
+
+    这里利用的是求哪一段就设哪一段。
+\end{theorem}
+
+\begin{example}
+    已知 $f(x)$ 为偶函数，且周期为 4 ，当 $x \in[0,2]$ 时，$f(x)=\mathrm{e}^{\mathrm{l}-x+2}$ ，求当 $x \in[6,10]$ 时 $f(x)$ 的解析式．
+\end{example}
+
+\v{6em}
+
+\begin{example}
+    若函数 $f(x)$ 是定义在 $\mathbf{R}$ 上的奇函数，当 $x \in(0,+\infty)$ 时，$f(x)=x(1+\sqrt[3]{x})$ ，则当 $x \in(-\infty, 0)$ 时，$f(x)=$ \underline{\qquad}.
+\end{example}
+
+\v{6em}
+
+\begin{example}
+    已知 $f(x)$ 是定义在 $\mathbf{R}$ 上的奇函数，当 $x \geq 0$ 时，$f(x)=x^2-2 x$ ，则 $f(x)$ 在 $\mathbf{R}$ 上的解析式是 （\qquad）
+    \begin{tasks}(4)
+        \task $y=x(x-2)$
+        \task $y=x(|x|-1)$
+        \task $y=|x|(x-2)$
+        \task $y=x(|x|-2)$
+    \end{tasks}
+\end{example}
+
+\v{6em}
+
+\subsubsection{奇函数和对称性结合}
+
+\begin{theorem}
+    奇函数的图像关于原点对称。可以视作关于 $(0,0)$ 点成中心对称。
+\end{theorem}
+
+\begin{example}
+    已知 $f(x)=\frac{4 \cdot 2015^x+2}{2015^x+1}+x \cos x(-1 \leq x \leq 1)$ ，设函数 $f(x)$ 的最大值是 $M$ ，最小值是 $N$ ，则 （\qquad）
+    \begin{tasks}(4)
+        \task $M+N=8$
+        \task $M-N=8$
+        \task $M+N=6$
+        \task $M-N=6$
+    \end{tasks}
+\end{example}
+
+\v{6em}
+
+\subsubsection{偶函数和单调性结合}
+
+\begin{theorem}[偶函数和单调性结合]
+    由偶函数知，$x>0$ 时 $f(x)=f(|x|)$ ；当 $x<0$ 时 $f(|x|)=f(-x)=f(x)$，所以 $f(x) = f(|x|)$
+\end{theorem}
+
+\begin{tips}
+    这个性质在解决偶函数的单调性问题时非常常用。
+\end{tips}
+
+\begin{example}
+    已知定义在区间 $[-2,2]$ 上的偶函数 $f(x)$ ，当 $x \in[0,2]$ 时，$f(x)$ 单调递增，若 $f(1-2 m)>f(1)$ ，则实数 $m$ 的取值范围是 （\qquad）
+    \begin{tasks}(4)
+        \task $(-\infty, 0)$
+        \task $\left(-\frac{1}{2}, 0\right) \cup\left(1, \frac{3}{2}\right]$
+            \task $\left[-\frac{1}{2}, 0\right) \cup\left(1, \frac{3}{2}\right]$
+            \task $\left[-\frac{1}{2}, 0\right) \cup\left(1, \frac{3}{2}\right)$
+    \end{tasks}
+\end{example}
+
+\v{6em}
+
+\subsection{周期性}
+
+\begin{definition}[周期性]
+    如果$f(x)=f(x+T)\quad \forall x\in D$，其中$D$是$f$的定义域，那么我们称$f$是周期为$T$的周期函数。
+\end{definition}
+
+\begin{definition}[最小正周期]
+    显然，如果$T$是$f$的周期，那么$\pm2T,\pm3T,\cdots,\pm nT$都是$f$的周期。我们称所有为正数的周期中最小那一为最小正周期。
+\end{definition}
+
+\subsection{有界性}
+
+\begin{definition}[有界性]
+    有界性：设函数 $y=f(x)$ 在数集 $I$ 上有定义，若存在正数 $M$ ，使得对于每个 $x \in I$ 都有 $|f(x)| \leq M$ 成立，则称 $f(x)$ 在 $I$ 上有界；若对于任意 $M>0$ ，都存在 $x_0 \in I$ 使得 $\left|f\left(x_0\right)\right|>M$ ，则称 $f(x)$ 在 $I$ 上无界．
+\end{definition}
+
+% 有界函数图
+\begin{tikzpicture}
+    % 坐标轴
+    \draw[->] (-0.5,0) -- (4.5,0) node[right] {$x$};
+    \draw[->] (0,-2.5) -- (0,2.5) node[above] {$y$};
+
+    % M 和 -M 的水平线
+    \draw[red] (0, 1.5) -- (4.5, 1.5) node[right] {$M$};
+    \draw[red] (0, -1.5) -- (4.5, -1.5) node[right] {$-M$};
+
+    % 有界函数 (例如 sin(x))
+    \draw[blue, thick, samples=100, domain=0:4] plot (\x, {1.2*sin(deg(\x*3))});
+
+    % 标签
+    \node[below left, red] at (2, -2) {有界};
+\end{tikzpicture}
+
+\section{反函数}
+
+\begin{definition}[反函数]
+    如果函数$y=f(x)$在区间$I$上自变量和因变量是一一对应的，那么该函数存在由关系式：$x=f(y)$确定的反函数：$f^{-1}$。
+
+    例如$y=f(x)=x^2$在$(0,\infty)$上满足一一对应，存在由$x=f(y)=y^2$确定的反函数$y=\sqrt{x}$。
+\end{definition}
+
+从函数图像上来看，反函数的图像和原函数的图像恰是关于$y=x$这条直线对称的。
