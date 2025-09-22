@@ -18,7 +18,7 @@
 \end{enumerate}
 
 \begin{definition}[零向量与单位向量]
-    特别地我们定义零向量：$\Vec{0}$是大小为$0$，方向任意的向量。此外我们定义长度为 $1$ 的向量为单位向量。
+    特别地我们定义零向量：$\overrightarrow{0}$是大小为$0$，方向任意的向量。此外我们定义长度为 $1$ 的向量为单位向量。
 \end{definition}
 
 \section{向量的运算}
@@ -31,9 +31,9 @@
             \centering
             \caption*{\textbf{加法：平行四边形定则}}
             \begin{tikzpicture}[scale=0.5]
-                \draw[line width=1pt,blue,-stealth](0,0)--(1,3) node[left]{$\boldsymbol{\Vec{a}}$};
-                \draw[line width=1pt,blue,-stealth](0,0)--(1,-1) node[right]{$\boldsymbol{\Vec{b}}$};
-                \draw[line width=1pt,red,-stealth](0,0)--(2,2) node[right]{$\boldsymbol{\Vec{a}+\Vec{b}}$};
+                \draw[line width=1pt,blue,-stealth](0,0)--(1,3) node[left]{$\boldsymbol{\overrightarrow{a}}$};
+                \draw[line width=1pt,blue,-stealth](0,0)--(1,-1) node[right]{$\boldsymbol{\overrightarrow{b}}$};
+                \draw[line width=1pt,red,-stealth](0,0)--(2,2) node[right]{$\boldsymbol{\overrightarrow{a}+\overrightarrow{b}}$};
                 \draw[black,dotted](1,3)--(2,2);
                 \draw[black,dotted](1,-1)--(2,2);
             \end{tikzpicture}
@@ -47,9 +47,9 @@
             \centering
             \caption*{\textbf{减法：三角形定则}}
             \begin{tikzpicture}[scale=0.5]
-                \draw[line width=1pt,blue,-stealth](0,0)--(1,3) node[left]{$\boldsymbol{\Vec{a}}$};
-                \draw[line width=1pt,blue,-stealth](2,2)--(1,3) node[right]{$\boldsymbol{\Vec{b}}$};
-                \draw[line width=1pt,red,-stealth](0,0)--(2,2) node[right]{$\boldsymbol{\Vec{a}-\Vec{b}}$};
+                \draw[line width=1pt,blue,-stealth](0,0)--(1,3) node[left]{$\boldsymbol{\overrightarrow{a}}$};
+                \draw[line width=1pt,blue,-stealth](2,2)--(1,3) node[right]{$\boldsymbol{\overrightarrow{b}}$};
+                \draw[line width=1pt,red,-stealth](0,0)--(2,2) node[right]{$\boldsymbol{\overrightarrow{a}-\overrightarrow{b}}$};
             \end{tikzpicture}
         \end{figure}
     \end{center}
@@ -61,8 +61,8 @@
             \centering
             \caption*{\textbf{数乘}}
             \begin{tikzpicture}[scale=0.5]
-                \draw[line width=1pt,blue,-stealth](0,0)--(1,1) node[left]{$\boldsymbol{\Vec{a}}$};
-                \draw[line width=1pt,red,dotted](0,0)--(2,2) node[right]{$\boldsymbol{\Vec{2a}}$};
+                \draw[line width=1pt,blue,-stealth](0,0)--(1,1) node[left]{$\boldsymbol{\overrightarrow{a}}$};
+                \draw[line width=1pt,red,dotted](0,0)--(2,2) node[right]{$\boldsymbol{\overrightarrow{2a}}$};
             \end{tikzpicture}
         \end{figure}
     \end{center}
@@ -179,20 +179,20 @@
     不难验证，这样定义的向量运算满足：
     \begin{multicols}{2}
         \begin{enumerate}
-            \item 加法交换律：$\Vec{a}+\Vec{b} = \Vec{b}+\Vec{a}$
-            \item 加法结合律：$\Vec{a}+(\Vec{b}+\Vec{c}) = (\Vec{a}+\Vec{b})+\Vec{c}$
-            \item 加法有零元：$\Vec{a}+\Vec{0} = \Vec{a}$
+            \item 加法交换律：$\overrightarrow{a}+\overrightarrow{b} = \overrightarrow{b}+\overrightarrow{a}$
+            \item 加法结合律：$\overrightarrow{a}+(\overrightarrow{b}+\overrightarrow{c}) = (\overrightarrow{a}+\overrightarrow{b})+\overrightarrow{c}$
+            \item 加法有零元：$\overrightarrow{a}+\overrightarrow{0} = \overrightarrow{a}$
                   \columnbreak
-            \item 数乘向量分配律：$\lambda(\Vec{a}+\Vec{b}) = \lambda\Vec{a}+\lambda\Vec{b}$
-            \item 数乘标量分配律：$(\lambda_1+\lambda_2)\Vec{a} = \lambda_1\Vec{a}+\lambda_2\Vec{a}$
-            \item 数乘结合律：$\lambda_1 (\lambda_2\Vec{a}) = (\lambda_1\lambda_2)\Vec{a}$
-            \item 数乘有单位元：$1 \Vec{a} = \Vec{a}$
+            \item 数乘向量分配律：$\lambda(\overrightarrow{a}+\overrightarrow{b}) = \lambda\overrightarrow{a}+\lambda\overrightarrow{b}$
+            \item 数乘标量分配律：$(\lambda_1+\lambda_2)\overrightarrow{a} = \lambda_1\overrightarrow{a}+\lambda_2\overrightarrow{a}$
+            \item 数乘结合律：$\lambda_1 (\lambda_2\overrightarrow{a}) = (\lambda_1\lambda_2)\overrightarrow{a}$
+            \item 数乘有单位元：$1 \overrightarrow{a} = \overrightarrow{a}$
         \end{enumerate}
     \end{multicols}
 \end{theorem}
 
 \begin{example}
-    已知 $\vec{a}$、$\vec{b}$ 是不平行的向量，若 $\overrightarrow{A B}=\vec{a}+2 \vec{b}, \overrightarrow{B C}=-4 \vec{a}-\vec{b}, \overrightarrow{C D}=-5 \vec{a}-3 \vec{b}$ ，则下列关系中正确的是 （\qquad）
+    已知 $\overrightarrow{a}$、$\overrightarrow{b}$ 是不平行的向量，若 $\overrightarrow{A B}=\overrightarrow{a}+2 \overrightarrow{b}, \overrightarrow{B C}=-4 \overrightarrow{a}-\overrightarrow{b}, \overrightarrow{C D}=-5 \overrightarrow{a}-3 \overrightarrow{b}$ ，则下列关系中正确的是 （\qquad）
     \begin{tasks}(4)
         \task $\overrightarrow{A D}=\overrightarrow{C B}$
         \task $\overrightarrow{A D}=\overrightarrow{B C}$
@@ -202,6 +202,20 @@
 \end{example}
 
 \v{6em}
+
+\subsection{向量的减法}
+
+\begin{definition}[向量的减法]
+    减法可以转化为加法：
+    $\overrightarrow{a}-\overrightarrow{b} = \overrightarrow{a}+(-\overrightarrow{b})$
+    ，当然也可以采用三角形定则，移项即可得到：
+    $$
+        \overrightarrow{AB} - \overrightarrow{AC} = \overrightarrow{CB}
+    $$
+    \begin{tips}
+        我们采用贱笑法来记忆这个向量公式。
+    \end{tips}
+\end{definition}
 
 \subsection{内积}
 内积也叫数量积。
@@ -222,7 +236,7 @@
 \end{theorem}
 
 \begin{example}
-    已知 $|\vec{a}|=|\vec{b}|=1$ ，且 $\vec{a}$ 与 $\vec{b}$ 的夹角为 $\frac{\pi}{3}$ ，则 $\vec{b}$ 与 $\vec{a}+\vec{b}$ 的夹角为 （\qquad）
+    已知 $|\overrightarrow{a}|=|\overrightarrow{b}|=1$ ，且 $\overrightarrow{a}$ 与 $\overrightarrow{b}$ 的夹角为 $\frac{\pi}{3}$ ，则 $\overrightarrow{b}$ 与 $\overrightarrow{a}+\overrightarrow{b}$ 的夹角为 （\qquad）
     \begin{tasks}(4)
         \task $\frac{\pi}{12}$
         \task $\frac{\pi}{6}$
@@ -234,7 +248,7 @@
 \v{6em}
 
 \begin{example}
-    已知两个单位向量 $\vec{a}, \vec{b}$ 满足 $|\vec{a}+3 \vec{b}|=3$ ，则 $\vec{a}, \vec{b}$ 夹角的余弦值为 （\qquad）
+    已知两个单位向量 $\overrightarrow{a}, \overrightarrow{b}$ 满足 $|\overrightarrow{a}+3 \overrightarrow{b}|=3$ ，则 $\overrightarrow{a}, \overrightarrow{b}$ 夹角的余弦值为 （\qquad）
     \begin{tasks}(4)
         \task $-\frac{1}{6}$
         \task $-\frac{1}{3}$
@@ -246,7 +260,7 @@
 \v{6em}
 
 \begin{example}
-    已知向量 $\vec{a}$ ，$\vec{b}$ 满足 $|\vec{a}+\vec{b}|=2|\vec{a}-\vec{b}|$ ，则 $\sin \langle\vec{a}, \vec{b}\rangle$ 的最大值为 （\qquad）
+    已知向量 $\overrightarrow{a}$ ，$\overrightarrow{b}$ 满足 $|\overrightarrow{a}+\overrightarrow{b}|=2|\overrightarrow{a}-\overrightarrow{b}|$ ，则 $\sin \langle\overrightarrow{a}, \overrightarrow{b}\rangle$ 的最大值为 （\qquad）
     \begin{tasks}(4)
         \task $\frac{\sqrt{3}}{3}$
         \task $\frac{3}{5}$
@@ -260,9 +274,9 @@
 \subsection{投影}
 
 \begin{definition}[投影]
-    定义$\Vec{a}$在$\Vec{b}$上的投影为：
+    定义$\overrightarrow{a}$在$\overrightarrow{b}$上的投影为：
     $$
-        \Vec{p} = \frac{|b|\cos \langle a,b \rangle}{|a|} \Vec{a}
+        \overrightarrow{p} = \frac{|b|\cos \langle a,b \rangle}{|a|} \overrightarrow{a}
     $$
 \end{definition}
 
@@ -271,17 +285,17 @@
 
 数学上，我们有向量基本定理：
 \begin{theorem}
-    如果$\Vec{e_1}, \Vec{e_2}$是平面内两个不共线的向量，那么该平面内任何一个向量都可以被他们俩\textbf{唯一地}线性表示：
+    如果$\overrightarrow{e_1}, \overrightarrow{e_2}$是平面内两个不共线的向量，那么该平面内任何一个向量都可以被他们俩\textbf{唯一地}线性表示：
     $$
-        \Vec{a} = x\Vec{e_1} + y \Vec{e_2}
+        \overrightarrow{a} = x\overrightarrow{e_1} + y \overrightarrow{e_2}
     $$
-    我们称$\Vec{e_1}, \Vec{e_2}$是平面内的一组基。称二元组$(x,y)$是$\Vec{a}$在这组基下的坐标。
+    我们称$\overrightarrow{e_1}, \overrightarrow{e_2}$是平面内的一组基。称二元组$(x,y)$是$\overrightarrow{a}$在这组基下的坐标。
 
     特别地，如果它们的都是单位向量，并且夹角是$\pi / 2$，称为单位正交基。
 \end{theorem}
 
 \begin{example}
-    已知向量 $\vec{a}, \vec{b}$ 满足 $|\vec{a}|=1, \vec{b}=(-1, \sqrt{2})$ ，且 $\vec{a}, \vec{b}$ 的夹角为 $\frac{\pi}{6}$ ，则 $|2 \vec{a}-\vec{b}|=$ （\qquad）
+    已知向量 $\overrightarrow{a}, \overrightarrow{b}$ 满足 $|\overrightarrow{a}|=1, \overrightarrow{b}=(-1, \sqrt{2})$ ，且 $\overrightarrow{a}, \overrightarrow{b}$ 的夹角为 $\frac{\pi}{6}$ ，则 $|2 \overrightarrow{a}-\overrightarrow{b}|=$ （\qquad）
     \begin{tasks}(4)
         \task $\sqrt{2}$
         \task 1
@@ -294,7 +308,7 @@
 
 \begin{theorem}[Cauchy不等式]
     $$
-        -|\Vec{a}||\Vec{b}| \le \Vec{a} \cdot \Vec{b} \le |\Vec{a}||\Vec{b}|
+        -|\overrightarrow{a}||\overrightarrow{b}| \le \overrightarrow{a} \cdot \overrightarrow{b} \le |\overrightarrow{a}||\overrightarrow{b}|
     $$
     使用坐标表示则是：
     $$
@@ -303,78 +317,190 @@
     更一般的，实际上这个结论对$n$维向量都成立，这也就是我们之前证明的Cauchy不等式。
 \end{theorem}
 
-\subsection{定比分点}
-
 \begin{theorem}[定比分点]
-    设A、B不重合，C是直线AB上动点，并且
-    $$
-        \frac{AC}{AB} = \lambda
-    $$
-    那么
-    $$
-        \Vec{PC} = (1-\lambda) \Vec{PA} +   \lambda \Vec{PB}
-    $$
+    \begin{minipage}[t]{0.55\textwidth}
+        设 $A$、$B$ 不重合，$C$ 是直线 $AB$ 上动点，并且
+        $$
+            \frac{\overrightarrow{AC}}{\overrightarrow{AB}} = \lambda
+        $$
+        那么：
+        $$
+            \overrightarrow{PC} = (1-\lambda) \overrightarrow{PA} + \lambda \overrightarrow{PB}
+        $$
+        还可以改写为：
+        $$
+            \overrightarrow{PC} = \mu \overrightarrow{PA} + \lambda \overrightarrow{PB}, \quad \mu + \lambda = 1
+        $$
+    \end{minipage}
+    \begin{minipage}[t]{0.4\textwidth}
+        \begin{figure}[H]
+            \centering
+            \begin{tikzpicture}[scale=0.8]
+                % Define coordinates for points - A, B, C horizontally aligned, P above
+                \coordinate (A) at (-2,0);
+                \coordinate (B) at (2,0);
+                \coordinate (C) at (0.5,0);  % C between A and B for λ=0.625
+                \coordinate (P) at (0,2);
+
+                % Draw vectors from P to other points
+                \draw[line width=1pt,blue,-stealth](P)--(A) node[below]{$\mathrm{A}$};
+                \draw[line width=1pt,blue,-stealth](P)--(B) node[below]{$\mathrm{B}$};
+                \draw[line width=1pt,red,-stealth](P)--(C) node[below]{$\mathrm{C}$};
+
+                % Draw the line through A, B, C
+                \draw[black](A)--(B);
+
+                % Label P
+                \draw (P) node[above]{$\mathrm{P}$};
+            \end{tikzpicture}
+            \caption{定比分点示意图}
+        \end{figure}
+    \end{minipage}
+
+    这是前述的向量基本定理的一个应用。A、B不重合的条件下，PA、PB显然构成一组基，那么PC一定可以用PA、PB线性表示，而这个定理给出了该表示的坐标。
+
+    \begin{tips}
+        如果将其改写，就能写成交叉相乘成比例。
+    \end{tips}
 \end{theorem}
 
-\begin{figure}[H]
-    \centering
-    \begin{tikzpicture}[scale=1.5]
-        \draw[line width=1pt,blue,-stealth](0,0)--(1,4) node[left]{$\mathrm{A}$};
-        \draw[line width=1pt,blue,-stealth](0,0)--(2,3) node[left]{$\mathrm{B}$};
-        \draw[line width=1pt,red,-stealth](0,0)--(2.5,2.5) node[left]{$\mathrm{C}$};
-        \draw[black,dotted](1,4)--(2.5,2.5);
-        \draw (0,0) node[left]{$\mathrm{P}$};
+\subsection{三点共线定理}
+
+\begin{theorem}[三点共线定理]
+    平面向量和三点共线定理： P 是直线 AB 外一点， C 是平面 PAB 内一点，根据平面向量基本定理，有且仅有一对实数 $x, y$ ，使得 $\overrightarrow{P C}=x \overrightarrow{P A}+y \overrightarrow{P B}$ ，以下两个命题互为充要条件：
+    $$
+        \boldsymbol{Q} 1 \Longleftrightarrow \boldsymbol{Q} 2
+    $$
+    \begin{enumerate}
+        \item Q1：A、B、C 三点共线
+        \item Q2：$x+y=1$
+    \end{enumerate}
+\end{theorem}
+
+\begin{example}
+    设 $\vec{a}, \vec{b}$ 不共线， $\overrightarrow{A B}=2 \vec{a}+p \vec{b}, \overrightarrow{B C}= \vec{a}+\vec{b}, \overrightarrow{C D}=\vec{a}-2 \vec{b}$ ，若 $A, B, D$ 三点共线，则实数 $p$ 的值为 \underline{\qquad}.
+\end{example}
+
+\v{8em}
+
+\begin{example}
+    如图所示，在 $\triangle \mathrm{ABC}$ 中，点 O 是 BC 的中点，过点 O 的直线分别交直线 $\mathrm{AB}$、$\mathrm{AC}$ 于不同的两点 $M, N$ ，若 $\overrightarrow{A B}=m \overrightarrow{A M}, \overrightarrow{A C}=n \overrightarrow{A N}$ ，则 $m+n$ 的值为 \underline{\qquad}.
+
+    \begin{tikzpicture}[scale=0.6]
+        \coordinate (A) at (0,3);
+        \coordinate (B) at (-1,0.5);
+        \coordinate (C) at (2.5,0.5);
+
+        \draw (A) -- (B) -- (C) -- cycle;
+        \coordinate (M) at ($(B)!-0.95!(A)$);
+        \coordinate (N) at ($(A)!0.68!(C)$);
+        \draw (M) -- (N);
+        \draw (B) -- (M);
+        \coordinate (O) at ($(B)!0.5!(C)$);
+        \fill (A) circle (1.5pt) node[above] {$A$};
+        \fill (B) circle (1.5pt) node[left] {$B$};
+        \fill (C) circle (1.5pt) node[right] {$C$};
+        \fill (M) circle (1.5pt) node[below left] {$M$};
+        \fill (N) circle (1.5pt) node[above right] {$N$};
+        \fill (O) circle (1.5pt) node[below] {$O$};
     \end{tikzpicture}
-    \caption{$\lambda > 1$}
+\end{example}
+
+\v{8em}
+
+\begin{example}
+    如图，在 $\triangle A B C$ 中，点 $O$ 是 $B C$ 的中点，过点 $O$ 的直线分别交直线 $A B, ~ A C$ 于不同的两点 $M, N$, 若 $\overrightarrow{A B}=m \overrightarrow{A M}, \overrightarrow{A C}=n \overrightarrow{A N}, m>0, n>0$ ，则 $\frac{2}{m}+\frac{8}{n}$ 的最小值为（\quad）
+    \begin{tasks}(4)
+        \task 2
+        \task 9
+        \task 10
+        \task 18
+    \end{tasks}
+\end{example}
+
+\begin{figure} [H]
+    \centering
+    \includegraphics[width=0.15\textwidth]{chapters/向量/images/平面向量的定义/img-20250916150824.png}
 \end{figure}
-这是前述的向量基本定理的一个应用。A、B不重合的条件下，PA、PB显然构成一组基，那么PC一定可以用PA、PB线性表示，而这个定理给出了该表示的坐标。
+
+\begin{example}如图，正方形 $A B C D$ 中， $\overrightarrow{D E}=2 \overrightarrow{E C}, ~ P$ 是线段 $B E$ 上的动点，且 $\overrightarrow{A P}=x \overrightarrow{A B}+y \overrightarrow{A D}(x>0, y>0)$ ，则 $\frac{1}{x}+\frac{1}{y}$ 的最小值为 \underline{\qquad}.
+\end{example}
+
+\begin{figure} [H]
+    \centering
+    \includegraphics[width=0.15\textwidth]{chapters/向量/images/平面向量的定义/img-20250916151838.png}
+\end{figure}
+
+\begin{example}
+    如图，已知点 $G$ 是 $\triangle A B C$ 的重心，过点 $G$ 作直线分别与 $A B, ~ A C$ 两边交于 $M, N$ 两点，设 $\overrightarrow{A B}=x \overrightarrow{A M}, \overrightarrow{A C}=y \overrightarrow{A N}$ ，则 $x+y$ 的值为（\qquad）
+\end{example}
+
+\begin{figure} [H]
+    \centering
+    \includegraphics[width=0.15\textwidth]{chapters/向量/images/平面向量的定义/img-20250916151919.png}
+\end{figure}
+
+\begin{example}
+    如图，在 $\triangle A B C$ 中， $\overrightarrow{B O}=2 \overrightarrow{O C}$ ，过点 $O$ 的直线分别交直线 $A B, A C$ 于不同的两点 $M, N$ ，设 $\overrightarrow{A B}=x \overrightarrow{A M}, \overrightarrow{A C}=y \overrightarrow{A N}$ ，则 $\frac{1}{x}+\frac{4}{y}$ 的最小值为 \underline{\qquad}.
+\end{example}
+
+\begin{figure} [H]
+    \centering
+    \includegraphics[width=0.2\textwidth]{chapters/向量/images/平面向量的定义/img-20250916152358.png}
+\end{figure}
 
 \subsection{三角形五心的向量表示}
+
 以下设$a,b,c$是三角形ABC的三边长。O是三角形所在平面的一点。
 
 \begin{theorem}
-    O是外心$\iff |\Vec{OA}| = |\Vec{OB}| = |\Vec{OC}|$
+    O是外心$\iff |\overrightarrow{OA}| = |\overrightarrow{OB}| = |\overrightarrow{OC}|$
 \end{theorem}
+
 \begin{proof}
     这是显然的，OA、OB、OC就是外接圆半径，长度自然相等。
 \end{proof}
 
 \begin{theorem}
-    O是重心$\iff \Vec{OA} + \Vec{OB} + \Vec{OC} = \Vec{0}$
+    O是重心$\iff \overrightarrow{OA} + \overrightarrow{OB} + \overrightarrow{OC} = \overrightarrow{0}$
 \end{theorem}
+
 \begin{proof}
-    设M是AB中点，根据定比分点，$\Vec{OA} + \Vec{OB} = 2 \Vec{OM}$，结合我们的条件也就是：
+    设M是AB中点，根据定比分点，$\overrightarrow{OA} + \overrightarrow{OB} = 2 \overrightarrow{OM}$，结合我们的条件也就是：
     $$
-        2 \Vec{OM} = -\Vec{OC}
+        2 \overrightarrow{OM} = -\overrightarrow{OC}
     $$
     也就是说O是CM的靠近M的三等分点，这显然就是重心。
 \end{proof}
+
 \begin{theorem}
-    O是垂心$\iff \Vec{OA} \cdot \Vec{OB} = \Vec{OA} \cdot \Vec{OC} = \Vec{OC} \cdot \Vec{OB}$
+    O是垂心$\iff \overrightarrow{OA} \cdot \overrightarrow{OB} = \overrightarrow{OA} \cdot \overrightarrow{OC} = \overrightarrow{OC} \cdot \overrightarrow{OB}$
 \end{theorem}
+
 \begin{proof}
     这是显然的：
     $$
-        \Vec{OA} \cdot \Vec{OB} = \Vec{OA} \cdot \Vec{OC} \iff \Vec{OA} \cdot \Vec{CB} = 0 \iff OA \perp CB
+        \overrightarrow{OA} \cdot \overrightarrow{OB} = \overrightarrow{OA} \cdot \overrightarrow{OC} \iff \overrightarrow{OA} \cdot \overrightarrow{CB} = 0 \iff OA \perp CB
     $$
 \end{proof}
-\begin{theorem}
-    O是内心$\iff a\Vec{OA} + b\Vec{OB} + c\Vec{OC} = \Vec{0}$
-\end{theorem}
-\begin{proof}
-    $\impliedby$：这是比较容易的
 
+\begin{theorem}
+    O是内心$\iff a\overrightarrow{OA} + b\overrightarrow{OB} + c\overrightarrow{OC} = \overrightarrow{0}$
+\end{theorem}
+
+\begin{proof}
+    这是比较容易的：
     $$
         \begin{aligned}
-                     & a\Vec{OA} + b\Vec{OB} + c\Vec{OC} = \Vec{0}                          \\
-            \implies & (a+b+c)\Vec{OA} +b\Vec{AB}+c\Vec{AB} = \Vec{0}                       \\
-            \implies & \Vec{AO} = \frac{1}{a+b+c}(b\Vec{AB}+c\Vec{AC})                      \\
-            \implies & \Vec{AO} = \frac{bc}{a+b+c}(\frac{1}{c}\Vec{AB}+\frac{1}{b}\Vec{AC})
+                     & a\overrightarrow{OA} + b\overrightarrow{OB} + c\overrightarrow{OC} = \overrightarrow{0}               \\
+            \implies & (a+b+c)\overrightarrow{OA} +b\overrightarrow{AB}+c\overrightarrow{AB} = \overrightarrow{0}            \\
+            \implies & \overrightarrow{AO} = \frac{1}{a+b+c}(b\overrightarrow{AB}+c\overrightarrow{AC})                      \\
+            \implies & \overrightarrow{AO} = \frac{bc}{a+b+c}(\frac{1}{c}\overrightarrow{AB}+\frac{1}{b}\overrightarrow{AC})
         \end{aligned}
     $$
     其中
     $$
-        \frac{1}{c}\Vec{AB}, \quad \frac{1}{b}\Vec{AC}
+        \frac{1}{c}\overrightarrow{AB}, \quad \frac{1}{b}\overrightarrow{AC}
     $$
     分别是AB、AC方向的单位向量，根据平行四边形定则（这里由于都是单位向量，因此是一个菱形），它们相加得到的AO就一定在角平分线上了。
 
@@ -398,24 +524,26 @@
     那么我们就有
     $$
         \begin{aligned}
-                     & a\Vec{OA} + b\Vec{OB} + c\Vec{OC}                    \\
-            \implies & a\Vec{OA} +b(\Vec{OD}+\Vec{DB})+c(\Vec{OD}+\Vec{DC}) \\
-            \implies & a\Vec{OA} + (b+c)\Vec{OD} + b\Vec{DB}+c\Vec{DC}
+                     & a\overrightarrow{OA} + b\overrightarrow{OB} + c\overrightarrow{OC}                                          \\
+            \implies & a\overrightarrow{OA} +b(\overrightarrow{OD}+\overrightarrow{DB})+c(\overrightarrow{OD}+\overrightarrow{DC}) \\
+            \implies & a\overrightarrow{OA} + (b+c)\overrightarrow{OD} + b\overrightarrow{DB}+c\overrightarrow{DC}
         \end{aligned}
     $$
-    根据第一个引理
+    根据第一个引理：
     $$
-        b\Vec{DB}+c\Vec{DC} = \Vec{0}
+        b\overrightarrow{DB}+c\overrightarrow{DC} = \overrightarrow{0}
     $$
-    根据第二个引理
+    根据第二个引理：
     $$
-        a\Vec{OA} + (b+c)\Vec{OD} = \Vec{0}
+        a\overrightarrow{OA} + (b+c)\overrightarrow{OD} = \overrightarrow{0}
     $$
     至此原命题证毕。
 \end{proof}
+
 \begin{theorem}
-    O是关于A的旁心$\iff a\Vec{OA} = b\Vec{OB} + c\Vec{OC}$
+    O是关于A的旁心$\iff a\overrightarrow{OA} = b\overrightarrow{OB} + c\overrightarrow{OC}$
 \end{theorem}
+
 \begin{proof}
-    证明不做要求
+    证明不做要求。
 \end{proof}
