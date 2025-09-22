@@ -1,0 +1,57 @@
+\section{分段函数}
+
+\begin{example}
+    设 $f(x)=\left\{\begin{array}{ll}x, & x \geq 1, \\ \mathrm{e}^x, & x<1,\end{array} g(x)=\left\{\begin{array}{ll}x^2-1, & x \geq 0, \\ x+2, & x<0,\end{array}\right.\right.$, 求 $f[g(x)]$.
+\end{example}
+
+\begin{solution}
+    \begin{enumerate}
+        \item 首先，将 $f(x)$ 中的 $x$ 替换为 $g(x)$。
+              $$ f[g(x)] = \begin{cases}
+                      g(x),     & g(x) \ge 1 \\
+                      e^{g(x)}, & g(x) < 1
+                  \end{cases} $$
+
+        \item 接下来，根据 $g(x)$ 的表达式，确定 $g(x) \ge 1$ 和 $g(x) < 1$ 对应的 $x$ 范围。
+
+              \begin{itemize}
+                  \item 当 $g(x) \ge 1$ 时:
+                        $$
+                            \begin{cases}
+                                x^2-1 \ge 1, & x \ge 0 \\
+                                x+2 \ge 1,   & x < 0
+                            \end{cases}
+                        $$
+                        对于第一种情况：$x^2-1 \ge 1 \implies x^2 \ge 2 \implies x \ge \sqrt{2}$ (因为 $x \ge 0$)\\\\
+                        对于第二种情况：$x+2 \ge 1 \implies x \ge -1$. 结合 $x < 0$，得到 $-1 \le x < 0$.
+
+                        综上，当 $x \ge \sqrt{2}$ 或 $-1 \le x < 0$ 时，$f[g(x)]=g(x)$。
+
+                  \item 当 $g(x) < 1$ 时:
+                        $$
+                            \begin{cases}
+                                x^2-1 < 1, & x \ge 0 \\
+                                x+2 < 1,   & x < 0
+                            \end{cases}
+                        $$
+                        对于第一种情况：$x^2-1 < 1 \implies x^2 < 2 \implies -\sqrt{2} < x < \sqrt{2}$. 结合 $x \ge 0$，得到 $0 \le x < \sqrt{2}$.\\\\
+                        对于第二种情况：$x+2 < 1 \implies x < -1$. 结合 $x < 0$，得到 $x < -1$.
+
+                        综上，当 $0 \le x < \sqrt{2}$ 或 $x < -1$ 时，$f[g(x)]=e^{g(x)}$。
+              \end{itemize}
+
+        \item 最后，根据上述分类，将 $g(x)$ 的具体表达式代入。
+              $$ f[g(x)] = \begin{cases}
+                      g(x),     & x \in [-1, 0) \cup [\sqrt{2}, +\infty) \\
+                      e^{g(x)}, & x \in (-\infty, -1) \cup [0, \sqrt{2})
+                  \end{cases} $$
+              即
+              $$ f[g(x)] = \begin{cases}
+                      x+2,       & -1 \le x < 0       \\
+                      x^2-1,     & x \ge \sqrt{2}     \\
+                      e^{x+2},   & x < -1             \\
+                      e^{x^2-1}, & 0 \le x < \sqrt{2}
+                  \end{cases} $$
+    \end{enumerate}
+\end{solution}
+
