@@ -31,7 +31,7 @@
 
 \begin{figure} [H]
     \centering
-    \includegraphics[width=0.5\textwidth]{chapters/聚类分析/images/K-Means/KMeans-drawio.pdf}
+    \includegraphics[width=0.5\textwidth]{chapters/聚类分析/images/K-means/kmeans-drawio.png}
 \end{figure}
 
 K-Means 的本质是通过迭代最小化 SSE 实现聚类，默认距离使用欧氏距离。但也可以根据数据类型替换为：
@@ -147,7 +147,7 @@ for k in K_range:
 \subsection{文本聚类的自定义距离函数}
 
 \begin{example}
-当我们想要根据语义相似性对一组文本文档进行聚类。在这种情况下，欧氏距离可能不合适，因为它无法捕捉文档的语义含义。我们可以定义一个自定义距离函数，使用预先训练好的词向量模型（例如 Word2Vec 或 GloVe）来计算两个文档之间的语义相似度。
+    当我们想要根据语义相似性对一组文本文档进行聚类。在这种情况下，欧氏距离可能不合适，因为它无法捕捉文档的语义含义。我们可以定义一个自定义距离函数，使用预先训练好的词向量模型（例如 Word2Vec 或 GloVe）来计算两个文档之间的语义相似度。
 \end{example}
 
 在下面的示例代码中，我们通过加载一个预先训练好的 Word2Vec 模型，并且自定义了一个距离函数，该函数使用模型将输入文档转换为词向量。
