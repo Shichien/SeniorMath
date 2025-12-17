@@ -1,0 +1,29 @@
+\section{简单填补}
+
+\begin{definition}[简单填充]
+    简单填充是一种单变量（Univariate）填充策略，它使用数据集中单个特征列的统计量（如均值、中位数或众数）来替换该列中的所有缺失值。这种方法不考虑特征之间的关系。
+\end{definition}
+
+在 \texttt{scikit-learn} 中，这通常通过 \texttt{SimpleImputer} 类实现。常见的策略包括：
+\begin{enumerate}
+    \item
+          \begin{definition}[\textbf{均值填充}]
+              使用该特征所有观测值的算术平均数来填充缺失值。对于特征向量 $x_j$，其填充值 $\hat{x}_{ij}$（其中 $i$ 是缺失值的行索引）计算如下：
+              $$
+                  \hat{x}_{ij} = \bar{x}_j = \frac{1}{|\text{obs}(j)|} \sum_{k \in \text{obs}(j)} x_{kj}
+              $$
+              其中 $\text{obs}(j)$ 代表特征 $j$ 中所有非缺失值的索引集合。
+          \end{definition}
+    \item
+          \begin{definition}[中位数填充]
+              使用该特征所有观测值的中位数进行填充。当中位数比均值更能抵抗异常值的影响时，这是一种更稳健的选择。
+          \end{definition}
+    \item
+          \begin{definition}[常数填充]
+              使用一个固定的常数值（例如 0）来填充所有缺失值。
+          \end{definition}
+\end{enumerate}
+
+\begin{tips}
+    简单填充计算速度快，易于实现。但它的主要缺点是会扭曲数据的原始分布，并低估方差。更重要的是，它完全忽略了特征之间的相关性，可能导致后续模型训练时信息的丢失。
+\end{tips}

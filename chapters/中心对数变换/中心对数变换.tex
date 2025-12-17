@@ -1,0 +1,73 @@
+\begin{definition}[中心对数变换]
+    成分数据是一种特殊类型的数据，其特点是各组成部分之和为一个常数（通常为 $1$ 或 $100 \%$ ）。这种数据在地质学、化学以及生物学等领域非常常见。例如，地质样品中的元素比例、化学反应物的质量百分比等都属于成分数据。由于成分数据的闭合性质（即部分之和为固定值），直接在这种数据上进行统计分析会导致一些问题，如信息丢失和多重共线性。为了解决这些问题，研究人员提出了包括中心对数比变换（CLR）在内的多种数据转换方法。
+
+    中心对数变换的核心在于将成分数据的相对比例转化为对数比值，然后进行中心化处理。具体来说，$C L R Q$ 转换公式如下：
+    $$
+        C L R\left(x_i\right)=\ln \left(\frac{x_i}{g}\right)
+    $$
+    或拆开来写：
+    $$\operatorname{clr}(x)=\ln \left[\frac{x_1}{g_m(x)}, \ldots, \frac{x_D}{g_m(x)}\right]$$
+    其中，$x_i$ 是成分数据中的一个组成部分，$g$ 是所有成分的几何平均值。通过这种转换，原始成分数据被转换为对数比值，从而减少了数据之间的相关性，并使得转换后的数据具备零和性质，这意味着数据的均值为零，方差相同，这在统计分析中是非常有用的性质。
+\end{definition}
+
+\begin{tips}
+    中心对数变换有很多优势：
+    \begin{itemize}
+        \item 改善数据的分布特性：可以将原本可能具有复杂分布的成分数据转化为更接近正态分布或其他便于分析的分布形式，从而更适合后续的统计分析和建模工作。
+        \item 消除成分之间的冗余信息：由于成分数据之间存在约束关系，直接使用原始数据可能会导致信息冗余和多重共线性等问题。对数中心比变换可以在一定程度上消除这些问题，使得每个变量所携带的信息更加独立和有效。
+        \item 便于进行比较和分析：经过变换后的数据在数值上更加规整，不同成分之间的差异和关系更加清晰，有利于进行各种比较和分析操作。
+        \item 解决成分数据的闭合效应：成分数据由于其和为固定值（如 1）的约束，存在闭合效应，这会导致在某些常规统计方法中出现问题。例如，在进行多元线性回归时，由于这种闭合效应，直接使用原始成分数据可能会得到不合理的结果。
+    \end{itemize}
+\end{tips}
+
+\begin{lstlisting}[style=python]
+import numpy as np
+from skbio.stats.composition import clr
+
+data = np.array([0.1, 0.2, 0.4, 0.1, 0.2])  # 成分数据的总和是 1.0
+lr_data_func = clr(data)
+print("CLR 变换后的数据")
+print(lr_data_func)
+
+# print("\n手动计算验证")
+# log_data = np.log(data)  # 计算数据的对数
+# mean_log_data = np.mean(log_data)  # 计算对数数据的算术平均值 (这等价于原始数据的对数几何平均值)
+# clr_data_manual = log_data - mean_log_data
+# print(clr_data_manual)
+\end{lstlisting}
+
+调用库得到的结果和手算的变换结果是一致的。进阶地，我们可以使用 CLR + PCA 进行主成分分析，这里构造了一些可以聚类的化学数据。
+
+\begin{lstlisting}[style=python]
+
+def main():
+    df_compositional = create_chemical_dataset(n_samples_per_cluster=20)
+    clr_data = clr(df_compositional.values)
+
+    pca_full = PCA()
+    pca_full.fit(clr_data)
+    n_components = plot_scree(pca_full.explained_variance_ratio_)
+
+    pca = PCA(n_components=n_components)
+    principal_components = pca.fit_transform(clr_data)
+    pc_df = pd.DataFrame(data=principal_components,
+                         columns=[f'PC{i + 1}' for i in range(n_components)],
+                         index=df_compositional.index)
+    print(f"已将数据降至 {n_components} 个维度。")
+
+    # 确定最佳聚类数 k
+    best_k = find_optimal_clusters(pc_df, max_k=10)
+
+    # 使用最佳 k 值进行最终的 K-Means 聚类
+    kmeans = KMeans(n_clusters=best_k, random_state=42, n_init='auto')
+    pc_df['Cluster'] = kmeans.fit_predict(pc_df)
+
+    # 可视化聚类结果
+    plot_clusters(pc_df, pca, kmeans)
+\end{lstlisting}
+
+成分数据的各个分量在本质上是相互关联的，其分布亦相对复杂。“定和限
+制”不仅使成分数据间各分量具有共线性，具体表现为组合内某一分量的增加，
+必然会引起至少另一分量的减少，反之亦然，并且导致成分数据各个分量不服从
+正态分布。而传统的统计分析方法，并未考虑成分数据存在的共线性等问题，无
+法直接应用。（\textcolor{red}{北京体育大学：成分数据分析方法在体质健康研究领域的应用——张婷}）

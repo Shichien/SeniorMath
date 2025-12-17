@@ -1,0 +1,610 @@
+\section{函数、极限}
+\subsection{一些初等函数}
+双曲正弦\[\sinh x=\frac{e^x-e^{-x}}{2}\]
+
+双曲余弦\[\cosh x=\frac{e^x+e^{-x}}{2}\]
+
+双曲正切\[\tanh x=\frac{\sinh x}{\cosh x}=\frac{e^x-e^{-x}}{e^x+e^{-x}}\]
+
+反双曲正弦\[\operatorname{arcsinh} x=\ln\left(x+\sqrt{x^2+1}\right)\]
+
+反双曲余弦\[\operatorname{arccosh} x=\pm\ln\left(x+\sqrt{x^2-1}\right)\]
+
+反双曲正切\[\operatorname{arctanh} x=\frac12\ln\frac{1+x}{1-x}\]
+\subsection{两个重要极限}
+\[\lim_{x\to 0}\frac{\sin x}{x}=1\]
+\[\lim_{x\to 0}(1+\frac 1x)^x=e=2.718281828459\ldots\]
+\subsection{三角函数公式}
+\subsubsection{和差角公式}
+\begin{gather*}
+    \sin(x\pm y)=\sin x\cos y\pm\cos x\sin y\\
+\cos(x\pm y)=\cos x\cos y\mp\sin x\sin y\\
+\tan(x\pm y)=\frac{\tan x\pm\tan y}{1\mp\tan x\tan y}
+\end{gather*}
+\subsubsection{积化和差公式}
+\begin{align*}
+    2\cos x \cos y &=\cos \left( x -y \right) +\cos \left( x +y \right) \\
+    2\sin x \sin y &=\cos \left( x +y \right) -\cos \left( x +y \right) \\
+    2\sin x \cos y &=\sin \left( x -y \right) +\sin \left( x +y \right) 
+\end{align*}
+\subsubsection{和差化积公式}
+\begin{align*}
+\sin x+\sin y&=2\sin\frac{x+y}{2}\cos\frac{x-y}{2}\\
+\sin x-\sin y&=2\cos\frac{x+y}{2}\sin\frac{x-y}{2}\\
+\cos x+\cos y&=2\cos\frac{x+y}{2}\cos\frac{x-y}{2}\\
+\cos x-\cos y&=2\sin\frac{x+y}{2}\sin\frac{x-y}{2}
+\end{align*}
+\subsubsection{倍角公式}
+\begin{gather*}
+\sin 2x=2\sin x\cos x\\
+\cos 2x=2\cos^2 x-1=1-2\sin^2 x=\cos^2 x-\sin^2 x\\
+\tan 2x=\frac{2\tan x}{1-\tan^2 x}\\
+\sin 3x=3\sin x-4\sin^3 x\\
+\cos 3x=4\cos^3 x-3\cos x\\
+\tan 3x=\frac{3\tan x-\tan^3 x}{1-3\tan^3 x}
+\end{gather*}
+\subsubsection{半角公式}
+\begin{gather*}
+    \sin\frac x2=\pm\sqrt{\frac{1-\cos x}{2}}\\
+\cos\frac x2=\pm\sqrt{\frac{1+\cos x}{2}}\\
+\tan\frac x2=\pm\sqrt{\frac{1-\cos x}{1+\cos x}}=\frac{1-\cos x}{\sin x}=\frac{\sin x}{1+\cos x}
+\end{gather*}
+\subsubsection{正弦定理}
+\[\frac{a}{\sin A}=\frac{b}{\sin B}=\frac{c}{\sin C}=2R\ \text{($R$是外接圆半径)}\]
+\subsubsection{余弦定理}
+\[c^2=a^2+b^2-2ab\cos C\]
+\subsubsection{反三角函数性质}
+\[\arcsin x+\arccos x=\frac \pi2 \quad \arctan x+\operatorname{arccot} x=\frac \pi2\]
+\section{一元函数微分学}
+\subsection{导数公式}
+\begin{align*}
+a^x{'}&=a^x\ln x & \log_a x'&=\frac{1}{x\ln a}\\
+\sin x'&=\cos x   & \cos x'&=-\sin x \\
+\tan x'&=\sec^2x  & \cot x'&=-\csc^2x\\
+\sec x'&=\sec x\tan x & \csc x'&=-\csc x\cot x\\
+\arcsin x' &=\frac{1}{\sqrt{1-x^2}}& \arccos x' &=-\frac{1}{\sqrt{1-x^2}}\\
+\arctan x' &=\frac{1}{1+x^2}&\operatorname{arccot}x'&=-\frac{1}{1+x^2}
+\end{align*}
+\subsection{莱布尼兹(Leibniz)公式}
+\[(uv)^{(n)}=\sum_{k=0}^n C_n^k u^{(n-k)}v^{k}\]
+\subsection{中值定理与导数应用}
+\subsubsection{拉格朗日(LaGrange)中值定理}
+\[f(b)-f(a)=f'(\xi)(b-a)\]
+\subsubsection{柯西(Cauchy)中值定理}
+\[\frac{f(b)-f(a)}{F(b)-F(a)}=\frac{f'(\xi)}{F'(\xi)}\]
+
+当$F(x)=x$时，柯西中值定理就是拉格朗日中值定理。
+\section{一元函数积分学}
+
+\subsection{基本不定积分表}
+\subsubsection{含三角函数积分}
+\begin{align*}
+ \int\tan xdx&=-\ln|\cos x|+C & \int\cot xdx&=\ln|\sin x|+C\\
+ \int\sec xdx&=\ln|\sec x+\tan x|+C & \int\csc xdx&=\ln|\csc x-\cot x|+C\\
+\int\sec^2 xdx&=\tan x+C&\int\csc^2 xdx &=-\cot x+C\\
+\int\sec x\tan xdx&=\sec x+C&\int\csc x\cot xdx&=-\csc x+C
+\end{align*}
+\subsubsection{含分式积分}
+\begin{align*}
+\int \frac{1}{a^{2}+x^{2}}dx&=\frac{1}{a} \arctan \frac{x}{a}+C &
+\int \frac{1}{x^{2}-a^{2}}dx&=\frac{1}{2 a} \ln \left|\frac{x-a}{x+a}\right|+C\\
+    \int \frac{1}{\sqrt{a^{2}-x^{2}}}dx&=\arcsin \frac{x}{a}+C&
+    \int \frac{d x}{\sqrt{x^{2} \pm a^{2}}}&=\ln \left|x+\sqrt{x^{2} \pm a^{2}}\right|+C
+\end{align*}
+\subsubsection{含根式的积分}
+\begin{align*}
+    \int \sqrt{x^{2}+a^{2}} d x&=\frac{x}{2} \sqrt{x^{2}+a^{2}}+\frac{a^{2}}{2} \ln \left|x+\sqrt{x^{2}+a^{2}}\right|+C \\
+     \int \sqrt{x^{2}-a^{2}} d x&=\frac{x}{2} \sqrt{x^{2}-a^{2}}-\frac{a^{2}}{2} \ln \left|x+\sqrt{x^{2}-a^{2}}\right|+C \\ 
+     \int \sqrt{a^{2}-x^{2}} d x&=\frac{x}{2} \sqrt{a^{2}-x^{2}}+\frac{a^{2}}{2} \arcsin \frac{x}{a}+C
+\end{align*}
+\subsubsection{三角函数的有理式积分}
+\[\sin x=\frac{2u}{1+u^2}\quad \cos x=\frac{1-u^2}{1+u^2}\quad du=\tan\frac x2\quad dx=\frac{2du}{1+u^2}\]
+\subsection{定积分}
+\subsubsection{三角函数的定积分}
+\[
+I_{n}=\int_{0}^{\frac{\pi}{2}} \sin ^{n} x d x=\int_{0}^{\frac{\pi}{2}} \cos ^{n} x d x=\frac{n-1}{n} I_{n-2}
+\]
+\subsubsection{换元积分}
+\subsubsection{分部积分}
+更多积分公式见\href{https://zh.wikipedia.org/wiki/积分表}{积分表}
+\subsection{曲率}
+弧微分公式$ds=\sqrt{1+y'^2}dx$
+
+平均曲率$\bar{K}=|\Delta\alpha/\Delta s|$，$\Delta\alpha $表示从$M$点到$M'$斜线斜率倾角变化量，$\Delta s$表示$MM'$弧长。
+
+$M$点的曲率
+\[K=\lim_{\Delta s\to 0}\left| \frac{\Delta \alpha}{\Delta s}\right|=\left| \frac{d \alpha}{d s}\right|=\frac{|y''|}{\sqrt{(1+y'^2)^3}}
+\]
+直线$K=0$，半径为$a$的圆$K= 1/a$
+\subsection{定积分的近似计算}
+矩形法
+\[
+\int_{a}^{b} f(x) \approx \frac{b-a}{n}\left(y_{0}+y_{1}+\cdots+y_{n-1}\right)
+\]
+
+梯形法
+\[
+\int_{a}^{b} f(x) \approx \frac{b-a}{n}\left[\frac{1}{2}\left(y_{0}+y_{n}\right)+y_{1}+\cdots+y_{n-1}\right]
+\]
+
+抛物线法
+\[
+\int_{a}^{b} f(x) \approx \frac{b-a}{3 n}\left[\left(y_{0}+y_{n}\right)+2\left(y_{2}+y_{4}+\cdots+y_{n-2}\right)+4\left(y_{1}+y_{3}+\cdots+y_{n-1}\right)\right]
+\]
+\subsection{定积分应用相关公式}
+功：$W=\vec{F}\cdot\vec{s}$\quad 引力：$F=k{m_1m_2}/{r^2}$
+
+函数的平均值：\[\bar{y}=\frac{1}{b-a}\int_a^bf(x)dx\]
+
+均方根：\[\sqrt{\frac{1}{b-a}\int_a^b f^2(t)dt}\]
+\section{空间解析几何和向量代数}
+\subsection{数量积}
+向量的数量积\[\vec{a}\cdot\vec{b}=|\vec{a}|\cdot|\vec{b}|\cos\theta=
+a_xb_x+a_yb_y+a_zb_z\]
+\subsection{向量积}
+向量的向量积
+\[\vec{a}\times\vec{b}=\left|\begin{array}{@{}ccc@{}}
+    i&j&k\\
+    a_x&a_y&a_z\\
+    b_x&b_y&b_z\\
+\end{array}\right|=|\vec{a}|\cdot|\vec{b}|\sin\theta\]
+\subsection{混合积}
+向量的混合积，$\theta$ 为锐角时，代表平行六面体的体积。
+\[\left[\vec{a}\vec{b}\vec{c}\right]=(\vec{a}\times\vec{b})\cdot\vec{c}=\left|
+\begin{array}{@{}lcr@{}}
+    a_x&a_y&a_z\\
+    b_x&b_y&b_z\\
+    c_x&c_y&c_z\\
+\end{array}
+\right|=|\vec{a}\times\vec{b}|\cdot|\vec{c}|\sin\theta\]
+\subsection{二重叉积}
+\[\vec{A}\times(\vec{B}\times\vec{C})=\vec{B}(\vec{A}\cdot\vec{C})-\vec{C}(\vec{A}\cdot\vec{B})\]
+二重叉积$\vec{A}\times(\vec{B}\times\vec{C})$得到一个向量，并且与$\vec{B}$和$\vec{C}$共面。
+\subsection{Laplace 公式}
+\[(\vec{A}\times\vec{B})\cdot(\vec{C}\times\vec{D})=(\vec{A}\cdot\vec{C})(\vec{B}\cdot\vec{D})-(\vec{A}\cdot\vec{D})(\vec{B}\cdot\vec{C})\]
+将$(\vec{C}\times\vec{D})$看成一个矢量，利用混合积和二重叉积展开可得。
+\subsection{向量夹角}
+设向量$\vec{a}=(a_x,a_y,a_z)$，$\vec{b}=(b_x,b_y,b_z)$
+则两个向量之间的夹角：
+\[\cos \theta=\frac{a_xb_x+a_yb_y+a_zb_z}{\sqrt{a_x^2+a_y^2+a_z^2}\cdot\sqrt{b_x^2+b_y^2+b_z^2}}\]
+\subsection{两点距离}
+空间2点的距离：
+\[d=|M_1M_2|=\sqrt{(x_2-x_1)^2+(y_2-y_1)^2+(z_2-z_1)^2}\]
+\subsection{点到平面的距离}
+点$M_0(x_0,y_0,z_0)$到平面$\pi:Ax+By+Cz+D=0$的距离为
+\[d=\frac{|Ax_0+By_0+Cz_0+D|}{\sqrt{A^2+B^2+C^2}}\]
+\subsection{点到直线的距离}
+点$M_0(x_0,y_0,z_0)$到平面$L_0:\frac{x-x_0}{l_0}+\frac{y-y_0}{m_0}+\frac{z-z_0}{n_0}$的距离为，其中$\overrightarrow{M_1P}$为直线$L_0$的法向量。
+\[d=\frac{|\overrightarrow{M_1M_0}\times\overrightarrow{M_1P}|}{\overrightarrow{M_1P}}\]
+\subsection{二次曲面方程}
+\subsubsection{圆柱面}
+\[x^2+y^2=R^2\]
+\subsubsection{椭圆柱面}
+\[\frac{x^2}{a^2}+\frac{y^2}{b^2}=1\]
+\subsubsection{椭圆抛物面}
+\[\frac{x^2}{a^2}+\frac{y^2}{b^2}=2pz\]
+\subsubsection{椭球面}
+\[\frac{x^2}{a^2}+\frac{y^2}{b^2}+\frac{z^2}{c^2}=1\]
+\subsubsection{二次锥面}
+\[\frac{x^2}{a^2}+\frac{y^2}{b^2}-\frac{z^2}{c^2}=0\]
+\section{多元函数微分学}
+\subsection{复合函数的微分}
+设$z=f(u,v), u=\varphi(x,y), v=\phi(x,y)$，则
+\begin{equation*}
+\left\{%
+\begin{array}{@{}l}    
+    \frac{\partial z}{\partial x}=\frac{\partial z}{\partial u}\cdot\frac{\partial u}{\partial x}+\frac{\partial z}{\partial v}\cdot\frac{\partial v}{\partial x}\\[5pt]
+    \frac{\partial z}{\partial y}=\frac{\partial z}{\partial u}\cdot\frac{\partial u}{\partial y}+\frac{\partial z}{\partial v}\cdot\frac{\partial v}{\partial y}\\
+\end{array}
+\right.
+\end{equation*}
+
+设$z=f(x,y,u,v), u=\varphi(x,y), v=\phi(x,y)$，则
+\begin{equation*}
+\left\{%
+\begin{array}{@{}l}    
+    \frac{\partial z}{\partial x}=\frac{\partial f}{\partial x}+\frac{\partial f}{\partial u}\cdot\frac{\partial u}{\partial x}+\frac{\partial f}{\partial v}\cdot\frac{\partial v}{\partial x}\\[5pt]
+    \frac{\partial z}{\partial y}=\frac{\partial f}{\partial y}+\frac{\partial f}{\partial u}\cdot\frac{\partial u}{\partial y}+\frac{\partial f}{\partial v}\cdot\frac{\partial v}{\partial y}\\
+\end{array}
+\right.
+\end{equation*}
+\subsection{全微分公式}
+\[dz=\frac{\partial z}{\partial x}dx+\frac{\partial z}{\partial y}dy
+\quad du=\frac{\partial u}{\partial x}dx+\frac{\partial u}{\partial y}dy+\frac{\partial u}{\partial z}dz\]
+\subsection{隐函数微分}
+设$F(x,y)=0$，则
+\[\frac{d y}{d x}=-\frac{F_x'(x,y)}{F_y'(x,y)}\]
+
+设$F(x,y,z)=0$，则
+\[\frac{\partial z}{\partial x}=--\frac{F_x'(x,y,z)}{F_z'(x,y,z)}\quad \frac{\partial z}{\partial y}=--\frac{F_y'(x,y,z)}{F_z'(x,y,z)}\]
+\subsection{微分法在几何上的应用}
+设曲面$F(x,y,z)=0$上有一点$M(x_0,y_0,z_0)$，则
+过此点的法向量为
+\[
+\vec{n}=\left(F_{x}'\left(x_{0}, y_{0}, z_{0}\right), F_{y}'\left(x_{0}, y_{0}, z_{0}\right), F_{z}'\left(x_{0}, y_{0}, z_{0}\right)\right)
+\]
+过此点的切平面方程
+\[
+F_{x}'\left(x_{0}, y_{0}, z_{0}\right)\left(x-x_{0}\right)+F_{y}'\left(x_{0}, y_{0}, z_{0}\right)\left(y-y_{0}\right)+F_{z}'\left(x_{0}, y_{0}, z_{0}\right)\left(z-z_{0}\right)=0
+\]
+过此点的法线方程
+\[
+\frac{x-x_{0}}{F_x'\left(x_{0}, y_{0}, z_{0}\right)}=\frac{y-y_{0}}{F_{y}'\left(x_{0}, y_{0}, z_{0}\right)}=\frac{z-z_{0}}{F_{z}'\left(x_{0}, y_{0}, z_{0}\right)}
+\]
+\subsection{方向导数与梯度}
+设三元函数$u=f(x,y,z)$在$M_0(x_0,y_0,z_0)$处可微，则$u$在点$M_0$沿任意方向$\vec{l}=(\cos\alpha,\cos\beta,\cos\gamma)$存在方向导数$\frac{\partial f}{\partial l}$，且有
+\begin{align*}
+    \left.\frac{\partial f}{\partial l}\right|_{M_0}&=
+\left.\frac{\partial f}{\partial x}\right|_{M_0}\cos\alpha+
+\left.\frac{\partial f}{\partial y}\right|_{M_0}\cos\beta+
+\left.\frac{\partial f}{\partial z}\right|_{M_0}\cos\gamma\\
+&=\nabla f_{M_0}\cdot\vec{l}
+\end{align*}
+其中$\nabla f_{M_0}$是函数$f(x,y,z)$在点$M_0$出的梯度，即梯度
+\[\nabla f=\left(\frac{\partial f}{\partial x},\frac{\partial f}{\partial y},\frac{\partial f}{\partial z}\right)\]
+\subsection{多元函数的极值}
+\subsubsection{必要条件}
+设函数$z=f(x,y)$在点$P(x_0,y_0)$存在一阶偏导数，且点$P$是函数$z$的极值点，则$f_x(x_0,y_0)=0,f_y(x_0,y_0)=0$
+\subsubsection{充分条件} 
+设函数$z=f(x,y)$在点$P(x_0,y_0)$存在二阶连续偏导数，且点$P$是函数$z$的极值点，则$f_x(x_0,y_0)=0,f_y(x_0,y_0)=0$ 。令$f_{xx}(x_0,y_0)=A,f_{xy}(x_0,y_0)=B,f_{yy}(x_0,y_0)=C$，则有
+\begin{itemize}[nosep,left=\parindent,align=left]
+    \item $AC-B^2>0$时，$A<0$为极大值，$A>0$为极小值
+    \item $AC-B^2<0$时，无极值
+    \item $AC-B^2=0$时，不确定
+\end{itemize}
+\section{多元函数积分学}
+\subsection{重积分及其应用}
+\subsubsection{曲面面积}
+设曲面$S$由方程$z=f(x,y)$给出，$D_{xy}$为曲面$S$在$xOy$面上的投影区域，则曲面面积
+\begin{align*}
+    A&=\int_{D_{xy}}\sqrt{1+f_x^2(x,y)+f_y^2(x,y)}dxdy\\
+     &=\int_{D_{yz}}\sqrt{1+g_y^2(x,y)+g_z^2(x,y)}dydz\\
+     &=\int_{D_{zx}}\sqrt{1+h_z^2(x,y)+h_x^2(x,y)}dzdx
+\end{align*}
+\subsubsection{平面薄片的质心}
+对于由$n$个质点组成的系统，其质心坐标$\bar{x}=\sum_{i=1}^{n}m_ix_i/\sum_{i=1}^{n}m_i$ ，$\bar{y}=\sum_{i=1}^{n}m_iy_i/\sum_{i=1}^{n}m_i$ 。设一平面薄片在$xOy$面的闭曲域$D$上连续，其面密度函数为$\rho(x,y)$ ，则其质心坐标为
+\[
+\bar{x}=\frac{\iint_{D} x \rho(x, y) d \sigma}{\iint_{D} \rho(x, y) d \sigma}\quad \bar{y}=\frac{\iint_{D} y \rho(x, y) d \sigma}{\iint_{D} \rho(x, y) d \sigma}
+\]
+\subsubsection{平面薄片的转动惯量}
+质点系对于$x$轴和$y$轴的质量分别为$I_x=\sum_{i=1}^{n}y_i^2m_i$ ，$I_y=\sum_{i=1}^{n}x_i^2m_i$。对于平面薄片。有
+\[
+I_{x}=\iint_{D} y^{2} \rho(x, y) d \sigma \quad I_{y}=\iint_{D} x^{2} \rho(x, y) d \sigma
+\]
+\subsection{柱面坐标和球面坐标}
+\subsubsection{柱面坐标}
+坐标变换与积分元
+\[
+\left\{
+\begin{array}{@{}l}
+x=\rho\cos\varphi\\
+y=\rho\sin\varphi\\
+z=z\\
+\end{array}\right.
+\quad dS=\rho d\rho d\varphi \ (z\text{方向}) \quad dV=\rho d\rho d\varphi dz
+\]
+\begin{align*}
+    \iiint_\Omega f(x,y,z)dxdydz 
+    &=\iiint_\Omega F(\rho,\varphi,z)\rho d\rho d\varphi dz\\
+    &=\iiint_\Omega f(\rho\cos\varphi,\rho\sin\varphi,z)\rho d\rho d\varphi dz
+\end{align*}
+\subsubsection{球面坐标}
+坐标变换与积分元
+\[
+\left\{\begin{array}{@{}l}
+x=r\sin \theta \cos \varphi\\
+y=r\sin \theta \sin \varphi\\
+z=r\cos \theta \\
+\end{array}
+\right.
+\quad dS=r^2\sin \theta d\theta d\varphi \ (r\text{方向}) \quad dV=\rho d\rho d\varphi dz
+\]
+\begin{align*}
+    \iiint_\Omega f(x,y,z)dxdydz 
+    &=\iiint_\Omega F(r,\theta,\varphi) r^2\sin \theta dr d\theta d\varphi\\
+    &=\iiint_\Omega f(r\sin \theta \cos \varphi,r\sin \theta \sin \varphi,r\cos \theta)r^2\sin \theta dr d\theta d\varphi
+\end{align*}
+\subsection{曲线积分}
+\subsubsection{对弧长的曲线积分}
+设$f(x,y)$在曲线弧$L$上连续且有定义，$L$的参数方程为
+\[\left\{\begin{array}{@{}l}
+    x=\varphi (t)\\
+    y=\psi (t)\\
+\end{array}
+\right.,(\alpha\le t \le \beta)\]
+且$\varphi (t), \psi (t)$在$[\alpha,\beta]$上具有一阶连续偏导数，则
+\[\int_L f(x,y)ds=\int_\alpha^\beta f\big(\varphi (t),\psi (t)\big)\sqrt{\varphi'^2 (t)+\psi'^2 (t)}dt\ (\alpha<\beta)\]
+\subsubsection[对坐标的曲线积分]{对坐标的曲线积分(求环流量)}
+设$P(x,y), Q(x,y)$在曲线弧$L$上连续且有定义，$L$的参数方程同上，则
+\[
+\int_{L} P(x, y) d x+Q(x, y) d y=\int_{\alpha}^{\beta}\big(P[\varphi(t), \psi(t)] \varphi^{\prime}(t)+Q[\varphi(t), \psi(t)] \psi^{\prime}(t)\big) d t
+\]
+
+两类曲线积分的关系
+\[
+\int_{L} P d x+Q d y=\int_{L}(P \cos \alpha+Q \cos \beta) d s
+\]
+\subsection{曲面积分}
+\subsubsection{对面积的曲面积分}
+设积分曲面$\Sigma$由方程$z=z(x,y)$给出，则被积函数$f(x,y,z)$在曲面$\Sigma$上对面积的积分为
+\[\iint_{\Sigma} f(x, y, z) d s=\iint_{D_{w}} f[x, y, z(x, y)] \sqrt{1+z_{x}^{2}(x, y)+z_{y}^{2}(x, y)} d x d y\]
+\subsubsection[对坐标的曲面积分]{对坐标的曲面积分(求通量)}
+当取曲面的上、前、右侧时取正号。
+\begin{align*}
+    \iint_{\Sigma} R(x, y, z) d x d y &=\pm \iint_{D_{xy}} R[x, y, z(x, y)] d x d y \\ 
+    \iint_{\Sigma} P(x, y, z) d y d z &=\pm \iint_{D_{yz}} P[x(y, z), y, z] d y d z \\ 
+    \iint_{\Sigma} Q(x, y, z) d z d x &=\pm \iint_{D_{zx}} Q[x, y(z, x), z] d z d x
+\end{align*}
+\subsection{格林公式}
+在一重积分中，牛顿-莱布尼茨公式
+\[\int_a^b F'(x)dx=F(b)-F(a)\]
+反映了函数在区间的积分与其原函数在区间端点值的情况，在二重积分中，有类似的格林公式。
+
+设闭曲线$D$由分段光滑的曲线$L$围成，$L$是$D$取正向的边界曲线，函数$P(x,y),Q(x,y)$在$D$上具有一阶连续偏导数，则有
+\[\iint_D\left(\frac{\partial Q}{\partial x}-\frac{\partial P}{\partial y}\right)dxdy=\oint_LP\,dx+Q\,dy\]
+\subsection{高斯公式}
+设空间闭区域$\Omega$是由分片光滑的闭曲面$\Sigma$围成，若函数$P(x,y,z)$，$Q(x,y,z)$，$R(x,y,z)$在$\Omega$上具有一节连续偏导数，则有
+\begin{align*}
+    \iiint_\Omega\left(\frac{\partial P}{\partial x}+\frac{\partial Q}{\partial y}+\frac{\partial R}{\partial x}\right)dV &=\oiint_\Sigma Pdydz+Qdzdx+Rdxdy\\
+    &=\oiint_\Sigma \left(P\cos\alpha+Q\cos\beta+R\cos\gamma\right)dS
+\end{align*}
+
+这里$\Sigma$时整个边界曲面$\Omega$的外侧，$\cos\alpha,\cos\beta,\cos\gamma$是$\Sigma$在点$(x,y,z)$处的法向量的方向余弦。高斯公式揭示了通量与散度的关系。设向量场
+\[\vec{A}(x,y,z)=P(x,y,z)\vec{i}+Q(x,y,z)\vec{j}+R(x,y,z)\vec{k}\]
+则向量场$\vec{A}$通过曲面$\Sigma$向着指定侧的通量为积分
+\[\iint_\Sigma\vec{A}\cdot\vec{n}\,dS\]
+将向量场$\vec{A}$的散度记作$\nabla\cdot \vec{A}$，有
+\[\nabla\cdot\vec{A}=\frac{\partial P}{\partial x}+\frac{\partial Q}{\partial y}+\frac{\partial R}{\partial z}\]
+利用向量场的通量和散度的关系，高斯公式可以写成向量形式
+\[\iiint_\Omega\nabla\cdot\vec{A}\,dV=\oiint_\Sigma A_n\,dS\]
+\subsection{斯托克斯公式 —— 曲线积分与曲面积分的关系}
+设$\Gamma$为分段光滑的有向闭曲线，$\Sigma$是以$\Gamma$为边界的分片光滑的有向曲面，$\Gamma$的侧与$\Sigma$的正向符合右手规则，若函数$P(x,y,z)$，$Q(x,y,z)$，$R(x,y,z)$在曲线$\Sigma$上具有一阶连续偏导数，则有
+\begin{multline*}
+\iint_\Sigma\left(\frac{\partial R}{\partial y}-\frac{\partial Q}{\partial z}\right)dydz+
+\left(\frac{\partial P}{\partial z}-\frac{\partial R}{\partial x}\right)dzdx+
+\left(\frac{\partial Q}{\partial x}-\frac{\partial P}{\partial y}\right)dxdy\\
+=\oint_\Gamma Pdx+Qdy+Rdz
+\end{multline*}
+斯托克斯公式揭示了环流量与旋度的关系。设向量场
+\[\vec{A}(x,y,z)=P(x,y,z)\vec{i}+Q(x,y,z)\vec{j}+R(x,y,z)\vec{k}\]
+其中函数$P,Q,R$均连续，$\Gamma$是$A$的定义域里面一条分段光滑的有向闭曲线，$\vec{\tau}$是$\Gamma$在点$(x,y,z)$处的单位切向量，则积分
+\[\oint_\Gamma \vec{A}\cdot\vec{\tau}\,ds\]
+为向量场$A$沿有向闭曲线$\Gamma$的环流量。将向量场$\vec{A}$的旋度记作$\nabla\times \vec{A}$，有
+\begin{align*}
+\nabla\times\vec{A} &=
+\left|
+\begin{array}{@{}ccc@{}}
+\vec{i}&\vec{j}&\vec{k}\\
+\frac{\partial }{\partial x}&\frac{\partial }{\partial y}&\frac{\partial }{\partial z}\\[2pt]
+    P&Q&R\\
+\end{array}
+\right|\\
+ &=
+\left(\frac{\partial R}{\partial y}-\frac{\partial Q}{\partial z}\right)\vec{i}+
+\left(\frac{\partial P}{\partial z}-\frac{\partial R}{\partial x}\right)\vec{j}+
+\left(\frac{\partial Q}{\partial x}-\frac{\partial P}{\partial y}\right)\vec{k}
+\end{align*}
+利用环流量与旋度的关系，斯托克斯公式可以写成向量形式
+\[\iint_\Sigma\nabla\times\vec{A}\cdot\vec{n}\,dS=\oint_\Gamma\vec{A}\cdot\vec{\tau}\,ds\]
+\section{无穷级数}
+\subsection{常数项级数}
+等比数列：
+\[1+q+q^2+\cdots+q^{n-1}=\frac{1-q^{n}}{1-q}\]
+
+等差数列：
+\[1+2+3+\cdots+n=\frac{n(n+1)}{2}\]
+
+平方和数列：
+\[1^2+2^2+3^2+\cdots+n^2=\frac{n(n+1)(2n+1)}{6}\]
+
+立方和数列：
+\[1^3+2^3+3^3+\cdots+n^3=\frac{n^2(n+1)^2}{4}\]
+\subsection{正项级数审敛法}
+\subsubsection{比较审敛法}
+设$A:\sum_{n=1}^\infty u_n$和$B:\sum_{n=1}^\infty v_n$都是正项级数，令
+\[\lim_{n\to\infty}\frac{u_n}{v_n}=l\]
+收敛情况如下
+\begin{itemize}[nosep,left=2em]
+    \item $0\le l \le \infty$，且级数$B$收敛，那么级数$A$收敛。
+    \item $0<l$或者$l=+\infty$，且级数$B$发散，那么级数$A$发散。
+\end{itemize}
+\subsubsection{比值审敛法}
+设$\sum_{n=1}^\infty u_n$为正项级数，令
+\[\lim_{n\to\infty}\frac{u_{n+1}}{u_n}=\rho\]
+收敛情况如下
+\begin{itemize}[nosep,left=2em]
+    \item $\rho<1$\ 级数收敛
+    \item $\rho>1 \ (\lim_{n\to\infty}{u_{n+1}}/{u_n}=\infty)$\  级数发散
+    \item $\rho=1$\ 不确定
+\end{itemize}
+\subsubsection{根值审敛法}
+设$\sum_{n=1}^\infty u_n$为正项级数，令
+\[\lim_{n\to\infty}\sqrt[n]{u_n}=\rho\]
+收敛情况如下
+\begin{itemize}[nosep,left=2em]
+    \item $\rho<1$\ 级数收敛
+    \item $\rho>1 \ (\lim_{n\to\infty}\sqrt[n]{u_n}=\infty)$\  级数发散
+    \item $\rho=1$\ 不确定
+\end{itemize}
+\subsection{交错级数审敛法}
+设$\sum_{n=1}^\infty (-1)^{n-1}u_n$为交错级数，满足条件
+\[u_n\ge u_{n+1}\]
+\[\lim_{n\to\infty}u_n=0\]
+% \[
+% \begin{cases}
+% u_n\ge u_{n+1}\\
+% \lim_{n\to\infty}u_n=0
+% \end{cases}
+% \]
+那么级数收敛。
+\subsection{绝对收敛与条件收敛}
+设级数$A$，$B$分别为
+\[A:\sum_{n=1}^\infty u_n\quad B:\sum_{n=1}^\infty |u_n|\]
+那么有
+\begin{itemize}[nosep,left=2em]
+    \item 若级数$B$收敛，则称级数$A${\bfseries 绝对收敛}
+    \item 若级数$A$收敛，而级数$B$发散，则称级数$A${\bfseries 条件收敛}
+    \item 若级数$A$绝对收敛，那么$A$必定收敛
+\end{itemize}
+\subsection{幂级数}
+如果给定一个定义在区间$I$上的函数列
+\[u_1(x),u_2(x),u_3(x),\cdots,u_1(x),\cdots\]
+那么由函数列构成的表达式
+\[u_1(x)+u_2(x)+u_3(x)+\cdots+u_1(x)+\cdots\]
+称为定义在区间$I$上的函数项无穷级数，函数项级数。
+
+对于一个确定的$x_0\in I$，这个级数有可能收敛也有可能发散。如果$x_0$使这个级数收敛，则称它为函数项级数的收敛点，否则称为发散点。由全体收敛点构成的集合称为函数项级数的收敛域，由全体发散点构成的集合称为函数项级数的发散域。
+
+函数项级数中最简单常见的一类就是幂级数，它的形式为
+\[A:\sum_{n=1}^\infty a_n x^n=a_0+a_1x+a_2x^2+\cdots+a_nx^n+\cdots\]
+如果幂级数$A$不是仅在$x=0$一点收敛，也不是在整个数轴上都收敛，那么必定存在一个确定的正数$R$使得
+\begin{itemize}[nosep,left=2em]
+    \item $|x|<R$ 时，幂级数绝对收敛
+    \item $|x|>R$ 时，幂级数发散
+    \item $|x|=\pm R$ 时，幂级数可能收敛，也可能发散
+\end{itemize}
+正数$R$叫做幂级数的收敛半径。$R$可以由下面方法得来
+\[\text{令}\lim_{n\to\infty}\left| \frac{a_{n+1}}{a_n}\right|=\rho\ ,\quad\text{则}\ %
+R=\begin{cases}
+  1/\rho,&\rho\ne0\\
+  +\infty,&\rho=0\\
+  0,&\rho=+\infty  
+\end{cases}\]
+\subsection{函数展开成幂级数}
+函数$f(x)$在$x_0$的邻域$U(x_0)$具有各阶导数，展开为泰勒级数
+\[f(x)=\sum_{n=0}^\infty \frac{1}{n!}f^{(n)}(x_0)(x-x_0)^n,x\in U(x_0)\]
+的充分必要条件是$f(x)$在该邻域内的泰勒公式的余项$R_n$的极限为零，即
+
+\[\lim_{n\to\infty}R_n=\lim_{n\to\infty}\frac{f^{(n+1)}(\xi)}{(n+1) !}\left(x-x_{0}\right)^{n+1}=0\]
+
+\subsection{常见函数展开成幂级数}
+\begin{gather*}
+    \frac{1}{1-x} =1+x+x^2+\cdots+x^n+\cdots=\sum_{n=0}^\infty x^n,x\in(-1,1)\\
+    e^x=1+x+\frac{x^2}{2!}+\cdots+\frac{x^n}{n!}+\cdots=\sum_{n=0}^\infty \frac{x^n}{n!},x\in(-\infty,+\infty)\\
+    \sin x=x-\frac{x^3}{3!}+\cdots+(-1)^n\frac{x^{2n+1}}{(2n+1)!}+\cdots=\sum_{n=0}^\infty (-1)^n\frac{x^{2n+1}}{(2n+1)!},x\in(-\infty,+\infty)\\
+    \ln(1+x)=x-\frac{x^2}{2}+\frac{u^3}{3}-\cdots+(-1)^n\frac{x^{n+1}}{n+1}+\cdots=\sum_{n=0}^\infty (-1)^n\frac{x^{n+1}}{n+1},x\in(-1,1]\\
+    (1+x)^a=1+ax+\frac{a(a-1)}{2!}x^2+\cdots+\frac{a(a-1)\cdots(a-n+1)}{n!}x^n+\cdots,x\in(-1,1)
+\end{gather*}
+
+\subsection{欧拉公式}
+\[e^ix=\cos x+i\sin x\quad \cos x=\frac{e^{ix}+e^{-ix}}{2}\quad \sin x=\frac{e^{ix}-e^{-ix}}{2i}\]
+\subsection{三角级数}
+设由正弦级数组成的函数$f(t)$为
+\[f(t)=A_0+\sum_{n=1}^\infty A_n\sin (n\omega t+\varphi_n)\]
+其中$A_0,A_n,\varphi_n$为常数，将正弦函数$A_n\sin (n\omega t+\varphi_n)$展开得
+\[A_n\sin (n\omega t+\varphi_n)=A_n\sin n\omega t\cos \varphi_n+A_n\cos n\omega t\sin \varphi_n\]
+令$a_0/2=A_0$, $a_n=A_n\sin \varphi_n$, $b_n=A_n\cos \varphi_n$,
+$\omega=\pi/(2l)$, $\pi t/l=x$得到三角级数
+\[f(t)=\frac{a_0}{2}+\sum_{n=1}^\infty \left(a_n\cos nx+b_n\sin nx \right)\]
+\subsection{傅立叶级数}
+设$f(x)$是以周期为$2\pi$的周期函数，且能展开成三角级数，即
+\[f(x)=\frac{a_0}{2}+\sum_{n=1}^\infty \left(a_n\cos nx+b_n\sin nx \right)\]
+对等式两边在区间$[-\pi,\pi]$逐项积分
+\[\int_{-\pi}^\pi f(x)dx=\frac{a_0}{2}+\sum_{n=1}^\infty \left(a_n
+\int_{-\pi}^\pi \cos nx\, dx+b_n \int_{-\pi}^\pi \sin nx\, dx\right)\]
+由三角函数的正交性，在积分式两边依次乘$\cos nx$和$\sin nx$可求得
+\begin{align*}
+    a_n&=\frac 1\pi \int_{-\pi}^\pi f(x)\cos nx\, dx\ (n=0,1,2,\ldots)\\
+    b_n&=\frac 1\pi \int_{-\pi}^\pi f(x)\sin nx\, dx\ (n=1,2,3,\ldots)
+\end{align*}
+当$a_n$，$b_n$满足上述关系时，三角级数
+\[\frac{a_0}{2}+\sum_{n=1}^\infty \left(a_n\cos nx+b_n\sin nx \right)\]
+叫做函数$f(x)$的傅里叶级数
+\subsection[周期函数的傅立叶级数]{周期为2$l$的周期函数的傅立叶级数}
+若$f(x)$是以周期不是$2\pi$，而是以$2l$为周期的周期函数，且在$[-l,l]$上可积，则
+\begin{align*}
+    a_n&=\frac 1l \int_{-l}^l f(x)\cos \frac{n\pi}{l}x\, dx\ (n=0,1,2,\ldots)\\
+    b_n&=\frac 1l \int_{-l}^l f(x)\sin \frac{n\pi}{l}x\, dx\ (n=1,2,3,\ldots)
+\end{align*}
+\section{常微分方程}
+\subsection{微分方程的相关概念}
+一般地，表示未知函数、未知函数的导数与自变量间的关系的方程，叫做微分方程。微分方程中出现的未知函数的最高阶导数的结束叫做微分方程的阶。$n$阶微分方程的一般形式是
+\[F\left(x,y,y',y'',\cdots,y^{(n)}\right)=0\]
+需要指出，方程中$y^{(n)}$是必须出现的，其他变量不一定要出现。
+
+设函数$y=\varphi(x)$在区间$I$上具有$n$阶连续偏导数，如果在区间$I$上$y=
+\varphi(x)$满足方程
+\[F\left(x,\varphi(x),\varphi(x)',\varphi(x)'',\cdots,\varphi(x)^{(n)}\right)\equiv0\]
+则称$y=\varphi(x)$是微分方程的解。如果微分方程的解含有任意常数，且任意常数的个数与微分方程的阶数相同\footnote{任意常数必须相互独立}，这样的解叫做微分方程的通解。给定初始条件，确定了通解中的所有任意常数后，就得到微分方程的特解。
+\subsection{一阶线性微分方程}
+一阶线性微分方程，如
+\[y'+p(x)y=q(x)\]
+它对于未知函数及其导数来讲都是一次方程，即线性的。如果方程的$q(x)=0$，那么方程就是齐次的，否则就是非齐次的。
+\[\begin{cases}
+q(x)=0&,y=Ce^{-\int p(x)dx}\\
+q(x)\ne0&,y=e^{-\int p(x)dx}\left(\int q(x)e^{\int p(x)}dx+C\right)\\
+\end{cases}\]
+\subsection{二阶常系数齐次线性微分方程}
+对于二阶齐次线性微分方程
+\[y''+py'+qy=0\]
+如果其中$p$，$q$均为常数，则称方程为二阶常系数齐次线性微分方程，若$p$，$q$不全为常数，则称其为二阶变系数齐次线性微分方程。二阶常系数齐次线性微分方程的通解求法如下
+\begin{enumerate}[nosep,leftmargin=0pt,labelindent=2em,itemindent=*]
+    \item 写出微分方程的特征方程$r^2+pr+q=0$
+    \item 求出特征方程的两个根$r_1, r_2$
+    \item 根据表 \ref{tab:differential_equations} 写出通解。
+\end{enumerate}
+\begin{table}[htbp]
+  \centering
+  \caption{微分方程通解求法}
+  \small
+    \begin{tabular}{cc}
+    \toprule
+    特征方程的根$r_1,r_2$   & 微分方程通解 \\
+    \midrule
+   不等实根$r_1\ne r_2$ & $y=C_1e^{r_1x}+C_2e^{r_2x}$\\
+   相等实根$r_1 = r_2$  & $y=\left(C_1+C_2 x\right)e^{r_1x}$\\
+   共轭复根$r_{1,2} = \alpha \pm \beta i$ & $y=e^{\alpha x}\left(C_1\cos\beta x +C_2\sin \beta x\right)$\\
+    \bottomrule
+    \end{tabular}%
+  \label{tab:differential_equations}%
+\end{table}%
+\subsection{二阶常系数非齐次线性微分方程}
+二阶常系数非齐次线性微分方程的一般形式为
+\[y''+py'+qy=f(x)\]
+其通解可以归结为对应的齐次方程$y''+py'+qy=0$的通解和其本身的一个特解。具体解法参考第 \ref{sec:n_differential_equations} 节。
+\subsection[高阶常系数线性微分方程]{$n$阶常系数线性微分方程}
+齐次方程的通解$y_h(x)$形式
+\label{sec:n_differential_equations}
+\begin{table}[htbp]
+  \centering
+  \caption{不同特征根对应的通解}
+   \small
+    \begin{tabular}{cc}
+    \toprule
+    特征根 $r$   & 通解 $y_h(x)$  \\
+    \midrule
+    单实根 &  $e^{rx}$   \\
+    $r$重实根 & $\left(C_{r-1}x^{r-1}+C_{r-2}x^{r-2}+\cdots+C_1x+C_0\right)e^{rx}$    \\
+    共轭复根$r_{1,2}=\alpha\pm\beta j$ & $e^{\alpha x}[C\cos\beta x+D\sin \beta x]$\\
+    $r$重共轭复根 & $\left(A_{r-1}x^{r-1}\cos(\beta x+\theta_{r-1})+\cdots+A_0\cos(\beta x+\theta_{0})\right)$    \\
+    \bottomrule
+    \end{tabular}%
+  % \label{tab:addlabel}%
+\end{table}%
+
+非齐次方程的特解$y_p(x)$形式
+% Table generated by Excel2LaTeX from sheet 'Sheet1'
+\begin{table}[htbp]
+  \centering
+  \caption{不同激励对应的特解}
+   \small
+    \begin{tabular}{ccc}
+    \toprule
+    激励 $f(x)$   & \multicolumn{2}{c}{特解 $y_p(x)$}  \\
+    \midrule
+    \multirow{2}*{\mbox{$x^m$}} &  $P_mx^m+P_{m-1}x^{m-1}+\cdots+P_1x+P_0$   & 所有特征根不相等\\
+          &  $x^r\left(P_mx^m+P_{m-1}x^{m-1}+\cdots+P_1x+P_0\right)$              & 有$r$重相等特征根\\
+    \midrule
+    \multirow{3}*{$e^{\alpha x}$} & $Pe^{\alpha x}$                     & $\alpha$  不等于特征根\\
+          & $(P_1x+P_0)e^{\alpha x}$                                    & $\alpha$等于特征单根 \\
+          & $P_rx^r+P_{r_1}x^{r_1}+\cdots+P_1x+P_0$                     & $\alpha$等于$r$重特征单根 \\
+    \midrule
+    $\cos(\beta x)$或$\sin(\beta x)$ & $ P\cos\beta x+Q\sin \beta x$   & 所有特征根不相等 \\
+    \bottomrule
+    \end{tabular}%
+  % \label{tab:addlabel}%
+\end{table}%
+
+
+
+

@@ -1,23 +1,27 @@
 \usepackage{array}
 
 % Table:
+\usepackage{tabularx}
 \usepackage{booktabs} % 用于绘制更美观的表格线
 
 % Math:
 \usepackage{sansmath}
+\usepackage{esint}
 
 % 使用基础宋体
 \usepackage{anyfontsize}
 \usepackage{fontspec}
-\setCJKmainfont{SimSun}[
+\setCJKmainfont{SimSun.ttc}[
+    Path = fonts/,
     % BoldFont = SimHei, % 中文粗体使用黑体
     BoldFont = SourceHanSerifCN-SemiBold.otf,
-    ItalicFont = KaiTi, % 中文斜体使用楷体
-    BoldItalicFont = SimHei
+    ItalicFont = KaiTi.ttf, % 中文斜体使用楷体
+    BoldItalicFont = SimHei.ttf
 ]
 
 % 该定义用于 section (思源宋体粗体、图表标题粗体)
-\newCJKfontfamily{\siyuansongbold}[Path=fonts/, Extension=.otf]{SourceHanSerifCN-SemiBold.otf}
+\newCJKfontfamily{\siyuansongbold}[Path=fonts/]{SourceHanSerifCN-SemiBold.otf}
+\newCJKfontfamily{\kaiti}[Path=fonts/]{KaiTi.ttf}
 
 % 水印:
 % \usepackage{eso-pic}
@@ -33,6 +37,7 @@
 % }
 
 % Drawing
+\usepackage{tikz}
 \usepackage{pgfplots}
 \usepackage{tikz-cd}
 \usepackage{tikz-qtree}
@@ -41,6 +46,7 @@
 \usepackage{siunitx}
 \usepackage[svgnames]{xcolor}
 \usetikzlibrary{shapes.geometric, arrows.meta, positioning, calc, angles, quotes, intersections, tikzmark}
+\usepackage{tkz-euclide}
 
 \pgfplotsset{compat=1.18}
 \newcommand{\ccr}[1]{\makecell{{\color{#1}\rule{1cm}{1cm}}}}
@@ -74,7 +80,7 @@
     top=2pt,
     bottom=1.8pt,
     right=5em,
-    fontupper=\fontsize{9.5pt}{13pt}\selectfont\kaishu,
+    fontupper=\fontsize{9.5pt}{13pt}\selectfont\kaiti,
     fonttitle=\small\bfseries,
     title={
             \faExclamationTriangle[regular]
@@ -103,7 +109,7 @@
     top=2pt,
     bottom=1.8pt,
     right=5em,
-    fontupper=\fontsize{9.5pt}{13pt}\selectfont\kaishu, % 内容字体: {大小}{衬线}
+    fontupper=\fontsize{9.5pt}{13pt}\selectfont\kaiti, % 内容字体: {大小}{衬线}
     fonttitle=\small\bfseries,
     title={
             \faLightbulb[regular]
@@ -133,7 +139,7 @@
     top=2pt,
     bottom=1.8pt,
     right=5em,
-    fontupper=\fontsize{9.5pt}{13pt}\selectfont\kaishu, % 内容字体: {大小}{衬线}
+    fontupper=\fontsize{9.5pt}{13pt}\selectfont\kaiti, % 内容字体: {大小}{衬线}
     fonttitle=\small\bfseries,
     title={
             \faBook
@@ -162,7 +168,7 @@
 %     top=2pt,
 %     bottom=1.8pt,
 %     right=5em,
-%     fontupper=\fontsize{9.5pt}{13pt}\selectfont\kaishu, % 内容字体: {大小}{衬线}
+%     fontupper=\fontsize{9.5pt}{13pt}\selectfont\kaiti, % 内容字体: {大小}{衬线}
 %     fonttitle=\small\bfseries,
 %     title={
 %             \faCheckSquare
@@ -315,3 +321,12 @@
 
 % 特殊排版需求
 \usepackage{changepage}
+\usepackage{bookmark} % 提供更好的书签
+
+\newcommand\px{\mathrel{/\mkern-5mu/}}  %平行
+\newcommand\pxeq{\mathrel{\vcenter{     %平行且等于
+            \ialign{\hfil##\hfil\crcr
+                $\scriptstyle\px\!$\crcr
+                \noalign{\nointerlineskip\vskip1pt}$=$\crcr}}}}
+\newcommand\backcong{\mathrel{\reflectbox{$\cong$}}}
+

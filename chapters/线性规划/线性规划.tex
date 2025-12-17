@@ -1,0 +1,284 @@
+\section{线性规划}
+
+\begin{definition}
+    为了指定最优的生产计划，最大经济效益、最小运输成本等目标，线性规划通过构建线性目标函数和线性约束条件来求解最优解。
+\end{definition}
+
+\begin{example}
+
+    工厂中具有这样的资源条件：
+
+    \begin{center}
+        \begin{tabular}{|l|l|l|l|l|}
+            \hline \multirow{2}{*}{资 源} & \multicolumn{3}{|c|}{产 品} & \multirow{2}{*}{可用数量}               \\
+            \hline                      & $P_1$                     & $P_2$                 & $P_3$ &     \\
+            \hline 原材料 A                & 2                         & 4                     & 3     & 150 \\
+            \hline 原材料 $B$              & 3                         & 1                     & 5     & 160 \\
+            \hline 加工时间 $C$             & 7                         & 3                     & 5     & 200 \\
+            \hline 产品利润                 & 70                        & 50                    & 60    &     \\
+            \hline
+        \end{tabular}
+    \end{center}
+\end{example}
+
+\begin{solution}
+    可以建立该问题的数学模型为
+    $$
+        \begin{aligned}
+             & \max z=70 x_1+50 x_2+60 x_3,                          \\
+             & \text { s.t. }\left\{\begin{array}{l}
+                                        2 x_1+4 x_2+3 x_3 \leqslant 150, \\
+                                        3 x_1+x_2+5 x_3 \leqslant 160,   \\
+                                        7 x_1+3 x_2+5 x_3 \leqslant 200, \\
+                                        x_i \geqslant 0, i=1,2,3 .
+                                    \end{array}\right.
+        \end{aligned}
+    $$
+    这里的 s．t．（subject to 的缩写）是＂受约束于＂的意思。
+\end{solution}
+
+此处，规划问题中的方案数、措施等是 \textbf{决策变量}，而目标函数和约束条件则是 \textbf{线性函数}。
+
+\begin{theorem}
+    一般线性规划的模型如下：
+
+    $$
+        \text { s.t. }\left\{\begin{array}{l}
+            a_{11} x_1+a_{12} x_2+\cdots+a_{1 n} x_n \leqslant(\text { 或 }=, \geqslant) b_1,   \\
+            a_{21} x_1+a_{22} x_2+\cdots+a_{2 n} x_n \leqslant(\text { 或 }=, \geqslant) b_2,   \\
+            \quad \vdots                                                                       \\
+            a_{m 1} x_1+a_{m 2} x_2+\cdots+a_{m n} x_n \leqslant(\text { 或 }=, \geqslant) b_m, \\
+            x_1, x_2, \cdots, x_n \geqslant 0 .
+        \end{array}\right.
+    $$
+
+    或简写为
+
+    $$
+        \begin{aligned}
+             & \max (\text { 或 } \min ) z=\sum_{j=1}^n c_j x_j,                                                              \\
+             & \text { s.t. }\left\{\begin{array}{l}
+                                        \sum_{j=1}^n a_{i j} x_j \leqslant(\text { 或 }=, \geqslant) b_i, \quad i=1,2, \cdots, m, \\
+                                        x_j \geqslant 0, \quad j=1,2, \cdots, n .
+                                    \end{array}\right.
+        \end{aligned}
+    $$
+
+\end{theorem}
+
+\subsection{连续线性规划}
+
+\begin{example}
+    一个奶制品加工厂用牛奶生产 $A_1$ 和 $A_2$ 两种奶制品，一桶牛奶可以在甲车间可以用 $12 h$ 加工成 $3 k g A_1$ ，或者在乙车间用 $8 h$ 加工成 $4 k g A_2$ 。根据市场需求，生产出来的 $\boldsymbol{A}_1$ 和 $\boldsymbol{A}_2$ 能够全部售出，且售出每千克 $\boldsymbol{A}_1$ 获利 24 元，售出每千克 $\boldsymbol{A}_2$ 获利 16 元．现在工厂每天能得到 50 桶牛奶，每天正式工人总共劳动时间 $480 h$ ，并且甲车间的设备每天之多能加工 $100 \mathrm{kgA}_1$ ，乙车间的的加工能力没有上线（加工）能力足够大，试为该厂定制一个生产计划，使得每天获利最大．
+\end{example}
+
+\begin{solution}
+    $$
+        \begin{aligned}
+             & \max f=72 x_1+64 x_2                       \\
+             & \text { s.t. }\left\{\begin{array}{l}
+                                        1+x_2 \leq 50         \\
+                                        12 x_1+8 x_2 \leq 480 \\
+                                        3 x_1 \leq 100        \\
+                                        x_1 \geq 0, x_2 \geq 0
+                                    \end{array}\right.
+        \end{aligned}
+    $$
+\end{solution}
+
+\begin{tips}
+    这是因为牛奶是可分的，所以看成是连续线性规划。
+\end{tips}
+
+这里采用当前最热门的线性规划库来进行求解：
+
+\begin{lstlisting}[language=python, caption=线性规划的 Python 代码]
+def lp() -> tuple:
+    """
+    求解线性规划问题，最大化目标函数
+    :return: tuple, 包含状态、x1、x2的最优解和目标函数的最值.
+    """
+    # 决策变量定义，注意定义变量的类型
+    x1 = pulp.LpVariable('x1', lowBound=0, cat='Continuous')
+    x2 = pulp.LpVariable('x2', lowBound=0, cat='Continuous')  # 限制约束变量为连续性
+
+    model = pulp.LpProblem('Question-1-Maximize', pulp.LpMaximize)
+    # model = pulp.LpProblem("Question-2-Minimize", pulp.LpMinimize) # 如果要求最小值，就用 LpMinimize 参数
+    model += 72 * x1 + 64 * x2
+
+    # 约束条件
+    model += x1 + x2 <= 50
+    model += 12 * x1 + 8 * x2 <= 480
+    model += 3 * x1 <= 100
+
+    model.solve()
+
+    return pulp.LpStatus[model.status], x1.varValue, x2.varValue, pulp.value(model.objective)
+\end{lstlisting}
+
+\subsection{整数线性规划}
+
+\subsection{0-1 规划}
+
+\begin{definition}
+    如果变量只有可取和不可取两种选择，那么就是 0-1 规划
+\end{definition}
+
+此时可以使用代码：
+
+\begin{lstlisting}[language=python, caption=0-1 规划的 Python 代码]
+    x1 = pulp.LpVariable('x1', cat='Binary')  # Binary 表示0-1变量
+    x2 = pulp.LpVariable('x2', cat='Binary')
+\end{lstlisting}
+
+\begin{example}[轮班问题]
+
+    假设每个时间段都需要一定的工人，而每个工人只能工作 8 小时。
+
+    \begin{center}
+        \begin{tabular}{|l|l|l|l|l|l|l|}
+            \hline 班 次  & 1         & 2         & 3          & 4           & 5           & 6           \\
+            \hline 时间段  & 0:00-4:00 & 4:00-8:00 & 8:00-12:00 & 12:00-16:00 & 16:00-20:00 & 20:00-24:00 \\
+            \hline 工人数量 & 35        & 40        & 50         & 45          & 55          & 30          \\
+            \hline
+        \end{tabular}
+    \end{center}
+
+    模型假设：
+    \begin{enumerate}
+        \item 每名工人每 24 h 只能工作 8 h 。
+        \item 每名工人只能在某个班次的初始时刻报到。
+    \end{enumerate}
+\end{example}
+
+\begin{lstlisting}[language=python, caption={0-1 规划的 Python 代码}]
+def lp() -> tuple:
+    x = pulp.LpVariable.dicts("x", range(1, 7), lowBound=0, cat='Integer')
+    # 注意，lowBound = 0 已经定义了 x_i >= 0 的约束条件，所以后续模型无需再单独添加这些约束条件。
+
+    model = pulp.LpProblem('轮班问题', pulp.LpMinimize)
+    model += pulp.lpSum(x.values())  # 目标函数：最小化所有班次的总和
+
+    # 约束条件
+    model += x[1] + x[6] >= 35
+    model += x[1] + x[2] >= 40
+    model += x[2] + x[3] >= 50
+    model += x[3] + x[4] >= 45
+    model += x[4] + x[5] >= 55
+    model += x[5] + x[6] >= 30
+
+    model.solve()
+    values = {f"x{i}": x[i].varValue for i in range(1, 7)}
+    return pulp.LpStatus[model.status], values, pulp.value(model.objective)
+\end{lstlisting}
+
+\subsubsection{二维 0-1 规划}
+
+\begin{example}[指派问题]
+    某单位有 $n$ 项任务，正好需 $n$ 个人去完成，由于每项任务的性质和每个人的能力和专长的不同，假设分配每个人只能完成一项任务。设 $c_{i j}$ 表示分配第 $i$ 个人去完成第 $j$ 项任务的费用（时间等），问应如何指派，完成任务的总费用最小？
+\end{example}
+
+\begin{solution}
+    引进 0-1 变量
+    $$
+        x_{i j}=\left\{\begin{array}{l}
+            1, \text { 指派第 } i \text { 个人完成第 } j \text { 项任务, } \\
+            0, \text { 不指派第 } i \text { 个人完成第 } j \text { 项任务, }
+        \end{array} \quad i, j=1,2, \cdots, n\right. \text {. }
+    $$
+    目标函数：总费用最小
+    $$
+        \min z=\sum_{i=1}^n \sum_{j=1}^n c_{i j} x_{i j}
+    $$
+    约束条件：
+    \begin{enumerate}
+        \item 每个人只能安排 1 项任务：$\sum_{j=1}^n x_{i j}=1, i=1,2, \cdots, n$ ；
+        \item 每项任务只能指派 1 个人完成：$\sum_{i=1}^n x_{i j}=1, j=1,2, \cdots, n$ ；
+        \item 0-1 条件：$x_{i j}=0$ 或 $1, i, j=1,2, \cdots, n$ 。
+    \end{enumerate}
+\end{solution}
+
+\begin{tips}
+    这里的约束条件给的很精妙，因为对 0-1 变量求和为定值 1，直接描述出了每个人只能安排一个任务。
+\end{tips}
+
+\begin{example}[旅行商问题]
+    有一推销员，从城市 $v_1$ 出发，要遍访城市 $v_2, v_3, \cdots, v_n$ 各一次，最后返回 $v_1$ 。已知从 $v_i$到 $v_j$ 的旅费为 $c_{i j}$ ，试问应按怎样的次序访问这些城市，使得总旅费最少？
+\end{example}
+
+\begin{solution}
+    模仿上道题的解法，我们定义：
+
+    决策变量：对每一对城市 $v_i, v_j$ ，定义一个变量 $x_{i j}$ 来表示是否要从 $v_i$ 出发访问 $v_j$ ，令：
+    $$
+        x_{i j}=\left\{\begin{array}{l}
+            1, \text { 推销员决定从 } v_i \text { 直接进人 } v_j, \\
+            0, \text { 推销员不从 } v_i \text { 直接进人 } v_j,
+        \end{array}\right.
+    $$
+
+    式中：$i, j=1,2, \cdots, n$ 。
+    目标函数：若推销员决定从 $v_i$ 直接进人 $v_j$ ，则由已知，其旅行费用为 $c_{i j} x_{i j}$ ，于是总旅费可以表达为：
+    $$
+        z=\sum_{i=1}^n \sum_{j=1}^n c_{i j} x_{i j},
+    $$
+
+    其中，若 $i=j$ ，则规定 $c_{i i}=M, M$ 为事先选定的充分大实数，$i, j=1,2, \cdots, n$ 。
+    约束：
+
+    （1）每个城市恰好进人一次：
+    $$
+        \sum_{i=1}^n x_{i j}=1, \quad j=1,2, \cdots, n .
+    $$
+
+    （2）每个城市离开一次：
+    $$
+        \sum_{j=1}^n x_{i j}=1, \quad i=1,2, \cdots, n .
+    $$
+
+    （3）为防止在遍历过程中，出现子回路，附加一个强制性约束：
+    $$
+        u_i-u_j+n x_{i j} \leqslant n-1, \quad i=1, \cdots, n, j=2, \cdots, n,
+    $$
+
+    式中：$u_1=0,1 \leqslant u_i \leqslant n-1, i=2,3, \cdots, n$ 。
+    综上所述，建立旅行商问题的如下 $0-1$ 整数规划模型：
+    $$
+        \begin{gathered}
+            \min z=\sum_{i=1}^n \sum_{j=1}^n c_{i j} x_{i j}, \\
+            \text { s.t. }\left\{\begin{array}{l}
+                \sum_{i=1}^n x_{i j}=1, \quad j=1,2, \cdots, n,                        \\
+                \sum_{j=1}^n x_{i j}=1, \quad i=1,2, \cdots, n,                        \\
+                u_i-u_j+n x_{i j} \leqslant n-1, \quad i=1, \cdots, n, j=2, \cdots, n, \\
+                u_1=0,1 \leqslant u_i \leqslant n-1, \quad i=2,3, \cdots, n,           \\
+                x_{i j}=0 \text { 或 } 1, \quad i, j=1,2, \cdots, n .
+            \end{array}\right.
+        \end{gathered}
+    $$
+\end{solution}
+
+\begin{tips}
+    这里最难的地方在于，第三个不等式应该如何理解？
+
+    实际上，关键是任何不包含起点的子回路都不可能满足 MTZ 约束。
+
+    唯一满足所有约束的解，必然包含所有城市、从起点出发并最终返回起点的单一完整回路。
+\end{tips}
+
+\begin{solution}
+    情况一：路线中不包含 $i \rightarrow j$ 的路径 $\left(x_{i j}=0\right)$
+    \begin{itemize}
+        \item 不等式变为：$u_i-u_j+n \cdot 0 \leq n-1 \Longrightarrow u_i-u_j \leq n-1$
+        \item 由于我们已经约束了 $0 \leq u_i \leq n-1$ 和 $0 \leq u_j \leq n-1$，那么 $u_i-u_j$ 的最大可能值就是 $(n-1)-0=n-1$
+        \item 所以，$u_i-u_j \leq n-1$ 这个条件永远成立
+        \item 结论：如果旅行商不从城市 $i$ 走到城市 $j$，那么这个约束是"无效"的，不会对解产生任何限制
+    \end{itemize}
+
+    情况二：路线中包含了 $i \rightarrow j$ 的路径 $\left(x_{i j}=1\right)$
+    \begin{itemize}
+        \item 不等式变为：$u_i-u_j+n \cdot 1 \leq n-1 \Longrightarrow u_i-u_j \leq-1 \Longrightarrow u_i+1 \leq u_j$
+        \item 这就是关键所在！这个结果强制要求：如果旅行商从城市 $i$ 直接走到了城市 $j$，那么城市 $j$ 的"位次" $u_j$ 必须至少比城市 $i$ 的"位次" $u_i$ 大1
+        \item 结论：这个约束巧妙地将路径选择 $\left(x_{i j}\right)$ 和访问顺序 $\left(u_i\right)$ 关联了起来，强迫 $u_i$ 沿着旅行路线单调递增
+    \end{itemize}
+\end{solution}
+

@@ -1,0 +1,88 @@
+\section{Spearman 相关系数}
+
+\begin{definition}[Spearman 相关系数]
+    又称斯皮尔曼等级相关系数，常用希腊字母 $\rho$ 表示。其利用单调方程评价两个统计变量的相关性。如果数据中没有重复值，并且当两个变量完全单调相关时，斯皮尔曼相关系数则为 $+1$ 或 $-1$。定义式：
+    $$
+        \rho=1-\frac{6 \sum d_i^2}{n\left(n^2-1\right)} \in [-1, 1]
+    $$
+    结论：无参数的等级相关系数，亦即其值与两个相关变量的具体值无关，而仅仅与其值之间的大小关系有关。$d_i$表示两个变量分别排序后成对的变量位置差， $n$ 表示 $n$ 个样本，减少异常值的影响。
+\end{definition}
+
+Spearman 的计算基础是基于数据值的排名（秩）。
+
+\begin{theorem}
+    假设我们有两个随机变量 $X$ 和 $Y$ 的 $n$ 个观测值。我们首先将这两个变量的所有值分别排序为 $X_r$ 和 $Y_r$ 。Spearman 等级相关系数表示为 $r_s$ ，计算公式如下：
+    $$
+        r_s=\rho_{X_r, Y_r}=\frac{\operatorname{COV}\left(X_r, Y_r\right)}{\operatorname{STD}\left(X_r\right) \operatorname{STD}\left(Y_r\right)}=\frac{n \sum_{x_r \in X_r, y_r \in Y_r} x_r y_r-\sum_{x_r \in X_r} x_r \sum_{y_r \in Y_r} y_r}{\sqrt{\left(n \sum_{x_r \in X_r} x_r^2-\left(\sum_{x_r \in X_r} x_r\right)^2\right)} \sqrt{\left(n \sum_{y_r \in Y_r} y_r^2-\left(\sum_{y_r \in Y_r} y_r\right)^2\right)}}
+    $$
+    其中，$COV()$ 表示协方差，$STD()$ 表示标准差。
+\end{theorem}
+
+\begin{tips}
+    数据不满足正态分布的假设，存在异常值，并且变量是有序分类变量（满意度评分等），关系可能是非线性的，例如广告投入与销售额之间的关系（有边际效应递减）。
+\end{tips}
+
+\begin{corollary}[判别]
+    对于强相关性的样本，统计量的值较高（趋近于 $1$），对于具有强负序相关性的样本，该统计量的值较低（趋近于 $-1$），对于具有弱序相关性的样本，统计量接近于 $0$.
+\end{corollary}
+
+\begin{warning}
+    Spearman 不关心数值大小，只关心排序。我们先对数据进行排名：
+    \begin{itemize}
+        \item 工作年限的排名: [1,2,3,4,5,6]
+        \item 月薪的排名: [1,2,3,4,5,6]
+    \end{itemize}
+    可以看到，两个变量的排名是完全一致的 (1,2,3,4,5,6)，因此它们构成了一个完美的\textbf{"单调递增"}关系。
+\end{warning}
+
+\begin{lstlisting}[style=python]
+import pandas as pd
+from scipy.stats import spearmanr
+
+df = pd.DataFrame({'student': ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J'],
+                   'math': [70, 78, 90, 87, 84, 86, 91, 74, 83, 85],
+                   'science': [90, 94, 79, 86, 84, 83, 88, 92, 76, 75]})
+
+rho, p = spearmanr(df['math'], df['science'])
+print(f"Rho: {rho:.4f}, p: {p:.4f}")
+
+# 从输出中可以看到，Math 成绩和 Science 成绩之间存在负相关性
+# 但是相关性的 p < 0.05，说明这种相关性并不显著。
+# 这可能是因为样本量较小，或者数据中存在异常值等原因导致的。
+\end{lstlisting}
+
+\subsection{Spearman 相关系数矩阵}
+
+\begin{definition}[相关系数矩阵]
+    对于 $n$ 个随机变量，它返回一个 $n \times n$ 方阵 $R$ 。 $R(i, j)$ 表示随机变量 $i$ 和 $j$ 之间的 Spearman 秩相关系数。由于一个变量与其自身之间的相关系数为 1 ，因此所有对角线元素（ $i, i$ ）都等于 $1$ 。简而言之：
+    $$
+        R(i, j)= \begin{cases}r_{i, j} & \text { if } i \neq j \\ 1 & \text { otherwise }\end{cases}
+    $$
+\end{definition}
+
+当有一个包含多个数值变量的数据集时，若想要知道每一对变量之间的 Spearman 相关性，就需要用 Spearman 相关系数矩阵。
+
+\begin{lstlisting}[style=python]
+np.random.seed(42)
+data = {
+    '学习时长': np.arange(1, 11),  # 线性增长: 1, 2, ..., 10
+    '考试分数': [10, 15, 20, 35, 50, 65, 75, 80, 82, 83], # 非线性增长（前期快，后期慢）
+    '分心次数': [9, 10, 8, 7, 6, 5, 3, 4, 2, 1], # 负相关
+    '无关噪音': np.random.rand(10) * 100 # 一个完全随机的列
+}
+df = pd.DataFrame(data)
+
+print(df)
+spearman_corr_matrix = df.corr(method='spearman')
+print(spearman_corr_matrix)
+
+plt.figure(figsize=(8, 6)) # 设置画布大小
+heatmap = sns.heatmap(
+    spearman_corr_matrix,
+    annot=True,        # 在格子里显示数字
+    cmap='coolwarm',   # 设置配色方案，coolwarm很适合相关性（红正蓝负）
+    fmt='.2f'          # 格式化数字，保留两位小数
+)
+plt.title('Spearman 相关系数热力图', fontsize=16)
+plt.show()
+\end{lstlisting}

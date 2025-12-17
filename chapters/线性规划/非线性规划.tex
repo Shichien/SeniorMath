@@ -1,0 +1,154 @@
+\section{非线性规划}
+
+\begin{tips}
+    线性规划的约束可以视为有多种约束形式，有线性约束、等式约束和非线性约束。
+\end{tips}
+
+非线性规划无法使用 \texttt{linprog} 函数求解，需要使用科学计算库：\texttt{scipy.optimize}，使用 \texttt{minimize} 函数求解。
+
+\begin{example}
+    默认求解的是 f(x) 的最小值，若需要求解最大值，可以将目标函数取负数。
+    $$
+        \begin{cases}
+            f(x)_{min}=x_1^2+x_2^2+x_3^2+8 \\
+            x_1^2-x_2+x_3^2 \geq 0         \\
+            x_1+x_2^2+x_3^3 \leq 0         \\
+            -x_1-x_2^2+2=0                 \\
+            x_2+2 x_3^2=3                  \\
+            x_1, x_2, x_3 \geq 0
+        \end{cases}
+    $$
+\end{example}
+
+\begin{solution}
+
+\end{solution}
+
+\subsection{非线性规划的数学模型}
+
+非线性规划还可能在影院观影角度、飞行管理等方面应用。
+
+\begin{definition}[非线性规划的数学模型]
+    记 $\boldsymbol{x}=\left[x_1, x_2, \cdots, x_n\right]^{\mathrm{T}}$ 是 $n$ 维欧几里得空间 $R^n$ 中的一个点（ $n$ 维向量）。 $f(\boldsymbol{x})$ ， $g_i(x), i=1,2, \cdots, p$ 和 $h_j(x), j=1,2, \cdots, q$ 是定义在 $\mathbf{R}^n$ 上的实值函数。
+
+    若 $f(\boldsymbol{x}), g_i(\boldsymbol{x}), i=1,2, \cdots, p$ 和 $h_j(\boldsymbol{x}), j=1,2, \cdots, q$ 中至少有一个是 $\boldsymbol{x}$ 的非线性函数，称如下形式的数学模型：
+    $$
+        \begin{aligned}
+             & \min f(\boldsymbol{x})                                                        \\
+             & \text { s.t. }\left\{\begin{array}{l}
+                                        g_i(\boldsymbol{x}) \leqslant 0, \quad i=1,2, \cdots, p, \\
+                                        h_j(\boldsymbol{x})=0, \quad j=1,2, \cdots, q .
+                                    \end{array}\right.
+        \end{aligned}
+    $$
+    为非线性规划模型的一般形式。
+    如果采用向量表示法，则非线性规划的一般形式还可以写为
+    $$
+        \begin{gathered}
+            \min f(\boldsymbol{x}), \\
+            \text { s. t. }\left\{\begin{array}{l}
+                \boldsymbol{G}(\boldsymbol{x}) \leqslant 0, \\
+                \boldsymbol{H}(\boldsymbol{x})=0,
+            \end{array}\right. \\
+            \text { 式中: } \boldsymbol{G}(\boldsymbol{x})=\left[g_1(\boldsymbol{x}), g_2(\boldsymbol{x}), \cdots, g_p(\boldsymbol{x})\right]^{\mathrm{T}}, \boldsymbol{H}(\boldsymbol{x})=\left[h_1(\boldsymbol{x}), h_2(\boldsymbol{x}), \cdots, h_q(\boldsymbol{x})\right]^{\mathrm{T}} 。
+        \end{gathered}
+    $$
+\end{definition}
+
+\begin{tips}
+    如果线性规划的最优解存在，则最优解只能在可行域的边界上达到。且求出的是全局最优解，但非线性规划可能在可行域内的任何一点达到，而一般的线性规划算法给出的只是局部最优解。
+\end{tips}
+
+\begin{definition}[全局最优值]
+    \begin{itemize}
+        \item 若 $\boldsymbol{x}^* \in K$ ，且 $\forall \boldsymbol{x} \in K$ ，都有 $f\left(\boldsymbol{x}^*\right) \leqslant f(\boldsymbol{x})$ ，则称 $\boldsymbol{x}^*$ 为全局最优解，称 $f\left(x^*\right)$ 为其全局最优值。如果 $\forall x \in K, x \neq x^*$ ，都有 $f\left(x^*\right)<f(x)$ ，则称 $x^*$ 为严格全局最优解，称 $f\left(\boldsymbol{x}^*\right)$ 为其严格全局最优值。
+        \item 若 $\boldsymbol{x}^* \in K$ ，且存在 $\boldsymbol{x}^*$ 的邻域 $N_\delta\left(\boldsymbol{x}^*\right), \forall \boldsymbol{x} \in N_\delta\left(\boldsymbol{x}^*\right) \cap K$ ，都有 $f\left(x^*\right) \leqslant f(\boldsymbol{x})$ ，则称 $x^*$ 为局部最优解，称 $f\left(x^*\right)$ 为其局部最优值。如果 $\forall x \in N_\delta\left(x^*\right) \cap K$ ， $\boldsymbol{x} \neq \boldsymbol{x}^*$ ，都有 $f\left(\boldsymbol{x}^*\right)<f(\boldsymbol{x})$ ，则称 $\boldsymbol{x}^*$ 为严格局部最优解，称 $f\left(\boldsymbol{x}^*\right)$ 为其严格局部最优值。
+    \end{itemize}
+\end{definition}
+
+\subsection{利用 Pyomo 与求解器进行求解}
+
+Pyomo 是一个编程语言，致力于编写非线性约束优化问题，而运行 Pyomo 需要安装一个求解器。
+
+如果是线性规划，直接用 \verb`pulp` 库就行，但是非线性规划目前还是需要用求解器。
+
+\subsection{利用 Minimize 模块求解}
+
+\verb`Scipy` 模块不能运行求解器，也不能运行整数决策变量。
+
+Constraint 是约束，Jac 是一阶导数信息，Hess 是二阶导数信息，可以输入 Method 、Bounds 等。
+
+\begin{theorem}[约束条件]
+    \begin{itemize}
+        \item 等式约束：\verb|lambda: x[0] + x[1] - 5|
+        \item 不等式约束：默认采用 Non-Negative 非零约束，如 \verb|lambda: x[0] - 2*x[1] + 2|
+    \end{itemize}
+\end{theorem}
+
+\begin{example}
+    $$
+        \begin{aligned}
+            \min _x q(x)=\left(x_1-1\right)^2+\left(x_2-2.5\right)^2 &        \\
+            \text { subject to } \quad x_1-2 x_2+2                   & \geq 0 \\
+            -x_1-2 x_2+6                                             & \geq 0 \\
+            -x_1+2 x_2+2                                             & \geq 0 \\
+            x_1                                                      & \geq 0 \\
+            x_2                                                      & \geq 0
+        \end{aligned}
+    $$
+\end{example}
+
+\begin{lstlisting}[style=python]
+def example():
+    func = lambda x: (x[0] - 1) ** 2 + (x[1] - 2.5) ** 2
+    x0 = np.asarray([0, 0])  # 设定初始解
+    bounds = np.asarray([[0, None], [0, None]])  # 无上界, x[0], x[1] >= 0
+    cons = ({'type': 'ineq', 'fun': lambda x: x[0] - 2 * x[1] + 2},  # x[0] - 2*x[1] + 2 >= 0
+            {'type': 'ineq', 'fun': lambda x: -x[0] - 2 * x[1] + 6},  # -x[0] - 2*x[1] + 6 >= 0
+            {'type': 'ineq', 'fun': lambda x: -x[0] + 2 * x[1] + 2})  # -x[0] + 2*x[1] + 2 >= 0
+
+    res = minimize(func, x0, bounds=bounds, constraints=cons)
+    return res
+\end{lstlisting}
+
+\subsection{解决 MIP 问题}
+
+\begin{definition}[MIP 问题]
+    混合整数规划问题（Mixed Integer Programming, MIP）是指决策变量中既有连续变量又有离散变量（通常是整数变量或二进制变量）的数学规划问题。一般形式为：
+    $$
+        \begin{aligned}
+            \min_{\mathbf{x}, \mathbf{y}} \quad & f(\mathbf{x}, \mathbf{y})                                \\
+            \text{s.t.} \quad                   & g_i(\mathbf{x}, \mathbf{y}) \leq 0, \quad i=1,2,\ldots,m \\
+                                                & h_j(\mathbf{x}, \mathbf{y}) = 0, \quad j=1,2,\ldots,p    \\
+                                                & \mathbf{x} \in \mathbb{R}^n                              \\
+                                                & \mathbf{y} \in \mathbb{Z}^q
+        \end{aligned}
+    $$
+    其中 $\mathbf{x}$ 是连续变量向量，$\mathbf{y}$ 是整数变量向量。当目标函数和约束条件均为线性时，称为混合整数线性规划（MILP）；当存在非线性函数时，称为混合整数非线性规划（MINLP）。
+\end{definition}
+
+整数问题和线性问题的解法有很大的不一致，我们常猜测整数问题是最接近线性解决方案可行域中的整数点，但事实并非如此。
+
+\begin{lstlisting}[style=python]
+from ortools.linear_solver import pywraplp
+def main():
+    solver = pywraplp.Solver.CreateSolver("SAT")
+    if not solver:
+        return
+
+    infinity = solver.infinity()
+    x = solver.IntVar(0.0, infinity, "x")
+    y = solver.IntVar(0.0, infinity, "y")
+    solver.Add(x + 7 * y <= 17.5)
+    solver.Add(x <= 3.5)
+    solver.Maximize(x + 10 * y)
+    status = solver.Solve()
+
+    if status == pywraplp.Solver.OPTIMAL:
+        print("Objective value =", solver.Objective().Value())
+        print("x =", x.solution_value())
+        print("y =", y.solution_value())
+    else:
+        print("The problem does not have an optimal solution.")
+\end{lstlisting}
+

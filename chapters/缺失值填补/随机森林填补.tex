@@ -1,0 +1,20 @@
+\section{随机森林填补}
+
+\begin{definition}[随机森林插值]
+    具体做法是为每个缺失值特征训练一个随机森林模型，通过该模型对缺失值进行预测。
+\end{definition}
+
+\begin{tips}
+    \begin{itemize}
+        \item 优点：能够处理非线性关系的特征，预测准确性较高。
+        \item 缺点：需要额外的训练过程，可能增加计算复杂度。
+    \end{itemize}
+\end{tips}
+
+\subsection{数据预处理阶段的随机森林填充}
+
+此时我们的目标主要是修复数据，此时没有 \texttt{Y\_full} 这个值，我们的目的是修复数据。
+
+\subsection{模型训练阶段}
+
+如果我们拥有一个特征表 X 和目标 Y，我们的目标是预测 Y，此时 Y 是标准答案。

@@ -1,10 +1,10 @@
 \special{dvipdfmx:config z 3}
 \documentclass[lang=cn,10pt,color=cyan,titlestyle=hang,device=normal]{elegantbook}
 \input{additional.tex}
-\usepackage{physics}
 
 % https://my.oschina.net/shaodongtang/blog/16561295
 % Tasks 宏包使用手册
+
 
 \setcounter{tocdepth}{3}
 \title{高中数学总复习讲义}
@@ -21,11 +21,14 @@
 \tableofcontents
 \mainmatter
 
-\chapter{数学基本概念术语}
-\input{chapters/数学基本概念术语/数学基本概念术语.tex}
+% \chapter{数学基本概念术语}
+% \input{chapters/数学基本概念术语/数学基本概念术语.tex}
 
-\chapter{六年级下册}
-\input{chapters/六年级下册/知识点总结.tex}
+% \chapter{六年级下册}
+% \input{chapters/六年级下册/知识点总结.tex}
+
+% \chapter{初中数学讲义}
+% \input{chapters//初中数学讲义/full.tex}
 
 \chapter{初高衔接}
 \input{chapters/初高衔接/一次函数与二次函数.tex}
@@ -77,7 +80,7 @@
 
 \chapter{三角函数}
 \input{chapters/三角函数/三角函数线.tex}
-% \input{chapters/三角函数/特殊角的三角函数.tex}
+\input{chapters/三角函数/特殊角的三角函数.tex}
 \input{chapters/三角函数/三角函数的运算.tex}
 \input{chapters/三角函数/正余弦函数的图像.tex}
 \input{chapters/三角函数/正切函数.tex}
@@ -192,6 +195,72 @@
 \chapter{函数}
 \input{chapters/前置知识/函数.tex}
 \input{chapters/前置知识/反三角函数.tex}
+
+\chapter{高等数学部分公式}
+\input{chapters/考研公式/高等数学.tex}
+
+\chapter{CMC 非数学组初赛试题}
+\input{chapters/CMC非数试题/init.tex}
+
+\chapter{CMC 非数学组决赛试题}
+\input{chapters/CMC非数试题/final.tex}
+
+\chapter{独立性检验}
+\input{chapters/独立性检验/KSquare.tex}
+\input{chapters/独立性检验/Fisher.tex}
+\input{chapters/独立性检验/Yates.tex}
+
+\chapter{相关性检验}
+\input{chapters/相关性检验/Pearson.tex}
+\input{chapters/相关性检验/Spearman.tex}
+
+\chapter{聚类分析}
+\input{chapters/聚类分析/K-means.tex}
+\input{chapters/聚类分析/DBSCAN-密度聚类.tex}
+
+\chapter{灰色关联分析}
+\input{chapters/灰色关联分析/GM.tex}
+
+\chapter{多重共线性}
+\input{chapters/多重共线性/岭回归.tex}
+
+\chapter{异常值检测}
+\input{chapters/异常值检测/箱线图.tex}
+\input{chapters/异常值检测/标准差原则.tex}
+
+\chapter{缺失值填补}
+\input{chapters/缺失值填补/简单填补.tex}
+\input{chapters/缺失值填补/KNN.tex}
+\input{chapters/缺失值填补/随机森林填补.tex}
+
+\chapter{线性规划和整数规划}
+\input{chapters/线性规划/线性规划.tex}
+\input{chapters/线性规划/非线性规划.tex}
+
+\chapter{多目标优化}
+\input{chapters/多目标优化/多目标优化.tex}
+
+\chapter{机器学习}
+\input{chapters/机器学习/机器学习概念.tex}
+
+\chapter{时间序列}
+\input{chapters/时间序列/ARIMA.tex}
+
+\chapter{评价类模型}
+\input{chapters/评价类模型/TOPSIS.tex}
+\input{chapters/评价类模型/模糊综合评价.tex}
+\input{chapters/评价类模型/层次分析法.tex}
+
+\chapter{主成分分析}
+\input{chapters/主成分分析/主成分分析.tex}
+
+\chapter{中心对数变换}
+\input{chapters/中心对数变换/中心对数变换.tex}
+
+\chapter{岭回归}
+\input{chapters/多重共线性/岭回归.tex}
+
+\chapter{机器学习}
 
 \end{document}
 

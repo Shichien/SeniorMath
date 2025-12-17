@@ -1,0 +1,26 @@
+\begin{enumerate}
+    \item 当 $N \geq 40$ 且所有理论频数 $T \geq 5$ 时，用卡方检验即可 ，若此时计算出来的 $p$ 值与规定的显著性水平（如$0．05$）相近时，改用Fisher精准性检验。
+    \item 当 $n \geq 40$ 但存在某一个格子的理论频数 $T<5$ ，此时用 Yates 检验，或用 Fisher 精准性检验。
+    \item 当 $\mathrm{n}<40$ ，或存在某一个格子的理论频数 $\mathrm{T}<5$ ，用 Fisher 精准性检验。
+\end{enumerate}
+
+\section{卡方检验}
+
+\begin{definition}[卡方检验]
+    \begin{tips}
+        卡方检验一般在总数据量 $> 40$，且每一个数据单元格中的期望频数 $> 5$ 时使用。
+    \end{tips}
+    卡方检验统计量等于观测值与期望值之差的平方和除以期望值。在 $R \times C$ 列联表中，行列变量是无序的分类变量，则：
+    $$
+        \chi^2=N\left(\sum_{i=1}^R \sum_{j=1}^c \frac{A_{i j}^2}{\sum_{c=i}^C A_{i c} \sum_{r=1}^R A_{r j}}-1\right)
+    $$
+    其中，$A_{i j}$ 为实际频数，$R$与$C$分别为行数与列数。$N$ 为频数综合。
+
+    此时，上式近似服从自由度为 $(r-1)(c-1)$ 的 $\chi^2$ 分布。
+
+    对给定的显著性水平$\alpha$，检验的拒绝域为$W=\left\{\chi^2 \geqslant \chi_{1-\alpha}^2((r-1)(c-1))\right\}$。
+\end{definition}
+
+
+
+

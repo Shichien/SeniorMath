@@ -1,0 +1,64 @@
+\section{KNN填补}
+
+\begin{definition}[KNN 插值]
+    KNN 插值是一种基于邻居的插值方法。对于每个缺失值，找出与其最相似的K个样本，然后用这K个样本的特征均值来填充缺失值。
+    KNNImputer 通过欧几里德距离矩阵寻找最近邻。
+\end{definition}
+
+\begin{tips}
+    \begin{itemize}
+        \item 优点：能够利用数据的局部特性进行填充。
+        \item 缺点：计算量较大，K值的选择对结果影响较大。
+    \end{itemize}
+\end{tips}
+
+每个样本的缺失值，都是从其他训练集中找到最近邻的平均值估算的，如果两个都不缺失的特征都相近，那么两个样本就相近。
+
+在找到距离待预测样本 $x$ 最近的 $k$ 个邻居（记为集合 $N_k(x)$）之后，我们需要根据这些邻居的信息来做出决策。
+
+\begin{definition}[KNN 分类决策]
+    对于分类问题，决策规则通常是“多数表决法”。即预测样本 $x$ 的类别 $\hat{y}$ 为其 $k$ 个最近邻居中出现次数最多的类别。
+    $$
+        \hat{y} = \underset{c \in \mathcal{Y}}{\arg\max} \sum_{(x_i, y_i) \in N_k(x)} I(y_i = c)
+    $$
+    其中：
+    \begin{itemize}
+        \item $\mathcal{Y}$ 是所有可能的类别标签的集合。
+        \item $c$ 是其中一个类别。
+        \item $I(\cdot)$ 是指示函数，当条件成立时为 1，否则为 0。
+        \item $\arg\max$ 表示取能让后面表达式值最大的那个类别 $c$。
+    \end{itemize}
+\end{definition}
+
+\begin{definition}[KNN 回归决策]
+    对于回归问题，决策规则通常是“平均法”。即预测样本 $x$ 的值为其 $k$ 个最近邻居的真实值的平均数。
+    $$
+        \hat{y} = \frac{1}{k} \sum_{(x_i, y_i) \in N_k(x)} y_i
+    $$
+    有时也会使用“加权平均法”，即根据距离的远近为邻居分配不同的权重（例如，距离越近，权重越大），然后进行加权平均。若权重 $w_i = 1/d(x, x_i)$，则公式为：
+    $$
+        \hat{y} = \frac{\sum_{(x_i, y_i) \in N_k(x)} w_i y_i}{\sum_{(x_i, y_i) \in N_k(x)} w_i}
+    $$
+\end{definition}
+
+\begin{lstlisting}[style=python]
+from sklearn.impute import KNNImputer
+import numpy as np
+
+X = [[1, 2, np.nan], [3, 4, 3], [np.nan, 6, 5], [8, 8, 7]]
+np.array(X)
+Out[16]: 
+array([[ 1.,  2., nan],
+       [ 3.,  4.,  3.],
+       [nan,  6.,  5.],
+       [ 8.,  8.,  7.]])
+
+imputer = KNNImputer(n_neighbors=2)
+imputer.fit_transform(X)
+Out[14]: 
+array([[1. , 2. , 4. ],
+       [3. , 4. , 3. ],
+       [5.5, 6. , 5. ],
+       [8. , 8. , 7. ]])
+\end{lstlisting}
+

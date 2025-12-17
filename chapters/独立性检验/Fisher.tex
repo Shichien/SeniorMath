@@ -1,0 +1,87 @@
+\section{Fisher}
+
+\begin{definition}[Fisher 精准性检验]
+    Fisher 精准性检验是一种用于检验两个变量之间的相关关系的方法，与 $K^2$ 检验有很多相似之处，但是它仅适用于小样本的校验，一般在 $K^2$ 检验失效时（样本过小）使用。
+
+    Fisher 精准性检验通过计算精确的 $p$ 值来判断两个分类变量之间的关联性，适用于 $2 \times 2$ 列联表。其公式如下所示：
+
+    \begin{center}
+        \begin{tabular}{|c|c|c|c|}
+            \hline                  & Men              & Women            & 女性            \\
+            \hline Studying 学习      & $\boldsymbol{a}$ & $\boldsymbol{b}$ & $a+b$         \\
+            \hline Non－studying 非学习 & $\boldsymbol{c}$ & $\boldsymbol{d}$ & $c+d$         \\
+            \hline 列总计              & $a+c$            & $b+d$            & $a+b+c+d(=n)$ \\
+            \hline
+        \end{tabular}
+    \end{center}
+
+    Fisher showed that conditional on the margins of the table，$a$ is distributed as a hypergeometric distribution with $a+c$ draws from a population with $a+b$ successes and $c+d$ failures．The probability of obtaining such set of values is given by：
+
+    Fisher 证明，在表格边界条件下， $\boldsymbol{a}$ 服从超几何分布，其中 $\boldsymbol{a}+\boldsymbol{c}$ 取自于 $\boldsymbol{a}+\boldsymbol{b}$ 个成功案例和 $\boldsymbol{c}+\boldsymbol{d}$ 个失败案例的总体。获得此类值的概率如下：
+    $$
+        p=\frac{\binom{a+b}{a}\binom{c+d}{c}}{\binom{n}{a+c}}=\frac{\binom{a+b}{b}\binom{c+d}{d}}{\binom{n}{b+d}}=\frac{(a+b)!(c+d)!(a+c)!(b+d)!}{a!b!c!d!n!}
+    $$
+\end{definition}
+
+\begin{table}[H]
+    \centering
+    \caption{卡方检验与 Fisher 精准检验的对比}
+    \label{tab:chi2_vs_fisher}
+    % l: 第一列左对齐
+    % X: 后两列为自适应宽度的段落列，平分剩余空间
+    \begin{tabularx}{\textwidth}{l c c}
+        \toprule
+        \textbf{特性}                          & \textbf{卡方检验 ($\chi^2$)} & \textbf{Fisher 精准检验} \\
+        \midrule
+
+        \textbf{检验类型}                        &
+        近似检验                                 &
+        精准检验                                                                                   \\
+
+        \addlinespace % 在行之间增加一点额外空间，让表格更疏朗
+
+        \textbf{适用条件}                        &
+        \textbf{大样本数据}。至少 80\% 的单元格的期望频数大于 5 &
+        \textbf{小样本数据}。当卡方检验的条件不满足时使用                                                          \\
+        \bottomrule
+    \end{tabularx}
+\end{table}
+
+\begin{table}[H]
+    \centering
+    \caption{新药疗效检验的列联表}
+    \label{tab:drug_trial}
+    \begin{tabular}{l c c c}
+        \toprule
+        \textbf{组别} & \textbf{康复} & \textbf{未康复} & \textbf{总计} \\
+        \midrule
+        新药组         & 8           & 2            & \textbf{10} \\
+        安慰剂组        & 3           & 7            & \textbf{10} \\
+        \midrule
+        \textbf{总计} & \textbf{11} & \textbf{9}   & \textbf{20} \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+在表 \ref{tab:drug_trial} 中，我们展示了新药组与安慰剂组的康复情况对比。
+
+\begin{lstlisting}[style=python]
+import numpy as np
+from scipy.stats import fisher_exact
+
+# 2 x 2 列联表
+# [8 , 2, 10]
+# [3 , 7, 10]
+# [11, 9, 20]
+table = np.array([[8, 2], [3, 7]])
+odds_ratio, p_fisher = fisher_exact(table) # fisher_exact 会返回: 优势比 (Odds Ratio), p值
+print(f"优势比: {odds_ratio:.4f} P 值: {p_fisher:.4f}")
+
+alpha = 0.05
+if p_fisher < alpha:
+    print(f"在显著性水平 {alpha} 下，P-value ({p_fisher:.4f}) < {alpha}，我们拒绝原假设。")
+    print("能够认为两个变量之间存在统计学关联性。")
+else:
+    print(f"在显著性水平 {alpha} 下，P-value ({p_fisher:.4f}) >= {alpha}，我们不能拒绝原假设。")
+    print("无法证明两个变量之间有关联。")
+\end{lstlisting}

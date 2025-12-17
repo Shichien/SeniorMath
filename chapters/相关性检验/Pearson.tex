@@ -1,0 +1,29 @@
+\section{Pearson}
+
+\begin{definition}[Pearson]
+    Pearson 相关性检验是一种用于检验两个变量之间线性相关关系的方法。它通过计算 \textbf{Pearson 相关系数}来量化这种关系的强度和方向。
+\end{definition}
+
+\begin{theorem}[Pearson 相关系数]
+    又称相关系数或线性相关系数，一般用字母 $r$ 表示，定义式：
+    $$
+        r(X, Y)=\frac{\operatorname{Cov}(X, Y)}{\sqrt{\operatorname{Var}[X] \operatorname{Var}[Y]}}
+    $$
+\end{theorem}
+
+\begin{corollary}[系数特性]
+    特性：两个变量的位置和尺度的变化不会引起该系数的改变，即把 $X$ 移动到 $a+b X$ 和把 $Y$ 移动到 $c+d Y$（其中 $a$、$b$、$ c$、$d$ 为常数）并不会改变相关系数（该结论在总体和样本皮尔逊相关系数中都成立）。
+\end{corollary}
+
+Pearson 的计算基础是基于数据值的协方差和标准差。
+
+\begin{tips}
+当数据满足正态分布、线性变化时，使用 Pearson，数据还不能有太多异常值，例如身高和体重之间的探究。
+\end{tips}
+
+使用 Pearson 算法很简单，参考下方的 Spearman 相关性分析，只需要将方法改为 Pearson 实现即可。
+
+\begin{lstlisting}[style=python]
+pearson_corr_matrix = df.corr(method='pearson')
+\end{lstlisting}
+

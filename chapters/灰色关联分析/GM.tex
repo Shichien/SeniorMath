@@ -1,0 +1,152 @@
+\section{灰色关联分析}
+
+\begin{definition}[灰色关联分析]
+    知道某指标可能与其他多个因素相关，我们想知道哪个因素影响最大，就可以采用灰色关联度分析。
+\end{definition}
+
+\begin{definition}[参考序列]
+    即序列中的主要目标，也称为母序列，通常研究者需要自己提供母序列的数据。
+\end{definition}
+
+\begin{definition}[比较序列]
+    即与参考序列进行比较的其他序列
+\end{definition}
+
+\begin{example}
+    \begin{table}[htbp]
+        \centering
+        \caption{票房及相关指标数据(2009-2018)}
+        \begin{tabular}{ccccccc}
+            \toprule
+            年份   & 票房(亿元) & 银幕数量  & 观影人数(亿) & 票价(元) & 电影上线数量 \\
+            \midrule
+            2009 & 60     & 4723  & 2.0     & 30.1  & 588    \\
+            2010 & 102    & 6256  & 2.9     & 35.6  & 621    \\
+            2011 & 131    & 9286  & 3.7     & 35.4  & 689    \\
+            2012 & 166    & 13118 & 4.7     & 35.5  & 801    \\
+            2013 & 215    & 18195 & 6.1     & 35.0  & 824    \\
+            2014 & 294    & 23592 & 8.3     & 35.5  & 758    \\
+            2015 & 439    & 31627 & 12.6    & 34.8  & 888    \\
+            2016 & 455    & 42052 & 13.7    & 33.2  & 944    \\
+            2017 & 558    & 50776 & 16.2    & 34.5  & 970    \\
+            2018 & 610    & 60079 & 17.2    & 35.5  & 1082   \\
+            \bottomrule
+        \end{tabular}
+        \label{tab:box-office-data}
+    \end{table}
+\end{example}
+
+\subsection{数据归一化方式}
+
+\begin{definition}[均值化]
+    $$x_i^{\prime}(k)=\frac{x_i(k)}{\bar{x}_i}$$
+    其中 $\bar{x}_i=\frac{1}{n} \sum_{k=1}^n x_i(k)$，重点关注序列的结构和波动形态。在数据没有明显的波趋势时使用更好。
+\end{definition}
+
+\begin{definition}[初值化]
+    $$x_i^{\prime}(k)=\frac{x_i(k)}{x_i(1)}$$
+    初值化尤其关注不同指标的增长率和发展趋势时，适用于时间序列数据。
+\end{definition}
+
+\begin{definition}[归一化]
+    $$x_i^{\prime}(k)=\frac{x_i(k)-\min _k\left(x_i(k)\right)}{\max _k\left(x_i(k)\right)-\min _k\left(x_i(k)\right)}$$
+    当我们无法确定数据背后具体的模式时，这是最稳妥的选择。
+    能够有效消除量纲和数据范围的影响，重点关注数据在整个变化区间中所处的相对位置。
+\end{definition}
+
+\begin{lstlisting}[style=python]
+    if normalization_method == 'mean':
+        data_norm = all_series / all_series.mean()
+    elif normalization_method == 'initial':
+        data_norm = all_series / all_series.iloc[0]
+    elif normalization_method == 'minmax':
+        data_norm = (all_series - all_series.min()) / (all_series.max() - all_series.min())
+\end{lstlisting}
+
+\begin{definition}[空值化]
+    \begin{warning}
+        灰色关联分析中，数据一定要大于 0，如果小于 0 计算时就会出现抵消的现象，不符合灰色关联分析的原理，如果出现小于 0 的数据，最好空值处理或者填补。
+    \end{warning}
+\end{definition}
+
+\begin{definition}[分辨系数]
+    在灰色关联分析中，分辨系数 $\rho in (0,1)$，当 $ \rho \leq 0.5463$ 时分辨力最好，通常取 $\rho = 0.5$.
+\end{definition}
+
+\subsection{计算差值序列并计算关联度}
+比较序列如下：
+$$
+    \left[\begin{array}{llll}
+            \boldsymbol{X}_1^{\prime} & \boldsymbol{X}_2^{\prime} & \cdots & \boldsymbol{X}_n^{\prime}
+        \end{array}\right]=\left[\begin{array}{cccc}
+            x_1^{\prime}(1) & x_2^{\prime}(1) & \cdots & x_n^{\prime}(1) \\
+            x_1^{\prime}(2) & x_2^{\prime}(2) & \cdots & x_n^{\prime}(2) \\
+            \vdots          & \vdots          &        & \vdots          \\
+            x_1^{\prime}(m) & x_2^{\prime}(m) & \cdots & x_n^{\prime}(m)
+        \end{array}\right]
+$$
+其母序列如下：
+$$
+    \boldsymbol{X}_0^{\prime}=\left(x_0^{\prime}(1), x_0^{\prime}(2), \cdots, x_0^{\prime}(m)\right)^{\mathrm{T}}
+$$
+我们想要计算的是两个数据集之间的灰色关联度：
+$$
+    \Gamma_{0 k}=\int_{j=1}^n w(j) \times \gamma_{0 k}(j)
+$$
+当指标数据全部标准化后，我们需要计算灰色关联系数$\gamma_{0 k}(j)$：
+$$
+    \gamma_{0 k}(j)=\frac{\min _k \min _j\left|x_0(j)-x_k(j)\right|+\xi(j)_{0 k} \max _k \max _j\left|x_0(j)-x_k(j)\right|}{\left|x_0(j)-x_k(j)\right|+\xi(j)_{0 k} \max _k \max _j\left|x_0(j)-x_k(j)\right|}
+$$
+其中，差值序列为：
+$$
+    \begin{aligned}
+         & \min _{i=1}^n \min _{k=1}^m\left|x_0(k)-x_i(k)\right| \\
+         & \max _{i=1}^n \max _{k=1}^m\left|x_0(k)-x_i(k)\right|
+    \end{aligned}
+$$
+
+关键代码如下所示：
+
+\begin{lstlisting}[style=python]
+    # 计算参考序列与比较序列的差值绝对值
+    y_norm = data_norm[reference_col]
+    x_norm = data_norm[comparison_cols]
+
+    diff_df = pd.DataFrame()
+    for col in x_norm.columns:
+        diff_df[col] = abs(y_norm - x_norm[col])
+
+    # 计算关联系数
+    m_max = diff_df.values.max()
+    m_min = diff_df.values.min()
+    gamma_df = (m_min + rho * m_max) / (diff_df + rho * m_max)
+
+    # 计算关联度并排序
+    gra_grade = gamma_df.mean().sort_values(ascending=False)
+    gra_grade_df = pd.DataFrame(gra_grade, columns=['关联度'])
+
+    return gra_grade_df
+\end{lstlisting}
+
+\subsection{可选步骤}
+
+\begin{definition}[关联度排序]
+    如果不考虑各指标权重（认为各指标同等重要），六个被评价对象由好到劣依次为1号，5号，3号，6号，2号，4号：
+    $$
+        r_{01}>r_{05}>r_{03}>r_{06}>r_{02}>r_{04}
+    $$
+\end{definition}
+
+\begin{definition}[综合关联度计算]
+    常见的灰色关联度分析中，一般选用理想最优或理想最劣参考序列来计算关联度，从而使采用最优关联度得出的效果排序结果与最劣关联度得出的效果结果有可能不完全一致，给指挥员决策带来困难。可以使用将最优关联度和最劣关联度兼顾的综合关联度来解决问题。定义综合关联度：
+    $$
+R_{0 i}=\frac{1}{\left(1+\frac{R_{1 \min i}}{R_{\operatorname{lmaxi}}}\right)^2}
+$$
+其中，$R_{1 \min i}$ 为对应因素与最劣参考序列的关联度，$R_{\operatorname{lmaxi}}$ 为对应因素与最优参考序列的关联度。
+\end{definition}
+
+\subsection{优缺点}
+
+\textbf{优点}：灰色关联分析法弥补了采用数理统计方法作系统分析所导致的遗憾。它对样本量的多少和样本有无规律都同样适用，而且计算量小，十分方便，更不会出现量化结果与定性分析结果不符的情况。
+
+\textbf{缺点}：要利用该方法，这个系统必须是灰色系统。灰色系统中灰的主要含义是信息不完全性（部分性）和非唯一性，其中的“非唯一性”是灰色系统的重要特征，非唯一性原理在决策上的体现是灰靶思想，即体现的是决策多目标、方法多途径，处理态度灵活机动。

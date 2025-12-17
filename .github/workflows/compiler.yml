@@ -5,11 +5,11 @@ on:
     branches:
       - main
     paths:
-      - '**.tex'
-      - '**.bib'
-      - 'images/**'
-      - '**.cls'
-      - '**.sty'
+      - "**.tex"
+      - "**.bib"
+      - "images/**"
+      - "**.cls"
+      - "**.sty"
       # Avoid Commit PDF causes infinity loop
 
 jobs:
@@ -22,6 +22,13 @@ jobs:
     steps:
       - name: Check out Git repository
         uses: actions/checkout@v4
+
+      - name: Install Custom Fonts
+        run: |
+          mkdir -p ~/.local/share/fonts
+          cp fonts/* ~/.local/share/fonts/
+          fc-cache -f -v
+          fc-list :lang=zh
 
       - name: Compile LaTeX document
         uses: xu-cheng/latex-action@v3

@@ -1,0 +1,28 @@
+\section{Yates 连续性校正}
+
+\begin{definition}[Yates 连续性校正]
+    当用卡方检验做独立性检验时，若任何一个字段的期望次数小于 5，会使＂近似于卡方分配＂的假设不可信，统计值会系统性地偏高，导致过度地拒绝虚无假设。
+
+    在满足 Yates 校正的条件下，将每个观察值的离差减去 0.5 之后再做平方，如下：
+    $$
+        \chi_{\text {Yates }}^2=\sum_{i=1}^R \sum_{j=1}^C \frac{\left(\left|A_{i j}-T_{i j}\right|-0.5\right)^2}{T_{i j}} \sim \chi^2((R-1)(C-1))
+    $$
+    校正目的：在卡方分布中，它是连续的概率分布，而我们从列联表中得到的频数是离散的。在小样本情况下，降低将离散型频数数据近似到连续性卡方统计量的过程中的误差。
+    \begin{itemize}
+        \item[\textbf{$A_{ij}$}:] 代表在 $R \times C$ 列联表中，第 $i$ 行、第 $j$ 列单元格中的\textbf{观测频数}（Observed Frequency），即该单元格内的实际观察计数值。
+
+        \item[\textbf{$T_{ij}$}:] 代表在原假设 $H_0$（即行列变量相互独立）成立的条件下，第 $i$ 行、第 $j$ 列单元格中的\textbf{理论频数}（Theoretical Frequency），也常称为\textbf{期望频数}（Expected Frequency）。
+    \end{itemize}
+\end{definition}
+
+Yates 连续性检验只需要在原来的卡方检验代码基础上添加校正即可。
+
+\begin{lstlisting}[style=python]
+print("--- 卡方检验的结果 (Yates 校正) ---")
+chi2_yates, p_yates, dof, expected_yates = chi2_contingency(obs_data, correction=True)
+
+print("\n--- 标准皮尔逊卡方检验的结果 (无校正) ---")
+chi2_pearson, p_pearson, dof, expected_pearson = chi2_contingency(obs_data, correction=False)
+\end{lstlisting}
+
+
