@@ -314,3 +314,8 @@ TSWLatexianTemp*
 # option is specified. Footnotes are the stored in a file with suffix Notes.bib.
 # Uncomment the next line to have this generated file ignored.
 #*Notes.bib
+
+# Local audit / review artifacts and Python caches (not part of the handout)
+output/
+__pycache__/
+.venv-mineru/

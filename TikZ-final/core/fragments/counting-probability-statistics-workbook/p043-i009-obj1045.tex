@@ -1,0 +1,64 @@
+\begin{tikzpicture}[x=1bp,y=-1bp,line cap=butt,line join=miter,>=Stealth]
+  \path[use as bounding box] (0,0) rectangle (307,211);
+  \clip (0,0) rectangle (307,211);
+
+  \newfontfamily\chartcjk{SimSun}
+  \font\chartnumber="Times New Roman" at 12bp
+  \font\chartxnumber="Times New Roman" at 13bp
+  \font\chartitalic="Times New Roman Italic" at 16bp
+  \font\chartsmallitalic="Times New Roman Italic" at 12bp
+  \tikzset{
+    cjk/.style={font=\chartcjk\fontsize{11.5bp}{11.5bp}\selectfont,inner sep=0bp},
+    number/.style={font=\chartnumber,inner sep=0bp},
+    xnumber/.style={font=\chartxnumber,inner sep=0bp},
+    italic/.style={font=\chartitalic,inner sep=0bp},
+    smallitalic/.style={font=\chartsmallitalic,inner sep=0bp}
+  }
+
+  \draw[line width=1bp,dash pattern=on 7bp off 3bp]
+    (29,52)--(103,52)
+    (29,58.5)--(66,58.5)
+    (29,143)--(140,143)
+    (29,168)--(177,168);
+
+  \draw[line width=1.5bp]
+    (29,137)--(66,137)
+    (66,58.5)--(103,58.5)
+    (103,52)--(140,52)
+    (140,143)--(177,143)
+    (177,168)--(214,168);
+  \draw[line width=1.5bp]
+    (29,137)--(29,174)
+    (66,58.5)--(66,174)
+    (103,52)--(103,174)
+    (140,52)--(140,174)
+    (177,143)--(177,174)
+    (214,168)--(214,174);
+
+  \draw[line width=1.5bp,-{Stealth[length=12bp,width=9bp]}]
+    (29,174)--(245,174);
+  \draw[line width=1.5bp,-{Stealth[length=12bp,width=9bp]}]
+    (29,176)--(29,21);
+  \draw[line width=1.2bp]
+    (29,80)--(35,80)
+    (29,111)--(35,111);
+
+  \node[font=\fontsize{16bp}{18bp}\selectfont,inner sep=0bp] at (49,25) {$\dfrac{f_i}{\Delta x_i}$};
+
+  \node[number,anchor=east] at (25,53) {0.39};
+  \node[number,anchor=east] at (25,60) {0.37};
+  \node[number,anchor=east] at (25,81) {0.3};
+  \node[number,anchor=east] at (25,112) {0.2};
+  \node[italic,anchor=east] at (25,137) {x};
+  \node[number,anchor=east] at (25,144) {0.1};
+  \node[number,anchor=east] at (25,169) {0.02};
+  \node[smallitalic,anchor=east] at (26,183) {O};
+
+  \node[xnumber,anchor=north] at (66,179) {1};
+  \node[xnumber,anchor=north] at (103,179) {2};
+  \node[xnumber,anchor=north] at (140,179) {3};
+  \node[xnumber,anchor=north] at (177,179) {4};
+  \node[xnumber,anchor=north] at (214,179) {5};
+  \node[smallitalic,anchor=west] at (249,173) {x};
+  \node[cjk,anchor=west] at (225,187) {月均用水量/吨};
+\end{tikzpicture}

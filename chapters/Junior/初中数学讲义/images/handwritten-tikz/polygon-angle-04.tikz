@@ -1,0 +1,13 @@
+\begin{tikzpicture}[xscale=.8,yscale=.8,line width=.8pt,font=\small,line join=round]
+  \coordinate (A) at (2.15,4.25);
+  \coordinate (B) at (0,0);
+  \coordinate (C) at (4.2,0);
+  \coordinate (D) at (1.55,0);
+  \coordinate (E) at (5.0,1.45);
+  \path[name path=AC] (A)--(C);
+  \path[name path=DE] (D)--(E);
+  \path[name intersections={of=AC and DE,by=F}];
+  \draw (A)--(B)--(C)--cycle (A)--(D) (A)--(E) (D)--(E);
+  \foreach \p/\pos in {A/above,B/below left,C/below right,D/below,E/right,F/below left}
+    \node[\pos] at (\p) {$\p$};
+\end{tikzpicture}

@@ -1,0 +1,20 @@
+\begin{tikzpicture}[thick, line cap=round, line join=round]
+\coordinate (O) at (0,0);
+\coordinate (M) at (6.2,0);
+\coordinate (N) at (3.3,4.2);
+\coordinate (C) at (5.3,2.2);
+\coordinate (B) at ($(O)!.50!(N)$);
+\coordinate (P) at ($(O)!.62!(C)$);
+\coordinate (A) at (4.4,0);
+
+\draw (O)--(M) (O)--(N) (O)--(C);
+\draw ($(B)!-.55!(P)$)--(B)--(P)--(A)--($(A)!-.55!(P)$);
+
+\node[below left] at (O) {$O$};
+\node[right] at (M) {$M$};
+\node[above] at (N) {$N$};
+\node[right] at (C) {$C$};
+\node[above left=1pt] at (B) {$B$};
+\node[above right=1pt] at (P) {$P$};
+\node[below left=1pt] at (A) {$A$};
+\end{tikzpicture}

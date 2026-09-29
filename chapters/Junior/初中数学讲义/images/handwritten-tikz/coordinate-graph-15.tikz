@@ -1,0 +1,7 @@
+\begin{tikzpicture}[>=stealth,thick]
+\draw[->](-3,0)--(3,0)node[right]{$x$};\draw[->](0,-3.4)--(0,3)node[above]{$y$};
+\coordinate(A)at(0,1.45);\coordinate(B)at(-1.25,-.85);\coordinate(C)at(0,-2.9);\coordinate(D)at(1.25,-.85);
+\coordinate(E)at(-.788,0);\coordinate(F)at(.788,0);
+\draw(A)--(B)--(C)--(D)--cycle (B)--(D);
+\node[above right]at(A){$A$};\node[left]at(B){$B$};\node[below]at(C){$C$};\node[right]at(D){$D$};\node[below right]at(0,0){$O$};\node[above left]at(E){$E$};\node[above right]at(F){$F$};
+\end{tikzpicture}

@@ -1,0 +1,5 @@
+\begin{tikzpicture}[thick,font=\small]
+\begin{scope}\coordinate(A)at(.5,1.5);\coordinate(B)at(0,0);\coordinate(C)at(2.5,0);\coordinate(D)at(1.65,1.5);\draw(A)--(B)--(C)--(D)--cycle;\draw(A)--(C);\draw(B)--(D);\draw[dashed](D)--(3.6,0)--(C);\end{scope}
+\begin{scope}[xshift=4.7cm]\draw(0,0)--(.85,1.5)--(1.65,1.5)--(2.15,0)--cycle;\draw[dashed](.85,1.5)--(1.25,2.4)--(1.65,1.5);\end{scope}
+\begin{scope}[xshift=8.2cm]\draw(0,0)--(.45,1.35)--(1.65,1.35)--(2.5,0)--cycle;\draw[dashed](.45,1.35)--(3.6,0)--(2.5,0);\end{scope}
+\end{tikzpicture}

@@ -1,0 +1,14 @@
+\begin{tikzpicture}[scale=1, every node/.style={font=\small}]
+  \coordinate (A) at (0,0); \coordinate (C) at (4.35,.2);
+  \coordinate (B) at (2.9,-1.88); \coordinate (S) at (2.25,3.82);
+  \coordinate (E) at ($(A)!.5!(C)$);   % midpoint of AC
+  \coordinate (D) at ($(S)!.5!(C)$);   % midpoint of SC (DE // SA)
+  \draw (S)--(A)--(B)--(C)--cycle; \draw (S)--(B); \draw (B)--(D);
+  \draw[dashed] (A)--(C); \draw[dashed] (D)--(E)--(B);
+  \node[above] at (S) {$S$};
+  \node[left] at (A) {$A$};
+  \node[below] at (B) {$B$};
+  \node[right] at (C) {$C$};
+  \node[above right] at (D) {$D$};
+  \node[below left] at (E) {$E$};
+\end{tikzpicture}

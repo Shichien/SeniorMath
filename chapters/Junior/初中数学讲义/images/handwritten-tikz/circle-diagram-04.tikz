@@ -1,0 +1,6 @@
+\begin{tikzpicture}[thick]
+\coordinate (A) at (0,2); \coordinate (B) at (-.4,0); \coordinate (C) at (4,0); \coordinate (D) at (5,3.4);
+\coordinate (E) at (1.548,1.226); \coordinate (F) at (1.1,0);
+\draw (A)--(B)--(C)--(D)--(B) (A)--(C);
+\draw (E)--(F); \foreach \p/\pos in {A/left,B/below,C/below,D/above,E/above,F/below} \node[\pos] at (\p) {$\p$};
+\end{tikzpicture}

@@ -1,0 +1,24 @@
+% Both panels use exact 36/72-degree golden-triangle constructions.
+\begin{tikzpicture}[thick,font=\small]
+\begin{scope}
+\coordinate(B)at(0,0);\coordinate(C)at(4,0);\coordinate(A)at(2,{2*tan(72)});
+\coordinate(U)at(36:1);\coordinate(V)at($(C)+(144:1)$);
+\coordinate(D)at(intersection of B--U and A--C);
+\coordinate(E)at(intersection of B--U and C--V);
+\draw(A)--(B)--(C)--cycle (B)--(D) (C)--(E);
+\pic[draw,angle radius=9mm,angle eccentricity=1.4,"$36^\circ$"]{angle=C--B--D};
+\pic[draw,angle radius=9mm,angle eccentricity=1.4,"$36^\circ$"]{angle=B--A--C};
+\pic[draw,angle radius=8mm,angle eccentricity=1.45,"$36^\circ$"]{angle=A--C--E};
+\pic[draw,angle radius=4mm,angle eccentricity=1.65,"$72^\circ$"]{angle=C--E--D};
+\foreach\p/\pos in {A/above,B/below,C/below,D/right,E/above left}\node[\pos]at(\p){$\p$};
+\end{scope}
+\begin{scope}[xshift=6cm]
+\coordinate(B)at(0,0);\coordinate(C)at(6,0);\coordinate(A)at(3,{3*tan(36)});
+\coordinate(D)at({3-3*tan(36)/tan(72)},0);\coordinate(E)at({3+3*tan(36)/tan(72)},0);
+\draw(A)--(B)--(C)--cycle (A)--(D) (A)--(E);
+\pic[draw,angle radius=8mm,angle eccentricity=1.45,"$36^\circ$"]{angle=C--B--A};
+\pic[draw,angle radius=8mm,angle eccentricity=1.45,"$36^\circ$"]{angle=A--C--B};
+\pic[draw,angle radius=5mm,angle eccentricity=1.6,"$72^\circ$"]{angle=C--D--A};
+\foreach\p/\pos in {A/above,B/below,C/below,D/below,E/below}\node[\pos]at(\p){$\p$};
+\end{scope}
+\end{tikzpicture}

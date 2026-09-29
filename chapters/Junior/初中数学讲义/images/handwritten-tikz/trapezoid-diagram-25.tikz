@@ -1,0 +1,10 @@
+\begin{tikzpicture}[thick,font=\small,line join=round]
+\coordinate(A)at(0,0);\coordinate(B)at(5,0);\coordinate(D)at(2.5,2.5);\coordinate(C)at(3.5,2.5);
+% E is AD intersected by the ray from B for which angle EBC is 45 degrees.
+\coordinate(E)at(1,1);\coordinate(F)at(2.875,2.125);
+\draw(A)--(B)--(C)--(D)--cycle;
+\draw(E)--(C) (D)--(B) (E)--(B);
+\draw(D)--(2.28,2.28)--(2.5,2.06)--(2.72,2.28);
+\foreach\p/\a in {A/left,B/right,C/above,D/above,E/left,F/below}
+  \node[\a]at(\p){$\p$};
+\end{tikzpicture}

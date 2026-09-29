@@ -1,0 +1,7 @@
+\begin{tikzpicture}[x=.72cm,y=.72cm,baseline=(current bounding box.center)]
+  \draw[->] (-3.35,0)--(3.95,0) node[right] {$x$}; \draw[->] (0,-2.45)--(0,2.65) node[above] {$y$};
+  \draw (-3,1.20)--(0,-2); \draw (0,2)--(3,-.80);
+  \fill (0,0) circle (1.1pt); \draw[fill=white] (0,2) circle[radius=1.45pt] (0,-2) circle[radius=1.45pt];
+  \foreach \x in {-3,-2,-1,1,2,3} {\draw (\x,.09)--(\x,-.09); \node[below] at (\x,0) {$\x$};}
+  \node[below left] at (0,0) {$O$}; \node[left] at (0,2) {$2$}; \node[left] at (0,-2) {$-2$};
+\end{tikzpicture}

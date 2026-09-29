@@ -1,0 +1,3 @@
+\begin{tikzpicture}[thick,font=\small,scale=.72]
+\draw[step=1cm](0,0)grid(5,5);\coordinate(A)at(4,1);\coordinate(B)at(5,2);\coordinate(C)at(5,4);\draw(A)--(B);\draw(A)--(C);\node[below left]at(A){$A$};\node[right]at(B){$B$};\node[right]at(C){$C$};
+\end{tikzpicture}

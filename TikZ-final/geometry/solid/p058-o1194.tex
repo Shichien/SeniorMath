@@ -1,0 +1,19 @@
+\begin{tikzpicture}[scale=1, line join=round]
+  \coordinate (A) at (0.70,0.77); \coordinate (B) at (4.90,0.77);
+  \coordinate (C) at (6.35,2.39);
+  \coordinate (D) at ($(A)+(C)-(B)$); % ABCD square
+  \coordinate (P) at (1.45,3.81);
+  \coordinate (F) at ($(A)!.5!(C)$);  % AC meets BD at F
+  \coordinate (E) at ($(P)!.5!(C)$);  % midpoint of PC
+  \draw (P)--(A)--(B)--(C)--cycle (P)--(B);
+  \draw[dashed] (A)--(D)--(C) (P)--(D);
+  \draw[dashed] (A)--(C) (B)--(D);
+  \draw[dashed] (D)--(E)--(B) (E)--(F);
+  \node[left] at (A) {$A$};
+  \node[below right] at (B) {$B$};
+  \node[right] at (C) {$C$};
+  \node[left] at (D) {$D$};
+  \node[left] at (P) {$P$};
+  \node[above] at (E) {$E$};
+  \node[below left] at (F) {$F$};
+\end{tikzpicture}

@@ -1,0 +1,14 @@
+% Every foot is an orthogonal projection onto the same transversal KD.
+\begin{tikzpicture}[thick,line cap=round,line join=round,font=\small]
+\coordinate(A)at(1,5.2);\coordinate(B)at(0,0);\coordinate(C)at(5.25,0);\coordinate(D)at(7,0);
+\coordinate(K)at(0,4.2);
+\coordinate(Ap)at($(K)!(A)!(D)$);\coordinate(Bp)at($(K)!(B)!(D)$);\coordinate(Cp)at($(K)!(C)!(D)$);
+\coordinate(F)at(intersection of K--D and A--B);\coordinate(E)at(intersection of K--D and A--C);
+\draw[blue!70!black](A)--(B)--(D) (A)--(C) (Ap)--(D);
+\draw[green!65!black](A)--(Ap) (B)--(Bp) (C)--(Cp);
+\pic[draw,red,angle radius=2mm]{right angle=A--Ap--D};
+\pic[draw,red,angle radius=2mm]{right angle=B--Bp--D};
+\pic[draw,red,angle radius=2mm]{right angle=C--Cp--D};
+\foreach\p in {A,B,C,D,Ap,Bp,Cp,E,F}\fill[red](\p)circle(1.6pt);
+\foreach\p/\lab/\pos in {A/A/above,B/B/below left,C/C/below,D/D/right,Ap/{A'}/left,Bp/{B'}/above,Cp/{C'}/above right,E/E/above right,F/F/below left}\node[\pos]at(\p){$\lab$};
+\end{tikzpicture}

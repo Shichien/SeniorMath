@@ -1,0 +1,32 @@
+\begin{tikzpicture}[thick, line cap=round, line join=round]
+\coordinate (A) at (1,5.2);
+\coordinate (B) at (0,0);
+\coordinate (C) at (5.25,0);
+\coordinate (D) at (7,0);
+\coordinate (Ap) at (.294,4.024);
+\coordinate (F) at (.724,3.766);
+\coordinate (Bp) at (1.853,3.088);
+\coordinate (E) at (3.566,2.060);
+\coordinate (Cp) at (5.713,.772);
+
+\draw[blue!70!black] (A)--(B)--(D) (A)--(C) (Ap)--(D);
+\draw[green!65!black] (A)--(Ap) (B)--(Bp) (C)--(Cp);
+
+\draw[red]
+  (.440,3.937)--(.527,4.083)--(.381,4.170)
+  (1.999,3.001)--(1.912,2.855)--(1.766,2.942)
+  (5.859,.685)--(5.772,.539)--(5.626,.626);
+
+\foreach \p in {A,Ap,F,Bp,E,Cp,B,C,D}
+  \fill[red] (\p) circle (2pt);
+
+\node[above] at (A) {$A$};
+\node[left=3pt] at (Ap) {$A'$};
+\node[left=2pt, yshift=-4pt] at (F) {$F$};
+\node[above=3pt] at (Bp) {$B'$};
+\node[above right=1pt] at (E) {$E$};
+\node[above=3pt] at (Cp) {$C'$};
+\node[below left] at (B) {$B$};
+\node[below] at (C) {$C$};
+\node[right] at (D) {$D$};
+\end{tikzpicture}

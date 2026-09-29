@@ -1,0 +1,18 @@
+\begin{tikzpicture}[scale=.54, every node/.style={font=\small}]
+  \coordinate (A) at (0,0); \coordinate (B) at (4.2,0);
+  \coordinate (C) at (4.2,2.35); \coordinate (D) at (0,2.35);
+  \coordinate (E) at (0,4.55); \coordinate (F) at (4.2,4.55);
+  \coordinate (G) at (5.65,1.20); \coordinate (H) at (5.65,3.55);
+  \coordinate (I) at (5.65,5.75); \coordinate (J) at (1.45,5.75);
+  \fill[gray!24] (A)--(B)--(C)--(D)--cycle;
+  \fill[gray!24] (B)--(G)--(H)--(C)--cycle;
+  \draw (A)--(B)--(F)--(E)--cycle;
+  \draw (B)--(G)--(I)--(F);
+  \draw (E)--(J) (I)--(J);
+  \draw (D)--(C)--(H);
+  \draw[dashed] (A)--(1.45,1.20)--(G) (1.45,1.20)--(J) (J)--(I);
+  \draw (2.80,7.25) circle (2.05);
+  \draw (0.75,6.68) arc[start angle=180,end angle=360,x radius=2.05,y radius=.48];
+  \draw[dashed] (4.85,6.68) arc[start angle=0,end angle=180,x radius=2.05,y radius=.48];
+  \draw[dashed] (1.23,5.40) arc[start angle=200,end angle=340,x radius=1.57,y radius=.46];
+\end{tikzpicture}

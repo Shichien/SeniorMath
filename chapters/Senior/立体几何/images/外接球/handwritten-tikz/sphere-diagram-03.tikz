@@ -1,0 +1,10 @@
+\begin{tikzpicture}[scale=.9,font=\large,thick]
+\coordinate(V)at(0,5.7);\coordinate(A)at(0,0);
+\coordinate(B)at(3,-1.45);\coordinate(C)at(4.85,0);
+\coordinate(F)at($(V)!.677!(C)$);
+\coordinate(E)at($(V)!.66!(B)$);
+\draw (V)--(A)--(B)--(C)--(V) (V)--(B) (A)--(E)--(F);
+\draw[dashed] (A)--(C) (A)--(F);
+\pic[draw,angle radius=5pt,angle eccentricity=1.1]{right angle=E--F--C};
+\foreach\p/\pos in{V/above,A/left,B/below,C/right,E/right,F/right}{\node[\pos]at(\p){$\p$};}
+\end{tikzpicture}

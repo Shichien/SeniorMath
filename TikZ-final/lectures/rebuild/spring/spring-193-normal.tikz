@@ -1,0 +1,12 @@
+\begin{tikzpicture}[x=1pt,y=-1pt,>=Stealth,line cap=round,line join=round]
+  \path[use as bounding box] (0,0) rectangle (458,290);
+  \draw[->,line width=2.1pt] (42,248)--(446,248) node[above left] {$x$};
+  \draw[->,line width=2.1pt] (126,278)--(126,12) node[below right] {$y$};
+  \draw[dashed,line width=1.4pt] (268,248)--(268,85)--(126,85);
+  \draw[line width=2.8pt] (64,240).. controls (137,235) and (180,173)..(221,111)
+    .. controls (242,80) and (260,77)..(268,85)
+    .. controls (305,122) and (337,226)..(397,239);
+  \node[below,font=\large] at (268,248) {$\mu$};
+  \node[left,font=\large] at (126,85) {$\frac{1}{\sigma\sqrt{2\pi}}$};
+  \node[below left,font=\large] at (126,248) {$O$};
+\end{tikzpicture}

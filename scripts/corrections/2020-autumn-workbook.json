@@ -1,0 +1,26 @@
+{
+  "replacements": [
+    {
+      "id": "exercise-10-sum",
+      "start": "令=12²10+2g+gg²++g22+1",
+      "end": ":S=5",
+      "replacement": "令 $S = \\frac{1^2}{1^2 + 10^2} + \\frac{2^2}{2^2 + 9^2} + \\frac{3^2}{3^2 + 8^2} + \\cdots + \\frac{9^2}{9^2 + 2^2} + \\frac{10^2}{10^2 + 1^2}$。\n\n倒序后得 $S = \\frac{10^2}{10^2 + 1^2} + \\frac{9^2}{9^2 + 2^2} + \\cdots + \\frac{3^2}{3^2 + 8^2} + \\frac{2^2}{2^2 + 9^2} + \\frac{1^2}{1^2 + 10^2}$。\n\n相加得 $2S = \\left(\\frac{1^2}{1^2 + 10^2} + \\frac{10^2}{10^2 + 1^2}\\right) + \\left(\\frac{2^2}{2^2 + 9^2} + \\frac{9^2}{9^2 + 2^2}\\right) + \\cdots + \\left(\\frac{10^2}{10^2 + 1^2} + \\frac{1^2}{1^2 + 10^2}\\right) = 10$。\n\n$\\therefore S = 5$"
+    },
+    {
+      "id": "exercise-11-function-symmetry",
+      "start": "$$\n \\begin{array} { l }  f ( x ) + f ( x ) =",
+      "end": "\\end{array}\n$$",
+      "replacement": "$$\nf(x) + f(1-x) = \\frac{\\sqrt{2}}{\\sqrt{2} + 2^x} + \\frac{\\sqrt{2}}{\\sqrt{2} + 2^{1-x}}\n= \\frac{\\sqrt{2}}{\\sqrt{2} + 2^x} + \\frac{\\sqrt{2}\\cdot 2^x}{\\sqrt{2}\\cdot 2^x + 2}\n= \\frac{\\sqrt{2}}{\\sqrt{2} + 2^x} + \\frac{2^x}{\\sqrt{2} + 2^x}\n= 1\n$$"
+    },
+    {
+      "id": "exercise-12-first-equation-label",
+      "match": "\\mathbb { 1 } - \\cdots .",
+      "replacement": "\\textcircled{1}"
+    },
+    {
+      "id": "exercise-12-second-equation-label",
+      "match": "\\therefore S _ { n } = f \\left( { \\frac { n } { n + 1 } } \\right) + f \\left( { \\frac { n - 1 } { n + 1 } } \\right) + \\cdots + f \\left( { \\frac { 2 } { n + 1 } } \\right) + f \\left( { \\frac { 1 } { n + 1 } } \\right) \\mathcal { Q }",
+      "replacement": "\\therefore S _ { n } = f \\left( { \\frac { n } { n + 1 } } \\right) + f \\left( { \\frac { n - 1 } { n + 1 } } \\right) + \\cdots + f \\left( { \\frac { 2 } { n + 1 } } \\right) + f \\left( { \\frac { 1 } { n + 1 } } \\right) \\textcircled{2}"
+    }
+  ]
+}

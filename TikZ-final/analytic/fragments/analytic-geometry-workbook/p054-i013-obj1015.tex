@@ -1,0 +1,13 @@
+\begin{tikzpicture}[x=.023cm,y=-.023cm,baseline=(current bounding box.center),line width=.6pt,
+  every node/.style={font=\scriptsize,inner sep=.8pt}]
+  \path[use as bounding box] (0,0) rectangle (216,229);
+  \draw[-{Stealth[length=4pt,width=3pt]}] (24,117)--(196,117) node[below] {$x$};
+  \draw[-{Stealth[length=4pt,width=3pt]}] (98,218)--(98,8);
+  \node[left] at (97,11) {$y$};
+  \draw (98.5,117) ellipse[x radius=44.5,y radius=75];
+  \draw (56,117)--(98,42)--(98,192)--cycle;
+  \node[left] at (56,124) {$M$};
+  \node[above right] at (95,50) {$B$};
+  \node[below right] at (98,184) {$A$};
+  \node[below left] at (98,122) {$O$};
+\end{tikzpicture}

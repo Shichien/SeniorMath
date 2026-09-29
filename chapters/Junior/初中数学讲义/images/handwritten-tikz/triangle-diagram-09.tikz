@@ -1,0 +1,8 @@
+\begin{tikzpicture}[thick]
+\coordinate(A)at(3,4.5);\coordinate(B)at(0,0);\coordinate(C)at(5.8,0);
+\coordinate(D)at(1.5,2.25);\coordinate(E)at(4.867,1.5);\coordinate(O)at(3.65,1.125);
+\draw(A)--(B)--(C)--cycle (D)--(C) (B)--(E);
+\foreach\p/\pos in {A/above,B/below left,C/below right,D/left,E/right}
+  \node[\pos]at(\p){$\p$};
+\node[above,yshift=2pt]at(O){$O$};
+\end{tikzpicture}

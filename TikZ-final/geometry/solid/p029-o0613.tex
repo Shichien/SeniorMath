@@ -1,0 +1,31 @@
+\begin{tikzpicture}[scale=.6, every node/.style={font=\small}, line cap=round, line join=round]
+  \coordinate (A)  at (0,0);
+  \coordinate (B)  at (6,0);
+  \coordinate (C)  at (8.3,1.55);
+  \coordinate (D)  at (2.3,1.55);
+  \coordinate (A1) at (0,6);
+  \coordinate (B1) at (6,6);
+  \coordinate (C1) at (8.3,7.55);
+  \coordinate (D1) at (2.3,7.55);
+  % E, F midpoints of C1D1 and AB
+  \coordinate (E) at ($(C1)!0.5!(D1)$);
+  \coordinate (F) at ($(A)!0.5!(B)$);
+
+  \draw (A)--(B)--(B1)--(A1)--cycle;
+  \draw (A1)--(D1)--(C1)--(B1);
+  \draw (B)--(C)--(C1);
+  \draw[dashed] (A)--(D)--(C) (D)--(D1);
+  \draw (A1)--(E) (A1)--(F);
+  \draw[dashed] (E)--(C)--(F);
+
+  \node[below left] at (A) {$A$};
+  \node[below] at (B) {$B$};
+  \node[right] at (C) {$C$};
+  \node[above right] at (D) {$D$};
+  \node[below] at (F) {$F$};
+  \node[left] at (A1) {$A_1$};
+  \node[below left] at (B1) {$B_1$};
+  \node[above right] at (C1) {$C_1$};
+  \node[above right] at (D1) {$D_1$};
+  \node[above] at (E) {$E$};
+\end{tikzpicture}

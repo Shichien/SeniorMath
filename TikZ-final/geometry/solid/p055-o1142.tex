@@ -1,0 +1,24 @@
+\begin{tikzpicture}[scale=1.1, line join=round]
+  \coordinate (A) at (0,0); \coordinate (B) at (3.90,0);
+  \coordinate (B1) at (3.90,3.82); \coordinate (A1) at (0,3.82);
+  \coordinate (d) at (1.45,1.10);
+  \coordinate (D) at ($(A)+(d)$); \coordinate (C) at ($(B)+(d)$);
+  \coordinate (C1) at ($(B1)+(d)$); \coordinate (D1) at ($(A1)+(d)$);
+  \coordinate (E) at ($(D)!.5!(D1)$); % midpoint of DD1
+  \coordinate (O) at ($(B)!.5!(D)$);  % AC and BD meet at O
+  \draw (A)--(B)--(C)--(C1)--(D1)--(A1)--cycle;
+  \draw (A1)--(B1)--(C1) (B1)--(B);
+  \draw[dashed] (A)--(D)--(C) (D)--(D1);
+  \draw[dashed] (A)--(C) (B)--(D) (B)--(D1);
+  \draw[dashed] (A)--(E)--(C) (E)--(O);
+  \node[below left] at (A) {$A$};
+  \node[below right] at (B) {$B$};
+  \node[right] at (C) {$C$};
+  \node[left] at (D) {$D$};
+  \node[below] at (O) {$O$};
+  \node[above left] at (E) {$E$};
+  \node[left] at (A1) {$A_1$};
+  \node[below right] at (B1) {$B_1$};
+  \node[above right] at (C1) {$C_1$};
+  \node[above] at (D1) {$D_1$};
+\end{tikzpicture}

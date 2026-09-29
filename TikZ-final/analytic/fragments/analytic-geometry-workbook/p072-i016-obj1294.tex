@@ -1,0 +1,19 @@
+\begin{tikzpicture}[x=.012cm,y=-.012cm,baseline=(current bounding box.center),line width=2pt,
+  every node/.style={font=\normalsize,inner sep=1pt}]
+  \path[use as bounding box] (0,0) rectangle (473,473);
+  \draw[-{Stealth[length=10pt,width=8pt]}] (52,254)--(434,254) node[below] {$x$};
+  \draw[-{Stealth[length=10pt,width=8pt]}] (224,428)--(224,44) node[left] {$y$};
+  \draw (127,100)--(127,254);
+  \draw (127,154)--(372,154);
+  \draw[domain=-18.2:16.2,samples=140,variable=\t]
+    plot ({224+.252525*\t*\t},{254+10*\t});
+  \coordinate (P) at (253,154);
+  \coordinate (F) at (323,254);
+  \draw (P)--(F) (P)--(309,72);
+  \fill (372,154) circle (3pt);
+  \node[left] at (127,154) {$D$};
+  \node[above left] at (253,154) {$P$};
+  \node[right] at (372,154) {$A$};
+  \node[below] at (323,254) {$F$};
+  \node[below left] at (224,254) {$O$};
+\end{tikzpicture}

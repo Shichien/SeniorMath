@@ -1,0 +1,9 @@
+\begin{tikzpicture}[x=.58cm,y=.58cm,baseline=(current bounding box.center)]
+  \draw[->] (-1.25,0)--(6.10,0) node[right] {$x$}; \draw[->] (0,-2.85)--(0,3.25) node[above] {$y$};
+  \draw (0,-2)--(5.25,2.65) (0,-2)--(5.45,2.35);
+  \draw (0,-2) .. controls (.48,.35) and (1.18,1.18) .. (1.85,1.18)
+        .. controls (2.35,1.16) and (2.72,.35) .. (3.10,0);
+  \fill (0,-2) circle (1.2pt) (1.85,1.18) circle (1.2pt) (3.10,0) circle (1.2pt);
+  \node[below left] at (0,-2) {$A$}; \node[left] at (0,-2) {$-2$}; \node[above] at (1.85,1.18) {$B$}; \node[below] at (3.10,0) {$C$};
+  \draw (1,0)--(1,.10); \node[below] at (1,0) {$1$}; \node[left] at (0,1) {$1$};
+\end{tikzpicture}

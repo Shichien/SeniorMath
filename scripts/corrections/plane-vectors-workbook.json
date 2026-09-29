@@ -1,0 +1,45 @@
+{
+  "replacements": [
+    {
+      "id": "exercise-7-unit-vector-angle",
+      "match": "已知两个单位向量 $\\cdot e _ { 1 } , e _ { 2 }$ ，若 $( e _ { 1 } - 2 e _ { 2 } ) \\bot e _ { 1 }$ ，则 $\\small \\begin{array} { r l } { e _ { 1 } , } & { { } e _ { 2 } } \\end{array}$ 的夹角为（ ）A. $\\frac { 2 \\pi } { 3 }$ B. $\\frac { \\pi } { 3 }$ C. $\\frac { \\pi } { 4 }$ D. $\\frac { \\pi } { 6 }$",
+      "replacement": "已知两个单位向量 $e_1, e_2$，若 $(e_1 - 2e_2) \\perp e_1$，则 $e_1, e_2$ 的夹角为（ ）A. $\\frac{2\\pi}{3}$ B. $\\frac{\\pi}{3}$ C. $\\frac{\\pi}{4}$ D. $\\frac{\\pi}{6}$"
+    },
+    {
+      "id": "exercise-12-square-dot-product",
+      "match": "已知正方形ABCD的边长为3， $\\overrightarrow { D E } = 2 \\overrightarrow { E C }$ ，则 ${ \\overrightarrow { A E } } \\cdot { \\overrightarrow { B D } } = { \\left( \\begin{array} { l l } {  } & { \\left. \\right.} \\end{array}  }\\right.$ ） A.3 B.-3 C.6 D.-6",
+      "replacement": "已知正方形ABCD的边长为3，$\\overrightarrow{DE} = 2\\overrightarrow{EC}$，则 $\\overrightarrow{AE}\\cdot\\overrightarrow{BD} =$（ ）A. 3 B. -3 C. 6 D. -6"
+    },
+    {
+      "id": "exercise-3-difficulty-marker",
+      "match": "练3 $( \\star \\star _ { \\mathbb { X } } _ { \\mathbb { X } } _ { \\mathbb { X } } _ { \\mathbb { X } } )$",
+      "replacement": "练3（★★☆☆☆）"
+    },
+    {
+      "id": "exercise-7-angle-range",
+      "match": "又因为向量 $\\small \\mathbf { \\epsilon } _ { e _ { 1 } } , \\ \\mathbf { \\epsilon } _ { e _ { 2 } }$ 的夹角取值范围为 $[ 0 , \\pi ]$",
+      "replacement": "又因为向量 $e_1, e_2$ 的夹角取值范围为 $[0, \\pi]$"
+    },
+    {
+      "id": "exercise-7-angle-result",
+      "match": "所以 $\\small \\mathbf { \\epsilon } _ { e _ { 1 } } , \\ \\mathbf { \\epsilon } _ { e _ { 2 } }$ 的夹角为 $\\frac { \\pi } { 3 }$",
+      "replacement": "所以 $e_1, e_2$ 的夹角为 $\\frac{\\pi}{3}$"
+    },
+    {
+      "id": "parameter-sum-monotonicity-expression",
+      "start": "$$\n: y = - 1 + \\frac { 3 \\sin \\theta + 3 } { 2 \\cos \\theta + \\sin \\theta }",
+      "end": "0 \\leqslant \\theta \\leqslant \\frac { \\pi } { 2 }\n$$",
+      "replacement": "$$\ny = -1 + \\frac{3\\sin\\theta+3}{2\\cos\\theta+\\sin\\theta}, \\quad 0 \\leqslant \\theta \\leqslant \\frac{\\pi}{2}.\n$$"
+    },
+    {
+      "id": "exercise-3-basis-question",
+      "match": "设 $\\bf { \\dot { \\Psi } } | e _ { 1 } , \\quad e _ { 2 }$ 不共线，则下列四组向量中不能作为基底的是（）A $e _ { 1 } + e _ { 2 }$ 与 $e _ { 1 } - e _ { 2 }$ B. $2 e _ { 1 } - 3 e _ { 2 }$ 与 $4 e _ { 1 } \\mathrm { ~ - ~ } 6 e _ { 2 }$ C. $e _ { 1 } + 2 e _ { 2 }$ 与 $e _ { 2 } + 2 e _ { 1 }$ D. $e _ { 2 } \\mp \\sqcup e _ { 1 } + e _ { 2 }$",
+      "replacement": "设 $e_1,e_2$ 不共线，则下列四组向量中不能作为基底的是（ ）A. $e_1+e_2$ 与 $e_1-e_2$；B. $2e_1-3e_2$ 与 $4e_1-6e_2$；C. $e_1+2e_2$ 与 $e_2+2e_1$；D. $e_2$ 与 $e_1+e_2$"
+    },
+    {
+      "id": "exercise-4-collinear-vectors",
+      "match": "设 $\\mathbf { \\epsilon } _ { e _ { 1 } } , \\mathbf { \\epsilon } _ { e _ { 2 } }$ 是两个不共线的向量，且 $\\pmb { a } = \\pmb { e _ { 1 } } + \\lambda \\pmb { e _ { 2 } }$ 与 $\\pmb { b } = - \\frac { 1 } { 3 } \\pmb { e _ { 2 } } - \\pmb { e _ { 1 } }$ 共线，则实数入＝（） A.-1 B.3 C. $- { \\frac { 1 } { 3 } }$ D. $\\frac 1 3$",
+      "replacement": "设 $e_1,e_2$ 是两个不共线的向量，且 $a=e_1+\\lambda e_2$ 与 $b=-\\frac{1}{3}e_2-e_1$ 共线，则实数 $\\lambda=$（ ）A. $-1$ B. $3$ C. $-\\frac{1}{3}$ D. $\\frac{1}{3}$"
+    }
+  ]
+}

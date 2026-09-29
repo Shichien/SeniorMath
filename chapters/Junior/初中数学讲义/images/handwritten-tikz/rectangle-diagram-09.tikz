@@ -1,0 +1,20 @@
+\begin{tikzpicture}[scale=.9,line width=.88pt,font=\normalsize]
+  \coordinate (A) at (0,3.05);
+  \coordinate (B) at (0,0);
+  \coordinate (C) at (5,0);
+  \coordinate (D) at (5,3.05);
+  \coordinate (E) at (0,1.98);
+  \coordinate (F) at (5,1.98);
+  \path[name path=rAC] (A)--(C);
+  \path[name path=rEF] (E)--(F);
+  \path[name intersections={of=rAC and rEF,by=P}];
+  \foreach \s in {.06,.115,...,.885}
+    \draw[line width=.45pt] ($(B)!\s!(E)$)--($(P)!\s!(E)$);
+  \foreach \t in {.04,.095,...,.92}
+    \draw[line width=.45pt] ($(P)!\t!(F)$)--($(D)!\t!(F)$);
+  \draw (A)--(B)--(C)--(D)--cycle (E)--(F) (B)--(P)--(D);
+  \draw[line width=.68pt] (A)--(C);
+  \foreach \p/\pos in {A/above left,B/below left,C/below right,D/above right,E/left,F/right}
+    \node[\pos] at (\p) {$\p$};
+  \node[below=1pt,xshift=-1pt] at (P) {$P$};
+\end{tikzpicture}

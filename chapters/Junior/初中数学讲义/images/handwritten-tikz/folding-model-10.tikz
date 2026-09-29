@@ -1,0 +1,11 @@
+\begin{tikzpicture}[thick]
+\coordinate(A)at(0,2.35);\coordinate(B)at(0,0);\coordinate(C)at(5.5,0);\coordinate(D)at(5.5,2.35);
+\coordinate(Q)at($(B)!(C)!(D)$);\coordinate(E)at($(C)!2!(Q)$);\coordinate(P)at($(B)!.5!(D)$);
+\coordinate(M)at($(A)!(P)!(D)$);\coordinate(N)at($(B)!(P)!(E)$);
+\path[name path=BE](B)--(E);\path[name path=AD](A)--(D);\path[name intersections={of=BE and AD,by=F}];
+\draw(A)--(B) (A)--(D) (B)--(D) (B)--(E)--(D) (P)--(M) (P)--(N);
+\draw[densely dotted](B)--(C)--(D);
+\pic[draw,angle radius=2.2mm]{right angle=D--M--P};
+\pic[draw,angle radius=2.2mm]{right angle=E--N--P};
+\foreach\p/\pos in {A/left,B/below left,C/below right,D/right,E/above,F/above left,M/above,N/left,P/below}\node[\pos]at(\p){$\p$};
+\end{tikzpicture}

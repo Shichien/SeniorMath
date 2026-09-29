@@ -1,0 +1,33 @@
+\begin{tikzpicture}[scale=1, line join=round]
+  \coordinate (A) at (0.65,0.67); \coordinate (B) at (4.75,0.67);
+  \coordinate (B1) at (4.75,4.57); \coordinate (A1) at (0.65,4.57);
+  \coordinate (d) at (1.65,1.38);
+  \coordinate (D) at ($(A)+(d)$); \coordinate (C) at ($(B)+(d)$);
+  \coordinate (C1) at ($(B1)+(d)$); \coordinate (D1) at ($(A1)+(d)$);
+  % section plane through P (on AB), Q (on AD), R (on B1C1)
+  \pgfmathsetmacro{\p}{.56}\pgfmathsetmacro{\q}{.60}\pgfmathsetmacro{\r}{.375}
+  \pgfmathsetmacro{\den}{\p*\r+\q*(1-\p)}
+  \pgfmathsetmacro{\s}{\q*(1-\p)/\den}   % BS/BB1
+  \pgfmathsetmacro{\t}{(\q-\p+\p*\r)/\q} % D1T/D1C1
+  \pgfmathsetmacro{\u}{\p*(1-\q)/\den}   % DU/DD1
+  \coordinate (P) at ($(A)!\p!(B)$); \coordinate (Q) at ($(A)!\q!(D)$);
+  \coordinate (R) at ($(B1)!\r!(C1)$);
+  \coordinate (S) at ($(B)!\s!(B1)$); \coordinate (T) at ($(D1)!\t!(C1)$);
+  \coordinate (U) at ($(D)!\u!(D1)$);
+  \draw (A)--(B)--(C)--(C1)--(D1)--(A1)--cycle;
+  \draw (A1)--(B1)--(C1) (B1)--(B);
+  \draw[dashed] (A)--(D)--(C) (D)--(D1);
+  \draw (P)--(S)--(R)--(T);
+  \draw[dashed] (T)--(U)--(Q)--(P);
+  \node[below left] at (A) {$A$};
+  \node[below right] at (B) {$B$};
+  \node[right] at (C) {$C$};
+  \node[above right] at (D) {$D$};
+  \node[left] at (A1) {$A_1$};
+  \node[below left] at (B1) {$B_1$};
+  \node[above right] at (C1) {$C_1$};
+  \node[above] at (D1) {$D_1$};
+  \node[below] at (P) {$P$};
+  \node[above left] at (Q) {$Q$};
+  \node[below right] at (R) {$R$};
+\end{tikzpicture}

@@ -1,0 +1,6 @@
+\begin{tikzpicture}[x=.62cm,y=.62cm,line cap=round,baseline=(current bounding box.center)]
+  \coordinate (B) at (0,0); \coordinate (B1) at (3.00,0); \coordinate (A) at (2.00,3.65); \coordinate (A1) at (5.00,3.65); \coordinate (C) at (1.12,1.45); \coordinate (C1) at (4.12,1.45); \coordinate (O) at (2.34,.68);
+  \draw[line width=.8pt] (A)--(B)--(B1)--(A1)--cycle (A)--(C)--(B) (A1)--(C1)--(B1) (A)--(A1);
+  \draw[dashed,line width=.65pt] (C)--(C1) (C)--(O)--(B1);
+  \node[above] at (A) {$A$}; \node[above] at (A1) {$A_1$}; \node[left] at (B) {$B$}; \node[below] at (B1) {$B_1$}; \node[left] at (C) {$C$}; \node[right] at (C1) {$C_1$}; \node[below] at (O) {$O$};
+\end{tikzpicture}

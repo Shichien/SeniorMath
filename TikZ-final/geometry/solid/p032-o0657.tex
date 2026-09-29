@@ -1,0 +1,13 @@
+\begin{tikzpicture}[scale=.88, every node/.style={font=\large}]
+  \coordinate (D) at (0,0);
+  \coordinate (C) at (1.65,3.1);
+  \coordinate (A) at (5.3,0);
+  \coordinate (B) at (6.75,3.15);
+  \coordinate (P) at (5.3,6.7);
+  \draw (D)--(C)--(B)--(A)--(D) (C)--(A) (P)--(B)--(A) (A)--(P);
+  \node[below left] at (D) {$D$};
+  \node[above left] at (C) {$C$};
+  \node[below] at (A) {$A$};
+  \node[right] at (B) {$B$};
+  \node[above] at (P) {$P$};
+\end{tikzpicture}

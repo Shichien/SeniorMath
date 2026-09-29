@@ -1,0 +1,20 @@
+\begin{tikzpicture}[x=.018cm,y=-.018cm,baseline=(current bounding box.center),line width=.5pt,
+  every node/.style={font=\small,inner sep=1pt}]
+  \path[use as bounding box] (0,0) rectangle (395,295);
+  \draw[-{Stealth[length=5pt,width=4pt]}] (12,177)--(383,177);
+  \draw[-{Stealth[length=5pt,width=4pt]}] (165,294)--(165,8);
+  \draw (104,177) .. controls (102,137) and (56,92) .. (12,61);
+  \draw (104,177) .. controls (102,217) and (58,263) .. (17,294);
+  \draw (225,177) .. controls (227,137) and (270,92) .. (313,60);
+  \draw (225,177) .. controls (227,217) and (268,263) .. (311,294);
+  \coordinate (A) at (250,109);
+  \coordinate (B) at (79,239);
+  \coordinate (F) at (274,177);
+  \draw (B)--(A)--(F)--cycle;
+  \node[above left] at (250,112) {$A$};
+  \node[below left] at (89,239) {$B$};
+  \node[below] at (274,183) {$F$};
+  \node[below right] at (170,178) {$O$};
+  \node[below] at (380,186) {$x$};
+  \node[left] at (159,23) {$y$};
+\end{tikzpicture}

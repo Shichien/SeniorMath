@@ -1,0 +1,10 @@
+% 一轮闯关训练 · 立体几何：本部分用到的小宏（elegantbook 已加载 pifont、xcolor）
+% \bkstar{3}{5} → ★★★☆☆（难度）
+\providecommand{\bkstar}[2]{{\color{main}\count255=0 \loop\ifnum\count255<#1 \ding{72}\advance\count255 by 1 \repeat}{\color{black!35}\count255=#1 \loop\ifnum\count255<#2 \ding{73}\advance\count255 by 1 \repeat}}
+% \bktopic{异面直线所成角} → 小节里的题型标签
+\providecommand{\bktopic}[1]{\par\medskip\noindent{\color{main}\bfseries ▍#1}\par\smallskip}
+% 题号按讲重排：第 N 讲的练 k 显示为「题 N.k」，与原书一一对应（本部分位于讲义末尾，影响仅限于此）
+\counterwithin*{exam}{section}
+\renewcommand{\theexam}{\arabic{section}.\arabic{exam}}
+% \bkfig[宽度]{TikZ-final/geometry/solid/pNNN-oNNNN.tex} → 居中插入矢量图
+\providecommand{\bkfig}[2][0.25\textwidth]{\begin{figure}[H]\centering\resizebox{#1}{!}{\input{#2}}\end{figure}}

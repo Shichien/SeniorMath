@@ -1,0 +1,54 @@
+\begin{tikzpicture}[x=1bp,y=-1bp,line cap=butt,line join=miter,>=Stealth]
+  \path[use as bounding box] (0,0) rectangle (587,365);
+  \clip (0,0) rectangle (587,365);
+
+  \newfontfamily\chartcjk{SimSun}
+  \font\chartnumber="Times New Roman" at 30bp
+  \font\chartxnumber="Times New Roman" at 31bp
+  \font\chartitalic="Times New Roman Italic" at 32bp
+  \tikzset{
+    title/.style={font=\chartcjk\fontsize{38bp}{38bp}\selectfont,inner sep=0bp},
+    cjk/.style={font=\chartcjk\fontsize{32bp}{32bp}\selectfont,inner sep=0bp},
+    number/.style={font=\chartnumber,inner sep=0bp},
+    xnumber/.style={font=\chartxnumber,inner sep=0bp},
+    italic/.style={font=\chartitalic,inner sep=0bp}
+  }
+
+  \draw[line width=2bp,dash pattern=on 10bp off 6bp]
+    (77.5,111.5)--(293.5,111.5)
+    (77.5,163.5)--(366.5,163.5)
+    (77.5,216.5)--(221.5,216.5)
+    (77.5,269)--(149,269);
+
+  \draw[line width=4bp]
+    (149,269)--(221.5,269)
+    (221.5,216.5)--(293.5,216.5)
+    (293.5,111.5)--(366.5,111.5)
+    (366.5,163.5)--(437.5,163.5);
+  \draw[line width=4bp]
+    (149,269)--(149,318.5)
+    (221.5,216.5)--(221.5,318.5)
+    (293.5,111.5)--(293.5,318.5)
+    (366.5,111.5)--(366.5,318.5)
+    (437.5,163.5)--(437.5,318.5);
+
+  \draw[line width=3bp,-{Stealth[length=30bp,width=22bp]}] (37,318.5)--(504,318.5);
+  \draw[line width=3bp,-{Stealth[length=30bp,width=22bp]}] (77.5,363)--(77.5,32);
+
+  \node[title] at (131,17) {频率};
+  \draw[line width=2bp] (101,34)--(166,34);
+  \node[title] at (131,51) {组距};
+
+  \node[number,anchor=east] at (65,112.5) {0.02};
+  \node[number,anchor=east] at (69,167.5) {0.015};
+  \node[number,anchor=east] at (65,217.5) {0.01};
+  \node[number,anchor=east] at (69,269) {0.005};
+
+  \node[italic,anchor=north east] at (70,327) {O};
+  \node[xnumber,anchor=north] at (151,332) {20};
+  \node[xnumber,anchor=north] at (221.5,332) {40};
+  \node[xnumber,anchor=north] at (293.5,332) {60};
+  \node[xnumber,anchor=north] at (365.5,332) {80};
+  \node[xnumber,anchor=north] at (444,332) {100};
+  \node[cjk,anchor=west] at (483,346) {成绩/分};
+\end{tikzpicture}

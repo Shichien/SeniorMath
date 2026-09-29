@@ -1,0 +1,8 @@
+\begin{tikzpicture}[>=stealth,thick]
+\draw[->](-1.4,0)--(5,0)node[right]{$x$};\draw[->](0,-2.7)--(0,3)node[above]{$y$};
+\coordinate(D)at(.8,0);\coordinate(A)at(3.2,0);\coordinate(C)at(2.1,-1.8);\coordinate(B)at(2.6,-.982);
+\draw(-.5,1.8)--(2.8,-2.77)node[below]{$l_1$};
+\draw(1.45,-2.864)--(4.5,2.127)node[above]{$l_2$};
+\draw[dashed,thin](0,-.982)--(B)--(2.6,0);
+\node[above right]at(D){$D$};\node[below left]at(2.6,0){$3$};\node[below right]at(A){$A(4,0)$};\node[below left]at(0,0){$O$};\node[right]at(B){$B$};\node[below left]at(C){$C$};\node[left]at(0,-.982){$-\frac32$};
+\end{tikzpicture}

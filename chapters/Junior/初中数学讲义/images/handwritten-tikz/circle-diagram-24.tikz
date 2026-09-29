@@ -1,0 +1,16 @@
+\begin{tikzpicture}[thick,blue!70!black]
+\begin{scope}\coordinate (B) at (0,0);\coordinate (A) at (2.8,0);\coordinate (D) at (5.1,0);\coordinate (C) at (1.4,3);\coordinate (E) at (4.2,2.4);
+  \fill[black!25] (B)--++(0:.45) arc[start angle=0,end angle=65,radius=.45]--cycle;
+  \fill[black!25] (A)--++(60:.45) arc[start angle=60,end angle=115,radius=.45]--cycle;
+  \fill[black!25] (D)--++(111:.45) arc[start angle=111,end angle=180,radius=.45]--cycle;
+  \draw (-.5,0)--(6,0) (B)--(C)--(E)--(D) (C)--(A)--(E);
+  \draw[black] (B)++(0:.45) arc[start angle=0,end angle=65,radius=.45] (A)++(60:.45) arc[start angle=60,end angle=115,radius=.45] (D)++(111:.45) arc[start angle=111,end angle=180,radius=.45];
+  \foreach \p in {B,A,D}\fill[red](\p)circle(1.4pt);\foreach \p/\pos in {B/below,C/above,A/below,D/below,E/above}\node[black,\pos]at(\p){$\p$};\end{scope}
+\begin{scope}[xshift=8cm]\coordinate (B) at (0,0);\coordinate (A) at (1.4,0);\coordinate (D) at (4,0);\coordinate (C) at (-.8,2.7);\coordinate (E) at (6,3);
+  \fill[black!25] (B)--++(0:.45) arc[start angle=0,end angle=107,radius=.45]--cycle;
+  \fill[black!25] (A)--++(33:.45) arc[start angle=33,end angle=129,radius=.45]--cycle;
+  \fill[black!25] (D)--++(56:.45) arc[start angle=56,end angle=180,radius=.45]--cycle;
+  \draw (-1.5,0)--(6.5,0) (C)--(B) (C)--(A)--(E)--(D);
+  \draw[black] (B)++(0:.45) arc[start angle=0,end angle=107,radius=.45] (A)++(33:.45) arc[start angle=33,end angle=129,radius=.45] (D)++(56:.45) arc[start angle=56,end angle=180,radius=.45];
+  \foreach \p in {B,A,D}\fill[red](\p)circle(1.4pt);\foreach \p/\pos in {B/below,C/left,A/below,D/below,E/right}\node[black,\pos]at(\p){$\p$};\end{scope}
+\end{tikzpicture}

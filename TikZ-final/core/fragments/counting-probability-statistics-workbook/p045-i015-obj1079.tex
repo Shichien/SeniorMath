@@ -1,0 +1,40 @@
+\begin{tikzpicture}[x=1bp,y=-1bp,line cap=round,line join=round,>=Stealth]
+  \path[use as bounding box] (0,0) rectangle (332,344);
+  \clip (0,0) rectangle (332,344);
+  \fill[white] (0,0) rectangle (332,344);
+  \foreach \x in {41,71,100,129,158,188,216,246}
+    \draw[black!70,line width=.8bp] (\x,61)--(\x,311);
+  \foreach \y in {61,74,86,99,111,124,136,149,161,173,186,198,211,223,236,248,260,273,285,298,311}
+    \draw[black!70,line width=.8bp] (41,\y)--(246,\y);
+  \draw[black,line width=1.2bp,-{Stealth[length=8bp,width=7bp]}]
+    (41,311)--(41,0);
+  \draw[black,line width=1.2bp,-{Stealth[length=8bp,width=7bp]}]
+    (41,311)--(300,311);
+  \font\numberfont="Times New Roman" at 14bp
+  \font\latinfont="Times New Roman" at 14bp
+  \font\latinitalic="Times New Roman Italic" at 14bp
+  \font\chinesefont="SimSun" at 19bp
+  \tikzset{
+    ytick/.style={font=\numberfont,text=black,inner sep=0bp,anchor=east},
+    xtick/.style={font=\latinfont,text=black,inner sep=0bp,anchor=north},
+    title/.style={font=\chinesefont,text=black,inner sep=0bp}
+  }
+  \foreach \y/\lab in {
+    298/0.002,285/0.004,273/0.006,260/0.008,248/0.010,
+    236/0.012,223/0.014,211/0.016,198/0.018,186/0.020,
+    173/0.022,161/0.024,149/0.026,136/0.028,124/0.030,
+    111/0.032,99/0.034,86/0.036,74/0.038,61/0.040
+  } \node[ytick] at (33,\y) {\lab};
+  \foreach \x/\lab in {71/75,100/85,129/95,158/105,188/115,217/125}
+    \node[xtick] at (\x,316) {\lab};
+  \node[font=\latinitalic,text=black,inner sep=0bp] at (36,320) {O};
+  \node[title] at (62,13) {频};
+  \node[title] at (76,13) {率};
+  \node[title] at (62,34) {组};
+  \node[title] at (76,34) {距};
+  \node[title] at (259,330) {质};
+  \node[title] at (274,330) {量};
+  \node[title] at (289,330) {指};
+  \node[title] at (304,330) {标};
+  \node[title] at (319,330) {值};
+\end{tikzpicture}

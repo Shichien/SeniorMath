@@ -1,0 +1,32 @@
+\begin{tikzpicture}[scale=1.2, every node/.style={font=\small}, line cap=round, line join=round]
+  % regular quadrilateral prism ABCD-A1B1C1D1
+  \coordinate (A)  at (0,0);
+  \coordinate (B)  at (3.72,0);
+  \coordinate (C)  at (4.57,1.2);
+  \coordinate (D)  at (0.85,1.2);
+  \coordinate (A1) at (0,3.7);
+  \coordinate (B1) at (3.72,3.7);
+  \coordinate (C1) at (4.57,4.9);
+  \coordinate (D1) at (0.85,4.9);
+  % E, F midpoints of AB1, BC1
+  \coordinate (E) at ($(A)!0.5!(B1)$);
+  \coordinate (F) at ($(B)!0.5!(C1)$);
+
+  \draw (A)--(B)--(B1)--(A1)--cycle;
+  \draw (A1)--(D1)--(C1)--(B1);
+  \draw (B)--(C)--(C1);
+  \draw[dashed] (A)--(D)--(C) (D)--(D1);
+  \draw (A1)--(C1) (A)--(B1) (B)--(C1);
+  \draw[dashed] (E)--(F) (D)--(B);
+
+  \node[left] at (A) {$A$};
+  \node[below right] at (B) {$B$};
+  \node[right] at (C) {$C$};
+  \node[left] at (D) {$D$};
+  \node[above left] at (E) {$E$};
+  \node[right] at (F) {$F$};
+  \node[left] at (A1) {$A_1$};
+  \node[above left] at (B1) {$B_1$};
+  \node[right] at (C1) {$C_1$};
+  \node[above] at (D1) {$D_1$};
+\end{tikzpicture}

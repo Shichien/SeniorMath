@@ -1,0 +1,60 @@
+\begin{tikzpicture}[x=1bp,y=-1bp,line cap=butt,line join=miter,>=Stealth]
+  \path[use as bounding box] (0,0) rectangle (257,177);
+  \clip (0,0) rectangle (257,177);
+
+  \newfontfamily\chartcjk{SimSun}
+  \font\chartnumber="Times New Roman" at 12bp
+  \font\chartitalic="Times New Roman Italic" at 14bp
+  \tikzset{
+    cjk/.style={font=\chartcjk\fontsize{14bp}{14bp}\selectfont,inner sep=0bp},
+    number/.style={font=\chartnumber,inner sep=0bp},
+    italic/.style={font=\chartitalic,inner sep=0bp}
+  }
+
+  \draw[line width=1bp,dash pattern=on 6bp off 4bp]
+    (49,81)--(128,81)
+    (49,93)--(149,93)
+    (49,116)--(88,116)
+    (49,128)--(88,128)
+    (49,139)--(168,139);
+
+  \draw[line width=1bp]
+    (69,139)--(88,139)
+    (88,116)--(128,116)
+    (128,81)--(149,81)
+    (149,93)--(168,93)
+    (168,139)--(189,139);
+  \draw[line width=1bp]
+    (69,139)--(69,149)
+    (88,116)--(88,149)
+    (128,81)--(128,149)
+    (149,81)--(149,149)
+    (168,93)--(168,149)
+    (189,139)--(189,149);
+
+  \draw[line width=1.2bp] (49,149)--(54,149);
+  \draw[line width=1.2bp]
+    (54,150)--(57,145)--(60,152)--(63,147)--(66,150);
+  \draw[line width=1.2bp,-{Stealth[length=12bp,width=8bp]}] (66,149)--(239,149);
+  \draw[line width=1.2bp,-{Stealth[length=12bp,width=8bp]}] (49,151)--(49,23);
+
+  \node[cjk] at (30,27) {频率};
+  \draw[line width=.8bp] (16,35)--(44,35);
+  \node[cjk] at (30,43) {组距};
+
+  \node[number,anchor=east] at (45,81) {0.03};
+  \node[number,anchor=east] at (45,93) {0.025};
+  \node[number,anchor=east] at (45,116) {0.015};
+  \node[number,anchor=east] at (45,128) {0.01};
+  \node[number,anchor=east] at (45,139) {0.005};
+
+  \node[italic,anchor=north east] at (49,152) {O};
+  \node[number,anchor=north] at (69,152) {40};
+  \node[number,anchor=north] at (88,152) {50};
+  \node[number,anchor=north] at (108,152) {60};
+  \node[number,anchor=north] at (128,152) {70};
+  \node[number,anchor=north] at (149,152) {80};
+  \node[number,anchor=north] at (168,152) {90};
+  \node[number,anchor=north] at (189,152) {100};
+  \node[cjk,anchor=west] at (204,141) {分数};
+\end{tikzpicture}

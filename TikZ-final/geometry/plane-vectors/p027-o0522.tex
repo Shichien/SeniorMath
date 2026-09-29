@@ -1,0 +1,14 @@
+\begin{tikzpicture}[scale=.75, every node/.style={font=\small}]
+  \coordinate (A) at (0,0); \coordinate (B) at (4,0);
+  \coordinate (C) at (4,4); \coordinate (D) at (0,4);
+  \coordinate (E) at (2,0); \coordinate (P) at (2.58,3.06);
+  \draw (A)--(B)--(C)--(D)--cycle;
+  \draw (A)--(C) (D)--(E) (A)--(P);
+  \draw (D) arc[start angle=90,end angle=0,radius=4];
+  \node[below left] at (A) {$A$};
+  \node[below right] at (B) {$B$};
+  \node[above right] at (C) {$C$};
+  \node[above left] at (D) {$D$};
+  \node[below] at (E) {$E$};
+  \node[above right] at (P) {$P$};
+\end{tikzpicture}

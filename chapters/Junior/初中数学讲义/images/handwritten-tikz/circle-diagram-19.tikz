@@ -1,0 +1,23 @@
+\begin{tikzpicture}[thick, line cap=round, line join=round]
+\coordinate (A) at (2.9,5.2);
+\coordinate (B) at (0,0);
+\coordinate (C) at (7,0);
+\coordinate (D) at (4.08,0);
+\coordinate (F) at (1.900,3.408);
+\coordinate (E) at (4.636,2.997);
+\coordinate (O) at (3.558,2.300);
+
+\draw (A)--(B)--(C)--cycle;
+\draw[blue!70!black] (A)--(D) (B)--(E) (C)--(F);
+
+\foreach \p in {A,B,C,D,E,F,O}
+  \fill[red] (\p) circle (2pt);
+
+\node[above] at (A) {$A$};
+\node[below left] at (B) {$B$};
+\node[below right] at (C) {$C$};
+\node[below] at (D) {$D$};
+\node[above right] at (E) {$E$};
+\node[above left] at (F) {$F$};
+\node[below left=1pt] at (O) {$O$};
+\end{tikzpicture}

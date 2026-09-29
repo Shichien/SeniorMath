@@ -1,0 +1,24 @@
+\begin{tikzpicture}[x=1bp,y=-1bp,line cap=round,line join=round]
+  \path[use as bounding box] (0,0) rectangle (426,429);
+  \definecolor{back}{RGB}{19,16,14}
+  \definecolor{ink}{RGB}{52,46,45}
+  \definecolor{halo}{RGB}{37,32,31}
+  \definecolor{labelink}{RGB}{58,52,51}
+  \fill[back] (0,0) rectangle (426,429);
+  \draw[draw=ink,line width=7bp] (24,27) rectangle (403,401);
+  \foreach \x in {100,175,251,327}{
+    \draw[draw=ink,line width=7bp] (\x,27)--(\x,401);
+  }
+  \foreach \y in {101,176,251,326}{
+    \draw[draw=ink,line width=7bp] (24,\y)--(403,\y);
+  }
+  \draw[draw=ink,line width=7bp] (251,176)--(327,101)--(403,176)--(327,251)--cycle;
+  \font\gridlab="Times New Roman Bold Italic" at 34bp
+  \tikzset{lab/.style={font=\gridlab,text=labelink,inner sep=0bp}}
+  \node[lab] at (11,13) {A};
+  \node[lab] at (416,412) {B};
+  \node[lab] at (343,83) {C};
+  \node[lab] at (233,194) {D};
+  \node[lab] at (341,274) {E};
+  \node[lab] at (389,214) {F};
+\end{tikzpicture}\ignorespaces

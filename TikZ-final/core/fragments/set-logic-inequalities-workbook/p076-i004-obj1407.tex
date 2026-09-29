@@ -1,0 +1,26 @@
+\begin{tikzpicture}[x=1bp,y=-1bp,line cap=butt,line join=round,>=Stealth]
+  \path[use as bounding box] (0,0) rectangle (418,112);
+  \clip (0,0) rectangle (418,112);
+  \definecolor{chartbg}{RGB}{19,16,14}
+  \definecolor{chartink}{RGB}{52,47,46}
+  \pagecolor{chartbg}
+  \newfontfamily\chartnumber[FakeBold=2.5]{Times New Roman}
+
+  \begin{scope}[shift={(2.08bp,-1.43bp)},scale=0.985]
+    \draw[chartink,line width=5bp,-{Stealth[length=30bp,width=25bp]}] (-3,66)--(420,66);
+    \draw[chartink,line width=5bp]
+      (23,110).. controls (43,94) and (69,75) .. (85.5,66)
+      (96,63).. controls (114,44.48) and (158,35.98) .. (162,36.18)
+               .. controls (191.91,33.06) and (206.51,45.82) .. (215,59)
+      (222,73).. controls (228.75,100.1) and (246.2,114.4) .. (266.69,100.55)
+               .. controls (282.38,90.9) and (290.77,79.95) .. (300.5,70)
+      (307,61).. controls (326,36) and (337,15) .. (344,-2);
+
+    \fill[white] (85.5,66) circle[radius=4bp];
+    \fill[white] (217,66) circle[radius=4bp];
+    \fill[white] (300.5,66) circle[radius=4bp];
+    \draw[chartink,line width=4bp] (73,87)--(89,87);
+    \node[font=\chartnumber\fontsize{33bp}{33bp}\selectfont,text=chartink,inner sep=0bp,anchor=north] at (96,73) {1};
+    \node[font=\chartnumber\fontsize{33bp}{33bp}\selectfont,text=chartink,inner sep=0bp,anchor=north] at (210,73) {1};
+  \end{scope}
+\end{tikzpicture}

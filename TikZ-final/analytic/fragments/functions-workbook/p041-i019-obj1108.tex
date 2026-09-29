@@ -1,0 +1,6 @@
+\begin{tikzpicture}[x=.72cm,y=.72cm,baseline=(current bounding box.center)]
+  \draw[->] (-2.2,0)--(3.95,0) node[right] {$x$}; \draw[->] (0,-2.3)--(0,3.05) node[above] {$y$};
+  \draw[domain=-1.7:2.8,samples=100,smooth] plot (\x,{.52*(\x-1)^2-1.32});
+  \draw[densely dashed] (1,2.0)--(1,-1.95); \draw (1,0)--(1,.1);
+  \node[below left] at (0,0) {$O$}; \node[below] at (1,0) {$1$};
+\end{tikzpicture}

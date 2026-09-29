@@ -1,0 +1,19 @@
+\begin{tikzpicture}[x=.78cm,y=.78cm,line width=.5pt,font=\small,line join=round]
+  \begin{scope}
+    \draw (0,0) rectangle (4,2); \coordinate (A) at (0,2); \coordinate (B) at (0,0); \coordinate (C) at (4,0); \coordinate (D) at (4,2); \coordinate (P) at (1.7,0);
+    \draw (A)--(P)--(D);
+    \foreach \p/\pos in {A/above left,B/below left,C/below right,D/above right,P/below} \node[\pos] at (\p) {$\p$};
+  \end{scope}
+  \begin{scope}[shift={(5.6,0)}]
+    \draw (0,0) rectangle (4,2); \coordinate (A) at (0,2); \coordinate (B) at (0,0); \coordinate (C) at (4,0); \coordinate (D) at (4,2); \coordinate (P) at (1.25,1); \coordinate (M) at (1.25,2); \coordinate (N) at (1.25,0);
+    \draw[densely dashed] (M)--(N);
+    \draw (A)--(P)--(C) (B)--(P)--(D);
+    \foreach \p/\pos in {A/above left,B/below left,C/below right,D/above right,P/below left,M/above,N/below} \node[\pos] at (\p) {$\p$};
+  \end{scope}
+  \begin{scope}[shift={(11.2,0)}]
+    \draw (0,0) rectangle (4,2); \coordinate (A) at (0,2); \coordinate (B) at (0,0); \coordinate (C) at (4,0); \coordinate (D) at (4,2); \coordinate (P) at (2,3.1); \coordinate (O) at (2,2); \coordinate (Q) at (2,0);
+    \draw[densely dashed] (P)--(Q);
+    \draw (A)--(P)--(D) (B)--(P)--(C);
+    \foreach \p/\pos in {A/above left,B/below left,C/below right,D/above right,P/above,O/below left,Q/below} \node[\pos] at (\p) {$\p$};
+  \end{scope}
+\end{tikzpicture}

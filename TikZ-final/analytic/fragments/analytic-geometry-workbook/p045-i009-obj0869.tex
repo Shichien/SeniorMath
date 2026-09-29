@@ -1,0 +1,30 @@
+\begin{tikzpicture}[x=.026cm,y=-.026cm,baseline=(current bounding box.center),line width=.45pt,
+  every node/.style={font=\scriptsize,inner sep=.8pt}]
+  \path[use as bounding box] (0,0) rectangle (295,192);
+  \draw[-{Stealth[length=4pt,width=3pt]}] (25,106)--(273,106) node[above] {$x$};
+  \draw[-{Stealth[length=4pt,width=3pt]}] (143,184)--(143,6) node[right] {$y$};
+  \foreach \n in {-5,-4,...,5} {
+    \pgfmathsetmacro\xp{143+21.5*\n}
+    \ifnum\n=0\relax\else
+      \draw (\xp,104)--(\xp,108);
+      \node[below] at (\xp,106) {$\n$};
+    \fi
+  }
+  \foreach \n in {-3,-2,...,4} {
+    \pgfmathsetmacro\yp{106-21.5*\n}
+    \ifnum\n=0\relax\else
+      \draw (141,\yp)--(145,\yp);
+      \node[left] at (142,\yp) {$\n$};
+    \fi
+  }
+  \draw[green!55!black,line width=.8pt] (143,107) circle (21.5);
+  \draw[blue,line width=.8pt] (143,107)--(132,89)--(165,70)--(165,107)--cycle
+    (132,89)--(165,107);
+  \draw[red,line width=.8pt] (143,107)--(165,70);
+  \fill[red] (143,107) circle (2.2pt) (132,89) circle (2.2pt)
+        (165,70) circle (2.2pt) (165,107) circle (2.2pt);
+  \node[below left] at (143,107) {$O$};
+  \node[below right] at (165,107) {$A$};
+  \node[above left] at (128,82) {$B$};
+  \node[above right] at (162,62) {$P$};
+\end{tikzpicture}

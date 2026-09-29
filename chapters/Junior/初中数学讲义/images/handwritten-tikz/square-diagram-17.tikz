@@ -1,0 +1,10 @@
+% Squares are constructed by exact 90-degree rotations; P is the midpoint of EF.
+\begin{tikzpicture}[thick,font=\small,line join=round]
+\coordinate(A)at(0,0);\coordinate(B)at(2.2,0);\coordinate(C)at(1.55,1.8);
+\coordinate(E)at($(A)!1!90:(C)$);\coordinate(D)at($(E)+(C)-(A)$);
+\coordinate(F)at($(B)!1!-90:(C)$);\coordinate(G)at($(F)+(C)-(B)$);
+\coordinate(P)at($(E)!.5!(F)$);
+\draw(A)--(B)--(C)--cycle (A)--(E)--(D)--(C) (B)--(F)--(G)--(C) (E)--(F);
+\fill(P)circle(1.5pt);
+\foreach\p/\pos in {A/below,B/below,C/above,D/above,E/left,F/right,G/above,P/below}\node[\pos]at(\p){$\p$};
+\end{tikzpicture}

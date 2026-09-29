@@ -1,0 +1,6 @@
+\begin{tikzpicture}[thick,line join=round]
+\coordinate (B) at (0,3.7); \coordinate (C) at (0,0); \coordinate (A) at (5.4,0);
+\coordinate (G) at (2.0,1.25); \coordinate (H) at (2.0,5.1); \coordinate (I) at (7.25,1.25);
+\draw (B)--(C)--(A)--cycle (H)--(G)--(I)--cycle;
+\node[left] at (B) {$B$}; \node[below left] at (C) {$C$}; \node[below right] at (A) {$A$}; \node[below left] at (G) {$G$};
+\end{tikzpicture}

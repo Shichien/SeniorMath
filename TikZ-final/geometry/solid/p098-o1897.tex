@@ -1,0 +1,34 @@
+\begin{tikzpicture}[scale=.8, every node/.style={font=\small}, line cap=round, line join=round]
+  % cylinder (radius 1, height 2) with an inverted cone (same base, height 1) removed;
+  % A centre of bottom base, O1 centre of top base, D cone apex = midpoint of A O1
+  \def\rx{3.11}
+  \def\ry{1.39}
+  \coordinate (A)  at (0,0);
+  \coordinate (B)  at (-\rx,0);
+  \coordinate (O1) at (0,3.12);
+  \coordinate (C)  at ($(B)+(O1)$);
+  \coordinate (C2) at ($(O1)+(\rx,0)$);
+  \coordinate (B2) at ($(A)+(\rx,0)$);
+  \coordinate (D)  at ($(A)!0.5!(O1)$);
+
+  % top base
+  \draw (O1) ellipse [x radius=\rx, y radius=\ry];
+  % bottom base: front half solid, back half dashed
+  \draw (B) arc [start angle=180, end angle=360, x radius=\rx, y radius=\ry];
+  \draw[dashed] (B2) arc [start angle=0, end angle=180, x radius=\rx, y radius=\ry];
+  % generators
+  \draw (B)--(C) (B2)--(C2);
+  % cone generators, radius and height
+  \draw[dashed] (C)--(D)--(C2);
+  \draw[dashed] (B)--(A)--(D);
+  \fill (A) circle (1.5pt);
+  \fill (O1) circle (1.5pt);
+
+  \node[left] at (B) {$B$};
+  \node[left] at (C) {$C$};
+  \node[right] at (A) {$A$};
+  \node[below right] at (D) {$D$};
+  \node[left] at ($(B)!0.5!(C)$) {$2$};
+  \node[below] at ($(B)!0.4!(A)$) {$1$};
+  \node[right] at ($(A)!0.5!(D)$) {$1$};
+\end{tikzpicture}

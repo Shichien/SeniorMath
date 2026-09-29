@@ -1,0 +1,8 @@
+\begin{tikzpicture}[thick]
+\coordinate(A)at(0,3);\coordinate(B)at(0,0);\coordinate(C)at(4,0);\coordinate(D)at(4,3);
+\coordinate(Q)at($(B)!(C)!(D)$);\coordinate(E)at($(C)!2!(Q)$);
+\path[name path=BE](B)--(E);\path[name path=AD](A)--(D);\path[name intersections={of=BE and AD,by=F}];
+\draw(A)--(B) (A)--(E)--(D)--(A) (B)--(E) (B)--(D);
+\draw[densely dotted](B)--(C)--(D);
+\foreach\p/\pos in {A/left,B/below left,C/below right,D/right,E/above,F/below right}\node[\pos]at(\p){$\p$};
+\end{tikzpicture}

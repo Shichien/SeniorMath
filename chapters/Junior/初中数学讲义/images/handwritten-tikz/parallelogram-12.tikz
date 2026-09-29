@@ -1,0 +1,12 @@
+\begin{tikzpicture}[scale=.8,line width=.55pt,font=\small,line join=round]
+  \begin{scope}
+    \coordinate (A) at (1.5,4.4); \coordinate (B) at (0,0); \coordinate (C) at (3.8,0); \coordinate (D) at (.75,2.1); \coordinate (E) at (2.55,2.1);
+    \draw (A)--(B)--(C)--cycle (D)--(E);
+    \foreach \p/\pos in {A/above,B/below left,C/below right,D/left,E/right} \node[\pos] at (\p) {$\p$};
+  \end{scope}
+  \begin{scope}[shift={(5.2,0)}]
+    \coordinate (E) at (0,4.2); \coordinate (D) at (3.2,4.2); \coordinate (B) at (0,0); \coordinate (C) at (3.9,0); \coordinate (A) at (1.75,2.05);
+    \draw (E)--(D)--(B)--(C)--cycle;
+    \foreach \p/\pos in {E/above left,D/above right,B/below left,C/below right,A/right} \node[\pos] at (\p) {$\p$};
+  \end{scope}
+\end{tikzpicture}

@@ -1,0 +1,5 @@
+\begin{tikzpicture}[thick]
+\begin{scope}\draw(0,0)--(.8,2.4)--(3.1,2.4)--(4,0)--cycle;\draw[dashed](2.1,0)--(3.1,2.4);\end{scope}
+\begin{scope}[xshift=5cm]\draw(0,0)--(.8,2.4)--(3.1,2.4)--(4,0)--cycle;\draw[dashed](3.1,2.4)--(4.8,2.4)--(4,0);\end{scope}
+\begin{scope}[xshift=11cm]\draw(0,0)--(.8,2.4)--(3.1,2.4)--(4,0)--cycle;\draw[dashed](1.25,0)--(1.25,2.4) (2.65,0)--(2.65,2.4);\end{scope}
+\end{tikzpicture}

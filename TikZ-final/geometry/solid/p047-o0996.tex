@@ -1,0 +1,22 @@
+\begin{tikzpicture}[scale=.75, every node/.style={font=\small}, line cap=round, line join=round]
+  % regular pyramid P-ABCD; O centre of base, E midpoint of AD
+  \coordinate (A) at (0,0);
+  \coordinate (B) at (5.1,0);
+  \coordinate (C) at (8.13,1.89);
+  \coordinate (D) at ($(A)+(C)-(B)$);
+  \coordinate (O) at ($(A)!0.5!(C)$);
+  \coordinate (P) at ($(O)+(0,3.41)$);
+  \coordinate (E) at ($(A)!0.5!(D)$);
+
+  \draw (A)--(B)--(C)--(P)--cycle;
+  \draw (P)--(B);
+  \draw[dashed] (A)--(D)--(C) (P)--(D) (P)--(O) (P)--(E)--(O);
+
+  \node[below] at (A) {$A$};
+  \node[below] at (B) {$B$};
+  \node[below right] at (C) {$C$};
+  \node[left] at (D) {$D$};
+  \node[below] at (E) {$E$};
+  \node[below] at (O) {$O$};
+  \node[above] at (P) {$P$};
+\end{tikzpicture}

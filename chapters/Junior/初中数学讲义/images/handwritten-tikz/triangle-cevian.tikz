@@ -1,0 +1,11 @@
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.65pt,font=\small,line join=round]
+  \coordinate (A) at (2.7,3.2);
+  \coordinate (B) at (0,0);
+  \coordinate (C) at (5.2,0);
+  \coordinate (D) at (2.45,0);
+
+  \draw (A)--(B)--(C)--cycle (A)--(D);
+
+  \foreach \p/\pos in {A/above,B/below left,C/below right,D/below}
+    \node[\pos] at (\p) {$\p$};
+\end{tikzpicture}

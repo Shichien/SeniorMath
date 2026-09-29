@@ -1,0 +1,8 @@
+\begin{tikzpicture}[x=0.8cm,y=0.8cm,line width=.55pt,font=\small,line join=round]
+  \coordinate (A) at (3.2,4.2); \coordinate (B) at (0,0); \coordinate (C) at (6.1,-.1);
+  \coordinate (D) at (1.4,0); \coordinate (E) at (7.1,1.45); \coordinate (F) at (1.05,1.5);
+  \coordinate (G) at (5.05,1.5);
+  \draw (A)--(B)--(D)--(C)--(E)--cycle;
+  \draw (A)--(D) (A)--(C) (D)--(E) (F)--(E);
+  \foreach \p/\pos in {A/above,B/left,C/below,D/below,E/right,F/left,G/above} \node[\pos] at (\p) {$\p$};
+\end{tikzpicture}

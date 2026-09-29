@@ -1,0 +1,26 @@
+\begin{tikzpicture}[scale=.6, every node/.style={font=\small}, line cap=round, line join=round]
+  \coordinate (A)  at (0,0);
+  \coordinate (B)  at (6.2,0);
+  \coordinate (C)  at (8.4,2.05);
+  \coordinate (D)  at (2.2,2.05);
+  \coordinate (A1) at (0,4.4);
+  \coordinate (B1) at (6.2,4.4);
+  \coordinate (C1) at (8.4,6.45);
+  \coordinate (D1) at (2.2,6.45);
+
+  \draw (A)--(B)--(B1)--(A1)--cycle;
+  \draw (A1)--(D1)--(C1)--(B1);
+  \draw (B)--(C)--(C1);
+  \draw[dashed] (A)--(D)--(C) (D)--(D1);
+  \draw (A)--(B1)--(D1);
+  \draw[dashed] (A)--(D1);
+
+  \node[below left] at (A) {$A$};
+  \node[below] at (B) {$B$};
+  \node[right] at (C) {$C$};
+  \node[left] at (D) {$D$};
+  \node[left] at (A1) {$A_1$};
+  \node[below right] at (B1) {$B_1$};
+  \node[right] at (C1) {$C_1$};
+  \node[above] at (D1) {$D_1$};
+\end{tikzpicture}

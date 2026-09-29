@@ -1,0 +1,8 @@
+\begin{tikzpicture}[scale=.8,>=Stealth,font=\large,thick]
+\draw[->] (-5.4,0)--(6,0) node[right]{$x$};\draw[->] (0,-3.5)--(0,3.7) node[above]{$y$};
+\draw (0,0) ellipse (4.6 and 2.65);\coordinate (F) at (-2.7,0);
+\foreach \ang/\name in {145/P_1,125/P_2,108/P_3,90/P_4,70/P_5,48/P_6,30/P_7}{
+  \coordinate (P) at ({4.6*cos(\ang)},{2.65*sin(\ang)});\draw (F)--(P);\node[above] at (P){$\name$};
+}
+\node[below] at (-4.6,0){$A$};\node[below] at (4.6,0){$B$};\node[below left] at (0,0){$O$};\node[below] at (F){$F$};
+\end{tikzpicture}

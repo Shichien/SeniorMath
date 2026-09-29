@@ -1,0 +1,6 @@
+\begin{tikzpicture}[scale=.9,line width=.55pt,font=\small]
+  \draw (-.2,0)--(5.2,0);
+  \coordinate (B) at (2,1); \coordinate (A) at (3.2,2.05);
+  \fill (A) circle (2pt) (B) circle (2pt);
+  \node[above right] at (A) {$A$}; \node[above left] at (B) {$B$}; \node[left] at (-.2,0) {$l$};
+\end{tikzpicture}

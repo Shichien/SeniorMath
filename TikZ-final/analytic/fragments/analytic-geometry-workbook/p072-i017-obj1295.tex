@@ -1,0 +1,23 @@
+\begin{tikzpicture}[x=.023cm,y=-.023cm,baseline=(current bounding box.center),line width=.5pt,
+  every node/.style={font=\scriptsize,inner sep=.7pt}]
+  \path[use as bounding box] (0,0) rectangle (260,243);
+  \draw[-{Stealth[length=5pt,width=4pt]}] (13,130)--(247,130) node[below] {$x$};
+  \draw[-{Stealth[length=5pt,width=4pt]}] (120,231)--(120,16) node[right] {$y$};
+  \draw (102,36)--(102,207);
+  \foreach \n in {-5,-4,...,5} {
+    \pgfmathsetmacro\xp{120+18*\n}
+    \draw (\xp,127)--(\xp,133);
+    \node[above] at (\xp,135) {$\n$};
+  }
+  \foreach \n in {-5,-4,...,5} {
+    \pgfmathsetmacro\yp{130-19*\n}
+    \draw (117,\yp)--(123,\yp);
+    \node[left] at (114,\yp) {$\n$};
+  }
+  \draw (120,125) .. controls (126,107) and (160,83) .. (196,70);
+  \draw (120,137) .. controls (130,153) and (162,169) .. (197,177);
+  \draw (120,130)--(196,70) (120,130)--(197,177);
+  \fill (138,130) circle (.8pt);
+  \node[above] at (138,130) {$F$};
+  \node[below left] at (120,130) {$O$};
+\end{tikzpicture}

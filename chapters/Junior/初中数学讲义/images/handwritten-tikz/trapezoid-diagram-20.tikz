@@ -1,0 +1,3 @@
+\begin{tikzpicture}[thick,font=\scriptsize]
+\draw(-.45,-.35)--(.45,4.35);\draw(3.45,-.35)--(2.55,4.35);\foreach\y/\n in {0/1,1/2,2/3,3/4,4/5}{\draw({-.38+.19*\y},\y)--({3.38-.19*\y},\y);\node[left]at({-.38+.19*\y},\y){\sffamily A\n};\node[right]at({3.38-.19*\y},\y){\sffamily B\n};}
+\end{tikzpicture}

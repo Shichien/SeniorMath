@@ -1,0 +1,17 @@
+\begin{tikzpicture}[x=.72cm,y=.72cm,line width=.5pt,font=\scriptsize,line join=round]
+  \begin{scope}
+    \coordinate (A) at (0,2.4); \coordinate (B) at (0,0); \coordinate (C) at (2.7,0); \coordinate (D) at (2.7,2.4); \coordinate (E) at (1.25,0); \coordinate (F) at (2.7,1.1);
+    \draw (A)--(B)--(C)--(D)--cycle (A)--(E)--(F)--(A);
+    \foreach \p/\pos in {A/left,B/left,C/below,D/above,E/below,F/right} \node[\pos] at (\p) {$\p$}; \node at (1.35,-.75) {图1};
+  \end{scope}
+  \begin{scope}[shift={(4.2,0)}]
+    \coordinate (A) at (0,2.4); \coordinate (B) at (0,0); \coordinate (C) at (2.7,.3); \coordinate (D) at (2.7,2.4); \coordinate (E) at (1.25,.15); \coordinate (F) at (2.7,1.15);
+    \draw (A)--(B)--(C)--(D)--cycle (A)--(E)--(F)--(A);
+    \foreach \p/\pos in {A/left,B/left,C/below,D/above,E/below,F/right} \node[\pos] at (\p) {$\p$}; \node at (1.35,-.75) {图2};
+  \end{scope}
+  \begin{scope}[shift={(8.6,0)}]
+    \coordinate (A) at (0,2.4); \coordinate (B) at (0,0); \coordinate (C) at ({48/17},{12/17}); \coordinate (D) at (2.4,2.4); \coordinate (E) at (4.24,1.06); \coordinate (F) at ({13392/6305},{2.4+6960/6305});
+    \draw (A)--(B)--(E) (A)--(D) (F)--(C) (A)--(F)--(E)--cycle;
+    \foreach \p/\pos in {A/left,B/left,C/below,D/right,E/right,F/above} \node[\pos] at (\p) {$\p$}; \node at (2.2,-.75) {图3};
+  \end{scope}
+\end{tikzpicture}

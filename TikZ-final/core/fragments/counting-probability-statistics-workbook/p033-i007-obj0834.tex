@@ -1,0 +1,47 @@
+\begin{tikzpicture}[x=1bp,y=-1bp,line cap=round,line join=round,>=Stealth]
+  \definecolor{back}{RGB}{19,16,14}
+  \definecolor{ink}{RGB}{50,46,45}
+  \path[use as bounding box] (0,0) rectangle (496,282);
+  \clip (0,0) rectangle (496,282);
+  \fill[back] (-2,-2) rectangle (498,284);
+  \begin{scope}[yshift=-3bp]
+  \begin{scope}[shift={(2bp,2bp)}]
+    \draw[ink,line width=6bp,-{Stealth[length=26bp,width=25bp]}]
+      (15,215)--(496,215);
+    \draw[ink,line width=6bp,-{Stealth[length=26bp,width=25bp]}]
+      (62,282)--(62,15);
+    \draw[ink,line width=4bp,dash pattern=on 9bp off 7bp]
+      (137,48)--(137,215)
+      (226,112)--(226,215)
+      (62,110)--(226,110);
+    \draw[ink,line width=6bp,smooth,tension=.75]
+      plot coordinates {
+        (61,162) (79,106) (99,72) (109,59) (119,50) (129,45)
+        (136,44) (144,45) (154,49) (164,57) (174,68) (184,83)
+        (194,102) (203,122) (213,145) (223,185) (226,213)
+      };
+    \draw[ink,line width=5bp,smooth,tension=.75]
+      plot coordinates {
+        (15,189) (49,164) (61,156) (99,137) (129,124) (164,112)
+        (194,109) (227,108) (274,114) (299,119) (349,138)
+        (399,163) (444,192)
+      };
+  \end{scope}
+  \newfontfamily\chartcjk{SimSun}[AutoFakeBold=2]
+  \font\latinbolditalic="Times New Roman Bold Italic" at 34bp
+  \font\latinbold="Times New Roman Bold" at 32bp
+  \tikzset{
+    cjk/.style={font=\chartcjk\bfseries\fontsize{34bp}{34bp}\selectfont,text=ink,inner sep=0bp},
+    italic/.style={font=\latinbolditalic,text=ink,inner sep=0bp},
+    number/.style={font=\latinbold,text=ink,inner sep=0bp}
+  }
+  \node[cjk] at (137,5) {甲};
+  \node[cjk] at (256,83) {乙};
+  \node[italic] at (42,29) {y};
+  \node[italic] at (482,239) {x};
+  \node[italic] at (48,231) {O};
+  \node[number] at (29,102) {1.99};
+  \node[number] at (140,230) {0.4};
+  \node[number] at (230,231) {0.8};
+  \end{scope}
+\end{tikzpicture}

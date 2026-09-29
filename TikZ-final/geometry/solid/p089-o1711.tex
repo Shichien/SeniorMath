@@ -1,0 +1,27 @@
+\begin{tikzpicture}[scale=1.3, every node/.style={font=\small}, line cap=round, line join=round]
+  % pyramid P-ABCD, PD \perp base ABCD (square); origin D, x along DA, y along DC, z along DP
+  \coordinate (D) at (0,0);
+  \coordinate (A) at (-0.9,-0.87);
+  \coordinate (C) at (2.7,0);
+  \coordinate (B) at ($(A)+(C)-(D)$);
+  \coordinate (P) at (0,4.6);
+  \coordinate (X) at ($(D)!1.35!(A)$);
+  \coordinate (Y) at ($(D)!1.35!(C)$);
+  \coordinate (Z) at ($(D)!1.16!(P)$);
+
+  \draw (P)--(A)--(B)--(C)--cycle;
+  \draw (P)--(B);
+  \draw[dashed] (P)--(D) (D)--(A) (D)--(C) (D)--(B);
+  \draw[-{Stealth[length=2.5mm]}] (A)--(X);
+  \draw[-{Stealth[length=2.5mm]}] (C)--(Y);
+  \draw[-{Stealth[length=2.5mm]}] (P)--(Z);
+
+  \node[left] at (P) {$P$};
+  \node[right] at ($(Z)+(0,-0.15)$) {$z$};
+  \node[below right] at (Y) {$y$};
+  \node[left] at (X) {$x$};
+  \node[above left] at (D) {$D$};
+  \node[below right] at (A) {$A$};
+  \node[below] at (B) {$B$};
+  \node[below right] at (C) {$C$};
+\end{tikzpicture}

@@ -1,0 +1,17 @@
+\begin{tikzpicture}[x=.018cm,y=-.018cm,baseline=(current bounding box.center),line width=.5pt,
+  every node/.style={font=\tiny,inner sep=.7pt}]
+  \path[use as bounding box] (0,0) rectangle (262,262);
+  \draw[-{Stealth[length=4pt,width=3pt]}] (10,131)--(252,131) node[above] {$x$};
+  \draw[-{Stealth[length=4pt,width=3pt]}] (131,255)--(131,13) node[right] {$y$};
+  \draw[domain=-10.1:10.2,samples=160,variable=\t]
+    plot ({131-sqrt(930.25+112.5*\t*\t)},{131+10*\t});
+  \draw[domain=-10.1:10.2,samples=160,variable=\t]
+    plot ({131+sqrt(930.25+112.5*\t*\t)},{131+10*\t});
+  \fill (69,131) circle (1pt) (195,131) circle (1pt)
+        (200,72) circle (1pt) (226,102) circle (1pt);
+  \node[below] at (69,131) {$A$};
+  \node[below] at (195,131) {$B$};
+  \node[above left] at (200,72) {$M$};
+  \node[right] at (226,102) {$C$};
+  \node[below left] at (131,131) {$O$};
+\end{tikzpicture}

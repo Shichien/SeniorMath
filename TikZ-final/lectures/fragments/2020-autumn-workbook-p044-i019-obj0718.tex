@@ -1,0 +1,7 @@
+\begin{tikzpicture}[x=.72cm,y=.72cm,>=Stealth,line cap=round,baseline=(current bounding box.center)]
+  \draw[->] (-3.45,0)--(4.55,0) node[right] {$x$}; \draw[->] (0,-2.40)--(0,3.15) node[above] {$y$};
+  \draw[line width=.8pt] (0,0) ellipse (3.00 and 1.72);
+  \coordinate (B) at (.60,-1.64); \coordinate (A) at (.60,1.62); \coordinate (P) at (2.28,1.05);
+  \draw[line width=.75pt] (B)--(A)--(P) (B)--(P);
+  \node[below] at (B) {$B$}; \node[above] at (A) {$A$}; \node[right] at (P) {$P$}; \node[below left] at (0,0) {$O$};
+\end{tikzpicture}

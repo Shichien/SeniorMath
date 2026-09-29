@@ -1,0 +1,56 @@
+\begin{tikzpicture}[x=1bp,y=-1bp,line cap=round,line join=round]
+  \path[use as bounding box] (0,0) rectangle (356,90);
+  \tikzset{
+    axis/.style={-{Stealth[length=5bp,width=5bp]},line width=1.5bp},
+    dot/.style={radius=2.8bp},
+    noisy dot/.style={radius=3bp},
+    axislabel/.style={inner sep=0bp,font=\fontsize{14bp}{14bp}\selectfont\boldmath},
+    choice/.style={circle,draw,line width=1.2bp,inner sep=0bp,
+      minimum size=12bp,font=\fontsize{8.5bp}{8.5bp}\selectfont}
+  }
+
+  \draw[axis] (13,66)--(78,66);
+  \draw[axis] (13,66)--(13,1);
+  \node[axislabel] at (6,70) {$O$};
+  \node[axislabel] at (76,73) {$x$};
+  \node[axislabel] at (8,13) {$y$};
+  \foreach \p in {(43.5,30.9),(54.3,24.9),(63.6,26.2),(66.5,31),
+    (50.6,34.9),(63.9,36.1),(57.5,39.5),(47.5,41.5),(38,44.1),(52.5,47.3)}
+    \fill \p circle [dot];
+  \node[choice] at (40.7,82) {1};
+
+  \draw[axis] (109,65)--(172,65);
+  \draw[axis] (109,65)--(109,10);
+  \node[axislabel] at (102.5,69) {$O$};
+  \node[axislabel] at (169,72) {$x$};
+  \node[axislabel] at (103,13.5) {$y$};
+  \foreach \p in {(129.2,29.2),(148.9,28),(135.7,34.5),(121.3,40.3),
+    (143.6,39.5),(128.8,43.2),(153.5,44.9),(137.9,47.2),(126.8,51.2),(142.5,51.3)}
+    \fill \p circle [dot];
+  \node[choice] at (134.8,84.4) {2};
+
+  \draw[axis] (205,64)--(265,64);
+  \draw[axis] (205,64)--(205,10);
+  \node[axislabel] at (205,69.5) {$O$};
+  \node[axislabel] at (262,69.5) {$x$};
+  \node[axislabel] at (198,13.5) {$y$};
+  \draw[black!45,line width=.7bp,smooth]
+    plot coordinates {(216,32) (222,34) (227,35) (232,33) (239,36)};
+  \draw[black!45,line width=.7bp,smooth]
+    plot coordinates {(211,42) (216,45) (224,49) (232,52) (240,57) (244,62)};
+  \draw[black!45,line width=.7bp] (258,57)--(267,57);
+  \foreach \p in {(212.7,24.1),(212.5,30.9),(219.5,31.5),(221.5,39.5),
+    (230.7,39.5),(229.4,47.2),(235.6,49.4),(243.3,52.1),(242.1,57.7),(252.5,57.5)}
+    \fill \p circle [noisy dot];
+  \node[choice] at (231.7,83.4) {3};
+
+  \draw[axis] (293,60)--(355,60);
+  \draw[axis] (293,60)--(293,10);
+  \node[axislabel] at (291,68) {$O$};
+  \node[axislabel] at (352,66) {$x$};
+  \node[axislabel] at (285,13) {$y$};
+  \foreach \p in {(302.9,52.3),(304.6,40.2),(312.1,43.5),(315,33.5),
+    (323.5,34.5),(328.8,23.7),(336.5,27.3),(340.7,18.6),(338.3,12.5),(351.1,11.2)}
+    \fill \p circle [dot];
+  \node[choice] at (318.5,81) {4};
+\end{tikzpicture}

@@ -1,0 +1,32 @@
+\begin{tikzpicture}[scale=.8, every node/.style={font=\small}, line cap=round, line join=round]
+  % P-ABCD, rhombus base with centre O, PO perp base;
+  % E on PA with PE = PA/3, F midpoint of PB, G midpoint of PD
+  \coordinate (O) at (0,0);
+  \coordinate (A) at (-2.15,-0.65);
+  \coordinate (B) at (2.75,-0.65);
+  \coordinate (C) at ($(O)!-1!(A)$);
+  \coordinate (D) at ($(O)!-1!(B)$);
+  \coordinate (P) at (0,3.85);
+  \coordinate (E) at ($(P)!1/3!(A)$);
+  \coordinate (F) at ($(P)!0.5!(B)$);
+  \coordinate (G) at ($(P)!0.5!(D)$);
+
+  % axes
+  \draw[-{Stealth[length=2mm]}] (P) -- ($(P)+(0,0.85)$) node[left] {$z$};
+  \draw[-{Stealth[length=2mm]}] (A) -- ($(O)!1.42!(A)$) node[above] {$x$};
+  \draw[-{Stealth[length=2mm]}] (B) -- ($(O)!1.27!(B)$) node[above] {$y$};
+
+  \draw (P)--(A)--(B)--(P) (P)--(D)--(A) (P)--(C)--(B);
+  \draw (G)--(E)--(F);
+  \draw[dashed] (D)--(C) (D)--(B) (A)--(C) (P)--(O) (G)--(F);
+
+  \node[right] at (P) {$P$};
+  \node[below left] at (A) {$A$};
+  \node[below] at (B) {$B$};
+  \node[right] at (C) {$C$};
+  \node[left] at (D) {$D$};
+  \node[below] at (O) {$O$};
+  \node[above left] at (G) {$G$};
+  \node[above] at (E) {$E$};
+  \node[below left] at (F) {$F$};
+\end{tikzpicture}

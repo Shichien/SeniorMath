@@ -1,0 +1,13 @@
+\begin{tikzpicture}[scale=.68, every node/.style={font=\small}]
+  \coordinate (A) at (-3.30,0); \coordinate (B) at (3.30,0);
+  \coordinate (O) at (0,0); \coordinate (C) at (-1.20,3.07);
+  \coordinate (D) at (1.80,2.77);
+  \draw (O) circle (3.30);
+  \draw (A)--(B) (A)--(C) (A)--(D) (C)--(D);
+  \fill (O) circle (1.1pt);
+  \node[left] at (A) {$A$};
+  \node[right] at (B) {$B$};
+  \node[below] at (O) {$O$};
+  \node[above left] at (C) {$C$};
+  \node[above right] at (D) {$D$};
+\end{tikzpicture}

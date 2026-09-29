@@ -1,0 +1,7 @@
+\begin{tikzpicture}[thick]
+\draw(0,0)rectangle(5,5);
+\coordinate(P)at(1.4,1.4);\coordinate(E)at(1.4,0);\coordinate(F)at(5,1.4);
+\draw(0,5)--(P) (0,0)--(P)--(5,5) (P)--(E)--(F) (P)--(F);
+\foreach\p/\xy/\pos in {A/{(0,5)}/above left,B/{(0,0)}/below left,C/{(5,0)}/below right,D/{(5,5)}/above right,P/{(1.4,1.4)}/left,E/{(1.4,0)}/below,F/{(5,1.4)}/right}
+  \node[\pos]at\xy{$\p$};
+\end{tikzpicture}

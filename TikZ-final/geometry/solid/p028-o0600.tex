@@ -1,0 +1,29 @@
+\begin{tikzpicture}[scale=.6, every node/.style={font=\small}, line cap=round, line join=round]
+  % cube ABCD-A'B'C'D', front face ABB'A', receding offset (2.4,1.8)
+  \coordinate (A)  at (0,0);
+  \coordinate (B)  at (6,0);
+  \coordinate (C)  at (8.4,1.8);
+  \coordinate (D)  at (2.4,1.8);
+  \coordinate (A1) at (0,6);
+  \coordinate (B1) at (6,6);
+  \coordinate (C1) at (8.4,7.8);
+  \coordinate (D1) at (2.4,7.8);
+  % H on B'D' with D'H = 1 = D'B'/sqrt 2
+  \coordinate (H) at ($(D1)!0.7071!(B1)$);
+
+  \draw (A)--(B)--(B1)--(A1)--cycle;
+  \draw (A1)--(D1)--(C1)--(B1);
+  \draw (B)--(C)--(C1);
+  \draw (D1)--(B1);
+  \draw[dashed] (A)--(D)--(C) (D)--(D1) (D)--(H);
+
+  \node[below] at (A) {$A$};
+  \node[below] at (B) {$B$};
+  \node[right] at (C) {$C$};
+  \node[above left] at (D) {$D$};
+  \node[left] at (A1) {$A'$};
+  \node[below right] at (B1) {$B'$};
+  \node[right] at (C1) {$C'$};
+  \node[above left] at (D1) {$D'$};
+  \node[above] at ($(H)+(0.15,0.25)$) {$H$};
+\end{tikzpicture}

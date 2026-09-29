@@ -1,0 +1,36 @@
+\begin{tikzpicture}[x=1bp,y=-1bp,line cap=round,line join=round]
+  \path[use as bounding box] (0,0) rectangle (381,288);
+  \clip (0,0) rectangle (381,288);
+
+  \newfontfamily\diagramcjk[FakeBold=1.5]{SimSun}
+  \tikzset{
+    cjk/.style={font=\diagramcjk\fontsize{22bp}{22bp}\selectfont,inner sep=0bp},
+    bottomcjk/.style={font=\diagramcjk\fontsize{21bp}{21bp}\selectfont,inner sep=0bp},
+    mathlabel/.style={font=\fontsize{20bp}{20bp}\selectfont,inner sep=0bp}
+  }
+
+  \tikzset{scanned circle/.style={draw=black!50,line width=2.25bp}}
+  \draw[scanned circle] (145.96,99.93) circle[radius=79.45bp];
+  \draw[scanned circle] (217.25,91.22) circle[radius=79.45bp];
+  \draw[scanned circle] (194.73,162.48) circle[radius=79.45bp];
+
+  \node[cjk] at (35.5,69) {第一次};
+  \node[cjk] at (333.5,79) {第二次};
+  \node[bottomcjk] at (215.5,274) {第三次};
+
+  \node[mathlabel] at (101.5,91) {$3$};
+  \draw[line width=1bp] (107,93)--(116,93);
+  \node[mathlabel] at (122.5,93) {$x$};
+
+  \node[mathlabel] at (167.5,62) {$5$};
+  \draw[line width=1bp] (174,63)--(182,63);
+  \node[mathlabel] at (187.5,65.5) {$y$};
+
+  \node[mathlabel] at (243.5,68.5) {$5$};
+  \draw[line width=1bp] (249,70)--(256,70);
+  \node[mathlabel] at (261.5,70) {$z$};
+  \node[mathlabel] at (135,157.5) {$x$};
+  \node[mathlabel] at (182.5,125) {$y$};
+  \node[mathlabel] at (233.5,143) {$z$};
+  \node[mathlabel] at (202,207.5) {$2$};
+\end{tikzpicture}

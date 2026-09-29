@@ -1,0 +1,22 @@
+\begin{tikzpicture}[scale=1, every node/.style={font=\small}, line cap=round, line join=round]
+  % plane alpha (horizontal parallelogram) and plane beta (vertical), meeting along line m
+  \coordinate (P) at (0,0);        % near end of the common line m
+  \coordinate (Q) at (1.30,2.05);  % far end of m
+  \coordinate (R) at (5.45,1.98);
+  \coordinate (S) at ($(P)+(R)-(Q)$);
+  \coordinate (U) at (0,2.42);
+  \coordinate (V) at ($(Q)+(U)-(P)$);
+  % A on line m; n drawn in alpha through A
+  \coordinate (A) at ($(P)!0.56!(Q)$);
+  \coordinate (N) at ($(A)+(1.97,0)$);
+
+  \draw (P)--(Q)--(R)--(S)--cycle;
+  \draw (P)--(U)--(V)--(Q);
+  \draw (A)--(N);
+
+  \node[above left] at (A) {$A$};
+  \node[right] at (N) {$n$};
+  \node[above right] at (Q) {$m$};
+  \node at ($(Q)+(-0.3,1.4)$) {$\beta$};
+  \node at ($(R)+(-0.65,-0.3)$) {$\alpha$};
+\end{tikzpicture}

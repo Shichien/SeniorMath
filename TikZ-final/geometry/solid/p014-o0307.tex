@@ -1,0 +1,30 @@
+\begin{tikzpicture}[scale=.58, every node/.style={font=\small}]
+  \coordinate (A) at (0,1);
+  \coordinate (B) at (3.3,0);
+  \coordinate (C) at (4.8,1.65);
+  \coordinate (A1) at (.8,6);
+  \coordinate (B1) at (3.8,3.9);
+  \coordinate (C1) at (5.6,5.6);
+  \coordinate (M) at (.533,4.333);
+  \coordinate (N) at (3.633,2.633);
+  \coordinate (E) at (4.32,1.12);
+  \coordinate (F) at (3.12,1.42);
+
+  \draw[dashed] (A)--(C);
+  \draw (A)--(B)--(C)--(C1)--(B1)--(A1)--cycle;
+  \draw (B)--(B1) (A1)--(C1);
+  \draw (A)--(A1) (C)--(C1);
+  \draw (M)--(N)--(E);
+  \draw[dashed] (M)--(F)--(E);
+
+  \node[below left] at (A) {$A$};
+  \node[below] at (B) {$B$};
+  \node[right] at (C) {$C$};
+  \node[above left] at (A1) {$A_1$};
+  \node[right] at (B1) {$B_1$};
+  \node[above right] at (C1) {$C_1$};
+  \node[left] at (M) {$M$};
+  \node[right] at (N) {$N$};
+  \node[below right] at (E) {$E$};
+  \node[below] at (F) {$F$};
+\end{tikzpicture}

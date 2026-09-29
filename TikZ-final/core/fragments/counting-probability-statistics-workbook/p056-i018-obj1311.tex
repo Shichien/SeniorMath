@@ -1,0 +1,66 @@
+\begin{tikzpicture}[x=1bp,y=-1bp,line cap=butt,line join=miter,>=Stealth]
+  \path[use as bounding box] (0,0) rectangle (408,230);
+  \clip (0,0) rectangle (408,230);
+
+  \newfontfamily\chartcjk{SimSun}
+  \font\chartnumber="Times New Roman" at 16.5bp
+  \font\chartxnumber="Times New Roman" at 17bp
+  \font\chartitalic="Times New Roman Italic" at 17bp
+  \font\chartparen="Times New Roman" at 18bp
+  \tikzset{
+    title/.style={font=\chartcjk\fontsize{20bp}{20bp}\selectfont,inner sep=0bp},
+    cjk/.style={font=\chartcjk\fontsize{18bp}{18bp}\selectfont,inner sep=0bp},
+    number/.style={font=\chartnumber,inner sep=0bp},
+    xnumber/.style={font=\chartxnumber,inner sep=0bp},
+    italic/.style={font=\chartitalic,inner sep=0bp}
+  }
+
+  \draw[line width=1.5bp,dash pattern=on 6bp off 4bp]
+    (55.5,42.5)--(103.5,42.5)
+    (55.5,73.5)--(125.5,73.5)
+    (55.5,94.5)--(79.5,94.5)
+    (55.5,116.5)--(149.5,116.5)
+    (55.5,179.5)--(171.5,179.5);
+
+  \draw[line width=1.5bp]
+    (55.5,179.5)--(79.5,179.5)
+    (79.5,94.5)--(103.5,94.5)
+    (103.5,42.5)--(125.5,42.5)
+    (125.5,73.5)--(149.5,73.5)
+    (149.5,116.5)--(171.5,116.5)
+    (171.5,179.5)--(195.5,179.5);
+  \draw[line width=1.5bp]
+    (79.5,94.5)--(79.5,200.5)
+    (103.5,42.5)--(103.5,200.5)
+    (125.5,42.5)--(125.5,200.5)
+    (149.5,73.5)--(149.5,200.5)
+    (171.5,116.5)--(171.5,200.5)
+    (195.5,179.5)--(195.5,200.5);
+
+  \draw[line width=1.5bp,-{Stealth[length=12bp,width=7bp]}]
+    (55.5,200.5)--(239,200.5);
+  \draw[line width=1.5bp,-{Stealth[length=11bp,width=8bp]}]
+    (55.5,202)--(55.5,22);
+
+  \node[title] at (83,14) {频率};
+  \draw[line width=1bp] (66,26.5)--(100,26.5);
+  \node[title] at (83,38) {组距};
+
+  \node[number,anchor=east] at (52,38.5) {0.150};
+  \node[number,anchor=east] at (52,69.5) {0.125};
+  \node[number,anchor=east] at (52,90.5) {0.100};
+  \node[number,anchor=east] at (52,112.5) {0.075};
+  \node[number,anchor=east] at (52,175.5) {0.025};
+
+  \node[italic] at (55.5,213.5) {O};
+  \node[xnumber] at (79.5,213.5) {2};
+  \node[xnumber] at (103.5,213.5) {4};
+  \node[xnumber] at (125.5,213.5) {6};
+  \node[xnumber] at (149.5,213.5) {8};
+  \node[xnumber] at (171.5,213.5) {10};
+  \node[xnumber] at (195.5,213.5) {12};
+  \node[cjk,anchor=west] at (225,218.5) {时间};
+  \node[font=\chartparen,inner sep=0bp] at (261.5,218.5) {(};
+  \node[cjk,anchor=west] at (266,218.5) {小时};
+  \node[font=\chartparen,inner sep=0bp] at (299,218.5) {)};
+\end{tikzpicture}

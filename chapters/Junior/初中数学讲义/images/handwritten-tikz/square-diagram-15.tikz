@@ -1,0 +1,6 @@
+\begin{tikzpicture}[thick,font=\small]
+\coordinate(A)at(0,2.5);\coordinate(B)at(0,0);\coordinate(C)at(2.5,0);\coordinate(D)at(2.5,2.5);\coordinate(M)at(.7,3.65);\coordinate(R)at(1.8,3.0);\coordinate(N)at(3.7,1.7);\draw(A)--(B)--(C)--(D)--cycle;\draw(-.3,4.3)--(4.3,1.3);\draw(A)--(M);\draw(B)--(R);\draw(C)--(N);\foreach\p/\a in {A/left,B/left,C/below,D/right,M/above,R/above,N/above}\node[\a]at(\p){$\p$};
+\draw (.55,3.75)--(.46,3.60)--(.61,3.51)
+      (1.65,3.10)--(1.56,2.95)--(1.71,2.86)
+      (3.55,1.80)--(3.46,1.65)--(3.61,1.56);
+\end{tikzpicture}

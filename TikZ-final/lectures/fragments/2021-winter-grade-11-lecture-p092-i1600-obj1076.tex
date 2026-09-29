@@ -1,0 +1,8 @@
+\begin{tikzpicture}[x=1bp,y=-1bp,line cap=round]
+  \path[use as bounding box] (0,0) rectangle (484,182);
+  \draw[line width=1.8bp] (29,15) rectangle (462,162);
+  \foreach \x in {46,128,211,293,376}{\foreach \y/\h in {33/28,74/28,114/29}{\draw[line width=1.8bp,fill=gray!18] (\x,\y) rectangle ++(67,\h);}}
+  \fill (35,153) circle (5pt); \fill (453,24) circle (5pt);
+  \node[left,font=\fontspec{Times New Roman}\itshape\fontsize{31}{31}\selectfont] at (24,161) {A};
+  \node[right,font=\fontspec{Times New Roman}\itshape\fontsize{31}{31}\selectfont] at (464,17) {B};
+\end{tikzpicture}

@@ -1,0 +1,13 @@
+\begin{tikzpicture}[thick]
+\coordinate (A) at (1.55,2.95);
+\coordinate (B) at (0,0);
+\coordinate (C) at (5,0);
+\coordinate (F) at ($(A)!.5!(C)$);
+\coordinate (U) at ($(B)!1cm!(A)$);
+\coordinate (V) at ($(B)!1cm!(C)$);
+\coordinate (K) at ($(U)!.5!(V)$);
+\coordinate (E) at ($(B)!(A)!(K)$);
+\draw (A)--(B)--(C)--cycle (B)--(E)--(F) (A)--(E);
+\foreach \p/\pos in {A/above,B/below left,C/below right,F/right,E/below}
+  \node[\pos] at (\p) {$\p$};
+\end{tikzpicture}

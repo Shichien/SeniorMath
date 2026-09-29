@@ -1,0 +1,20 @@
+\begin{tikzpicture}[scale=.95, every node/.style={font=\small}, line cap=round, line join=round]
+  % tetrahedron P-ABC, PA \perp ABC, D midpoint of BC, O on PD with AO \perp PD
+  \coordinate (B) at (0,0);
+  \coordinate (C) at (5.68,0.17);
+  \coordinate (A) at (3.8,1.5);
+  \coordinate (P) at (3.8,3.8);
+  \coordinate (D) at ($(B)!0.5!(C)$);
+  \coordinate (O) at ($(P)!0.47!(D)$);
+
+  \draw (P)--(B)--(C)--cycle;
+  \draw (P)--(D);
+  \draw[dashed] (P)--(A) (A)--(B) (A)--(C) (A)--(D) (A)--(O);
+
+  \node[above] at (P) {$P$};
+  \node[left] at (B) {$B$};
+  \node[right] at (C) {$C$};
+  \node[below] at (D) {$D$};
+  \node[above right] at (A) {$A$};
+  \node[above left] at (O) {$O$};
+\end{tikzpicture}

@@ -1,0 +1,11 @@
+\begin{tikzpicture}[x=.68cm,y=.68cm,>=Stealth,line cap=round,baseline=(current bounding box.center)]
+  \draw[->] (-4.0,0)--(5.80,0) node[right] {$x$};
+  \draw[->] (0,-2.55)--(0,3.35) node[above] {$y$};
+  \draw[line width=.85pt] plot[smooth] coordinates {(-3.42,1.22) (-3.12,-.55) (-2.72,-1.10) (-2.22,0) (-1.82,-.20) (-1.42,-1.72) (-1.05,-.78) (-.72,2.32) (-.45,1.28) (.24,.18) (.92,2.90) (1.52,2.14) (2.08,.05) (2.72,-1.66) (3.34,-1.83) (4.14,-.42) (4.92,1.36)};
+  \draw[dashed] (-3.42,0)--(-3.42,1.22);
+  \draw[dashed] (4.92,0)--(4.92,1.36);
+  \draw[fill=white,line width=.6pt] (-3.42,1.22) circle (.09);
+  \draw[fill=white,line width=.6pt] (4.92,1.36) circle (.09);
+  \node[below] at (-3.42,0) {$a$}; \node[below] at (4.92,0) {$b$};
+  \node[below left] at (0,0) {$O$};
+\end{tikzpicture}

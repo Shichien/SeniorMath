@@ -1,0 +1,19 @@
+\begin{tikzpicture}[scale=1.05, every node/.style={font=\small}]
+  \coordinate (B) at (0,0); \coordinate (C) at (2.80,0);
+  \coordinate (D) at (4.18,1.81); \coordinate (A) at (1.91,3.06);
+  \coordinate (A1) at (3.25,3.53);
+  \coordinate (E) at ($(A)!.52!(D)$);          % E on AD
+  \coordinate (F) at ($(B)+(C)-(D)$);          % BF parallel and equal to CD
+  \coordinate (P) at (intersection of A--E and B--A1);  % AE goes behind face A1BE
+  \draw (B)--(A)--(P); \draw[dashed] (P)--(E); \draw (E)--(D)--(C)--(B);
+  \draw (B)--(A1)--(E)--(B); \draw (E)--(C);
+  \draw[dashed] (B)--(D);
+  \draw (F)--(B); \draw (F)--(E); \draw (F)--(C);
+  \node[above left] at (A) {$A$};
+  \node[right] at (A1) {$A_1$};
+  \node[above right] at (E) {$E$};
+  \node[right] at (D) {$D$};
+  \node[left] at (B) {$B$};
+  \node[below] at (C) {$C$};
+  \node[below] at (F) {$F$};
+\end{tikzpicture}

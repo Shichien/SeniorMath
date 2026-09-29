@@ -1,0 +1,12 @@
+\begin{tikzpicture}[scale=.72, line join=round]
+  % unrolled cone lateral surface: semicircular sector, centre A, radius 4, angle pi
+  \coordinate (A) at (0,0); \coordinate (B) at (-4,0);
+  \coordinate (E) at (4,0); \coordinate (C) at (0,-4);
+  \coordinate (P) at ($(A)!.5!(C)$); % AP = 2
+  \draw (B)--(E) arc[start angle=0, end angle=-180, radius=4];
+  \draw (A)--(C) (B)--(P);
+  \node[above] at (A) {$A$};
+  \node[left] at (B) {$B$};
+  \node[below] at (C) {$C$};
+  \node[below right] at (P) {$P$};
+\end{tikzpicture}

@@ -1,0 +1,20 @@
+\begin{tikzpicture}[scale=1, every node/.style={font=\small}, line cap=round, line join=round]
+  % square ABCD; MD, NB perpendicular to plane ABCD, MD = NB = AB
+  \coordinate (A) at (0,0);
+  \coordinate (B) at (4.65,0);
+  \coordinate (D) at (1.5,1.0);
+  \coordinate (C) at ($(B)+(D)-(A)$);
+  \coordinate (M) at ($(D)+(0,4.4)$);
+  \coordinate (N) at ($(B)+(0,4.4)$);
+
+  \draw (A)--(B)--(C)--(N)--(M)--cycle;
+  \draw (N)--(B) (A)--(N);
+  \draw[dashed] (A)--(D)--(C) (D)--(M) (M)--(C);
+
+  \node[below] at (A) {$A$};
+  \node[below] at (B) {$B$};
+  \node[right] at (C) {$C$};
+  \node[below right] at (D) {$D$};
+  \node[left] at (M) {$M$};
+  \node[above right] at (N) {$N$};
+\end{tikzpicture}

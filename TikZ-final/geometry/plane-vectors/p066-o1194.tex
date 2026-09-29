@@ -1,0 +1,8 @@
+\begin{tikzpicture}[scale=.72, every node/.style={font=\small}, >={Stealth[length=2mm]}]
+  \coordinate (O) at (0,0); \coordinate (A) at (3.5,0); \coordinate (B) at (0,2.8);
+  \draw[->] (-.4,0)--(4.6,0) node[right] {$x$};
+  \draw[->] (0,-.4)--(0,3.8) node[above] {$y$};
+  \draw[->] (O)--(A) (O)--(B);
+  \foreach \p/\pos in {O/below left,A/below,B/left}
+    \node[\pos] at (\p) {$\p$};
+\end{tikzpicture}

@@ -1,0 +1,35 @@
+\begin{tikzpicture}[scale=1, line join=round]
+  % ---- left: P above alpha ----
+  \coordinate (a1) at (0.63,1.95); \coordinate (a2) at (3.13,1.95);
+  \draw (a1)--(a2)--++(0.45,0.82)--++(-2.5,0)--cycle;
+  \draw (0.04,0.14)--++(2.5,0)--++(0.45,0.79)--++(-2.5,0)--cycle;
+  \coordinate (P) at (2.27,3.85);
+  \coordinate (A) at (1.63,2.26); \coordinate (B) at (2.37,2.26);
+  \coordinate (C) at ($(P)!2!(A)$); \coordinate (D) at ($(P)!2!(B)$); % P,A,C and P,B,D collinear
+  % parts of AC, BD under plane alpha are hidden (not drawn)
+  \coordinate (Ac) at (intersection of A--C and a1--a2);
+  \coordinate (Bd) at (intersection of B--D and a1--a2);
+  \draw (P)--(A)--(B)--cycle;
+  \draw (Ac)--(C)--(D)--(Bd);
+  \node[above] at (P) {$P$};
+  \node[left] at (A) {$A$};
+  \node[right] at (B) {$B$};
+  \node[below left] at (C) {$C$};
+  \node[below] at (D) {$D$};
+  \node at (0.87,2.12) {$\alpha$};
+  \node at (0.28,0.27) {$\beta$};
+  % ---- right: P between alpha and beta ----
+  \draw (4.03,1.95)--++(2.5,0)--++(0.45,0.82)--++(-2.5,0)--cycle;
+  \draw (3.44,0.14)--++(2.5,0)--++(0.45,0.79)--++(-2.5,0)--cycle;
+  \coordinate (A') at (5.04,2.26); \coordinate (B') at (5.76,2.26);
+  \coordinate (P') at (5.32,1.75);
+  \coordinate (C') at ($(A')!3.15!(P')$); \coordinate (D') at ($(B')!3.15!(P')$); % A,P,C and B,P,D collinear
+  \draw (A')--(B')--(D')--(C')--cycle;
+  \node[left] at (A') {$A$};
+  \node[right] at (B') {$B$};
+  \node[left] at (P') {$P$};
+  \node[below left] at (C') {$C$};
+  \node[below] at (D') {$D$};
+  \node at (4.28,2.12) {$\alpha$};
+  \node at (3.70,0.27) {$\beta$};
+\end{tikzpicture}

@@ -1,0 +1,28 @@
+\begin{tikzpicture}[scale=.95, every node/.style={font=\small}, line cap=round, line join=round]
+  % rhombus ABCD, AC and BD meet at O, PO perpendicular to plane ABCD
+  \coordinate (A) at (0,0);
+  \coordinate (B) at (5.3,0);
+  \coordinate (D) at (-0.75,1.52);
+  \coordinate (C) at ($(B)+(D)-(A)$);
+  \coordinate (O) at ($(A)!0.5!(C)$);
+  \coordinate (P) at ($(O)+(0,4.1)$);
+  % F, G midpoints of PB, PD; E on PA with PA = 3PE
+  \coordinate (F) at ($(P)!0.5!(B)$);
+  \coordinate (G) at ($(P)!0.5!(D)$);
+  \coordinate (E) at ($(P)!1/3!(A)$);
+
+  \draw (A)--(B)--(C)--(P)--cycle;
+  \draw (A)--(D)--(P) (P)--(B);
+  \draw (G)--(E)--(F);
+  \draw[dashed] (D)--(C) (A)--(C) (D)--(B) (P)--(O) (G)--(F);
+
+  \node[below] at (A) {$A$};
+  \node[right] at (B) {$B$};
+  \node[right] at (C) {$C$};
+  \node[left] at (D) {$D$};
+  \node[below] at (O) {$O$};
+  \node[above] at (P) {$P$};
+  \node[above left] at (G) {$G$};
+  \node[above] at (E) {$E$};
+  \node[below] at (F) {$F$};
+\end{tikzpicture}

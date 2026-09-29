@@ -1,0 +1,5 @@
+\begin{tikzpicture}[x=.72cm,y=.72cm,baseline=(current bounding box.center)]
+  \draw[->] (-2.2,0)--(3.95,0) node[right] {$x$}; \draw[->] (0,-2.3)--(0,3.05) node[above] {$y$};
+  \draw[domain=-1.8:2.8,samples=120,smooth] plot (\x,{.34*(\x+1)^2*(\x-2)^2});
+  \node[below] at (-1,0) {$-1$}; \node[below] at (2,0) {$2$}; \node[below left] at (0,0) {$O$};
+\end{tikzpicture}

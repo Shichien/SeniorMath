@@ -1,0 +1,28 @@
+\begin{tikzpicture}[scale=1.1, every node/.style={font=\small}, line cap=round, line join=round]
+  % prism ABC-A1B1C1, lateral edges drawn horizontal
+  \coordinate (A1) at (0,0);
+  \coordinate (B1) at (1.39,1.52);
+  \coordinate (C1) at (0.14,3.40);
+  \coordinate (A)  at ($(A1)+(3.55,0)$);
+  \coordinate (B)  at ($(B1)+(3.55,0)$);
+  \coordinate (C)  at ($(C1)+(3.55,0)$);
+  % D, E, F midpoints of AB, BC, A1C1
+  \coordinate (D) at ($(A)!0.5!(B)$);
+  \coordinate (E) at ($(B)!0.5!(C)$);
+  \coordinate (F) at ($(A1)!0.5!(C1)$);
+
+  \draw (A1)--(A)--(B)--(C)--(C1)--cycle;
+  \draw (A)--(C) (A1)--(C) (C)--(D);
+  \draw[dashed] (A1)--(B1)--(C1) (B1)--(B);
+  \draw[dashed] (A1)--(D) (F)--(E);
+
+  \node[below left] at (A1) {$A_1$};
+  \node[below] at ($(A)+(0.15,0)$) {$A$};
+  \node[right] at (B) {$B$};
+  \node[above] at ($(C)+(0.1,0)$) {$C$};
+  \node[above left] at (C1) {$C_1$};
+  \node[below right] at (D) {$D$};
+  \node[above right] at (E) {$E$};
+  \node[left] at (F) {$F$};
+  \node[below left] at (B1) {$B_1$};
+\end{tikzpicture}

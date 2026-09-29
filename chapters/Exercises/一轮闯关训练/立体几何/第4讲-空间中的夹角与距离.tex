@@ -1,0 +1,835 @@
+\section{第4讲\quad 空间中的夹角与距离}
+\subsection{夯基础}
+\bktopic{异面直线的判定}
+
+\begin{example}[\bkstar{1}{5}]
+如图，正方体的所有面对角线中，与面对角线 $BC_1$ 成异面直线的有几条
+\bkfig{TikZ-final/geometry/solid/p027-o0571.tex}
+\begin{tasks}(1)
+    \task $7$ 条
+    \task $6$ 条
+    \task $5$ 条
+    \task $4$ 条
+\end{tasks}
+\end{example}
+\begin{solution}
+\textbf{答案：}C
+
+与面对角线 $BC_1$ 成异面直线的面对角线有 $A_1D$，$AC$，$B_1D_1$，$AB_1$，$CD_1$ 共 $5$ 条
+
+故选：C．
+\end{solution}
+
+\vspace{2em}
+
+\begin{example}[\bkstar{1}{5}]
+在三棱锥 $S-ABC$ 中，与 $AB$ 异面的棱为
+\begin{tasks}(4)
+    \task $BC$
+    \task $SA$
+    \task $SC$
+    \task $SB$
+\end{tasks}
+\end{example}
+\begin{solution}
+\textbf{答案：}C
+
+如图
+\bkfig{TikZ-final/geometry/solid/p074-o1462.tex}
+根据异面直线的判定定理，可知与 $AB$ 异面的棱是 $SC$
+
+故选：C．
+\end{solution}
+
+\vspace{2em}
+
+\begin{example}[\bkstar{2}{5}]
+如图，点 $P$，$Q$，$R$，$S$ 分别在正方体的四条棱上，并且是所在棱的中点，则直线 $PQ$ 与 $RS$ 是异面直线的一个图是
+\begin{tasks}(4)
+    \task \bkfig[0.2\textwidth]{TikZ-final/geometry/solid/p027-o0577.tex}
+    \task \bkfig[0.2\textwidth]{TikZ-final/geometry/solid/p027-o0579.tex}
+    \task \bkfig[0.2\textwidth]{TikZ-final/geometry/solid/p027-o0581.tex}
+    \task \bkfig[0.2\textwidth]{TikZ-final/geometry/solid/p027-o0583.tex}
+\end{tasks}
+\end{example}
+\begin{solution}
+\textbf{答案：}C
+
+A．$PQ$ 与 $RS$ 是两条平行且相等的线段，故选项 A 不满足条件
+
+B．$PQ$ 与 $RS$ 是两条平行且相等的线段，故选项 B 也不满足条件
+
+D．连接 $PR$，$SQ$
+
+由于 $PR$ 平行且等于 $\dfrac{1}{2}SQ$，故四边形 $SRPQ$ 为梯形
+
+故 $PQ$ 与 $RS$ 是两条相交直线，它们和棱交于同一个点，故选项 D 不满足条件
+\bkfig{TikZ-final/geometry/solid/p074-o1464.tex}
+C．$PQ$ 与 $RS$ 是两条既不平行，又不相交的直线，故选项 C 满足条件
+
+故选：C．
+\end{solution}
+
+\vspace{2em}
+
+\bktopic{异面直线所成角}
+
+\begin{example}[\bkstar{2}{5}]
+在正方体 $ABCD-A_1B_1C_1D_1$ 中，$A_1D$ 与 $BC_1$ 所成的角为
+\begin{tasks}(2)
+    \task $30^{\circ}$
+    \task $45^{\circ}$
+    \task $60^{\circ}$
+    \task $90^{\circ}$
+\end{tasks}
+\end{example}
+\begin{solution}
+\textbf{答案：}D
+
+连接 $B_1C$，则 $B_1C\px A_1D$，$B_1C\perp BC_1$．
+
+$\therefore A_1D\perp BC_1$，$\therefore A_1D$ 与 $BC_1$ 所成的角为 $90^{\circ}$．
+
+故选：D．
+\end{solution}
+
+\vspace{2em}
+
+\begin{example}[\bkstar{2}{5}]
+在正方体 $ABCD-A_1B_1C_1D_1$ 中，$E$ 为棱 $CC_1$ 的中点，则异面直线 $AE$ 与 $CD$ 所成角的正切值为
+\begin{tasks}(4)
+    \task $\dfrac{\sqrt{2}}{2}$
+    \task $\dfrac{\sqrt{3}}{2}$
+    \task $\dfrac{\sqrt{5}}{2}$
+    \task $\dfrac{\sqrt{7}}{2}$
+\end{tasks}
+\end{example}
+\begin{solution}
+\textbf{答案：}C
+
+由题意，取 $DD_1$ 的中点 $F$，连接 $EF$，$AF$
+\bkfig{TikZ-final/geometry/solid/p075-o1482.tex}
+则 $CD\px EF$，$\angle AEF$ 即为所求的角或其补角，设为 $\alpha$
+
+设正方体棱长为 $2a$，可得 $AF=\sqrt{5}a$，$EF=2a$
+
+在正方体 $ABCD-A_1B_1C_1D_1$ 中，易得 $CD\perp$ 平面 $ADD_1A_1$
+
+$\therefore EF\perp$ 平面 $ADD_1A_1$，又 $AF\subset$ 平面 $ADD_1A_1$
+
+$\therefore EF\perp AF$
+
+$$
+\therefore \tan\alpha=\dfrac{AF}{EF}=\dfrac{\sqrt{5}}{2}
+$$
+
+故选：C．
+\end{solution}
+
+\vspace{2em}
+
+\begin{example}[\bkstar{2}{5}]
+如图所示，正方体 $ABCD-A'B'C'D'$ 的棱长为 $1$，线段 $B'D'$ 上有点 $H$，满足 $D'H=1$，则异面直线 $DH$ 与 $CC'$ 所成角的大小为
+\bkfig{TikZ-final/geometry/solid/p028-o0600.tex}
+\end{example}
+\begin{solution}
+\textbf{答案：}$45^{\circ}$
+
+如图
+\bkfig{TikZ-final/geometry/solid/p075-o0600.tex}
+在正方体 $ABCD-A'B'C'D'$ 中
+
+$\because CC'\px DD'$
+
+$\therefore \angle D'DH$ 或其补角为异面直线 $DH$ 与 $CC'$ 所成角
+
+在 $\mathrm{Rt}\triangle DD'H$ 中，$DD'=1$，$D'H=1$
+
+$\therefore \triangle DD'H$ 为等腰直角三角形
+
+$\therefore \angle D'DH=45^{\circ}$
+
+$\therefore$ 异面直线 $DH$ 与 $CC'$ 所成角的大小为 $45^{\circ}$
+
+故答案为：$45^{\circ}$．
+\end{solution}
+
+\vspace{2em}
+
+\bktopic{线面角}
+
+\begin{example}[\bkstar{2}{5}]
+在正方体 $ABCD-A_1B_1C_1D_1$ 中，体对角线 $BD_1$ 和平面 $ABCD$ 所成角的余弦值为
+\begin{tasks}(4)
+    \task $\dfrac{\sqrt{3}}{3}$
+    \task $\dfrac{\sqrt{6}}{3}$
+    \task $\dfrac{\sqrt{3}}{2}$
+    \task $\dfrac{\sqrt{6}}{2}$
+\end{tasks}
+\end{example}
+\begin{solution}
+\textbf{答案：}B
+
+如图，在正方体 $ABCD-A_1B_1C_1D_1$ 中
+\bkfig{TikZ-final/geometry/solid/p076-o1500.tex}
+设棱长为 $1$，由 $BD=\sqrt{2}$，$BD_1=\sqrt{3}$
+
+$\because D_1D\perp$ 平面 $ABCD$
+
+$\therefore$ 体对角线 $BD_1$ 与平面 $ABCD$ 所成的角为 $\angle DBD_1$
+
+$$
+\cos\angle DBD_1=\dfrac{BD}{BD_1}=\dfrac{\sqrt{2}}{\sqrt{3}}=\dfrac{\sqrt{6}}{3}
+$$
+
+故选：B．
+\end{solution}
+
+\vspace{2em}
+
+\begin{example}[\bkstar{2}{5}]
+正四棱锥的侧棱长与底面边长均为 $1$，则侧棱与底面所成的角为
+\begin{tasks}(4)
+    \task $30^{\circ}$
+    \task $45^{\circ}$
+    \task $60^{\circ}$
+    \task $75^{\circ}$
+\end{tasks}
+\end{example}
+\begin{solution}
+\textbf{答案：}B
+
+如图，正四棱锥 $P-ABCD$ 中，过 $P$ 作 $PO\perp$ 底面 $ABCD$ 于点 $O$，连接 $AO$
+\bkfig{TikZ-final/geometry/solid/p076-o1501.tex}
+则 $AO$ 是 $AP$ 在底面 $ABCD$ 的射影
+
+可得 $\angle PAO$ 即为侧棱与底面所成的角
+
+$\because AO=\dfrac{\sqrt{2}}{2}AB=\dfrac{\sqrt{2}}{2}$，$PA=1$
+
+$$
+\therefore \cos\angle PAO=\dfrac{AO}{PA}=\dfrac{\sqrt{2}}{2}
+$$
+
+因此 $\angle PAO=45^{\circ}$，即侧棱与底面所成的角为 $45^{\circ}$
+
+故选：B．
+\end{solution}
+
+\vspace{2em}
+
+\bktopic{点面距离}
+
+\begin{example}[\bkstar{2}{5}]
+如图，在正方体 $ABCD-A_1B_1C_1D_1$ 中，棱长为 $1$，$E$，$F$ 分别为 $C_1D_1$ 与 $AB$ 的中点，$B_1$ 到平面 $A_1FCE$ 的距离为
+\bkfig{TikZ-final/geometry/solid/p029-o0613.tex}
+\begin{tasks}(1)
+    \task $\dfrac{\sqrt{3}}{2}$
+    \task $\dfrac{\sqrt{6}}{3}$
+    \task $\dfrac{\sqrt{10}}{5}$
+    \task $\dfrac{\sqrt{30}}{5}$
+\end{tasks}
+\end{example}
+\begin{solution}
+\textbf{答案：}B
+
+点 $B_1$ 到平面 $A_1FCE$ 的距离即点 $B_1$ 到平面 $A_1FC$ 的距离
+
+$\because$ 在正方体 $ABCD-A_1B_1C_1D_1$ 中，棱长为 $1$，$E$，$F$ 分别为 $C_1D_1$ 与 $AB$ 的中点
+
+$\therefore A_1F=CF=\dfrac{\sqrt{5}}{2}$，$A_1C=\sqrt{3}$
+
+$$
+\therefore S_{\triangle A_1CF}=\dfrac{1}{2}\times\sqrt{3}\times\dfrac{\sqrt{2}}{2}=\dfrac{\sqrt{6}}{4}
+$$
+
+设 $B_1$ 到平面 $A_1FC$ 的距离为 $d$
+
+由三棱锥 $B_1-A_1FC$ 的体积可得，$V_{B_1-A_1FC}=V_{C-A_1B_1F}$
+
+即 $\dfrac{1}{3}\times\dfrac{\sqrt{6}}{4}\times d=\dfrac{1}{3}\times\dfrac{1}{2}\times 1\times 1\times 1$，解得 $d=\dfrac{\sqrt{6}}{3}$
+
+$\therefore B_1$ 到平面 $A_1FCE$ 的距离为 $\dfrac{\sqrt{6}}{3}$
+
+故选：B．
+\end{solution}
+
+\vspace{2em}
+
+\begin{example}[\bkstar{3}{5}]
+长方体 $ABCD-A_1B_1C_1D_1$ 中，底面 $ABCD$ 是边长为 $4$ 的正方形，高为 $2$，则顶点 $A_1$ 到截面 $AB_1D_1$ 的距离为
+\bkfig{TikZ-final/geometry/solid/p029-o0614.tex}
+\begin{tasks}(1)
+    \task $\dfrac{\sqrt{6}}{3}$
+    \task $\dfrac{2\sqrt{6}}{3}$
+    \task $\dfrac{2}{3}$
+    \task $\sqrt{6}$
+\end{tasks}
+\end{example}
+\begin{solution}
+\textbf{答案：}B
+
+设顶点 $A_1$ 到截面 $AB_1D_1$ 的距离为 $h$
+\begin{align*}
+&V_{A-A_1B_1D_1}=\dfrac{1}{3}\times AA_1\times S_{\triangle A_1B_1D_1}=\dfrac{1}{3}\times 2\times\dfrac{1}{2}\times 4^2=\dfrac{16}{3}\\
+&S_{\triangle AB_1D_1}=\dfrac{1}{2}\times\sqrt{4^2+2^2-\left(\dfrac{1}{2}\times 4\sqrt{2}\right)^2}\times 4\sqrt{2}=4\sqrt{6}\\
+&V_{A_1-AB_1D_1}=\dfrac{1}{3}h\cdot S_{\triangle AB_1D_1}=\dfrac{1}{3}h\times 4\sqrt{6}
+\end{align*}
+$\because V_{A-A_1B_1D_1}=V_{A_1-AB_1D_1}$
+
+$$
+\therefore h=\dfrac{\dfrac{16}{3}}{\dfrac{4\sqrt{6}}{3}}=\dfrac{2\sqrt{6}}{3}
+$$
+
+故选：B．
+\end{solution}
+
+\vspace{2em}
+
+\subsection{刷中档}
+\bktopic{异面直线所成角}
+
+\begin{example}[\bkstar{3}{5}]
+如图所示，棱长皆相等的四面体 $S-ABC$ 中，$D$ 为 $SC$ 的中点，则 $BD$ 与 $SA$ 所成角的余弦值是
+\bkfig{TikZ-final/geometry/solid/p030-o0628.tex}
+\begin{tasks}(1)
+    \task $\dfrac{\sqrt{3}}{3}$
+    \task $\dfrac{\sqrt{2}}{3}$
+    \task $\dfrac{\sqrt{3}}{6}$
+    \task $\dfrac{\sqrt{2}}{6}$
+\end{tasks}
+\end{example}
+\begin{solution}
+\textbf{答案：}C
+
+如图，取 $AC$ 边中点 $E$，连接 $DE$，$BE$，则 $DE\px SA$
+\bkfig{TikZ-final/geometry/solid/p077-o1514.tex}
+$\therefore \angle EDB$ 或其补角为 $BD$ 与 $SA$ 所成角
+
+设四面体的棱长为 $2$，则
+
+在 $\triangle BDE$ 中，$DE=1$，$BD=\sqrt{3}$，$BE=\sqrt{3}$
+
+$$
+\therefore \cos\angle BDE=\dfrac{\dfrac{1}{2}}{\sqrt{3}}=\dfrac{\sqrt{3}}{6}
+$$
+
+故选：C．
+\end{solution}
+
+\vspace{2em}
+
+\begin{example}[\bkstar{3}{5}]
+如图所示，正四棱锥 $P-ABCD$ 的底面积为 $3$，体积为 $\dfrac{\sqrt{2}}{2}$，$E$ 为侧棱 $PC$ 的中点，则 $PA$ 与 $BE$ 所成的角为
+\bkfig{TikZ-final/geometry/solid/p030-o0629.tex}
+\begin{tasks}(2)
+    \task $\dfrac{\pi}{6}$
+    \task $\dfrac{\pi}{4}$
+    \task $\dfrac{\pi}{3}$
+    \task $\dfrac{\pi}{2}$
+\end{tasks}
+\end{example}
+\begin{solution}
+\textbf{答案：}C
+
+连接 $AC$，$BD$ 交于点 $O$，连接 $OE$，$PO$，易得 $OE\px PA$
+
+$\therefore$ 所求角为 $\angle BEO$
+
+由所给条件易得 $OA=OB=\dfrac{\sqrt{6}}{2}$，$V_{P-ABCD}=\dfrac{1}{3}\times 3\times PO=\dfrac{\sqrt{2}}{2}$
+
+解得 $PO=\dfrac{\sqrt{2}}{2}$，$\therefore PA=\sqrt{OP^2+OA^2}=\sqrt{2}$
+
+$OE=\dfrac{1}{2}PA=\dfrac{\sqrt{2}}{2}$，易得 $BE=\sqrt{2}$
+
+$\therefore \cos\angle OEB=\dfrac{1}{2}$
+
+$\therefore \angle OEB=\dfrac{\pi}{3}$
+
+故选：C．
+\end{solution}
+
+\vspace{2em}
+
+\bktopic{线面角}
+
+\begin{example}[\bkstar{3}{5}]
+在正方体 $ABCD-A_1B_1C_1D_1$ 中，直线 $A_1C_1$ 与平面 $ABC_1D_1$ 所成角的正弦值为
+\begin{tasks}(4)
+    \task $1$
+    \task $\dfrac{\sqrt{3}}{2}$
+    \task $\dfrac{\sqrt{2}}{2}$
+    \task $\dfrac{1}{2}$
+\end{tasks}
+\end{example}
+\begin{solution}
+\textbf{答案：}D
+
+如图所示，连接 $A_1D$，$AD_1$ 交于点 $O$，连接 $OC_1$
+\bkfig{TikZ-final/geometry/solid/p078-o1528.tex}
+在正方体 $ABCD-A_1B_1C_1D_1$ 中
+
+$\because AB\perp$ 平面 $ADD_1A_1$，$A_1D\subset$ 平面 $ADD_1A_1$
+
+$\therefore AB\perp A_1D$
+
+又 $A_1D\perp AD_1$，且 $AD_1\cap AB=A$
+
+$\therefore A_1D\perp$ 平面 $AD_1C_1B$
+
+所以 $\angle A_1C_1O$ 即为所求角
+
+在 $\mathrm{Rt}\triangle A_1C_1O$ 中，$\sin\angle A_1C_1O=\dfrac{1}{2}$
+
+所以直线 $A_1C_1$ 与平面 $ABC_1D_1$ 所成角的正弦值为 $\dfrac{1}{2}$
+
+故选：D．
+\end{solution}
+
+\vspace{2em}
+
+\begin{example}[\bkstar{3}{5}]
+在三棱锥 $P-ABC$ 中，$PA\perp$ 底面 $ABC$，$\angle BAC=120^{\circ}$，$AB=AC=1$，$PA=\sqrt{2}$，则直线 $PA$ 与平面 $PBC$ 所成角的正弦值为
+\begin{tasks}(4)
+    \task $\dfrac{2\sqrt{5}}{5}$
+    \task $\dfrac{2\sqrt{2}}{3}$
+    \task $\dfrac{\sqrt{5}}{5}$
+    \task $\dfrac{1}{3}$
+\end{tasks}
+\end{example}
+\begin{solution}
+\textbf{答案：}D
+
+$\because PA\perp$ 底面 $ABC$，$AB=AC=1$，$PA=\sqrt{2}$
+
+$\therefore \triangle PAB\cong\triangle PAC$，$PB=PC$
+
+取 $BC$ 中点 $D$，连接 $AD$，$PD$
+\bkfig{TikZ-final/geometry/solid/p079-o1542.tex}
+$\therefore PD\perp BC$，$AD\perp BC$
+
+$\therefore BC\perp$ 面 $PAD$
+
+$\therefore$ 面 $PAD\perp$ 面 $PBC$
+
+过 $A$ 作 $AO\perp PD$ 于 $O$，可得 $AO\perp$ 面 $PBC$
+
+$\therefore \angle APD$ 就是直线 $PA$ 与平面 $PBC$ 所成角
+
+在 $\mathrm{Rt}\triangle PAD$ 中，$AD=\dfrac{1}{2}$，$PA=\sqrt{2}$，$PD=\sqrt{PA^2+AD^2}=\dfrac{3}{2}$
+
+$$
+\sin\angle APD=\dfrac{AD}{PD}=\dfrac{1}{3}
+$$
+
+故选：D．
+\end{solution}
+
+\vspace{2em}
+
+\begin{example}[\bkstar{3}{5}]
+在长方体 $ABCD-A_1B_1C_1D_1$ 中，$AB=BC=4$，$AA_1=2$，则直线 $BC_1$ 与平面 $BB_1D_1D$ 所成角的正弦值为
+\end{example}
+\begin{solution}
+\textbf{答案：}$\dfrac{\sqrt{10}}{5}$
+
+依题意，画出图形，如图
+\bkfig{TikZ-final/geometry/solid/p079-o1543.tex}
+过 $C_1$ 作 $C_1H\perp B_1D_1$，垂足为 $H$
+
+由 $BB_1\perp$ 平面 $A_1B_1C_1D_1$，$C_1H\subset$ 平面 $A_1B_1C_1D_1$
+
+可得 $C_1H\perp BB_1$
+
+易证得 $C_1H\perp$ 平面 $BB_1D_1D$
+
+则 $\angle C_1BH$ 即为所求线面角的平面角
+
+因为 $AB=BC=4$，$AA_1=2$
+
+所以 $\sin\angle C_1BH=\dfrac{C_1H}{BC_1}=\dfrac{2\sqrt{2}}{2\sqrt{5}}=\dfrac{\sqrt{10}}{5}$
+
+故答案为：$\dfrac{\sqrt{10}}{5}$．
+\end{solution}
+
+\vspace{2em}
+
+\bktopic{点面距离}
+
+\begin{example}[\bkstar{3}{5}]
+正方体 $ABCD-A_1B_1C_1D_1$ 的棱长为 $1$，$E$，$F$ 分别为 $BB_1$，$CD$ 的中点，则点 $F$ 到平面 $A_1D_1E$ 的距离为
+\begin{tasks}(4)
+    \task $\dfrac{3\sqrt{2}}{10}$
+    \task $\dfrac{3\sqrt{5}}{10}$
+    \task $\dfrac{\sqrt{2}}{10}$
+    \task $\dfrac{\sqrt{5}}{10}$
+\end{tasks}
+\end{example}
+\begin{solution}
+\textbf{答案：}B
+
+取 $CC_1$ 的中点 $O$，连接 $D_1O$，$OE$，$OF$，$D_1F$，$EF$
+\bkfig{TikZ-final/geometry/solid/p080-o1560.tex}
+则 $\triangle D_1FO$ 的面积
+
+$$
+S=1^2-2\times\dfrac{1}{2}\times 1\times\dfrac{1}{2}-\dfrac{1}{2}\times\dfrac{1}{2}\times\dfrac{1}{2}=\dfrac{3}{8}
+$$
+
+点 $F$ 到平面 $A_1D_1E$ 的距离 $=$ 点 $F$ 到平面 $OD_1E$ 的距离 $h$
+
+由等体积可得
+
+$$
+\dfrac{1}{3}\times\dfrac{1}{2}\sqrt{1+\dfrac{1}{4}}\times 1\times h=\dfrac{1}{3}\times\dfrac{3}{8}\times 1
+$$
+
+$$
+\therefore h=\dfrac{3\sqrt{5}}{10}
+$$
+
+故选：B．
+\end{solution}
+
+\vspace{2em}
+
+\begin{example}[\bkstar{2}{5}]
+如图所示，在四棱锥 $S-ABCD$ 中，底面 $ABCD$ 是直角梯形，$AB\perp AD$，$AB\perp BC$，侧棱 $SA\perp$ 底面 $ABCD$，且 $SA=AB=BC=2$，$AD=1$，则点 $B$ 到平面 $SCD$ 的距离为
+\bkfig{TikZ-final/geometry/solid/p031-o0643.tex}
+\begin{tasks}(2)
+    \task $\dfrac{8}{5}$
+    \task $2\sqrt{2}$
+    \task $\dfrac{2\sqrt{15}}{15}$
+    \task $\dfrac{2\sqrt{6}}{3}$
+\end{tasks}
+\end{example}
+\begin{solution}
+\textbf{答案：}D
+
+$\because$ 底面 $ABCD$ 是直角梯形，$AB\perp AD$，$AB\perp BC$，$AB=BC=2$
+
+$\therefore S_{\triangle BCD}=2$
+
+$\because$ 侧棱 $SA\perp$ 底面 $ABCD$，且 $SA=AB=BC=2$，$AD=1$
+
+$\therefore SD=CD=\sqrt{5}$，$SC=2\sqrt{3}$
+
+$\therefore S_{\triangle SCD}=\dfrac{1}{2}\cdot 2\sqrt{3}\cdot\sqrt{5-3}=\sqrt{6}$
+
+设点 $B$ 到平面 $SCD$ 的距离为 $h$，则
+
+$\because V_{S-BCD}=V_{B-SCD}$
+
+$\therefore \dfrac{1}{3}\cdot 2\cdot 2=\dfrac{1}{3}\cdot\sqrt{6}h$
+
+$\therefore h=\dfrac{2\sqrt{6}}{3}$
+
+$\therefore$ 点 $B$ 到平面 $SCD$ 的距离为 $\dfrac{2\sqrt{6}}{3}$
+
+故选：D．
+\end{solution}
+
+\vspace{2em}
+
+\bktopic{二面角}
+
+\begin{example}[\bkstar{2}{5}]
+已知二面角 $\alpha-AB-\beta$ 的平面角是锐角 $\theta$，$\alpha$ 内一点 $C$ 到 $\beta$ 的距离为 $3$，点 $C$ 到棱 $AB$ 的距离为 $4$，那么 $\tan\theta$ 的值等于
+\begin{tasks}(4)
+    \task $\dfrac{4}{5}$
+    \task $\dfrac{3}{5}$
+    \task $\dfrac{3}{7}\sqrt{7}$
+    \task $\dfrac{1}{3}\sqrt{7}$
+\end{tasks}
+\end{example}
+\begin{solution}
+\textbf{答案：}C
+
+如图，作 $CE\perp AB$ 于 $E$，$CD\perp\beta$ 于 $D$，连接 $ED$
+\bkfig{TikZ-final/geometry/solid/p080-o1561.tex}
+由条件可知，$\angle CED=\theta$，$CD=3$，$CE=4$
+
+$\therefore ED=\sqrt{7}$，$\tan\theta=\dfrac{3}{\sqrt{7}}=\dfrac{3\sqrt{7}}{7}$
+
+故选：C．
+\end{solution}
+
+\vspace{2em}
+
+\begin{example}[\bkstar{2}{5}]
+设 $P$ 是二面角 $\alpha-l-\beta$ 内一点，$PA\perp$ 平面 $\alpha$，$PB\perp$ 平面 $\beta$，$A$，$B$ 为垂足，且 $\angle APB=60^{\circ}$，则二面角 $\alpha-l-\beta$ 的大小为
+\begin{tasks}(4)
+    \task $30^{\circ}$
+    \task $60^{\circ}$
+    \task $60^{\circ}$ 或 $120^{\circ}$
+    \task $120^{\circ}$
+\end{tasks}
+\end{example}
+\begin{solution}
+\textbf{答案：}D
+
+过点 $A$ 作 $AO\perp l$，交 $l$ 于 $O$ 点，连接 $BO$，$PO$
+\bkfig[0.35\textwidth]{TikZ-final/geometry/solid/p081-o1575.tex}
+$\because PA\perp$ 平面 $\alpha$，$l\subset\alpha$
+
+$\therefore PA\perp l$，且 $AO\cap PA=A$
+
+$\therefore l\perp$ 平面 $POA$
+
+$\because PO\subset$ 平面 $POA$
+
+$\therefore l\perp PO$
+
+$\because PB\perp$ 平面 $\beta$，$l\subset\beta$
+
+$\therefore PB\perp l$，
+
+又 $\because PB\cap PO=P$
+
+$\therefore l\perp$ 平面 $POB$，$l\perp OB$
+
+$\because$ 过一点有且只有一个平面垂直于一条直线
+
+$\therefore P$，$O$，$B$，$A$ 四点共面
+
+$\because l\perp OA$，$l\perp OB$
+
+$\therefore \angle AOB$ 为二面角 $\alpha-l-\beta$ 的平面角
+
+又 $\because \angle PAO=\angle PBO=90^{\circ}$，$\angle APB=60^{\circ}$
+
+$\therefore \angle AOB=120^{\circ}$
+
+$\therefore$ 二面角 $\alpha-l-\beta$ 的大小是 $120^{\circ}$
+
+故选：D．
+\end{solution}
+
+\vspace{2em}
+
+\begin{example}[\bkstar{2}{5}]
+正方体 $ABCD-A_1B_1C_1D_1$ 中，平面 $A_1BD$ 与平面 $ABCD$ 所成角的正切值为
+\begin{tasks}(4)
+    \task $\sqrt{2}$
+    \task $\dfrac{\sqrt{2}}{2}$
+    \task $\sqrt{3}$
+    \task $\dfrac{\sqrt{3}}{3}$
+\end{tasks}
+\end{example}
+\begin{solution}
+\textbf{答案：}A
+
+如图，连接 $AC$ 交 $BD$ 于 $O$，连接 $A_1O$
+\bkfig{TikZ-final/geometry/solid/p081-o1576.tex}
+$\because ABCD$ 为正方形
+
+$\therefore AO\perp BD$ 且 $O$ 为 $BD$ 中点
+
+$\because A_1B=A_1D$
+
+$\therefore A_1O\perp BD$
+
+$\therefore \angle A_1OA$ 为平面 $A_1BD$ 与平面 $ABCD$ 所成角
+
+设正方体的棱长为 $1$，则 $AO=\dfrac{1}{2}AC=\dfrac{\sqrt{2}}{2}$
+
+$\therefore \tan\angle A_1OA=\dfrac{AA_1}{AO}=\sqrt{2}$
+\end{solution}
+
+\vspace{2em}
+
+\subsection{提能力}
+\bktopic{异面直线所成角}
+
+\begin{example}[\bkstar{4}{5}]
+平面 $\alpha$ 过正方体 $ABCD-A_1B_1C_1D_1$ 的顶点 $A$，$\alpha\px$ 平面 $CB_1D_1$，$\alpha\cap$ 平面 $ABCD=m$，$\alpha\cap$ 平面 $ABB_1A_1=n$，则 $m$，$n$ 所成角的正弦值为
+\begin{tasks}(2)
+    \task $\dfrac{\sqrt{3}}{2}$
+    \task $\dfrac{\sqrt{2}}{2}$
+    \task $\dfrac{\sqrt{3}}{3}$
+    \task $\dfrac{1}{3}$
+\end{tasks}
+\end{example}
+\begin{solution}
+\textbf{答案：}A
+
+在原正方体的前方补一个正方体（如图）
+\bkfig[0.3\textwidth]{TikZ-final/geometry/solid/p082-o1589.tex}
+故平面 $\alpha$ 为平面 $AMQ$，$\therefore \alpha\cap$ 平面 $ABCD=m=AM$
+
+$\therefore AM\px B_1D_1$，即 $m\px B_1D_1$
+
+同理 $n\px D_1C$，$\therefore m$，$n$ 所成角为 $\angle CD_1B_1$
+
+又 $\because \triangle CD_1B_1$ 为正三角形，$\therefore \angle CD_1B_1=60^{\circ}$
+
+$\therefore m$，$n$ 所成角的正弦值为 $\dfrac{\sqrt{3}}{2}$
+
+故选：A．
+\end{solution}
+
+\vspace{2em}
+
+\begin{example}[\bkstar{3}{5}]
+如图所示，点 $P$ 在正方形 $ABCD$ 所在平面外，$PA\perp$ 平面 $ABCD$，$PA=AB$，则 $PB$ 与 $AC$ 所成的角是
+\bkfig{TikZ-final/geometry/solid/p032-o0657.tex}
+\begin{tasks}(1)
+    \task $90^{\circ}$
+    \task $60^{\circ}$
+    \task $45^{\circ}$
+    \task $30^{\circ}$
+\end{tasks}
+\end{example}
+\begin{solution}
+\textbf{答案：}B
+
+将其还原到正方体 $ABCD-PQRS$ 模型中，连接 $SC$，$AS$，则 $PB\px SC$
+\bkfig{TikZ-final/geometry/solid/p082-o1590.tex}
+$\therefore \angle ACS$（或其补角）是 $PB$ 与 $AC$ 所成的角
+
+$\because \triangle ACS$ 为正三角形
+
+$\therefore \angle ACS=60^{\circ}$
+
+$\therefore PB$ 与 $AC$ 所成的角是 $60^{\circ}$
+
+故选：B．
+\end{solution}
+
+\vspace{2em}
+
+\bktopic{异面直线的距离}
+
+\begin{example}[\bkstar{3}{5}]
+正方体 $ABCD-A_1B_1C_1D_1$ 的棱上到异面直线 $AB$，$CC_1$ 的距离相等的点的个数为
+\begin{tasks}(4)
+    \task $2$
+    \task $3$
+    \task $4$
+    \task $5$
+\end{tasks}
+\end{example}
+\begin{solution}
+\textbf{答案：}C
+
+如图：正方体 $ABCD-A_1B_1C_1D_1$，$E$，$F$ 分别是 $BC$ 和 $A_1D_1$ 的中点，连接 $AF$ 和 $FC_1$
+\bkfig{TikZ-final/geometry/solid/p082-o1592.tex}
+根据正方体的性质知，$BB_1\perp AB$，$C_1C\perp B_1C_1$，故 $B_1$ 到异面直线 $AB$，$CC_1$ 的距离相等
+
+同理可得，$D$ 到异面直线 $AB$，$CC_1$ 的距离相等
+
+又有 $AB\perp BC$，$C_1C\perp BC$，故 $E$ 到异面直线 $AB$，$CC_1$ 的距离相等
+
+$F$ 为 $A_1D_1$ 的中点，易计算 $FA=FC_1$，故 $F$ 到异面直线 $AB$，$CC_1$ 的距离相等，共有 $4$ 个点
+
+故选：C．
+\end{solution}
+
+\vspace{2em}
+
+\bktopic{线面角}
+
+\begin{example}[\bkstar{3}{5}]
+把正方形 $ABCD$ 沿对角线 $AC$ 折起，当以 $A$，$B$，$C$，$D$ 四点为顶点的三棱锥体积最大时，直线 $BD$ 和平面 $ABC$ 所成的角的大小为
+\begin{tasks}(2)
+    \task $90^{\circ}$
+    \task $60^{\circ}$
+    \task $45^{\circ}$
+    \task $30^{\circ}$
+\end{tasks}
+\end{example}
+\begin{solution}
+\textbf{答案：}C
+
+把正方形 $ABCD$（如图1）沿对角线 $AC$ 折起（如图2）
+\bkfig[0.45\textwidth]{TikZ-final/geometry/solid/p083-o1605.tex}
+设 $AC\cap BD=O$，则 $DO\perp AC$，且 $BO=DO$
+
+当以 $A$，$B$，$C$，$D$ 四点为顶点的三棱锥 $D-ABC$ 的体积最大时
+
+点 $D$ 到平面 $ABC$ 的距离最大，此时平面 $ACD\perp$ 平面 $ABC$
+
+又 $\because$ 平面 $ACD\cap$ 平面 $ABC=AC$，$DO\subset$ 平面 $ACD$，$DO\perp AC$
+
+$\therefore DO\perp$ 平面 $ABC$
+
+又 $\because BO\subset$ 平面 $ABC$，$\therefore BO\perp DO$，即 $\angle BOD=90^{\circ}$
+
+$\therefore BO$ 是 $BD$ 在平面 $ABC$ 上的射影
+
+$\therefore \angle OBD$ 就是直线 $BD$ 与平面 $ABC$ 所成的角
+
+在 $\mathrm{Rt}\triangle BOD$ 中，$BO=DO$
+
+$\therefore \angle OBD=45^{\circ}$
+
+即直线 $BD$ 与平面 $ABC$ 所成的角的大小为 $45^{\circ}$
+
+故选：C．
+\end{solution}
+
+\vspace{2em}
+
+\begin{example}[\bkstar{3}{5}]
+在平面四边形 $ABCD$ 中，$AC\perp BC$，$BC=1$，$AB=2$，将 $\triangle ABC$ 沿对角线 $AC$ 所在的直线折起，使平面 $ABC\perp$ 平面 $ACD$，则直线 $AB$ 与平面 $ACD$ 所成角为
+\begin{tasks}(4)
+    \task $\dfrac{\pi}{3}$
+    \task $\dfrac{\pi}{6}$
+    \task $\dfrac{5\pi}{6}$
+    \task $\dfrac{2\pi}{3}$
+\end{tasks}
+\end{example}
+\begin{solution}
+\textbf{答案：}B
+
+在平面四边形 $ABCD$ 中，$AC\perp BC$
+
+$BC=1$，$AB=2$，将 $\triangle ABC$ 沿对角线 $AC$ 所在的直线折起，使平面 $ABC\perp$ 平面 $ACD$，如图
+\bkfig[0.4\textwidth]{TikZ-final/geometry/solid/p083-o1606.tex}
+在四面体 $ABCD$ 中，$AC\perp BC$，平面 $ABC\perp$ 平面 $ACD$
+
+$\therefore BC\perp$ 平面 $ADC$
+
+直线 $AB$ 与平面 $ACD$ 所成角为 $\angle BAC$，$BC=1$，$AB=2$
+
+$\therefore$ 直线 $AB$ 与平面 $ACD$ 所成角为：$\dfrac{\pi}{6}$
+
+故选：B．
+\end{solution}
+
+\vspace{2em}
+
+\bktopic{二面角}
+
+\begin{example}[\bkstar{3}{5}]
+已知正四棱柱 $ABCD-A_1B_1C_1D_1$ 的体积为 $\sqrt{3}$，底面 $ABCD$ 的边长为 $1$，则二面角 $A-CD_1-D$ 的余弦值为
+\begin{tasks}(4)
+    \task $\dfrac{\sqrt{3}}{7}$
+    \task $\dfrac{\sqrt{7}}{7}$
+    \task $\dfrac{\sqrt{21}}{7}$
+    \task $\dfrac{2\sqrt{7}}{7}$
+\end{tasks}
+\end{example}
+\begin{solution}
+\textbf{答案：}C
+
+如图
+\bkfig{TikZ-final/geometry/solid/p084-o1619.tex}
+过 $D$ 作 $DO\perp CD_1$，交 $D_1C$ 于 $O$，连接 $AO$
+
+则 $\angle AOD$ 就是二面角 $A-CD_1-D$ 的平面角
+
+$\because$ 四棱柱 $ABCD-A_1B_1C_1D_1$ 的体积为 $\sqrt{3}$，底面 $ABCD$ 的边长为 $1$
+
+$\therefore AA_1=\sqrt{3}$，在 $\mathrm{Rt}\triangle CDD_1$ 中，$CD=1$，$DD_1=\sqrt{3}$
+
+可得 $CD_1=2$，$DO=\dfrac{\sqrt{3}}{2}$
+
+在 $\mathrm{Rt}\triangle ADO$ 中，$AO=\sqrt{AD^2+DO^2}=\dfrac{\sqrt{7}}{2}$
+
+$$
+\cos\angle AOD=\dfrac{OD}{AO}=\dfrac{\sqrt{3}}{2}\times\dfrac{2}{\sqrt{7}}=\dfrac{\sqrt{21}}{7}
+$$
+
+故选：C．
+\end{solution}

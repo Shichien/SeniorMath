@@ -1,0 +1,14 @@
+\begin{tikzpicture}[scale=.7, every node/.style={font=\small}]
+  \coordinate (A) at (-2,0); \coordinate (B) at (2,0);
+  \coordinate (C) at (2,3.25); \coordinate (D) at (-2,3.25);
+  \draw (0,3.25) ellipse (2 and .58);
+  \draw (D)--(C) (A)--(D) (B)--(C);
+  \fill (0,3.25) circle (1.15pt);
+  \draw (A) arc[start angle=180,end angle=360,x radius=2,y radius=.58];
+  \draw[dashed] (B) arc[start angle=0,end angle=180,x radius=2,y radius=.58];
+  \draw (A)--(B);
+  \node[left] at (A) {$A$};
+  \node[right] at (B) {$B$};
+  \node[right] at (C) {$C$};
+  \node[left] at (D) {$D$};
+\end{tikzpicture}

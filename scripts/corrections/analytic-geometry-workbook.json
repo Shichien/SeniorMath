@@ -1,0 +1,20 @@
+{
+  "replacements": [
+    {
+      "id": "exercise-20-tangent-lines",
+      "match": "故答案为： $2 x - 5 y + 1 7 = 0 { \\big { \\frac { \\mathtt { d } } { \\mathtt { s } } } } x = 4$",
+      "replacement": "故答案为：$2x - 5y + 17 = 0$ 或 $x = 4$"
+    },
+    {
+      "id": "exercise-11-tangent-lines",
+      "match": "故答案为： $2 x - 5 y + 1 7 = 0 { \\big { \\underline { { \\mathsf { E } } } } } { \\big \\rangle } x = 4$",
+      "replacement": "故答案为：$2x - 5y + 17 = 0$ 或 $x = 4$"
+    },
+    {
+      "id": "translated-coordinate-system",
+      "start": "$$\n\\{ \\begin{array} { l l } { { x ^ { \\prime } } ^ { 2 } + 2 y ^ { \\prime } ^ { 2 } + 4 x ^ { \\prime } + 4 y ^ { \\prime } = 0",
+      "end": "\\end{array} \n$$",
+      "replacement": "$$\n\\begin{cases}\n{x^\\prime}^2 + 2{y^\\prime}^2 + 4x^\\prime + 4y^\\prime = 0, \\\\\nmx^\\prime + ny^\\prime = 1.\n\\end{cases}\n$$"
+    }
+  ]
+}

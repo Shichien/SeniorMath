@@ -1,0 +1,22 @@
+\begin{tikzpicture}[x=1bp,y=-1bp,line cap=round,line join=round]
+  \path[use as bounding box] (0,0) rectangle (385,410);
+  \definecolor{back}{RGB}{19,16,14}
+  \definecolor{ink}{RGB}{52,46,45}
+  \pagecolor{back}
+  \begin{scope}[shift={(0,1)},draw=ink,text=ink]
+  \draw[-{Stealth[length=15bp,width=17bp]},line width=6bp] (0,248)--(384,248);
+  \draw[-{Stealth[length=15bp,width=17bp]},line width=6bp] (224,410)--(224,3);
+  \draw[line cap=butt,line width=7bp]
+    (60,196) .. controls (78,240) and (95,295) .. (127,312)
+    .. controls (159,330) and (190,314) .. (224,248)
+    .. controls (248,205) and (274,170) .. (300,170)
+    .. controls (330,170) and (351,219) .. (358,248)
+    .. controls (365,270) and (371,296) .. (374,313);
+  \draw[line width=4bp] (137,248)--(137,238) (311,248)--(311,238);
+  \node[inner sep=0bp,anchor=north,font=\fontsize{34bp}{34bp}\boldmath] at (135,253) {$-\!1$};
+  \node[inner sep=0bp,anchor=north,font=\fontsize{34bp}{34bp}\boldmath] at (310,253) {$1$};
+  \node[inner sep=0bp,anchor=north east,font=\fontsize{30bp}{30bp}\boldmath] at (210,256) {$O$};
+  \node[inner sep=0bp,anchor=west,font=\fontsize{34bp}{34bp}\boldmath] at (366,261) {$x$};
+  \node[inner sep=0bp,anchor=east,font=\fontsize{33bp}{33bp}\boldmath] at (211,23) {$y$};
+  \end{scope}
+\end{tikzpicture}

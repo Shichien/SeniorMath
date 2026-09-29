@@ -1,0 +1,30 @@
+\begin{tikzpicture}[x=5.8mm,y=5.8mm,line cap=round,line join=round,every node/.style={font=\small}]
+\coordinate (A) at (0,0);
+\coordinate (B) at (5.9,0);
+\coordinate (C) at (8.0,1.65);
+\coordinate (C1) at (8.0,6.1);
+\coordinate (B1) at (5.9,4.45);
+\coordinate (A1) at (0,4.45);
+\coordinate (D1) at (2.2,6.1);
+\coordinate (D) at (2.2,1.65);
+\coordinate (P) at (0.95,2.75);
+\coordinate (Q) at (0.95,5.18);
+
+\draw (A)--(A1)--(B1)--(B)--cycle;
+\draw (B)--(C)--(C1)--(B1);
+\draw (A1)--(D1)--(C1);
+\draw[densely dashed] (A)--(D)--(D1);
+\draw[densely dashed] (D)--(C);
+\draw[densely dashed] (A1)--(C);
+\draw[densely dashed] (A)--(P)--(Q);
+
+\node[below left] at (A) {$A$};
+\node[below] at (B) {$B$};
+\node[right] at (C) {$C$};
+\node[above right] at (C1) {$C_1$};
+\node[above left] at (B1) {$B_1$};
+\node[left] at (A1) {$A_1$};
+\node[above left] at (D1) {$D_1$};
+\node[above right] at (D) {$D$};
+\node[right] at (P) {$P$};
+\end{tikzpicture}

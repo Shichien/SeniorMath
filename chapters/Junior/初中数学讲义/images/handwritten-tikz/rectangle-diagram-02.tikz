@@ -1,0 +1,10 @@
+\begin{tikzpicture}[scale=.88,line width=.55pt,font=\small]
+  \coordinate (A) at (0,3.5); \coordinate (B) at (0,0); \coordinate (C) at (4.6,0); \coordinate (D) at (4.6,3.5);
+  \coordinate (E) at (1.89,0); \coordinate (F) at (4.6,1.54);
+  \path[name path=BF] (B)--(F);
+  \path[name path=ED] (E)--(D);
+  \path[name intersections={of=BF and ED,by=G}];
+  \draw (A)--(B)--(C)--(D)--cycle (A)--(C) (B)--(F) (E)--(D);
+  \node[below right,xshift=1pt,yshift=-1pt] at (G) {$G$};
+  \foreach \p/\pos in {A/above left,B/below left,C/below right,D/above right,E/below,F/right} \node[\pos] at (\p) {$\p$};
+\end{tikzpicture}

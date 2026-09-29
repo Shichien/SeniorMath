@@ -1,0 +1,17 @@
+\begin{tikzpicture}[scale=1, line join=round]
+  \coordinate (A) at (1.12,0.43); \coordinate (B) at (4.62,0.43);
+  \coordinate (A1) at (1.12,3.98); \coordinate (B1) at (4.62,3.98);
+  \coordinate (v) at (1.33,1.31);
+  \coordinate (C) at ($(B)+(v)$); \coordinate (C1) at ($(B1)+(v)$);
+  \coordinate (D) at ($(C1)!.64!(C)$); % D on edge CC1 (position as in original)
+  \draw (A)--(B)--(C)--(C1)--(A1)--cycle;
+  \draw (A1)--(B1)--(C1) (B1)--(B)--(A1) (B)--(D);
+  \draw[dashed] (A)--(C) (A)--(D)--(A1);
+  \node[below] at (A) {$A$};
+  \node[below] at (B) {$B$};
+  \node[right] at (C) {$C$};
+  \node[right] at (D) {$D$};
+  \node[above right] at (C1) {$C_1$};
+  \node[below right] at (B1) {$B_1$};
+  \node[left] at (A1) {$A_1$};
+\end{tikzpicture}

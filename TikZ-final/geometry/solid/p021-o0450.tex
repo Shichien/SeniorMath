@@ -1,0 +1,28 @@
+\begin{tikzpicture}[x=.72cm,y=.72cm,line cap=round,line join=round,
+  every node/.style={font=\small}]
+  \coordinate (A) at (0,0);
+  \coordinate (B) at (4.25,0);
+  \coordinate (C) at (5.72,1.42);
+  \coordinate (D) at (1.47,1.42);
+  \coordinate (A1) at (0,4.02);
+  \coordinate (B1) at (4.25,4.02);
+  \coordinate (C1) at (5.72,5.44);
+  \coordinate (D1) at (1.47,5.44);
+  \coordinate (O) at (2.86,.71);
+
+  \draw[line width=.55pt,dash pattern=on 3.3pt off 2.3pt]
+    (A)--(D)--(C) (D)--(D1) (D)--(B) (B1)--(O);
+  \draw[line width=.72pt]
+    (A)--(B)--(C)--(C1)--(D1)--(A1)--(A)
+    (A1)--(B1)--(C1) (B1)--(B) (A1)--(C1);
+
+  \node[below left] at (A) {$A$};
+  \node[below right] at (B) {$B$};
+  \node[right] at (C) {$C$};
+  \node[above left] at (D) {$D$};
+  \node[left] at (A1) {$A_1$};
+  \node[right] at (B1) {$B_1$};
+  \node[above right] at (C1) {$C_1$};
+  \node[above left] at (D1) {$D_1$};
+  \node[below] at (O) {$O$};
+\end{tikzpicture}

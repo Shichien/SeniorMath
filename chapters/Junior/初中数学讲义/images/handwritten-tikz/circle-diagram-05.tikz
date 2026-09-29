@@ -1,0 +1,12 @@
+\begin{tikzpicture}[thick]
+\coordinate (B) at (0,0);
+\coordinate (C) at (6.2,0);
+\coordinate (A) at (2.53,2.0);
+\coordinate (D) at (2.53,0);
+\draw (B)--(A)--(C)--cycle;
+\draw (A)--(D);
+\node[above] at (A) {$A$};
+\node[below left,xshift=1pt,yshift=1pt] at (B) {$B$};
+\node[below right,xshift=-1pt,yshift=1pt] at (C) {$C$};
+\node[below] at (D) {$D$};
+\end{tikzpicture}

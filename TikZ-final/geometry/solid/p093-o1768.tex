@@ -1,0 +1,30 @@
+\begin{tikzpicture}[scale=.9, every node/.style={font=\small}, line cap=round, line join=round]
+  % cube ABCD-A1B1C1D1, A origin, x along AB, y along AD, z along AA1
+  \coordinate (A)  at (0,0);
+  \coordinate (D)  at (2.24,0);
+  \coordinate (B)  at (-1.08,-1.02);
+  \coordinate (C)  at ($(B)+(D)$);
+  \coordinate (A1) at (0,2.26);
+  \coordinate (B1) at ($(B)+(A1)$);
+  \coordinate (C1) at ($(C)+(A1)$);
+  \coordinate (D1) at ($(D)+(A1)$);
+
+  % axes
+  \draw[-{Stealth[length=2mm]}] (A1) -- ($(A1)+(0,1.62)$) node[right] {$z$};
+  \draw[-{Stealth[length=2mm]}] (D) -- ($(D)+(1.96,0)$) node[below] {$y$};
+  \draw[-{Stealth[length=2mm]}] (B) -- ($(A)!1.98!(B)$) node[right] {$x$};
+
+  \draw (B)--(C)--(C1)--(B1)--cycle;
+  \draw (B1)--(A1)--(D1)--(C1);
+  \draw (C)--(D)--(D1);
+  \draw[dashed] (B)--(A)--(D) (A)--(A1);
+
+  \node[above left] at (A)  {$A$};
+  \node[left] at (B)  {$B$};
+  \node[below] at (C)  {$C$};
+  \node[below right] at (D)  {$D$};
+  \node[above left] at (A1) {$A_1$};
+  \node[left] at (B1) {$B_1$};
+  \node[above left] at (C1) {$C_1$};
+  \node[above] at (D1) {$D_1$};
+\end{tikzpicture}

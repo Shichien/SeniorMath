@@ -1,0 +1,24 @@
+\unskip%
+\definecolor{diagrambackground}{RGB}{19,16,14}%
+\definecolor{diagramink}{RGB}{52,47,46}%
+\begin{tikzpicture}[x=.012cm,y=-.012cm,baseline=(current bounding box.center),line width=2.5pt,
+  draw=diagramink,text=diagramink,
+  every node/.style={font=\small,inner sep=1pt}]
+  \path[use as bounding box] (0,0) rectangle (427,372);
+  \begin{pgfinterruptboundingbox}
+  \begin{scope}
+  \fill[diagrambackground] (-10,-10) rectangle (437,382);
+  \clip (0,0) rectangle (427,372);
+  \draw[-{Stealth[length=10pt,width=8pt]}] (0,204)--(426,204);
+  \draw[-{Stealth[length=10pt,width=8pt]}] (204,371)--(204,8);
+  \draw (203,203) ellipse[x radius=140,y radius=111];
+  \draw (115,204)--(204,94)--(348,204);
+  \node[above left] at (204,94) {$B$};
+  \node[below] at (115,204) {$C$};
+  \node[below right] at (340,207) {$A$};
+  \node[below left] at (204,204) {$O$};
+  \node[below] at (418,204) {$x$};
+  \node[left] at (198,20) {$y$};
+  \end{scope}
+  \end{pgfinterruptboundingbox}
+\end{tikzpicture}\ignorespaces

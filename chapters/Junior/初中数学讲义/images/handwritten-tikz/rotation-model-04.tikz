@@ -1,0 +1,36 @@
+\begin{tikzpicture}[scale=.85,line width=.5pt,font=\small,line join=round]
+  \coordinate (A1) at (1,1);
+  \coordinate (A2) at (2.29,1.48);
+  \coordinate (A3) at (3.67,1.40);
+  \coordinate (A4) at (4.82,.65);
+
+  % Each shaded patch is the actual overlap of two consecutive squares.
+  \begin{scope}
+    \clip (0,0)--(2,0)--(2,2)--(0,2)--cycle;
+    \fill[black!25] (.98,1)--(1.88,2.79)--(3.60,2.02)--(2.79,.17)--cycle;
+  \end{scope}
+  \begin{scope}
+    \clip (.98,1)--(1.88,2.79)--(3.60,2.02)--(2.79,.17)--cycle;
+    \fill[black!25] (2.31,1.43)--(3.79,2.79)--(5.02,1.60)--(3.64,0)--cycle;
+  \end{scope}
+  \begin{scope}
+    \clip (2.31,1.43)--(3.79,2.79)--(5.02,1.60)--(3.64,0)--cycle;
+    \fill[black!25] (3.64,1.29)--(5.62,1.81)--(6,-.17)--(4.05,-.50)--cycle;
+  \end{scope}
+  \begin{scope}
+    \clip (3.64,1.29)--(5.62,1.81)--(6,-.17)--(4.05,-.50)--cycle;
+    \fill[black!25] (4.95,.67)--(6.69,1.57)--(7.59,-.17)--(5.85,-1.07)--cycle;
+  \end{scope}
+
+  \draw (0,0)--(2,0)--(2,2)--(0,2)--cycle;
+  \draw (.98,1)--(1.88,2.79)--(3.60,2.02)--(2.79,.17)--cycle;
+  \draw (2.31,1.43)--(3.79,2.79)--(5.02,1.60)--(3.64,0)--cycle;
+  \draw (3.64,1.29)--(5.62,1.81)--(6,-.17)--(4.05,-.50)--cycle;
+  \draw (4.95,.67)--(6.69,1.57)--(7.59,-.17)--(5.85,-1.07)--cycle;
+
+  \node at (.95,.88) {$A_1$};
+  \node at (2.34,2.10) {$A_2$};
+  \node at (3.95,1.65) {$A_3$};
+  \node at (4.76,.36) {$A_4$};
+  \node at (8.05,.25) {$\cdots$};
+\end{tikzpicture}

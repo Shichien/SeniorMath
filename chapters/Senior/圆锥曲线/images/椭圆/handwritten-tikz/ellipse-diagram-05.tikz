@@ -1,0 +1,4 @@
+\begin{tikzpicture}[scale=.85,font=\large,thick]
+\draw (0,0) ellipse (4 and 2);\draw (-2,0) ellipse (2 and 1);\draw (-4.8,0)--(4.8,0);
+\fill (-3.6,0) circle(2pt);\node[below] at (-3.6,0){$F$};\node[left] at (-4,.25){$P$};\node at (.25,.35){II};\node at (4.35,.35){I};
+\end{tikzpicture}

@@ -1,0 +1,82 @@
+\begin{tikzpicture}[x=1bp,y=-1bp,line cap=butt,line join=miter,>=Stealth]
+  \path[use as bounding box] (0,0) rectangle (351,210);
+  \clip (0,0) rectangle (351,210);
+
+  \newfontfamily\chartcjk{SimSun}
+  \font\chartnumber="Times New Roman" at 12bp
+  \font\chartxnumber="Times New Roman" at 12bp
+  \font\chartitalic="Times New Roman Italic" at 14bp
+  \tikzset{
+    cjk/.style={font=\chartcjk\fontsize{11bp}{11bp}\selectfont,inner sep=0bp},
+    axislabel/.style={font=\chartcjk\fontsize{10bp}{10bp}\selectfont,inner sep=0bp},
+    number/.style={font=\chartnumber,inner sep=0bp},
+    xnumber/.style={font=\chartxnumber,inner sep=0bp},
+    italic/.style={font=\chartitalic,inner sep=0bp}
+  }
+
+  \draw[line width=1bp,dash pattern=on 7bp off 3bp]
+    (29,43)--(172,43)
+    (29,61.5)--(198,61.5)
+    (29,80.5)--(147,80.5)
+    (29,99)--(223,99)
+    (29,118.5)--(248,118.5)
+    (29,136)--(98,136)
+    (29,155)--(123,155)
+    (29,174)--(72,174);
+
+  \draw[line width=1.5bp]
+    (72,174)--(98,174)
+    (98,136)--(123,136)
+    (123,155)--(147,155)
+    (147,80.5)--(172,80.5)
+    (172,43)--(198,43)
+    (198,61.5)--(223,61.5)
+    (223,99)--(248,99)
+    (248,118.5)--(273,118.5)
+    (273,118.5)--(298,118.5);
+  \draw[line width=1.5bp]
+    (72,174)--(72,193)
+    (98,136)--(98,193)
+    (123,136)--(123,193)
+    (147,80.5)--(147,193)
+    (172,43)--(172,193)
+    (198,43)--(198,193)
+    (223,61.5)--(223,193)
+    (248,99)--(248,193)
+    (273,118.5)--(273,193)
+    (298,118.5)--(298,193);
+
+  \draw[line width=1.3bp] (29,193)--(34,193);
+  \draw[line width=1.3bp]
+    (34,193)--(39,187)--(44,193)--(49,187)--(54,193);
+  \draw[line width=1.3bp,-{Stealth[length=12bp,width=9bp]}]
+    (53,193)--(330,193);
+  \draw[line width=1.5bp,-{Stealth[length=12bp,width=9bp]}]
+    (29,193)--(29,12);
+
+  \node[cjk] at (43,4) {频率};
+  \draw[line width=.7bp] (34,18)--(57,18);
+  \node[cjk] at (45,29) {组距};
+
+  \node[number,anchor=east] at (25,43) {10.00};
+  \node[number,anchor=east] at (25,62) {8.75};
+  \node[number,anchor=east] at (25,81) {7.50};
+  \node[number,anchor=east] at (25,100) {6.25};
+  \node[number,anchor=east] at (25,119) {5.00};
+  \node[number,anchor=east] at (25,137) {3.75};
+  \node[number,anchor=east] at (25,156) {2.50};
+  \node[number,anchor=east] at (25,175) {1.25};
+  \node[italic,anchor=east] at (27,202) {O};
+
+  \node[xnumber,anchor=north] at (72,196) {5.31};
+  \node[xnumber,anchor=north] at (98,196) {5.33};
+  \node[xnumber,anchor=north] at (123,196) {5.35};
+  \node[xnumber,anchor=north] at (147,196) {5.37};
+  \node[xnumber,anchor=north] at (172,196) {5.39};
+  \node[xnumber,anchor=north] at (198,196) {5.41};
+  \node[xnumber,anchor=north] at (223,196) {5.43};
+  \node[xnumber,anchor=north] at (248,196) {5.45};
+  \node[xnumber,anchor=north] at (273,196) {5.47};
+  \node[xnumber,anchor=north] at (298,196) {5.49};
+  \node[axislabel,anchor=west] at (312,202) {直径/mm};
+\end{tikzpicture}

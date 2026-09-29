@@ -1,0 +1,23 @@
+\begin{tikzpicture}[scale=.85, every node/.style={font=\small}, line cap=round, line join=round]
+  % P-ABCD, PA perp base ABCD (rectangle); A origin, x along AB, y along AD, z along AP
+  \coordinate (A) at (0,0);
+  \coordinate (B) at (-0.95,-0.55);
+  \coordinate (D) at (2.73,0);
+  \coordinate (C) at ($(B)+(D)$);
+  \coordinate (P) at (0,2.74);
+
+  % axes
+  \draw[-{Stealth[length=2mm]}] (P) -- (0,3.67) node[left] {$z$};
+  \draw[-{Stealth[length=2mm]}] (D) -- (4.23,0) node[below right] {$y$};
+  \draw[-{Stealth[length=2mm]}] (B) -- ($(A)!2.05!(B)$) node[below left] {$x$};
+
+  \draw[dashed] (P)--(A) (B)--(A)--(D);
+  \draw (P)--(B)--(C)--(D)--cycle;
+  \draw (P)--(C);
+
+  \node[above left] at (P) {$P$};
+  \node[above left] at (A) {$A$};
+  \node[left] at (B) {$B$};
+  \node[below] at (C) {$C$};
+  \node[below] at (D) {$D$};
+\end{tikzpicture}

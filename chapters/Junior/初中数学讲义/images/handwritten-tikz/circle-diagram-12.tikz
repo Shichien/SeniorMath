@@ -1,0 +1,6 @@
+\begin{tikzpicture}[thick]
+\coordinate (A) at (3,4); \coordinate (B) at (0,0); \coordinate (C) at (7,0); \coordinate (D) at (2.1,0); \coordinate (E) at (5.35,1.65);
+\draw (A)--(B)--(C)--cycle (A)--(D)--(E);
+\draw (D) ++(26:.55) arc[start angle=26,end angle=77,radius=.55] node[midway,above right]{$\alpha$};
+\foreach \p/\pos in {A/above,B/below left,C/below right,D/below,E/right} \node[\pos] at (\p) {$\p$};
+\end{tikzpicture}

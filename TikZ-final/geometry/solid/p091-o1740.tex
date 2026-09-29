@@ -1,0 +1,35 @@
+\begin{tikzpicture}[scale=.8, every node/.style={font=\small}, line cap=round, line join=round]
+  % polyhedron with square ABCD, MD perp ABCD, NB perp ABCD, MD=NB=AB;
+  % completed to cube ABCD-ENFM (auxiliary edges thin dashed)
+  \coordinate (A) at (0,0);
+  \coordinate (B) at (4.4,0);
+  \coordinate (D) at (1.37,0.94);
+  \coordinate (C) at ($(B)+(D)$);
+  \coordinate (E) at (0,4.36);
+  \coordinate (N) at ($(B)+(E)$);
+  \coordinate (M) at ($(D)+(E)$);
+  \coordinate (F) at ($(C)+(E)$);
+
+  % axes
+  \draw[-{Stealth[length=2mm]}] (B) -- (6.45,0) node[below right] {$x$};
+  \draw[-{Stealth[length=2mm]}] (E) -- (0,5.97) node[left] {$z$};
+  \draw[dashed, -{Stealth[length=2mm]}] (D) -- ($(A)!1.9!(D)$) node[right] {$y$};
+
+  % auxiliary cube edges
+  \draw[thin, dashed] (A)--(E) (E)--(M)--(F)--(N)--(E) (F)--(C);
+
+  % polyhedron
+  \draw[thick] (A)--(B)--(C)--(N)--(M)--cycle;
+  \draw[thick] (A)--(N);
+  \draw (N)--(B);
+  \draw[thick, dashed] (A)--(D)--(C) (M)--(D) (M)--(C);
+
+  \node[below] at (A) {$A$};
+  \node[below] at (B) {$B$};
+  \node[right] at (C) {$C$};
+  \node[below] at (D) {$D$};
+  \node[left] at (E) {$E$};
+  \node[above] at (M) {$M$};
+  \node[right] at (F) {$F$};
+  \node[right] at (N) {$N$};
+\end{tikzpicture}

@@ -1,0 +1,19 @@
+\begin{tikzpicture}[line width=.65pt,font=\small]
+\coordinate (A) at (0,0);
+\coordinate (B) at (0,3);
+\coordinate (C) at (3,3);
+\coordinate (D) at (3,0);
+\coordinate (E) at (-.58,.55);
+\coordinate (F) at (-.58,1.55);
+\coordinate (G) at (.42,1.55);
+\coordinate (H) at (.42,.55);
+\coordinate (M) at ($(C)!.5!(F)$);
+\coordinate (N) at ($(D)!.5!(H)$);
+\draw (A)--(B)--(C)--(D)--cycle;
+\draw (E)--(F)--(G)--(H)--cycle;
+\draw (F)--(C);
+\draw (D)--(H);
+\draw (M)--(N);
+\foreach \p/\a in {A/below,B/above,C/above,D/below,E/left,F/left,G/right,H/right,M/above left,N/above right}
+  \node[\a,inner sep=1pt] at (\p) {$\p$};
+\end{tikzpicture}

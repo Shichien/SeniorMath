@@ -1,0 +1,5 @@
+\begin{tikzpicture}[>=stealth,thick]
+\draw[->](-4,0)--(4,0)node[right]{$x$};\draw[->](0,-3.2)--(0,4)node[above]{$y$};\draw(-3.6,-2.7)--(2.6,3.4);
+\draw[domain=.55:3.5,smooth,variable=\x]plot({\x},{2.4/\x});\draw[domain=-3.5:-.55,smooth,variable=\x]plot({\x},{2.4/\x});
+\node[below right]at(0,0){$O$};\node[right]at(1.1,2.2){$M$};\node[below]at(-2.1,-1.15){$N$};
+\end{tikzpicture}

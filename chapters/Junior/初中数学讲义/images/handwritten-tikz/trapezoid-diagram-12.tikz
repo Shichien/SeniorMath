@@ -1,0 +1,12 @@
+\begin{tikzpicture}[thick,font=\small,line join=round]
+% CA=CB and CD=CE, so the two marked angles are equal by symmetry.
+\coordinate(A)at(.75,2.395);\coordinate(B)at(0,0);\coordinate(C)at(4.2,0);
+\coordinate(D)at(1.785,1.6765);\coordinate(E)at(1.26,0);\coordinate(O)at(1.05,.986);
+\draw(A)--(B)--(C)--cycle;
+\draw(B)--(D) (A)--(E) (D)--(E);
+\draw (B)++(0:.27) arc[start angle=0,end angle=43.21,radius=.27];
+\draw (A)++(-34.77:.27) arc[start angle=-34.77,end angle=-77.98,radius=.27];
+\node at(.42,.23){$1$};\node at(.93,1.92){$2$};
+\foreach\p/\a in {A/above,B/below left,C/right,D/above,E/below,O/left}
+  \node[\a]at(\p){$\p$};
+\end{tikzpicture}

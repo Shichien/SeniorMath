@@ -1,0 +1,12 @@
+\begin{tikzpicture}[scale=.75, every node/.style={font=\small}]
+  \coordinate (A) at (0,0); \coordinate (B) at (4.30,0);
+  \coordinate (C) at (5.30,2.35); \coordinate (D) at (1.00,2.35);
+  \coordinate (E) at (3.15,2.35);
+  \draw (A)--(B)--(C)--(D)--cycle;
+  \draw (A)--(E);
+  \node[below left] at (A) {$A$};
+  \node[below right] at (B) {$B$};
+  \node[above right] at (C) {$C$};
+  \node[above left] at (D) {$D$};
+  \node[above] at (E) {$E$};
+\end{tikzpicture}

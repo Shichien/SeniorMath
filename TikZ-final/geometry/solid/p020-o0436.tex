@@ -1,0 +1,15 @@
+\begin{tikzpicture}[scale=.77, every node/.style={font=\large}]
+  \coordinate (A) at (3.3,0);
+  \coordinate (B) at (6.8,2.55);
+  \coordinate (C) at (0,2.55);
+  \coordinate (D) at (1.8,5.5);
+  \coordinate (E) at (1.8,1.8);
+  \draw (C)--(D)--(B)--(A)--(C) (D)--(A);
+  \draw[dashed] (C)--(E)--(B);
+  \draw (D)--(E);
+  \node[below] at (A) {$A$};
+  \node[right] at (B) {$B$};
+  \node[left] at (C) {$C$};
+  \node[above] at (D) {$D$};
+  \node[below left] at (E) {$E$};
+\end{tikzpicture}

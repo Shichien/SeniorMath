@@ -1,0 +1,22 @@
+\begin{tikzpicture}[scale=.95, every node/.style={font=\small}]
+  \coordinate (O) at (0,0);
+  \coordinate (U) at (0,2.85); \coordinate (R) at (3.9,0); \coordinate (D) at (-2.35,-2.47);
+  \coordinate (UR) at ($(U)+(R)$); \coordinate (UD) at ($(U)+(D)$); \coordinate (RD) at ($(R)+(D)$);
+  % planes
+  \draw (O)--(U)--(UR)--(R)--cycle;      % alpha
+  \draw (U)--(UD)--(D)--(O);             % beta
+  \draw (R)--(RD)--(D);                  % gamma
+  % a in alpha, b in beta, c in gamma
+  \draw (.8,1.83)--(3.35,1.83);
+  \coordinate (b0) at ($(O)!.455!(D)$);
+  \draw (b0)--($(b0)+(0,1.87)$);
+  \coordinate (c0) at ($(O)!.354!(R)$);
+  \coordinate (c1) at ($(O)!.462!(R)+.822*(D)$);
+  \draw (c0)--(c1);
+  \node at (2.1,2.2) {$a$};
+  \node at (-.75,.25) {$b$};
+  \node at (1.0,-1.0) {$c$};
+  \node at (3.45,.55) {$\alpha$};
+  \node at (-.3,1.95) {$\beta$};
+  \node at (1.45,-2.0) {$\gamma$};
+\end{tikzpicture}

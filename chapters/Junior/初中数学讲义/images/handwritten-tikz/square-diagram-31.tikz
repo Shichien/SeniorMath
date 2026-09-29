@@ -1,0 +1,15 @@
+\begin{tikzpicture}[thick,font=\small,line join=round]
+\coordinate(A)at(0,1.40);\coordinate(B)at(-1.15,0);\coordinate(C)at(1.05,0);
+\coordinate(D)at(-2.55,1.15);\coordinate(E)at(-1.40,2.55);
+\coordinate(F)at(2.45,1.05);\coordinate(G)at(1.40,2.45);
+\coordinate(H)at(0,0);\coordinate(M)at(0,2.50);
+\coordinate(X)at(-.0060,1.0991);
+\draw(A)--(B)--(D)--(E)--cycle;
+\draw(A)--(C)--(F)--(G)--cycle;
+\draw(B)--(C) (E)--(G) (E)--(C) (B)--(G) (M)--(H);
+% CE and BG meet below A at a right angle; A remains the triangle vertex.
+\draw (X)--(.1049,.9837)--(-.0105,.8728)--(-.1214,.9882)--cycle;
+\foreach\p/\a in {B/below,C/below,D/left,E/above,G/above,F/right,M/above,H/below}
+  \node[\a]at(\p){$\p$};
+\node[above right=1pt]at(A){$A$};
+\end{tikzpicture}

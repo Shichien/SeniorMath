@@ -1,0 +1,11 @@
+% Exact coordinates from y=-2x+4; C-B is a 90-degree rotation of A-B.
+\begin{tikzpicture}[>=stealth,thick,scale=.72]
+\coordinate(O)at(0,0);\coordinate(A)at(0,4);\coordinate(B)at(2,0);\coordinate(C)at(6,2);
+\coordinate(G)at($(O)!.5!(B)$);\coordinate(U)at($(G)+(0,1)$);
+\coordinate(E)at(intersection of G--U and A--B);
+\draw[->](-1,0)--(7,0)node[right]{$x$};\draw[->](0,-1.2)--(0,5.6)node[above]{$y$};
+\draw($(A)!-.2!(B)$)--($(A)!1.23!(B)$);
+\draw(1,-1.2)--(1,5.6)node[above]{$l$};\draw(A)--(C)--(B);
+\pic[draw,angle radius=3mm]{right angle=A--B--C};
+\foreach\p/\pos in {A/left,B/below right,C/right,E/right,G/below left,O/below left}\node[\pos]at(\p){$\p$};
+\end{tikzpicture}

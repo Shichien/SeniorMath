@@ -1,0 +1,26 @@
+\begin{tikzpicture}[scale=.67, every node/.style={font=\small}]
+  \coordinate (FBL) at (0,0);
+  \coordinate (FBR) at (4.1,0);
+  \coordinate (FTR) at (4.1,3.15);
+  \coordinate (FTL) at (0,3.15);
+  \coordinate (BBL) at (1.65,1.45);
+  \coordinate (BBR) at (5.75,1.45);
+  \coordinate (BTR) at (5.75,4.60);
+  \coordinate (BTL) at (1.65,4.60);
+  \coordinate (M) at (4.1,1.575);
+  \coordinate (N) at (.825,.725);
+  \coordinate (Q) at (4.925,.725);
+
+  \draw (FBL)--(FBR)--(FTR)--(FTL)--cycle;
+  \draw (FTR)--(BTR)--(BBR)--(FBR);
+  \draw (FTL)--(BTL)--(BTR);
+  \draw[dashed] (FBL)--(BBL)--(BBR) (BBL)--(BTL);
+  \draw[dashed] (FTL)--(BBL) (N)--(M) (N)--(Q);
+  \draw (M)--(Q);
+
+  \node[left]        at (FTL) {$A$};
+  \node[above right] at (BBL) {$B$};
+  \node[right]       at (M)   {$M$};
+  \node[left]        at (N)   {$N$};
+  \node[below right] at (Q)   {$Q$};
+\end{tikzpicture}

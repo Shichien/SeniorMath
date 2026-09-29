@@ -1,0 +1,26 @@
+\begin{tikzpicture}[scale=1.1, line join=round]
+  \coordinate (A) at (0,0); \coordinate (B) at (3.90,0);
+  \coordinate (B1) at (3.90,3.65); \coordinate (A1) at (0,3.65);
+  \coordinate (d) at (1.40,1.10);
+  \coordinate (D) at ($(A)+(d)$); \coordinate (C) at ($(B)+(d)$);
+  \coordinate (C1) at ($(B1)+(d)$); \coordinate (D1) at ($(A1)+(d)$);
+  \coordinate (E) at ($(B)!.5!(B1)$); % midpoint of BB1
+  \coordinate (F) at ($(A)!.5!(A1)$); % midpoint of AA1
+  \coordinate (G) at ($(A)!.5!(D)$);  % midpoint of AD
+  \draw (A)--(B)--(C)--(C1)--(D1)--(A1)--cycle;
+  \draw (A1)--(B1)--(C1) (B1)--(B);
+  \draw[dashed] (A)--(D)--(C) (D)--(D1);
+  \draw (A1)--(E) (F)--(B);
+  \draw[dashed] (A1)--(D)--(E) (F)--(G)--(B);
+  \node[below left] at (A) {$A$};
+  \node[below right] at (B) {$B$};
+  \node[right] at (C) {$C$};
+  \node[above right] at (D) {$D$};
+  \node[right] at (E) {$E$};
+  \node[left] at (F) {$F$};
+  \node[below] at (G) {$G$};
+  \node[left] at (A1) {$A_1$};
+  \node[right] at (B1) {$B_1$};
+  \node[above right] at (C1) {$C_1$};
+  \node[above left] at (D1) {$D_1$};
+\end{tikzpicture}

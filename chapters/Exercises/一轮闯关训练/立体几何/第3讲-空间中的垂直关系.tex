@@ -1,0 +1,574 @@
+\section{第3讲\quad 空间中的垂直关系}
+\subsection{夯基础}
+\bktopic{直线与平面垂直}
+
+\begin{example}[\bkstar{1}{5}]
+垂直于同一平面的两条直线一定
+\begin{tasks}(4)
+    \task 平行
+    \task 相交
+    \task 异面
+    \task 以上都有可能
+\end{tasks}
+\end{example}
+\begin{solution}
+\textbf{答案：}A
+
+设直线 $a$、$b$ 都与平面 $\alpha$ 垂直，可以用反证法证明 $a$、$b$ 必定是平行直线．假设 $a$、$b$ 不平行，过直线 $b$ 与平面 $\alpha$ 的交点作直线 $d$，使 $d\px a$，$\therefore$ 直线 $d$ 与直线 $b$ 是相交直线，设它们确定平面 $\beta$，且 $\beta\cap\alpha=c$．$\because b\perp\alpha$，$c\subset\alpha$，$\therefore b\perp c$．同理可得 $a\perp c$，又 $\because d\px a$，$\therefore d\perp c$．这样经过一点作出两条直线 $b$、$d$ 都与直线 $c$ 垂直，这是不可能的，$\therefore$ 假设不成立，故原命题是真命题．
+
+故选：A．
+\end{solution}
+
+\vspace{2em}
+
+\begin{example}[\bkstar{1}{5}]
+一条直线与一个平面垂直的条件是这条直线
+\begin{tasks}(2)
+    \task 垂直于平面内的一条直线
+    \task 垂直于平面内的两条直线
+    \task 垂直于平面内的无数条直线
+    \task 垂直于平面内的两条相交直线
+\end{tasks}
+\end{example}
+\begin{solution}
+\textbf{答案：}D
+
+由线面垂直的判定定理，可得一条直线与一个平面垂直的条件是这条直线垂直于平面内的两条相交直线．
+
+故选：D．
+\end{solution}
+
+\vspace{2em}
+
+\begin{example}[\bkstar{2}{5}]
+已知直线 $m$ 和平面 $\alpha$，$\beta$，若 $\alpha\perp\beta$，$m\perp\alpha$，则
+\begin{tasks}(4)
+    \task $m\perp\beta$
+    \task $m\px\beta$
+    \task $m\subset\beta$
+    \task $m\px\beta$ 或 $m\subset\beta$
+\end{tasks}
+\end{example}
+\begin{solution}
+\textbf{答案：}D
+
+结合线面垂直和面面垂直可知答案为 D．
+
+故选：D．
+\end{solution}
+
+\vspace{2em}
+
+\begin{example}[\bkstar{2}{5}]
+正方体 $ABCD-A_1B_1C_1D_1$ 中，与 $AD_1$ 垂直的平面是
+\begin{tasks}(4)
+    \task 平面 $DD_1C_1C$
+    \task 平面 $A_1DB$
+    \task 平面 $A_1B_1C_1D_1$
+    \task 平面 $A_1DB_1$
+\end{tasks}
+\end{example}
+\begin{solution}
+\textbf{答案：}D
+
+正方体 $ABCD-A_1B_1C_1D_1$ 中，
+
+在 A 中，$AD_1$ 与平面 $DD_1C_1C$ 相交但不垂直，故 A 错误；
+
+在 B 中，$AD_1$ 与平面 $A_1DB$ 相交但不垂直，故 B 错误；
+
+在 C 中，$AD_1$ 与平面 $A_1B_1C_1D_1$ 相交但不垂直，故 C 错误；
+
+在 D 中，$AD_1\perp A_1D$，$AD_1\perp A_1B_1$，$A_1D\cap A_1B_1=A_1$，$\therefore AD_1\perp$ 平面 $A_1DB_1$，故 D 正确．
+
+故选：D．
+\end{solution}
+
+\vspace{2em}
+
+\begin{example}[\bkstar{2}{5}]
+如图，四个正方体中，直线 $AB$ 与平面 $CDE$ 垂直的是
+\bkfig[0.8\textwidth]{TikZ-final/geometry/solid/p020-o0431.tex}
+\begin{tasks}(4)
+    \task ①②
+    \task ②④
+    \task ①③
+    \task ②③
+\end{tasks}
+\end{example}
+\begin{solution}
+\textbf{答案：}B
+
+在题图①中，$AB$ 与 $CE$ 所成的角为 $45^{\circ}$，$\therefore$ 直线 $AB$ 与平面 $CDE$ 不垂直，故错误；
+
+在题图②中，$AB\perp EC$，$AB\perp ED$，$EC\cap ED=E$，$\therefore AB\perp$ 平面 $CDE$，故正确；
+
+在题图③中，$AB$ 与 $EC$ 所成的角为 $60^{\circ}$，$\therefore$ 直线 $AB$ 与平面 $CDE$ 不垂直，故错误；
+
+在题图④中，$AB\perp DE$，$AB\perp CE$，$EC\cap ED=E$，$\therefore AB\perp$ 平面 $CDE$，故正确．
+
+故选：B．
+\end{solution}
+
+\vspace{2em}
+
+\begin{example}[\bkstar{2}{5}]
+如图，在棱长为 $1$ 的正方体 $ABCD-A_1B_1C_1D_1$ 中．求证：$AC\perp$ 平面 $B_1BDD_1$．
+\bkfig{TikZ-final/geometry/solid/p020-o0433.tex}
+\end{example}
+\begin{solution}
+$\because$ 几何体 $ABCD-A_1B_1C_1D_1$ 是正方体，$\therefore$ 四边形 $ABCD$ 是正方形，$\therefore AC\perp BD$．又 $BB_1\perp$ 平面 $ABCD$，而 $AC\subset$ 平面 $ABCD$，$\therefore BB_1\perp AC$．
+
+$$
+\because \begin{cases} AC\perp BD \\ AC\perp BB_1 \end{cases}\text{，$BD$，$BB_1$ 是平面 $B_1BDD_1$ 内的两条相交直线}
+$$
+
+$\therefore AC\perp$ 平面 $B_1BDD_1$．
+\end{solution}
+
+\vspace{2em}
+
+\begin{example}[\bkstar{2}{5}]
+如图，在三棱锥 $P-ABC$ 中，$PA$ 垂直于平面 $ABC$，$AC\perp BC$，求证：$BC\perp$ 平面 $PAC$．
+\bkfig{TikZ-final/geometry/solid/p020-o0434.tex}
+\end{example}
+\begin{solution}
+$\because PA\perp$ 平面 $ABC$，$BC$ 在平面 $ABC$ 内，$\therefore PA\perp BC$．又 $\because AC\perp BC$，$PA\cap AC=A$，$\therefore BC\perp$ 平面 $PAC$．
+\end{solution}
+
+\vspace{2em}
+
+\bktopic{平面与平面垂直判定}
+
+\begin{example}[\bkstar{2}{5}]
+如图，在立体图形 $D-ABC$ 中，若 $AB=CB$，$AD=CD$，$E$ 是 $AC$ 的中点，则下列结论正确的是
+\bkfig{TikZ-final/geometry/solid/p020-o0436.tex}
+\begin{tasks}(1)
+    \task 平面 $ABC\perp$ 平面 $ABD$
+    \task 平面 $ABD\perp$ 平面 $BDC$
+    \task 平面 $ABC\perp$ 平面 $BDE$，且平面 $ADC\perp$ 平面 $BDE$
+    \task 平面 $ABC\perp$ 平面 $ADC$，且平面 $ADC\perp$ 平面 $BDE$
+\end{tasks}
+\end{example}
+\begin{solution}
+\textbf{答案：}C
+
+因为 $AB=CB$，且 $E$ 是 $AC$ 的中点，所以 $BE\perp AC$．同理有 $DE\perp AC$，且 $BE\cap DE=E$，于是 $AC\perp$ 平面 $BDE$．因为 $AC\subset$ 平面 $ABC$ 内，所以平面 $ABC\perp$ 平面 $BDE$．又因为 $AC\subset$ 平面 $ACD$，所以平面 $ACD\perp$ 平面 $BDE$．
+
+故选：C．
+\end{solution}
+
+\vspace{2em}
+
+\bktopic{直线与直线垂直}
+
+\begin{example}[\bkstar{2}{5}]
+如图，$PA\perp$ 矩形 $ABCD$，下列结论中不正确的是
+\bkfig[0.35\textwidth]{TikZ-final/geometry/solid/p021-o0449.tex}
+\begin{tasks}(4)
+    \task $PD\perp BD$
+    \task $PD\perp CD$
+    \task $PB\perp BC$
+    \task $PA\perp BD$
+\end{tasks}
+\end{example}
+\begin{solution}
+\textbf{答案：}A
+
+$\because PA\perp$ 矩形 $ABCD$，$\therefore PA\perp CD$，又 $AD\perp CD$，$PA\cap AD=A$，$\therefore CD\perp$ 平面 $PAD$，$\therefore PD\perp CD$，故 B 正确．
+
+又由 $AB\px CD$，则 $BA\perp$ 平面 $PAD$．$\because PA\perp$ 矩形 $ABCD$，$\therefore PA\perp BD$，若 $PD\perp BD$，由于 $PA\cap PD=P$，则 $BD\perp$ 平面 $PAD$，又 $BA\perp$ 平面 $PAD$，则过平面外一点有两条直线与平面垂直，不成立，故 $PD\perp BD$ 不正确，故 A 不正确．
+
+$\because PA\perp$ 矩形 $ABCD$，$\therefore$ 由三垂线定理得 $PB\perp BC$，故 C 正确．
+
+$\because PA\perp$ 矩形 $ABCD$，$\therefore$ 由直线与平面垂直的性质得 $PA\perp BD$，故 D 正确．
+
+故选：A．
+\end{solution}
+
+\vspace{2em}
+
+\begin{example}[\bkstar{2}{5}]
+如图，$O$ 为正方体 $ABCD-A_1B_1C_1D_1$ 的底面 $ABCD$ 的中心，则下列直线中与 $B_1O$ 垂直的是
+\bkfig{TikZ-final/geometry/solid/p021-o0450.tex}
+\begin{tasks}(4)
+    \task $A_1D$
+    \task $AA_1$
+    \task $A_1D_1$
+    \task $A_1C_1$
+\end{tasks}
+\end{example}
+\begin{solution}
+\textbf{答案：}D
+
+连接 $B_1D_1$．$\because ABCD-A_1B_1C_1D_1$ 是正方体，$\therefore BB_1\perp$ 平面 $A_1B_1C_1D_1$．$\because A_1C_1\subset$ 平面 $A_1B_1C_1D_1$，$\therefore BB_1\perp A_1C_1$．$\because A_1B_1C_1D_1$ 是正方形，$\therefore B_1D_1\perp A_1C_1$．$\because B_1D_1$，$BB_1$ 是平面 $BB_1D_1D$ 内的相交直线，$\therefore A_1C_1\perp$ 平面 $BB_1D_1D$．$\because B_1O\subset$ 平面 $BB_1D_1D$，$\therefore A_1C_1\perp B_1O$．
+
+故选：D．
+\end{solution}
+
+\vspace{2em}
+
+\subsection{刷中档}
+\bktopic{由点线面位置关系判定结论}
+
+\begin{example}[\bkstar{2}{5}]
+已知直线 $a$，$b$ 都不在平面 $\alpha$ 内，则下列命题错误的是
+\begin{tasks}(2)
+    \task 若 $a\px b$，$a\px\alpha$，则 $b\px\alpha$
+    \task 若 $a\px b$，$a\perp\alpha$，则 $b\perp\alpha$
+    \task 若 $a\perp b$，$a\px\alpha$，则 $b\perp\alpha$
+    \task 若 $a\perp b$，$a\perp\alpha$，则 $b\px\alpha$
+\end{tasks}
+\end{example}
+\begin{solution}
+\textbf{答案：}C
+
+当 $a\perp b$，$a\px\alpha$ 时，$b$ 与 $\alpha$ 的位置关系可以是平行或相交．
+
+故选：C．
+\end{solution}
+
+\vspace{2em}
+
+\begin{example}[\bkstar{2}{5}]
+已知不同的两条直线 $m$，$n$，不同的两个平面 $\alpha$，$\beta$，给出下列命题：
+\begin{enumerate}
+    \item[①] 若 $m\perp\alpha$，$n\perp\beta$，且 $m\perp n$，则 $\alpha\perp\beta$
+    \item[②] 若 $m\px\alpha$，$n\px\beta$，且 $m\px n$，则 $\alpha\px\beta$
+    \item[③] 若 $m\perp\alpha$，$n\px\beta$，且 $m\perp n$，则 $\alpha\px\beta$
+    \item[④] 若 $m\perp\alpha$，$n\px\beta$，且 $m\px n$，则 $\alpha\perp\beta$
+\end{enumerate}
+其中正确的命题是
+\begin{tasks}(4)
+    \task ②③
+    \task ①③
+    \task ①④
+    \task ③④
+\end{tasks}
+\end{example}
+\begin{solution}
+\textbf{答案：}C
+
+①若 $m\perp\alpha$，$n\perp\beta$，且 $m\perp n$，利用面面垂直的判定定理可得 $\alpha\perp\beta$，因此正确；
+
+②若 $m\px\alpha$，$n\px\beta$，且 $m\px n$，则 $\alpha\px\beta$ 或相交，因此不正确；
+
+③若 $m\perp\alpha$，$n\px\beta$，且 $m\perp n$，则 $\alpha\px\beta$ 或相交，因此不正确；
+
+④若 $m\perp\alpha$，$n\px\beta$，且 $m\px n$，利用面面垂直的判定定理可得 $\alpha\perp\beta$，因此正确．
+
+可知只有①④正确．
+
+故选：C．
+\end{solution}
+
+\vspace{2em}
+
+\begin{example}[\bkstar{2}{5}]
+已知 $l$，$m$ 是平面 $\alpha$ 外的两条不同直线，给出下列三个论断：
+
+①$l\perp m$；②$m\px\alpha$；③$l\perp\alpha$．
+
+以其中的两个论断作为条件，余下的一个论断作为结论，写出一个正确的命题：
+\end{example}
+\begin{solution}
+\textbf{答案：}若 $m\px\alpha$，$l\perp\alpha$，则 $l\perp m$．（答案不唯一）
+
+当①②作为条件时，$l$ 与平面 $\alpha$ 的位置关系可能为平行或相交，故③不成立；当①③作为条件时，②成立；当②③作为条件时，①成立．
+\end{solution}
+
+\vspace{2em}
+
+\bktopic{直线与平面垂直}
+
+\begin{example}[\bkstar{2}{5}]
+如果一条直线垂直于一个平面内的下列各种情况，能保证该直线与平面垂直的是
+\begin{enumerate}
+    \item[①] 三角形的两边
+    \item[②] 梯形的两边
+    \item[③] 圆的两条直径
+    \item[④] 正六边形的两条边
+\end{enumerate}
+\begin{tasks}(4)
+    \task ①③
+    \task ②
+    \task ②④
+    \task ①②④
+\end{tasks}
+\end{example}
+\begin{solution}
+\textbf{答案：}A
+
+因为三角形的任意两边是相交的，所以①可以证明线面垂直；因为梯形的上下两边是平行的，此时不相交，所以②不一定能保证线面垂直；因为圆的任意两条直径必相交，所以③可以证明线面垂直；因为正六边形的对边是平行的，所以④不一定能保证线面垂直．综上所述，正确的条件是：①③．
+
+故选：A．
+\end{solution}
+
+\vspace{2em}
+
+\begin{example}[\bkstar{3}{5}]
+如图，在正三棱锥 $P-ABC$ 中，$E$，$F$，$G$ 分别为线段 $PA$，$PB$，$BC$ 的中点．求证：$BC\perp$ 平面 $PAG$．
+\bkfig{TikZ-final/geometry/solid/p022-o0467.tex}
+\end{example}
+\begin{solution}
+由正三棱锥可知，$\triangle ABC$，$\triangle PBC$ 均为等腰三角形．$\because G$ 为线段 $BC$ 的中点，$\therefore AG\perp BC$，$PG\perp BC$，且 $AG\cap PG=G$，$AG$，$PG\subset$ 平面 $PAG$，$\therefore BC\perp$ 平面 $PAG$．
+\end{solution}
+
+\vspace{2em}
+
+\begin{example}[\bkstar{3}{5}]
+如图，在三棱锥 $D-ABC$ 中，已知 $AC\perp BC$，$AC\perp DC$，$BC=DC$，$E$，$F$ 分别为 $BD$，$CD$ 的中点．求证：$BD\perp$ 平面 $ACE$．
+\bkfig[0.35\textwidth]{TikZ-final/geometry/solid/p023-o0484.tex}
+\end{example}
+\begin{solution}
+因为 $AC\perp BC$，$AC\perp DC$，$BC\cap DC=C$，所以 $AC\perp$ 平面 $BCD$．又 $BD\subset$ 平面 $BCD$，所以 $BD\perp AC$．又 $BC=DC$，$E$ 为 $BD$ 的中点，所以 $BD\perp CE$．又 $AC\cap CE=C$，所以 $BD\perp$ 平面 $ACE$．
+\end{solution}
+
+\vspace{2em}
+
+\bktopic{直线与直线垂直}
+
+\begin{example}[\bkstar{3}{5}]
+如图，在 $\text{Rt}\triangle ABC$ 中，$\angle ABC=90^{\circ}$，$P$ 为 $\triangle ABC$ 所在平面外一点，$PA\perp$ 平面 $ABC$，则四面体 $P-ABC$ 中共有（\qquad）个直角三角形．
+\bkfig{TikZ-final/geometry/solid/p023-o0485.tex}
+\begin{tasks}(4)
+    \task $4$
+    \task $3$
+    \task $2$
+    \task $1$
+\end{tasks}
+\end{example}
+\begin{solution}
+\textbf{答案：}A
+
+在 $\text{Rt}\triangle ABC$ 中，$\angle ABC=90^{\circ}$，$P$ 为 $\triangle ABC$ 所在平面外一点，$PA\perp$ 平面 $ABC$，$\therefore BC\perp PA$，$BC\perp AB$，$\because PA\cap AB=A$，$\therefore BC\perp$ 平面 $PAB$，$\therefore$ 四面体 $P-ABC$ 中直角三角形有 $\triangle PAC$，$\triangle PAB$，$\triangle ABC$，$\triangle PBC$．
+
+故选：A．
+\end{solution}
+
+\vspace{2em}
+
+\begin{example}[\bkstar{3}{5}]
+如图，在 $\triangle ABC$ 中，$PA\perp$ 面 $ABC$，$AB=AC$，$D$ 是 $BC$ 的中点，则图中直角三角形的个数是
+\bkfig{TikZ-final/geometry/solid/p023-o0486.tex}
+\begin{tasks}(4)
+    \task $5$
+    \task $6$
+    \task $7$
+    \task $8$
+\end{tasks}
+\end{example}
+\begin{solution}
+\textbf{答案：}C
+
+$\because$ 在 $\triangle ABC$ 中，$PA\perp$ 面 $ABC$，$AB=AC$，$D$ 是 $BC$ 的中点，$\therefore$ 图中直角三角形有 $\triangle ABD$，$\triangle ADC$，$\triangle PAD$，$\triangle PAB$，$\triangle PAC$，$\triangle PBD$，$\triangle PCD$，共 $7$ 个．
+
+故选：C．
+\end{solution}
+
+\vspace{2em}
+
+\bktopic{平面与平面垂直的性质}
+
+\begin{example}[\bkstar{3}{5}]
+已知平面 $\alpha$，$\beta$，$\gamma$ 两两垂直，直线 $a$，$b$，$c$ 满足：$a\subset\alpha$，$b\subset\beta$，$c\subset\gamma$，则直线 $a$，$b$，$c$ 不可能满足以下哪种关系
+\begin{tasks}(4)
+    \task 两两垂直
+    \task 两两平行
+    \task 两两相交
+    \task 两两异面
+\end{tasks}
+\end{example}
+\begin{solution}
+\textbf{答案：}B
+
+如图，可得 $a$，$b$，$c$ 可能两两垂直，且两两异面．
+\bkfig[0.3\textwidth]{TikZ-final/geometry/solid/p070-o1385.tex}
+如图，可得 $a$，$b$，$c$ 可能两两相交．
+\bkfig[0.3\textwidth]{TikZ-final/geometry/solid/p070-o1386.tex}
+
+故选：B．
+\end{solution}
+
+\vspace{2em}
+
+\begin{example}[\bkstar{3}{5}]
+下列命题中错误的是
+\begin{tasks}(1)
+    \task 如果平面 $\alpha\perp$ 平面 $\gamma$，平面 $\beta\perp$ 平面 $\gamma$，$\alpha\cap\beta=l$，那么 $l\perp\gamma$
+    \task 如果平面 $\alpha\perp$ 平面 $\beta$，那么平面 $\alpha$ 内一定存在直线平行于平面 $\beta$
+    \task 如果平面 $\alpha\perp$ 平面 $\beta$，过 $\alpha$ 与 $\beta$ 交线上的点作交线的垂线，那么此垂线必垂直于 $\beta$
+    \task 如果平面 $\alpha$ 不垂直于平面 $\beta$，那么平面 $\alpha$ 内一定不存在直线垂直于平面 $\beta$
+\end{tasks}
+\end{example}
+\begin{solution}
+\textbf{答案：}C
+
+A．平面 $\alpha\perp$ 平面 $\gamma$，平面 $\beta\perp$ 平面 $\gamma$，$\alpha\cap\beta=l$，则 $l\perp\gamma$，命题正确；
+
+B．平面 $\alpha\perp$ 平面 $\beta$，不妨设 $\alpha\cap\beta=a$，作直线 $b\px a$，且 $b\subset\alpha$，则 $b\px\beta$，命题正确；
+
+C．平面 $\alpha\perp$ 平面 $\beta$，过 $\alpha$ 与 $\beta$ 交线上的点作交线的垂线时，该垂线不一定垂直于 $\beta$，命题错误；
+
+D．假设平面 $\alpha$ 内存在直线垂直于平面 $\beta$，则平面 $\alpha$ 垂直于平面 $\beta$，这与已知平面 $\alpha$ 与平面 $\beta$ 不垂直矛盾，所以假设不成立，命题正确．
+
+故选：C．
+\end{solution}
+
+\vspace{2em}
+
+\subsection{提能力}
+\bktopic{平面与平面垂直的性质}
+
+\begin{example}[\bkstar{3}{5}]
+如图所示，在四面体 $P-ABC$ 中，$PB=\sqrt{13}$，平面 $PAB\perp$ 平面 $ABC$，$\angle ABC=90^{\circ}$，$BC=6$，则 $PC=$
+\bkfig{TikZ-final/geometry/solid/p024-o0499.tex}
+\begin{tasks}(4)
+    \task $7$
+    \task $8$
+    \task $9$
+    \task $10$
+\end{tasks}
+\end{example}
+\begin{solution}
+\textbf{答案：}A
+
+因为平面 $PAB\perp$ 平面 $ABC$，$\angle ABC=90^{\circ}$，又因为 $BC\subset$ 平面 $ABC$，平面 $PAB\cap$ 平面 $ABC=AB$，所以 $BC\perp$ 平面 $PAB$．又因为 $PB\subset$ 平面 $PAB$，所以 $BC\perp PB$，则在直角三角形 $PBC$ 中，$PC=\sqrt{PB^2+BC^2}=\sqrt{13+36}=7$．
+
+故选：A．
+\end{solution}
+
+\vspace{2em}
+
+\begin{example}[\bkstar{3}{5}]
+在四面体 $ABCD$ 中，$AB\perp AD$，$AB=AD=BC=CD=1$，且平面 $ABD\perp$ 平面 $BCD$，$M$ 为 $AB$ 的中点，则线段 $CM$ 的长为
+\begin{tasks}(4)
+    \task $\sqrt{2}$
+    \task $\sqrt{3}$
+    \task $\dfrac{\sqrt{3}}{2}$
+    \task $\dfrac{\sqrt{2}}{2}$
+\end{tasks}
+\end{example}
+\begin{solution}
+\textbf{答案：}C
+\bkfig[0.3\textwidth]{TikZ-final/geometry/solid/p071-o1399.tex}
+因为 $AB\perp AD$，$AB=AD=1$，所以 $BD=\sqrt{2}$．又因为 $BC=CD=1$，所以 $BC\perp CD$．过点 $M$ 作 $MN\perp BD$ 交 $BD$ 于点 $N$，连结 $NC$，$MC$．因为平面 $ABD\perp$ 平面 $BCD$，平面 $ABD\cap$ 平面 $BCD=BD$，$MN\perp BD$，所以 $MN\perp$ 平面 $BCD$，所以 $MN\perp NC$．因为 $AB=AD=1$，$BC=CD=1$，$M$ 为 $AB$ 的中点，取 $BD$ 中点 $E$，连接 $CE$，在 $\text{Rt}\triangle ABD$ 和 $\text{Rt}\triangle CEN$ 中，计算得
+
+$$
+MN=\frac{\sqrt{2}}{4}\text{，}\quad CN=\sqrt{\left(\frac{\sqrt{2}}{2}\right)^2+\left(\frac{\sqrt{2}}{4}\right)^2}=\sqrt{\frac{5}{8}}\text{，}
+$$
+
+所以 $CM=\sqrt{MN^2+CN^2}=\dfrac{\sqrt{3}}{2}$．
+
+故选：C．
+\end{solution}
+
+\vspace{2em}
+
+\bktopic{平面与平面垂直的判定}
+
+\begin{example}[\bkstar{3}{5}]
+如图，以等腰直角三角形 $ABC$ 的斜边 $BC$ 上的高 $AD$ 为折痕，把 $\triangle ABD$ 和 $\triangle ACD$ 折成互相垂直的两个平面后，某学生得出下列四个结论．
+\begin{enumerate}
+    \item[①] $BD\perp AC$；
+    \item[②] $\triangle BAC$ 是等边三角形；
+    \item[③] 三棱锥 $D-ABC$ 是正三棱锥；
+    \item[④] 平面 $ADC\perp$ 平面 $ABC$．
+\end{enumerate}
+其中正确的是
+\bkfig[0.45\textwidth]{TikZ-final/geometry/solid/p025-o0512.tex}
+\begin{tasks}(4)
+    \task ①②④
+    \task ①②③
+    \task ②③④
+    \task ①③④
+\end{tasks}
+\end{example}
+\begin{solution}
+\textbf{答案：}B
+
+设 $\triangle ABC$ 的腰为 $a$，则斜边 $BC=\sqrt{2}a$．
+
+①$\because D$ 为 $BC$ 的中点，$\therefore AD\perp BC$，又平面 $ABD\perp$ 平面 $ACD$，平面 $ABD\cap$ 平面 $ACD=AD$，$BD\perp AD$，$BD\subset$ 平面 $ABD$，$\therefore BD\perp$ 平面 $ADC$，又 $AC\subset$ 平面 $ADC$，$\therefore BD\perp AC$，故①正确；
+
+②由①知，$BD\perp$ 平面 $ADC$，$CD\subset$ 平面 $ADC$，$\therefore BD\perp CD$，又 $BD=CD=\dfrac{\sqrt{2}}{2}a$，$\therefore$ 由勾股定理得 $BC=\sqrt{2}\cdot\dfrac{\sqrt{2}}{2}a=a$，又 $\because AB=AC=a$，$\therefore \triangle ABC$ 是等边三角形，故②正确；
+
+③$\because \triangle ABC$ 是等边三角形，$DA=DB=DC$，$\therefore$ 三棱锥 $D-ABC$ 是正三棱锥，故③正确；
+
+④$\because \triangle ADC$ 为等腰直角三角形，取斜边 $AC$ 的中点 $F$，则 $DF\perp AC$，又 $\triangle ABC$ 为等边三角形，连接 $BF$，则 $BF\perp AC$，$\therefore \angle BFD$ 为平面 $ADC$ 与平面 $ABC$ 的二面角的平面角，由 $BD\perp$ 平面 $ADC$ 可知，$\angle BDF$ 为直角，$\angle BFD$ 不是直角，故平面 $ADC$ 与平面 $ABC$ 不垂直，故④错误．
+
+综上所述，正确的结论是①②③．
+
+故选：B．
+\end{solution}
+
+\vspace{2em}
+
+\bktopic{直线与直线的垂直}
+
+\begin{example}[\bkstar{3}{5}]
+如图所示，四边形 $ABCD$ 中，$AD\px BC$，$AD=AB$，$\angle BAD=\angle BDC=90^{\circ}$，将 $\triangle ABD$ 沿 $BD$ 折起，使平面 $ABD\perp$ 平面 $BCD$，构成三棱锥 $A-BCD$，则在三棱锥 $A-BCD$ 中，下列说法不正确的是
+\bkfig[0.45\textwidth]{TikZ-final/geometry/solid/p025-o0513.tex}
+\begin{tasks}(2)
+    \task 直线 $BC\perp$ 直线 $AD$
+    \task 直线 $CD\perp$ 直线 $AB$
+    \task 直线 $CD\perp$ 平面 $ABD$
+    \task 平面 $ACD\perp$ 平面 $ABD$
+\end{tasks}
+\end{example}
+\begin{solution}
+\textbf{答案：}A
+\bkfig{TikZ-final/geometry/solid/p072-o1412.tex}
+取 $BD$ 的中点 $E$．连接 $AE$，则 $AE\perp BD$．$\because$ 平面 $ABD\perp$ 平面 $BCD$，$AE\subset$ 平面 $BCD$，$\therefore AE\perp$ 平面 $BCD$，又 $BC\subset$ 平面 $BCD$，$\therefore AE\perp BC$，假设 $BC\perp AD$，因为 $AD$ 与 $AE$ 交于 $E$，$\therefore BC\perp$ 平面 $ABD$，又 $BD\subset$ 平面 $BCD$，$\therefore BC\perp BD$，这与 $\angle BDC=90^{\circ}$ 相矛盾，故假设不成立，即直线 $BC\perp$ 直线 $AD$ 不成立．% 待核对：原书两处写“平面 BCD”（AE⊂平面BCD、BD⊂平面BCD），按原书照录，疑应为平面 ABD
+
+故选：A．
+\end{solution}
+
+\vspace{2em}
+
+\begin{example}[\bkstar{4}{5}]
+已知矩形 $ABCD$，$AB=1$，$BC=\sqrt{2}$，将 $\triangle ABD$ 沿矩形的对角线 $BD$ 所在的直线进行翻折，在翻折过程中
+\begin{tasks}(1)
+    \task 存在某个位置，使得直线 $AC$ 与直线 $BD$ 垂直
+    \task 存在某个位置，使得直线 $AB$ 与直线 $CD$ 垂直
+    \task 存在某个位置，使得直线 $AD$ 与直线 $BC$ 垂直
+    \task 对任意位置，三对直线“$AC$ 与 $BD$”，“$AB$ 与 $CD$”，“$AD$ 与 $BC$”均不垂直
+\end{tasks}
+\end{example}
+\begin{solution}
+\textbf{答案：}B
+
+作 $AE\perp BD$，$CF\perp BD$，依题意，$AB=1$，$BC=\sqrt{2}$，$AE=CF=\dfrac{\sqrt{6}}{3}$，$BE=EF=FD=\dfrac{\sqrt{3}}{3}$．
+
+A．若存在某个位置，使得直线 $AC$ 与直线 $BD$ 垂直，则 $\because BD\perp AE$，$\therefore BD\perp$ 平面 $AEC$，从而 $BD\perp EC$，这与已知矛盾，排除 A；
+
+B．若存在某个位置，使得直线 $AB$ 与直线 $CD$ 垂直，则 $CD\perp$ 平面 $ABC$，平面 $ABC\perp$ 平面 $BCD$．取 $BC$ 中点 $M$，连接 $ME$，则 $ME\perp BD$，$\therefore \angle AEM$ 就是二面角 $A-BD-C$ 的平面角，此角显然存在，即当 $A$ 在底面上的射影位于 $BC$ 的中点时，直线 $AB$ 与直线 $CD$ 垂直，故 B 正确；
+
+C．若存在某个位置，使得直线 $AD$ 与直线 $BC$ 垂直，则 $BC\perp$ 平面 $ACD$，从而平面 $ACD\perp$ 平面 $BCD$，即 $A$ 在底面 $BCD$ 上的射影应位于线段 $CD$ 上，这是不可能的，排除 C；
+
+D．由上所述，可排除 D．
+
+故选：B．
+\end{solution}
+
+\vspace{2em}
+
+\begin{example}[\bkstar{4}{5}]
+如图，在直二面角 $A-BD-C$ 中，$\triangle ABD$，$\triangle CBD$ 均是以 $BD$ 为斜边的等腰直角三角形，取 $AD$ 的中点 $E$，将 $\triangle ABE$ 沿 $BE$ 翻折到 $\triangle A_1BE$，在翻折过程中，下列不可能成立的是
+\bkfig[0.3\textwidth]{TikZ-final/geometry/solid/p026-o0526.tex}
+\begin{tasks}(2)
+    \task $BC$ 与平面 $A_1BE$ 内某直线平行
+    \task $CD\px$ 平面 $A_1BE$
+    \task $BC$ 与平面 $A_1BE$ 内某直线垂直
+    \task $BC\perp A_1B$
+\end{tasks}
+\end{example}
+\begin{solution}
+\textbf{答案：}D
+\bkfig[0.3\textwidth]{TikZ-final/geometry/solid/p073-o1425.tex}
+连结 $CE$，当平面 $A_1BE$ 与平面 $BCE$ 重合时，$BC\subset$ 平面 $A_1BE$，$\therefore$ 平面 $A_1BE$ 内必存在与 $BC$ 平行和垂直的直线，故 A、C 可能成立．在平面 $BCD$ 内，过 $B$ 作 $CD$ 的平行线 $BF$，使得 $BF=CD$，连结 $EF$，$FC$，则当平面 $A_1BE$ 与平面 $BEF$ 重合时，$BF\subset$ 平面 $A_1BE$，故平面 $A_1BE$ 内存在与 $BF$ 平行的直线，即平面 $A_1BE$ 内存在与 $CD$ 平行的直线，$\therefore CD\px$ 平面 $A_1BE$，故 B 可能成立．综上所述，排除 A、B、C．
+
+故选：D．
+\end{solution}
+
+\vspace{2em}

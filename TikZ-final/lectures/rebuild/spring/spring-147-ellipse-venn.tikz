@@ -1,0 +1,8 @@
+\begin{tikzpicture}[x=1pt,y=-1pt,line cap=round]
+  \path[use as bounding box] (0,0) rectangle (446,250);
+  \draw[line width=2.1pt] (223,125) ellipse (217pt and 117pt);
+  \draw[line width=2.1pt] (223,125) ellipse (139pt and 52pt);
+  \draw[line width=2.1pt] (223,8)--(223,73) (223,177)--(223,242);
+  \node[font=\Large] at (145,82) {$A$}; \node[font=\Large] at (145,168) {$B$};
+  \node[font=\Large] at (302,82) {$D$}; \node[font=\Large] at (302,168) {$C$};
+\end{tikzpicture}

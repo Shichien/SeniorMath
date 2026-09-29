@@ -1,0 +1,3 @@
+\begin{tikzpicture}[yscale=1.3,line width=1pt,font=\small]
+\coordinate(A)at(0,0);\coordinate(D)at(0,2.4);\coordinate(C)at(3,2.4);\coordinate(B)at(3,0);\coordinate(E)at(5.4,0);\coordinate(F)at(5.4,2.4);\coordinate(M)at(1.45,2.4);\coordinate(N)at(1.45,0);\draw(A)--(D)--(F)--(E)--cycle;\draw(B)--(C);\draw[dash pattern=on 5pt off 4pt](M)--(N);\draw[dash pattern=on 5pt off 4pt](N)--(C);\draw(C)arc[start angle=90,end angle=0,radius=2.4];\foreach\p/\a in {A/below left,D/above left,M/above,N/below,B/below,C/above,E/below right,F/above right}\node[\a]at(\p){$\p$};
+\end{tikzpicture}

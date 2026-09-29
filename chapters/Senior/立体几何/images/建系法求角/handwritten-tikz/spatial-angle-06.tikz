@@ -1,0 +1,6 @@
+\begin{tikzpicture}[scale=.85,font=\large,thick,>=Stealth]
+\coordinate(B)at(0,0);\coordinate(C)at(5.29,0);\coordinate(A)at(1.78,2.08);\coordinate(D)at(7.07,2.08);\coordinate(S)at(3.5,5.5);\coordinate(P)at($(S)!.535!(D)$);\coordinate(O)at(intersection of A--C and B--D);
+\draw(B)--(C)--(D)--(S)--(B) (S)--(C) (P)--(C);\draw[dashed](A)--(B) (A)--(D) (A)--(C) (B)--(D) (S)--(A) (S)--(O);
+\draw[->](C)--(7.15,-1.2)node[right]{$x$};\draw[->](D)--(9.6,2.9)node[right]{$y$};\draw[->](S)--(3.5,7.4)node[above]{$z$};
+\foreach\p/\pos in{A/left,B/below left,C/below,D/right,O/below,S/left,P/right}{\node[\pos]at(\p){$\p$};}
+\end{tikzpicture}

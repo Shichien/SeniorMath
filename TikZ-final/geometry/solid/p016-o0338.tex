@@ -1,0 +1,22 @@
+\begin{tikzpicture}[scale=.66, every node/.style={font=\small}]
+  \coordinate (A) at (0,1.8);
+  \coordinate (B) at (2.8,0);
+  \coordinate (C) at (5.6,2.0);
+  \coordinate (P) at (3.0,5.8);
+  \coordinate (M) at (1.5,3.8);
+  \coordinate (N) at (1.4,.9);
+  \coordinate (E) at (4.73,3.27);
+  \coordinate (F) at (4.67,1.33);
+
+  \draw (P)--(A)--(B)--(C)--(P) (P)--(B) (M)--(N) (E)--(F);
+  \draw[dashed] (A)--(C) (M)--(E) (N)--(F);
+
+  \node[left]        at (A) {$A$};
+  \node[below]       at (B) {$B$};
+  \node[right]       at (C) {$C$};
+  \node[above]       at (P) {$P$};
+  \node[left]        at (M) {$M$};
+  \node[below left]  at (N) {$N$};
+  \node[right]       at (E) {$E$};
+  \node[right]       at (F) {$F$};
+\end{tikzpicture}

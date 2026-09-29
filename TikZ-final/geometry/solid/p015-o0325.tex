@@ -1,0 +1,29 @@
+\begin{tikzpicture}[scale=.62, every node/.style={font=\small}]
+  \coordinate (A)  at (0,0);
+  \coordinate (B)  at (4.4,-2);
+  \coordinate (C)  at (7.45,-2);
+  \coordinate (D)  at (6.4,0);
+  \coordinate (A1) at (0,5);
+  \coordinate (B1) at (4.4,3);
+  \coordinate (C1) at (7.45,3);
+  \coordinate (D1) at (6.4,5);
+  \coordinate (E)  at (7.45,.5);
+  \coordinate (F)  at (6.4,2.5);
+
+  \draw (A)--(A1)--(D1)--(C1)--(C)--(B)--(A);
+  \draw (A1)--(B1)--(C1) (B)--(B1) (D)--(C);
+  \draw[dashed] (A)--(D)--(D1);
+  \draw[dashed] (A)--(D1) (A)--(C1) (B)--(F)--(E);
+  \draw (B)--(E);
+
+  \node[below left]  at (A)  {$A$};
+  \node[below]       at (B)  {$B$};
+  \node[below right] at (C)  {$C$};
+  \node[below left]  at (D)  {$D$};
+  \node[above left]  at (A1) {$A_1$};
+  \node[above]       at (B1) {$B_1$};
+  \node[right]       at (C1) {$C_1$};
+  \node[above]       at (D1) {$D_1$};
+  \node[right]       at (E)  {$E$};
+  \node[left]        at (F)  {$F$};
+\end{tikzpicture}

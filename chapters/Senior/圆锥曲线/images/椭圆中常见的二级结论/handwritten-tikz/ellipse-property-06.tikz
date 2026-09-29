@@ -1,0 +1,33 @@
+% True ellipse tangent and hyperbolas x^2/a^2-y^2/b^2=1.
+\begin{tikzpicture}[>=Stealth,thick,font=\small]
+\begin{scope}
+\def\a{2.5}\def\b{1.6}
+\coordinate(E)at({\a*cos(145)},{\b*sin(145)});
+\coordinate(V)at({\a*sin(145)},{-\b*cos(145)});
+\coordinate(A)at($(E)+.72*(V)$);\coordinate(B)at($(E)-.72*(V)$);
+\draw[->](-3.8,0)--(3.2,0)node[right]{$x$};\draw[->](0,-2.5)--(0,2.8)node[above]{$y$};
+\draw[red!40](0,0)ellipse[x radius=2.5,y radius=1.6];
+\draw[blue!60]($(E)-1.05*(V)$)--($(E)+1.05*(V)$);
+\draw[red](E)--(0,0);\fill[red](E)circle(1.4pt);
+\foreach\p/\pos in {A/above left,B/below left,E/above left}\node[\pos]at(\p){$\p$};\node[below right]at(0,0){$O$};
+\node[blue!70!black]at(0,-3){图4};
+\end{scope}
+\foreach\dx in {8,16}{\begin{scope}[xshift=\dx cm]
+\draw[->](-3.3,0)--(3.4,0)node[right]{$x$};\draw[->](0,-2.6)--(0,2.8)node[above]{$y$};
+\draw[gray,smooth,samples=100,domain=-2.45:2.45,variable=\u]plot({1.2*sqrt(1+\u*\u/1.44)},\u) plot({-1.2*sqrt(1+\u*\u/1.44)},\u);
+\foreach\s/\lab in {-1/F_1,1/F_2}{\fill[red]({\s*sqrt(2.88)},0)circle(1.5pt);\node[below]at({\s*sqrt(2.88)},0){$\lab$};}
+\node[below left]at(0,0){$O$};
+\end{scope}}
+\begin{scope}[xshift=8cm]
+\coordinate(A1)at(-1.2,0);\coordinate(A2)at(1.2,0);\coordinate(P)at({sqrt(1.44+4)},2);
+\draw[red](A1)--(P)--(A2);
+\foreach\p/\lab/\pos in {A1/A_1/below right,A2/A_2/below left,P/P/above}\node[\pos]at(\p){$\lab$};
+\node[blue!70!black]at(0,-3){图5};
+\end{scope}
+\begin{scope}[xshift=16cm]
+\coordinate(A)at({-sqrt(1.44+.81)},.9);\coordinate(B)at({sqrt(1.44+1.69)},-1.3);\coordinate(P)at({sqrt(1.44+4)},2);
+\draw[red](A)--(P)--(B)--cycle;
+\foreach\p/\pos in {A/left,B/below,P/above}\node[\pos]at(\p){$\p$};
+\node[blue!70!black]at(0,-3){图6};
+\end{scope}
+\end{tikzpicture}

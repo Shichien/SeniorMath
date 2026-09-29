@@ -1,0 +1,7 @@
+\begin{tikzpicture}[x=.78cm,y=.78cm,baseline=(current bounding box.center)]
+  \draw[->] (-1.65,0)--(3.65,0) node[right] {$x$}; \draw[->] (0,-.35)--(0,1.65) node[above] {$y$};
+  \draw[domain=-1.42:0,samples=100,smooth] plot (\x,{\x*\x});
+  \draw[domain=0:2.35,samples=100,smooth] plot (\x,{1-exp(-1.4*\x)});
+  \draw[densely dashed] (-1.45,1)--(2.45,1); \draw (-1.2,.42)--(2.30,.42) node[right] {$y=2a$};
+  \node[left] at (0,1) {$1$}; \node[below left] at (0,0) {$O$};
+\end{tikzpicture}

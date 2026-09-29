@@ -1,0 +1,31 @@
+\begin{tikzpicture}[x=1bp,y=-1bp,line cap=round,line join=round]
+  \path[use as bounding box] (0,0) rectangle (393,401);
+  \definecolor{back}{RGB}{19,16,14}
+  \definecolor{ink}{RGB}{52,46,45}
+  \pagecolor{back}
+  \begin{scope}[shift={(3,2)},draw=ink,text=ink]
+  \draw[-{Stealth[length=15bp,width=17bp]},line width=4bp] (0,247)--(392,247);
+  \draw[-{Stealth[length=15bp,width=17bp]},line width=5bp] (185,399)--(185,5);
+  \begin{scope}[shift={(0,-1)}]
+    \draw[line width=6bp]
+      (46,321) .. controls (67,264) and (83,231) .. (111,190)
+      .. controls (131,163) and (151,148) .. (166,155)
+      .. controls (185,162) and (201,221) .. (220,236)
+      .. controls (231,249) and (242,247) .. (248,246)
+      .. controls (280,241) and (308,173) .. (328,125);
+  \end{scope}
+  \foreach \x in {79,133,246,310} {\draw[line width=4bp] (\x,247)--(\x,237);}
+  \draw[line width=4bp] (79,267)--(94,267);
+  \draw[line width=4bp] (120,266)--(135,266);
+  \node[inner sep=0bp,anchor=north,font=\fontsize{32bp}{32bp}\boldmath] at (104,255) {$2$};
+  \node[inner sep=0bp,anchor=north,font=\fontsize{32bp}{32bp}\boldmath] at (144,253) {$1$};
+  \node[inner sep=0bp,anchor=north,font=\fontsize{32bp}{32bp}\boldmath] at (240,254) {$1$};
+  \node[inner sep=0bp,anchor=north,font=\fontsize{32bp}{32bp}\boldmath] at (309,254) {$2$};
+  \font\axisletter="Times New Roman Bold Italic" at 30bp
+  \font\axisletterx="Times New Roman Bold Italic" at 36bp
+  \font\axislettery="Times New Roman Bold Italic" at 34bp
+  \node[inner sep=0bp,anchor=south east,font=\axisletter] at (178,240) {O};
+  \node[inner sep=0bp,anchor=west,font=\axisletterx] at (362,269) {x};
+  \node[inner sep=0bp,anchor=east,font=\axislettery] at (176,24) {y};
+  \end{scope}
+\end{tikzpicture}

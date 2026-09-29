@@ -1,0 +1,27 @@
+\begin{tikzpicture}[scale=1.1, every node/.style={font=\small}]
+  \coordinate (A) at (0,0); \coordinate (B) at (4,0);
+  \coordinate (C) at (5.35,1.27); \coordinate (D) at (1.35,1.27);
+  \coordinate (A1) at (0,3.9); \coordinate (B1) at (4,3.9);
+  \coordinate (C1) at (5.35,5.17); \coordinate (D1) at (1.35,5.17);
+  % P in face ADD1A1: P = A + s*AD + t*AA1, s=.45, t=.52
+  \coordinate (Pa) at ($(A)!.52!(A1)$);
+  \coordinate (Pb) at ($(A1)!.45!(D1)$);
+  \coordinate (P) at ($(Pa)+(Pb)-(A1)$);
+  % E = A1P meets AD: A1 + (1/(1-t))*(P-A1)
+  \coordinate (E) at ($(A1)!{1/(1-.52)}!(P)$);
+  \draw (A)--(B)--(C)--(C1)--(D1)--(A1)--cycle;
+  \draw (A1)--(B1)--(C1); \draw (B)--(B1);
+  \draw[dashed] (A)--(D)--(C); \draw[dashed] (D)--(D1);
+  \draw[dashed] (A1)--(E)--(C); \draw[dashed] (A1)--(C);
+  \draw[dashed] (Pa)--(P)--(Pb);
+  \node[below left] at (A) {$A$};
+  \node[below] at (B) {$B$};
+  \node[right] at (C) {$C$};
+  \node[above right] at (D) {$D$};
+  \node[above left] at (A1) {$A_1$};
+  \node[above left] at (B1) {$B_1$};
+  \node[above right] at (C1) {$C_1$};
+  \node[above] at (D1) {$D_1$};
+  \node[below right] at (P) {$P$};
+  \node[below right] at (E) {$E$};
+\end{tikzpicture}

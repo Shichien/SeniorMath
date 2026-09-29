@@ -1,0 +1,20 @@
+\begin{tikzpicture}[scale=.95, every node/.style={font=\small}]
+  \coordinate (O) at (0,0);
+  \coordinate (U) at (0,2.85); \coordinate (R) at (3.9,0); \coordinate (D) at (-2.35,-2.47);
+  \coordinate (UR) at ($(U)+(R)$); \coordinate (UD) at ($(U)+(D)$); \coordinate (RD) at ($(R)+(D)$);
+  % planes
+  \draw (O)--(U)--(UR)--(R)--cycle;      % alpha
+  \draw (U)--(UD)--(D)--(O);             % beta
+  \draw (R)--(RD)--(D);                  % gamma
+  % triangle with vertices on the three intersection lines
+  \coordinate (P) at ($(O)!.56!(U)$);
+  \coordinate (Q) at ($(O)!.577!(R)$);
+  \coordinate (S) at ($(O)!.41!(D)$);
+  \draw (P)--(Q)--(S)--cycle;
+  \node at (1.35,1.0) {$a$};
+  \node at (-.75,.25) {$b$};
+  \node at (.95,-.8) {$c$};
+  \node at (3.45,.55) {$\alpha$};
+  \node at (-.3,1.95) {$\beta$};
+  \node at (1.45,-2.0) {$\gamma$};
+\end{tikzpicture}

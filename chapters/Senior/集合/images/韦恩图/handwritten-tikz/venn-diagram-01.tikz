@@ -1,0 +1,9 @@
+\begin{tikzpicture}[font=\large]
+\draw (0,0) rectangle (7,3.5);
+\node[anchor=north west] at (0,3.5){$U$};
+\draw (2.5,1.8) ellipse (2 and 1.15);
+\draw (4.5,1.8) ellipse (2 and 1.15);
+\node at (2.4,2.35){$A$}; \node at (4.6,2.35){$B$};
+\node at (1.45,1.55){$1\;5\;7$}; \node at (3.5,1.55){$3$};
+\node at (5.25,1.55){$2\;4\;6\;8$}; \node at (.8,.45){$9$};
+\end{tikzpicture}

@@ -1,0 +1,23 @@
+\unskip%
+\begin{tikzpicture}[x=.018cm,y=-.018cm,baseline=(current bounding box.center),line width=.5pt,
+  every node/.style={font=\scriptsize,inner sep=.8pt}]
+  \path[use as bounding box] (0,0) rectangle (309,247);
+  \draw[-{Stealth[length=5pt,width=4pt]}] (1,137)--(303,137);
+  \draw[-{Stealth[length=5pt,width=4pt]}] (129,244)--(129,0);
+  \draw (79,137) .. controls (77,105) and (36,69) .. (5,45);
+  \draw (79,137) .. controls (77,169) and (36,211) .. (5,236);
+  \draw (180,137) .. controls (182,105) and (219,69) .. (247,44);
+  \draw (180,137) .. controls (182,169) and (219,210) .. (245,230);
+  \coordinate (Fl) at (45,137);
+  \coordinate (Fr) at (214,137);
+  \coordinate (A) at (198,83);
+  \coordinate (B) at (61,192);
+  \draw (Fl)--(A)--(B)--cycle (A)--(Fr)--(B);
+  \node[below] at (39,138) {$F'$};
+  \node[below] at (214,140) {$F$};
+  \node[above left] at (197,84) {$A$};
+  \node[below right] at (53,196) {$B$};
+  \node[below right] at (134,139) {$O$};
+  \node[below] at (301,139) {$x$};
+  \node[left] at (124,10) {$y$};
+\end{tikzpicture}\ignorespaces

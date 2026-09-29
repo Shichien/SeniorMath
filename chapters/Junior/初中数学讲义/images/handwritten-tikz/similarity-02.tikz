@@ -1,0 +1,5 @@
+\begin{tikzpicture}[scale=.9,line width=.6pt,font=\small,line join=round]
+  \coordinate (O) at (0,0); \coordinate (A) at (0,3.4); \coordinate (B) at (2.15,0); \coordinate (C) at (4.25,0); \coordinate (D) at (6.55,0);
+  \draw (O)--(A)--(D)--(O) (A)--(B) (A)--(C);
+  \foreach \p/\pos in {O/below left,A/above left,B/below,C/below,D/below right} \node[\pos] at (\p) {$\p$};
+\end{tikzpicture}

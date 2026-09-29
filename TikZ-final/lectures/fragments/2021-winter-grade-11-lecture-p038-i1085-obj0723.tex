@@ -1,0 +1,19 @@
+\begin{tikzpicture}[x=.67cm,y=.67cm,>=Stealth,line cap=round,baseline=(current bounding box.center)]
+  \draw[->] (-.55,0)--(6.28,0) node[right] {$x$};
+  \draw[->] (0,-.55)--(0,5.65) node[above] {$y$};
+  \coordinate (B) at (1.55,3.55);
+  \coordinate (A) at (5.05,2.05);
+  \coordinate (C) at (1.55,2.05);
+  \draw[dashed] (B)--(C)--(A)--(5.05,0);
+  \draw[line width=.8pt] (.45,4.10)--(6.05,1.55);
+  \draw[line width=.8pt] (3.42,4.65)--(5.85,.95);
+  \draw[line width=.8pt] (B).. controls (2.60,3.52) and (4.15,3.15)..(A)
+    .. controls (5.35,1.72) and (5.45,1.42)..(5.42,1.10);
+  \node[above right] at (B) {$B$};
+  \node[above right] at (A) {$A$};
+  \node[above right] at (3.80,4.10) {$D$};
+  \node[left] at (C) {$C$};
+  \node[below] at (1.55,0) {$x$};
+  \node[below] at (5.05,0) {$x_0$};
+  \node[below left] at (0,0) {$O$};
+\end{tikzpicture}

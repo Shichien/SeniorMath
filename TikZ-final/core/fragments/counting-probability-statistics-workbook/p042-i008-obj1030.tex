@@ -1,0 +1,61 @@
+\begin{tikzpicture}[x=1bp,y=-1bp,line cap=butt,line join=miter,>=Stealth]
+  \path[use as bounding box] (0,0) rectangle (212,188);
+  \clip (0,0) rectangle (212,188);
+
+  \newfontfamily\chartcjk{SimSun}
+  \font\chartnumber="Times New Roman" at 13bp
+  \font\chartxnumber="Times New Roman" at 18bp
+  \font\chartitalic="Times New Roman Italic" at 14bp
+  \tikzset{
+    cjk/.style={font=\chartcjk\fontsize{14bp}{14bp}\selectfont,inner sep=0bp},
+    axislabel/.style={font=\chartcjk\fontsize{13bp}{13bp}\selectfont,inner sep=0bp},
+    number/.style={font=\chartnumber,inner sep=0bp},
+    xnumber/.style={font=\chartxnumber,inner sep=0bp},
+    italic/.style={font=\chartitalic,inner sep=0bp}
+  }
+
+  \draw[line width=1bp,dash pattern=on 7bp off 4bp]
+    (42,55.5)--(120,55.5)
+    (42,126.5)--(137,126.5)
+    (42,139.5)--(104,139.5)
+    (42,150.5)--(151,150.5);
+
+  \draw[line width=1.5bp]
+    (120,55.5)--(137,55.5)
+    (137,126.5)--(151,126.5)
+    (104,139.5)--(120,139.5)
+    (151,150.5)--(168,150.5);
+  \draw[line width=1.5bp]
+    (104,139.5)--(104,164)
+    (120,55.5)--(120,164)
+    (137,55.5)--(137,164)
+    (151,126.5)--(151,164)
+    (168,150.5)--(168,164);
+
+  \draw[line width=1.2bp,-{Stealth[length=12bp,width=8bp]}]
+    (61,164)--(185,164);
+  \draw[line width=1.2bp] (42,164)--(48,164);
+  \draw[line width=1.2bp]
+    (48,164)--(52,157)--(56,164)--(60,157)--(64,164);
+  \draw[line width=1.5bp,-{Stealth[length=12bp,width=8bp]}]
+    (42,166)--(42,35);
+
+  \node[cjk] at (68,18) {频率};
+  \draw[line width=.7bp] (52,29)--(80,29);
+  \node[cjk] at (66,41) {组距};
+  \node[axislabel,anchor=west] at (179,149) {成绩};
+
+  \node[number,anchor=east] at (38,56) {0.054};
+  \node[italic,anchor=east] at (32,127) {x};
+  \node[number,anchor=east] at (38,140) {0.01};
+  \node[number,anchor=east] at (38,152) {0.006};
+
+  \node[xnumber,anchor=north] at (42,169) {0};
+  \node[xnumber,anchor=north] at (74,169) {40};
+  \node[xnumber,anchor=north] at (90,169) {50};
+  \node[xnumber,anchor=north] at (104,169) {60};
+  \node[xnumber,anchor=north] at (120,169) {70};
+  \node[xnumber,anchor=north] at (137,169) {80};
+  \node[xnumber,anchor=north] at (151,169) {90};
+  \node[xnumber,anchor=north] at (168,169) {100};
+\end{tikzpicture}

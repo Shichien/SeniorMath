@@ -1,0 +1,43 @@
+\begin{tikzpicture}[scale=1, every node/.style={font=\small}, line cap=round, line join=round]
+  % right triangular prism ABC-A1B1C1, D midpoint of BC (origin D-xyz),
+  % E on BB1 with BE = BB1/3, F on CC1 with CF = 2CC1/3
+  \coordinate (A)  at (0,0);
+  \coordinate (B)  at (2.45,0);
+  \coordinate (C)  at (0.8,0.8);
+  \coordinate (D)  at ($(B)!0.5!(C)$);
+  \coordinate (A1) at (0,3.7);
+  \coordinate (B1) at ($(B)+(A1)$);
+  \coordinate (C1) at ($(C)+(0,3.7)$);
+  \coordinate (E)  at ($(B)!1/3!(B1)$);
+  \coordinate (F)  at ($(C)!2/3!(C1)$);
+  % z-axis through D passes through D1 = midpoint of B1C1; it crosses CE (in the drawing) at Q
+  \coordinate (Z0) at ($(B1)!0.5!(C1)$);
+  \path let \p1=(D), \p4=(C), \p5=(E) in
+    coordinate (Q)  at (\x1, {\y4+(\y5-\y4)*(\x1-\x4)/(\x5-\x4)});
+
+  % axes
+  \draw[-{Stealth[length=2mm]}] (Z0) -- ($(D)+(0,4.9)$) node[left] {$z$};
+  \draw[-{Stealth[length=2mm]}] (A) -- ($(D)!1.8!(A)$) node[below] {$x$};
+  \draw[-{Stealth[length=2mm]}] (B) -- ($(D)!2.4!(B)$) node[below] {$y$};
+  \draw[dashed] (D)--(Z0);
+
+  % prism
+  \draw (A)--(B)--(B1)--(A1)--cycle;
+  \draw (A1)--(C1)--(B1);
+  \draw[dashed] (A)--(C)--(C1) (C)--(B);
+  % auxiliary segments
+  \draw (A)--(E);
+  \draw[dashed] (A)--(F)--(D) (A)--(D)--(E) (C)--(E);
+  % small square mark where the z-axis crosses CE
+  \draw ($(Q)+(-0.12,0)$) rectangle ($(Q)+(0,0.12)$);
+
+  \node[below] at (A) {$A$};
+  \node[below] at (B) {$B$};
+  \node[left] at (C) {$C$};
+  \node[right] at (D) {$D$};
+  \node[right] at (E) {$E$};
+  \node[right] at (F) {$F$};
+  \node[left] at (A1) {$A_1$};
+  \node[right] at (B1) {$B_1$};
+  \node[above] at (C1) {$C_1$};
+\end{tikzpicture}

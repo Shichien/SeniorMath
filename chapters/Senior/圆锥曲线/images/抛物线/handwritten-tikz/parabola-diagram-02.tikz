@@ -1,0 +1,23 @@
+% y^2=4fx, f=.65; focal chord x=t*y+f, t=.35.
+% G is its midpoint; H lies on the directrix; circle has diameter AB.
+\begin{tikzpicture}[>=Stealth,thick,font=\small]
+\def\f{.65}\def\t{.35}
+\pgfmathsetmacro\ya{2*\f*(\t+sqrt(1+\t*\t))}
+\pgfmathsetmacro\yb{2*\f*(\t-sqrt(1+\t*\t))}
+\pgfmathsetmacro\rad{2*\f*(1+\t*\t)}
+\coordinate(A)at({\t*\ya+\f},\ya);\coordinate(B)at({\t*\yb+\f},\yb);
+\coordinate(F)at(\f,0);\coordinate(G)at($(A)!.5!(B)$);\coordinate(H)at(-\f,{2*\f*\t});
+\coordinate(N)at(-\f,\ya);\coordinate(S)at(-\f,\yb);\coordinate(P)at(-\f,0);
+\fill[gray!20](N)--(A)--(B)--(S)--cycle;
+\draw[->](-1.35,0)--(3,0)node[right]{$x$};\draw[->](0,-1.7)--(0,2.5)node[above]{$y$};
+\draw[samples=100,domain=-1.7:2.4,smooth,variable=\u]plot({\u*\u/(4*\f)},\u);
+\draw[dashed](-\f,-1.6)--(-\f,2.3) (N)--(A) (H)--(G) (S)--(B);
+\draw[magenta](H)--(A)--(B)--cycle;
+\draw[magenta,dashed](G)circle(\rad) (H)--(F);
+\pic[draw,magenta,angle radius=2mm]{right angle=H--F--A};
+\coordinate(X)at($(F)+(1,0)$);
+\pic[draw,magenta,angle radius=4mm,angle eccentricity=1.4,"$\alpha$"]{angle=X--F--A};
+\foreach\p in {A,B,H,F}\fill[magenta](\p)circle(1.4pt);
+\foreach\p/\pos in {A/above right,B/below,H/left,F/below right,G/above left,N/left,S/left,P/below left}\node[\pos]at(\p){$\p$};
+\node[below left]at(0,0){$O$};
+\end{tikzpicture}

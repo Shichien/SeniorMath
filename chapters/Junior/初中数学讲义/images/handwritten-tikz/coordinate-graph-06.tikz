@@ -1,0 +1,6 @@
+\begin{tikzpicture}[>=stealth,thick]
+\draw[->](-1.2,0)--(7,0)node[right]{$x$};\draw[->](0,-.8)--(0,7)node[above]{$y$};
+\coordinate(A)at(1.2,1);\coordinate(B)at(5.8,2.5);\coordinate(C)at(3.7,6.2);\coordinate(D)at(3.7,1.815);
+\draw(A)--(B)--(C)--cycle;\draw[red,dashed](A)--(5.8,1)--(B);\draw[green!60!black,dashed](C)--(D);
+\foreach\p/\pos in {A/below left,B/right,C/above,D/left}\node[\pos]at(\p){$\p$};\node at(4.6,1.35){水平宽};\node[rotate=90]at(4,3.9){铅垂高};
+\end{tikzpicture}

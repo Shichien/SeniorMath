@@ -1,0 +1,10 @@
+\begin{tikzpicture}[scale=.9, every node/.style={font=\small}]
+  \coordinate (A) at (0,0); \coordinate (B) at (5.45,-.55);
+  \coordinate (C) at (5.4,2.95); \coordinate (S) at (1.95,5.0);
+  \draw (A)--(S)--(C)--(B)--cycle; \draw (S)--(B);
+  \draw[dashed] (A)--(C);
+  \node[below left] at (A) {$A$};
+  \node[below right] at (B) {$B$};
+  \node[above right] at (C) {$C$};
+  \node[above] at (S) {$S$};
+\end{tikzpicture}

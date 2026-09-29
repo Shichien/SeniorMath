@@ -1,0 +1,6 @@
+\begin{tikzpicture}[scale=.8,line width=.6pt,font=\small,line join=round]
+  \coordinate (A) at (3,5.2); \coordinate (B) at (0,1.25); \coordinate (C) at (6,0); \coordinate (E) at (6.35,4.35); \coordinate (D) at (3.35,2.25);
+  \draw (A)--(B)--(C)--(A) (A)--(E) (A)--(D)--(E);
+  \draw[densely dashed] (B)--(D) (E)--(C);
+  \foreach \p/\pos in {A/above,B/left,C/below,E/right,D/below} \node[\pos] at (\p) {$\p$};
+\end{tikzpicture}

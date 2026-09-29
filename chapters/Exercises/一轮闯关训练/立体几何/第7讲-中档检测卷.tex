@@ -1,0 +1,296 @@
+\section{第7讲\quad 中档检测卷}
+
+本试卷共9个题目，选择5个，填空3个，解答1个，均为中档水平题目。限时30分钟。得分在70分以上视为合格，可以去做【提能力】模块题目，冲刺更高的水平。
+
+\subsection{一、单选题，共5题，每题10分}
+
+\begin{example}[\bkstar{2}{5}]
+一个圆柱的侧面展开图是一个正方形，则这个圆柱的全面积和侧面积的比是
+\begin{tasks}(4)
+    \task $(1+2\pi):2\pi$
+    \task $(1+4\pi):4\pi$
+    \task $(1+2\pi):\pi$
+    \task $(1+4\pi):2\pi$
+\end{tasks}
+\end{example}
+\begin{solution}
+\textbf{答案：}A
+
+设侧面展开图的边长为 $1$
+
+所求的比为 $\dfrac{2\times\pi\times\left(\frac{1}{2\pi}\right)^2+1^2}{1^2}=\dfrac{1+2\pi}{2\pi}$
+
+故选：A．
+\end{solution}
+
+\vspace{2em}
+
+\begin{example}[\bkstar{2}{5}]
+在梯形 $ABCD$ 中，$\angle ABC=\dfrac{\pi}{2}$，$AD\px BC$，$BC=2AD=2AB=2$，将梯形 $ABCD$ 绕 $AD$ 所在的直线旋转一周而形成的曲面所围成的几何体的体积为
+\begin{tasks}(4)
+    \task $\dfrac{2\pi}{3}$
+    \task $\dfrac{4\pi}{3}$
+    \task $\dfrac{5\pi}{3}$
+    \task $2\pi$
+\end{tasks}
+\end{example}
+\begin{solution}
+\textbf{答案：}C
+
+由题意可知几何体的直观图如图
+\bkfig[0.3\textwidth]{TikZ-final/geometry/solid/p098-o1897.tex}
+
+旋转体是底面半径为 $1$，高为 $2$ 的圆柱
+
+挖去一个相同底面高为 $1$ 的倒圆锥
+
+几何体的体积为：$1^2\pi\cdot 2-\dfrac{1}{3}\times 1^2\pi\times 1=\dfrac{5\pi}{3}$
+
+故选：C．
+\end{solution}
+
+\vspace{2em}
+\begin{example}[\bkstar{2}{5}]
+设 $\alpha$，$\beta$ 是两个不同的平面，$l$，$m$ 是两条不同的直线，且 $l\subset\alpha$，$m\subset\beta$
+\begin{tasks}(4)
+    \task 若 $l\perp\beta$，则 $\alpha\perp\beta$
+    \task 若 $\alpha\perp\beta$，则 $l\perp m$
+    \task 若 $l\px\beta$，则 $\alpha\px\beta$
+    \task 若 $\alpha\px\beta$，则 $l\px m$
+\end{tasks}
+\end{example}
+\begin{solution}
+\textbf{答案：}A
+
+对于A，$\because l\perp\beta$，且 $l\subset\alpha$，根据面面垂直的判定定理，得 $\alpha\perp\beta$，$\therefore$ A正确
+
+对于B，当 $\alpha\perp\beta$，$l\subset\alpha$，$m\subset\beta$ 时，$l$ 与 $m$ 的关系不确定，$\therefore$ B错误
+
+对于C，当 $l\px\beta$，且 $l\subset\alpha$ 时，$\alpha$ 与 $\beta$ 可能平行，也可能相交，$\therefore$ C错误
+
+对于D，当 $\alpha\px\beta$，且 $l\subset\alpha$，$m\subset\beta$ 时，$l$ 与 $m$ 可能平行，也可能异面，$\therefore$ D错误
+
+故选：A．
+\end{solution}
+
+\vspace{2em}
+
+\begin{example}[\bkstar{2}{5}]
+如图，在正方体 $ABCD-A_1B_1C_1D_1$ 中，$E$，$F$ 分别为 $BC$，$BB_1$ 的中点，则下列直线中与直线 $EF$ 相交的是
+\bkfig{TikZ-final/geometry/solid/p044-o0918.tex}
+\begin{tasks}(4)
+    \task 直线 $AA_1$
+    \task 直线 $A_1B_1$
+    \task 直线 $A_1D_1$
+    \task 直线 $B_1C_1$
+\end{tasks}
+\end{example}
+\begin{solution}
+\textbf{答案：}D
+
+根据异面直线的概念可看出直线 $AA_1$，$A_1B_1$，$A_1D_1$ 都和直线 $EF$ 为异面直线
+
+$B_1C_1$ 和 $EF$ 在同一平面内，且这两直线不平行
+
+$\therefore$ 直线 $B_1C_1$ 和直线 $EF$ 相交，即选项D正确
+
+故选：D．
+\end{solution}
+
+\vspace{2em}
+\begin{example}[\bkstar{3}{5}]
+如图，在正四棱柱 $ABCD-A_1B_1C_1D_1$ 中，$E$，$F$ 分别是 $AB_1$，$BC_1$ 的中点，则以下结论中不成立的是
+\bkfig{TikZ-final/geometry/solid/p044-o0923.tex}
+\begin{tasks}(4)
+    \task $EF$ 与 $BB_1$ 垂直
+    \task $EF$ 与 $BD$ 垂直
+    \task $EF$ 与 $CD$ 异面
+    \task $EF$ 与 $A_1C_1$ 异面
+\end{tasks}
+\end{example}
+\begin{solution}
+\textbf{答案：}D
+
+连接 $B_1C$，$AC$
+\bkfig{TikZ-final/geometry/solid/p099-o1914.tex}
+
+则 $B_1C$ 交 $BC_1$ 于 $F$ 且 $F$ 为 $BC_1$ 中点
+
+所以 $EF\px AC$
+
+因为 $EF\not\subset$ 平面 $ABCD$，$AC\subset$ 平面 $ABCD$
+
+所以 $EF\px$ 平面 $ABCD$
+
+因为 $B_1B\perp$ 面 $ABCD$
+
+所以 $EF\perp BB_1$
+
+又 $AC\perp BD$
+
+所以 $EF\perp BD$，$EF$ 与 $CD$ 异面
+
+由 $EF\px AC$，$AC\px A_1C_1$，得 $EF\px A_1C_1$
+
+故选：D．
+\end{solution}
+
+\vspace{2em}
+
+\subsection{二、填空题，共3题，每题10分}
+
+\begin{example}[\bkstar{2}{5}]
+已知圆锥的侧面积（单位：$\mathrm{cm}^2$）为 $2\pi$，且它的侧面展开图是一个半圆，则这个圆锥的底面半径（单位：$\mathrm{cm}$）是
+\end{example}
+\begin{solution}
+\textbf{答案：}$1$
+
+设圆锥底面半径为 $r$，母线长为 $l$，根据题意有
+
+$$
+\begin{cases}
+\pi rl=2\pi\\
+\pi l=2\pi r
+\end{cases}\text{，解得 } r=1
+$$
+
+故答案为：$1$．
+\end{solution}
+
+\vspace{2em}
+\begin{example}[\bkstar{2}{5}]
+如图，正方体 $ABCD-A_1B_1C_1D_1$ 中，$AB=2$，点 $E$ 为 $AD$ 的中点，点 $F$ 在 $CD$ 上，若 $EF\px$ 平面 $AB_1C$，则线段 $EF$ 的长度等于
+\bkfig{TikZ-final/geometry/solid/p044-o0924.tex}
+\end{example}
+\begin{solution}
+\textbf{答案：}$\sqrt{2}$
+
+$\because EF\px$ 平面 $AB_1C$，$EF\subset$ 平面 $ABCD$，平面 $AB_1C\cap$ 平面 $ABCD=AC$
+\bkfig{TikZ-final/geometry/solid/p099-o0924.tex}
+
+$\therefore EF\px AC$
+
+又点 $E$ 为 $AD$ 的中点，点 $F$ 在 $CD$ 上
+
+$\therefore$ 点 $F$ 是 $CD$ 的中点
+
+$\therefore EF=\dfrac{1}{2}AC=\sqrt{2}$
+
+故答案为：$\sqrt{2}$．
+\end{solution}
+
+\vspace{2em}
+
+\begin{example}[\bkstar{2}{5}]
+设有下列四个命题：
+
+$p_1$：两两相交且不过同一点的三条直线必在同一平面内．
+
+$p_2$：过空间中任意三点有且仅有一个平面．
+
+$p_3$：若空间两条直线不相交，则这两条直线平行．
+
+$p_4$：若直线 $l\subset$ 平面 $\alpha$，直线 $m\perp$ 平面 $\alpha$，则 $m\perp l$．
+
+则下述命题中所有真命题的序号是
+
+①$p_1\wedge p_4$
+
+②$p_1\wedge p_2$
+
+③$\neg p_2\vee p_3$
+
+④$\neg p_3\vee\neg p_4$
+\end{example}
+\begin{solution}
+\textbf{答案：}①③④
+
+若第三条直线与两条相交直线都相交，且三条直线不过同一点，则该直线在这两条相交直线所在的平面上
+
+$\therefore$ 两两相交且不过同一点的三条直线必在同一平面内，$p_1$ 为真命题
+
+若空间中三点共线，则过这三点的平面有无数个，$p_2$ 为假命题
+
+若空间中两条直线不相交，则这两条直线平行或异面，$p_3$ 为假命题
+
+若直线 $m\perp$ 平面 $\alpha$，则直线 $m$ 与平面 $\alpha$ 中任意一条直线均垂直，又直线 $l\subset$ 平面 $\alpha$
+
+$\therefore m\perp l$
+
+$\therefore p_4$ 为真命题
+
+$\therefore p_1\wedge p_4$ 为真命题，$p_1\wedge p_2$ 为假命题，$\neg p_2\vee p_3$ 为真命题，$\neg p_3\vee\neg p_4$ 为真命题
+
+故答案为：①③④．
+\end{solution}
+
+\vspace{2em}
+\subsection{三、解答题，共1题，每题20分}
+
+\begin{example}[\bkstar{3}{5}]
+如图，三棱柱 $ABC-A_1B_1C_1$ 中，侧棱 $A_1A\perp$ 底面 $ABC$，且各棱长均相等．$D$，$E$，$F$ 分别为棱 $AB$，$BC$，$A_1C_1$ 的中点．
+\begin{enumerate}
+    \item[(1)] 证明：$EF\px$ 平面 $A_1CD$；
+    \item[(2)] 证明：平面 $A_1CD\perp$ 平面 $A_1ABB_1$；
+    \item[(3)] 求直线 $BC$ 与平面 $A_1CD$ 所成角的正弦值．
+\end{enumerate}
+\bkfig[0.3\textwidth]{TikZ-final/geometry/solid/p045-o0937.tex}
+\end{example}
+\begin{solution}
+(1) 连接 $ED$
+
+因为 $E$，$F$ 分别为棱 $BC$，$A_1C_1$ 的中点
+
+所以 $DE\px AC$，$DE=\dfrac{1}{2}AC$
+
+在三棱柱 $ABC-A_1B_1C_1$ 中，$AC\px A_1C_1$，且 $AC=A_1C_1$
+
+又 $F$ 为棱 $A_1C_1$ 的中点
+
+$\therefore AC\px A_1F$，$A_1F=\dfrac{1}{2}A_1C_1=\dfrac{1}{2}AC$
+
+$\therefore A_1F=DE$，$A_1F\px DE$
+
+$\therefore A_1DEF$ 是平行四边形
+
+$\therefore EF\px DA_1$
+
+又 $DA_1\subset$ 平面 $A_1CD$，$EF\not\subset$ 平面 $A_1CD$
+
+$\therefore EF\px$ 平面 $A_1CD$
+
+(2) $\because D$ 是 $AB$ 的中点，$CA=CB$
+
+$\therefore CD\perp AB$
+
+又 $AA_1\perp$ 平面 $ABC$，$CD\subset$ 平面 $ABC$
+
+$\therefore AA_1\perp CD$
+
+又 $AA_1\cap AB=A$
+
+$\therefore CD\perp$ 平面 $A_1ABB_1$
+
+又 $CD\subset$ 平面 $A_1CD$
+
+$\therefore$ 平面 $A_1CD\perp$ 平面 $A_1ABB_1$
+
+(3) 过 $B$ 作 $BG\perp A_1D$ 交直线 $A_1D$ 于 $G$，连接 $CG$
+
+$\because$ 平面 $A_1CD\perp$ 平面 $A_1ABB_1$，且平面 $A_1CD\cap$ 平面 $A_1ABB_1=A_1D$，$BG\subset$ 平面 $A_1ABB_1$
+
+$\therefore BG\perp$ 平面 $A_1CD$
+
+故 $\angle BCG$ 为所求的角
+
+设三棱柱的棱长为 $a$，可得 $A_1D=\dfrac{\sqrt{5}}{2}a$
+
+由题意易得 $\triangle A_1AD\backsim\triangle BGD$，易得 $BG=\dfrac{\sqrt{5}}{5}a$
+
+在直角 $\triangle BGC$ 中，$\sin\angle BCG=\dfrac{BG}{BC}=\dfrac{\sqrt{5}}{5}$
+
+$\therefore$ 直线 $BC$ 与平面 $A_1CD$ 所成角的正弦值 $\dfrac{\sqrt{5}}{5}$
+\bkfig[0.3\textwidth]{TikZ-final/geometry/solid/p101-o1943.tex}
+\end{solution}
+
+\vspace{2em}

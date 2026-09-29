@@ -1,0 +1,19 @@
+{
+  "replacements": [
+    {
+      "id": "exercise-7-distribution-range",
+      "match": "$P \\left( \\xi = k \\right) = \\frac { t } { \\mathrm { C } _ { k } ^ { 2 } } \\left( \\begin{array} { l } { k = 2 , \\ 3 , \\ 4 , \\ 5 } \\right) \\end{array}$",
+      "replacement": "$P(\\xi = k) = \\frac{t}{\\mathrm{C}_k^2}\\ (k = 2, 3, 4, 5)$"
+    },
+    {
+      "id": "exercise-7-solution-distribution-range",
+      "match": "·随机变量g的分布列为 $P \\left( \\xi = k \\right) = \\frac { t } { \\mathrm { C } _ { k } ^ { 2 } } \\left( \\begin{array} { l l l } { k = 2 , } & { 3 , } & { 4 , } & { 5 } \\end{array} \\right)$   ",
+      "replacement": "随机变量 $\\xi$ 的分布列为 $P(\\xi = k) = \\frac{t}{\\mathrm{C}_k^2}\\ (k = 2, 3, 4, 5)$"
+    },
+    {
+      "id": "exercise-8-statistics-answers",
+      "match": "答案： $3 0 0 \\right{ \\} \\equiv \\left} 8 4 0 0$",
+      "replacement": "答案：300；三；8400"
+    }
+  ]
+}

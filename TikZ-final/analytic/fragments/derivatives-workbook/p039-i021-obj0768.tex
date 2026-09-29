@@ -1,0 +1,24 @@
+\begin{tikzpicture}[x=1bp,y=-1bp,line cap=round,line join=round]
+  \path[use as bounding box] (0,0) rectangle (317,281);
+  \draw[-{Stealth[length=8bp,width=9bp]},line width=.72bp] (10,148)--(297,148);
+  \draw[-{Stealth[length=8bp,width=9bp]},line width=.72bp] (106,272)--(106,18);
+  \draw[dash pattern=on 6bp off 5bp,line width=.65bp] (34,220)--(210,44);
+  \draw[line width=.65bp] (90,260)--(262,88);
+  \draw[line width=.8bp,domain=.055:2.45,samples=160,smooth,variable=\t]
+    plot ({106+24*\t},{148-24*(\t*\t-ln(\t))});
+  \fill (123,128) circle (1.4bp);
+  \node[inner sep=0bp,anchor=north west,font=\fontsize{11bp}{11bp}\selectfont] at (127,126) {$P$};
+  \node[inner sep=0bp,anchor=west,font=\fontsize{11bp}{11bp}\selectfont] at (114,47) {$y=x^2-\ln x$};
+  \node[inner sep=0bp,anchor=west,font=\fontsize{11bp}{11bp}\selectfont] at (148,210) {$x-y-4=0$};
+  \foreach \x/\t in {34/-3,58/-2,82/-1,130/1,154/2,178/3,202/4,226/5,250/6,274/7} {
+    \draw[line width=.6bp] (\x,148)--(\x,143);
+    \node[inner sep=0bp,anchor=north,font=\fontsize{10bp}{10bp}\selectfont] at (\x,153) {$\t$};
+  }
+  \foreach \y/\t in {52/4,76/3,100/2,124/1,172/-1,196/-2,220/-3,244/-4} {
+    \draw[line width=.6bp] (106,\y)--(111,\y);
+    \node[inner sep=0bp,anchor=east,font=\fontsize{10bp}{10bp}\selectfont] at (102,\y) {$\t$};
+  }
+  \node[inner sep=0bp,anchor=north west,font=\fontsize{11bp}{11bp}\selectfont] at (109,151) {$O$};
+  \node[inner sep=0bp,anchor=west,font=\fontsize{11bp}{11bp}\selectfont] at (296,148) {$x$};
+  \node[inner sep=0bp,anchor=south,font=\fontsize{11bp}{11bp}\selectfont] at (102,26) {$y$};
+\end{tikzpicture}

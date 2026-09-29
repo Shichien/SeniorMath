@@ -1,0 +1,7 @@
+\begin{tikzpicture}[scale=.85,font=\large,thick]
+\draw[step=.5cm,gray!25,very thin] (-4,-2.8) grid (4,2.8);\draw[gray] (-4,0)--(4,0) (0,-2.8)--(0,2.8);
+\draw[red] (0,0) ellipse (3.2 and 2.2);
+\coordinate (A) at (-3.2,0);\coordinate (B) at (3.2,0);\coordinate (M) at (1.45,1.95);\coordinate (N) at (1.45,-1.95);
+\draw[gray!80] (A)--(M);\draw[dashed,gray!80] (M)--(B);\draw[gray!80] (N)--(B);
+\foreach \p/\pos in {A/left,B/right,M/above,N/below}{\fill[blue] (\p) circle(2.5pt);\node[blue,\pos] at (\p){$\p$};}
+\end{tikzpicture}

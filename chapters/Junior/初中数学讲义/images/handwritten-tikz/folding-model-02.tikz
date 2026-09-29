@@ -1,0 +1,5 @@
+\begin{tikzpicture}[thick]
+\begin{scope}\draw(0,0)rectangle(3,3);\coordinate(D)at(0,3);\coordinate(E)at(1.8,0);\coordinate(F)at(3,1.7);\draw[dashed](D)--(E) (D)--(F);\foreach\p/\xy/\pos in {A/{(0,0)}/below left,B/{(3,0)}/below right,C/{(3,3)}/above right,D/{(0,3)}/above left,E/{(1.8,0)}/below,F/{(3,1.7)}/right}\node[\pos]at\xy{$\p$};\end{scope}
+\draw[->](3.7,1.5)--(4.7,1.5);
+\begin{scope}[xshift=5.4cm]\coordinate(D)at(0,3);\coordinate(E)at(1.5,0);\coordinate(B)at(3.5,0);\coordinate(F)at(3.5,2.2);\coordinate(G)at(2.66,1.276);\draw(D)--(E)--(B)--(F)--cycle;\draw(D)--(G) (E)--(F);\foreach\p/\pos in {D/above left,E/below,B/below,F/right,G/right}\node[\pos]at(\p){$\p$};\end{scope}
+\end{tikzpicture}

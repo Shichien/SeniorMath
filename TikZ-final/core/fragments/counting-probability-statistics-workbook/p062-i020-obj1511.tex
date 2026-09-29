@@ -1,0 +1,29 @@
+\begin{tikzpicture}[x=1bp,y=-1bp,line cap=round,line join=round,>=Stealth]
+  \path[use as bounding box] (0,0) rectangle (202,127);
+  \clip (0,0) rectangle (202,127);
+  \fill[white] (0,0) rectangle (202,127);
+  \draw[black,line width=1.4bp]
+    (31,110) rectangle (57,92)
+    (57,110) rectangle (83,72)
+    (83,110) rectangle (109,22)
+    (109,110) rectangle (135,43)
+    (135,110) rectangle (161,81);
+  \draw[black,line width=1.2bp,-{Stealth[length=8bp,width=7bp]}]
+    (4,110)--(4,0);
+  \draw[black,line width=1.2bp,-{Stealth[length=8bp,width=7bp]}]
+    (4,110)--(185,110);
+  \font\numberfont="Times New Roman" at 12bp
+  \newfontfamily\chartcjk{SimSun}[AutoFakeBold=2]
+  \tikzset{
+    tick/.style={font=\numberfont,text=black,inner sep=0bp,anchor=north},
+    title/.style={font=\chartcjk\bfseries\fontsize{14bp}{14bp}\selectfont,text=black,inner sep=0bp}
+  }
+  \foreach \x/\lab in {33/3.95,59/4.25,85/4.55,111/4.85,137/5.15,163/5.45}
+    \node[tick] at (\x,112) {\lab};
+  \node[title] at (7,7) {频};
+  \node[title] at (27,7) {率};
+  \node[title] at (7,21) {组};
+  \node[title] at (27,21) {距};
+  \node[title] at (184,119) {视};
+  \node[title] at (198,119) {力};
+\end{tikzpicture}

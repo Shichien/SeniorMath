@@ -1,0 +1,21 @@
+\begin{tikzpicture}[thick]
+\coordinate (E) at (0,0);
+\coordinate (B) at (1.90,0);
+\coordinate (C) at (7.85,0);
+\coordinate (A) at (2.78,4.02);
+\coordinate (D) at (8.72,4.06);
+% F=AB\cap ED and G=AC\cap ED for the coordinates above.
+\coordinate (F) at (2.116,0.985);
+\coordinate (G) at (4.946,2.303);
+\draw (E)--(A)--(D)--(C)--(E);
+\draw (A)--(B);
+\draw (E)--(D);
+\draw (A)--(C);
+\node[above left,xshift=1pt,yshift=-1pt] at (A) {$A$};
+\node[below] at (B) {$B$};
+\node[below right,xshift=-1pt,yshift=1pt] at (C) {$C$};
+\node[right] at (D) {$D$};
+\node[below left,xshift=1pt,yshift=1pt] at (E) {$E$};
+\node[above left,xshift=1pt,yshift=-1pt] at (F) {$F$};
+\node[below] at (G) {$G$};
+\end{tikzpicture}

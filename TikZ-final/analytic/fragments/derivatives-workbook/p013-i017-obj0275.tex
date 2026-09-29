@@ -1,0 +1,28 @@
+\begin{tikzpicture}[x=1bp,y=-1bp,line cap=round,line join=round]
+  \path[use as bounding box] (0,0) rectangle (375.4,383.1);
+  \definecolor{back}{RGB}{19,16,14}
+  \definecolor{ink}{RGB}{52,46,45}
+  \pagecolor{back}
+  \begin{scope}[shift={(4,5)},draw=ink,text=ink]
+  \draw[-{Stealth[length=15bp,width=17bp]},line width=5bp] (0,238)--(371,238);
+  \draw[-{Stealth[length=15bp,width=17bp]},line width=6bp] (177,377)--(177,-1);
+  \draw[line width=7bp,xshift=1bp]
+    plot[smooth,tension=0.55] coordinates {
+      (103,304) (113,283) (123,253) (133,228)
+      (144,214) (154,192) (164,176) (174,160)
+      (184,153) (194,145) (204,140) (215,139)
+      (225,145) (235,159) (245,181) (255,204)
+      (265,219) (276,233) (286,236) (296,239)
+      (306,227) (316,218.5) (326,205) (337,188)
+      (347,169) (357,147) (367,119) (372,110)
+    };
+  \foreach \x in {69,123,232,292} {\draw[line width=5bp] (\x,238)--(\x,228);}
+  \node[inner sep=0bp,anchor=north,font=\fontsize{32bp}{32bp}\boldmath] at (67,240) {$-\mkern-3mu 2$};
+  \node[inner sep=0bp,anchor=north,font=\fontsize{32bp}{32bp}\boldmath] at (117.5,240) {$-1$};
+  \node[inner sep=0bp,anchor=north,font=\fontsize{32bp}{32bp}\boldmath] at (230,241) {$1$};
+  \node[inner sep=0bp,anchor=north,font=\fontsize{32bp}{32bp}\boldmath] at (294,241) {$2$};
+  \node[inner sep=0bp,anchor=south east,font=\fontsize{32bp}{32bp}\boldmath] at (173,230) {$O$};
+  \node[inner sep=0bp,anchor=west,font=\fontsize{32bp}{32bp}\boldmath] at (344,261) {$x$};
+  \node[inner sep=0bp,anchor=east,font=\fontsize{34bp}{34bp}\boldmath] at (164,19) {$y$};
+  \end{scope}
+\end{tikzpicture}

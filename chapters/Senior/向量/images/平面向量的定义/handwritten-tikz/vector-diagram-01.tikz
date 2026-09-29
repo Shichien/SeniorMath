@@ -1,0 +1,6 @@
+\begin{tikzpicture}[scale=.9,font=\large,thick]
+\coordinate (A) at (0,4); \coordinate (B) at ({-2*2.5/5.8},1.5); \coordinate (C) at (3,1.5);
+\coordinate (M) at (-2,-1.8); \coordinate (N) at ($(A)!.62!(C)$); \coordinate (O) at (intersection of M--N and B--C);
+\draw (M)--(A)--(C)--(B); \draw (M)--(N);
+\foreach \p/\pos in {A/above,B/left,C/right,M/below left,N/above right,O/below}{\node[\pos] at (\p){$\p$};}
+\end{tikzpicture}

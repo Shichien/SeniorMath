@@ -1,0 +1,9 @@
+\begin{tikzpicture}[thick,font=\small,line join=round]
+\coordinate(A)at(.55,2.4);\coordinate(B)at(0,0);\coordinate(C)at(3.2,0);\coordinate(D)at(2.6,2.4);
+% O is the actual diagonal intersection; EF is the parallel through O.
+\coordinate(O)at(1.5848,1.4629);\coordinate(E)at(.3352,1.4629);\coordinate(F)at(2.8343,1.4629);
+\draw(A)--(B)--(C)--(D)--cycle;
+\draw(A)--(C) (B)--(D) (E)--(F);
+\foreach\p/\a in {A/above,B/below left,C/below right,D/above,E/left,F/right,O/below}
+  \node[\a]at(\p){$\p$};
+\end{tikzpicture}

@@ -1,0 +1,8 @@
+\begin{tikzpicture}[x=.68cm,y=.68cm,baseline=(current bounding box.center)]
+  \draw[->] (-2.10,0)--(2.85,0) node[right] {$x$}; \draw[->] (0,-.45)--(0,4.75) node[above] {$y$};
+  \draw[domain=-2.0:1.0,samples=100,smooth] plot (\x,{exp(1.386*\x)});
+  \draw[domain=-1.0:1.0] plot (\x,{2*\x+2});
+  \draw[domain=.18:2.42,samples=100,smooth] plot (\x,{-2.6*(\x-1)^2+4});
+  \draw[densely dashed] (1,0)--(1,4);
+  \node[above right] at (1.04,3.88) {$y=e^x$}; \node[below left] at (0,0) {$O$}; \node[below] at (1,0) {$1$}; \node[left] at (0,4) {$4$};
+\end{tikzpicture}

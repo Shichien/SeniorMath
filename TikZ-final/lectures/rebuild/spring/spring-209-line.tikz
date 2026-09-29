@@ -1,0 +1,8 @@
+\begin{tikzpicture}[x=1pt,y=-1pt,>=Stealth,line cap=round]
+  \path[use as bounding box] (0,0) rectangle (406,370);
+  \draw[->,line width=2.1pt] (74,274)--(395,274) node[above left] {$x$};
+  \draw[->,line width=2.1pt] (166,356)--(166,12) node[below right] {$y$};
+  \draw[line width=1.5pt] (99,274)--(99,265) (166,185)--(176,185) (166,318)--(176,318) (260,274)--(260,265) (341,274)--(341,265);
+  \draw[line width=2.8pt] (86,121)--(306,251);
+  \node[above left,font=\Large] at (132,151) {$l$}; \node[below left,font=\Large] at (166,274) {$O$};
+\end{tikzpicture}

@@ -1,0 +1,64 @@
+{
+  "sources": [
+    {
+      "slug": "2020-autumn-workbook",
+      "source": "C:/Users/26421/Desktop/【2020秋】题型精练_高二数学_冲顶班_课改版.pdf",
+      "mineru_results": "../work-mineru/92bf31d3/2020秋_题型精练_高二数学_冲顶班_课改版/results"
+    },
+    {
+      "slug": "2021-spring-grade-11-lecture",
+      "source": "C:/Users/26421/Desktop/【2021春】快数学高二讲义_冲顶班_全国通用版1228.pdf",
+      "mineru_results": "../work-mineru/568621f2/2021春_快数学高二讲义_冲顶班_全国通用版1228/results"
+    },
+    {
+      "slug": "2021-winter-grade-11-lecture",
+      "source": "C:/Users/26421/Desktop/【2021寒】快数学高二讲义_冲顶班_全国通用版.pdf",
+      "mineru_results": "../output/mineru-agent/a7703587/2021寒_快数学高二讲义_冲顶班_全国通用版/results"
+    },
+    {
+      "slug": "trigonometry-workbook",
+      "source": "C:/Users/26421/Desktop/【一轮闯关训练】-三角.pdf",
+      "mineru_results": "../output/mineru-agent/a7703587/一轮闯关训练__三角/results"
+    },
+    {
+      "slug": "derivatives-workbook",
+      "source": "C:/Users/26421/Desktop/【一轮闯关训练】-导数.pdf",
+      "mineru_results": "../work-mineru/568621f2/一轮闯关训练__导数/results"
+    },
+    {
+      "slug": "functions-workbook",
+      "source": "C:/Users/26421/Desktop/【一轮闯关训练】-函数.pdf",
+      "mineru_results": "../work-mineru/568621f2/一轮闯关训练__函数/results"
+    },
+    {
+      "slug": "set-logic-inequalities-workbook",
+      "source": "C:/Users/26421/Desktop/【一轮闯关训练】-集合与简易逻辑及不等式-练习册.pdf",
+      "mineru_results": "../work-mineru/568621f2/一轮闯关训练__集合与简易逻辑及不等式_练习册/results"
+    },
+    {
+      "slug": "counting-probability-statistics-workbook",
+      "source": "C:/Users/26421/Desktop/【一轮闯关训练】-计数与概率统计.pdf",
+      "mineru_results": "../work-mineru/568621f2/一轮闯关训练__计数与概率统计/results"
+    },
+    {
+      "slug": "analytic-geometry-workbook",
+      "source": "C:/Users/26421/Desktop/【一轮闯关训练】-解析几何.pdf",
+      "mineru_results": "../work-mineru/568621f2/一轮闯关训练__解析几何/results"
+    },
+    {
+      "slug": "solid-geometry-workbook",
+      "source": "C:/Users/26421/Desktop/【一轮闯关训练】-立体几何.pdf",
+      "mineru_results": "../work-mineru/568621f2/一轮闯关训练__立体几何/results"
+    },
+    {
+      "slug": "plane-vectors-workbook",
+      "source": "C:/Users/26421/Desktop/【一轮闯关训练】-平面向量.pdf",
+      "mineru_results": "../work-mineru/568621f2/一轮闯关训练__平面向量/results"
+    },
+    {
+      "slug": "sequences-workbook",
+      "source": "C:/Users/26421/Desktop/【一轮闯关训练】-数列.pdf",
+      "mineru_results": "../work-mineru/568621f2/一轮闯关训练__数列/results"
+    }
+  ]
+}

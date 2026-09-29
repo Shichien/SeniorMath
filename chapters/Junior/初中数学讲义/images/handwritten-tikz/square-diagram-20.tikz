@@ -1,0 +1,3 @@
+\begin{tikzpicture}[thick,font=\small]
+\coordinate(A)at(0,3);\coordinate(B)at(0,0);\coordinate(C)at(3,0);\coordinate(D)at(3,3);\coordinate(Q)at(2,3);\coordinate(M)at(3,2);\coordinate(N)at(2,1);\coordinate(P)at(1,2);\coordinate(G)at(0,1.5);\coordinate(E)at(1.5,0);\coordinate(F)at(1.5,1.5);\fill[gray!55](P)--(Q)--(M)--(N)--cycle;\fill[gray!55](B)--(E)--(F)--(G)--cycle;\draw(A)--(B)--(C)--(D)--cycle;\draw(A)--(C);\draw(P)--(Q)--(M)--(N)--cycle;\draw(B)--(E)--(F)--(G);\node at(2,2){$S_1$};\node at(.75,.75){$S_2$};\foreach\p/\a in {A/above left,B/below left,C/below right,D/above right,Q/above,M/right,N/below,P/left,G/left,E/below,F/below left}\node[\a]at(\p){$\p$};
+\end{tikzpicture}

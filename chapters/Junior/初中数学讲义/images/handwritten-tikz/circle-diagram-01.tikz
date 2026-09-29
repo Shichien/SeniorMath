@@ -1,0 +1,29 @@
+\begin{tikzpicture}[>=stealth,line cap=round,line join=round,line width=.6pt]
+\coordinate (O) at (0,0);
+\coordinate (M) at (-2,0.820);
+\coordinate (F) at (0,1.312);
+\coordinate (N) at (3.2,2.099);
+\coordinate (M1) at (-2,-1.2);
+\coordinate (F1) at (0,-1.2);
+\coordinate (N1) at (3.2,-1.2);
+
+% The parabola continues on both sides of M and N, as in the source image.
+\draw[domain=-4.1:4.1,smooth,variable=\x,samples=100]
+  plot ({\x},{.205*\x*\x});
+\draw (M)--(N);
+\draw (M)--(M1) (F)--(F1) (N)--(N1);
+\draw (F)--(N1) (F)--(M1);
+
+\draw (-4,-1.2)--(4.05,-1.2);
+\draw[->] (-4.25,0)--(4.55,0) node[right] {$x$};
+\draw[->] (0,-1.65)--(0,4.35) node[above] {$y$};
+
+\node[left] at (M) {$M$};
+\node[above left] at (F) {$F$};
+\node[right] at (N) {$N$};
+\node[below left] at (O) {$O$};
+\node[below left] at (M1) {$M_1$};
+\node[below left] at (F1) {$F_1$};
+\node[below right] at (N1) {$N_1$};
+\node[left] at (-4,-1.2) {$l$};
+\end{tikzpicture}

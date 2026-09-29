@@ -1,0 +1,18 @@
+\begin{tikzpicture}[scale=1.05, every node/.style={font=\small}]
+  \coordinate (B) at (0,0); \coordinate (D) at (5.5,0);
+  \coordinate (C) at (3.58,-1.12);
+  \coordinate (E) at ($(B)!.5!(D)$);        % midpoint of BD
+  \coordinate (A) at ($(E)+(0,2.73)$);      % A above E (AB=AD, plane ABD vertical)
+  \coordinate (M) at ($(A)!.5!(B)$);        % midpoint of AB
+  \coordinate (N) at ($(B)!.5!(E)$);        % foot of MN on BD
+  \draw (B)--(A)--(D)--(C)--cycle;
+  \draw (A)--(C); \draw (M)--(C);
+  \draw[dashed] (B)--(D); \draw[dashed] (M)--(N)--(C); \draw[dashed] (E)--(C);
+  \node[above] at (A) {$A$};
+  \node[left] at (B) {$B$};
+  \node[below] at (C) {$C$};
+  \node[right] at (D) {$D$};
+  \node[above left] at (M) {$M$};
+  \node[above left] at (N) {$N$};
+  \node[above] at (E) {$E$};
+\end{tikzpicture}

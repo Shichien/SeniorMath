@@ -1,0 +1,32 @@
+\begin{tikzpicture}[scale=.85, every node/.style={font=\small}, line cap=round, line join=round]
+  % dihedral angle alpha-l-beta; PA \perp alpha at A, PB \perp beta at B, AO \perp l at O
+  \coordinate (L)  at (0,0);          % lower end of edge l
+  \coordinate (Q)  at (-0.34,2.23);   % upper end of edge l
+  \coordinate (a1) at (-3.17,1.95);   % alpha: L, a1, a2, Q
+  \coordinate (a2) at ($(a1)+(Q)-(L)$);
+  \coordinate (b1) at (3.43,0);       % beta: L, b1, b2, Q
+  \coordinate (b2) at ($(b1)+(Q)-(L)$);
+  \coordinate (O)  at ($(L)!0.54!(Q)$);
+  \coordinate (A)  at (-1.37,2.08);
+  \coordinate (P)  at (1.10,4.65);
+  \coordinate (B)  at (P |- O);
+  \coordinate (X)  at (intersection of P--A and a2--Q);   % alpha's back edge disappears behind PA
+  \coordinate (Y)  at (intersection of P--B and Q--b2);   % beta's back edge reappears at PB
+
+  \draw (L)--(O);
+  \draw[dashed] (O)--(Q);
+  \draw (L)--(a1)--(a2)--(X);
+  \draw[dashed] (X)--(Q);
+  \draw (L)--(b1)--(b2)--(Y);
+  \draw[dashed] (Y)--(Q);
+  \draw (P)--(A)--(O)--cycle;
+  \draw (P)--(B)--(O);
+
+  \node[above right] at (P) {$P$};
+  \node[left] at (A) {$A$};
+  \node[below left] at (O) {$O$};
+  \node[below right] at (B) {$B$};
+  \node[below] at (L) {$l$};
+  \node at ($(a2)+(0.3,-0.45)$) {$\alpha$};
+  \node at ($(b2)+(-0.3,-0.45)$) {$\beta$};
+\end{tikzpicture}

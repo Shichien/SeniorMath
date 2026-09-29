@@ -1,0 +1,866 @@
+\section{第5讲\quad 向量法解立体几何}
+\subsection{夯基础}
+\bktopic{空间直角坐标系}
+
+\begin{example}[\bkstar{1}{5}]
+如图所示，正方体 $ABCD-A_1B_1C_1D_1$ 的棱长为 $1$，则点 $B_1$ 的坐标是
+\bkfig{TikZ-final/geometry/solid/p034-o0714.tex}
+\begin{tasks}(1)
+    \task $(1,0,0)$
+    \task $(1,0,1)$
+    \task $(1,1,1)$
+    \task $(1,1,0)$
+\end{tasks}
+\end{example}
+\begin{solution}
+\textbf{答案：}C
+
+根据题意，可得
+
+$\because$ 正方体 $ABCD-A_1B_1C_1D_1$ 的棱长为 $1$
+
+$\therefore$ 点 $B_1$ 在 $x$ 轴上的射影点为 $A(1,0,0)$，可得 $B_1$ 的横坐标为 $1$
+
+点 $B_1$ 在 $y$ 轴上的射影点为 $C(0,1,0)$，可得 $B_1$ 的纵坐标为 $1$
+
+点 $B_1$ 在 $z$ 轴上的射影点为 $D_1(0,0,1)$，可得 $B_1$ 的竖坐标为 $1$
+
+由此可得点 $B_1$ 的坐标是 $(1,1,1)$
+
+故选：C．
+\end{solution}
+
+\vspace{2em}
+
+\begin{example}[\bkstar{1}{5}]
+在空间直角坐标系中，点 $P(-2,-1,3)$ 到原点的距离为
+\begin{tasks}(4)
+    \task $\sqrt{14}$
+    \task $\sqrt{5}$
+    \task $14$
+    \task $5$
+\end{tasks}
+\end{example}
+\begin{solution}
+\textbf{答案：}A
+
+由题意可知，点 $P$ 到原点的距离为 $\sqrt{(-2)^2+(-1)^2+3^2}=\sqrt{14}$
+
+故选：A．
+\end{solution}
+
+\vspace{2em}
+
+\begin{example}[\bkstar{2}{5}]
+如图所示，在空间直角坐标系中，有一棱长为 $a$ 的正方体 $ABCD-A'B'C'D'$，$A'C$ 的中点 $E$ 与 $AB$ 的中点 $F$ 的距离为
+\bkfig{TikZ-final/geometry/solid/p034-o0719.tex}
+\begin{tasks}(2)
+    \task $\sqrt{2}a$
+    \task $\dfrac{\sqrt{2}}{2}a$
+    \task $a$
+    \task $\dfrac{1}{2}a$
+\end{tasks}
+\end{example}
+\begin{solution}
+\textbf{答案：}B
+
+由题意得，$A'(a,0,a)$，$C(0,a,0)$，$F\left(a,\dfrac{a}{2},0\right)$，$E\left(\dfrac{a}{2},\dfrac{a}{2},\dfrac{a}{2}\right)$
+
+\begin{align*}
+|EF|&=\sqrt{\left(a-\dfrac{a}{2}\right)^2+\left(\dfrac{a}{2}-\dfrac{a}{2}\right)^2+\left(0-\dfrac{a}{2}\right)^2}\\
+&=\sqrt{\dfrac{a^2}{4}+\dfrac{a^2}{4}}\\
+&=\dfrac{\sqrt{2}}{2}a
+\end{align*}
+
+故选：B．
+\end{solution}
+
+\vspace{2em}
+
+\begin{example}[\bkstar{2}{5}]
+在空间直角坐标系中，已知点 $A$ 在 $x$ 轴上，$B(4,2,3)$，$C(6,-1,4)$，若 $|AB|=|AC|$，则点 $A$ 的横坐标是
+\begin{tasks}(4)
+    \task $5$
+    \task $6$
+    \task $7$
+    \task $8$
+\end{tasks}
+\end{example}
+\begin{solution}
+\textbf{答案：}B
+
+由题意可得：设 $A(a,0,0)$
+
+$\because |AB|=|AC|$
+
+$\therefore \sqrt{(4-a)^2+(2-0)^2+(3-0)^2}=\sqrt{(6-a)^2+(-1-0)^2+(4-0)^2}$
+
+解得：$a=6$
+
+故选：B．
+\end{solution}
+
+\vspace{2em}
+
+\begin{example}[\bkstar{2}{5}]
+已知空间直角坐标系中，点 $A(0,2,2)$，点 $B(1,1,1)$，点 $B$ 是线段 $AC$ 的中点，则点 $C$ 的坐标为
+\begin{tasks}(4)
+    \task $(-1,3,3)$
+    \task $\left(\dfrac{1}{2},\dfrac{3}{2},\dfrac{3}{2}\right)$
+    \task $(1,3,3)$
+    \task $(2,0,0)$
+\end{tasks}
+\end{example}
+\begin{solution}
+\textbf{答案：}D
+
+设点 $C$ 的坐标为 $(x,y,z)$
+
+$\because A(0,2,2)$
+
+$\therefore$ 线段 $AC$ 的中点为 $\left(\dfrac{1}{2}x,\dfrac{y+2}{2},\dfrac{z+2}{2}\right)$
+
+因为 $B(1,1,1)$ 是线段 $AC$ 的中点
+
+$$
+\therefore\left\{\begin{array}{l}
+\dfrac{x}{2}=1\\
+\dfrac{y+2}{2}=1\\
+\dfrac{z+2}{2}=1
+\end{array}\right.\text{，解得}\left\{\begin{array}{l}
+x=2\\
+y=0\\
+z=0
+\end{array}\right.
+$$
+
+则点 $C$ 的坐标为 $(2,0,0)$
+
+故选：D．
+\end{solution}
+
+\vspace{2em}
+
+\bktopic{空间向量的概念和基本定理}
+
+\begin{example}[\bkstar{2}{5}]
+已知正方体 $ABCD-A_1B_1C_1D_1$ 中，点 $E$ 为上底面 $A_1B_1C_1D_1$ 的中心，若 $\overrightarrow{AE}=\overrightarrow{AA_1}+x\overrightarrow{AB}+y\overrightarrow{AD}$，则 $x$，$y$ 的值分别为
+\begin{tasks}(4)
+    \task $x=1$，$y=1$
+    \task $x=1$，$y=\dfrac{1}{2}$
+    \task $x=\dfrac{1}{2}$，$y=\dfrac{1}{2}$
+    \task $x=\dfrac{1}{2}$，$y=1$
+\end{tasks}
+\end{example}
+\begin{solution}
+\textbf{答案：}C
+
+如图
+\bkfig{TikZ-final/geometry/solid/p086-o1672.tex}
+
+$$
+\overrightarrow{AE}=\overrightarrow{AA_1}+\overrightarrow{A_1E}=\overrightarrow{AA_1}+\dfrac{1}{2}\overrightarrow{A_1C_1}=\overrightarrow{AA_1}+\dfrac{1}{2}\left(\overrightarrow{AB}+\overrightarrow{AD}\right)
+$$
+
+$\therefore x=\dfrac{1}{2}$，$y=\dfrac{1}{2}$
+
+故选：C．
+\end{solution}
+
+\vspace{2em}
+
+\bktopic{空间向量的数量积}
+
+\begin{example}[\bkstar{3}{5}]
+在棱长为 $1$ 的正四面体 $ABCD$ 中，$E$，$F$ 分别是 $BC$，$AD$ 的中点，则 $\overrightarrow{AE}\cdot\overrightarrow{CF}=$
+\begin{tasks}(4)
+    \task $0$
+    \task $\dfrac{1}{2}$
+    \task $-\dfrac{3}{4}$
+    \task $-\dfrac{1}{2}$
+\end{tasks}
+\end{example}
+\begin{solution}
+\textbf{答案：}D
+
+\begin{align*}
+\overrightarrow{AE}\cdot\overrightarrow{CF}&=\dfrac{1}{2}\left(\overrightarrow{AB}+\overrightarrow{AC}\right)\cdot\left(\dfrac{1}{2}\overrightarrow{AD}-\overrightarrow{AC}\right)\\
+&=\dfrac{1}{4}\overrightarrow{AB}\cdot\overrightarrow{AD}+\dfrac{1}{4}\overrightarrow{AC}\cdot\overrightarrow{AD}-\dfrac{1}{2}\overrightarrow{AB}\cdot\overrightarrow{AC}-\dfrac{1}{2}\overrightarrow{AC}\cdot\overrightarrow{AC}\\
+&=\dfrac{1}{4}\left(1\times1\times\cos60^{\circ}+1\times1\times\cos60^{\circ}-2\times\cos60^{\circ}-2\right)\\
+&=-\dfrac{1}{2}
+\end{align*}
+
+故选：D．
+\end{solution}
+
+\vspace{2em}
+
+\bktopic{直线的方向向量}
+
+\begin{example}[\bkstar{2}{5}]
+若直线 $l_1$，$l_2$ 的方向向量分别为 $\overrightarrow{v_1}=(1,2,3)$，$\overrightarrow{v_2}=\left(-\dfrac{1}{2},-1,-\dfrac{3}{2}\right)$，则 $l_1$，$l_2$ 的位置关系是
+\begin{tasks}(4)
+    \task 垂直
+    \task 重合
+    \task 平行
+    \task 平行或重合
+\end{tasks}
+\end{example}
+\begin{solution}
+\textbf{答案：}D
+
+$\because$ 直线 $l_1$，$l_2$ 的方向向量分别为 $\overrightarrow{v_1}=(1,2,3)$，$\overrightarrow{v_2}=\left(-\dfrac{1}{2},-1,-\dfrac{3}{2}\right)$
+
+$\therefore \overrightarrow{v_1}=-2\overrightarrow{v_2}$
+
+$\therefore l_1$，$l_2$ 平行或重合
+
+故选：D．
+\end{solution}
+
+\vspace{2em}
+
+\bktopic{平面的法向量}
+
+\begin{example}[\bkstar{1}{5}]
+以下描述中，对平面的法向量描述错误的是
+\begin{tasks}(2)
+    \task 一个平面有无数个法向量
+    \task 平面的所有法向量共线
+    \task 其单位法向量只有一个
+    \task 其单位法向量有两个
+\end{tasks}
+\end{example}
+\begin{solution}
+\textbf{答案：}C
+
+A．一个平面有无数个法向量，正确
+
+B．平面的所有法向量共线，正确
+
+C．其单位法向量只有一个，不正确
+
+D．其单位法向量有两个，正确
+
+故选：C．
+\end{solution}
+
+\vspace{2em}
+
+\begin{example}[\bkstar{2}{5}]
+设平面 $\alpha$ 内两个向量的坐标分别为 $(1,2,1)$，$(-1,1,2)$，则下列向量中是平面的法向量的是
+\begin{tasks}(4)
+    \task $(-1,-2,5)$
+    \task $(-1,1,-1)$
+    \task $(1,1,1)$
+    \task $(1,-1,-1)$
+\end{tasks}
+\end{example}
+\begin{solution}
+\textbf{答案：}B
+
+$\because (-1,1,-1)\cdot(1,2,1)=-1+2-1=0$，$(-1,1,-1)\cdot(-1,1,2)=1+1-2=0$
+
+$\therefore$ 向量 $(-1,1,-1)$ 是此平面的法向量
+
+故选：B．
+\end{solution}
+
+\vspace{2em}
+
+\subsection{刷中档}
+\bktopic{空间直角坐标系}
+
+\begin{example}[\bkstar{2}{5}]
+已知点 $A(x,0,2)$ 和点 $B(2,3,4)$，且线段 $AB=\sqrt{22}$，则实数 $x$ 的值是
+\begin{tasks}(2)
+    \task $5$ 或 $-1$
+    \task $5$ 或 $1$
+    \task $2$ 或 $-6$
+    \task $-2$ 或 $6$
+\end{tasks}
+\end{example}
+\begin{solution}
+\textbf{答案：}A
+
+$\because$ 点 $A(x,0,2)$ 和点 $B(2,3,4)$，且 $AB=\sqrt{22}$
+
+$\therefore \sqrt{(2-x)^2+(3-0)^2+(4-2)^2}=\sqrt{22}$
+
+解得 $x=5$ 或 $x=-1$
+
+$\therefore$ 实数 $x$ 的值为 $5$ 或 $-1$
+
+故选：A．
+\end{solution}
+
+\vspace{2em}
+
+\begin{example}[\bkstar{2}{5}]
+已知 $A(1,a,-5)$，$B(2a,-7,-2)$（$a\in\mathbf{R}$），则 $|AB|$ 的最小值为
+\begin{tasks}(4)
+    \task $3\sqrt{3}$
+    \task $3\sqrt{6}$
+    \task $2\sqrt{3}$
+    \task $2\sqrt{6}$
+\end{tasks}
+\end{example}
+\begin{solution}
+\textbf{答案：}B
+
+由题意可得
+
+$$
+|AB|=\sqrt{(2a-1)^2+(-7-a)^2+(-2+5)^2}=\sqrt{5(a+1)^2+54}\geq 3\sqrt{6}
+$$
+
+故选：B．
+\end{solution}
+
+\vspace{2em}
+
+\bktopic{直线的方向向量}
+
+\begin{example}[\bkstar{3}{5}]
+已知 $\overrightarrow{a}=\left(1,\dfrac{1}{2},3\right)$，$\overrightarrow{b}=\left(\dfrac{1}{2},1,1\right)$，且 $\overrightarrow{a}$，$\overrightarrow{b}$ 均在平面 $\alpha$ 内，直线 $l$ 的方向向量 $\overrightarrow{v}=\left(\dfrac{1}{2},0,1\right)$，则
+\begin{tasks}(4)
+    \task $l\subset\alpha$
+    \task $l$ 与 $\alpha$ 相交
+    \task $l\px\alpha$
+    \task $l\subset\alpha$ 或 $l\px\alpha$
+\end{tasks}
+\end{example}
+\begin{solution}
+\textbf{答案：}B
+
+$\overrightarrow{a}=\left(1,\dfrac{1}{2},3\right)$，$\overrightarrow{b}=\left(\dfrac{1}{2},1,1\right)$，且 $\overrightarrow{a}$，$\overrightarrow{b}$ 均在平面 $\alpha$ 内
+
+直线 $l$ 的方向向量 $\overrightarrow{v}=\left(\dfrac{1}{2},0,1\right)$
+
+$$
+\text{设 }\overrightarrow{v}=x\overrightarrow{a}+y\overrightarrow{b}\text{，则}\left\{\begin{array}{l}
+\dfrac{1}{2}=x+\dfrac{1}{2}y\\
+0=\dfrac{1}{2}x+y\\
+1=3x+y
+\end{array}\right.
+$$
+
+$\because$ 方程组无解
+
+$\therefore \overrightarrow{a}$，$\overrightarrow{b}$，$\overrightarrow{v}$ 不是共面向量
+
+$\therefore l$ 与 $\alpha$ 相交
+
+故选：B．
+\end{solution}
+
+\vspace{2em}
+
+\begin{example}[\bkstar{3}{5}]
+已知直线 $m$ 过点 $O(0,0,0)$，其方向向量是 $\overrightarrow{a}=(1,1,1)$，则点 $Q(3,4,5)$ 到直线 $m$ 的距离是
+\begin{tasks}(4)
+    \task $1$
+    \task $\sqrt{2}$
+    \task $\sqrt{3}$
+    \task $2$
+\end{tasks}
+\end{example}
+\begin{solution}
+\textbf{答案：}B
+
+由题意，$\overrightarrow{OQ}=(3,4,5)$，$\left|\overrightarrow{OQ}\right|=5\sqrt{2}$
+
+$$
+\therefore \cos\langle\overrightarrow{a},\overrightarrow{OQ}\rangle=\dfrac{3+4+5}{5\sqrt{2}\times\sqrt{3}}=\dfrac{2\sqrt{6}}{5}
+$$
+
+$$
+\therefore \sin\langle\overrightarrow{a},\overrightarrow{OQ}\rangle=\dfrac{1}{5}
+$$
+
+$\therefore$ 点 $Q(3,4,5)$ 到直线 $m$ 的距离是 $\left|\overrightarrow{OQ}\right|\sin\langle\overrightarrow{a},\overrightarrow{OQ}\rangle=\sqrt{2}$
+
+故选：B．
+\end{solution}
+
+\vspace{2em}
+
+\bktopic{用空间向量计算线线角}
+
+\begin{example}[\bkstar{2}{5}]
+在正方体 $ABCD-A_1B_1C_1D_1$ 中，则直线 $A_1C$ 与 $BD$ 所成的角为
+\begin{tasks}(4)
+    \task $30^{\circ}$
+    \task $45^{\circ}$
+    \task $60^{\circ}$
+    \task $90^{\circ}$
+\end{tasks}
+\end{example}
+\begin{solution}
+\textbf{答案：}D
+
+如图，以 $D_1$ 为坐标原点，以 $D_1A_1$，$D_1C_1$，$D_1D$ 分别为 $x$，$y$，$z$ 轴，建立空间直角坐标系
+\bkfig{TikZ-final/geometry/solid/p089-o1709.tex}
+
+设正方体的边长为 $a$，$a>0$
+
+则：$A_1(a,0,0)$，$C(0,a,a)$，$D(0,0,a)$，$B(a,a,a)$
+
+$\therefore \overrightarrow{A_1C}=(-a,a,a)$，$\overrightarrow{BD}=(-a,-a,0)$
+
+$\therefore \overrightarrow{A_1C}\cdot\overrightarrow{BD}=0$
+
+$\therefore \overrightarrow{A_1C}\perp\overrightarrow{BD}$
+
+即 $A_1C\perp BD$
+
+$\therefore$ 直线 $A_1C$ 与 $BD$ 所成角为 $90^{\circ}$
+
+故选：D．
+\end{solution}
+
+\vspace{2em}
+
+\begin{example}[\bkstar{3}{5}]
+在四棱锥 $P-ABCD$ 中，$PD\perp$ 底面 $ABCD$，底面 $ABCD$ 为正方形，$AB=1$，$PD=2$，则异面直线 $PA$ 与 $BD$ 所成角的余弦值为
+\begin{tasks}(4)
+    \task $\dfrac{\sqrt{10}}{5}$
+    \task $\dfrac{3\sqrt{10}}{10}$
+    \task $\dfrac{\sqrt{15}}{5}$
+    \task $\dfrac{\sqrt{10}}{10}$
+\end{tasks}
+\end{example}
+\begin{solution}
+\textbf{答案：}D
+
+以 $D$ 为原点，$DA$，$DC$，$DP$ 所在直线分别为 $x$ 轴，$y$ 轴，$z$ 轴，建立空间直角坐标系，如图所示
+\bkfig{TikZ-final/geometry/solid/p089-o1711.tex}
+
+由题可得 $P(0,0,2)$，$A(1,0,0)$，$B(1,1,0)$，$D(0,0,0)$
+
+则 $\overrightarrow{PA}=(1,0,-2)$，$\overrightarrow{BD}=(-1,-1,0)$
+
+故异面直线 $PA$ 与 $BD$ 所成角的余弦值为
+
+$$
+\left|\cos\langle\overrightarrow{PA},\overrightarrow{BD}\rangle\right|=\left|\dfrac{\overrightarrow{PA}\cdot\overrightarrow{BD}}{\left|\overrightarrow{PA}\right|\cdot\left|\overrightarrow{BD}\right|}\right|=\dfrac{1}{\sqrt{5}\times\sqrt{2}}=\dfrac{\sqrt{10}}{10}
+$$
+
+故选：D．
+\end{solution}
+
+\vspace{2em}
+
+\bktopic{用空间向量计算线面角}
+
+\begin{example}[\bkstar{2}{5}]
+正方体 $ABCD-A_1B_1C_1D_1$ 中，$BB_1$ 与平面 $ACD_1$ 所成角的正切值为
+\begin{tasks}(4)
+    \task $1$
+    \task $\sqrt{2}$
+    \task $\dfrac{\sqrt{2}}{2}$
+    \task $\sqrt{3}$
+\end{tasks}
+\end{example}
+\begin{solution}
+\textbf{答案：}C
+
+建立坐标系如图所示：设正方体棱长为 $1$
+\bkfig{TikZ-final/geometry/solid/p090-o1724.tex}
+
+则 $\overrightarrow{DB_1}=(1,1,1)$，$\overrightarrow{BB_1}=(0,0,1)$，$\overrightarrow{AC}=(-1,1,0)$，$\overrightarrow{AD_1}=(-1,0,1)$
+
+$\therefore \overrightarrow{DB_1}\cdot\overrightarrow{AC}=0$，$\overrightarrow{DB_1}\cdot\overrightarrow{AD_1}=0$
+
+$\therefore \overrightarrow{DB_1}$ 为平面 $ACD_1$ 的一个法向量
+
+$\therefore \angle DB_1B$ 为 $\overrightarrow{DB_1}$ 与 $\overrightarrow{BB_1}$ 的夹角
+
+$\because \tan\angle DB_1B=\dfrac{BD}{BB_1}=\sqrt{2}$
+
+$\therefore BB_1$ 与平面 $ACD_1$ 所成角的正切值为 $\dfrac{1}{\sqrt{2}}=\dfrac{\sqrt{2}}{2}$
+
+故选：C．
+\end{solution}
+
+\vspace{2em}
+
+\begin{example}[\bkstar{3}{5}]
+已知正四棱柱 $ABCD-A_1B_1C_1D_1$ 中，$AA_1=2AB$，则 $CD$ 与平面 $BDC_1$ 所成角的正弦值等于
+\begin{tasks}(4)
+    \task $\dfrac{2}{3}$
+    \task $\dfrac{\sqrt{3}}{3}$
+    \task $\dfrac{\sqrt{2}}{3}$
+    \task $\dfrac{1}{3}$
+\end{tasks}
+\end{example}
+\begin{solution}
+\textbf{答案：}A
+
+设 $AB=1$，则 $AA_1=2$
+
+分别以 $\overrightarrow{D_1A_1}$，$\overrightarrow{D_1C_1}$，$\overrightarrow{D_1D}$ 的方向为 $x$ 轴、$y$ 轴、$z$ 轴的正方向建立空间直角坐标系
+\bkfig{TikZ-final/geometry/solid/p090-o1725.tex}
+
+则 $D(0,0,2)$，$C_1(0,1,0)$，$B(1,1,2)$，$C(0,1,2)$
+
+$\overrightarrow{DB}=(1,1,0)$，$\overrightarrow{DC_1}=(0,1,-2)$，$\overrightarrow{DC}=(0,1,0)$
+
+$$
+\text{设 }\overrightarrow{n}=(x,y,z)\text{ 为平面 }BDC_1\text{ 的一个法向量，则}\left\{\begin{array}{l}
+\overrightarrow{n}\cdot\overrightarrow{DB}=0\\
+\overrightarrow{n}\cdot\overrightarrow{DC_1}=0
+\end{array}\right.
+$$
+
+$$
+\text{即}\left\{\begin{array}{l}
+x+y=0\\
+y-2z=0
+\end{array}\right.\text{，取 }\overrightarrow{n}=(2,-2,-1)
+$$
+
+设 $CD$ 与平面 $BDC_1$ 所成的角为 $\theta$，则
+
+$$
+\sin\theta=\left|\dfrac{\overrightarrow{n}\cdot\overrightarrow{DC}}{\left|\overrightarrow{n}\right|\left|\overrightarrow{DC}\right|}\right|=\dfrac{2}{3}
+$$
+
+故选：A．
+\end{solution}
+
+\vspace{2em}
+
+\bktopic{用空间向量计算二面角}
+
+\begin{example}[\bkstar{3}{5}]
+过正方形 $ABCD$ 的顶点 $A$，作 $PA\perp$ 平面 $ABCD$，若 $PA=BA$，则平面 $ABP$ 和平面 $CDP$ 所成的锐二面角的大小是
+\bkfig{TikZ-final/geometry/solid/p038-o0772.tex}
+\begin{tasks}(1)
+    \task $30^{\circ}$
+    \task $45^{\circ}$
+    \task $60^{\circ}$
+    \task $90^{\circ}$
+\end{tasks}
+\end{example}
+\begin{solution}
+\textbf{答案：}B
+
+以 $A$ 为原点，$AB$ 为 $x$ 轴，$AD$ 为 $y$ 轴，$AP$ 为 $z$ 轴
+
+建立空间直角坐标系
+\bkfig{TikZ-final/geometry/solid/p091-o1738.tex}
+
+设 $PA=BA=1$
+
+则 $C(1,1,0)$，$D(0,1,0)$，$P(0,0,1)$
+
+$\overrightarrow{PC}=(1,1,-1)$，$\overrightarrow{PD}=(0,1,-1)$
+
+设平面 $PCD$ 的法向量 $\overrightarrow{n}=(x,y,z)$
+
+$$
+\text{则}\left\{\begin{array}{l}
+\overrightarrow{PC}\cdot\overrightarrow{n}=x+y-z=0\\
+\overrightarrow{PD}\cdot\overrightarrow{n}=y-z=0
+\end{array}\right.
+$$
+
+取 $y=1$，得 $\overrightarrow{n}=(0,1,1)$
+
+平面 $ABP$ 的法向量 $\overrightarrow{m}=(0,1,0)$
+
+设平面 $ABP$ 和平面 $CDP$ 所成的锐二面角的大小为 $\theta$
+
+$$
+\text{则}\cos\theta=\dfrac{\left|\overrightarrow{n}\cdot\overrightarrow{m}\right|}{\left|\overrightarrow{n}\right|\cdot\left|\overrightarrow{m}\right|}=\dfrac{1}{\sqrt{2}}=\dfrac{\sqrt{2}}{2}
+$$
+
+$\therefore \theta=45^{\circ}$
+
+$\therefore$ 平面 $ABP$ 和平面 $CDP$ 所成的锐二面角的大小为 $45^{\circ}$
+
+故选：B．
+\end{solution}
+
+\vspace{2em}
+
+\begin{example}[\bkstar{3}{5}]
+四边形 $ABCD$ 是正方形，$MD\perp$ 平面 $ABCD$，$NB\perp$ 平面 $ABCD$，且 $MD=NB=AB$．则二面角 $A-MN-C$ 的余弦值为
+\bkfig{TikZ-final/geometry/solid/p038-o0774.tex}
+\begin{tasks}(2)
+    \task $\dfrac{\sqrt{6}}{3}$
+    \task $-\dfrac{\sqrt{6}}{3}$
+    \task $\dfrac{1}{3}$
+    \task $-\dfrac{1}{3}$
+\end{tasks}
+\end{example}
+\begin{solution}
+\textbf{答案：}C
+
+因为四边形 $ABCD$ 是正方形，$MD\perp$ 平面 $ABCD$，$NB\perp$ 平面 $ABCD$
+
+且 $MD=NB=AB$
+
+将已知的几何体补成正方体 $ABCD-ENFM$，如下图所示：
+\bkfig{TikZ-final/geometry/solid/p091-o1740.tex}
+
+设正方体 $ABCD-ENFM$ 的边长为 $1$
+
+以 $A$ 为坐标原点，$AB$，$AD$，$AE$ 方向分别为 $x$，$y$，$z$ 轴正方向建立空间直角坐标系
+
+易得 $\overrightarrow{CE}=(-1,-1,1)$ 为平面 $AMN$ 的一个法向量
+
+$\overrightarrow{AF}=(1,1,1)$ 为平面 $CMN$ 的一个法向量
+
+设二面角 $A-MN-C$ 的夹角为 $\theta$
+
+$$
+\text{则}\cos\theta=\dfrac{\left|\overrightarrow{AF}\cdot\overrightarrow{CE}\right|}{\left|\overrightarrow{AF}\right|\cdot\left|\overrightarrow{CE}\right|}=\dfrac{1}{3}
+$$
+
+故选：C．
+\end{solution}
+
+\vspace{2em}
+
+\subsection{提能力}
+\bktopic{用空间向量求距离}
+
+\begin{example}[\bkstar{3}{5}]
+已知正方体 $ABCD-A_1B_1C_1D_1$ 的棱长为 $a$，则异面直线 $AC_1$ 与 $BD$ 的距离为
+\begin{tasks}(4)
+    \task $\sqrt{3}a$
+    \task $\dfrac{\sqrt{3}}{2}a$
+    \task $\dfrac{\sqrt{6}}{3}a$
+    \task $\dfrac{\sqrt{6}}{6}a$
+\end{tasks}
+\end{example}
+\begin{solution}
+\textbf{答案：}D
+
+$\because$ 正方体 $ABCD-A_1B_1C_1D_1$ 的棱长为 $a$
+
+$\therefore$ 以 $D$ 为原点，$DA$ 为 $x$ 轴，$DC$ 为 $y$ 轴，$DD_1$ 为 $z$ 轴，建立空间直角坐标系
+\bkfig{TikZ-final/geometry/solid/p092-o1754.tex}
+
+$A(a,0,0)$，$C_1(0,a,a)$，$B(a,a,0)$，$D(0,0,0)$
+
+$\overrightarrow{AC_1}=(-a,a,a)$，$\overrightarrow{BD}=(-a,-a,0)$，$\overrightarrow{DA}=(a,0,0)$
+
+设 $\overrightarrow{AC_1}$，$\overrightarrow{BD}$ 的公共法向量 $\overrightarrow{n}=(x,y,z)$
+
+$$
+\text{则}\left\{\begin{array}{l}
+\overrightarrow{AC_1}\cdot\overrightarrow{n}=-ax+ay+az=0\\
+\overrightarrow{BD}\cdot\overrightarrow{n}=-ax-ay=0
+\end{array}\right.\text{，取 }x=1\text{，得 }\overrightarrow{n}=(1,-1,2)
+$$
+
+$$
+\therefore\text{异面直线 }AC_1\text{ 与 }BD\text{ 的距离为 }d=\dfrac{\left|\overrightarrow{n}\cdot\overrightarrow{DA}\right|}{\left|\overrightarrow{n}\right|}=\dfrac{a}{\sqrt{6}}=\dfrac{\sqrt{6}a}{6}
+$$
+
+故选：D．
+\end{solution}
+
+\vspace{2em}
+
+\begin{example}[\bkstar{3}{5}]
+已知四棱锥 $P-ABCD$ 中，$\overrightarrow{AB}=(4,-2,3)$，$\overrightarrow{AD}=(-4,1,0)$，$\overrightarrow{AP}=(-6,2,-8)$，则点 $P$ 到底面 $ABCD$ 的距离为
+\begin{tasks}(4)
+    \task $\dfrac{\sqrt{26}}{13}$
+    \task $\dfrac{\sqrt{26}}{26}$
+    \task $1$
+    \task $2$
+\end{tasks}
+\end{example}
+\begin{solution}
+\textbf{答案：}D
+
+设 $\overrightarrow{n}=(x,y,z)$ 是平面的一个法向量
+
+$$
+\text{则由题设}\left\{\begin{array}{l}
+\overrightarrow{n}\times\overrightarrow{AB}=0\\
+\overrightarrow{n}\times\overrightarrow{AD}=0
+\end{array}\right.\text{，即}\left\{\begin{array}{l}
+4x-2y+3z=0\\
+-4x+y=0
+\end{array}\right.\Rightarrow\left\{\begin{array}{l}
+x=1\\
+y=4\\
+z=\dfrac{4}{3}
+\end{array}\right.\text{，即 }\overrightarrow{n}=\left(1,4,\dfrac{4}{3}\right)
+$$
+
+$$
+\text{由于 }\overrightarrow{n}\times\overrightarrow{AP}=-6+8-\dfrac{32}{3}=-\dfrac{26}{3}\text{，}\left|\overrightarrow{n}\right|=\sqrt{1+16+\dfrac{16}{9}}=\dfrac{13}{3}\text{，}\left|\overrightarrow{AP}\right|=2\sqrt{26}
+$$
+
+$$
+\text{故点 }P\text{ 到平面 }ABCD\text{ 的距离 }d=\left|\overrightarrow{AP}\right|\times\left|\cos\langle\overrightarrow{n},\overrightarrow{AP}\rangle\right|=10\times\dfrac{1}{5}=2
+$$
+
+故选：D．
+\end{solution}
+
+\vspace{2em}
+
+\begin{example}[\bkstar{3}{5}]
+已知三棱柱 $A_1B_1C_1-ABC$ 的所有棱长均为 $1$，且 $AA_1\perp$ 底面 $ABC$，则点 $B_1$ 到平面 $ABC_1$ 的距离为
+\begin{tasks}(4)
+    \task $\dfrac{\sqrt{21}}{7}$
+    \task $\dfrac{\sqrt{7}}{7}$
+    \task $\dfrac{\sqrt{21}}{14}$
+    \task $\dfrac{\sqrt{21}}{21}$
+\end{tasks}
+\end{example}
+\begin{solution}
+\textbf{答案：}A
+
+以 $A$ 为原点，在平面 $ABC$ 中过 $A$ 作 $AC$ 的垂线为 $x$ 轴，$AC$ 为 $y$ 轴，$AA_1$ 为 $z$ 轴，建立空间直角坐标系，则
+
+$B_1\left(\dfrac{\sqrt{3}}{2},\dfrac{1}{2},1\right)$，$A(0,0,0)$，$B\left(\dfrac{\sqrt{3}}{2},\dfrac{1}{2},0\right)$，$C_1(0,1,1)$，
+
+$\overrightarrow{AB_1}=\left(\dfrac{\sqrt{3}}{2},\dfrac{1}{2},1\right)$，$\overrightarrow{AB}=\left(\dfrac{\sqrt{3}}{2},\dfrac{1}{2},0\right)$，$\overrightarrow{AC_1}=(0,1,1)$
+
+设平面 $ABC_1$ 的法向量 $\overrightarrow{n}=(x,y,z)$
+
+$$
+\text{则}\left\{\begin{array}{l}
+\overrightarrow{n}\cdot\overrightarrow{AB}=\dfrac{\sqrt{3}}{2}x+\dfrac{1}{2}y=0\\
+\overrightarrow{n}\cdot\overrightarrow{AC_1}=y+z=0
+\end{array}\right.\text{，取 }x=1\text{，得 }\overrightarrow{n}=\left(1,-\sqrt{3},\sqrt{3}\right)
+$$
+
+$$
+\therefore\text{点 }B_1\text{ 到平面 }ABC_1\text{ 的距离：}d=\dfrac{\left|\overrightarrow{AB_1}\cdot\overrightarrow{n}\right|}{\left|\overrightarrow{n}\right|}=\dfrac{\sqrt{3}}{\sqrt{7}}=\dfrac{\sqrt{21}}{7}
+$$
+
+故选：A．
+\end{solution}
+
+\vspace{2em}
+
+\bktopic{用空间向量计算线面角}
+
+\begin{example}[\bkstar{3}{5}]
+四棱锥 $P-ABCD$ 中，底面 $ABCD$ 是边长为 $2$ 的菱形，$\angle DAB=\dfrac{2\pi}{3}$，$AC\cap BD=O$，且 $PO\perp$ 平面 $ABCD$，$PO=\sqrt{3}$，点 $F$，$G$ 分别是线段 $PB$，$PD$ 上的中点，$E$ 在 $PA$ 上，且 $PA=3PE$．求直线 $AB$ 与平面 $EFG$ 所成角的正弦值．
+\bkfig[0.3\textwidth]{TikZ-final/geometry/solid/p039-o0787.tex}
+\end{example}
+\begin{solution}
+$\because$ 底面 $ABCD$ 是边长为 $2$ 的菱形
+
+$\therefore OA\perp OB$
+
+$\because PO\perp$ 平面 $ABCD$
+
+$\therefore PO\perp OA$，$PO\perp OB$
+
+如图，以 $O$ 为原点，$OA$，$OB$，$OP$ 分别为 $x$，$y$，$z$ 轴，建立空间直角坐标系
+\bkfig[0.3\textwidth]{TikZ-final/geometry/solid/p093-o1767.tex}
+
+又 $\because \angle DAB=\dfrac{2\pi}{3}$
+
+则 $A(1,0,0)$，$B\left(0,\sqrt{3},0\right)$，$C(-1,0,0)$，$D\left(0,-\sqrt{3},0\right)$，$P\left(0,0,\sqrt{3}\right)$，
+
+$E\left(\dfrac{1}{3},0,\dfrac{2\sqrt{3}}{3}\right)$，$F\left(0,\dfrac{\sqrt{3}}{2},\dfrac{\sqrt{3}}{2}\right)$，$G\left(0,-\dfrac{\sqrt{3}}{2},\dfrac{\sqrt{3}}{2}\right)$
+
+$\therefore \overrightarrow{AB}=\left(-1,\sqrt{3},0\right)$，$\overrightarrow{EF}=\left(-\dfrac{1}{3},\dfrac{\sqrt{3}}{2},-\dfrac{\sqrt{3}}{6}\right)$，$\overrightarrow{GF}=\left(0,\sqrt{3},0\right)$
+
+设平面 $EFG$ 的法向量为 $\overrightarrow{n}=(x,y,z)$
+
+$$
+\text{则}\left\{\begin{array}{l}
+\overrightarrow{n}\cdot\overrightarrow{EF}=-\dfrac{1}{3}x+\dfrac{\sqrt{3}}{2}y-\dfrac{\sqrt{3}}{6}z=0\\
+\overrightarrow{n}\cdot\overrightarrow{GF}=\sqrt{3}y=0
+\end{array}\right.\text{，令 }x=-\dfrac{3}{2}\text{，得 }\overrightarrow{n}=\left(-\dfrac{3}{2},0,\sqrt{3}\right)
+$$
+
+$$
+\because \cos\langle\overrightarrow{AB},\overrightarrow{n}\rangle=\dfrac{\overrightarrow{AB}\cdot\overrightarrow{n}}{\left|\overrightarrow{AB}\right|\cdot\left|\overrightarrow{n}\right|}=\dfrac{\sqrt{21}}{14}
+$$
+
+$\therefore$ 直线 $AB$ 与平面 $EFG$ 的成角的正弦值为 $\dfrac{\sqrt{21}}{14}$
+\end{solution}
+
+\vspace{2em}
+
+\bktopic{用空间向量计算二面角}
+
+\begin{example}[\bkstar{3}{5}]
+已知正方体 $ABCD-A_1B_1C_1D_1$ 的棱长为 $1$，若 $P$ 点在正方体的内部，且满足 $\overrightarrow{AP}=\dfrac{1}{4}\overrightarrow{AB}+\dfrac{1}{3}\overrightarrow{AD}+\dfrac{1}{2}\overrightarrow{AA_1}$，则平面 $PAB$ 与平面 $ABCD$ 所成二面角的余弦值为
+\begin{tasks}(4)
+    \task $\dfrac{\sqrt{13}}{4}$
+    \task $\dfrac{2\sqrt{13}}{13}$
+    \task $\dfrac{\sqrt{7}}{3}$
+    \task $\dfrac{\sqrt{3}}{3}$
+\end{tasks}
+\end{example}
+\begin{solution}
+\textbf{答案：}B
+
+以 $A$ 为坐标原点，$AB$ 方向为 $x$ 轴、$AD$ 方向为 $y$ 轴、$AA_1$ 方向为 $z$ 轴建立空间直角坐标系，则
+\bkfig{TikZ-final/geometry/solid/p093-o1768.tex}
+
+$$
+\overrightarrow{AP}=\dfrac{1}{4}\times(1,0,0)+\dfrac{1}{3}\times(0,1,0)+\dfrac{1}{2}\times(0,0,1)=\left(\dfrac{1}{4},\dfrac{1}{3},\dfrac{1}{2}\right)
+$$
+
+点 $P$ 的坐标为 $\left(\dfrac{1}{4},\dfrac{1}{3},\dfrac{1}{2}\right)$
+
+平面 $ABCD$ 的一个法向量为 $\overrightarrow{n}=(0,0,1)$，设平面 $PAB$ 的法向量为 $\overrightarrow{m}=(x,y,z)$
+
+$\overrightarrow{AB}=(1,0,0)$，则 $\overrightarrow{AB}\cdot\overrightarrow{m}=x=0$，$\overrightarrow{AP}\cdot\overrightarrow{m}=\dfrac{1}{4}x+\dfrac{1}{3}y+\dfrac{1}{2}z=0$
+
+取 $x=0$，$y=3$，$z=-2$
+
+$$
+\text{则 }\overrightarrow{m}=(0,3,-2)\text{，则}\cos\theta=\left|\dfrac{\overrightarrow{m}\cdot\overrightarrow{n}}{\left|\overrightarrow{m}\right|\left|\overrightarrow{n}\right|}\right|=\left|-\dfrac{2}{\sqrt{13}}\right|=\dfrac{2\sqrt{13}}{13}
+$$
+
+故选：B．
+\end{solution}
+
+\vspace{2em}
+
+\begin{example}[\bkstar{3}{5}]
+如图，在直三棱柱 $ABC-A_1B_1C_1$ 中，底面 $\triangle ABC$ 是边长为 $2$ 的等边三角形，$D$ 为 $BC$ 的中点，侧棱 $AA_1=3$，点 $E$ 在 $BB_1$ 上，点 $F$ 在 $CC_1$ 上，且 $BE=1$，$CF=2$．求二面角 $F-AD-E$ 的余弦值．
+\bkfig{TikZ-final/geometry/solid/p039-o0788.tex}
+\end{example}
+\begin{solution}
+如图建立空间直角坐标系 $D-xyz$
+\bkfig{TikZ-final/geometry/solid/p094-o1785.tex}
+
+则 $A\left(\sqrt{3},0,0\right)$，$F(0,-1,2)$，$E(0,1,1)$
+
+得 $\overrightarrow{DA}=\left(\sqrt{3},0,0\right)$，$\overrightarrow{DF}=(0,-1,2)$，$\overrightarrow{DE}=(0,1,1)$
+
+$$
+\text{设平面 }ADF\text{ 的法向量 }\overrightarrow{m}=(x,y,z)\text{，则}\left\{\begin{array}{l}
+\overrightarrow{m}\cdot\overrightarrow{DA}=0\\
+\overrightarrow{m}\cdot\overrightarrow{DF}=0
+\end{array}\right.
+$$
+
+$$
+\text{即}\left\{\begin{array}{l}
+\sqrt{3}x=0\\
+-y+2z=0
+\end{array}\right.\text{得}\left\{\begin{array}{l}
+x=0\\
+y=2z
+\end{array}\right.\text{，取 }\overrightarrow{m}=(0,2,1)
+$$
+
+同理可得，平面 $ADE$ 的法向量 $\overrightarrow{n}=(0,1,-1)$
+
+$$
+\therefore \cos\langle\overrightarrow{m},\overrightarrow{n}\rangle=\dfrac{\overrightarrow{m}\cdot\overrightarrow{n}}{\left|\overrightarrow{m}\right|\left|\overrightarrow{n}\right|}=\dfrac{2-1}{\sqrt{5}\times\sqrt{2}}=\dfrac{\sqrt{10}}{10}
+$$
+
+则二面角 $F-AD-E$ 的余弦值为 $\dfrac{\sqrt{10}}{10}$
+\end{solution}
+
+\vspace{2em}

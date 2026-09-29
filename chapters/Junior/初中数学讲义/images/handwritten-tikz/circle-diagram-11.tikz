@@ -1,0 +1,6 @@
+\begin{tikzpicture}[thick]
+\coordinate (P) at (0,0); \coordinate (C) at (7,0); \coordinate (B) at (5.4,6); \coordinate (A) at (2.592,2.88); \coordinate (D) at (3.9,0); \coordinate (O) at (4.34,1.75);
+\draw (P)--(B)--(C)--cycle (A)--(D)--(B) (A)--(C);
+\draw (4.65,5.08) arc[start angle=210,end angle=260,radius=.55] (6.35,0) arc[start angle=180,end angle=130,radius=.55];
+\foreach \p/\pos in {P/below left,A/left,B/above,C/below right,D/below,O/right} \node[\pos] at (\p) {$\p$};
+\end{tikzpicture}

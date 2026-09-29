@@ -1,0 +1,21 @@
+\begin{tikzpicture}[x=1bp,y=-1bp,line cap=round,line join=round]
+  \path[use as bounding box] (0,0) rectangle (244,163);
+  \draw[-{Stealth[length=7bp,width=8bp]},line width=.72bp] (13,130)--(232,130);
+  \draw[-{Stealth[length=7bp,width=8bp]},line width=.72bp] (179,154)--(179,18);
+  \draw[dash pattern=on 6bp off 4bp,line width=.65bp] (26,100)--(203,100);
+  \draw[line width=.65bp]
+    (20,108) .. controls (58,108) and (102,113) .. (129,108)
+    .. controls (146,105) and (155,96) .. (160,80)
+    .. controls (165,61) and (167,37) .. (169,28);
+  \draw[dash pattern=on 4bp off 3bp,line width=.65bp] (107,109)--(107,130);
+  \foreach \x in {29,59,89,119,149,209} {\draw[line width=.65bp] (\x,130)--(\x,125);}
+  \foreach \y in {100,70,41} {\draw[line width=.65bp] (179,\y)--(184,\y);}
+  \node[inner sep=0bp,anchor=east,font=\fontsize{10bp}{10bp}\selectfont] at (173,24) {$y$};
+  \node[inner sep=0bp,anchor=west,font=\fontsize{10bp}{10bp}\selectfont] at (223,142) {$x$};
+  \node[inner sep=0bp,anchor=north east,font=\fontsize{11bp}{11bp}\selectfont] at (176,133) {$O$};
+  \node[inner sep=0bp,anchor=west,font=\fontsize{10bp}{10bp}\selectfont] at (182,99) {$1$};
+  \foreach \x/\t in {29/-5,59/-4,89/-3,119/-2,149/-1,209/1}
+    \node[inner sep=0bp,anchor=north,font=\fontsize{10bp}{10bp}\selectfont] at (\x,134) {$\t$};
+  \node[inner sep=0bp,anchor=south,font=\fontsize{9bp}{9bp}\selectfont] at (113,119) {$-1$};
+  \node[inner sep=0bp,anchor=south,font=\fontsize{10bp}{10bp}\selectfont] at (134,128) {$-\sqrt{2}$};
+\end{tikzpicture}

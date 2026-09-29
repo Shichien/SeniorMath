@@ -1,0 +1,2873 @@
+[
+ {
+  "group": "analytic",
+  "source": "analytic-geometry-workbook",
+  "page": 15,
+  "object": 280,
+  "file": "analytic/fragments/analytic-geometry-workbook/p015-i004-obj0280.tex",
+  "pdf": "analytic/fragments/analytic-geometry-workbook/p015-i004-obj0280.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "analytic",
+  "source": "analytic-geometry-workbook",
+  "page": 21,
+  "object": 393,
+  "file": "analytic/fragments/analytic-geometry-workbook/p021-i005-obj0393.tex",
+  "pdf": "analytic/fragments/analytic-geometry-workbook/p021-i005-obj0393.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "analytic",
+  "source": "analytic-geometry-workbook",
+  "page": 33,
+  "object": 622,
+  "file": "analytic/fragments/analytic-geometry-workbook/p033-i006-obj0622.tex",
+  "pdf": "analytic/fragments/analytic-geometry-workbook/p033-i006-obj0622.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "analytic",
+  "source": "analytic-geometry-workbook",
+  "page": 37,
+  "object": 735,
+  "file": "analytic/fragments/analytic-geometry-workbook/p037-i007-obj0735.tex",
+  "pdf": "analytic/fragments/analytic-geometry-workbook/p037-i007-obj0735.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "analytic",
+  "source": "analytic-geometry-workbook",
+  "page": 39,
+  "object": 764,
+  "file": "analytic/fragments/analytic-geometry-workbook/p039-i008-obj0764.tex",
+  "pdf": "analytic/fragments/analytic-geometry-workbook/p039-i008-obj0764.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "analytic",
+  "source": "analytic-geometry-workbook",
+  "page": 45,
+  "object": 869,
+  "file": "analytic/fragments/analytic-geometry-workbook/p045-i009-obj0869.tex",
+  "pdf": "analytic/fragments/analytic-geometry-workbook/p045-i009-obj0869.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "analytic",
+  "source": "analytic-geometry-workbook",
+  "page": 46,
+  "object": 869,
+  "file": "analytic/fragments/analytic-geometry-workbook/p046-i010-obj0869.tex",
+  "pdf": "analytic/fragments/analytic-geometry-workbook/p046-i010-obj0869.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "analytic",
+  "source": "analytic-geometry-workbook",
+  "page": 53,
+  "object": 1002,
+  "file": "analytic/fragments/analytic-geometry-workbook/p053-i011-obj1002.tex",
+  "pdf": "analytic/fragments/analytic-geometry-workbook/p053-i011-obj1002.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "analytic",
+  "source": "analytic-geometry-workbook",
+  "page": 54,
+  "object": 1002,
+  "file": "analytic/fragments/analytic-geometry-workbook/p054-i012-obj1002.tex",
+  "pdf": "analytic/fragments/analytic-geometry-workbook/p054-i012-obj1002.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "analytic",
+  "source": "analytic-geometry-workbook",
+  "page": 54,
+  "object": 1015,
+  "file": "analytic/fragments/analytic-geometry-workbook/p054-i013-obj1015.tex",
+  "pdf": "analytic/fragments/analytic-geometry-workbook/p054-i013-obj1015.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "analytic",
+  "source": "analytic-geometry-workbook",
+  "page": 64,
+  "object": 1164,
+  "file": "analytic/fragments/analytic-geometry-workbook/p064-i014-obj1164.tex",
+  "pdf": "analytic/fragments/analytic-geometry-workbook/p064-i014-obj1164.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "analytic",
+  "source": "analytic-geometry-workbook",
+  "page": 65,
+  "object": 1164,
+  "file": "analytic/fragments/analytic-geometry-workbook/p065-i015-obj1164.tex",
+  "pdf": "analytic/fragments/analytic-geometry-workbook/p065-i015-obj1164.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "analytic",
+  "source": "analytic-geometry-workbook",
+  "page": 72,
+  "object": 1294,
+  "file": "analytic/fragments/analytic-geometry-workbook/p072-i016-obj1294.tex",
+  "pdf": "analytic/fragments/analytic-geometry-workbook/p072-i016-obj1294.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "analytic",
+  "source": "analytic-geometry-workbook",
+  "page": 72,
+  "object": 1295,
+  "file": "analytic/fragments/analytic-geometry-workbook/p072-i017-obj1295.tex",
+  "pdf": "analytic/fragments/analytic-geometry-workbook/p072-i017-obj1295.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "analytic",
+  "source": "analytic-geometry-workbook",
+  "page": 73,
+  "object": 1295,
+  "file": "analytic/fragments/analytic-geometry-workbook/p073-i018-obj1295.tex",
+  "pdf": "analytic/fragments/analytic-geometry-workbook/p073-i018-obj1295.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "analytic",
+  "source": "analytic-geometry-workbook",
+  "page": 94,
+  "object": 1656,
+  "file": "analytic/fragments/analytic-geometry-workbook/p094-i019-obj1656.tex",
+  "pdf": "analytic/fragments/analytic-geometry-workbook/p094-i019-obj1656.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "analytic",
+  "source": "derivatives-workbook",
+  "page": 10,
+  "object": 216,
+  "file": "analytic/fragments/derivatives-workbook/p010-i003-obj0216.tex",
+  "pdf": "analytic/fragments/derivatives-workbook/p010-i003-obj0216.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "analytic",
+  "source": "derivatives-workbook",
+  "page": 10,
+  "object": 217,
+  "file": "analytic/fragments/derivatives-workbook/p010-i004-obj0217.tex",
+  "pdf": "analytic/fragments/derivatives-workbook/p010-i004-obj0217.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "analytic",
+  "source": "derivatives-workbook",
+  "page": 10,
+  "object": 218,
+  "file": "analytic/fragments/derivatives-workbook/p010-i005-obj0218.tex",
+  "pdf": "analytic/fragments/derivatives-workbook/p010-i005-obj0218.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "analytic",
+  "source": "derivatives-workbook",
+  "page": 10,
+  "object": 219,
+  "file": "analytic/fragments/derivatives-workbook/p010-i006-obj0219.tex",
+  "pdf": "analytic/fragments/derivatives-workbook/p010-i006-obj0219.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "analytic",
+  "source": "derivatives-workbook",
+  "page": 10,
+  "object": 220,
+  "file": "analytic/fragments/derivatives-workbook/p010-i007-obj0220.tex",
+  "pdf": "analytic/fragments/derivatives-workbook/p010-i007-obj0220.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "analytic",
+  "source": "derivatives-workbook",
+  "page": 11,
+  "object": 238,
+  "file": "analytic/fragments/derivatives-workbook/p011-i008-obj0238.tex",
+  "pdf": "analytic/fragments/derivatives-workbook/p011-i008-obj0238.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "analytic",
+  "source": "derivatives-workbook",
+  "page": 11,
+  "object": 239,
+  "file": "analytic/fragments/derivatives-workbook/p011-i009-obj0239.tex",
+  "pdf": "analytic/fragments/derivatives-workbook/p011-i009-obj0239.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "analytic",
+  "source": "derivatives-workbook",
+  "page": 11,
+  "object": 240,
+  "file": "analytic/fragments/derivatives-workbook/p011-i010-obj0240.tex",
+  "pdf": "analytic/fragments/derivatives-workbook/p011-i010-obj0240.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "analytic",
+  "source": "derivatives-workbook",
+  "page": 11,
+  "object": 241,
+  "file": "analytic/fragments/derivatives-workbook/p011-i011-obj0241.tex",
+  "pdf": "analytic/fragments/derivatives-workbook/p011-i011-obj0241.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "analytic",
+  "source": "derivatives-workbook",
+  "page": 11,
+  "object": 242,
+  "file": "analytic/fragments/derivatives-workbook/p011-i012-obj0242.tex",
+  "pdf": "analytic/fragments/derivatives-workbook/p011-i012-obj0242.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "analytic",
+  "source": "derivatives-workbook",
+  "page": 11,
+  "object": 243,
+  "file": "analytic/fragments/derivatives-workbook/p011-i013-obj0243.tex",
+  "pdf": "analytic/fragments/derivatives-workbook/p011-i013-obj0243.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "analytic",
+  "source": "derivatives-workbook",
+  "page": 13,
+  "object": 269,
+  "file": "analytic/fragments/derivatives-workbook/p013-i014-obj0269.tex",
+  "pdf": "analytic/fragments/derivatives-workbook/p013-i014-obj0269.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "analytic",
+  "source": "derivatives-workbook",
+  "page": 13,
+  "object": 271,
+  "file": "analytic/fragments/derivatives-workbook/p013-i015-obj0271.tex",
+  "pdf": "analytic/fragments/derivatives-workbook/p013-i015-obj0271.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "analytic",
+  "source": "derivatives-workbook",
+  "page": 13,
+  "object": 273,
+  "file": "analytic/fragments/derivatives-workbook/p013-i016-obj0273.tex",
+  "pdf": "analytic/fragments/derivatives-workbook/p013-i016-obj0273.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "analytic",
+  "source": "derivatives-workbook",
+  "page": 13,
+  "object": 275,
+  "file": "analytic/fragments/derivatives-workbook/p013-i017-obj0275.tex",
+  "pdf": "analytic/fragments/derivatives-workbook/p013-i017-obj0275.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "analytic",
+  "source": "derivatives-workbook",
+  "page": 13,
+  "object": 277,
+  "file": "analytic/fragments/derivatives-workbook/p013-i018-obj0277.tex",
+  "pdf": "analytic/fragments/derivatives-workbook/p013-i018-obj0277.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "analytic",
+  "source": "derivatives-workbook",
+  "page": 13,
+  "object": 278,
+  "file": "analytic/fragments/derivatives-workbook/p013-i019-obj0278.tex",
+  "pdf": "analytic/fragments/derivatives-workbook/p013-i019-obj0278.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "analytic",
+  "source": "derivatives-workbook",
+  "page": 14,
+  "object": 291,
+  "file": "analytic/fragments/derivatives-workbook/p014-i020-obj0291.tex",
+  "pdf": "analytic/fragments/derivatives-workbook/p014-i020-obj0291.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "analytic",
+  "source": "derivatives-workbook",
+  "page": 39,
+  "object": 768,
+  "file": "analytic/fragments/derivatives-workbook/p039-i021-obj0768.tex",
+  "pdf": "analytic/fragments/derivatives-workbook/p039-i021-obj0768.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "analytic",
+  "source": "derivatives-workbook",
+  "page": 40,
+  "object": 781,
+  "file": "analytic/fragments/derivatives-workbook/p040-i022-obj0781.tex",
+  "pdf": "analytic/fragments/derivatives-workbook/p040-i022-obj0781.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "analytic",
+  "source": "derivatives-workbook",
+  "page": 53,
+  "object": 1002,
+  "file": "analytic/fragments/derivatives-workbook/p053-i023-obj1002.tex",
+  "pdf": "analytic/fragments/derivatives-workbook/p053-i023-obj1002.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "analytic",
+  "source": "derivatives-workbook",
+  "page": 53,
+  "object": 1003,
+  "file": "analytic/fragments/derivatives-workbook/p053-i024-obj1003.tex",
+  "pdf": "analytic/fragments/derivatives-workbook/p053-i024-obj1003.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "analytic",
+  "source": "derivatives-workbook",
+  "page": 54,
+  "object": 1016,
+  "file": "analytic/fragments/derivatives-workbook/p054-i025-obj1016.tex",
+  "pdf": "analytic/fragments/derivatives-workbook/p054-i025-obj1016.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "analytic",
+  "source": "derivatives-workbook",
+  "page": 70,
+  "object": 1237,
+  "file": "analytic/fragments/derivatives-workbook/p070-i026-obj1237.tex",
+  "pdf": "analytic/fragments/derivatives-workbook/p070-i026-obj1237.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "analytic",
+  "source": "derivatives-workbook",
+  "page": 71,
+  "object": 1237,
+  "file": "analytic/fragments/derivatives-workbook/p071-i027-obj1237.tex",
+  "pdf": "analytic/fragments/derivatives-workbook/p071-i027-obj1237.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "analytic",
+  "source": "functions-workbook",
+  "page": 4,
+  "object": 132,
+  "file": "analytic/fragments/functions-workbook/p004-i006-obj0132.tex",
+  "pdf": "analytic/fragments/functions-workbook/p004-i006-obj0132.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "analytic",
+  "source": "functions-workbook",
+  "page": 4,
+  "object": 133,
+  "file": "analytic/fragments/functions-workbook/p004-i005-obj0133.tex",
+  "pdf": "analytic/fragments/functions-workbook/p004-i005-obj0133.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "analytic",
+  "source": "functions-workbook",
+  "page": 4,
+  "object": 134,
+  "file": "analytic/fragments/functions-workbook/p004-i004-obj0134.tex",
+  "pdf": "analytic/fragments/functions-workbook/p004-i004-obj0134.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "analytic",
+  "source": "functions-workbook",
+  "page": 4,
+  "object": 135,
+  "file": "analytic/fragments/functions-workbook/p004-i003-obj0135.tex",
+  "pdf": "analytic/fragments/functions-workbook/p004-i003-obj0135.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "analytic",
+  "source": "functions-workbook",
+  "page": 14,
+  "object": 400,
+  "file": "analytic/fragments/functions-workbook/p014-i007-obj0400.tex",
+  "pdf": "analytic/fragments/functions-workbook/p014-i007-obj0400.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "analytic",
+  "source": "functions-workbook",
+  "page": 30,
+  "object": 817,
+  "file": "analytic/fragments/functions-workbook/p030-i011-obj0817.tex",
+  "pdf": "analytic/fragments/functions-workbook/p030-i011-obj0817.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "analytic",
+  "source": "functions-workbook",
+  "page": 30,
+  "object": 819,
+  "file": "analytic/fragments/functions-workbook/p030-i010-obj0819.tex",
+  "pdf": "analytic/fragments/functions-workbook/p030-i010-obj0819.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "analytic",
+  "source": "functions-workbook",
+  "page": 30,
+  "object": 821,
+  "file": "analytic/fragments/functions-workbook/p030-i009-obj0821.tex",
+  "pdf": "analytic/fragments/functions-workbook/p030-i009-obj0821.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "analytic",
+  "source": "functions-workbook",
+  "page": 30,
+  "object": 823,
+  "file": "analytic/fragments/functions-workbook/p030-i008-obj0823.tex",
+  "pdf": "analytic/fragments/functions-workbook/p030-i008-obj0823.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "analytic",
+  "source": "functions-workbook",
+  "page": 32,
+  "object": 849,
+  "file": "analytic/fragments/functions-workbook/p032-i015-obj0849.tex",
+  "pdf": "analytic/fragments/functions-workbook/p032-i015-obj0849.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "analytic",
+  "source": "functions-workbook",
+  "page": 32,
+  "object": 851,
+  "file": "analytic/fragments/functions-workbook/p032-i014-obj0851.tex",
+  "pdf": "analytic/fragments/functions-workbook/p032-i014-obj0851.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "analytic",
+  "source": "functions-workbook",
+  "page": 32,
+  "object": 853,
+  "file": "analytic/fragments/functions-workbook/p032-i013-obj0853.tex",
+  "pdf": "analytic/fragments/functions-workbook/p032-i013-obj0853.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "analytic",
+  "source": "functions-workbook",
+  "page": 32,
+  "object": 855,
+  "file": "analytic/fragments/functions-workbook/p032-i012-obj0855.tex",
+  "pdf": "analytic/fragments/functions-workbook/p032-i012-obj0855.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "analytic",
+  "source": "functions-workbook",
+  "page": 37,
+  "object": 987,
+  "file": "analytic/fragments/functions-workbook/p037-i016-obj0987.tex",
+  "pdf": "analytic/fragments/functions-workbook/p037-i016-obj0987.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "analytic",
+  "source": "functions-workbook",
+  "page": 41,
+  "object": 1106,
+  "file": "analytic/fragments/functions-workbook/p041-i020-obj1106.tex",
+  "pdf": "analytic/fragments/functions-workbook/p041-i020-obj1106.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "analytic",
+  "source": "functions-workbook",
+  "page": 41,
+  "object": 1108,
+  "file": "analytic/fragments/functions-workbook/p041-i019-obj1108.tex",
+  "pdf": "analytic/fragments/functions-workbook/p041-i019-obj1108.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "analytic",
+  "source": "functions-workbook",
+  "page": 41,
+  "object": 1110,
+  "file": "analytic/fragments/functions-workbook/p041-i018-obj1110.tex",
+  "pdf": "analytic/fragments/functions-workbook/p041-i018-obj1110.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "analytic",
+  "source": "functions-workbook",
+  "page": 41,
+  "object": 1112,
+  "file": "analytic/fragments/functions-workbook/p041-i017-obj1112.tex",
+  "pdf": "analytic/fragments/functions-workbook/p041-i017-obj1112.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "analytic",
+  "source": "functions-workbook",
+  "page": 72,
+  "object": 1738,
+  "file": "analytic/fragments/functions-workbook/p072-i021-obj1738.tex",
+  "pdf": "analytic/fragments/functions-workbook/p072-i021-obj1738.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "analytic",
+  "source": "functions-workbook",
+  "page": 102,
+  "object": 2281,
+  "file": "analytic/fragments/functions-workbook/p102-i023-obj2281.tex",
+  "pdf": "analytic/fragments/functions-workbook/p102-i023-obj2281.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "analytic",
+  "source": "functions-workbook",
+  "page": 102,
+  "object": 2282,
+  "file": "analytic/fragments/functions-workbook/p102-i022-obj2282.tex",
+  "pdf": "analytic/fragments/functions-workbook/p102-i022-obj2282.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "analytic",
+  "source": "functions-workbook",
+  "page": 103,
+  "object": 2297,
+  "file": "analytic/fragments/functions-workbook/p103-i025-obj2297.tex",
+  "pdf": "analytic/fragments/functions-workbook/p103-i025-obj2297.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "analytic",
+  "source": "functions-workbook",
+  "page": 103,
+  "object": 2299,
+  "file": "analytic/fragments/functions-workbook/p103-i024-obj2299.tex",
+  "pdf": "analytic/fragments/functions-workbook/p103-i024-obj2299.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "analytic",
+  "source": "functions-workbook",
+  "page": 104,
+  "object": 2312,
+  "file": "analytic/fragments/functions-workbook/p104-i026-obj2312.tex",
+  "pdf": "analytic/fragments/functions-workbook/p104-i026-obj2312.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "analytic",
+  "source": "functions-workbook",
+  "page": 105,
+  "object": 2326,
+  "file": "analytic/fragments/functions-workbook/p105-i028-obj2326.tex",
+  "pdf": "analytic/fragments/functions-workbook/p105-i028-obj2326.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "analytic",
+  "source": "functions-workbook",
+  "page": 105,
+  "object": 2328,
+  "file": "analytic/fragments/functions-workbook/p105-i027-obj2328.tex",
+  "pdf": "analytic/fragments/functions-workbook/p105-i027-obj2328.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "analytic",
+  "source": "functions-workbook",
+  "page": 106,
+  "object": 2341,
+  "file": "analytic/fragments/functions-workbook/p106-i029-obj2341.tex",
+  "pdf": "analytic/fragments/functions-workbook/p106-i029-obj2341.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "analytic",
+  "source": "functions-workbook",
+  "page": 111,
+  "object": 2487,
+  "file": "analytic/fragments/functions-workbook/p111-i030-obj2487.tex",
+  "pdf": "analytic/fragments/functions-workbook/p111-i030-obj2487.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "analytic",
+  "source": "functions-workbook",
+  "page": 112,
+  "object": 2500,
+  "file": "analytic/fragments/functions-workbook/p112-i031-obj2500.tex",
+  "pdf": "analytic/fragments/functions-workbook/p112-i031-obj2500.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "analytic",
+  "source": "trigonometry-workbook",
+  "page": 8,
+  "object": 157,
+  "file": "analytic/fragments/trigonometry-workbook/p008-i003-obj0157.tex",
+  "pdf": "analytic/fragments/trigonometry-workbook/p008-i003-obj0157.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "analytic",
+  "source": "trigonometry-workbook",
+  "page": 19,
+  "object": 371,
+  "file": "analytic/fragments/trigonometry-workbook/p019-i004-obj0371.tex",
+  "pdf": "analytic/fragments/trigonometry-workbook/p019-i004-obj0371.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "analytic",
+  "source": "trigonometry-workbook",
+  "page": 19,
+  "object": 373,
+  "file": "analytic/fragments/trigonometry-workbook/p019-i005-obj0373.tex",
+  "pdf": "analytic/fragments/trigonometry-workbook/p019-i005-obj0373.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "analytic",
+  "source": "trigonometry-workbook",
+  "page": 36,
+  "object": 698,
+  "file": "analytic/fragments/trigonometry-workbook/p036-i006-obj0698.tex",
+  "pdf": "analytic/fragments/trigonometry-workbook/p036-i006-obj0698.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "analytic",
+  "source": "trigonometry-workbook",
+  "page": 41,
+  "object": 819,
+  "file": "analytic/fragments/trigonometry-workbook/p041-i007-obj0819.tex",
+  "pdf": "analytic/fragments/trigonometry-workbook/p041-i007-obj0819.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "analytic",
+  "source": "trigonometry-workbook",
+  "page": 43,
+  "object": 848,
+  "file": "analytic/fragments/trigonometry-workbook/p043-i008-obj0848.tex",
+  "pdf": "analytic/fragments/trigonometry-workbook/p043-i008-obj0848.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "analytic",
+  "source": "trigonometry-workbook",
+  "page": 90,
+  "object": 1593,
+  "file": "analytic/fragments/trigonometry-workbook/p090-i009-obj1593.tex",
+  "pdf": "analytic/fragments/trigonometry-workbook/p090-i009-obj1593.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "analytic",
+  "source": "trigonometry-workbook",
+  "page": 90,
+  "object": 1594,
+  "file": "analytic/fragments/trigonometry-workbook/p090-i010-obj1594.tex",
+  "pdf": "analytic/fragments/trigonometry-workbook/p090-i010-obj1594.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "analytic",
+  "source": "trigonometry-workbook",
+  "page": 91,
+  "object": 1607,
+  "file": "analytic/fragments/trigonometry-workbook/p091-i011-obj1607.tex",
+  "pdf": "analytic/fragments/trigonometry-workbook/p091-i011-obj1607.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "core",
+  "source": "counting-probability-statistics-workbook",
+  "page": 8,
+  "object": 255,
+  "file": "core/fragments/counting-probability-statistics-workbook/p008-i005-obj0255.tex",
+  "pdf": "core/fragments/counting-probability-statistics-workbook/p008-i005-obj0255.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "core",
+  "source": "counting-probability-statistics-workbook",
+  "page": 8,
+  "object": 256,
+  "file": "core/fragments/counting-probability-statistics-workbook/p008-i004-obj0256.tex",
+  "pdf": "core/fragments/counting-probability-statistics-workbook/p008-i004-obj0256.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "core",
+  "source": "counting-probability-statistics-workbook",
+  "page": 33,
+  "object": 834,
+  "file": "core/fragments/counting-probability-statistics-workbook/p033-i007-obj0834.tex",
+  "pdf": "core/fragments/counting-probability-statistics-workbook/p033-i007-obj0834.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "core",
+  "source": "counting-probability-statistics-workbook",
+  "page": 33,
+  "object": 836,
+  "file": "core/fragments/counting-probability-statistics-workbook/p033-i006-obj0836.tex",
+  "pdf": "core/fragments/counting-probability-statistics-workbook/p033-i006-obj0836.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "core",
+  "source": "counting-probability-statistics-workbook",
+  "page": 42,
+  "object": 1030,
+  "file": "core/fragments/counting-probability-statistics-workbook/p042-i008-obj1030.tex",
+  "pdf": "core/fragments/counting-probability-statistics-workbook/p042-i008-obj1030.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "core",
+  "source": "counting-probability-statistics-workbook",
+  "page": 43,
+  "object": 1043,
+  "file": "core/fragments/counting-probability-statistics-workbook/p043-i011-obj1043.tex",
+  "pdf": "core/fragments/counting-probability-statistics-workbook/p043-i011-obj1043.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "core",
+  "source": "counting-probability-statistics-workbook",
+  "page": 43,
+  "object": 1044,
+  "file": "core/fragments/counting-probability-statistics-workbook/p043-i010-obj1044.tex",
+  "pdf": "core/fragments/counting-probability-statistics-workbook/p043-i010-obj1044.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "core",
+  "source": "counting-probability-statistics-workbook",
+  "page": 43,
+  "object": 1045,
+  "file": "core/fragments/counting-probability-statistics-workbook/p043-i009-obj1045.tex",
+  "pdf": "core/fragments/counting-probability-statistics-workbook/p043-i009-obj1045.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "core",
+  "source": "counting-probability-statistics-workbook",
+  "page": 44,
+  "object": 1058,
+  "file": "core/fragments/counting-probability-statistics-workbook/p044-i013-obj1058.tex",
+  "pdf": "core/fragments/counting-probability-statistics-workbook/p044-i013-obj1058.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "core",
+  "source": "counting-probability-statistics-workbook",
+  "page": 44,
+  "object": 1059,
+  "file": "core/fragments/counting-probability-statistics-workbook/p044-i012-obj1059.tex",
+  "pdf": "core/fragments/counting-probability-statistics-workbook/p044-i012-obj1059.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "core",
+  "source": "counting-probability-statistics-workbook",
+  "page": 45,
+  "object": 1079,
+  "file": "core/fragments/counting-probability-statistics-workbook/p045-i015-obj1079.tex",
+  "pdf": "core/fragments/counting-probability-statistics-workbook/p045-i015-obj1079.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "core",
+  "source": "counting-probability-statistics-workbook",
+  "page": 45,
+  "object": 1080,
+  "file": "core/fragments/counting-probability-statistics-workbook/p045-i014-obj1080.tex",
+  "pdf": "core/fragments/counting-probability-statistics-workbook/p045-i014-obj1080.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "core",
+  "source": "counting-probability-statistics-workbook",
+  "page": 47,
+  "object": 1176,
+  "file": "core/fragments/counting-probability-statistics-workbook/p047-i016-obj1176.tex",
+  "pdf": "core/fragments/counting-probability-statistics-workbook/p047-i016-obj1176.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "core",
+  "source": "counting-probability-statistics-workbook",
+  "page": 53,
+  "object": 1264,
+  "file": "core/fragments/counting-probability-statistics-workbook/p053-i017-obj1264.tex",
+  "pdf": "core/fragments/counting-probability-statistics-workbook/p053-i017-obj1264.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "core",
+  "source": "counting-probability-statistics-workbook",
+  "page": 56,
+  "object": 1311,
+  "file": "core/fragments/counting-probability-statistics-workbook/p056-i018-obj1311.tex",
+  "pdf": "core/fragments/counting-probability-statistics-workbook/p056-i018-obj1311.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "core",
+  "source": "counting-probability-statistics-workbook",
+  "page": 58,
+  "object": 1392,
+  "file": "core/fragments/counting-probability-statistics-workbook/p058-i019-obj1392.tex",
+  "pdf": "core/fragments/counting-probability-statistics-workbook/p058-i019-obj1392.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "core",
+  "source": "counting-probability-statistics-workbook",
+  "page": 62,
+  "object": 1511,
+  "file": "core/fragments/counting-probability-statistics-workbook/p062-i020-obj1511.tex",
+  "pdf": "core/fragments/counting-probability-statistics-workbook/p062-i020-obj1511.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "core",
+  "source": "counting-probability-statistics-workbook",
+  "page": 111,
+  "object": 2388,
+  "file": "core/fragments/counting-probability-statistics-workbook/p111-i021-obj2388.tex",
+  "pdf": "core/fragments/counting-probability-statistics-workbook/p111-i021-obj2388.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "core",
+  "source": "counting-probability-statistics-workbook",
+  "page": 112,
+  "object": 2401,
+  "file": "core/fragments/counting-probability-statistics-workbook/p112-i022-obj2401.tex",
+  "pdf": "core/fragments/counting-probability-statistics-workbook/p112-i022-obj2401.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "core",
+  "source": "set-logic-inequalities-workbook",
+  "page": 65,
+  "object": 1225,
+  "file": "core/set-logic-inequalities.tex",
+  "pdf": "core/set-logic-inequalities.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "core",
+  "source": "set-logic-inequalities-workbook",
+  "page": 76,
+  "object": 1407,
+  "file": "core/fragments/set-logic-inequalities-workbook/p076-i004-obj1407.tex",
+  "pdf": "core/fragments/set-logic-inequalities-workbook/p076-i004-obj1407.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "geometry",
+  "source": "plane-vectors-workbook",
+  "page": 12,
+  "object": 247,
+  "file": "geometry/plane-vectors/p012-o0247.tex",
+  "pdf": "geometry/plane-vectors/p012-o0247.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "geometry",
+  "source": "plane-vectors-workbook",
+  "page": 12,
+  "object": 248,
+  "file": "geometry/plane-vectors/p012-o0248.tex",
+  "pdf": "geometry/plane-vectors/p012-o0248.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "geometry",
+  "source": "plane-vectors-workbook",
+  "page": 12,
+  "object": 250,
+  "file": "geometry/plane-vectors/p012-o0250.tex",
+  "pdf": "geometry/plane-vectors/p012-o0250.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "geometry",
+  "source": "plane-vectors-workbook",
+  "page": 14,
+  "object": 275,
+  "file": "geometry/plane-vectors/p014-o0275.tex",
+  "pdf": "geometry/plane-vectors/p014-o0275.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "geometry",
+  "source": "plane-vectors-workbook",
+  "page": 15,
+  "object": 288,
+  "file": "geometry/plane-vectors/p015-o0288.tex",
+  "pdf": "geometry/plane-vectors/p015-o0288.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "geometry",
+  "source": "plane-vectors-workbook",
+  "page": 15,
+  "object": 289,
+  "file": "geometry/plane-vectors/p015-o0289.tex",
+  "pdf": "geometry/plane-vectors/p015-o0289.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "geometry",
+  "source": "plane-vectors-workbook",
+  "page": 16,
+  "object": 306,
+  "file": "geometry/plane-vectors/p016-o0306.tex",
+  "pdf": "geometry/plane-vectors/p016-o0306.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "geometry",
+  "source": "plane-vectors-workbook",
+  "page": 19,
+  "object": 384,
+  "file": "geometry/plane-vectors/p019-o0384.tex",
+  "pdf": "geometry/plane-vectors/p019-o0384.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "geometry",
+  "source": "plane-vectors-workbook",
+  "page": 27,
+  "object": 522,
+  "file": "geometry/plane-vectors/p027-o0522.tex",
+  "pdf": "geometry/plane-vectors/p027-o0522.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "geometry",
+  "source": "plane-vectors-workbook",
+  "page": 27,
+  "object": 523,
+  "file": "geometry/plane-vectors/p027-o0523.tex",
+  "pdf": "geometry/plane-vectors/p027-o0523.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "geometry",
+  "source": "plane-vectors-workbook",
+  "page": 27,
+  "object": 524,
+  "file": "geometry/plane-vectors/p027-o0524.tex",
+  "pdf": "geometry/plane-vectors/p027-o0524.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "geometry",
+  "source": "plane-vectors-workbook",
+  "page": 31,
+  "object": 288,
+  "file": "geometry/plane-vectors/p031-o0288.tex",
+  "pdf": "geometry/plane-vectors/p031-o0288.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "geometry",
+  "source": "plane-vectors-workbook",
+  "page": 39,
+  "object": 766,
+  "file": "geometry/plane-vectors/p039-o0766.tex",
+  "pdf": "geometry/plane-vectors/p039-o0766.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "geometry",
+  "source": "plane-vectors-workbook",
+  "page": 40,
+  "object": 779,
+  "file": "geometry/plane-vectors/p040-o0779.tex",
+  "pdf": "geometry/plane-vectors/p040-o0779.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "geometry",
+  "source": "plane-vectors-workbook",
+  "page": 44,
+  "object": 857,
+  "file": "geometry/plane-vectors/p044-o0857.tex",
+  "pdf": "geometry/plane-vectors/p044-o0857.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "geometry",
+  "source": "plane-vectors-workbook",
+  "page": 44,
+  "object": 858,
+  "file": "geometry/plane-vectors/p044-o0858.tex",
+  "pdf": "geometry/plane-vectors/p044-o0858.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "geometry",
+  "source": "plane-vectors-workbook",
+  "page": 46,
+  "object": 883,
+  "file": "geometry/plane-vectors/p046-o0883.tex",
+  "pdf": "geometry/plane-vectors/p046-o0883.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "geometry",
+  "source": "plane-vectors-workbook",
+  "page": 47,
+  "object": 896,
+  "file": "geometry/plane-vectors/p047-o0896.tex",
+  "pdf": "geometry/plane-vectors/p047-o0896.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "geometry",
+  "source": "plane-vectors-workbook",
+  "page": 47,
+  "object": 897,
+  "file": "geometry/plane-vectors/p047-o0897.tex",
+  "pdf": "geometry/plane-vectors/p047-o0897.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "geometry",
+  "source": "plane-vectors-workbook",
+  "page": 48,
+  "object": 910,
+  "file": "geometry/plane-vectors/p048-o0910.tex",
+  "pdf": "geometry/plane-vectors/p048-o0910.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "geometry",
+  "source": "plane-vectors-workbook",
+  "page": 48,
+  "object": 911,
+  "file": "geometry/plane-vectors/p048-o0911.tex",
+  "pdf": "geometry/plane-vectors/p048-o0911.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "geometry",
+  "source": "plane-vectors-workbook",
+  "page": 49,
+  "object": 924,
+  "file": "geometry/plane-vectors/p049-o0924.tex",
+  "pdf": "geometry/plane-vectors/p049-o0924.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "geometry",
+  "source": "plane-vectors-workbook",
+  "page": 53,
+  "object": 1005,
+  "file": "geometry/plane-vectors/p053-o1005.tex",
+  "pdf": "geometry/plane-vectors/p053-o1005.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "geometry",
+  "source": "plane-vectors-workbook",
+  "page": 58,
+  "object": 1066,
+  "file": "geometry/plane-vectors/p058-o1066.tex",
+  "pdf": "geometry/plane-vectors/p058-o1066.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "geometry",
+  "source": "plane-vectors-workbook",
+  "page": 63,
+  "object": 1155,
+  "file": "geometry/plane-vectors/p063-o1155.tex",
+  "pdf": "geometry/plane-vectors/p063-o1155.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "geometry",
+  "source": "plane-vectors-workbook",
+  "page": 64,
+  "object": 1168,
+  "file": "geometry/plane-vectors/p064-o1168.tex",
+  "pdf": "geometry/plane-vectors/p064-o1168.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "geometry",
+  "source": "plane-vectors-workbook",
+  "page": 65,
+  "object": 1181,
+  "file": "geometry/plane-vectors/p065-o1181.tex",
+  "pdf": "geometry/plane-vectors/p065-o1181.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "geometry",
+  "source": "plane-vectors-workbook",
+  "page": 66,
+  "object": 1194,
+  "file": "geometry/plane-vectors/p066-o1194.tex",
+  "pdf": "geometry/plane-vectors/p066-o1194.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "geometry",
+  "source": "plane-vectors-workbook",
+  "page": 66,
+  "object": 1195,
+  "file": "geometry/plane-vectors/p066-o1195.tex",
+  "pdf": "geometry/plane-vectors/p066-o1195.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "geometry",
+  "source": "plane-vectors-workbook",
+  "page": 72,
+  "object": 1320,
+  "file": "geometry/plane-vectors/p072-o1320.tex",
+  "pdf": "geometry/plane-vectors/p072-o1320.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "geometry",
+  "source": "plane-vectors-workbook",
+  "page": 73,
+  "object": 1334,
+  "file": "geometry/plane-vectors/p073-o1334.tex",
+  "pdf": "geometry/plane-vectors/p073-o1334.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "geometry",
+  "source": "plane-vectors-workbook",
+  "page": 73,
+  "object": 1335,
+  "file": "geometry/plane-vectors/p073-o1335.tex",
+  "pdf": "geometry/plane-vectors/p073-o1335.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "geometry",
+  "source": "plane-vectors-workbook",
+  "page": 73,
+  "object": 1337,
+  "file": "geometry/plane-vectors/p073-o1337.tex",
+  "pdf": "geometry/plane-vectors/p073-o1337.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "geometry",
+  "source": "solid-geometry-workbook",
+  "page": 4,
+  "object": 99,
+  "file": "geometry/solid/p004-o0099.tex",
+  "pdf": "geometry/solid/p004-o0099.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "geometry",
+  "source": "solid-geometry-workbook",
+  "page": 4,
+  "object": 100,
+  "file": "geometry/solid/p004-o0100.tex",
+  "pdf": "geometry/solid/p004-o0100.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "geometry",
+  "source": "solid-geometry-workbook",
+  "page": 4,
+  "object": 101,
+  "file": "geometry/solid/p004-o0101.tex",
+  "pdf": "geometry/solid/p004-o0101.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "geometry",
+  "source": "solid-geometry-workbook",
+  "page": 4,
+  "object": 102,
+  "file": "geometry/solid/p004-o0102.tex",
+  "pdf": "geometry/solid/p004-o0102.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "geometry",
+  "source": "solid-geometry-workbook",
+  "page": 4,
+  "object": 103,
+  "file": "geometry/solid/p004-o0103.tex",
+  "pdf": "geometry/solid/p004-o0103.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "geometry",
+  "source": "solid-geometry-workbook",
+  "page": 6,
+  "object": 134,
+  "file": "geometry/solid/p006-o0134.tex",
+  "pdf": "geometry/solid/p006-o0134.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "geometry",
+  "source": "solid-geometry-workbook",
+  "page": 7,
+  "object": 147,
+  "file": "geometry/solid/p007-o0147.tex",
+  "pdf": "geometry/solid/p007-o0147.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "geometry",
+  "source": "solid-geometry-workbook",
+  "page": 7,
+  "object": 148,
+  "file": "geometry/solid/p007-o0148.tex",
+  "pdf": "geometry/solid/p007-o0148.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "geometry",
+  "source": "solid-geometry-workbook",
+  "page": 7,
+  "object": 153,
+  "file": "geometry/solid/p007-o0153.tex",
+  "pdf": "geometry/solid/p007-o0153.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "geometry",
+  "source": "solid-geometry-workbook",
+  "page": 8,
+  "object": 171,
+  "file": "geometry/solid/p008-o0171.tex",
+  "pdf": "geometry/solid/p008-o0171.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "geometry",
+  "source": "solid-geometry-workbook",
+  "page": 8,
+  "object": 172,
+  "file": "geometry/solid/p008-o0172.tex",
+  "pdf": "geometry/solid/p008-o0172.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "geometry",
+  "source": "solid-geometry-workbook",
+  "page": 9,
+  "object": 185,
+  "file": "geometry/solid/p009-o0185.tex",
+  "pdf": "geometry/solid/p009-o0185.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "geometry",
+  "source": "solid-geometry-workbook",
+  "page": 10,
+  "object": 199,
+  "file": "geometry/solid/p010-o0199.tex",
+  "pdf": "geometry/solid/p010-o0199.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "geometry",
+  "source": "solid-geometry-workbook",
+  "page": 10,
+  "object": 200,
+  "file": "geometry/solid/p010-o0200.tex",
+  "pdf": "geometry/solid/p010-o0200.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "geometry",
+  "source": "solid-geometry-workbook",
+  "page": 12,
+  "object": 261,
+  "file": "geometry/solid/p012-o0261.tex",
+  "pdf": "geometry/solid/p012-o0261.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "geometry",
+  "source": "solid-geometry-workbook",
+  "page": 12,
+  "object": 262,
+  "file": "geometry/solid/p012-o0262.tex",
+  "pdf": "geometry/solid/p012-o0262.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "geometry",
+  "source": "solid-geometry-workbook",
+  "page": 13,
+  "object": 283,
+  "file": "geometry/solid/p013-o0283.tex",
+  "pdf": "geometry/solid/p013-o0283.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "geometry",
+  "source": "solid-geometry-workbook",
+  "page": 13,
+  "object": 284,
+  "file": "geometry/solid/p013-o0284.tex",
+  "pdf": "geometry/solid/p013-o0284.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "geometry",
+  "source": "solid-geometry-workbook",
+  "page": 13,
+  "object": 286,
+  "file": "geometry/solid/p013-o0286.tex",
+  "pdf": "geometry/solid/p013-o0286.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "geometry",
+  "source": "solid-geometry-workbook",
+  "page": 14,
+  "object": 300,
+  "file": "geometry/solid/p014-o0300.tex",
+  "pdf": "geometry/solid/p014-o0300.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "geometry",
+  "source": "solid-geometry-workbook",
+  "page": 14,
+  "object": 302,
+  "file": "geometry/solid/p014-o0302.tex",
+  "pdf": "geometry/solid/p014-o0302.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "geometry",
+  "source": "solid-geometry-workbook",
+  "page": 14,
+  "object": 304,
+  "file": "geometry/solid/p014-o0304.tex",
+  "pdf": "geometry/solid/p014-o0304.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "geometry",
+  "source": "solid-geometry-workbook",
+  "page": 14,
+  "object": 306,
+  "file": "geometry/solid/p014-o0306.tex",
+  "pdf": "geometry/solid/p014-o0306.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "geometry",
+  "source": "solid-geometry-workbook",
+  "page": 14,
+  "object": 307,
+  "file": "geometry/solid/p014-o0307.tex",
+  "pdf": "geometry/solid/p014-o0307.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "geometry",
+  "source": "solid-geometry-workbook",
+  "page": 14,
+  "object": 309,
+  "file": "geometry/solid/p014-o0309.tex",
+  "pdf": "geometry/solid/p014-o0309.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "geometry",
+  "source": "solid-geometry-workbook",
+  "page": 14,
+  "object": 311,
+  "file": "geometry/solid/p014-o0311.tex",
+  "pdf": "geometry/solid/p014-o0311.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "geometry",
+  "source": "solid-geometry-workbook",
+  "page": 15,
+  "object": 324,
+  "file": "geometry/solid/p015-o0324.tex",
+  "pdf": "geometry/solid/p015-o0324.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "geometry",
+  "source": "solid-geometry-workbook",
+  "page": 15,
+  "object": 325,
+  "file": "geometry/solid/p015-o0325.tex",
+  "pdf": "geometry/solid/p015-o0325.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "geometry",
+  "source": "solid-geometry-workbook",
+  "page": 16,
+  "object": 338,
+  "file": "geometry/solid/p016-o0338.tex",
+  "pdf": "geometry/solid/p016-o0338.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "geometry",
+  "source": "solid-geometry-workbook",
+  "page": 16,
+  "object": 339,
+  "file": "geometry/solid/p016-o0339.tex",
+  "pdf": "geometry/solid/p016-o0339.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "geometry",
+  "source": "solid-geometry-workbook",
+  "page": 17,
+  "object": 353,
+  "file": "geometry/solid/p017-o0353.tex",
+  "pdf": "geometry/solid/p017-o0353.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "geometry",
+  "source": "solid-geometry-workbook",
+  "page": 17,
+  "object": 355,
+  "file": "geometry/solid/p017-o0355.tex",
+  "pdf": "geometry/solid/p017-o0355.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "geometry",
+  "source": "solid-geometry-workbook",
+  "page": 17,
+  "object": 356,
+  "file": "geometry/solid/p017-o0356.tex",
+  "pdf": "geometry/solid/p017-o0356.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "geometry",
+  "source": "solid-geometry-workbook",
+  "page": 18,
+  "object": 369,
+  "file": "geometry/solid/p018-o0369.tex",
+  "pdf": "geometry/solid/p018-o0369.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "geometry",
+  "source": "solid-geometry-workbook",
+  "page": 20,
+  "object": 431,
+  "file": "geometry/solid/p020-o0431.tex",
+  "pdf": "geometry/solid/p020-o0431.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "geometry",
+  "source": "solid-geometry-workbook",
+  "page": 20,
+  "object": 433,
+  "file": "geometry/solid/p020-o0433.tex",
+  "pdf": "geometry/solid/p020-o0433.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "geometry",
+  "source": "solid-geometry-workbook",
+  "page": 20,
+  "object": 434,
+  "file": "geometry/solid/p020-o0434.tex",
+  "pdf": "geometry/solid/p020-o0434.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "geometry",
+  "source": "solid-geometry-workbook",
+  "page": 20,
+  "object": 436,
+  "file": "geometry/solid/p020-o0436.tex",
+  "pdf": "geometry/solid/p020-o0436.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "geometry",
+  "source": "solid-geometry-workbook",
+  "page": 21,
+  "object": 449,
+  "file": "geometry/solid/p021-o0449.tex",
+  "pdf": "geometry/solid/p021-o0449.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "geometry",
+  "source": "solid-geometry-workbook",
+  "page": 21,
+  "object": 450,
+  "file": "geometry/solid/p021-o0450.tex",
+  "pdf": "geometry/solid/p021-o0450.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "geometry",
+  "source": "solid-geometry-workbook",
+  "page": 22,
+  "object": 467,
+  "file": "geometry/solid/p022-o0467.tex",
+  "pdf": "geometry/solid/p022-o0467.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "geometry",
+  "source": "solid-geometry-workbook",
+  "page": 23,
+  "object": 484,
+  "file": "geometry/solid/p023-o0484.tex",
+  "pdf": "geometry/solid/p023-o0484.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "geometry",
+  "source": "solid-geometry-workbook",
+  "page": 23,
+  "object": 485,
+  "file": "geometry/solid/p023-o0485.tex",
+  "pdf": "geometry/solid/p023-o0485.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "geometry",
+  "source": "solid-geometry-workbook",
+  "page": 23,
+  "object": 486,
+  "file": "geometry/solid/p023-o0486.tex",
+  "pdf": "geometry/solid/p023-o0486.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "geometry",
+  "source": "solid-geometry-workbook",
+  "page": 24,
+  "object": 499,
+  "file": "geometry/solid/p024-o0499.tex",
+  "pdf": "geometry/solid/p024-o0499.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "geometry",
+  "source": "solid-geometry-workbook",
+  "page": 25,
+  "object": 512,
+  "file": "geometry/solid/p025-o0512.tex",
+  "pdf": "geometry/solid/p025-o0512.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "geometry",
+  "source": "solid-geometry-workbook",
+  "page": 25,
+  "object": 513,
+  "file": "geometry/solid/p025-o0513.tex",
+  "pdf": "geometry/solid/p025-o0513.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "geometry",
+  "source": "solid-geometry-workbook",
+  "page": 26,
+  "object": 526,
+  "file": "geometry/solid/p026-o0526.tex",
+  "pdf": "geometry/solid/p026-o0526.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "geometry",
+  "source": "solid-geometry-workbook",
+  "page": 27,
+  "object": 571,
+  "file": "geometry/solid/p027-o0571.tex",
+  "pdf": "geometry/solid/p027-o0571.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "geometry",
+  "source": "solid-geometry-workbook",
+  "page": 27,
+  "object": 577,
+  "file": "geometry/solid/p027-o0577.tex",
+  "pdf": "geometry/solid/p027-o0577.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "geometry",
+  "source": "solid-geometry-workbook",
+  "page": 27,
+  "object": 579,
+  "file": "geometry/solid/p027-o0579.tex",
+  "pdf": "geometry/solid/p027-o0579.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "geometry",
+  "source": "solid-geometry-workbook",
+  "page": 27,
+  "object": 581,
+  "file": "geometry/solid/p027-o0581.tex",
+  "pdf": "geometry/solid/p027-o0581.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "geometry",
+  "source": "solid-geometry-workbook",
+  "page": 27,
+  "object": 583,
+  "file": "geometry/solid/p027-o0583.tex",
+  "pdf": "geometry/solid/p027-o0583.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "geometry",
+  "source": "solid-geometry-workbook",
+  "page": 28,
+  "object": 600,
+  "file": "geometry/solid/p028-o0600.tex",
+  "pdf": "geometry/solid/p028-o0600.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "geometry",
+  "source": "solid-geometry-workbook",
+  "page": 29,
+  "object": 613,
+  "file": "geometry/solid/p029-o0613.tex",
+  "pdf": "geometry/solid/p029-o0613.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "geometry",
+  "source": "solid-geometry-workbook",
+  "page": 29,
+  "object": 614,
+  "file": "geometry/solid/p029-o0614.tex",
+  "pdf": "geometry/solid/p029-o0614.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "geometry",
+  "source": "solid-geometry-workbook",
+  "page": 30,
+  "object": 628,
+  "file": "geometry/solid/p030-o0628.tex",
+  "pdf": "geometry/solid/p030-o0628.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "geometry",
+  "source": "solid-geometry-workbook",
+  "page": 30,
+  "object": 629,
+  "file": "geometry/solid/p030-o0629.tex",
+  "pdf": "geometry/solid/p030-o0629.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "geometry",
+  "source": "solid-geometry-workbook",
+  "page": 31,
+  "object": 643,
+  "file": "geometry/solid/p031-o0643.tex",
+  "pdf": "geometry/solid/p031-o0643.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "geometry",
+  "source": "solid-geometry-workbook",
+  "page": 32,
+  "object": 657,
+  "file": "geometry/solid/p032-o0657.tex",
+  "pdf": "geometry/solid/p032-o0657.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "geometry",
+  "source": "solid-geometry-workbook",
+  "page": 34,
+  "object": 714,
+  "file": "geometry/solid/p034-o0714.tex",
+  "pdf": "geometry/solid/p034-o0714.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "geometry",
+  "source": "solid-geometry-workbook",
+  "page": 34,
+  "object": 719,
+  "file": "geometry/solid/p034-o0719.tex",
+  "pdf": "geometry/solid/p034-o0719.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "geometry",
+  "source": "solid-geometry-workbook",
+  "page": 38,
+  "object": 772,
+  "file": "geometry/solid/p038-o0772.tex",
+  "pdf": "geometry/solid/p038-o0772.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "geometry",
+  "source": "solid-geometry-workbook",
+  "page": 38,
+  "object": 774,
+  "file": "geometry/solid/p038-o0774.tex",
+  "pdf": "geometry/solid/p038-o0774.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "geometry",
+  "source": "solid-geometry-workbook",
+  "page": 39,
+  "object": 787,
+  "file": "geometry/solid/p039-o0787.tex",
+  "pdf": "geometry/solid/p039-o0787.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "geometry",
+  "source": "solid-geometry-workbook",
+  "page": 39,
+  "object": 788,
+  "file": "geometry/solid/p039-o0788.tex",
+  "pdf": "geometry/solid/p039-o0788.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "geometry",
+  "source": "solid-geometry-workbook",
+  "page": 42,
+  "object": 861,
+  "file": "geometry/solid/p042-o0861.tex",
+  "pdf": "geometry/solid/p042-o0861.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "geometry",
+  "source": "solid-geometry-workbook",
+  "page": 44,
+  "object": 918,
+  "file": "geometry/solid/p044-o0918.tex",
+  "pdf": "geometry/solid/p044-o0918.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "geometry",
+  "source": "solid-geometry-workbook",
+  "page": 44,
+  "object": 923,
+  "file": "geometry/solid/p044-o0923.tex",
+  "pdf": "geometry/solid/p044-o0923.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "geometry",
+  "source": "solid-geometry-workbook",
+  "page": 44,
+  "object": 924,
+  "file": "geometry/solid/p044-o0924.tex",
+  "pdf": "geometry/solid/p044-o0924.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "geometry",
+  "source": "solid-geometry-workbook",
+  "page": 45,
+  "object": 937,
+  "file": "geometry/solid/p045-o0937.tex",
+  "pdf": "geometry/solid/p045-o0937.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "geometry",
+  "source": "solid-geometry-workbook",
+  "page": 46,
+  "object": 974,
+  "file": "geometry/solid/p046-o0974.tex",
+  "pdf": "geometry/solid/p046-o0974.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "geometry",
+  "source": "solid-geometry-workbook",
+  "page": 47,
+  "object": 996,
+  "file": "geometry/solid/p047-o0996.tex",
+  "pdf": "geometry/solid/p047-o0996.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "geometry",
+  "source": "solid-geometry-workbook",
+  "page": 49,
+  "object": 1025,
+  "file": "geometry/solid/p049-o1025.tex",
+  "pdf": "geometry/solid/p049-o1025.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "geometry",
+  "source": "solid-geometry-workbook",
+  "page": 50,
+  "object": 1038,
+  "file": "geometry/solid/p050-o1038.tex",
+  "pdf": "geometry/solid/p050-o1038.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "geometry",
+  "source": "solid-geometry-workbook",
+  "page": 50,
+  "object": 1043,
+  "file": "geometry/solid/p050-o1043.tex",
+  "pdf": "geometry/solid/p050-o1043.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "geometry",
+  "source": "solid-geometry-workbook",
+  "page": 50,
+  "object": 1044,
+  "file": "geometry/solid/p050-o1044.tex",
+  "pdf": "geometry/solid/p050-o1044.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "geometry",
+  "source": "solid-geometry-workbook",
+  "page": 51,
+  "object": 1057,
+  "file": "geometry/solid/p051-o1057.tex",
+  "pdf": "geometry/solid/p051-o1057.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "geometry",
+  "source": "solid-geometry-workbook",
+  "page": 52,
+  "object": 1072,
+  "file": "geometry/solid/p052-o1072.tex",
+  "pdf": "geometry/solid/p052-o1072.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "geometry",
+  "source": "solid-geometry-workbook",
+  "page": 53,
+  "object": 1086,
+  "file": "geometry/solid/p053-o1086.tex",
+  "pdf": "geometry/solid/p053-o1086.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "geometry",
+  "source": "solid-geometry-workbook",
+  "page": 55,
+  "object": 1140,
+  "file": "geometry/solid/p055-o1140.tex",
+  "pdf": "geometry/solid/p055-o1140.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "geometry",
+  "source": "solid-geometry-workbook",
+  "page": 55,
+  "object": 1142,
+  "file": "geometry/solid/p055-o1142.tex",
+  "pdf": "geometry/solid/p055-o1142.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "geometry",
+  "source": "solid-geometry-workbook",
+  "page": 56,
+  "object": 1163,
+  "file": "geometry/solid/p056-o1163.tex",
+  "pdf": "geometry/solid/p056-o1163.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "geometry",
+  "source": "solid-geometry-workbook",
+  "page": 58,
+  "object": 1189,
+  "file": "geometry/solid/p058-o1189.tex",
+  "pdf": "geometry/solid/p058-o1189.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "geometry",
+  "source": "solid-geometry-workbook",
+  "page": 58,
+  "object": 1194,
+  "file": "geometry/solid/p058-o1194.tex",
+  "pdf": "geometry/solid/p058-o1194.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "geometry",
+  "source": "solid-geometry-workbook",
+  "page": 59,
+  "object": 1207,
+  "file": "geometry/solid/p059-o1207.tex",
+  "pdf": "geometry/solid/p059-o1207.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "geometry",
+  "source": "solid-geometry-workbook",
+  "page": 59,
+  "object": 1208,
+  "file": "geometry/solid/p059-o1208.tex",
+  "pdf": "geometry/solid/p059-o1208.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "geometry",
+  "source": "solid-geometry-workbook",
+  "page": 60,
+  "object": 1221,
+  "file": "geometry/solid/p060-o1221.tex",
+  "pdf": "geometry/solid/p060-o1221.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "geometry",
+  "source": "solid-geometry-workbook",
+  "page": 61,
+  "object": 1234,
+  "file": "geometry/solid/p061-o1234.tex",
+  "pdf": "geometry/solid/p061-o1234.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "geometry",
+  "source": "solid-geometry-workbook",
+  "page": 61,
+  "object": 1236,
+  "file": "geometry/solid/p061-o1236.tex",
+  "pdf": "geometry/solid/p061-o1236.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "geometry",
+  "source": "solid-geometry-workbook",
+  "page": 61,
+  "object": 1238,
+  "file": "geometry/solid/p061-o1238.tex",
+  "pdf": "geometry/solid/p061-o1238.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "geometry",
+  "source": "solid-geometry-workbook",
+  "page": 62,
+  "object": 1251,
+  "file": "geometry/solid/p062-o1251.tex",
+  "pdf": "geometry/solid/p062-o1251.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "geometry",
+  "source": "solid-geometry-workbook",
+  "page": 62,
+  "object": 1252,
+  "file": "geometry/solid/p062-o1252.tex",
+  "pdf": "geometry/solid/p062-o1252.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "geometry",
+  "source": "solid-geometry-workbook",
+  "page": 70,
+  "object": 1385,
+  "file": "geometry/solid/p070-o1385.tex",
+  "pdf": "geometry/solid/p070-o1385.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "geometry",
+  "source": "solid-geometry-workbook",
+  "page": 70,
+  "object": 1386,
+  "file": "geometry/solid/p070-o1386.tex",
+  "pdf": "geometry/solid/p070-o1386.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "geometry",
+  "source": "solid-geometry-workbook",
+  "page": 71,
+  "object": 1399,
+  "file": "geometry/solid/p071-o1399.tex",
+  "pdf": "geometry/solid/p071-o1399.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "geometry",
+  "source": "solid-geometry-workbook",
+  "page": 72,
+  "object": 1412,
+  "file": "geometry/solid/p072-o1412.tex",
+  "pdf": "geometry/solid/p072-o1412.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "geometry",
+  "source": "solid-geometry-workbook",
+  "page": 73,
+  "object": 1425,
+  "file": "geometry/solid/p073-o1425.tex",
+  "pdf": "geometry/solid/p073-o1425.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "geometry",
+  "source": "solid-geometry-workbook",
+  "page": 74,
+  "object": 1462,
+  "file": "geometry/solid/p074-o1462.tex",
+  "pdf": "geometry/solid/p074-o1462.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "geometry",
+  "source": "solid-geometry-workbook",
+  "page": 74,
+  "object": 1464,
+  "file": "geometry/solid/p074-o1464.tex",
+  "pdf": "geometry/solid/p074-o1464.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "geometry",
+  "source": "solid-geometry-workbook",
+  "page": 75,
+  "object": 600,
+  "file": "geometry/solid/p075-o0600.tex",
+  "pdf": "geometry/solid/p075-o0600.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "geometry",
+  "source": "solid-geometry-workbook",
+  "page": 75,
+  "object": 1482,
+  "file": "geometry/solid/p075-o1482.tex",
+  "pdf": "geometry/solid/p075-o1482.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "geometry",
+  "source": "solid-geometry-workbook",
+  "page": 76,
+  "object": 1500,
+  "file": "geometry/solid/p076-o1500.tex",
+  "pdf": "geometry/solid/p076-o1500.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "geometry",
+  "source": "solid-geometry-workbook",
+  "page": 76,
+  "object": 1501,
+  "file": "geometry/solid/p076-o1501.tex",
+  "pdf": "geometry/solid/p076-o1501.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "geometry",
+  "source": "solid-geometry-workbook",
+  "page": 77,
+  "object": 1514,
+  "file": "geometry/solid/p077-o1514.tex",
+  "pdf": "geometry/solid/p077-o1514.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "geometry",
+  "source": "solid-geometry-workbook",
+  "page": 78,
+  "object": 1528,
+  "file": "geometry/solid/p078-o1528.tex",
+  "pdf": "geometry/solid/p078-o1528.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "geometry",
+  "source": "solid-geometry-workbook",
+  "page": 79,
+  "object": 1542,
+  "file": "geometry/solid/p079-o1542.tex",
+  "pdf": "geometry/solid/p079-o1542.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "geometry",
+  "source": "solid-geometry-workbook",
+  "page": 79,
+  "object": 1543,
+  "file": "geometry/solid/p079-o1543.tex",
+  "pdf": "geometry/solid/p079-o1543.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "geometry",
+  "source": "solid-geometry-workbook",
+  "page": 80,
+  "object": 1560,
+  "file": "geometry/solid/p080-o1560.tex",
+  "pdf": "geometry/solid/p080-o1560.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "geometry",
+  "source": "solid-geometry-workbook",
+  "page": 80,
+  "object": 1561,
+  "file": "geometry/solid/p080-o1561.tex",
+  "pdf": "geometry/solid/p080-o1561.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "geometry",
+  "source": "solid-geometry-workbook",
+  "page": 81,
+  "object": 1575,
+  "file": "geometry/solid/p081-o1575.tex",
+  "pdf": "geometry/solid/p081-o1575.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "geometry",
+  "source": "solid-geometry-workbook",
+  "page": 81,
+  "object": 1576,
+  "file": "geometry/solid/p081-o1576.tex",
+  "pdf": "geometry/solid/p081-o1576.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "geometry",
+  "source": "solid-geometry-workbook",
+  "page": 82,
+  "object": 1589,
+  "file": "geometry/solid/p082-o1589.tex",
+  "pdf": "geometry/solid/p082-o1589.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "geometry",
+  "source": "solid-geometry-workbook",
+  "page": 82,
+  "object": 1590,
+  "file": "geometry/solid/p082-o1590.tex",
+  "pdf": "geometry/solid/p082-o1590.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "geometry",
+  "source": "solid-geometry-workbook",
+  "page": 82,
+  "object": 1592,
+  "file": "geometry/solid/p082-o1592.tex",
+  "pdf": "geometry/solid/p082-o1592.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "geometry",
+  "source": "solid-geometry-workbook",
+  "page": 83,
+  "object": 1605,
+  "file": "geometry/solid/p083-o1605.tex",
+  "pdf": "geometry/solid/p083-o1605.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "geometry",
+  "source": "solid-geometry-workbook",
+  "page": 83,
+  "object": 1606,
+  "file": "geometry/solid/p083-o1606.tex",
+  "pdf": "geometry/solid/p083-o1606.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "geometry",
+  "source": "solid-geometry-workbook",
+  "page": 84,
+  "object": 1619,
+  "file": "geometry/solid/p084-o1619.tex",
+  "pdf": "geometry/solid/p084-o1619.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "geometry",
+  "source": "solid-geometry-workbook",
+  "page": 86,
+  "object": 1672,
+  "file": "geometry/solid/p086-o1672.tex",
+  "pdf": "geometry/solid/p086-o1672.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "geometry",
+  "source": "solid-geometry-workbook",
+  "page": 89,
+  "object": 1709,
+  "file": "geometry/solid/p089-o1709.tex",
+  "pdf": "geometry/solid/p089-o1709.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "geometry",
+  "source": "solid-geometry-workbook",
+  "page": 89,
+  "object": 1711,
+  "file": "geometry/solid/p089-o1711.tex",
+  "pdf": "geometry/solid/p089-o1711.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "geometry",
+  "source": "solid-geometry-workbook",
+  "page": 90,
+  "object": 1724,
+  "file": "geometry/solid/p090-o1724.tex",
+  "pdf": "geometry/solid/p090-o1724.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "geometry",
+  "source": "solid-geometry-workbook",
+  "page": 90,
+  "object": 1725,
+  "file": "geometry/solid/p090-o1725.tex",
+  "pdf": "geometry/solid/p090-o1725.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "geometry",
+  "source": "solid-geometry-workbook",
+  "page": 91,
+  "object": 1738,
+  "file": "geometry/solid/p091-o1738.tex",
+  "pdf": "geometry/solid/p091-o1738.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "geometry",
+  "source": "solid-geometry-workbook",
+  "page": 91,
+  "object": 1740,
+  "file": "geometry/solid/p091-o1740.tex",
+  "pdf": "geometry/solid/p091-o1740.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "geometry",
+  "source": "solid-geometry-workbook",
+  "page": 92,
+  "object": 1754,
+  "file": "geometry/solid/p092-o1754.tex",
+  "pdf": "geometry/solid/p092-o1754.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "geometry",
+  "source": "solid-geometry-workbook",
+  "page": 93,
+  "object": 1767,
+  "file": "geometry/solid/p093-o1767.tex",
+  "pdf": "geometry/solid/p093-o1767.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "geometry",
+  "source": "solid-geometry-workbook",
+  "page": 93,
+  "object": 1768,
+  "file": "geometry/solid/p093-o1768.tex",
+  "pdf": "geometry/solid/p093-o1768.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "geometry",
+  "source": "solid-geometry-workbook",
+  "page": 94,
+  "object": 1785,
+  "file": "geometry/solid/p094-o1785.tex",
+  "pdf": "geometry/solid/p094-o1785.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "geometry",
+  "source": "solid-geometry-workbook",
+  "page": 96,
+  "object": 1842,
+  "file": "geometry/solid/p096-o1842.tex",
+  "pdf": "geometry/solid/p096-o1842.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "geometry",
+  "source": "solid-geometry-workbook",
+  "page": 96,
+  "object": 1847,
+  "file": "geometry/solid/p096-o1847.tex",
+  "pdf": "geometry/solid/p096-o1847.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "geometry",
+  "source": "solid-geometry-workbook",
+  "page": 97,
+  "object": 1860,
+  "file": "geometry/solid/p097-o1860.tex",
+  "pdf": "geometry/solid/p097-o1860.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "geometry",
+  "source": "solid-geometry-workbook",
+  "page": 98,
+  "object": 1897,
+  "file": "geometry/solid/p098-o1897.tex",
+  "pdf": "geometry/solid/p098-o1897.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "geometry",
+  "source": "solid-geometry-workbook",
+  "page": 99,
+  "object": 924,
+  "file": "geometry/solid/p099-o0924.tex",
+  "pdf": "geometry/solid/p099-o0924.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "geometry",
+  "source": "solid-geometry-workbook",
+  "page": 99,
+  "object": 1914,
+  "file": "geometry/solid/p099-o1914.tex",
+  "pdf": "geometry/solid/p099-o1914.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "geometry",
+  "source": "solid-geometry-workbook",
+  "page": 101,
+  "object": 1943,
+  "file": "geometry/solid/p101-o1943.tex",
+  "pdf": "geometry/solid/p101-o1943.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "lectures",
+  "source": "2020-autumn-workbook",
+  "page": 6,
+  "object": 80,
+  "file": "lectures/fragments/2020-autumn-workbook-p006-i002-obj0080.tex",
+  "pdf": "lectures/fragments/2020-autumn-workbook-p006-i002-obj0080.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "lectures",
+  "source": "2020-autumn-workbook",
+  "page": 7,
+  "object": 101,
+  "file": "lectures/fragments/2020-autumn-workbook-p007-i003-obj0101.tex",
+  "pdf": "lectures/fragments/2020-autumn-workbook-p007-i003-obj0101.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "lectures",
+  "source": "2020-autumn-workbook",
+  "page": 8,
+  "object": 119,
+  "file": "lectures/fragments/2020-autumn-workbook-p008-i004-obj0119.tex",
+  "pdf": "lectures/fragments/2020-autumn-workbook-p008-i004-obj0119.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "lectures",
+  "source": "2020-autumn-workbook",
+  "page": 8,
+  "object": 121,
+  "file": "lectures/fragments/2020-autumn-workbook-p008-i005-obj0121.tex",
+  "pdf": "lectures/fragments/2020-autumn-workbook-p008-i005-obj0121.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "lectures",
+  "source": "2020-autumn-workbook",
+  "page": 8,
+  "object": 123,
+  "file": "lectures/fragments/2020-autumn-workbook-p008-i006-obj0123.tex",
+  "pdf": "lectures/fragments/2020-autumn-workbook-p008-i006-obj0123.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "lectures",
+  "source": "2020-autumn-workbook",
+  "page": 32,
+  "object": 512,
+  "file": "lectures/fragments/2020-autumn-workbook-p032-i013-obj0512.tex",
+  "pdf": "lectures/fragments/2020-autumn-workbook-p032-i013-obj0512.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "lectures",
+  "source": "2020-autumn-workbook",
+  "page": 40,
+  "object": 647,
+  "file": "lectures/fragments/2020-autumn-workbook-p040-i016-obj0647.tex",
+  "pdf": "lectures/fragments/2020-autumn-workbook-p040-i016-obj0647.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "lectures",
+  "source": "2020-autumn-workbook",
+  "page": 40,
+  "object": 649,
+  "file": "lectures/fragments/2020-autumn-workbook-p040-i017-obj0649.tex",
+  "pdf": "lectures/fragments/2020-autumn-workbook-p040-i017-obj0649.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "lectures",
+  "source": "2020-autumn-workbook",
+  "page": 44,
+  "object": 718,
+  "file": "lectures/fragments/2020-autumn-workbook-p044-i019-obj0718.tex",
+  "pdf": "lectures/fragments/2020-autumn-workbook-p044-i019-obj0718.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "lectures",
+  "source": "2020-autumn-workbook",
+  "page": 65,
+  "object": 1056,
+  "file": "lectures/fragments/2020-autumn-workbook-p065-i024-obj1056.tex",
+  "pdf": "lectures/fragments/2020-autumn-workbook-p065-i024-obj1056.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "lectures",
+  "source": "2020-autumn-workbook",
+  "page": 65,
+  "object": 1058,
+  "file": "lectures/fragments/2020-autumn-workbook-p065-i025-obj1058.tex",
+  "pdf": "lectures/fragments/2020-autumn-workbook-p065-i025-obj1058.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "lectures",
+  "source": "2020-autumn-workbook",
+  "page": 66,
+  "object": 1078,
+  "file": "lectures/fragments/2020-autumn-workbook-p066-i026-obj1078.tex",
+  "pdf": "lectures/fragments/2020-autumn-workbook-p066-i026-obj1078.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "lectures",
+  "source": "2020-autumn-workbook",
+  "page": 67,
+  "object": 1094,
+  "file": "lectures/fragments/2020-autumn-workbook-p067-i027-obj1094.tex",
+  "pdf": "lectures/fragments/2020-autumn-workbook-p067-i027-obj1094.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "lectures",
+  "source": "2020-autumn-workbook",
+  "page": 68,
+  "object": 1110,
+  "file": "lectures/fragments/2020-autumn-workbook-p068-i028-obj1110.tex",
+  "pdf": "lectures/fragments/2020-autumn-workbook-p068-i028-obj1110.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "lectures",
+  "source": "2020-autumn-workbook",
+  "page": 69,
+  "object": 1130,
+  "file": "lectures/fragments/2020-autumn-workbook-p069-i029-obj1130.tex",
+  "pdf": "lectures/fragments/2020-autumn-workbook-p069-i029-obj1130.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "lectures",
+  "source": "2020-autumn-workbook",
+  "page": 74,
+  "object": 1211,
+  "file": "lectures/fragments/2020-autumn-workbook-p074-i030-obj1211.tex",
+  "pdf": "lectures/fragments/2020-autumn-workbook-p074-i030-obj1211.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "lectures",
+  "source": "2020-autumn-workbook",
+  "page": 80,
+  "object": 1312,
+  "file": "lectures/fragments/2020-autumn-workbook-p080-i031-obj1312.tex",
+  "pdf": "lectures/fragments/2020-autumn-workbook-p080-i031-obj1312.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "lectures",
+  "source": "2020-autumn-workbook",
+  "page": 80,
+  "object": 1314,
+  "file": "lectures/fragments/2020-autumn-workbook-p080-i032-obj1314.tex",
+  "pdf": "lectures/fragments/2020-autumn-workbook-p080-i032-obj1314.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "lectures",
+  "source": "2020-autumn-workbook",
+  "page": 90,
+  "object": 1476,
+  "file": "lectures/fragments/2020-autumn-workbook-p090-i034-obj1476.tex",
+  "pdf": "lectures/fragments/2020-autumn-workbook-p090-i034-obj1476.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "lectures",
+  "source": "2020-autumn-workbook",
+  "page": 116,
+  "object": 1876,
+  "file": "lectures/fragments/2020-autumn-workbook-p116-i035-obj1876.tex",
+  "pdf": "lectures/fragments/2020-autumn-workbook-p116-i035-obj1876.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "lectures",
+  "source": "2020-autumn-workbook",
+  "page": 125,
+  "object": 2021,
+  "file": "lectures/fragments/2020-autumn-workbook-p125-i036-obj2021.tex",
+  "pdf": "lectures/fragments/2020-autumn-workbook-p125-i036-obj2021.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "lectures",
+  "source": "2020-autumn-workbook",
+  "page": 126,
+  "object": 2039,
+  "file": "lectures/fragments/2020-autumn-workbook-p126-i037-obj2039.tex",
+  "pdf": "lectures/fragments/2020-autumn-workbook-p126-i037-obj2039.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "lectures",
+  "source": "2021-spring-grade-11-lecture",
+  "page": 31,
+  "object": 2800,
+  "file": "lectures/rebuild/spring/spring-031-difference-quotient.tikz",
+  "pdf": "lectures/rebuild/spring/spring-031-difference-quotient.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "lectures",
+  "source": "2021-spring-grade-11-lecture",
+  "page": 56,
+  "object": 3709,
+  "file": "lectures/rebuild/spring/spring-056-wave.tikz",
+  "pdf": "lectures/rebuild/spring/spring-056-wave.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "lectures",
+  "source": "2021-spring-grade-11-lecture",
+  "page": 94,
+  "object": 4857,
+  "file": "lectures/rebuild/spring/spring-094-02-curves.tikz",
+  "pdf": "lectures/rebuild/spring/spring-094-02-curves.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "lectures",
+  "source": "2021-spring-grade-11-lecture",
+  "page": 94,
+  "object": 4859,
+  "file": "lectures/rebuild/spring/spring-094-01-curves.tikz",
+  "pdf": "lectures/rebuild/spring/spring-094-01-curves.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "lectures",
+  "source": "2021-spring-grade-11-lecture",
+  "page": 144,
+  "object": 6568,
+  "file": "lectures/rebuild/spring/spring-144-grid.tikz",
+  "pdf": "lectures/rebuild/spring/spring-144-grid.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "lectures",
+  "source": "2021-spring-grade-11-lecture",
+  "page": 144,
+  "object": 6570,
+  "file": "lectures/rebuild/spring/spring-144-seat-plan.tikz",
+  "pdf": "lectures/rebuild/spring/spring-144-seat-plan.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "lectures",
+  "source": "2021-spring-grade-11-lecture",
+  "page": 147,
+  "object": 6698,
+  "file": "lectures/rebuild/spring/spring-147-ellipse-venn.tikz",
+  "pdf": "lectures/rebuild/spring/spring-147-ellipse-venn.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "lectures",
+  "source": "2021-spring-grade-11-lecture",
+  "page": 149,
+  "object": 6746,
+  "file": "lectures/rebuild/spring/spring-149-circle-venn.tikz",
+  "pdf": "lectures/rebuild/spring/spring-149-circle-venn.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "lectures",
+  "source": "2021-spring-grade-11-lecture",
+  "page": 150,
+  "object": 6767,
+  "file": "lectures/rebuild/spring/spring-150-five-regions.tikz",
+  "pdf": "lectures/rebuild/spring/spring-150-five-regions.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "lectures",
+  "source": "2021-spring-grade-11-lecture",
+  "page": 150,
+  "object": 6769,
+  "file": "lectures/rebuild/spring/spring-150-planar-regions.tikz",
+  "pdf": "lectures/rebuild/spring/spring-150-planar-regions.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "lectures",
+  "source": "2021-spring-grade-11-lecture",
+  "page": 193,
+  "object": 8077,
+  "file": "lectures/rebuild/spring/spring-193-normal.tikz",
+  "pdf": "lectures/rebuild/spring/spring-193-normal.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "lectures",
+  "source": "2021-spring-grade-11-lecture",
+  "page": 195,
+  "object": 8104,
+  "file": "lectures/rebuild/spring/spring-195-parabolas.tikz",
+  "pdf": "lectures/rebuild/spring/spring-195-parabolas.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "lectures",
+  "source": "2021-spring-grade-11-lecture",
+  "page": 206,
+  "object": 8503,
+  "file": "lectures/rebuild/spring/spring-206-scatter.tikz",
+  "pdf": "lectures/rebuild/spring/spring-206-scatter.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "lectures",
+  "source": "2021-spring-grade-11-lecture",
+  "page": 209,
+  "object": 8592,
+  "file": "lectures/rebuild/spring/spring-209-line.tikz",
+  "pdf": "lectures/rebuild/spring/spring-209-line.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "lectures",
+  "source": "2021-winter-grade-11-lecture",
+  "page": 38,
+  "object": 723,
+  "file": "lectures/fragments/2021-winter-grade-11-lecture-p038-i1085-obj0723.tex",
+  "pdf": "lectures/fragments/2021-winter-grade-11-lecture-p038-i1085-obj0723.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "lectures",
+  "source": "2021-winter-grade-11-lecture",
+  "page": 40,
+  "object": 728,
+  "file": "lectures/fragments/2021-winter-grade-11-lecture-p040-i1087-obj0728.tex",
+  "pdf": "lectures/fragments/2021-winter-grade-11-lecture-p040-i1087-obj0728.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "lectures",
+  "source": "2021-winter-grade-11-lecture",
+  "page": 44,
+  "object": 744,
+  "file": "lectures/fragments/2021-winter-grade-11-lecture-p044-i1095-obj0744.tex",
+  "pdf": "lectures/fragments/2021-winter-grade-11-lecture-p044-i1095-obj0744.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "lectures",
+  "source": "2021-winter-grade-11-lecture",
+  "page": 44,
+  "object": 745,
+  "file": "lectures/fragments/2021-winter-grade-11-lecture-p044-i1096-obj0745.tex",
+  "pdf": "lectures/fragments/2021-winter-grade-11-lecture-p044-i1096-obj0745.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "lectures",
+  "source": "2021-winter-grade-11-lecture",
+  "page": 44,
+  "object": 746,
+  "file": "lectures/fragments/2021-winter-grade-11-lecture-p044-i1097-obj0746.tex",
+  "pdf": "lectures/fragments/2021-winter-grade-11-lecture-p044-i1097-obj0746.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "lectures",
+  "source": "2021-winter-grade-11-lecture",
+  "page": 44,
+  "object": 747,
+  "file": "lectures/fragments/2021-winter-grade-11-lecture-p044-i1098-obj0747.tex",
+  "pdf": "lectures/fragments/2021-winter-grade-11-lecture-p044-i1098-obj0747.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "lectures",
+  "source": "2021-winter-grade-11-lecture",
+  "page": 44,
+  "object": 748,
+  "file": "lectures/fragments/2021-winter-grade-11-lecture-p044-i1099-obj0748.tex",
+  "pdf": "lectures/fragments/2021-winter-grade-11-lecture-p044-i1099-obj0748.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "lectures",
+  "source": "2021-winter-grade-11-lecture",
+  "page": 45,
+  "object": 756,
+  "file": "lectures/fragments/2021-winter-grade-11-lecture-p045-i1110-obj0756.tex",
+  "pdf": "lectures/fragments/2021-winter-grade-11-lecture-p045-i1110-obj0756.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "lectures",
+  "source": "2021-winter-grade-11-lecture",
+  "page": 45,
+  "object": 757,
+  "file": "lectures/fragments/2021-winter-grade-11-lecture-p045-i1111-obj0757.tex",
+  "pdf": "lectures/fragments/2021-winter-grade-11-lecture-p045-i1111-obj0757.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "lectures",
+  "source": "2021-winter-grade-11-lecture",
+  "page": 45,
+  "object": 758,
+  "file": "lectures/fragments/2021-winter-grade-11-lecture-p045-i1112-obj0758.tex",
+  "pdf": "lectures/fragments/2021-winter-grade-11-lecture-p045-i1112-obj0758.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "lectures",
+  "source": "2021-winter-grade-11-lecture",
+  "page": 45,
+  "object": 759,
+  "file": "lectures/fragments/2021-winter-grade-11-lecture-p045-i1113-obj0759.tex",
+  "pdf": "lectures/fragments/2021-winter-grade-11-lecture-p045-i1113-obj0759.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "lectures",
+  "source": "2021-winter-grade-11-lecture",
+  "page": 54,
+  "object": 833,
+  "file": "lectures/fragments/2021-winter-grade-11-lecture-p054-i1199-obj0833.tex",
+  "pdf": "lectures/fragments/2021-winter-grade-11-lecture-p054-i1199-obj0833.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "lectures",
+  "source": "2021-winter-grade-11-lecture",
+  "page": 84,
+  "object": 1050,
+  "file": "lectures/fragments/2021-winter-grade-11-lecture-p084-i1589-obj1050.tex",
+  "pdf": "lectures/fragments/2021-winter-grade-11-lecture-p084-i1589-obj1050.pdf",
+  "status": "tikz"
+ },
+ {
+  "group": "lectures",
+  "source": "2021-winter-grade-11-lecture",
+  "page": 92,
+  "object": 1076,
+  "file": "lectures/fragments/2021-winter-grade-11-lecture-p092-i1600-obj1076.tex",
+  "pdf": "lectures/fragments/2021-winter-grade-11-lecture-p092-i1600-obj1076.pdf",
+  "status": "tikz"
+ }
+]

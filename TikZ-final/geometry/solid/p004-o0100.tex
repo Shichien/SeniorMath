@@ -1,0 +1,10 @@
+\begin{tikzpicture}[scale=.56]
+  \coordinate (A) at (0,0); \coordinate (B) at (0,2.18);
+  \coordinate (C) at (1.40,2.18); \coordinate (D) at (2.18,1.38);
+  \coordinate (E) at (1.72,3.86); \coordinate (F) at (4.42,3.86);
+  \coordinate (G) at (5.75,1.38); \coordinate (H) at (4.42,0);
+  \draw (A)--(B)--(E)--(F)--(G)--(H)--cycle;
+  \draw (B)--(C)--(D)--(H);
+  \draw (C)--(F);
+  \draw[dashed] (E)--(C) (A)--(D)--(G);
+\end{tikzpicture}

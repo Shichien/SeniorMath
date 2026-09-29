@@ -1,0 +1,12 @@
+\begin{tikzpicture}[scale=.86, every node/.style={font=\small}]
+  \coordinate (P) at (2.3,5.6);
+  \coordinate (B) at (0,0);
+  \coordinate (C) at (6.0,0);
+  \coordinate (A) at (2.55,1.8);
+  \draw (P)--(B)--(C)--(P);
+  \draw[dashed] (P)--(A)--(B) (A)--(C);
+  \node[above] at (P) {$P$};
+  \node[below left] at (B) {$B$};
+  \node[below right] at (C) {$C$};
+  \node[below] at (A) {$A$};
+\end{tikzpicture}

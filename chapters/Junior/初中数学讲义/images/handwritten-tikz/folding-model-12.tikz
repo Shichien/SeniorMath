@@ -1,0 +1,3 @@
+\begin{tikzpicture}[thick]
+\coordinate(A)at(0,0);\coordinate(B)at(0,3);\coordinate(C)at(5,3);\coordinate(D)at(5,0);\coordinate(E)at(1.5,3);\coordinate(P)at(0,1.8);\coordinate(Q)at(3.8,0);\draw(B)--(C)--(D)--(Q)--(P)--(E)--(Q);\draw[densely dashed](A)--(B) (A)--(Q);\foreach\p/\pos in {A/below left,B/above left,C/above right,D/below right,E/above,P/left,Q/below}\node[\pos]at(\p){$\p$};
+\end{tikzpicture}

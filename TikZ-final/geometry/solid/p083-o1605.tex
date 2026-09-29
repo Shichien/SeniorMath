@@ -1,0 +1,33 @@
+\begin{tikzpicture}[scale=1.9, every node/.style={font=\small}, line cap=round, line join=round]
+  % 图1: square ABCD, O = AC \cap BD
+  \coordinate (A) at (0,0);
+  \coordinate (C) at (2.7,0);
+  \coordinate (O) at ($(A)!0.5!(C)$);
+  \coordinate (D) at ($(O)+(0,1.35)$);
+  \coordinate (B) at ($(O)-(0,1.35)$);
+  \draw (A)--(D)--(C)--(B)--cycle;
+  \draw (A)--(C) (D)--(B);
+  \node[left] at (A) {$A$};
+  \node[right] at (C) {$C$};
+  \node[above] at (D) {$D$};
+  \node[below] at (B) {$B$};
+  \node[below right] at (O) {$O$};
+  \node at ($(B)+(0,-0.42)$) {图1};
+
+  % 图2: folded along AC, plane ACD \perp plane ABC
+  \begin{scope}[shift={(3.58,0)}]
+    \coordinate (A') at (0,0);
+    \coordinate (C') at (2.73,0);
+    \coordinate (O') at ($(A')!0.5!(C')$);
+    \coordinate (D') at ($(O')+(0,1.32)$);
+    \coordinate (B') at (0.58,-0.84);
+    \draw (A')--(D')--(C') (A')--(B')--(C');
+    \draw[dashed] (A')--(C') (D')--(O')--(B');
+    \node[left] at (A') {$A$};
+    \node[right] at (C') {$C$};
+    \node[above] at (D') {$D$};
+    \node[below] at (B') {$B$};
+    \node[below right] at (O') {$O$};
+    \node at ($(B')+(0.6,-0.7)$) {图2};
+  \end{scope}
+\end{tikzpicture}

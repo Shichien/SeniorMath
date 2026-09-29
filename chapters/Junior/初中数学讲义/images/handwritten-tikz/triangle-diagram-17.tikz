@@ -1,0 +1,19 @@
+\begin{tikzpicture}[thick,blue!70!black]
+\coordinate (A) at (3,5);
+\coordinate (B) at (0,0);
+\coordinate (C) at (4.5,0);
+\coordinate (D) at (7,0);
+\coordinate (F) at ($(B)!.52!(A)$);
+\coordinate (Q) at ($(C)+(F)-(D)$);
+\path[name path=FD] (F)--(D);
+\path[name path=AC] (A)--(C);
+\path[name path=AB] (A)--(B);
+\path[name path=parallel] (C)--(Q);
+\path[name intersections={of=FD and AC,by=E}];
+\path[name intersections={of=parallel and AB,by=P}];
+\draw (A)--(B)--(D) (A)--(C) (F)--(D);
+\draw[dashed] (P)--(C);
+\foreach \p in {A,B,C,D,E,F,P} \fill[red] (\p) circle (2pt);
+\foreach \p/\pos in {A/above,B/left,C/below,D/right,E/right,F/left,P/left}
+  \node[black,\pos] at (\p) {$\p$};
+\end{tikzpicture}

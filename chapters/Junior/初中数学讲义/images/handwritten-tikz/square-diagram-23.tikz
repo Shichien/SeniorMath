@@ -1,0 +1,17 @@
+\begin{tikzpicture}[line width=.75pt,font=\small,line cap=round,line join=round]
+\begin{scope}
+  \coordinate(A)at(0,2.5);\coordinate(B)at(0,0);\coordinate(C)at(2.5,0);\coordinate(D)at(2.5,2.5);\coordinate(E)at(1.52,0);
+  \coordinate(F)at($(A)!.52!(E)$);
+  \coordinate(GL)at($(F)+(-2.5,-1.52)$);\coordinate(HR)at($(F)+(2.5,1.52)$);
+  \path[name path=AB](A)--(B);\path[name path=CD](C)--(D);\path[name path=GH](GL)--(HR);
+  \path[name intersections={of=AB and GH,by=G}];\path[name intersections={of=CD and GH,by=H}];
+  \draw(A)--(B)--(C)--(D)--cycle;\draw(A)--(E);\draw(G)--(H);
+  \pic[draw,line width=.65pt,angle radius=2mm]{right angle=A--F--H};
+  \foreach\p/\a in {A/above left,B/below left,C/below right,D/above right,E/below,G/left,H/right,F/right}\node[\a]at(\p){$\p$};\node at(1.25,-.55){(1)};
+\end{scope}
+\begin{scope}[xshift=4.2cm]
+  \coordinate(A)at(0,2.5);\coordinate(B)at(0,0);\coordinate(C)at(2.5,0);\coordinate(D)at(2.5,2.5);\coordinate(E)at(1.45,0);\coordinate(F)at($(A)!1.22!(E)$);
+  \draw(A)--(B)--(C)--(D)--cycle;\draw(A)--(F);\fill(F)circle(1.5pt);
+  \foreach\p/\a in {A/above left,B/below left,C/below right,D/above right,E/above right,F/below right}\node[\a]at(\p){$\p$};\node at(1.25,-.95){(2)};
+\end{scope}
+\end{tikzpicture}

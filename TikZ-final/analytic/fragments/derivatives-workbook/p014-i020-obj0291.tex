@@ -1,0 +1,17 @@
+\begin{tikzpicture}[x=1bp,y=-1bp,line cap=round,line join=round]
+  \path[use as bounding box] (0,0) rectangle (195,116);
+  \draw[-{Stealth[length=7bp,width=8bp]},line width=.72bp] (0,69)--(190,69);
+  \draw[-{Stealth[length=7bp,width=8bp]},line width=.72bp] (85,106)--(85,7);
+  \draw[line width=.65bp]
+    (9,102) .. controls (20,64) and (35,35) .. (51,35)
+    .. controls (67,35) and (79,53) .. (94,62)
+    .. controls (103,68) and (112,70) .. (117,69)
+    .. controls (136,67) and (150,48) .. (161,20);
+  \draw[dash pattern=on 5bp off 4bp,line width=.65bp] (51,35)--(51,69) (151,39)--(151,69);
+  \foreach \x in {18,51,117,151} {\draw[line width=.65bp] (\x,69)--(\x,64);}
+  \node[inner sep=0bp,anchor=west,font=\fontsize{10bp}{10bp}\selectfont] at (181,81) {$x$};
+  \node[inner sep=0bp,anchor=west,font=\fontsize{10bp}{10bp}\selectfont] at (91,14) {$y$};
+  \node[inner sep=0bp,anchor=north west,font=\fontsize{11bp}{11bp}\selectfont] at (88,72) {$O$};
+  \foreach \x/\t in {18/-2,51/-1,117/1,151/2}
+    \node[inner sep=0bp,anchor=north,font=\fontsize{10bp}{10bp}\selectfont] at (\x,74) {$\t$};
+\end{tikzpicture}

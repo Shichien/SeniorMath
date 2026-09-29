@@ -1,0 +1,9 @@
+\begin{tikzpicture}[>=stealth,thick]
+\draw[->](-3,0)--(3,0)node[right]{$x$};\draw[->](0,-.8)--(0,4.2)node[above]{$y$};
+\draw[smooth,samples=100,domain=-1.5:1.5,variable=\x]plot(\x,{1.5*\x*\x});
+\draw(-1.7,{1-.4*1.7})--(1.9,{1+.4*1.9});
+\coordinate(Q)at(0,1);
+\coordinate(E)at({(.4-sqrt(.16+6))/3},{1+.4*(.4-sqrt(.16+6))/3});
+\coordinate(F)at({(.4+sqrt(.16+6))/3},{1+.4*(.4+sqrt(.16+6))/3});
+\node[below right]at(0,0){$O$};\node[above left]at(Q){$Q$};\node[above left]at(E){$E$};\node[above right]at(F){$F$};
+\end{tikzpicture}

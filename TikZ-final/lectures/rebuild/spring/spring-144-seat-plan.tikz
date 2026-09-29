@@ -1,0 +1,43 @@
+\begin{tikzpicture}[x=1bp,y=-1bp,line cap=round,line join=round]
+  \path[use as bounding box] (0,0) rectangle (465,146);
+  \definecolor{panel}{RGB}{215,211,210}
+  \definecolor{ink}{RGB}{50,46,45}
+  \definecolor{roof}{RGB}{55,51,50}
+  \definecolor{device}{RGB}{129,127,128}
+  \definecolor{back}{RGB}{19,16,14}
+  \fill[back] (0,0) rectangle (465,146);
+  \draw[fill=panel,draw=ink,line width=3bp] (1.5,13.5) rectangle (361.5,144.5);
+
+  \foreach \xa/\xb in {26/108,119/215,241/291,300/335}{
+    \foreach \ya/\yb in {23/57,62/96,102/136}{
+      \draw[fill=white,draw=ink,line width=2bp] (\xa,\ya) rectangle (\xb,\yb);
+    }
+  }
+
+  \font\springlab="Times New Roman Italic" at 31bp
+  \tikzset{lab/.style={font=\springlab,inner sep=0bp,text=ink}}
+  \fill[ink] (10,139) circle (4bp);
+  \fill[ink] (226,60) circle (4bp);
+  \fill[ink] (348,20) circle (4bp);
+  \node[lab] at (16,122) {E};
+  \node[lab] at (226,44) {F};
+  \node[lab] at (347,43) {G};
+
+  % Device at the right of the seating plan.
+  \fill[roof] (392,0) -- (437,0) -- (445,13) -- (442,35) -- (388,35) -- (385,13) -- cycle;
+  \fill[device] (364,30) -- (389,13) -- (389,32) -- (390,34) -- (364,34) -- cycle;
+  \fill[panel] (390,26) rectangle (441,36);
+  \fill[panel] (397,15) rectangle (400,36);
+  \fill[panel] (409,15) rectangle (411,36);
+  \fill[panel] (420,15) rectangle (423,36);
+  \fill[panel] (430,15) rectangle (433,36);
+  \fill[panel] (366,34) rectangle (400,50);
+  \fill[panel] (430,34) rectangle (441,50);
+  \fill[device] (414,36) rectangle (417,52);
+  \fill[white] (371,37) rectangle (382,44);
+  \fill[white] (392,37) rectangle (397,44);
+  \fill[white] (434,37) rectangle (439,44);
+  \fill[panel] (452,42) rectangle (457,54);
+  \fill[panel] (457,29) circle (16bp);
+  \foreach \x/\y in {449/22,461/22,447/29,457/28,463/31,452/36}{\fill[white] (\x,\y) circle (1.8bp);}
+\end{tikzpicture}

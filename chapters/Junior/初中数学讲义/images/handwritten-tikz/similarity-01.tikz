@@ -1,0 +1,20 @@
+\begin{tikzpicture}[scale=.78,line width=.65pt,font=\small,line join=round]
+  \coordinate (A) at (5.3,5.7);
+  \coordinate (B) at (0,0);
+  \coordinate (C) at (8.4,0);
+  \coordinate (D) at ($(B)!(A)!(C)$);
+  \coordinate (E) at ($(A)!(B)!(C)$);
+  \coordinate (F) at ($(A)!(C)!(B)$);
+  \path[name path=AD] (A)--(D);
+  \path[name path=BE] (B)--(E);
+  \path[name intersections={of=AD and BE,by=O}];
+
+  \draw (A)--(B)--(C)--cycle;
+  \draw (A)--(D) (B)--(E) (C)--(F);
+  \draw pic[draw,angle radius=5pt] {right angle=A--D--C};
+  \draw pic[draw,angle radius=5pt] {right angle=A--E--B};
+  \draw pic[draw,angle radius=5pt] {right angle=C--F--A};
+
+  \foreach \p/\pos in {A/above,B/below left,C/below right,D/above left,E/right,F/left,O/left}
+    \node[\pos] at (\p) {$\p$};
+\end{tikzpicture}

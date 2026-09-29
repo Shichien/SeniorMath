@@ -1,0 +1,5 @@
+\begin{tikzpicture}[thick]
+\draw (-4,3)--(4,3) node[right]{$a$}; \draw (-4,1.8)--(4,1.8) node[right]{$b$}; \draw (-4,-.7)--(4,-.7) node[right]{$c$};
+\draw (-2.9,-1.6)--(-.6,4.4) node[above]{$m$}; \draw (2.9,-1.6)--(.9,4.4) node[above]{$n$};
+\foreach \p/\xy/\pos in {A/{(-1.15,3)}/above left,B/{(-1.65,1.8)}/below left,C/{(-2.55,-.7)}/below left,D/{(1.35,3)}/above right,E/{(1.75,1.8)}/below right,F/{(2.6,-.7)}/below left} \node[\pos] at \xy {$\p$};
+\end{tikzpicture}

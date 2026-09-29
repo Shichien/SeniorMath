@@ -1,0 +1,29 @@
+\begin{tikzpicture}[scale=1.4, every node/.style={font=\small}, line cap=round, line join=round]
+  \coordinate (A)  at (0,0);
+  \coordinate (B)  at (3.42,0);
+  \coordinate (C)  at (4.59,0.83);
+  \coordinate (D)  at (1.17,0.83);
+  \coordinate (A1) at (0,3.42);
+  \coordinate (B1) at (3.42,3.42);
+  \coordinate (C1) at (4.59,4.25);
+  \coordinate (D1) at (1.17,4.25);
+  % E, F midpoints of BC, BB1 (labels only, as in the original)
+  \coordinate (E) at ($(B)!0.5!(C)$);
+  \coordinate (F) at ($(B)!0.5!(B1)$);
+
+  \draw (A)--(B)--(B1)--(A1)--cycle;
+  \draw (A1)--(D1)--(C1)--(B1);
+  \draw (B)--(C)--(C1);
+  \draw[dashed] (A)--(D)--(C) (D)--(D1);
+
+  \node[below left] at (A) {$A$};
+  \node[below] at (B) {$B$};
+  \node[right] at (C) {$C$};
+  \node[above left] at (D) {$D$};
+  \node[below right] at (E) {$E$};
+  \node[right] at (F) {$F$};
+  \node[left] at (A1) {$A_1$};
+  \node[below right] at (B1) {$B_1$};
+  \node[above right] at (C1) {$C_1$};
+  \node[above left] at (D1) {$D_1$};
+\end{tikzpicture}

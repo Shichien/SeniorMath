@@ -1,0 +1,4 @@
+\begin{tikzpicture}[thick]
+\begin{scope}\coordinate(A)at(2,4);\coordinate(B)at(0,0);\coordinate(C)at(5,0);\coordinate(D)at(7,4);\coordinate(M)at(1,2);\coordinate(E)at(4,2);\coordinate(N)at(3,0);\draw(A)--(B)--(C)--(D)--cycle (M)--(E)--(N) (E)--(D) (E)--(C);\draw(-.2,3.2)--(3.9,-.9);\foreach\p/\pos in {A/above,B/below,C/below,D/above,M/left,E/above,N/below}\node[\pos]at(\p){$\p$};\end{scope}
+\begin{scope}[xshift=9cm]\coordinate(A)at(1.5,4);\coordinate(B)at(0,0);\coordinate(C)at(5,0);\coordinate(D)at(6.5,4);\draw(A)--(B)--(C)--(D)--cycle;\foreach\p/\pos in {A/above,B/below,C/below,D/above}\node[\pos]at(\p){$\p$};\end{scope}
+\end{tikzpicture}

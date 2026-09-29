@@ -1,0 +1,23 @@
+\begin{tikzpicture}[x=.65cm,y=.65cm,line width=.5pt,font=\scriptsize,line join=round]
+  \begin{scope}
+    \coordinate (A) at (0,0); \coordinate (B) at (4,0); \coordinate (C) at (3,3.4); \coordinate (D) at (0,2.2);
+    \draw (A)--(B)--(C)--(D)--cycle (A)--(C); \draw (0,.28)--(.28,.28)--(.28,0); \draw (2.83,3.08)--(3.05,2.88)--(3.25,3.08);
+    \foreach \p/\pos in {A/below left,B/below right,D/left} \node[\pos] at (\p) {$\p$};
+    \node[above] at (C) {$C'$};
+  \end{scope}
+  \begin{scope}[shift={(5.2,0)}]
+    \coordinate (A) at (0,2.55); \coordinate (B) at (3.9,-.45); \coordinate (C) at (2.25,3.2); \coordinate (D) at (-.7,.2);
+    \draw (A)--(B)--(C)--(D)--cycle (A)--(C); \draw (.08,2.28)--(.33,2.35)--(.25,2.6); \draw (2.02,3.0)--(2.23,2.82)--(2.43,3.02);
+    \foreach \p/\pos in {A/above left,B/below right,C/above,D/left} \node[\pos] at (\p) {$\p$};
+  \end{scope}
+  \begin{scope}[shift={(11.2,0)}]
+    \coordinate (A) at (0,0); \coordinate (B) at (4,0); \coordinate (C) at (3.4,2.5); \coordinate (D) at (.75,2.7);
+    \draw (A)--(B)--(C)--(D)--cycle (A)--(C);
+    \foreach \p/\pos in {A/below left,B/below right,C/above,D/above left} \node[\pos] at (\p) {$\p$};
+  \end{scope}
+  \begin{scope}[shift={(16.5,0)}]
+    \coordinate (A) at (0,1.5); \coordinate (B) at (4.8,0); \coordinate (C) at (2.5,2.7); \coordinate (D) at (-.8,.15);
+    \draw (A)--(B)--(C)--(D)--cycle (A)--(C);
+    \foreach \p/\pos in {A/above left,B/right,C/above,D/left} \node[\pos] at (\p) {$\p$};
+  \end{scope}
+\end{tikzpicture}

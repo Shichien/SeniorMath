@@ -1,0 +1,17 @@
+\begin{tikzpicture}[x=1bp,y=-1bp,line cap=round,line join=round]
+  \path[use as bounding box] (0,0) rectangle (215,180);
+  \draw[-{Stealth[length=7bp,width=8bp]},line width=.72bp] (18,129)--(187,129);
+  \draw[-{Stealth[length=7bp,width=8bp]},line width=.72bp] (48,156)--(48,17);
+  \draw[dash pattern=on 5bp off 4bp,line width=.65bp] (48,64)--(132,64)--(132,129);
+  \draw[dash pattern=on 5bp off 4bp,line width=.65bp] (90,96)--(90,129);
+  \draw[line width=.65bp]
+    (48,129) .. controls (59,112) and (70,98) .. (82,96)
+    .. controls (92,94) and (95,98) .. (106,92)
+    .. controls (117,85) and (126,72) .. (132,64);
+  \node[inner sep=0bp,anchor=east,font=\fontsize{10bp}{10bp}\selectfont] at (41,27) {$y$};
+  \node[inner sep=0bp,anchor=west,font=\fontsize{10bp}{10bp}\selectfont] at (179,141) {$x$};
+  \node[inner sep=0bp,anchor=north east,font=\fontsize{11bp}{11bp}\selectfont] at (45,132) {$O$};
+  \node[inner sep=0bp,anchor=east,font=\fontsize{11bp}{11bp}\selectfont] at (41,64) {$\pi$};
+  \node[inner sep=0bp,anchor=north,font=\fontsize{11bp}{11bp}\selectfont] at (90,134) {$\pi$};
+  \node[inner sep=0bp,anchor=north,font=\fontsize{11bp}{11bp}\selectfont] at (132,134) {$2\pi$};
+\end{tikzpicture}

@@ -1,0 +1,19 @@
+\begin{tikzpicture}[scale=.7,line width=.55pt,font=\small,line join=round]
+  \coordinate (LB) at (-.2,0); \coordinate (RB) at (7.4,0);
+  \coordinate (RT) at (7.4,2); \coordinate (LT) at (-.2,2);
+  \coordinate (P) at (.6,-1.35); \coordinate (Q) at (5,4.95);
+  \coordinate (R) at (6.64,3.8); \coordinate (S) at (2.24,-2.5);
+  \path[name path=bottom] (LB)--(RB);
+  \path[name path=top] (LT)--(RT);
+  \path[name path=left side] (P)--(Q);
+  \path[name path=right side] (S)--(R);
+  \path[name intersections={of=bottom and left side,by=A}];
+  \path[name intersections={of=bottom and right side,by=B}];
+  \path[name intersections={of=top and right side,by=C}];
+  \path[name intersections={of=top and left side,by=D}];
+  \draw (LB)--(A) (B)--(RB)--(RT)--(C) (D)--(LT)--(LB);
+  \draw[densely dashed] (A)--(B) (D)--(C);
+  \draw (P)--(Q)--(R)--(S)--cycle;
+  \node[below left,xshift=-2pt,yshift=-1pt] at (A) {$A$};
+  \foreach \p/\pos in {B/below right,C/above right,D/above left} \node[\pos] at (\p) {$\p$};
+\end{tikzpicture}

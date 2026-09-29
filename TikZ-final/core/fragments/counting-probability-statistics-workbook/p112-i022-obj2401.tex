@@ -1,0 +1,46 @@
+\begin{tikzpicture}[x=1bp,y=-1bp,line cap=round,line join=round,>=Stealth]
+  \path[use as bounding box] (0,0) rectangle (330,354);
+  \clip (0,0) rectangle (330,354);
+  \fill[white] (0,0) rectangle (330,354);
+  \foreach \x in {40,70,99,128,157,186,215,244}
+    \draw[black!70,line width=.8bp] (\x,64)--(\x,313);
+  \foreach \y in {64,77,89,102,114,127,139,151,164,176,189,201,213,226,239,251,263,276,288,301,313}
+    \draw[black!70,line width=.8bp] (40,\y)--(244,\y);
+  \draw[black,line width=2bp]
+    (40,313) rectangle (70,276)
+    (70,313) rectangle (99,151)
+    (99,313) rectangle (128,77)
+    (128,313) rectangle (157,176)
+    (157,313) rectangle (186,263);
+  \draw[black,line width=1.2bp,-{Stealth[length=8bp,width=7bp]}]
+    (40,313)--(40,5);
+  \draw[black,line width=1.2bp,-{Stealth[length=8bp,width=7bp]}]
+    (40,313)--(299,313);
+  \font\numberfont="Times New Roman" at 14bp
+  \font\latinfont="Times New Roman" at 14bp
+  \font\latinitalic="Times New Roman Italic" at 14bp
+  \font\chinesefont="SimSun" at 19bp
+  \tikzset{
+    ytick/.style={font=\numberfont,text=black,inner sep=0bp,anchor=east,xshift=2bp},
+    xtick/.style={font=\latinfont,text=black,inner sep=0bp,anchor=north},
+    title/.style={font=\chinesefont,text=black,inner sep=0bp}
+  }
+  \foreach \y/\lab in {
+    301/0.002,288/0.004,276/0.006,263/0.008,251/0.010,
+    239/0.012,226/0.014,213/0.016,201/0.018,189/0.020,
+    176/0.022,164/0.024,151/0.026,139/0.028,127/0.030,
+    114/0.032,102/0.034,89/0.036,77/0.038,64/0.040
+  } \node[ytick] at (32,\y) {\lab};
+  \foreach \x/\lab in {70/75,99/85,128/95,157/105,186/115,215/125}
+    \node[xtick] at (\x,318) {\lab};
+  \node[font=\latinitalic,text=black,inner sep=0bp] at (35,323) {O};
+  \node[title] at (61,13) {频};
+  \node[title] at (75,13) {率};
+  \node[title] at (61,34) {组};
+  \node[title] at (75,34) {距};
+  \node[title] at (256,331) {质};
+  \node[title] at (271,331) {量};
+  \node[title] at (286,331) {指};
+  \node[title] at (301,331) {标};
+  \node[title] at (316,331) {值};
+\end{tikzpicture}

@@ -1,0 +1,1 @@
+\begin{tikzpicture}[thick]\coordinate(A)at(0,0);\coordinate(B)at(6,3.2);\coordinate(C)at(6,0);\draw(A)--(B)--(C)--cycle;\draw(.75,0)arc[start angle=0,end angle=28,radius=.75];\node[left]at(A){$A$};\node[above]at(B){$B$};\node[right]at(C){$C$};\node[right]at(6,1.6){$a$};\node[below]at(3,0){$b$};\node[above]at(3,1.6){$c$};\end{tikzpicture}

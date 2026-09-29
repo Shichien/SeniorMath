@@ -1,0 +1,29 @@
+\begin{tikzpicture}[x=1bp,y=-1bp,line cap=round,line join=round]
+  \path[use as bounding box] (0,0) rectangle (385,252);
+  \definecolor{back}{RGB}{19,16,14}
+  \definecolor{ink}{RGB}{52,46,45}
+  \pagecolor{back}
+  \begin{scope}[shift={(0,3)},draw=ink,text=ink]
+  \draw[-{Stealth[length=15bp,width=17bp]},line width=4bp] (0,130)--(388,130);
+  \draw[-{Stealth[length=15bp,width=17bp]},line width=6bp] (185,252)--(185,0);
+  \draw[line width=6bp]
+    plot[smooth,tension=0.55] coordinates {
+      (96,181.5) (101,178) (106,170.5) (111,160.5)
+      (116,148.5) (121,135.5) (126,122) (131,109)
+      (136,97) (141,87.5) (146,80.5) (151,76)
+      (156,75.5) (161,79) (166,85.5) (171,95.5)
+      (176,109.5) (181,124) (186,139) (191,151)
+      (196,162.5) (201,172) (206,179) (211,183.5)
+      (216,186) (221,184.5) (226,178.5) (231,169.5)
+      (236,156.5) (241,141) (246,129) (251,115)
+      (256,102.5) (261,92.5) (266,84.5) (271,80)
+      (273,79)
+    };
+  \foreach \x in {59,125,246,314} {\draw[line width=4bp] (\x,130)--(\x,120);}
+  \foreach \x/\t in {51/-2,125/-1,246/1,314/2}
+    \node[inner sep=0bp,anchor=north,font=\fontsize{32bp}{32bp}\boldmath] at (\x,137) {$\t$};
+  \node[inner sep=0bp,anchor=north east,font=\fontsize{32bp}{32bp}\boldmath] at (178,139) {$O$};
+  \node[inner sep=0bp,anchor=west,font=\fontsize{32bp}{32bp}\boldmath] at (356,152) {$x$};
+  \node[inner sep=0bp,anchor=east,font=\fontsize{32bp}{32bp}\boldmath] at (175,19) {$y$};
+  \end{scope}
+\end{tikzpicture}

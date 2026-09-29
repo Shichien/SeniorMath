@@ -1,0 +1,27 @@
+\begin{tikzpicture}[scale=1.15, every node/.style={font=\small}, line cap=round, line join=round]
+  % cube ABCD-PQRS (base DABC, top SPQR)
+  \coordinate (D) at (0,0);
+  \coordinate (A) at (3.5,0);
+  \coordinate (C) at (1.0,2.05);
+  \coordinate (B) at ($(A)+(C)-(D)$);
+  \coordinate (S) at (0,3.75);
+  \coordinate (P) at ($(A)+(S)-(D)$);
+  \coordinate (R) at ($(C)+(S)-(D)$);
+  \coordinate (Q) at ($(B)+(S)-(D)$);
+
+  \draw (D)--(A)--(P)--(S)--cycle;
+  \draw (S)--(R)--(Q)--(P);
+  \draw (A)--(B)--(Q);
+  \draw (S)--(A) (P)--(B);
+  \draw[dashed] (D)--(C)--(B) (C)--(R);
+  \draw[dashed] (S)--(C) (C)--(A);
+
+  \node[below left] at (D) {$D$};
+  \node[below right] at (A) {$A$};
+  \node[left] at ($(C)+(-0.05,0.05)$) {$C$};
+  \node[right] at (B) {$B$};
+  \node[left] at (S) {$S$};
+  \node[above right] at (P) {$P$};
+  \node[above left] at (R) {$R$};
+  \node[above right] at (Q) {$Q$};
+\end{tikzpicture}

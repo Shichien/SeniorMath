@@ -1,0 +1,15 @@
+\begin{tikzpicture}[scale=.9,line width=.55pt,font=\small,line cap=round,line join=round]
+  \coordinate (B) at (.55,0);
+  \coordinate (C) at (3.7,0);
+  \coordinate (A) at (1.91,1.25);
+  \coordinate (D) at ($(A)!1!-60:(B)$);
+  \coordinate (E) at ($(A)!1!60:(C)$);
+  \coordinate (F) at ($(B)!1!60:(C)$);
+
+  \draw (A)--(B)--(C)--cycle;
+  \draw (A)--(D)--(B)
+        (A)--(E)--(C)
+        (B)--(F)--(C)
+        (D)--(F)--(E);
+  \foreach \p/\pos in {A/below,D/left,B/below,C/below,E/right,F/above} \node[\pos] at (\p) {$\p$};
+\end{tikzpicture}

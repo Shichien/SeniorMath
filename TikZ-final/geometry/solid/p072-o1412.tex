@@ -1,0 +1,14 @@
+\begin{tikzpicture}[scale=.95, every node/.style={font=\small}]
+  \coordinate (B) at (0,0); \coordinate (C) at (5.86,0);
+  \coordinate (D) at (1.97,1.86); \coordinate (A) at (1.47,4.0);
+  \coordinate (E) at ($(B)!.5!(D)$);   % midpoint of BD
+  \draw (A)--(B)--(C)--cycle;
+  \draw[dashed] (A)--(D); \draw[dashed] (B)--(D)--(C); \draw[dashed] (A)--(E);
+  % arc mark at D (as in original)
+  \draw ($(D)+(-10:.3cm and .2cm)$) arc[start angle=-10, end angle=190, x radius=.3cm, y radius=.2cm];
+  \node[above] at (A) {$A$};
+  \node[below left] at (B) {$B$};
+  \node[below right] at (C) {$C$};
+  \node[below right] at (D) {$D$};
+  \node[below] at (E) {$E$};
+\end{tikzpicture}

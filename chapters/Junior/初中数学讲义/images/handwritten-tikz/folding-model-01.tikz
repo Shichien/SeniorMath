@@ -1,0 +1,4 @@
+\begin{tikzpicture}[thick]
+\begin{scope}\coordinate(E)at(0,0);\coordinate(D)at(1.2,4);\coordinate(F)at(7.4,4);\coordinate(B)at(6.4,0);\coordinate(G)at(1.2,0);\coordinate(A)at(2.25,0);\coordinate(H)at(6.9,2.2);\coordinate(C)at(6.55,.45);\draw(E)--(D)--(F)--(B)--cycle(D)--(G) (D)--(A) (D)--(H) (D)--(C);\foreach\p/\pos in {E/below left,D/left,F/right,B/below,C/right,H/right,G/below,A/below}\node[\pos]at(\p){$\p$};\node at(3.5,-.8){(图1)};\end{scope}
+\begin{scope}[xshift=9cm]\coordinate(A)at(.8,0);\coordinate(B)at(4.7,0);\coordinate(C)at(5,1.1);\coordinate(D)at(0,4.8);\draw(A)--(B)--(C)--(D)--cycle;\foreach\p/\pos in {A/below,D/above left,C/right,B/below}\node[\pos]at(\p){$\p$};\node at(2.5,-.8){(图2)};\end{scope}
+\end{tikzpicture}

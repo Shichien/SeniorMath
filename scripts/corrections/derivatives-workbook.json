@@ -1,0 +1,9 @@
+{
+  "replacements": [
+    {
+      "id": "exercise-21-eliminate-y",
+      "match": "$$\ny = x ^ { 2 } - x - { \\frac { 4 x } { x - 1 } } , y = x ^ { 2 } - b x - 2\n$$\n\n$$\n: y \\rrangle\n$$",
+      "replacement": "消去 $y$ 后，整理得到\n\n$$\nb = 1 + \\frac { 4 } { x - 1 } - \\frac { 2 } { x }\n$$"
+    }
+  ]
+}

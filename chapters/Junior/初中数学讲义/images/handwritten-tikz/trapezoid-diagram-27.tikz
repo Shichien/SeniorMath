@@ -1,0 +1,3 @@
+\begin{tikzpicture}[thick,font=\small]
+\coordinate(A)at(.65,2.1);\coordinate(B)at(0,0);\coordinate(C)at(3,0);\coordinate(D)at(2.25,2.1);\coordinate(E)at(2.6,1.05);\coordinate(F)at(1.75,.75);\draw(A)--(B)--(C)--(D)--cycle;\draw(A)--(C);\draw(B)--(E);\foreach\p/\a in {A/above,B/below left,C/below right,D/above,E/right,F/below}\node[\a]at(\p){$\p$};
+\end{tikzpicture}

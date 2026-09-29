@@ -1,0 +1,15 @@
+\begin{tikzpicture}[x=.012cm,y=-.012cm,baseline=(current bounding box.center),line width=2pt,
+  every node/.style={font=\normalsize,inner sep=1pt}]
+  \path[use as bounding box] (0,0) rectangle (286,419);
+  \draw[-{Stealth[length=10pt,width=8pt]}] (0,220)--(285,220) node[above] {$x$};
+  \draw[-{Stealth[length=10pt,width=8pt]}] (92,414)--(92,0) node[right] {$y$};
+  \draw[densely dashed,line width=1pt] (47,220)--(47,384)--(92,384);
+  \draw[densely dashed,line width=1pt] (160,220)--(160,55)--(92,55);
+  \draw[domain=-1.23:1.53,samples=180,variable=\t]
+    plot ({85+73.2*\t},{220-164*sin((2*\t-0.523599) r)});
+  \node[above] at (47,220) {$-\dfrac{\pi}{6}$};
+  \node[above] at (160,220) {$\dfrac{\pi}{3}$};
+  \node[left] at (92,55) {$2$};
+  \node[left] at (92,384) {$-2$};
+  \node[above left] at (92,220) {$O$};
+\end{tikzpicture}

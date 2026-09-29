@@ -1,0 +1,12 @@
+\begin{tikzpicture}[scale=.68, every node/.style={font=\small}, >={Stealth[length=2mm]}]
+  \coordinate (O) at (0,0); \coordinate (A) at (0,0);
+  \coordinate (B) at (3,0); \coordinate (C) at (3,3); \coordinate (D) at (0,3);
+  \coordinate (E) at (1.5,0); \coordinate (P) at (1.55,2.57);
+  \draw[->] (-.55,0)--(4.15,0) node[right] {$x$};
+  \draw[->] (0,-.4)--(0,4) node[above] {$y$};
+  \draw (A)--(B)--(C)--(D)--cycle;
+  \draw (D) arc (90:0:3);
+  \draw[->] (A)--(P) (A)--(C) (D)--(E);
+  \foreach \p/\pos in {O/below left,A/below right,B/below,C/above right,D/left,E/below,P/right}
+    \node[\pos] at (\p) {$\p$};
+\end{tikzpicture}

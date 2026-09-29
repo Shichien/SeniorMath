@@ -1,0 +1,20 @@
+\begin{tikzpicture}[x=.86cm,y=.86cm,line cap=round,line join=round,
+  every node/.style={font=\small}]
+  \coordinate (C) at (0,0);
+  \coordinate (B) at (4.15,0);
+  \coordinate (A) at (5.48,2.02);
+  \coordinate (D) at (1.36,2.02);
+  \coordinate (O) at (2.74,1.01);
+  \coordinate (P) at (5.48,4.62);
+
+  \draw[line width=.55pt,dash pattern=on 3.3pt off 2.3pt] (D)--(A) (O)--(A);
+  \draw[line width=.72pt] (C)--(D)--(P) (P)--(A)--(B)--(C);
+  \draw[line width=.72pt] (D)--(B) (C)--(O) (P)--(B);
+
+  \node[below left] at (C) {$C$};
+  \node[below] at (B) {$B$};
+  \node[right] at (A) {$A$};
+  \node[above left] at (D) {$D$};
+  \node[above] at (P) {$P$};
+  \node[below] at (O) {$O$};
+\end{tikzpicture}

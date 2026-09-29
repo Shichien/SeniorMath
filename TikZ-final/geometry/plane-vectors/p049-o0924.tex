@@ -1,0 +1,11 @@
+\begin{tikzpicture}[scale=.68, every node/.style={font=\small}, >={Stealth[length=2mm]}]
+  \coordinate (O) at (0,0); \coordinate (A) at (0,{sqrt(3)});
+  \coordinate (B) at (-1,0); \coordinate (C) at (1,0); \coordinate (P) at (-.55,-.835);
+  \draw[->] (-1.35,0)--(1.55,0) node[right] {$x$};
+  \draw[->] (0,-1.35)--(0,2.15) node[above] {$y$};
+  \draw (O) circle (1);
+  \draw (A)--(B)--(C)--cycle;
+  \draw[->] (A)--(P);
+  \foreach \p/\pos in {O/below right,A/above,B/left,C/right,P/below left}
+    \node[\pos] at (\p) {$\p$};
+\end{tikzpicture}

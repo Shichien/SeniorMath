@@ -1,0 +1,56 @@
+\begin{tikzpicture}[x=1bp,y=-1bp,line cap=butt,line join=miter,>=Stealth]
+  \path[use as bounding box] (0,0) rectangle (213,211);
+  \clip (0,0) rectangle (213,211);
+
+  \newfontfamily\chartcjk{SimSun}
+  \font\chartnumber="Times New Roman" at 12bp
+  \font\chartitalic="Times New Roman Italic" at 14bp
+  \tikzset{
+    cjk/.style={font=\chartcjk\fontsize{14bp}{14bp}\selectfont,inner sep=0bp},
+    number/.style={font=\chartnumber,inner sep=0bp},
+    italic/.style={font=\chartitalic,inner sep=0bp}
+  }
+
+  \draw[line width=1bp,dash pattern=on 6bp off 4bp]
+    (43,50.5)--(95.5,50.5)
+    (43,69.5)--(78,69.5)
+    (43,79)--(113,79)
+    (43,116.5)--(60.5,116.5)
+    (43,125.5)--(130.5,125.5);
+
+  \draw[line width=1bp]
+    (60.5,116.5)--(78,116.5)
+    (78,69.5)--(95.5,69.5)
+    (95.5,50.5)--(113,50.5)
+    (113,79)--(130.5,79)
+    (130.5,125.5)--(148,125.5);
+  \draw[line width=1bp]
+    (60.5,116.5)--(60.5,181)
+    (78,69.5)--(78,181)
+    (95.5,50.5)--(95.5,181)
+    (113,50.5)--(113,181)
+    (130.5,79)--(130.5,181)
+    (148,125.5)--(148,181);
+
+  \draw[line width=1.2bp,-{Stealth[length=12bp,width=8bp]}] (43,181)--(192,181);
+  \draw[line width=1.2bp,-{Stealth[length=12bp,width=8bp]}] (43,183)--(43,28);
+
+  \node[cjk] at (63.5,20) {频率};
+  \draw[line width=1bp] (50,30)--(77,30);
+  \node[cjk] at (63.5,42) {组距};
+
+  \node[number,anchor=east] at (40,51) {0.028};
+  \node[number,anchor=east] at (40,70) {0.024};
+  \node[number,anchor=east] at (40,79.5) {0.022};
+  \node[number,anchor=east] at (40,117) {0.014};
+  \node[number,anchor=east] at (40,126) {0.012};
+
+  \node[italic,anchor=north east] at (44,184) {O};
+  \node[number,anchor=north] at (60.5,184) {10};
+  \node[number,anchor=north] at (78,184) {20};
+  \node[number,anchor=north] at (95.5,184) {30};
+  \node[number,anchor=north] at (113,184) {40};
+  \node[number,anchor=north] at (130.5,184) {50};
+  \node[number,anchor=north] at (148,184) {60};
+  \node[font=\chartcjk\fontsize{12bp}{12bp}\selectfont,inner sep=0bp,anchor=west] at (176,191) {年龄};
+\end{tikzpicture}

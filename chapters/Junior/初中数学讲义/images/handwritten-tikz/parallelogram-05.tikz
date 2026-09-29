@@ -1,0 +1,9 @@
+\begin{tikzpicture}[scale=.85,line width=.55pt,font=\small,line join=round]
+  \coordinate (A) at (0,0); \coordinate (B) at (4.5,0); \coordinate (C) at (5.9,2.35); \coordinate (D) at (1.4,2.35);
+  \coordinate (E) at ($(A)!2/3!(B)$); \coordinate (F) at ($(B)!2/3!(C)$); \coordinate (G) at ($(D)!2/3!(C)$); \coordinate (H) at ($(A)!2/3!(D)$); \coordinate (O) at ($(A)!2/3!(C)$);
+  \fill[black!15] (D)--(G)--(O)--(H)--cycle; \fill[black!15] (E)--(B)--(F)--(O)--cycle;
+  \draw (A)--(B)--(C)--(D)--cycle (H)--(F) (E)--(G) (A)--(C);
+  \foreach \p in {A,B,C,D,E,F,G,H,O} \fill (\p) circle(1.1pt);
+  \foreach \p/\pos in {A/below left,B/below,C/above right,D/above left,E/below,F/right,G/above,H/left,O/below right} \node[\pos] at (\p) {$\p$};
+  \node at (2.65,1.95) {$S_1$}; \node at (4.25,.78) {$S_2$};
+\end{tikzpicture}

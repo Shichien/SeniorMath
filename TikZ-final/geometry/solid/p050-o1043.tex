@@ -1,0 +1,18 @@
+\begin{tikzpicture}[scale=1, line join=round]
+  \coordinate (A) at (0.70,1.82); \coordinate (B) at (3.83,0.70);
+  \coordinate (C) at (5.50,1.85); \coordinate (v) at (0.73,3.18);
+  \coordinate (A1) at ($(A)+(v)$); \coordinate (B1) at ($(B)+(v)$);
+  \coordinate (C1) at ($(C)+(v)$);
+  \coordinate (O) at ($(B1)!.5!(C)$); % centre of face BCC1B1
+  \draw (A)--(B)--(C)--(C1)--(A1)--cycle;
+  \draw (A1)--(B1)--(C1) (B1)--(B)--(A1);
+  \draw (B1)--(O)--(B);
+  \draw[dashed] (A)--(C) (A1)--(C) (A1)--(O);
+  \node[below left] at (A) {$A$};
+  \node[below] at (B) {$B$};
+  \node[below right] at (C) {$C$};
+  \node[above] at (A1) {$A_1$};
+  \node[above right] at (C1) {$C_1$};
+  \node[above left] at (B1) {$B_1$};
+  \node[right] at (O) {$O$};
+\end{tikzpicture}

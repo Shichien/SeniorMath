@@ -1,0 +1,5 @@
+\begin{tikzpicture}[>=stealth,thick]
+\draw[->](-4.5,0)--(5.2,0)node[right]{$x$};\draw[->](0,-2.2)--(0,5.2)node[above]{$y$};
+\draw[domain=-3.2:4.7,smooth,variable=\x]plot({\x},{.22*\x*\x});\draw[blue!70!black](-4,-1.1)--(5,-1.1) (-3.2,-1.1)--(-3.2,2.25)--(0,1.05)--(0,0);
+\fill[red](-3.2,2.25)circle(2pt) (0,0)circle(2pt);\node[left]at(-3.2,2.25){$M$};\node[below]at(-3.2,-1.1){$D$};\node[below left]at(0,0){$O$};\node[right]at(0,1.05){$F$};
+\end{tikzpicture}

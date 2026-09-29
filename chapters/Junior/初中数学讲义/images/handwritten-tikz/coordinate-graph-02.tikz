@@ -1,0 +1,18 @@
+% Exercise data: y=x^2+4x+3, M=(-2,-1), OM:y=x/2, CD:y=-2x+9.
+\begin{tikzpicture}[>=stealth,thick,font=\small]
+\begin{scope}[x=.57cm,y=.57cm]
+\coordinate(A)at(-3,0);\coordinate(B)at(-1,0);\coordinate(M)at(-2,-1);\coordinate(C)at(0,9);\coordinate(D)at(3.6,1.8);
+\draw[->](-4.7,0)--(5.5,0)node[right]{$x$};\draw[->](0,-2)--(0,10.7)node[above]{$y$};
+\draw[smooth,samples=100,domain=-4.65:.55,variable=\x]plot(\x,{\x*\x+4*\x+3});
+\draw(-4.4,-2.2)--(5.3,2.65);\draw(-.5,10)--(5.2,-1.4);
+\foreach\p/\pos in {A/above left,B/above left,M/below,C/left,D/above right}\node[\pos]at(\p){$\p$};\node[below right]at(0,0){$O$};
+\node at(0,-3){图1};
+\end{scope}
+\begin{scope}[xshift=7.6cm,x=.57cm,y=.57cm]
+\draw[->](-4.7,0)--(5.5,0)node[right]{$x$};\draw[->](0,-2)--(0,10.7)node[above]{$y$};
+\draw[smooth,samples=100,domain=-3.2:3.2,variable=\x]plot(\x,{\x*\x});
+\draw(-3.2,1.4)--(3.7,4.85);
+\coordinate(Q)at(0,3);\coordinate(E)at(-1.5,2.25);\coordinate(F)at(2,4);
+\foreach\p/\pos in {Q/above left,E/above left,F/above right}\node[\pos]at(\p){$\p$};\node[below right]at(0,0){$O$};\node at(0,-3){图2};
+\end{scope}
+\end{tikzpicture}

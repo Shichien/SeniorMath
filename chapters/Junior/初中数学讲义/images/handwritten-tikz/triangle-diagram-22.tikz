@@ -1,0 +1,1 @@
+\begin{tikzpicture}[thick]\coordinate(O)at(0,0);\draw(0,-2.2)--(0,2.8)node[above]{铅垂线};\draw(O)--(7,0)node[right]{水平线};\draw(O)--(5.2,2.4)node[right]{视线};\draw(O)--(5.2,-2.4)node[right]{视线};\draw(2,0)arc[start angle=0,end angle=25,radius=2]node[midway,right]{仰角};\draw(1.75,-.78)arc[start angle=-24,end angle=0,radius=1.9]node[midway,right]{俯角};\end{tikzpicture}

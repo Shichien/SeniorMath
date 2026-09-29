@@ -1,0 +1,28 @@
+\begin{tikzpicture}[x=1bp,y=-1bp,line cap=round,line join=round,>=Stealth]
+  \path[use as bounding box] (0,0) rectangle (180,149);
+  \clip (0,0) rectangle (180,149);
+  \fill[white] (0,0) rectangle (180,149);
+  \draw[black,line width=1bp,-{Stealth[length=7bp,width=6bp]}]
+    (1,128)--(176,128);
+  \draw[black,line width=1bp,-{Stealth[length=7bp,width=6bp]}]
+    (34,145)--(34,16);
+  \draw[black!70,line width=.8bp,dash pattern=on 4bp off 3bp]
+    (93,2)--(93,145);
+  \draw[black,line width=1bp,samples=81,smooth,domain=56:130,variable=\x]
+    plot ({\x},{128-87*exp(-((\x-93)^2)/(2*15^2))});
+  \draw[black,line width=1bp,samples=91,smooth,domain=48:138,variable=\x]
+    plot ({\x},{128-63*exp(-((\x-93)^2)/(2*18^2))});
+  \draw[black,line width=1bp,samples=93,smooth,domain=47:139,variable=\x]
+    plot ({\x},{128-50*exp(-((\x-93)^2)/(2*22^2))});
+  \newfontfamily\chartcjk{SimSun}[AutoFakeBold=1]
+  \font\latinitalic="Times New Roman Italic" at 14bp
+  \tikzset{label/.style={font=\chartcjk\fontsize{14bp}{14bp}\selectfont,text=black,inner sep=0bp}}
+  \node[label] at (11,31) {人};
+  \node[label] at (24,31) {数};
+  \node[label] at (154,138) {分};
+  \node[label] at (168,138) {数};
+  \node[label] at (103,34) {甲};
+  \node[label] at (67,67) {乙};
+  \node[label] at (79,109) {丙};
+  \node[font=\latinitalic,text=black,inner sep=0bp] at (24,138) {O};
+\end{tikzpicture}

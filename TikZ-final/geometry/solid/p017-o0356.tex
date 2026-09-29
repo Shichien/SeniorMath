@@ -1,0 +1,30 @@
+\begin{tikzpicture}[x=8.5mm,y=8.5mm,line cap=round,line join=round,every node/.style={font=\small}]
+\coordinate (A) at (0,0);
+\coordinate (B) at (1.5,0);
+\coordinate (C) at (1.5,1.5);
+\coordinate (D) at (0,1.5);
+\coordinate (E) at (-1.5,0);
+\coordinate (N) at (0,3);
+\coordinate (M) at (3,1.5);
+\coordinate (F) at (1.5,-1.5);
+
+\draw (-1.5,0) rectangle (0,1.5);
+\draw (0,0) rectangle (1.5,1.5);
+\draw (1.5,0) rectangle (3,1.5);
+\draw (3,0) rectangle (4.5,1.5);
+\draw (0,1.5) rectangle (1.5,3);
+\draw (0,-1.5) rectangle (1.5,0);
+\draw (E)--(D);
+\draw (N)--(C);
+\draw (B)--(M);
+\draw (A)--(F);
+
+\node[below left] at (E) {$E$};
+\node[below left] at (A) {$A$};
+\node[below right] at (B) {$B$};
+\node[above left] at (D) {$D$};
+\node[above right] at (C) {$C$};
+\node[above left] at (N) {$N$};
+\node[above] at (M) {$M$};
+\node[below right] at (F) {$F$};
+\end{tikzpicture}

@@ -1,0 +1,27 @@
+\begin{tikzpicture}[x=1bp,y=-1bp,line cap=round,line join=round]
+  \path[use as bounding box] (0,0) rectangle (450,361);
+  \definecolor{back}{RGB}{19,16,14}
+  \definecolor{ink}{RGB}{52,46,45}
+  \definecolor{halo}{RGB}{37,32,31}
+  \definecolor{labelink}{RGB}{58,52,51}
+  \fill[back] (0,0) rectangle (450,361);
+  \coordinate (P1) at (2,75); \coordinate (P2) at (206,2);
+  \coordinate (P3) at (448,147); \coordinate (P4) at (297,359); \coordinate (P5) at (50,323);
+  \coordinate (Q1) at (152,147); \coordinate (Q2) at (206,110);
+  \coordinate (Q3) at (254,147); \coordinate (Q4) at (254,182); \coordinate (Q5) at (152,182);
+  \draw[draw=halo,line width=8bp]
+    (P1)--(P2)--(P3)--(P4)--(P5)--cycle
+    (P1)--(Q1) (P2)--(Q2) (P3)--(Q3) (P4)--(Q4) (P5)--(Q5)
+    (Q1)--(Q2)--(Q3)--(Q4)--(Q5)--cycle;
+  \draw[draw=ink,line width=4.5bp]
+    (P1)--(P2)--(P3)--(P4)--(P5)--cycle
+    (P1)--(Q1) (P2)--(Q2) (P3)--(Q3) (P4)--(Q4) (P5)--(Q5)
+    (Q1)--(Q2)--(Q3)--(Q4)--(Q5)--cycle;
+  \font\regionlab="Times New Roman Bold Italic" at 34bp
+  \tikzset{lab/.style={font=\regionlab,text=labelink,inner sep=0bp}}
+  \node[lab] at (160,96) {A};
+  \node[lab] at (61,164) {B};
+  \node[lab] at (163,267) {C};
+  \node[lab] at (329,207) {D};
+  \node[lab] at (273,96) {E};
+\end{tikzpicture}\ignorespaces

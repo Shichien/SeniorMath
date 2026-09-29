@@ -1,0 +1,6 @@
+\begin{tikzpicture}[scale=.7,font=\large,thick]
+\coordinate(P)at(0,5.7);\coordinate(A)at(-1.9,0);\coordinate(B)at(1.4,0);\coordinate(C)at(6.4,1.5);\coordinate(D)at(0,1.5);
+\coordinate(E)at($(P)!.52!(C)$);
+\draw(P)--(A)--(B)--(C)--(P) (P)--(B) (B)--(E);\draw[dashed](P)--(D)--(A) (D)--(C);
+\foreach\p/\pos in{P/above,A/below left,B/below,C/right,D/left,E/above}{\node[\pos]at(\p){$\p$};}
+\end{tikzpicture}

@@ -1,0 +1,49 @@
+\begin{tikzpicture}[line join=round, x={(1.8cm,0)}, y={(0,1.8cm)}, z={(.714cm,.51cm)},
+  cubeframe/.pic={
+    \draw (0,0,0)--(1,0,0)--(1,1,0)--(0,1,0)--cycle;
+    \draw (0,1,0)--(0,1,1)--(1,1,1)--(1,1,0) (1,0,0)--(1,0,1)--(1,1,1);
+    \draw[dashed] (0,0,0)--(0,0,1)--(1,0,1) (0,0,1)--(0,1,1);
+  },
+  pt/.style={fill, circle, inner sep=0pt, minimum size=3pt}]
+  % coordinates (x,y,z): x right, y up, z depth; all marked points are edge midpoints
+  % 甲
+  \begin{scope}
+    \pic {cubeframe};
+    \coordinate (P1) at (.5,1,1); \coordinate (P2) at (1,.5,1);
+    \coordinate (P3) at (1,0,.5); \coordinate (P4) at (0,.5,0);
+    \draw (P2)--(P3);
+    \draw[dashed] (P3)--(P4)--(P1)--(P2);
+    \foreach \p in {P1,P2,P3,P4} \node[pt] at (\p) {};
+    \node at (.55,-.38,0) {甲};
+  \end{scope}
+  % 乙
+  \begin{scope}[shift={(1.875,0,0)}]
+    \pic {cubeframe};
+    \coordinate (Q1) at (0,1,.5); \coordinate (Q2) at (.5,1,1);
+    \coordinate (Q3) at (1,.5,1); \coordinate (Q4) at (.5,0,0);
+    \draw (Q1)--(Q2);
+    \draw[dashed] (Q2)--(Q3)--(Q4)--(Q1);
+    \foreach \p in {Q1,Q2,Q3,Q4} \node[pt] at (\p) {};
+    \node at (.55,-.38,0) {乙};
+  \end{scope}
+  % 丙
+  \begin{scope}[shift={(3.75,0,0)}]
+    \pic {cubeframe};
+    \coordinate (R1) at (0,1,.5); \coordinate (R2) at (.5,1,1);
+    \coordinate (R3) at (1,.5,0); \coordinate (R4) at (.5,0,0);
+    \draw (R1)--(R2) (R3)--(R4);
+    \draw[dashed] (R2)--(R3) (R4)--(R1);
+    \foreach \p in {R1,R2,R3,R4} \node[pt] at (\p) {};
+    \node at (.55,-.38,0) {丙};
+  \end{scope}
+  % 丁
+  \begin{scope}[shift={(5.625,0,0)}]
+    \pic {cubeframe};
+    \coordinate (T1) at (0,1,.5); \coordinate (T2) at (1,1,.5);
+    \coordinate (T3) at (1,.5,1); \coordinate (T4) at (0,.5,0);
+    \draw (T1)--(T2)--(T3);
+    \draw[dashed] (T3)--(T4)--(T1);
+    \foreach \p in {T1,T2,T3,T4} \node[pt] at (\p) {};
+    \node at (.55,-.38,0) {丁};
+  \end{scope}
+\end{tikzpicture}

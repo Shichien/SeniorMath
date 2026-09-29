@@ -1,0 +1,25 @@
+\begin{tikzpicture}[scale=1.1, every node/.style={font=\small}, line cap=round, line join=round]
+  % right prism ABC-A1B1C1; D, E midpoints of AB, AC
+  \coordinate (A)  at (0,0);
+  \coordinate (C)  at (4.95,0);
+  \coordinate (B)  at (3.2,-1.75);
+  \coordinate (A1) at ($(A)+(0,3.22)$);
+  \coordinate (B1) at ($(B)+(0,3.22)$);
+  \coordinate (C1) at ($(C)+(0,3.22)$);
+  \coordinate (D) at ($(A)!0.5!(B)$);
+  \coordinate (E) at ($(A)!0.5!(C)$);
+
+  \draw (A)--(B)--(C)--(C1)--(A1)--cycle;
+  \draw (A1)--(B1)--(C1) (B1)--(B);
+  \draw (A1)--(D);
+  \draw[dashed] (A)--(C) (A1)--(E)--(D);
+
+  \node[left] at (A) {$A$};
+  \node[below] at (B) {$B$};
+  \node[right] at (C) {$C$};
+  \node[below] at (D) {$D$};
+  \node[above right] at (E) {$E$};
+  \node[above left] at (A1) {$A_1$};
+  \node[below right] at (B1) {$B_1$};
+  \node[above right] at (C1) {$C_1$};
+\end{tikzpicture}

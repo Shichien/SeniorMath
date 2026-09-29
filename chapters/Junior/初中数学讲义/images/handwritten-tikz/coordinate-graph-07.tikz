@@ -1,0 +1,3 @@
+\begin{tikzpicture}[>=stealth,thick]
+\draw[->](-4,0)--(3.5,0)node[right]{$x$};\draw[->](0,-2.6)--(0,5.2)node[above]{$y$};\draw(-2.9,-2)--(2.1,4);\coordinate(A)at(-2.2,-1.25);\coordinate(B)at(1.5,3.25);\coordinate(O)at(0,0);\draw(A)--(O)--(B);\node[below left]at(A){$A$};\node[right]at(B){$B$};\node[below right]at(O){$O$};
+\end{tikzpicture}

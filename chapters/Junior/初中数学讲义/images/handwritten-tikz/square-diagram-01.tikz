@@ -1,0 +1,24 @@
+% Regular square, pentagon and equilateral triangle; distinct contact vertices.
+\begin{tikzpicture}[line cap=round,line join=round,line width=.8pt,font=\small]
+\coordinate(P)at(0,0);
+\coordinate(T)at(-36:.36);
+\coordinate(S)at(0.923445547,0.282325637);
+\coordinate(SL)at($(S)+(197:2.6)$);
+\coordinate(SU)at($(S)+(107:2.6)$);
+\coordinate(ST)at($(SL)+(107:2.6)$);
+\draw(S)--(SU)--(ST)--(SL)--cycle;
+\coordinate(P1)at($(P)+(-36:2.6)$);
+\coordinate(P2)at($(P1)+(-108:2.6)$);
+\coordinate(P3)at($(P2)+(-180:2.6)$);
+\coordinate(P4)at($(P3)+(-252:2.6)$);
+\draw(P)--(P1)--(P2)--(P3)--(P4)--cycle;
+\coordinate(TU)at($(T)+(38:2.6)$);\coordinate(TL)at($(T)+(-22:2.6)$);
+\draw(T)--(TU)--(TL)--cycle;
+\node at(-.65,.65){$A$};\node at(.15,-.6){$B$};\node at(.92,-.1){$C$};
+\draw($(S)+(38:.27)$)arc[start angle=38,end angle=107,radius=.27];
+\node at($(S)+(72.5:.49)$){$1$};
+\draw($(P)+(197:.67)$)arc[start angle=197,end angle=216,radius=.67];
+\node at($(P)+(206.5:.95)$){$2$};
+\draw($(T)+(-36:.82)$)arc[start angle=-36,end angle=-22,radius=.82];
+\node at($(T)+(-29:1.1)$){$3$};
+\end{tikzpicture}

@@ -1,0 +1,3 @@
+\begin{tikzpicture}[thick,font=\small]
+\coordinate(A)at(0,3);\coordinate(B)at(-1.5,0);\coordinate(C)at(.8,0);\coordinate(E)at(-.55,1.25);\coordinate(P)at(.467,1.25);\coordinate(F)at(1.55,1.25);\draw(-2,1.25)--(2,1.25);\draw(-1.7,0)--(1.7,0);\draw(A)--(B)--(C);\draw(A)--(E)--(C)--(F)--cycle;\draw(A)--(C);\foreach\p/\a in {A/above,B/below,C/below,E/below,P/below,F/below}\node[\a]at(\p){$\p$};\node[left]at(-2,1.25){$M$};\node[right]at(2,1.25){$N$};
+\end{tikzpicture}

@@ -1,0 +1,13 @@
+\begin{tikzpicture}[x=1pt,y=-1pt,>=Stealth,line cap=round,line join=round]
+  \path[use as bounding box] (0,0) rectangle (496,282);
+  \draw[->,line width=2.1pt] (40,244)--(485,244) node[above left] {$x$};
+  \draw[->,line width=2.1pt] (74,271)--(74,8) node[below right] {$y$};
+  \draw[dashed,line width=1.4pt] (190,244)--(190,48) (307,244)--(307,105) (74,105)--(307,105);
+  \draw[line width=2.8pt] (78,204).. controls (106,50) and (156,34)..(190,47)
+    .. controls (237,66) and (279,176)..(307,227);
+  \draw[line width=2.8pt] (51,199).. controls (142,119) and (222,91)..(307,104)
+    .. controls (359,112) and (412,167)..(456,216);
+  \node[above,font=\large] at (190,47) {甲}; \node[above,font=\large] at (342,95) {乙};
+  \node[below,font=\large] at (190,244) {$0.4$}; \node[below,font=\large] at (307,244) {$0.8$};
+  \node[left,font=\large] at (74,105) {$1.99$}; \node[below left,font=\large] at (74,244) {$O$};
+\end{tikzpicture}

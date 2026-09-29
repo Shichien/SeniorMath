@@ -1,0 +1,7 @@
+\begin{tikzpicture}[scale=.8,line width=.55pt,font=\small,>=stealth]
+  \draw[->] (-1,0)--(4.7,0) node[right] {$x$}; \draw[->] (0,-1.7)--(0,4.2) node[above] {$y$};
+  \coordinate (O) at (0,0); \coordinate (A) at (3.55,0); \coordinate (B) at (4.15,3.2); \coordinate (C) at (.75,3.2);
+  \coordinate (P) at (0,-1.25); \coordinate (M) at (1.25,0); \coordinate (N) at (3.15,3.2);
+  \draw (O)--(C)--(B)--(A)--cycle (P)--(N);
+  \foreach \p/\pos in {O/below left,A/below,B/right,C/above,P/left,M/below,N/above} \node[\pos] at (\p) {$\p$};
+\end{tikzpicture}

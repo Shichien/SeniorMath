@@ -1,0 +1,6 @@
+\begin{tikzpicture}[scale=.9,line width=.55pt,font=\small,line join=round]
+  \coordinate (A) at (1,2.5); \coordinate (B) at (0,0); \coordinate (C) at (4,0); \coordinate (D) at ($(A)+(C)-(B)$);
+  \coordinate (F) at ($(B)!.46!(A)$); \coordinate (E) at ($(A)!.6125!(D)$); \coordinate (G) at (intersection of B--E and F--D);
+  \draw (A)--(B)--(C)--(D)--cycle (F)--(D) (B)--(E) (G)--(C);
+  \foreach \p/\pos in {A/above left,B/below left,C/below,D/above right,E/above,F/left,G/above left} \node[\pos] at (\p) {$\p$};
+\end{tikzpicture}

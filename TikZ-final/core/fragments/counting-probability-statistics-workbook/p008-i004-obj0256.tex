@@ -1,0 +1,16 @@
+\begin{tikzpicture}[x=1bp,y=-1bp,line cap=round,line join=round]
+  \path[use as bounding box] (0,0) rectangle (128,76);
+  \clip (0,0) rectangle (128,76);
+  \fill[white] (0,0) rectangle (128,76);
+  \draw[black,line width=1bp] (64,38.5) ellipse [x radius=58bp,y radius=33.5bp];
+  \draw[black,line width=1bp]
+    (50,6.5)--(50,70.5)
+    (84,7.5)--(84,69.5)
+    (50,39)--(84,39);
+  \font\regionfont="Times New Roman Italic" at 14bp
+  \tikzset{region/.style={font=\regionfont,text=black,inner sep=0bp}}
+  \node[region] at (36,39) {A};
+  \node[region] at (67,24) {B};
+  \node[region] at (67,54) {C};
+  \node[region] at (100,39) {D};
+\end{tikzpicture}

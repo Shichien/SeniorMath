@@ -1,0 +1,17 @@
+\begin{tikzpicture}[thick,font=\scriptsize]
+\begin{scope}\coordinate(L)at(0,0);\coordinate(U)at(.62,1.08);\coordinate(T)at(1.28,1.58);\coordinate(R)at(2.48,.25);\coordinate(H)at(.80,.99);\draw(L)--(U)--(T)--(R)--cycle;\draw(L)--(T) (U)--(R);\draw(.74,.90)--(.84,.84)--(.90,.94);\node at(1.24,-.35){图\hspace{-.15em}1};\end{scope}
+\begin{scope}[xshift=3.5cm]\coordinate(A)at(0,.9);\coordinate(B)at(1.1,0);\coordinate(C)at(3,.8);\coordinate(D)at(1.15,1.65);\draw(A)--(B)--(C)--(D)--cycle;\foreach\p/\a in {A/left,B/below,C/right,D/above}\node[\a]at(\p){$\p$};\node at(1.5,-.35){图\hspace{-.15em}2};\end{scope}
+\begin{scope}[xshift=2.55cm,yshift=-3cm,scale=.78]
+  % AC=4, BC=3, AB=5; both attached quadrilaterals are exact squares.
+  \coordinate(A)at(0,0);\coordinate(B)at(0,2.5);\coordinate(C)at(-1.2,1.6);
+  \coordinate(D)at(2.5,2.5);\coordinate(E)at(2.5,0);
+  \coordinate(F)at(-2.8,.4);\coordinate(G)at(-1.6,-1.2);
+  \draw(A)--(B)--(C)--cycle;
+  \draw(A)--(B)--(D)--(E)--cycle;
+  \draw(A)--(C)--(F)--(G)--cycle;
+  \draw(C)--(E) (B)--(G) (G)--(E);
+  \foreach\p/\a in {A/below right,B/above,C/above left,D/above,E/right,F/left,G/below}
+    \node[\a]at(\p){$\p$};
+  \node at(0,-1.65){图\hspace{-.15em}3};
+\end{scope}
+\end{tikzpicture}

@@ -1,0 +1,14 @@
+\begin{tikzpicture}[scale=.8,font=\large,thick]
+\coordinate(A)at(0,0);\coordinate(B)at(4,0);
+\coordinate(D)at(2.05,2.1);\coordinate(C)at(6.05,2.1);
+\coordinate(A1)at(0,1.75);\coordinate(B1)at(4,1.75);
+\coordinate(D1)at(2.05,3.85);\coordinate(C1)at(6.05,3.85);
+\draw (A)--(A1)--(D1)--(C1)--(C)--(B)--(B1)--(A1)
+      (B1)--(C1);
+\draw[dashed] (A)--(D)--(C) (D)--(D1);
+\draw[red] (A)--(B)--(C) (B)--(C1)--(C);
+\draw[red,dashed] (A)--(C) (A)--(C1);
+\foreach\p/\pos in{A/below left,B/below,C/right,D/left}{\node[\pos]at(\p){$\p$};}
+\node[left]at(A1){$A_1$};\node[right]at(B1){$B_1$};
+\node[above]at(C1){$C_1$};\node[above]at(D1){$D_1$};
+\end{tikzpicture}

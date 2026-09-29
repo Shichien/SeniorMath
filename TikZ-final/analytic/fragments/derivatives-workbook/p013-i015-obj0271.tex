@@ -1,0 +1,25 @@
+\begin{tikzpicture}[x=1bp,y=-1bp,line cap=round,line join=round]
+  \path[use as bounding box] (0,0) rectangle (381,363);
+  \definecolor{back}{RGB}{19,16,14}
+  \definecolor{ink}{RGB}{52,46,45}
+  \pagecolor{back}
+  \begin{scope}[shift={(0,-1)},draw=ink,text=ink]
+  \draw[-{Stealth[length=15bp,width=17bp]},line width=4bp] (0,248)--(380,248);
+  \draw[-{Stealth[length=15bp,width=17bp]},line width=5bp] (101,361)--(101,6);
+  \draw[line width=7bp]
+    (0,185) .. controls (18,223) and (25,241) .. (29,248)
+    .. controls (49,278) and (72,321) .. (102,321)
+    .. controls (134,326) and (153,288) .. (173,248)
+    .. controls (191,191) and (210,174) .. (232,174)
+    .. controls (258,171) and (281,216) .. (291,248)
+    .. controls (300,273) and (311,308) .. (318,324);
+  \draw[line width=4bp] (29,248)--(29,238) (173,248)--(173,238);
+  \font\axisletter="Times New Roman Bold Italic" at 30bp
+  \font\axisletterxy="Times New Roman Bold Italic" at 32bp
+  \node[inner sep=0bp,anchor=north,font=\fontsize{28bp}{28bp}\boldmath] at (18,260) {$-1$};
+  \node[inner sep=0bp,anchor=north,font=\fontsize{28bp}{28bp}\boldmath] at (174,261) {$1$};
+  \node[inner sep=0bp,anchor=north east,font=\axisletter] at (86,258) {O};
+  \node[inner sep=0bp,anchor=west,font=\axisletterxy] at (353,271) {x};
+  \node[inner sep=0bp,anchor=east,font=\axisletterxy] at (88,25) {y};
+  \end{scope}
+\end{tikzpicture}

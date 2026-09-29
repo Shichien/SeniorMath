@@ -1,0 +1,10 @@
+\begin{tikzpicture}[scale=.68, every node/.style={font=\small}, >={Stealth[length=2mm]}]
+  \coordinate (M) at (0,0); \coordinate (A) at (-2.4,0); \coordinate (B) at (2.4,0);
+  \coordinate (C) at (-3.60,2.08); \coordinate (O) at (0,2.77);
+  \draw[->] (-4.2,0)--(3.6,0) node[right] {$x$};
+  \draw[->] (0,-.55)--(0,3.7) node[above] {$y$};
+  \draw (A)--(B)--(C)--cycle;
+  \draw (A)--(O) (C)--(O);
+  \foreach \p/\pos in {A/below,B/below,C/left,O/above right,M/below}
+    \node[\pos] at (\p) {$\p$};
+\end{tikzpicture}

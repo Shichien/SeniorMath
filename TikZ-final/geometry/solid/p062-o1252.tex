@@ -1,0 +1,19 @@
+\begin{tikzpicture}[scale=1.25, every node/.style={font=\small}]
+  \coordinate (A) at (0,0); \coordinate (B) at (3,0);
+  \coordinate (C) at (3.8,1.2); \coordinate (D) at (.8,1.2);
+  \coordinate (E) at (0,3); \coordinate (F) at (3,3);
+  \coordinate (M) at (3.8,4.2); \coordinate (N) at (.8,4.2);
+  \draw (A)--(B)--(F)--(E)--cycle;
+  \draw (E)--(N)--(M)--(F); \draw (B)--(C)--(M);
+  \draw (A)--(F); \draw (B)--(M);
+  \draw[dashed] (A)--(D)--(C); \draw[dashed] (D)--(N);
+  \draw[dashed] (E)--(D); \draw[dashed] (N)--(C);
+  \node[below left] at (A) {$A$};
+  \node[below] at (B) {$B$};
+  \node[right] at (C) {$C$};
+  \node[above right] at (D) {$D$};
+  \node[left] at (E) {$E$};
+  \node[above left] at (F) {$F$};
+  \node[right] at (M) {$M$};
+  \node[above left] at (N) {$N$};
+\end{tikzpicture}

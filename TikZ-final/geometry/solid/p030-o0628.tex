@@ -1,0 +1,20 @@
+\begin{tikzpicture}[scale=.95, every node/.style={font=\small}, line cap=round, line join=round]
+  \coordinate (A) at (0,0);
+  \coordinate (C) at (4.54,1.36);
+  \coordinate (S) at (2.28,4.24);
+  % D midpoint of SC
+  \coordinate (D) at ($(S)!0.5!(C)$);
+  % B directly below D (BD vertical as in original)
+  \coordinate (B) at ($(D|-0,-0.72)$);
+
+  \draw (S)--(A)--(B)--(C)--cycle;
+  \draw (S)--(B);
+  \draw (B)--(D);
+  \draw[dashed] (A)--(C);
+
+  \node[left] at (A) {$A$};
+  \node[below] at (B) {$B$};
+  \node[right] at (C) {$C$};
+  \node[above] at (S) {$S$};
+  \node[above right] at (D) {$D$};
+\end{tikzpicture}

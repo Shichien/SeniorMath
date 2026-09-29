@@ -1,0 +1,39 @@
+\begin{tikzpicture}[x=.8cm,y=.8cm,font=\large,thick]
+\foreach\dx in{0,6.6}{
+  \begin{scope}[shift={(\dx,0)}]
+    \draw (0,0) circle(3);
+    \draw (-2.75,1.25) arc(200:340:2.93 and .68);
+    \draw[dashed] (2.75,1.25) arc(20:160:2.93 and .68);
+    \draw (-2.75,-1.25) arc(200:340:2.93 and .68);
+    \draw[dashed] (2.75,-1.25) arc(20:160:2.93 and .68);
+  \end{scope}
+}
+\begin{scope}
+  \coordinate(A)at(-2.7,-1.2);\coordinate(B)at(1.55,-1.62);\coordinate(C)at(2.35,-.95);
+  \coordinate(A1)at(-2.7,1.2);\coordinate(B1)at(1.55,.8);\coordinate(C1)at(2.35,1.95);
+  \coordinate(O)at(0,0);\coordinate(O1)at(0,-1.25);\coordinate(O2)at(0,1.25);
+  \draw (A)--(B)--(C) (A)--(O)--(O1);
+  \draw[dashed] (A)--(C)
+      (A1)--(B1)--(C1)--(A1)
+      (A)--(A1) (B)--(B1) (C)--(C1)
+      (O)--(O2);
+  \fill (O2) circle(1.5pt);
+  \node[below left]at(A){$A$};\node[below]at(B){$B$};\node[right]at(C){$C$};
+  \node[left]at(A1){$A_1$};\node[below left]at(B1){$B_1$};\node[above]at(C1){$C_1$};
+  \node[right]at(O){$O$};\node[below left]at(O1){$O_1$};\node[above left]at(O2){$O_2$};
+\end{scope}
+\begin{scope}[shift={(6.6,0)}]
+  \coordinate(A)at(-2.7,-1.2);\coordinate(B)at(2.7,-1.2);\coordinate(C)at(2.25,-.75);
+  \coordinate(A1)at(-2.7,1.2);\coordinate(B1)at(2.7,1.2);\coordinate(C1)at(2.25,1.95);
+  \coordinate(O)at(0,0);\coordinate(O1)at(0,-1.25);\coordinate(O2)at(0,1.25);
+  \draw (A)--(B) (A)--(O)--(O1);
+  \draw[dashed] (A)--(C)--(B)
+      (A1)--(B1)--(C1)--(A1)
+      (A)--(A1) (B)--(B1) (C)--(C1)
+      (O)--(O2);
+  \fill (O2) circle(1.5pt);
+  \node[below left]at(A){$A$};\node[below right]at(B){$B$};\node[above right]at(C){$C$};
+  \node[left]at(A1){$A_1$};\node[right]at(B1){$B_1$};\node[above]at(C1){$C_1$};
+  \node[right]at(O){$O$};\node[below left]at(O1){$O_1$};\node[above left]at(O2){$O_2$};
+\end{scope}
+\end{tikzpicture}

@@ -1,0 +1,36 @@
+\unskip%
+\begin{tikzpicture}[x=.018cm,y=-.018cm,baseline=(current bounding box.center),line width=.65pt,
+  every node/.style={font=\large,inner sep=1pt}]
+  \path[use as bounding box] (0,0) rectangle (491,281);
+  \coordinate (D) at (38,189);
+  \coordinate (E) at (38,252);
+  \coordinate (F) at (424,252);
+  \coordinate (G) at (424,189);
+  \coordinate (B) at (102,102);
+  \coordinate (C) at (102,189);
+  \coordinate (O) at (202,102);
+  \coordinate (A) at (273,31);
+  \coordinate (H) at (339,102);
+  \path[fill={rgb,255:red,140;green,204;blue,241}]
+    (B) arc[start angle=180,end angle=315,radius=100]--(H)--(B)--cycle;
+  \path[
+    pattern={Dots[distance=2.828427pt,angle=45,radius=.7pt]},
+    pattern color={rgb,255:red,112;green,166;blue,222}]
+    (B) arc[start angle=180,end angle=315,radius=100]--(H)--(B)--cycle;
+  \fill[white] (O) circle[radius=27];
+  \draw (E)--(D)--(G)--(F)--cycle;
+  \draw (A)--(G);
+  \draw (B)--(H);
+  \draw (B) arc[start angle=180,end angle=315,radius=100];
+  \draw (O) circle[radius=27];
+  \draw[densely dashed] (D)--(A) (B)--(C) (O)--(202,189) (A)--(273,189);
+  \node[left] at (32,197) {$D$};
+  \node[left] at (31,252) {$E$};
+  \node[right] at (426,242) {$F$};
+  \node[right] at (427,197) {$G$};
+  \node[left] at (96,100) {$B$};
+  \node[right] at (344,99) {$H$};
+  \node[above right] at (A) {$A$};
+  \node[below] at (103,193) {$C$};
+  \node[below right] at (202,103) {$O$};
+\end{tikzpicture}\ignorespaces

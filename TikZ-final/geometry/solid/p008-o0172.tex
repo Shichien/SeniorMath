@@ -1,0 +1,12 @@
+\begin{tikzpicture}[scale=.62, every node/.style={font=\small}]
+  \coordinate (A) at (0,4.15); \coordinate (B) at (-2,0); \coordinate (C) at (2,0);
+  \coordinate (P) at (.94,2.18);
+  \draw (A)--(B) (A)--(C);
+  \draw (-2,0) arc[start angle=180,end angle=360,x radius=2,y radius=.58];
+  \draw[dashed] (2,0) arc[start angle=0,end angle=180,x radius=2,y radius=.58];
+  \fill (P) circle (1.2pt);
+  \node[above] at (A) {$A$};
+  \node[left] at (B) {$B$};
+  \node[right] at (C) {$C$};
+  \node[right] at (P) {$P$};
+\end{tikzpicture}

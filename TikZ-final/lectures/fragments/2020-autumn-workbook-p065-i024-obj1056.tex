@@ -1,0 +1,7 @@
+\begin{tikzpicture}[x=.60cm,y=.60cm,>=Stealth,line cap=round,baseline=(current bounding box.center)]
+  \coordinate (O) at (2.80,1.25); \coordinate (A) at (0,1.55); \coordinate (B) at (2.80,-1.20); \coordinate (C) at (5.85,1.55); \coordinate (A1) at (0,4.45); \coordinate (B1) at (2.80,3.00); \coordinate (C1) at (5.85,4.45); \coordinate (D) at (2.80,2.15); \coordinate (E) at (2.80,4.35);
+  \draw[line width=.8pt] (A)--(A1)--(B1)--(C1)--(C)--(B)--cycle (A)--(D) (D)--(B1) (B)--(B1);
+  \draw[dashed,line width=.65pt] (D)--(C) (E)--(C) (O)--(C);
+  \draw[->] (O)--(2.10,-.20) node[below] {$x$}; \draw[->] (O)--(6.65,1.25) node[right] {$y$}; \draw[->] (O)--(2.80,5.35) node[above] {$z$};
+  \foreach \p/\t/\a in {A/A/left,B/B/below,C/C/right,A1/A_1/left,B1/B_1/left,C1/C_1/right,D/D/left,E/E/above,O/O/below left}{\node[\a] at (\p) {$\t$};}
+\end{tikzpicture}

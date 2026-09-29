@@ -1,0 +1,15 @@
+\begin{tikzpicture}[scale=1.15, every node/.style={font=\small}]
+  \coordinate (A) at (0,0); \coordinate (B) at (3.3,0);
+  \coordinate (D) at (1.5,1.55); \coordinate (C) at ($(B)+(D)-(A)$);
+  \coordinate (O) at ($(A)!.5!(C)$);      % center of base
+  \coordinate (P) at ($(O)+(0,3.3)$);     % PO perpendicular to base
+  \draw (A)--(B)--(C)--(P)--cycle; \draw (P)--(B);
+  \draw[dashed] (A)--(D)--(C); \draw[dashed] (P)--(D);
+  \draw[dashed] (P)--(O); \draw[dashed] (A)--(O);
+  \node[below left] at (A) {$A$};
+  \node[below right] at (B) {$B$};
+  \node[right] at (C) {$C$};
+  \node[left] at (D) {$D$};
+  \node[above] at (P) {$P$};
+  \node[right] at (O) {$O$};
+\end{tikzpicture}

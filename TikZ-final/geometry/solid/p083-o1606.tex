@@ -1,0 +1,27 @@
+\begin{tikzpicture}[scale=1.8, every node/.style={font=\small}, line cap=round, line join=round]
+  % planar quadrilateral ABCD with AC \perp BC; fold triangle ABC along AC (plane ABC \perp plane ACD)
+  \coordinate (C) at (0,0);
+  \coordinate (B) at (0,1.22);
+  \coordinate (A) at (1.95,0);
+  \coordinate (D) at (1.48,-1.83);
+  \draw (B)--(C)--(A)--cycle;
+  \draw (C)--(D)--(A);
+  \node[above left] at (B) {$B$};
+  \node[left] at (C) {$C$};
+  \node[right] at (A) {$A$};
+  \node[below right] at (D) {$D$};
+
+  \begin{scope}[shift={(4.26,-0.08)}]
+    \coordinate (C') at (0,0);
+    \coordinate (B') at (0.03,1.22);
+    \coordinate (A') at (1.86,0.04);
+    \coordinate (D') at (0.86,-1.18);
+    \draw (C')--(B')--(A')--(D')--cycle;
+    \draw (B')--(D');
+    \draw[dashed] (C')--(A');
+    \node[above left] at (B') {$B$};
+    \node[left] at (C') {$C$};
+    \node[right] at (A') {$A$};
+    \node[below right] at (D') {$D$};
+  \end{scope}
+\end{tikzpicture}

@@ -1,0 +1,10 @@
+\begin{tikzpicture}[x=1pt,y=-1pt,>=Stealth,line cap=round,line join=round]
+  \path[use as bounding box] (0,0) rectangle (449,331);
+  \draw[->,line width=2.2pt] (7,166)--(440,166) node[above left] {$x$};
+  \draw[->,line width=2.2pt] (218,319)--(218,12) node[below left] {$f'(x)$};
+  \draw[line width=2.8pt] (144,58).. controls (151,104) and (156,225)..(177,236)
+    .. controls (197,247) and (200,89)..(218,79)
+    .. controls (236,69) and (250,230)..(282,260)
+    .. controls (314,289) and (333,123)..(352,58);
+  \node[above right,font=\large] at (218,166) {$O$};
+\end{tikzpicture}

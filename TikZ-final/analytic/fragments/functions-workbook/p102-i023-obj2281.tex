@@ -1,0 +1,19 @@
+\begin{tikzpicture}[x=.72cm,y=.72cm,baseline=(current bounding box.center)]
+  \path[use as bounding box] (-1.95,-2.32) rectangle (4.35,4.19);
+  \draw[->] (-1.55,0)--(3.875,0)
+    node[anchor=north west,yshift=-.125cm,inner sep=0pt,font=\fontsize{7}{7}\selectfont] {$x$};
+  \draw[->] (0,-1.35)--(0,3.825)
+    node[above,xshift=-.15cm,inner sep=0pt,font=\fontsize{8}{8}\selectfont] {$y$};
+  \draw[domain=-1.05:3.05,samples=100,smooth] plot (\x,{exp(-\x)});
+  \draw[domain=.15:3.05,samples=100,smooth] plot (\x,{ln(\x)});
+  \draw (-1,0)--(-1,.10) (1,0)--(1,.10) (2,0)--(2,.10) (0,1)--(.10,1) (0,2)--(.10,2) (0,3)--(.10,3);
+  \node[below,inner sep=0pt,font=\fontsize{10}{10}\selectfont] at (-1,-.05) {$-1$};
+  \node[below,inner sep=0pt,font=\fontsize{8}{8}\selectfont] at (1,0) {$1$};
+  \node[below,inner sep=0pt,font=\fontsize{8}{8}\selectfont] at (2.03,.05) {$2$};
+  \node[left,inner sep=0pt,font=\fontsize{8}{8}\selectfont] at (-.10,-1.05) {$1$};
+  \node[inner sep=0pt,font=\fontsize{6}{6}\selectfont] at (-.31,-1.05) {$-$};
+  \node[left,inner sep=0pt,font=\fontsize{8}{8}\selectfont] at (-.125,.95) {$1$};
+  \node[left,inner sep=0pt,font=\fontsize{8}{8}\selectfont] at (-.10,1.97) {$2$};
+  \node[left,inner sep=0pt,font=\fontsize{8}{8}\selectfont] at (-.125,3) {$3$};
+  \node[below left,inner sep=0pt,font=\fontsize{8}{8}\selectfont] at (-.08,-.045) {$O$};
+\end{tikzpicture}\ignorespaces

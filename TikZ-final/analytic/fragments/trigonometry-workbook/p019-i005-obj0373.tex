@@ -1,0 +1,13 @@
+\begin{tikzpicture}[x=.014cm,y=-.014cm,baseline=(current bounding box.center),line width=1.5pt,
+  every node/.style={font=\normalsize,inner sep=1pt}]
+  \path[use as bounding box] (0,0) rectangle (400,314);
+  \draw[-{Stealth[length=9pt,width=7pt]}] (0,204)--(399,204) node[above] {$x$};
+  \draw[-{Stealth[length=9pt,width=7pt]}] (90,313)--(90,0) node[right] {$y$};
+  \draw[domain=-.55:3.05,samples=220,variable=\t]
+    plot ({100+95*\t},{204-93*cos((2*\t+0.523599) r)});
+  \draw (150,198)--(150,210) (299,198)--(299,210);
+  \node[above] at (150,204) {$\dfrac{\pi}{6}$};
+  \node[above] at (299,204) {$\dfrac{2\pi}{3}$};
+  \node[left] at (90,111) {$1$};
+  \node[above left] at (90,204) {$O$};
+\end{tikzpicture}

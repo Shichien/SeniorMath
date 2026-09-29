@@ -1,0 +1,24 @@
+\begin{tikzpicture}[line cap=round,line join=round,line width=.9pt,font=\small]
+\coordinate (A) at (0,3);
+\coordinate (B) at (0,0);
+\coordinate (C) at (3,0);
+\coordinate (D) at (3,3);
+\coordinate (M) at (-.6,0);
+\coordinate (N) at (3,-1.2);
+% H is the perpendicular projection of A onto the line MN.
+\coordinate (H) at ($(M)!(A)!(N)$);
+
+\draw (A)--(B)--(C)--(D)--cycle;
+\draw (M)--(B) (C)--(N);
+\draw (H)--(N);
+\draw (A)--(M) (A)--(N) (A)--(H);
+\draw ($(H)!.13!(A)$)--($($(H)!.13!(A)$)!.13!(M)$)--($(H)!.13!(M)$);
+
+\node[above left] at (A) {$A$};
+\node[below right] at (B) {$B$};
+\node[right] at (C) {$C$};
+\node[above right] at (D) {$D$};
+\node[below] at (M) {$M$};
+\node[left] at (H) {$H$};
+\node[below] at (N) {$N$};
+\end{tikzpicture}

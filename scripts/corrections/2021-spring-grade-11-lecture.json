@@ -1,0 +1,9 @@
+{
+  "replacements": [
+    {
+      "id": "increasing-interval-condition",
+      "match": "（3） $y = f \\left( x \\right)$ 存在增区 $\\dot  \\left| \\Xi \\right\\} \\Rightarrow f ^ { \\prime } \\left( x \\right) > 0$ 有解.",
+      "replacement": "（3） $y = f \\left( x \\right)$ 存在增区间 $\\Rightarrow f ^ { \\prime } \\left( x \\right) > 0$ 有解."
+    }
+  ]
+}

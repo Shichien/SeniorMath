@@ -1,0 +1,7 @@
+\begin{tikzpicture}[x=.8cm,y=.8cm,line width=.7pt,font=\small,line join=round,draw=blue!70!black]
+  \coordinate (A) at (0,3); \coordinate (B) at (0,0); \coordinate (C) at (8,0); \coordinate (D) at (8,3);
+  \coordinate (E) at (4,4); \coordinate (F) at (4,-1); \coordinate (G) at (1.6,1.5); \coordinate (H) at (6.4,1.5);
+  \draw (A)--(B)--(C)--(D)--cycle (A)--(F)--(D) (B)--(E)--(C) (E)--(F);
+  \foreach \p in {A,B,C,D,E,F,G,H} \filldraw[fill=red,draw=blue!70!black] (\p) circle (2.2pt);
+  \foreach \p/\pos in {A/left,B/left,C/right,D/right,E/above,F/below,G/right,H/below} \node[\pos,text=black] at (\p) {$\p$};
+\end{tikzpicture}

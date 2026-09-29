@@ -1,0 +1,5 @@
+\begin{tikzpicture}[scale=.85,font=\large,thick]
+\coordinate(A)at(0,3.35);\coordinate(B)at(4,3.35);\coordinate(C)at(2.92,5.15);\coordinate(A1)at(0,0);\coordinate(B1)at(4,0);\coordinate(C1)at(2.92,1.8);
+\draw(A)--(B)--(C)--cycle (A)--(A1)--(B1)--(B) (A)--(B1);\draw[dashed](C)--(C1)--(A1) (C1)--(B1) (A1)--(C);
+\foreach\p/\pos in{A/left,B/right,C/above}{\node[\pos]at(\p){$\p$};}\node[below left]at(A1){$A_1$};\node[below right]at(B1){$B_1$};\node[right]at(C1){$C_1$};
+\end{tikzpicture}

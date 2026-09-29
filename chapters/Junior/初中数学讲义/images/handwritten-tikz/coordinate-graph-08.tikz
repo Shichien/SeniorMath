@@ -1,0 +1,4 @@
+\begin{tikzpicture}[thick]
+\begin{scope}\coordinate(A)at(0,0);\coordinate(B)at(3,0);\coordinate(C)at(3,3);\coordinate(D)at(0,3);\coordinate(E)at(2,0);\coordinate(F)at(3,.4);\coordinate(G)at(0,-.8);\draw(A)--(B)--(C)--(D)--cycle (A)--(G) (D)--(E) (G)--(F);\foreach\p/\pos in {A/left,B/right,C/right,D/left,E/below,F/right,G/left}\node[\pos]at(\p){$\p$};\node at(1.4,-1){(供证明计算用)};\end{scope}
+\begin{scope}[xshift=5cm]\draw(0,0)rectangle(3,3);\node[left]at(0,0){$A$};\node[right]at(3,0){$B$};\node[right]at(3,3){$C$};\node[left]at(0,3){$D$};\node at(1.5,-.7){(供操作实验用)};\end{scope}
+\end{tikzpicture}

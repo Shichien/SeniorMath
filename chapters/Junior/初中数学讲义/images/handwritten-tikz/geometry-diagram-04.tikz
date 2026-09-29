@@ -1,0 +1,7 @@
+\begin{tikzpicture}[scale=.9,line width=.55pt,font=\small,line join=round]
+  \coordinate (B) at (0,0); \coordinate (C) at (2.45,0); \coordinate (E) at (4.05,0);
+  \coordinate (A) at (.9,2.35); \coordinate (F) at (4.7,3.9);
+  \coordinate (D) at ($(C)!47/78!(F)$);
+  \draw (A)--(B)--(C)--(F)--(E)--(C) (A)--(D) (A)--(E);
+  \foreach \p/\pos in {A/above left,B/below left,C/below,D/above left,E/below right,F/above} \node[\pos] at (\p) {$\p$};
+\end{tikzpicture}

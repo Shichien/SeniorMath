@@ -1,0 +1,10 @@
+\begin{tikzpicture}[scale=1.05, every node/.style={font=\small}]
+  \coordinate (A) at (0,0); \coordinate (B) at (2,0);
+  \coordinate (C) at (-.5,.866); \coordinate (O) at (1,1.155);
+  \draw (A)--(B)--(O)--(C)--cycle;
+  \draw (A)--(O) (C)--(B);
+  \node[below left] at (A) {$A$};
+  \node[below right] at (B) {$B$};
+  \node[above left] at (C) {$C$};
+  \node[above] at (O) {$O$};
+\end{tikzpicture}

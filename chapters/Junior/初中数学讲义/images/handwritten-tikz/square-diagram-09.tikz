@@ -1,0 +1,22 @@
+\begin{tikzpicture}[line cap=round,line join=round,line width=.9pt,font=\small]
+\coordinate (A) at (0,3);
+\coordinate (B) at (3.42,3);
+\coordinate (C) at (3.42,0);
+\coordinate (D) at (0,0);
+% AE bisects angle BAC; E is the foot of C on AE.
+\coordinate (E) at (3.9847,1.5);
+\coordinate (F) at (3.42,1.7126);
+
+\draw (A)--(B)--(C)--(D)--cycle;
+\draw (A)--(E)--(C);
+\draw (A)--(C);
+
+\path (A) ++(-10.3:.66) node {$1$};
+\path (A) ++(-30.9:.62) node {$2$};
+\node[above left] at (A) {$A$};
+\node[above right] at (B) {$B$};
+\node[below right] at (C) {$C$};
+\node[below left] at (D) {$D$};
+\node[right] at (E) {$E$};
+\node[above left] at (F) {$F$};
+\end{tikzpicture}

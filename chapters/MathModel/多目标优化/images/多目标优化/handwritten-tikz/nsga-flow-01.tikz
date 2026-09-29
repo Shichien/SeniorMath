@@ -1,0 +1,40 @@
+\begin{tikzpicture}[
+  font=\small,
+  >=Stealth,
+  process/.style={draw=red!65!black, fill=red!14, rounded corners=3pt, minimum width=3.2cm, minimum height=8mm, align=center},
+  compute/.style={draw=green!55!black, fill=green!14, minimum width=3.2cm, minimum height=8mm, align=center},
+  decision/.style={diamond, draw=orange!80!black, fill=orange!12, aspect=2.2, minimum width=3.1cm, align=center},
+  flow/.style={->, thick}
+]
+\node[process] (init) {初始化种群};
+\node[decision, below=7mm of init] (first) {生成第一代种群};
+\node[compute, right=15mm of first] (sort1) {非支配排序};
+\node[compute, below=6mm of sort1] (child1) {选择、交叉、变异\\生成子代种群};
+\node[process, below=8mm of first] (gen2) {进化代数 $=2$};
+\node[process, below=7mm of gen2] (merge) {父子代合并};
+\node[decision, below=8mm of merge] (newpop) {生成新父种群};
+\node[process, below=8mm of newpop] (child2) {选择、交叉、变异\\生成子代种群};
+\node[decision, below=8mm of child2] (stop) {$\mathrm{Gen}<\mathrm{Max}$};
+\node[process, ellipse, right=13mm of stop] (end) {结束};
+\node[compute, right=17mm of newpop] (fitness) {计算目标函数};
+\node[compute, right=8mm of fitness] (fastsort) {快速非支配排序\\计算拥挤度};
+\node[compute, above=6mm of fastsort] (parents) {生成新的父代个体};
+\node[draw=orange!80!black, fill=orange!10, minimum width=13mm, left=23mm of merge] (counter) {Gen++};
+
+\draw[flow] (init) -- (first);
+\draw[flow] (first) -- node[left]{是} (gen2);
+\draw[flow] (first) -- node[above]{否} (sort1);
+\draw[flow] (sort1) -- (child1);
+\draw[flow] (child1.east) -| ++(12mm,0) |- (init.east);
+\draw[flow] (gen2) -- (merge);
+\draw[flow] (merge) -- (newpop);
+\draw[flow] (newpop) -- (child2);
+\draw[flow] (child2) -- (stop);
+\draw[flow] (stop) -- node[above]{否} (end);
+\draw[flow] (newpop) -- node[above]{否} (fitness);
+\draw[flow] (fitness) -- (fastsort);
+\draw[flow] (fastsort) -- (parents);
+\draw[flow] (parents.west) -| (merge.east);
+\draw[flow] (stop.west) -| node[pos=.2,left]{是} (counter.south);
+\draw[flow] (counter.north) |- (merge.west);
+\end{tikzpicture}

@@ -1,0 +1,14 @@
+\begin{tikzpicture}[>=stealth,thick]
+\draw[->](-.8,0)--(5,0)node[right]{$x$};
+\draw[->](0,-.4)--(0,5.4)node[above]{$y$};
+\coordinate(O)at(0,0);
+\coordinate(A)at(1.4,3.4);
+\coordinate(B)at(3.4,3.4);
+\coordinate(C)at(3.4,1.65);
+\coordinate(Bp)at(.77,1.87);
+\draw (O)--(A)--(B)--(C)--(3.4,0);
+\draw (Bp)--(C);
+\draw[domain=.85:4.8,smooth,variable=\x,samples=100]
+  plot({\x},{4.164/\x+.426});
+\node[above right]at(A){$A$};\node[above]at(B){$B$};\node[right]at(C){$C$};\node[left]at(Bp){$B'$};\node[below left]at(O){$O$};
+\end{tikzpicture}

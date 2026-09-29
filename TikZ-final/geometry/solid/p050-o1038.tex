@@ -1,0 +1,16 @@
+\begin{tikzpicture}[scale=1, line join=round]
+  % front face A B C D, back face A' B' C' D' (offset d)
+  \coordinate (A) at (0,0); \coordinate (B) at (4.17,0);
+  \coordinate (C) at (4.17,4.17); \coordinate (D) at (0,4.17);
+  \coordinate (d) at (1.47,1.47);
+  \coordinate (A1) at ($(A)+(d)$); \coordinate (B1) at ($(B)+(d)$);
+  \coordinate (C1) at ($(C)+(d)$); \coordinate (D1) at ($(D)+(d)$);
+  \draw (A)--(B)--(C)--(D)--cycle;
+  \draw (D)--(D1)--(C1)--(C) (C1)--(B1)--(B);
+  % red cut lines of the original: midlines of top, front and back faces
+  \draw ($(D)!.5!(C)$)--($(D1)!.5!(C1)$);
+  \draw ($(A)!.5!(D)$)--($(B)!.5!(C)$);
+  \draw[dashed] ($(A1)!.5!(D1)$)--($(B1)!.5!(C1)$);
+  \draw[dashed] (A)--(A1)--(B1) (A1)--(D1);
+  \draw[dashed] (.70,2.87) ellipse (.50 and .90);
+\end{tikzpicture}

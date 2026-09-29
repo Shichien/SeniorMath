@@ -1,0 +1,12 @@
+\begin{tikzpicture}[x=1bp,y=-1bp,line cap=round,line join=round]
+  \path[use as bounding box] (0,0) rectangle (122,75);
+  \definecolor{scanink}{RGB}{72,52,46}
+  \draw[draw=scanink,line width=1.5bp] (8,16) rectangle (109,72);
+  \draw[draw=scanink,line width=1.5bp] (8,16)--(109,72) (8,72)--(109,16);
+  \font\regionlab="Times New Roman Italic" at 13bp
+  \tikzset{lab/.style={font=\regionlab,text=scanink,inner sep=0bp}}
+  \node[lab] at (23,42) {A};
+  \node[lab] at (58,27) {B};
+  \node[lab] at (91,42) {C};
+  \node[lab] at (59,57) {D};
+\end{tikzpicture}\ignorespaces

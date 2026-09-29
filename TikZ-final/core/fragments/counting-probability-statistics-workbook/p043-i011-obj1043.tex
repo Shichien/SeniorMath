@@ -1,0 +1,60 @@
+\begin{tikzpicture}[x=1bp,y=-1bp,line cap=butt,line join=miter,>=Stealth]
+  \path[use as bounding box] (0,0) rectangle (315,187);
+  \clip (0,0) rectangle (315,187);
+
+  \newfontfamily\chartcjk{SimSun}
+  \font\chartnumber="Times New Roman" at 12bp
+  \font\chartitalic="Times New Roman Italic" at 12bp
+  \tikzset{
+    title/.style={font=\chartcjk\fontsize{15bp}{15bp}\selectfont,inner sep=0bp},
+    cjk/.style={font=\chartcjk\fontsize{12bp}{12bp}\selectfont,inner sep=0bp},
+    number/.style={font=\chartnumber,inner sep=0bp},
+    italic/.style={font=\chartitalic,inner sep=0bp}
+  }
+
+  \draw[line width=1bp,dash pattern=on 2bp off 2bp]
+    (48,37)--(130,37)
+    (48,60)--(154,60)
+    (48,83)--(107,83)
+    (48,106)--(177,106)
+    (48,123)--(84,123);
+
+  \draw[line width=1.5bp]
+    (84,123)--(107,123)
+    (107,83)--(130,83)
+    (130,37)--(154,37)
+    (154,60)--(177,60)
+    (177,106)--(201,106);
+  \draw[line width=1.5bp]
+    (84,123)--(84,161)
+    (107,83)--(107,161)
+    (130,37)--(130,161)
+    (154,37)--(154,161)
+    (177,60)--(177,161)
+    (201,106)--(201,161);
+
+  \draw[line width=1.2bp] (48,161)--(53,161);
+  \draw[line width=1.2bp]
+    (53,162)--(56,157)--(59,164)--(62,159)--(65,162);
+  \draw[line width=1.2bp,-{Stealth[length=12bp,width=8bp]}] (65,161)--(222,161);
+  \draw[line width=1.2bp,-{Stealth[length=12bp,width=8bp]}] (48,162)--(48,20);
+
+  \node[title] at (67.5,8.5) {频率};
+  \draw[line width=1bp] (52,15)--(83,15);
+  \node[title] at (67.5,22.5) {组距};
+
+  \node[number,anchor=east] at (45,39.5) {0.150};
+  \node[italic,anchor=east] at (45,61.5) {a};
+  \node[number,anchor=east] at (45,85.5) {0.100};
+  \node[number,anchor=east] at (45,107.5) {0.075};
+  \node[number,anchor=east] at (45,124.5) {0.050};
+
+  \node[italic,anchor=north east] at (50,164) {O};
+  \node[number,anchor=north] at (84,164) {96};
+  \node[number,anchor=north] at (107,164) {98};
+  \node[number,anchor=north] at (130,164) {100};
+  \node[number,anchor=north] at (154,164) {102};
+  \node[number,anchor=north] at (177,164) {104};
+  \node[number,anchor=north] at (201,164) {106};
+  \node[font=\chartcjk\fontsize{13bp}{13bp}\selectfont,inner sep=0bp,anchor=west] at (217,174.5) {净重/克};
+\end{tikzpicture}

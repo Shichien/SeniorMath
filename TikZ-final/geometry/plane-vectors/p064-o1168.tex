@@ -1,0 +1,10 @@
+\begin{tikzpicture}[scale=.67, every node/.style={font=\small}, >={Stealth[length=2mm]}]
+  \coordinate (A) at (0,0); \coordinate (B) at (3,0);
+  \coordinate (C) at (3,6); \coordinate (D) at (0,6);
+  \draw[->] (-.5,0)--(6.5,0) node[right] {$x$};
+  \draw[->] (0,-.5)--(0,9.5) node[above] {$y$};
+  \draw (D)--(C)--(B) (D)--(B);
+  \draw (C) circle ({6/sqrt(5)});
+  \foreach \p/\pos in {A/below left,B/below,C/right,D/left}
+    \node[\pos] at (\p) {$\p$};
+\end{tikzpicture}

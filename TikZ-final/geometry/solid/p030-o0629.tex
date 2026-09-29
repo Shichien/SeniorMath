@@ -1,0 +1,22 @@
+\begin{tikzpicture}[scale=.95, every node/.style={font=\small}, line cap=round, line join=round]
+  % regular pyramid P-ABCD, square base in oblique view
+  \coordinate (A) at (0,0);
+  \coordinate (B) at (4.92,0);
+  \coordinate (C) at (6.35,1.78);
+  \coordinate (D) at ($(A)+(C)-(B)$);
+  \coordinate (O) at ($(A)!0.5!(C)$);
+  \coordinate (P) at ($(O)+(0,5.83)$);
+  % E midpoint of PC
+  \coordinate (E) at ($(P)!0.5!(C)$);
+
+  \draw (A)--(B)--(C)--(P)--cycle;
+  \draw (P)--(B)--(E);
+  \draw[dashed] (A)--(D)--(C) (D)--(P);
+
+  \node[left] at (A) {$A$};
+  \node[below right] at (B) {$B$};
+  \node[right] at (C) {$C$};
+  \node[below right] at (D) {$D$};
+  \node[above] at (P) {$P$};
+  \node[above right] at (E) {$E$};
+\end{tikzpicture}

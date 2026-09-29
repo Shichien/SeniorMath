@@ -1,0 +1,29 @@
+\begin{tikzpicture}[scale=1.1, every node/.style={font=\small}, line cap=round, line join=round]
+  % cube ABCD-A1B1C1D1, O = AC \cap BD
+  \coordinate (A)  at (0,0);
+  \coordinate (B)  at (3.3,0);
+  \coordinate (D)  at (1.37,0.99);
+  \coordinate (C)  at ($(B)+(D)-(A)$);
+  \coordinate (A1) at (0,3.3);
+  \coordinate (B1) at ($(B)+(A1)-(A)$);
+  \coordinate (C1) at ($(C)+(A1)-(A)$);
+  \coordinate (D1) at ($(D)+(A1)-(A)$);
+  \coordinate (O)  at ($(A)!0.5!(C)$);
+
+  \draw (A)--(B)--(B1)--(A1)--cycle;
+  \draw (A1)--(D1)--(C1)--(B1);
+  \draw (B)--(C)--(C1);
+  \draw (A1)--(B);
+  \draw[dashed] (A)--(D)--(C) (D)--(D1);
+  \draw[dashed] (A)--(C) (B)--(D) (A1)--(D) (A1)--(O);
+
+  \node[below] at (A) {$A$};
+  \node[below] at (B) {$B$};
+  \node[right] at (C) {$C$};
+  \node[above right] at (D) {$D$};
+  \node[above left] at (A1) {$A_1$};
+  \node[below right] at (B1) {$B_1$};
+  \node[above right] at (C1) {$C_1$};
+  \node[above] at (D1) {$D_1$};
+  \node[below left] at (O) {$O$};
+\end{tikzpicture}

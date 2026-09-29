@@ -1,0 +1,17 @@
+\begin{tikzpicture}[x=1bp,y=-1bp,line cap=round,line join=round,>=Stealth]
+  \font\autumnlab="Times New Roman Italic" at 12bp
+  \path[use as bounding box] (0,0) rectangle (187,168);
+  \coordinate (A) at (91,40); \coordinate (A1) at (157,40); \coordinate (B) at (33,131); \coordinate (B1) at (108,131);
+  \coordinate (C) at (66,100); \coordinate (C1) at (139,100); \coordinate (O) at (91,121);
+  \draw[line width=1.1bp] (A)--(B)--(B1)--(A1)--(A) (A1)--(C1)--(B1) (B)--(C) (A)--(B1);
+  \draw[dash pattern=on 7bp off 3bp,dash phase=7bp,line width=.9bp] (C)--(A) (C)--(C1) (C)--(B1) (B)--(C1) (A)--(O);
+  \draw[-{Stealth[length=12bp,width=9bp]},line width=.9bp] (O)--(9,143);
+  \draw[-{Stealth[length=12bp,width=9bp]},line width=.9bp] (O)--(131,150);
+  \draw[-{Stealth[length=12bp,width=9bp]},line width=.9bp] (O)--(91,13);
+  \tikzset{lab/.style={font=\autumnlab,inner sep=0bp}}
+  \node[lab] at (83,36) {A}; \node[lab] at (167,42) {A\textsubscript{1}};
+  \node[lab] at (28,126) {B}; \node[lab] at (116,129) {B\textsubscript{1}};
+  \node[lab] at (62,97) {C}; \node[lab] at (148,99) {C\textsubscript{1}};
+  \node[lab] at (87,124) {O}; \node[lab] at (27,150) {x};
+  \node[lab] at (111,146) {y}; \node[lab] at (99,18) {z};
+\end{tikzpicture}\ignorespaces

@@ -1,0 +1,13 @@
+\begin{tikzpicture}[>=Stealth,font=\small,node distance=10mm and 12mm,
+  flowstep/.style={draw=gray,rounded corners=2pt,minimum width=3.4cm,minimum height=8mm,align=center},
+  decide/.style={diamond,draw=orange!70!black,fill=orange!12,aspect=2.2,align=center}]
+\node[flowstep] (start) {随机选择 $K$ 个质心};
+\node[flowstep,below=of start] (distance) {计算样本到质心的距离};
+\node[flowstep,right=of distance] (assign) {将样本分配到最近质心的簇};
+\node[flowstep,right=of assign] (update) {重新计算簇的质心};
+\node[decide,below=of assign] (judge) {收敛判断};
+\node[flowstep,below=of judge] (output) {输出聚类结果};
+\draw[->] (start)--(distance); \draw[->] (distance)--(assign); \draw[->] (assign)--(update);
+\draw[->] (update.south)|-(judge.east); \draw[->] (judge)--(output);
+\draw[->] (judge.west)-| node[above,pos=.25]{质心变化量 $>$ 阈值}(distance.south);
+\end{tikzpicture}

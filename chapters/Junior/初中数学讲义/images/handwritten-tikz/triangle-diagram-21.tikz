@@ -1,0 +1,1 @@
+\begin{tikzpicture}[thick,blue!70!black]\coordinate(A)at(4,5.2);\coordinate(B)at(0,0);\coordinate(C)at(5.3,0);\coordinate(D)at(2.08,2.70);\coordinate(E)at(4.88,1.66);\draw(A)--(B)--(C)--cycle(D)--(E);\foreach\p in {A,B,C,D,E}\fill[red](\p)circle(3pt);\foreach\p/\pos in {A/above,B/left,C/right,D/left,E/right}\node[black,\pos]at(\p){$\p$};\end{tikzpicture}

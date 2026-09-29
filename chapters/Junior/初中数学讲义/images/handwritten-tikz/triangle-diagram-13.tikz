@@ -1,0 +1,17 @@
+\begin{tikzpicture}[thick]
+\coordinate (A) at (4,5);
+\coordinate (B) at (0,0);
+\coordinate (C) at (6,0);
+\coordinate (D) at ($(A)!(B)!(C)$);
+\coordinate (E) at ($(A)!(C)!(B)$);
+\coordinate (M) at (3.26,0);
+\path[name path=AM] (A)--(M);
+\path[name path=ED] (E)--(D);
+\path[name intersections={of=AM and ED,by=N}];
+\draw (A)--(B)--(C)--cycle (B)--(D) (C)--(E) (A)--(M) (E)--(D);
+\pic[draw,angle radius=2.5mm] {right angle=C--E--A};
+\pic[draw,angle radius=2.5mm] {right angle=B--D--A};
+\foreach \p/\pos in {A/above,B/below left,C/below right,D/right,E/left,M/below}
+  \node[\pos] at (\p) {$\p$};
+\node[above right] at (N) {$N$};
+\end{tikzpicture}

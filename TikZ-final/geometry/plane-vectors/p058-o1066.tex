@@ -1,0 +1,12 @@
+\begin{tikzpicture}[scale=.7, every node/.style={font=\small}, >={Stealth[length=2mm]}]
+  \coordinate (A) at (-1.2,3.2); \coordinate (B) at (-2.2,0);
+  \coordinate (C) at (2.2,0); \coordinate (D) at (-1.2,0);
+  \coordinate (P) at (0,0); \coordinate (Q) at (0,2.07);
+  \draw[->] (-2.8,0)--(2.8,0) node[right] {$x$};
+  \draw[->] (0,-.4)--(0,4) node[above] {$y$};
+  \draw (A)--(B)--(C)--cycle;
+  \draw[dashed] (A)--(D);
+  \draw (D) ++(.23,0) -- ++(0,.23) -- ++(-.23,0);
+  \foreach \p/\pos in {A/above,B/below,C/below,D/below,P/below right,Q/right}
+    \node[\pos] at (\p) {$\p$};
+\end{tikzpicture}

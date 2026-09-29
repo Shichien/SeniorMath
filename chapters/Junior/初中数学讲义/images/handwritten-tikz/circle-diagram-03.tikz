@@ -1,0 +1,26 @@
+\begin{tikzpicture}[thick,scale=.72]
+\begin{scope}
+  \draw (-2,2)--(2,2) (-2,1)--(2,1) (-2,0)--(2,0) (-1.5,-.4)--(.2,2.8) (1.5,-.4)--(.8,2.8);
+  \node[red,above left]at(-.225,2){$A$};\node[red,above right]at(.975,2){$D$};\node[red,above left]at(-.756,1){$B$};\node[red,above right]at(1.194,1){$E$};\node[red,below left]at(-1.288,0){$C$};\node[red,below right]at(1.413,0){$F$};
+\end{scope}
+\begin{scope}[xshift=5cm]
+  \draw (-2,2)--(2,2) (-2,1)--(2,1) (-2,0)--(2,0) (-1.5,-.4)--(.8,2.8) (1.5,-.4)--(-.8,2.8);
+  \node[red,above left]at(-.225,2){$D$};\node[red,above right]at(.225,2){$A$};\node[red,above left]at(-.494,1){$B$};\node[red,above right]at(.494,1){$E$};\node[red,below left]at(-1.213,0){$C$};\node[red,below right]at(1.213,0){$F$};
+\end{scope}
+\begin{scope}[xshift=10cm]
+  \draw (-2,2)--(2,2) (-2,1)--(2,1) (-2,0)--(2,0) (-.855,-.4)--(2.025,2.8) (.855,-.4)--(-2.025,2.8);
+  \node[red,above left]at(-1.305,2){$A$};\node[red,above right]at(1.305,2){$D$};\node[red,above left]at(-.405,1){$B$};\node[red,above right]at(.405,1){$E$};\node[red,below left]at(-.495,0){$F$};\node[red,below right]at(.495,0){$C$};
+\end{scope}
+\begin{scope}[yshift=-4cm]
+  \draw (-2,2)--(2,2) (-2,1)--(2,1) (-2,0)--(2,0) (-1.6,-.4)--(.3,2.8) (1.6,-.4)--(-.3,2.8);
+  \node[red,above left]at(-.175,2){$D$};\node[red,above right]at(.175,2){$A$};\node[red,above left]at(-.769,1){$B$};\node[red,above right]at(.769,1){$E$};\node[red,below left]at(-1.363,0){$C$};\node[red,below right]at(1.363,0){$F$};
+\end{scope}
+\begin{scope}[shift={(5,-4)}]
+  \draw (-2,2)--(2,2) (-2,1)--(2,1) (-2,0)--(2,0) (-1.12,-.4)--(1.44,2.8) (1.12,-.4)--(-1.44,2.8);
+  \node[red,above left]at(-.8,2){$D$};\node[red,above right]at(.8,2){$A$};\node[red,below right]at(0,1){$B$};\node[red,below left]at(-.8,0){$C$};\node[red,below right]at(.8,0){$E$};
+\end{scope}
+\begin{scope}[shift={(10,-4)}]
+  \draw (-2,2)--(2,2) (-2,1)--(2,1) (-2,0)--(2,0) (-1.4,-.4)--(0,2)--(1.4,-.4);
+  \node[red,above]at(0,2){$A$};\node[red,above left]at(-.583,1){$D$};\node[red,above right]at(.583,1){$B$};\node[red,below left]at(-1.167,0){$E$};\node[red,below right]at(1.167,0){$C$};
+\end{scope}
+\end{tikzpicture}

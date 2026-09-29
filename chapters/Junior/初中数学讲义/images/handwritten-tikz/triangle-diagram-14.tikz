@@ -1,0 +1,6 @@
+\begin{tikzpicture}[thick,scale=.75]
+\begin{scope}\draw(0,0)--(2,4)--(4,0)--cycle;\draw(.667,1.333)--(3.333,1.333);\fill(2,1.333)circle(2pt);\node[above]at(2,4){$A$};\node[left]at(0,0){$B$};\node[right]at(4,0){$C$};\node[left]at(.667,1.333){$D$};\node[right]at(3.333,1.333){$E$};\node[above]at(2,1.333){$G$};\node at(2,-.8){(A)};\end{scope}
+\begin{scope}[xshift=5.5cm]\draw(0,0)--(2,4)--(4,0)--cycle (0,0)--(2,1.333)--(4,0);\node[above]at(2,4){$A$};\node[left]at(0,0){$B$};\node[right]at(4,0){$C$};\node[above]at(2,1.333){$G$};\node at(2,-.8){(B)};\end{scope}
+\begin{scope}[xshift=11cm]\draw(0,0)--(3,4)--(4,0)--cycle (2,0)--(2.333,1.333)--(3,4) (2.333,0)--(2.333,1.333) (3,4)--(3,0);\node[above]at(3,4){$A$};\node[left]at(0,0){$B$};\node[right]at(4,0){$C$};\node[below left]at(2,0){$D$};\node[below,yshift=-7pt]at(2.333,0){$E$};\node[below right]at(3,0){$F$};\node[left]at(2.333,1.333){$G$};\draw(2.333,0)rectangle+(.25,.25) (3,0)rectangle+(.25,.25);\node at(2,-1.35){(C)};\end{scope}
+\begin{scope}[xshift=17cm]\draw(0,0)--(0,4)--(4,0)--cycle (0,0)--(1.333,1.333)--(2.667,0);\draw(0,0)rectangle+(.3,.3);\node[above]at(0,4){$A$};\node[left]at(0,0){$C$};\node[right]at(4,0){$B$};\node[below]at(2.667,0){$D$};\node[above]at(1.333,1.333){$G$};\node at(2,-.8){(D)};\end{scope}
+\end{tikzpicture}

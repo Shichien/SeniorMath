@@ -1,0 +1,12 @@
+\begin{tikzpicture}[>=Stealth,thick,font=\small]
+% Fill first, then restore every boundary and both continuous coordinate axes.
+\fill[gray!55](0,2)arc[start angle=90,end angle=270,radius=2]
+ arc[start angle=-90,end angle=-270,radius=1]
+ arc[start angle=-90,end angle=90,radius=1]--cycle;
+\draw(0,0)circle(2);
+\draw(0,-2)arc[start angle=-90,end angle=-270,radius=1]
+ arc[start angle=-90,end angle=90,radius=1];
+\draw[->](-2.8,0)--(2.9,0)node[right]{$x$};\draw[->](0,-2.6)--(0,2.8)node[above]{$y$};
+\fill(-.7,.8)circle(1.8pt)node[above]{$P$};\node[below left]at(0,0){$O$};
+\node[below left]at(-2,0){$-2$};\node[below right]at(2,0){$2$};\node[above left]at(0,2){$2$};\node[below left]at(0,-2){$-2$};
+\end{tikzpicture}

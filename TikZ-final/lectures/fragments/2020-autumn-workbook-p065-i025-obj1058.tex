@@ -1,0 +1,27 @@
+\begin{tikzpicture}[x=1bp,y=-1bp,line cap=round,line join=round]
+  \path[use as bounding box] (0,0) rectangle (412,389);
+  \definecolor{back}{RGB}{19,16,14}
+  \definecolor{ink}{RGB}{52,46,45}
+  \definecolor{halo}{RGB}{37,32,31}
+  \definecolor{labelink}{RGB}{58,52,51}
+  \fill[back] (0,0) rectangle (412,389);
+  \coordinate (A1) at (122,46); \coordinate (D1) at (376,46);
+  \coordinate (B1) at (42,135); \coordinate (C1) at (297,135);
+  \coordinate (A) at (122,267); \coordinate (D) at (376,267);
+  \coordinate (B) at (42,346); \coordinate (C) at (297,346);
+  \draw[draw=halo,line width=8bp] (A1)--(D1)--(D)--(C)--(B)--(B1)--(A1) (B1)--(C1)--(D1) (C1)--(C) (A1)--(C1);
+  \draw[draw=ink,line width=4.5bp] (A1)--(D1)--(D)--(C)--(B)--(B1)--(A1) (B1)--(C1)--(D1) (C1)--(C) (A1)--(C1);
+  \draw[draw=halo,dash pattern=on 8bp off 4bp,line width=5bp] (125,46)--(125,267) (A)--(D) (A)--(B);
+  \draw[draw=ink,dash pattern=on 8bp off 4bp,line width=2.5bp] (125,46)--(125,267) (A)--(D) (A)--(B);
+  \font\cuboidlab="Times New Roman Bold Italic" at 34bp
+  \tikzset{lab/.style={font=\cuboidlab,text=labelink,inner sep=0bp}}
+  \node[lab] at (123,17) {A\kern3bp\textsubscript{1}};
+  \node[lab] at (393,45) {D\kern4bp\textsubscript{1}};
+  \node[lab] at (21,130) {B\kern3bp\textsubscript{1}};
+  \node[lab] at (274,161) {C\kern3bp\textsubscript{1}};
+  \node[lab] at (135,287) {A};
+  \node[lab] at (394,267) {D};
+  \node[lab] at (36,366) {B};
+  \node[lab] at (306,366) {C};
+  \node[lab] at (228,74) {E};
+\end{tikzpicture}\ignorespaces

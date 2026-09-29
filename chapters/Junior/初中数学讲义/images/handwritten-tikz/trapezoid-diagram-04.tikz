@@ -1,0 +1,3 @@
+\begin{tikzpicture}[thick,font=\small]
+\coordinate(A)at(0,3.8);\coordinate(B)at(-2.2,0);\coordinate(C)at(0,0);\coordinate(D)at(1.25,0);\coordinate(E)at(0,1.55);\coordinate(P)at(-1.25,1.55);\draw(A)--(B)--(D)--(E)--cycle;\draw(A)--(C);\draw(P)--(D);\draw(P)--(.75,1.55);\draw(C)--(C)+(-.18,0)--+(-.18,.18)--+(0,.18);\draw(-.9,1.55)arc[start angle=0,end angle=-30,radius=.35];\node at(-.45,1.25){$30^\circ$};\foreach\p/\a in {A/above,B/below left,C/below,D/below,E/right,P/left}\node[\a]at(\p){$\p$};
+\end{tikzpicture}

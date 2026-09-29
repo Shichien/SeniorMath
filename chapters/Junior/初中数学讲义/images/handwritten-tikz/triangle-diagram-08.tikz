@@ -1,0 +1,11 @@
+\begin{tikzpicture}[thick]
+\coordinate(A)at(2.2,4);\coordinate(B)at(0,0);\coordinate(C)at(6,0);
+\coordinate(F)at(1.2,2.18);\coordinate(E)at(3.6,2.53);\coordinate(O)at(2.355,1.655);
+\coordinate(H)at(1.344,2.115);\coordinate(G)at(3.355,2.357);
+\draw(A)--(B)--(C)--cycle (B)--(E) (F)--(C) (A)--(H) (A)--(G) (H)--(G);
+\pic[draw,angle radius=2.5mm]{right angle=A--H--C};
+\pic[draw,angle radius=2.5mm]{right angle=A--G--E};
+\foreach\p/\pos in {A/above,B/below,C/below,F/left,E/right,O/below}
+  \node[\pos]at(\p){$\p$};
+\node[below left]at(H){$H$};\node[below right]at(G){$G$};
+\end{tikzpicture}

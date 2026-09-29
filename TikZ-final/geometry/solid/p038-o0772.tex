@@ -1,0 +1,18 @@
+\begin{tikzpicture}[scale=1.3, every node/.style={font=\small}, line cap=round, line join=round]
+  % square ABCD, PA perpendicular to plane ABCD, PA = BA
+  \coordinate (B) at (0,0);
+  \coordinate (A) at (1.37,0.83);
+  \coordinate (C) at (4.05,0);
+  \coordinate (D) at ($(A)+(C)-(B)$);
+  \coordinate (P) at ($(A)+(0,4.0)$);
+
+  \draw (B)--(C)--(D)--(P)--cycle;
+  \draw (P)--(C);
+  \draw[dashed] (B)--(A)--(D) (A)--(P);
+
+  \node[below left] at (B) {$B$};
+  \node[above left] at (A) {$A$};
+  \node[below] at (C) {$C$};
+  \node[below right] at (D) {$D$};
+  \node[above left] at (P) {$P$};
+\end{tikzpicture}

@@ -1,0 +1,21 @@
+\begin{tikzpicture}[x=.75cm,y=.75cm,>=Stealth,font=\small]
+\foreach \label/\shift in {A/{0,4.4},B/{7.4,4.4},C/{0,0},D/{7.4,0}}{
+  \begin{scope}[shift={(\shift)}]
+    \node[anchor=east,font=\large] at (-1.65,1){\label.};
+    \draw[->] (-.8,0)--(3.2,0) node[right]{$x$};
+    \draw[->] (0,-.8)--(0,2.8) node[above]{$y$};
+    \node[below left] at (0,0){$O$};
+    \ifnum\pdfstrcmp{\label}{A}=0
+      \draw[samples=80,smooth,domain=.18:2.8] plot(\x,{.65/\x});
+    \else\ifnum\pdfstrcmp{\label}{B}=0
+      \draw[samples=40,smooth,domain=-2.4:0] plot(\x,{sqrt(-\x)});
+      \draw[samples=40,smooth,domain=0:2.4] plot(\x,{sqrt(\x)});
+    \else\ifnum\pdfstrcmp{\label}{C}=0
+      \draw[samples=50,smooth,domain=0:2.8] plot(\x,{sqrt(\x)});
+    \else
+      \draw[samples=60,smooth,domain=-2.7:-.18] plot(\x,{.65/abs(\x)});
+      \draw[samples=60,smooth,domain=.18:2.7] plot(\x,{.65/abs(\x)});
+    \fi\fi\fi
+  \end{scope}
+}
+\end{tikzpicture}

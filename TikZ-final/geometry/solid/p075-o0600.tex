@@ -1,0 +1,21 @@
+\begin{tikzpicture}[scale=1.25, every node/.style={font=\small}]
+  \coordinate (A) at (0,0); \coordinate (B) at (3.42,0);
+  \coordinate (C) at (4.8,1.05); \coordinate (D) at (1.38,1.05);
+  \coordinate (A') at (0,3.42); \coordinate (B') at (3.42,3.42);
+  \coordinate (C') at (4.8,4.47); \coordinate (D') at (1.38,4.47);
+  % H on D'B' with D'H = DD' (edge 1, diagonal sqrt2)
+  \coordinate (H) at ($(D')!{1/sqrt(2)}!(B')$);
+  \draw (A)--(B)--(B')--(A')--cycle;
+  \draw (A')--(D')--(C')--(B'); \draw (B)--(C)--(C');
+  \draw (D')--(B');
+  \draw[dashed] (A)--(D)--(C); \draw[dashed] (D)--(D'); \draw[dashed] (D)--(H);
+  \node[below] at (A) {$A$};
+  \node[below] at (B) {$B$};
+  \node[right] at (C) {$C$};
+  \node[left] at (D) {$D$};
+  \node[left] at (A') {$A'$};
+  \node[right] at (B') {$B'$};
+  \node[right] at (C') {$C'$};
+  \node[above left] at (D') {$D'$};
+  \node[above right] at (H) {$H$};
+\end{tikzpicture}

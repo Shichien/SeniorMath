@@ -1,0 +1,53 @@
+\begin{tikzpicture}[x=1bp,y=-1bp,line cap=butt,line join=miter,>=Stealth]
+  \path[use as bounding box] (0,0) rectangle (221,121);
+  \clip (0,0) rectangle (221,121);
+
+  \newfontfamily\chartcjk{SimSun}
+  \font\chartlatin="Times New Roman" at 14bp
+  \font\charttick="Times New Roman" at 12bp
+  \font\chartitalic="Times New Roman Italic" at 14bp
+  \tikzset{
+    cjk/.style={font=\chartcjk\fontsize{15bp}{15bp}\selectfont,inner sep=0bp},
+    number/.style={font=\chartlatin,inner sep=0bp},
+    tick/.style={font=\charttick,inner sep=0bp},
+    italic/.style={font=\chartitalic,inner sep=0bp}
+  }
+
+  \draw[line width=1bp,dash pattern=on 5bp off 4bp]
+    (38,26)--(98,26)
+    (38,54)--(132,54)
+    (38,66)--(115,66)
+    (38,80)--(81,80);
+
+  \draw[line width=1.2bp]
+    (64,80)--(81,80)
+    (81,26)--(98,26)
+    (98,66)--(115,66)
+    (115,54)--(132,54);
+  \draw[line width=1.2bp]
+    (64,80)--(64,107)
+    (81,26)--(81,107)
+    (98,26)--(98,107)
+    (115,54)--(115,107)
+    (132,54)--(132,107);
+
+  \draw[line width=1.5bp,-{Stealth[length=12bp,width=11bp]}]
+    (23,107)--(208,107);
+  \draw[line width=1.5bp,-{Stealth[length=12bp,width=11bp]}]
+    (38,119)--(38,1);
+
+  \node[cjk,anchor=west] at (42,13) {频率/组距};
+  \node[cjk,anchor=west] at (168,94) {分数（\textit{x}）};
+
+  \node[number,anchor=east] at (34,27) {0.040};
+  \node[number,anchor=east] at (34,55) {0.025};
+  \node[number,anchor=east] at (34,67) {0.020};
+  \node[number,anchor=east] at (34,81) {0.015};
+
+  \node[tick,anchor=north] at (64,109) {60};
+  \node[tick,anchor=north] at (81,109) {70};
+  \node[tick,anchor=north] at (98,109) {80};
+  \node[tick,anchor=north] at (115,109) {90};
+  \node[tick,anchor=north] at (132,109) {100};
+  \node[italic] at (30,115) {O};
+\end{tikzpicture}

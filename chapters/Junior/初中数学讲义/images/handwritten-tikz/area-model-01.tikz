@@ -1,0 +1,7 @@
+\begin{tikzpicture}[line cap=round,line join=round,thick]
+\coordinate (A) at (0.8,4); \coordinate (B) at (0,0); \coordinate (C) at (3.1,1.7);
+\coordinate (D) at (3.8,4); \coordinate (E) at (6.3,0); \coordinate (F) at (6.65,1.7);
+\draw (A)--(D)--(C)--(F)--(E)--(B)--cycle;
+\draw (-.45,.8)--(.45,.8) (5.95,.8)--(6.85,.8);
+\foreach \p/\pos in {A/above left,B/below left,C/left,D/above right,E/below right,F/right} \node[\pos] at (\p) {$\p$};
+\end{tikzpicture}

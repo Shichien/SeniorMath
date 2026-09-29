@@ -1,0 +1,12 @@
+\begin{tikzpicture}[x=.70cm,y=.70cm,>=Stealth,line cap=round,baseline=(current bounding box.center)]
+  \draw[->] (-4.20,0)--(2.20,0) node[right] {$x$};
+  \draw[->] (0,-2.10)--(0,4.90) node[above] {$y$};
+  \draw[line width=.85pt] (-4.05,3.20)
+    .. controls (-3.35,1.42) and (-2.35,.28) .. (-2.00,0)
+    .. controls (-1.55,-.86) and (-.88,-1.52) .. (-.45,-1.48)
+    .. controls (.10,-1.43) and (.72,-.35) .. (1,0)
+    .. controls (1.38,1.02) and (1.78,2.65) .. (2.15,3.72);
+  \draw (-2,0)--(-2,.17); \draw (1,0)--(1,.17);
+  \node[below] at (-2,0) {$-2$}; \node[below] at (1,0) {$1$};
+  \node[below right] at (0,0) {$O$};
+\end{tikzpicture}

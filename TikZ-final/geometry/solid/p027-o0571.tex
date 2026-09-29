@@ -1,0 +1,23 @@
+\begin{tikzpicture}[scale=.63,every node/.style={font=\small}]
+  \coordinate (A) at (0,0);
+  \coordinate (B) at (4,0);
+  \coordinate (C) at (5.9,1.45);
+  \coordinate (D) at (1.9,1.45);
+  \coordinate (A1) at (0,4);
+  \coordinate (B1) at (4,4);
+  \coordinate (C1) at (5.9,5.45);
+  \coordinate (D1) at (1.9,5.45);
+  \draw[line width=.55pt] (A)--(B)--(B1)--(A1)--cycle;
+  \draw[line width=.55pt] (A1)--(D1)--(C1)--(B1);
+  \draw[line width=.55pt] (B)--(C)--(C1);
+  \draw[line width=.55pt] (B)--(C1);
+  \draw[densely dashed,line width=.45pt] (A)--(D)--(C) (D)--(D1);
+  \node[below left] at (A) {$A$};
+  \node[below] at (B) {$B$};
+  \node[right] at (C) {$C$};
+  \node[left] at (D) {$D$};
+  \node[left] at (A1) {$A_1$};
+  \node[above] at (B1) {$B_1$};
+  \node[above right] at (C1) {$C_1$};
+  \node[above left] at (D1) {$D_1$};
+\end{tikzpicture}

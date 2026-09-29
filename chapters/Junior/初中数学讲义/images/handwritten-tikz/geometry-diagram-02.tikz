@@ -1,0 +1,11 @@
+\begin{tikzpicture}[scale=.85,line width=.7pt,font=\large,line join=round]
+  \coordinate (B) at (0,0); \coordinate (C) at (4.5,0);
+  \path[name path=BA] (B)--++(53:6); \path[name path=CA] (C)--++(113:6);
+  \path[name intersections={of=BA and CA,by=A}];
+  \path[name path=CD] (C)--++(150:6); \path[name intersections={of=BA and CD,by=D}];
+  \path[name path=BE] (B)--++(30:6); \path[name intersections={of=CA and BE,by=E}];
+  \path[name intersections={of=CD and BE,by=O}];
+  \draw (A)--(B)--(C)--cycle (B)--(E) (C)--(D) (D)--(E);
+  \foreach \p/\pos in {A/above,B/below left,C/below right,D/above left,E/above right} \node[\pos] at (\p) {$\p$};
+  \node[below=5pt] at (O) {$O$};
+\end{tikzpicture}

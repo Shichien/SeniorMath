@@ -1,0 +1,7 @@
+\begin{tikzpicture}[scale=.65,>=Stealth,font=\large]
+\draw[->] (-9,0)--(9.5,0) node[right]{$x$};\draw[->] (0,-9)--(0,9.5) node[above]{$y$};
+\foreach \x in {-8,-6,-4,-2,2,4,6,8}{\draw (\x,.18)--(\x,-.18) node[below]{\x};\draw (.18,\x)--(-.18,\x) node[left]{\x};}
+\draw[thick](-8,0)..controls(-6.2,.15)and(-1.2,4.6)..(0,8)..controls(1.2,4.6)and(6.2,.15)..(8,0);
+\draw[thick](-8,0)..controls(-6.2,-.15)and(-1.2,-4.6)..(0,-8)..controls(1.2,-4.6)and(6.2,-.15)..(8,0);
+\node[below left] at (0,0){$O$};
+\end{tikzpicture}

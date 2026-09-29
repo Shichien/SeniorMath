@@ -1,0 +1,16 @@
+\begin{tikzpicture}[x=1pt,y=-1pt,>=Stealth,line cap=round,line join=round]
+  \path[use as bounding box] (0,0) rectangle (428,294);
+  \draw[->,line width=2.1pt] (57,263)--(414,263) node[above left] {$x$};
+  \draw[->,line width=2.1pt] (83,281)--(83,13) node[below right] {$y$};
+  \coordinate (A) at (166,215); \coordinate (B) at (347,48);
+  \draw[dashed,line width=1.4pt] (A)--(166,263) (A)--(83,215) (B)--(347,263) (B)--(83,48);
+  \draw[line width=2.4pt] (111,235).. controls (153,229) and (258,165)..(358,35);
+  \draw[line width=2.4pt] (116,244)--(367,43);
+  \draw[line width=2.4pt] (122,233)--(363,125);
+  \fill (A) circle (2.8pt); \fill (B) circle (2.8pt);
+  \node[above left,font=\large] at (A) {$A$}; \node[above left,font=\large] at (B) {$B$};
+  \node[above,font=\large] at (233,215) {$\Delta x$}; \node[right,font=\large] at (347,135) {$\Delta y$};
+  \node[left,font=\large] at (83,215) {$y$}; \node[left,font=\large] at (83,48) {$y+\Delta y$};
+  \node[below left,font=\large] at (83,263) {$O$}; \node[below,font=\large] at (166,263) {$x$};
+  \node[below,font=\large] at (347,263) {$x+\Delta x$};
+\end{tikzpicture}

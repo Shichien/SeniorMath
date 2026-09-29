@@ -1,0 +1,9 @@
+\begin{tikzpicture}[thick]
+\coordinate(B)at(0,0);\coordinate(A)at(7,0);\coordinate(C)at(1.5,2.872);
+\coordinate(D)at(3.5,1.827);\coordinate(P)at(3.4,0);
+\coordinate(E)at(2.672,1.395);\coordinate(F)at(4.171,1.477);
+\draw(B)--(C)--(A)--cycle (B)--(D) (E)--(P)--(F);
+\pic[draw,angle radius=5mm]{angle=C--A--B};
+\foreach\p/\pos in {A/right,B/left,C/above,D/above,F/above,P/below,E/left}
+  \node[\pos]at(\p){$\p$};
+\end{tikzpicture}

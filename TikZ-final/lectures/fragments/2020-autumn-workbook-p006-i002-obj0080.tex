@@ -1,0 +1,31 @@
+\begin{tikzpicture}[x=1bp,y=-1bp,line cap=round,line join=round]
+  \path[use as bounding box] (0,0) rectangle (387,382);
+  \definecolor{back}{RGB}{19,16,14}
+  \definecolor{ink}{RGB}{52,46,45}
+  \definecolor{halo}{RGB}{37,32,31}
+  \definecolor{labelink}{RGB}{58,52,51}
+  \fill[back] (0,0) rectangle (387,382);
+  \coordinate (O) at (133,38); \coordinate (A) at (30,235);
+  \coordinate (B) at (246,338); \coordinate (C) at (352,235);
+  \coordinate (M) at (64,184); \coordinate (N) at (298,291);
+  \coordinate (AH) at (29,234); \coordinate (CH) at (352,234);
+  \coordinate (MH) at (63,182); \coordinate (NH) at (301,282);
+  \draw[draw=halo,line width=7bp] (O)--(A)--(B)--(C)--(O);
+  \draw[draw=ink,line width=4.5bp] (O)--(A)--(B)--(C)--(O);
+  \draw[draw=halo,line width=7bp] (133,35)--(246,336);
+  \draw[draw=ink,line width=4.5bp] (133,35)--(246,336);
+  \draw[draw=halo,dash pattern=on 9bp off 4bp,line width=5bp] (AH)--(CH);
+  \draw[draw=ink,dash pattern=on 9bp off 4bp,line width=2.5bp] (AH)--(CH);
+  \draw[draw=halo,dash pattern=on 8bp off 5bp,dash phase=5bp,line width=5bp] (MH)--(NH);
+  \draw[draw=ink,dash pattern=on 8bp off 5bp,dash phase=5bp,line width=2.5bp] (MH)--(NH);
+  \font\tetralab="Times New Roman Bold Italic" at 34bp
+  \font\tetralabbig="Times New Roman Bold Italic" at 36bp
+  \tikzset{lab/.style={font=\tetralab,text=labelink,inner sep=0bp}}
+  \tikzset{labbig/.style={font=\tetralabbig,text=labelink,inner sep=0bp}}
+  \node[labbig] at (135,10) {O};
+  \node[lab] at (10,234) {A};
+  \node[lab] at (248,360) {B};
+  \node[labbig] at (377,234) {C};
+  \node[lab] at (56,129) {M};
+  \node[labbig] at (319,296) {N};
+\end{tikzpicture}\ignorespaces

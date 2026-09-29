@@ -1,0 +1,40 @@
+\begin{tikzpicture}[scale=1.05, every node/.style={font=\small}, line cap=round, line join=round]
+  % cube ABCD-A1B1C1D1 with a congruent cube ANMB-A1QPB1 added in front
+  \coordinate (A)  at (1.2,0.8);
+  \coordinate (B)  at (4.4,0.8);
+  \coordinate (D)  at (2.4,1.65);
+  \coordinate (C)  at ($(B)+(D)-(A)$);
+  \coordinate (N)  at ($(A)-(D)+(A)$);
+  \coordinate (M)  at ($(B)-(D)+(A)$);
+  \coordinate (h)  at (0,3.05);
+  \coordinate (A1) at ($(A)+(h)$);
+  \coordinate (B1) at ($(B)+(h)$);
+  \coordinate (C1) at ($(C)+(h)$);
+  \coordinate (D1) at ($(D)+(h)$);
+  \coordinate (Q)  at ($(N)+(h)$);
+  \coordinate (P)  at ($(M)+(h)$);
+
+  % front cube
+  \draw (N)--(M)--(P)--(Q)--cycle;
+  \draw (Q)--(A1)--(B1)--(P);
+  \draw (M)--(B);
+  % original cube
+  \draw (A1)--(D1)--(C1)--(B1);
+  \draw (B1)--(B)--(C)--(C1);
+  \draw (Q)--(M) (D1)--(B1)--(C);
+  \draw[dashed] (A)--(A1) (A)--(B) (A)--(D)--(C) (D)--(D1);
+  \draw[dashed] (A)--(N) (A)--(M) (A)--(Q) (D1)--(C);
+
+  \node[below left] at (N) {$N$};
+  \node[below] at (M) {$M$};
+  \node[left] at (Q) {$Q$};
+  \node[below right] at (P) {$P$};
+  \node[left] at (A) {$A$};
+  \node[below] at (B) {$B$};
+  \node[right] at (C) {$C$};
+  \node[above right] at (D) {$D$};
+  \node[above left] at (A1) {$A_1$};
+  \node[right] at (B1) {$B_1$};
+  \node[right] at (C1) {$C_1$};
+  \node[above] at (D1) {$D_1$};
+\end{tikzpicture}

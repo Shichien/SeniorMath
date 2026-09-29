@@ -1,0 +1,27 @@
+\begin{tikzpicture}[scale=.9, every node/.style={font=\small}, line cap=round, line join=round]
+  % dihedral angle alpha-AB-beta; C in alpha, CE \perp AB at E, CD \perp beta at D
+  \coordinate (A)  at (0,0);
+  \coordinate (B)  at (0.9,3.18);
+  \coordinate (b1) at (4.3,0);        % beta: A, b1, b2, B
+  \coordinate (b2) at ($(b1)+(B)-(A)$);
+  \coordinate (a1) at (3.7,2.52);     % alpha: A, a1, a2, B
+  \coordinate (a2) at ($(a1)+(B)-(A)$);
+  \coordinate (X)  at (intersection of a1--a2 and B--b2); % alpha far edge meets beta far edge
+  \coordinate (E)  at ($(A)!0.604!(B)$);
+  \coordinate (C)  at ($(E)+0.52*(3.7,2.52)-0.07*(0.9,3.18)$);
+  \coordinate (D)  at (C |- E);
+
+  \draw (A)--(b1)--(b2)--(X);
+  \draw[dashed] (X)--(B);
+  \draw (A)--(B)--(a2)--(a1)--cycle;
+  \draw (E)--(C);
+  \draw[dashed] (C)--(D)--(E);
+
+  \node[below left] at (A) {$A$};
+  \node[above left] at (B) {$B$};
+  \node[left] at (E) {$E$};
+  \node[right] at (C) {$C$};
+  \node[above right] at (D) {$D$};
+  \node at ($(a2)+(-0.3,-0.45)$) {$\alpha$};
+  \node at ($(b2)+(-0.3,-0.35)$) {$\beta$};
+\end{tikzpicture}

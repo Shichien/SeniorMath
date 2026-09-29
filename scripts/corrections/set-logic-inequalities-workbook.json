@@ -1,0 +1,10 @@
+{
+  "replacements": [
+    {
+      "id": "squared-inequality-implication-question",
+      "start": "若 ${ \\dot { x } } \\ , \\ y \\in \\mathbf { R }$",
+      "end": "D.既不充分也不必要条件",
+      "replacement": "若 $x , y \\in \\mathbf { R }$，则 $x ^ { 2 } > y ^ { 2 }$ 是 $x > y$ 的（ ）A.充分不必要条件 B.必要不充分条件 C.充要条件 D.既不充分也不必要条件"
+    }
+  ]
+}

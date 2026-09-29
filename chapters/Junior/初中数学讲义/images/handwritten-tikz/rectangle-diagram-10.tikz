@@ -1,0 +1,19 @@
+\begin{tikzpicture}[scale=.85,line width=.55pt,font=\small,line join=round]
+  \coordinate (A) at (0,0);
+  \coordinate (B) at (1.6,-3.3);
+  \coordinate (C) at (6.3,0);
+  \coordinate (D) at (1.6,1.9);
+  \coordinate (O) at (1.6,0);
+  \path[name path=qAD] (A)--(D);
+  \path[name path=qAB] (A)--(B);
+  \path[name path=qDC] (D)--(C);
+  \path[name path=qBC] (B)--(C);
+  \path[name path=qLeft] (.8,-4)--(.8,3);
+  \path[name path=qRight] (3.95,-4)--(3.95,3);
+  \path[name intersections={of=qAD and qLeft,by=H}];
+  \path[name intersections={of=qAB and qLeft,by=E}];
+  \path[name intersections={of=qDC and qRight,by=G}];
+  \path[name intersections={of=qBC and qRight,by=F}];
+  \draw (A)--(D)--(C)--(B)--cycle (A)--(C) (D)--(B) (H)--(G)--(F)--(E)--cycle;
+  \foreach \p/\pos in {A/left,B/below,C/right,D/above,H/left,G/right,E/left,F/right,O/below right} \node[\pos] at (\p) {$\p$};
+\end{tikzpicture}

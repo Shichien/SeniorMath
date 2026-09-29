@@ -1,0 +1,8 @@
+\begin{tikzpicture}[x=.72cm,y=.72cm,>=Stealth,line cap=round,baseline=(current bounding box.center)]
+  \draw[->] (-2.05,0)--(4.20,0) node[right] {$x$};
+  \draw[->] (0,-2.00)--(0,4.65) node[above] {$y$};
+  \draw[line width=.85pt] plot[smooth] coordinates {(-1.90,1.60) (-1.00,0) (0,-1.38) (.60,-1.08) (1.65,1.48) (2.50,2.00) (3.40,.40) (4.00,-1.40)};
+  \draw (-1,0)--(-1,.17); \draw (1,0)--(1,.17);
+  \node[below] at (-1,0) {$-1$}; \node[below] at (1,0) {$1$};
+  \node[below left] at (0,0) {$O$};
+\end{tikzpicture}

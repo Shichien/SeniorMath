@@ -1,0 +1,13 @@
+\begin{tikzpicture}[scale=.58, every node/.style={font=\small}]
+  \coordinate (X) at (0,0); \coordinate (Y) at (5.2,0);
+  \coordinate (Z) at (6.40,1.90); \coordinate (W) at (1.25,1.90);
+  \coordinate (U) at (0,3.55); \coordinate (V) at (1.25,5.20);
+  \draw (X)--(Y)--(Z)--(W)--cycle;
+  \draw (X)--(U)--(V)--(W);
+  \draw (.72,1.10)--(3.85,1.10);
+  \node[above left] at (W) {$m$};
+  \node[right] at (3.85,1.10) {$n$};
+  \node at (5.30,1.25) {$\alpha$};
+  \node at (.72,3.10) {$\beta$};
+  \node[right] at (.32,1.35) {$A$};
+\end{tikzpicture}

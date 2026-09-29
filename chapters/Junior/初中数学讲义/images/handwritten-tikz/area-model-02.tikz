@@ -1,0 +1,33 @@
+\begin{tikzpicture}[line cap=round,line join=round,line width=.6pt,scale=.8]
+\coordinate (A) at (0,6);
+\coordinate (B) at (0,0);
+\coordinate (C) at (6,0);
+\coordinate (D) at (6,6);
+\coordinate (E) at (2.08,0);
+\coordinate (F) at (6,3.05);
+% M=AE\cap BD and N=AF\cap BD.
+\coordinate (M) at (1.545,1.545);
+\coordinate (N) at (4.022,4.022);
+% Circumcenter of triangle ENF.
+\coordinate (O) at (4.029,1.539);
+
+\draw (A)--(B)--(C)--(D)--cycle;
+\draw (B)--(D) (A)--(E) (A)--(F) (E)--(F);
+
+\draw[red,dashed,line width=.75pt,dash pattern=on 4pt off 3pt]
+  (O) circle[radius=2.483];
+\draw[red,dashed,line width=.75pt,dash pattern=on 4pt off 3pt]
+  (E)--(N) (M)--(F);
+
+\draw[green!80!black,fill=green!18,line width=.7pt]
+  (B) rectangle +(0.46,0.46);
+\draw[blue,fill=blue!18,line width=.7pt]
+  (D) rectangle +(-0.46,-0.46);
+\draw[blue,fill=blue!18,line width=.7pt]
+  (1.685,1.149)--(2.082,1.287)--(1.942,1.683)--(1.545,1.545)--cycle;
+\draw[green!80!black,fill=green!18,line width=.7pt]
+  (3.839,3.644)--(4.216,3.459)--(4.399,3.837)--(4.022,4.022)--cycle;
+
+\foreach \p/\pos in {A/above left,B/below left,C/below right,D/above right,E/below,M/left,N/above,F/right}
+  \node[\pos] at (\p) {$\p$};
+\end{tikzpicture}

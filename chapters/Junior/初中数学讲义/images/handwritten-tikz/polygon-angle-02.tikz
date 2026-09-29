@@ -1,0 +1,53 @@
+\begin{tikzpicture}[x=.72cm,y=.72cm,line width=.5pt,font=\scriptsize,line join=round]
+  \begin{scope}
+    \coordinate (B) at (0,0);
+    \coordinate (C) at (5.5,0);
+    \coordinate (M) at (1.58,5.5);
+    \coordinate (E) at (2.73,0);
+    \coordinate (A) at ($(M)!.31!(B)$);
+    \coordinate (N) at ($(M)!.20!(C)$);
+    \coordinate (D) at ($(M)!.46!(C)$);
+    \path[name path=aAD] (A)--(D);
+    \path[name path=aME] (M)--(E);
+    \path[name intersections={of=aAD and aME,by=F}];
+    \draw (B)--(M)--(C)--cycle (M)--(E) (A)--(D);
+    \foreach \p/\pos in {B/below left,C/below right,M/above,A/left,E/below,N/right,D/right,F/below left}
+      \node[\pos] at (\p) {$\p$};
+    \node at (2.75,-1.1) {(a)};
+  \end{scope}
+
+  \begin{scope}[shift={(8.8,0)}]
+    \coordinate (D) at (0,0);
+    \coordinate (B) at (5.35,0);
+    \coordinate (A) at (2.05,4.0);
+    \coordinate (C) at (4.55,2.62);
+    \coordinate (F) at ($(D)!.50!(A)$);
+    \coordinate (E) at ($(C)!.47!(B)$);
+    \path[name path=bAB] (A)--(B);
+    \path[name path=bDC] (D)--(C);
+    \path[name path=bFE] (F)--(E);
+    \path[name intersections={of=bAB and bDC,by=O}];
+    \path[name intersections={of=bFE and bDC,by=M}];
+    \path[name intersections={of=bFE and bAB,by=N}];
+    \draw (A)--(D)--(B)--(C)--cycle (D)--(C) (A)--(B) (F)--(E);
+    \foreach \p/\pos in {A/above,B/below right,C/right,D/below left,F/left,E/right,O/above left,M/below left,N/below}
+      \node[\pos] at (\p) {$\p$};
+    \node at (2.68,-1.1) {(b)};
+  \end{scope}
+
+  \begin{scope}
+    \coordinate (B) at (17.5,0);
+    \coordinate (C) at (27,0);
+    \coordinate (A) at (20.2336,2.2646);
+    \coordinate (D) at ($(A)!.435!(C)$);
+    \coordinate (E) at ($(B)!.484!(C)$);
+    \coordinate (F) at ($(A)!.5!(D)$);
+    \path[name path=cEF] (E)--($(E)!2!(F)$);
+    \path[name path=cBA] (B)--($(B)!2!(A)$);
+    \path[name intersections={of=cEF and cBA,by=G}];
+    \draw (B)--(G)--(D)--(C)--cycle (A)--(D) (G)--(E);
+    \foreach \p/\pos in {B/below left,C/below right,G/above,A/above left,D/above right,E/below,F/below left}
+      \node[\pos] at (\p) {$\p$};
+    \node at (22.25,-1.1) {(c)};
+  \end{scope}
+\end{tikzpicture}
