@@ -1,8 +1,10 @@
 \begin{tikzpicture}[scale=.86, every node/.style={font=\small}]
-  \coordinate (P) at (2.3,5.6);
+  % B=(0,0,0), A=(3,0,0), C=(0,6,0), P=(2,0,3).
+  % Project the perpendicular planes without changing PB=sqrt(13).
+  \coordinate (P) at (1.2,4.2);
   \coordinate (B) at (0,0);
   \coordinate (C) at (6.0,0);
-  \coordinate (A) at (2.55,1.8);
+  \coordinate (A) at (1.8,1.6);
   \draw (P)--(B)--(C)--(P);
   \draw[dashed] (P)--(A)--(B) (A)--(C);
   \node[above] at (P) {$P$};

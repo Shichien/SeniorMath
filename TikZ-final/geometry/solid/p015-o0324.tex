@@ -1,20 +1,19 @@
-\begin{tikzpicture}[scale=.67, every node/.style={font=\small}]
-  \coordinate (A) at (0,0);
-  \coordinate (B) at (5.6,0);
-  \coordinate (C) at (7.25,2.2);
-  \coordinate (D) at (1.85,2.2);
-  \coordinate (P) at (.65,6.2);
-  \coordinate (E) at (3.95,4.2);
-  \coordinate (F) at (3.725,1.1);
+\begin{tikzpicture}[x=7mm,y=7mm,line cap=round,line join=round,line width=.6pt,every node/.style={font=\small,inner sep=2pt}]
+\coordinate (A) at (0,0);
+\coordinate (B) at (4,0);
+\coordinate (D) at (1.5,1.55);
+\coordinate (C) at (5.5,1.55);
+\coordinate (P) at (0.75,2.775);
+\coordinate (E) at ($(P)!.5!(C)$);
+\coordinate (F) at ($(B)!.5!(D)$);
+\draw (A)--(B)--(C)--(P)--(A) (P)--(B);
+\draw[dashed] (A)--(D)--(C) (P)--(D) (D)--(B) (D)--(E)--(B) (E)--(F);
+\node[below left] at (A) {$A$};
+\node[below right] at (B) {$B$};
+\node[right] at (C) {$C$};
+\node[above left] at (D) {$D$};
+\node[above left] at (P) {$P$};
+\node[above] at (E) {$E$};
+\node[below] at (F) {$F$};
 
-  \draw (A)--(B)--(C) (P)--(A) (P)--(B) (P)--(C);
-  \draw[dashed] (A)--(D)--(C) (P)--(D) (D)--(F)--(B) (E)--(F);
-
-  \node[below left]  at (A) {$A$};
-  \node[below]       at (B) {$B$};
-  \node[right]       at (C) {$C$};
-  \node[left]        at (D) {$D$};
-  \node[above left]  at (P) {$P$};
-  \node[above]       at (E) {$E$};
-  \node[left]        at (F) {$F$};
 \end{tikzpicture}

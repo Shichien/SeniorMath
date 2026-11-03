@@ -1,11 +1,18 @@
 \begin{tikzpicture}[scale=.8, every node/.style={font=\small}]
+  % Spatial model: B=(0,0,0), D=(2,0,0), A=(1,0,1), C=(1,1,0).
+  % Both triangles are isosceles right triangles in perpendicular planes.
   \coordinate (B) at (0,0);
-  \coordinate (C) at (4.0,0);
-  \coordinate (D) at (5.9,2.55);
-  \coordinate (E) at (4.18,3.42);
-  \coordinate (A1) at (4.22,4.6);
-  \coordinate (A) at (3.15,4.1);
-  \draw (B)--(C)--(D)--(E)--(A1)--(A)--cycle;
+  \coordinate (C) at (1.5,-.8);
+  \coordinate (D) at (4.5,2);
+  \coordinate (A) at (2.1,3.4);
+  \coordinate (E) at ($(A)!.5!(D)$);
+  % Rodrigues rotation of A about BE=(1.5,0,.5), through 45 degrees.
+  \pgfmathsetmacro{\foldx}{1.2-.2*cos(45)}
+  \pgfmathsetmacro{\foldy}{-2/sqrt(10)*sin(45)}
+  \pgfmathsetmacro{\foldz}{.4+.6*cos(45)}
+  \coordinate (A1) at ({2.25*\foldx-.75*\foldy-.15*\foldz},
+                       {\foldx-1.8*\foldy+2.4*\foldz});
+  \draw (B)--(C)--(D)--(A)--cycle (E)--(A1);
   \draw (B)--(E) (B)--(D) (B)--(A1);
   \node[below left] at (B) {$B$};
   \node[below] at (C) {$C$};

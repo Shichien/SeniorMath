@@ -1,21 +1,24 @@
-\begin{tikzpicture}[scale=.72, every node/.style={font=\small}]
-  \coordinate (A) at (0,0);
-  \coordinate (B) at (4.5,0);
-  \coordinate (B1) at (4.5,4);
-  \coordinate (A1) at (0,4);
-  \coordinate (D) at (1.5,1.5);
-  \coordinate (C) at (6,1.5);
-  \coordinate (C1) at (6,5.5);
-  \coordinate (D1) at (1.5,5.5);
-  \draw (A)--(B)--(B1)--(A1)--cycle;
-  \draw (A1)--(D1)--(C1)--(C)--(B) (D1)--(B1);
-  \draw[dashed] (A)--(D)--(C) (D)--(D1) (D)--(B);
-  \node[below left] at (A) {$A$};
-  \node[below] at (B) {$B$};
-  \node[right] at (C) {$C$};
-  \node[left] at (D) {$D$};
-  \node[left] at (A1) {$A_1$};
-  \node[right] at (B1) {$B_1$};
-  \node[right] at (C1) {$C_1$};
-  \node[above left] at (D1) {$D_1$};
+\begin{tikzpicture}[x=7mm,y=7mm,line cap=round,line join=round,line width=.6pt,every node/.style={font=\small,inner sep=2pt}]
+\coordinate (A) at (0,0);
+\coordinate (B) at (4,0);
+\coordinate (D) at (1.4,1.35);
+\coordinate (C) at (5.4,1.35);
+\coordinate (A1) at (0,4);
+\coordinate (B1) at (4,4);
+\coordinate (D1) at (1.4,5.35);
+\coordinate (C1) at (5.4,5.35);
+\draw (A)--(B)--(C)--(C1)--(D1)--(A1)--cycle
+ (A1)--(B1)--(C1) (B)--(B1);
+\draw[dashed] (A)--(D)--(C) (D)--(D1);
+\draw (D1)--(B1);
+\draw[dashed] (A)--(C) (D)--(B);
+\node[below left] at (A) {$A$};
+\node[below right] at (B) {$B$};
+\node[right] at (C) {$C$};
+\node[above left] at (D) {$D$};
+\node[left] at (A1) {$A_1$};
+\node[right] at (B1) {$B_1$};
+\node[above right] at (C1) {$C_1$};
+\node[above left] at (D1) {$D_1$};
+
 \end{tikzpicture}

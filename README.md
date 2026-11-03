@@ -1,219 +1,26 @@
 # SeniorMath
 
-适配全国高中数学体系的纯 LateX 版本讲义，原作业帮强基班学生所作。
+适配全国高中数学体系的纯 LaTeX 讲义，原作业帮强基班学生所作。
 
 [![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-red.svg?style=for-the-badge&logo=creative-commons)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
-[![Commercial-Use](https://img.shields.io/badge/Commercial_Use-FORBIDDEN-critical?style=for-the-badge&logo=stop)](YOUR_LICENSE_URL)
+[![Commercial-Use](https://img.shields.io/badge/Commercial_Use-FORBIDDEN-critical?style=for-the-badge&logo=stop)](LICENSE)
 
-## 🛑 LEGAL DISCLAIMER
+![内容地图](assets/architecture.png)
+
+| [![目录第 1 页](assets/contents/page-01.png)](assets/contents/page-01.png) | [![目录第 2 页](assets/contents/page-02.png)](assets/contents/page-02.png) | [![目录第 3 页](assets/contents/page-03.png)](assets/contents/page-03.png) |
+| :---: | :---: | :---: |
+| [![目录第 4 页](assets/contents/page-04.png)](assets/contents/page-04.png) | [![目录第 5 页](assets/contents/page-05.png)](assets/contents/page-05.png) | [![目录第 6 页](assets/contents/page-06.png)](assets/contents/page-06.png) |
+| [![目录第 7 页](assets/contents/page-07.png)](assets/contents/page-07.png) | [![目录第 8 页](assets/contents/page-08.png)](assets/contents/page-08.png) | [![目录第 9 页](assets/contents/page-09.png)](assets/contents/page-09.png) |
+| [![目录第 10 页](assets/contents/page-10.png)](assets/contents/page-10.png) | [![目录第 11 页](assets/contents/page-11.png)](assets/contents/page-11.png) | [![目录第 12 页](assets/contents/page-12.png)](assets/contents/page-12.png) |
+| [![目录第 13 页](assets/contents/page-13.png)](assets/contents/page-13.png) | [![目录第 14 页](assets/contents/page-14.png)](assets/contents/page-14.png) | [![目录第 15 页](assets/contents/page-15.png)](assets/contents/page-15.png) |
+| [![目录第 16 页](assets/contents/page-16.png)](assets/contents/page-16.png) | [![目录第 17 页](assets/contents/page-17.png)](assets/contents/page-17.png) | [![目录第 18 页](assets/contents/page-18.png)](assets/contents/page-18.png) |
+| [![目录第 19 页](assets/contents/page-19.png)](assets/contents/page-19.png) |  |  |
+
+## 许可与声明
 
 本项目本着互联网分享精神，仅供个人学习与交流使用，严禁任何形式的商业使用与倒卖。
 
-- 关于授权：本项目采用 **`[CC BY-NC-SA 4.0]`** 协议。这意味着您可以免费使用、修改，但不得将本项目或其衍生品用于任何商业目的。
+- 关于授权：本项目采用 **[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)** 协议。这意味着您可以免费使用、修改，但不得将本项目或其衍生品用于任何商业目的。
 - 关于追责：本人一旦发现侵权行为，将不经警告直接向平台发起 DMCA 投诉（下架），并保留进一步追究法律责任的权利。
 
-但是没动力写了，目前的章节都是讲课时要用才写的，并非完整的讲义书籍。
-
-## 第一部分：基础与初高衔接
-* **数学基本概念术语**
-    * 数学基本概念术语
-* **六年级下册**
-    * 知识点总结
-* **初中数学讲义**
-    * 完整版讲义
-* **初高衔接**
-    * 一次函数与二次函数
-    * 因式分解
-    * 绝对值
-    * 一元二次不等式
-    * 数轴穿根法
-
-## 第二部分：代数基础（集合与逻辑）
-* **集合**
-    * 集合的基本概念
-    * 韦恩图
-    * 数集的最大数与最小数
-    * 区间表示法
-    * 点集
-    * 子集和真子集
-    * 空集
-    * 集合的综合问题
-* **不等式**
-    * 不等式的定义
-    * 解各种不等式
-    * 基本不等式
-    * 柯西不等式
-    * 绝对值不等式
-    * 不等式证明
-    * 有理不等式
-    * 无理不等式
-* **命题逻辑**
-    * 命题逻辑
-    * 命题的逆否
-    * 充分必要条件
-    * 逻辑量词
-
-## 第三部分：函数与复数
-* **函数**
-    * 函数概念
-    * 函数图像
-    * 函数的性质
-    * 幂指对函数
-    * 值域
-    * 抽象函数
-    * 分段函数
-* **复数**
-    * 复数的概念
-    * 复数的四则运算
-    * 复数的几何意义
-    * 复数的高次方运算
-
-## 第四部分：三角学与向量
-* **三角函数**
-    * 三角函数线
-    * 特殊角的三角函数
-    * 三角函数的运算
-    * 正余弦函数的图像
-    * 正切函数
-    * Asin(wx+p)+B
-    * 特殊公式
-    * 反三角函数的图像
-* **解三角形**
-    * 正弦定理与余弦定理
-    * 边角互化
-    * 对边对角模型
-    * 中线和角平分线模型
-    * 特殊模型
-    * 解三角形的应用
-* **向量**
-    * 平面向量的定义
-    * 极化恒等式
-    * 投影
-
-## 第五部分：几何（立体与解析）
-* **立体几何**
-    * 异面直线
-    * 外接球
-    * 立体几何的几何法证明
-    * 建系法求角
-    * 建系法求空间距离
-    * 建系法探究空间关系
-* **直线**
-    * 直线与圆的基本概念
-    * 直线相关的题型
-    * 直线题库
-* **圆**
-    * 圆的基本概念
-    * 圆的相关题型
-    * 圆的题库
-    * 直线与圆的位置关系
-    * 直线与圆题库
-* **椭圆曲线**
-    * 圆锥曲线引入
-* **椭圆**
-    * 椭圆
-    * 椭圆中常见的二级结论
-    * 证明题
-    * 三角换元在椭圆中的应用
-    * 圆锥曲线中的大题解法
-* **双曲线**
-    * 双曲线
-    * 双曲线的第二定义
-    * 双曲线中常见的二级结论
-* **抛物线**
-    * 抛物线
-* **极点极线**
-    * 极点极线
-
-## 第六部分：分析与概率统计
-* **数列**
-    * 数列基本定义
-    * 等差数列
-    * 等比数列
-    * 数列的求和
-    * 数列的递推关系
-    * 其他题型
-    * 数列习题
-* **导数**
-    * 导数的基础定义
-    * 导数的几何意义
-    * 导数的计算
-    * 利用导数的几何意义求解问题
-    * 导数的应用
-    * 借助导数研究函数单调性与极值
-    * 特殊的几种函数
-    * 切线放缩
-    * 飘带不等式
-    * 同构函数
-    * 隐零点的应用
-    * 极值点偏移
-    * 必要性探路
-    * 双切线放缩
-    * 对数糖水不等式
-* **概率**
-    * 概率模型
-    * 概率计算
-* **排列组合**
-    * 排列组合基本思想
-    * 排列组合经典方法
-    * 二项式定理
-* **统计**
-    * 方差
-* **鸽巢原理**
-    * 鸽巢原理
-
-## 第七部分：其他与备考
-* **补考复习**
-    * 补考复习
-* **Todo**
-    * 待办事项
-* **参考文献**
-    * 参考文献
-
-## 第八部分：高等数学与数模扩展
-* **函数（前置知识）**
-    * 函数
-    * 反三角函数
-* **高等数学部分公式**
-    * 高等数学
-* **CMC 非数学组试题**
-    * 初赛试题
-    * 决赛试题
-* **独立性检验**
-    * KSquare (卡方)
-    * Fisher 检验
-    * Yates 修正
-* **相关性检验**
-    * Pearson 相关系数
-    * Spearman 相关系数
-* **聚类分析**
-    * K-means
-    * DBSCAN 密度聚类
-* **灰色关联分析**
-    * GM 模型
-* **多重共线性**
-    * 岭回归
-* **异常值检测**
-    * 箱线图
-    * 标准差原则
-* **缺失值填补**
-    * 简单填补
-    * KNN 填补
-    * 随机森林填补
-* **线性规划和整数规划**
-    * 线性规划
-    * 非线性规划
-* **多目标优化**
-    * 多目标优化
-* **机器学习**
-    * 机器学习概念
-* **时间序列**
-    * ARIMA
-* **评价类模型**
-    * TOPSIS
-    * 模糊综合评价
-    * 层次分析法
-* **主成分分析**
-    * 主成分分析
-* **中心对数变换**
-    * 中心对数变换
+需要说明的是，这份讲义并不完整：目前的章节都是讲课时要用才写的，并非成体系的教材。

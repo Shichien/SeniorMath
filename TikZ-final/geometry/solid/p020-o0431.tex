@@ -1,53 +1,86 @@
-\begin{tikzpicture}[scale=.47, every node/.style={font=\small}]
-  \newcommand{\cube}[1]{%
-    \begin{scope}[xshift=#1cm]
-      \coordinate (FBL) at (0,0);
-      \coordinate (FBR) at (4,0);
-      \coordinate (FTR) at (4,4);
-      \coordinate (FTL) at (0,4);
-      \coordinate (BBL) at (2,1.5);
-      \coordinate (BBR) at (6,1.5);
-      \coordinate (BTR) at (6,5.5);
-      \coordinate (BTL) at (2,5.5);
-      \draw (FBL)--(FBR)--(FTR)--(FTL)--cycle;
-      \draw (FTL)--(BTL)--(BTR)--(BBR)--(FBR);
-      \draw[dashed] (FBL)--(BBL)--(BBR) (BBL)--(BTL) (BBL)--(FTR);
-    \end{scope}%
-  }
-  \cube{0}
-  \draw (2,5.5)--(4,4) (4,0)--(6,5.5);
-  \node[above left] at (2,5.5) {$E$};
-  \node[above right] at (6,5.5) {$B$};
-  \node[above] at (4,4) {$D$};
-  \node[left] at (2,1.5) {$C$};
-  \node[below] at (4,0) {$A$};
-  \node[below] at (2,-.4) {\textcircled{1}};
-
-  \cube{9}
-  \draw[dashed] (9,4)--(11,1.5) (11,1.5)--(13,4);
-  \draw (13,0)--(15,5.5);
-  \node[left] at (9,4) {$E$};
-  \node[above] at (13,4) {$D$};
-  \node[left] at (11,1.5) {$C$};
-  \node[above right] at (15,5.5) {$B$};
-  \node[below] at (13,0) {$A$};
-  \node[below] at (11,-.4) {\textcircled{2}};
-
-  \cube{18}
-  \draw (18,4)--(24,5.5) (20,5.5)--(22,4);
-  \node[left] at (18,4) {$E$};
-  \node[above left] at (20,5.5) {$B$};
-  \node[above] at (24,5.5) {$D$};
-  \node[above] at (22,4) {$A$};
-  \node[left] at (20,1.5) {$C$};
-  \node[below] at (20,-.4) {\textcircled{3}};
-
-  \cube{27}
-  \draw (27,4)--(33,5.5) (29,5.5)--(31,1.5)--(31,0) (29,5.5)--(31,0);
-  \node[left] at (27,4) {$E$};
-  \node[above left] at (29,5.5) {$B$};
-  \node[above] at (33,5.5) {$D$};
-  \node[left] at (29,1.5) {$C$};
-  \node[below] at (31,0) {$A$};
-  \node[below] at (29,-.4) {\textcircled{4}};
+\begin{tikzpicture}[scale=.42,line cap=round,line join=round,line width=.6pt,every node/.style={font=\small,inner sep=2pt}]
+\begin{scope}[xshift=0cm]
+\coordinate (A) at (0,0);
+\coordinate (B) at (4,0);
+\coordinate (D) at (1.4,1.35);
+\coordinate (C) at (5.4,1.35);
+\coordinate (A1) at (0,4);
+\coordinate (B1) at (4,4);
+\coordinate (D1) at (1.4,5.35);
+\coordinate (C1) at (5.4,5.35);
+\draw (A)--(B)--(C)--(C1)--(D1)--(A1)--cycle
+ (A1)--(B1)--(C1) (B)--(B1);
+\draw[dashed] (A)--(D)--(C) (D)--(D1);
+\draw (D1)--(B1) (B)--(C1);
+\draw[dashed] (D)--(B1);
+\node[above left] at (D1) {$E$};
+\node[above right] at (C1) {$B$};
+\node[below left] at (B1) {$D$};
+\node[left] at (D) {$C$};
+\node[below] at (B) {$A$};
+\node at (2.7,-.85) {\textcircled{1}};
+\end{scope}
+\begin{scope}[xshift=7.1cm]
+\coordinate (A) at (0,0);
+\coordinate (B) at (4,0);
+\coordinate (D) at (1.4,1.35);
+\coordinate (C) at (5.4,1.35);
+\coordinate (A1) at (0,4);
+\coordinate (B1) at (4,4);
+\coordinate (D1) at (1.4,5.35);
+\coordinate (C1) at (5.4,5.35);
+\draw (A)--(B)--(C)--(C1)--(D1)--(A1)--cycle
+ (A1)--(B1)--(C1) (B)--(B1);
+\draw[dashed] (A)--(D)--(C) (D)--(D1);
+\draw (B)--(C1);
+\draw[dashed] (D)--(A1) (D)--(B1);
+\node[left] at (A1) {$E$};
+\node[above] at (B1) {$D$};
+\node[above right] at (C1) {$B$};
+\node[left] at (D) {$C$};
+\node[below] at (B) {$A$};
+\node at (2.7,-.85) {\textcircled{2}};
+\end{scope}
+\begin{scope}[xshift=14.2cm]
+\coordinate (A) at (0,0);
+\coordinate (B) at (4,0);
+\coordinate (D) at (1.4,1.35);
+\coordinate (C) at (5.4,1.35);
+\coordinate (A1) at (0,4);
+\coordinate (B1) at (4,4);
+\coordinate (D1) at (1.4,5.35);
+\coordinate (C1) at (5.4,5.35);
+\draw (A)--(B)--(C)--(C1)--(D1)--(A1)--cycle
+ (A1)--(B1)--(C1) (B)--(B1);
+\draw[dashed] (A)--(D)--(C) (D)--(D1);
+\draw (A1)--(C1) (D1)--(B1);
+\draw[dashed] (D)--(A1) (D)--(C1);
+\node[left] at (A1) {$E$};
+\node[above left] at (D1) {$B$};
+\node[above right] at (C1) {$D$};
+\node[below left] at (B1) {$A$};
+\node[left] at (D) {$C$};
+\node at (2.7,-.85) {\textcircled{3}};
+\end{scope}
+\begin{scope}[xshift=21.299999999999997cm]
+\coordinate (A) at (0,0);
+\coordinate (B) at (4,0);
+\coordinate (D) at (1.4,1.35);
+\coordinate (C) at (5.4,1.35);
+\coordinate (A1) at (0,4);
+\coordinate (B1) at (4,4);
+\coordinate (D1) at (1.4,5.35);
+\coordinate (C1) at (5.4,5.35);
+\draw (A)--(B)--(C)--(C1)--(D1)--(A1)--cycle
+ (A1)--(B1)--(C1) (B)--(B1);
+\draw[dashed] (A)--(D)--(C) (D)--(D1);
+\draw (A1)--(C1);
+\draw[dashed] (D1)--(B) (D)--(A1) (D)--(C1);
+\node[left] at (A1) {$E$};
+\node[above left] at (D1) {$B$};
+\node[above right] at (C1) {$D$};
+\node[below] at (B) {$A$};
+\node[left] at (D) {$C$};
+\node at (2.7,-.85) {\textcircled{4}};
+\end{scope}
 \end{tikzpicture}
