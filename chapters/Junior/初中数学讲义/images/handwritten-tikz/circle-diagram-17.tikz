@@ -1,5 +1,7 @@
 \begin{tikzpicture}[thick,blue!70!black]
-\coordinate (A) at (2.2,4.8); \coordinate (B) at (0,0); \coordinate (C) at (3,0); \coordinate (D) at (7.4,0); \coordinate (F) at (1.2,2.25); \coordinate (E) at (2.717,1.700);
+\coordinate (A) at (2.2,4.8); \coordinate (B) at (0,0); \coordinate (C) at (3,0); \coordinate (D) at (7.4,0);
+\coordinate (F) at ($(B)!0.46875!(A)$);
+\coordinate (E) at (intersection of A--C and F--D);
 \draw (A)--(B)--(D) (A)--(C) (F)--(D); \draw[dashed] (A)--(D) (F)--(C);
 \foreach \p in {A,B,C,D,E,F} \fill[red] (\p) circle (2pt); \foreach \p/\pos in {A/above,B/below left,C/below,D/right,E/right,F/left} \node[black,\pos] at (\p) {$\p$};
 \end{tikzpicture}

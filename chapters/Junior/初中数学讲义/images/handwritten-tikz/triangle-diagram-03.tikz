@@ -1,1 +1,11 @@
-\begin{tikzpicture}[thick]\coordinate(D)at(0,2.7);\coordinate(B)at(1.2,0);\coordinate(C)at(3.6,0);\coordinate(F)at(7,0);\coordinate(A)at(5,4.6);\coordinate(E)at(5.9,2.7);\draw(D)--(A)--(F)--(B)--cycle(D)--(E) (B)--(A) (C)--(A) (B)--(E);\draw(D)+(.15,-.05)--+(.3,-.3)--+(.05,-.45);\foreach\p/\pos in {A/above,B/below,D/left,C/below,E/right,F/below right}\node[\pos]at(\p){$\p$};\end{tikzpicture}
+\begin{tikzpicture}[thick]
+\coordinate(B)at(0,0);\coordinate(C)at(2.5,0);\coordinate(A)at(4,4.5);
+% Unit directions of BA and BC give the internal angle bisector.
+\coordinate(U)at({1+4/sqrt(4^2+4.5^2)},{4.5/sqrt(4^2+4.5^2)});
+\coordinate(V)at($(B)!1!90:(U)$);
+\coordinate(D)at($(B)!(A)!(V)$);\coordinate(E)at($(B)!(A)!(U)$);
+\coordinate(F)at(intersection of A--E and B--C);
+\draw(D)--(A)--(F)--(B)--cycle(D)--(E) (B)--(A) (C)--(A) (B)--(E);
+\pic[draw,angle radius=2mm]{right angle=A--D--B};
+\foreach\p/\pos in {A/above,B/below,D/left,C/below,E/right,F/below right}\node[\pos]at(\p){$\p$};
+\end{tikzpicture}

@@ -18,14 +18,17 @@
 \node[process, ellipse, right=13mm of stop] (end) {结束};
 \node[compute, right=17mm of newpop] (fitness) {计算目标函数};
 \node[compute, right=8mm of fitness] (fastsort) {快速非支配排序\\计算拥挤度};
-\node[compute, above=6mm of fastsort] (parents) {生成新的父代个体};
+\coordinate (first-entry) at ($(init.south)!.5!(first.north)$);
+\coordinate (merge-entry) at ($(gen2.south)!.5!(merge.north)$);
+\coordinate (newpop-entry) at ($(merge.south)!.5!(newpop.north)$);
+\node[compute] (parents) at (fastsort.center |- newpop-entry) {生成新的父代个体};
 \node[draw=orange!80!black, fill=orange!10, minimum width=13mm, left=23mm of merge] (counter) {Gen++};
 
 \draw[flow] (init) -- (first);
 \draw[flow] (first) -- node[left]{是} (gen2);
 \draw[flow] (first) -- node[above]{否} (sort1);
 \draw[flow] (sort1) -- (child1);
-\draw[flow] (child1.east) -| ++(12mm,0) |- (init.east);
+\draw[flow] (child1.south) -- ++(0,-3mm) -| ([xshift=12mm]child1.east) |- (first-entry);
 \draw[flow] (gen2) -- (merge);
 \draw[flow] (merge) -- (newpop);
 \draw[flow] (newpop) -- (child2);
@@ -34,7 +37,7 @@
 \draw[flow] (newpop) -- node[above]{否} (fitness);
 \draw[flow] (fitness) -- (fastsort);
 \draw[flow] (fastsort) -- (parents);
-\draw[flow] (parents.west) -| (merge.east);
+\draw[flow] (parents.west) -- (newpop-entry);
 \draw[flow] (stop.west) -| node[pos=.2,left]{是} (counter.south);
-\draw[flow] (counter.north) |- (merge.west);
+\draw[flow] (counter.north) |- (merge-entry);
 \end{tikzpicture}
